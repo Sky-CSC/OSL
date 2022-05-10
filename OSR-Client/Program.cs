@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("#################################################");
+Console.WriteLine("# Hello and welcome to Overlay_Sky_0.02 manager #");
+Console.WriteLine("#################################################\n");
+Console.ResetColor();
