@@ -1,6 +1,14 @@
-﻿
+﻿using OSR_Client;
+using OSR_Client.Config;
+
+Console.WriteLine("");
+OSRLogger logger = new("Program");
+
 Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("#################################################");
-Console.WriteLine("# Hello and welcome to Overlay_Sky_0.02 manager #");
-Console.WriteLine("#################################################\n");
+Console.WriteLine("####################################");
+Console.WriteLine("# Hello and welcome to OSR manager #");
+Console.WriteLine("####################################\n");
 Console.ResetColor();
+
+Config.LoadConfigHost();
+Console.WriteLine(Config.ip + Config.port);
