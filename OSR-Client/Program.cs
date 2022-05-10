@@ -1,5 +1,6 @@
 ﻿using OSR_Client;
-using OSR_Client.Config;
+using OSR_Client.Configuration;
+using OSR_Client.RiotApp;
 
 Console.WriteLine("");
 OSRLogger logger = new("Program");
@@ -11,4 +12,4 @@ Console.WriteLine("####################################\n");
 Console.ResetColor();
 
 Config.LoadConfigHost();
-Console.WriteLine(Config.ip + Config.port);
+LaunchChecker.LoLLauncherCheck();
