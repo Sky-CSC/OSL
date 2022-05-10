@@ -1,0 +1,566 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSR_Client.Configuration.Config
+  commentId: T:OSR_Client.Configuration.Config
+  id: Config
+  parent: OSR_Client.Configuration
+  children:
+  - OSR_Client.Configuration.Config.ip
+  - OSR_Client.Configuration.Config.LeagueClientFilePath
+  - OSR_Client.Configuration.Config.LeagueClientFullFilePath
+  - OSR_Client.Configuration.Config.LeagueClientProcess
+  - OSR_Client.Configuration.Config.LoadConfigHost
+  - OSR_Client.Configuration.Config.port
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: Config
+  fullName: OSR_Client.Configuration.Config
+  type: Class
+  source:
+    remote:
+      path: OSR-Client/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: Config
+    path: ../OSR-Client/Configuration/Config.cs
+    startLine: 10
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.Configuration
+  syntax:
+    content: public class Config
+    content.vb: Public Class Config
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSR_Client.Configuration.Config.ip
+  commentId: F:OSR_Client.Configuration.Config.ip
+  id: ip
+  parent: OSR_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: ip
+  nameWithType: Config.ip
+  fullName: OSR_Client.Configuration.Config.ip
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: ip
+    path: ../OSR-Client/Configuration/Config.cs
+    startLine: 14
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.Configuration
+  syntax:
+    content: public static string ip
+    return:
+      type: System.String
+    content.vb: Public Shared ip As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSR_Client.Configuration.Config.port
+  commentId: F:OSR_Client.Configuration.Config.port
+  id: port
+  parent: OSR_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: port
+  nameWithType: Config.port
+  fullName: OSR_Client.Configuration.Config.port
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: port
+    path: ../OSR-Client/Configuration/Config.cs
+    startLine: 15
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.Configuration
+  syntax:
+    content: public static int port
+    return:
+      type: System.Int32
+    content.vb: Public Shared port As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSR_Client.Configuration.Config.LeagueClientProcess
+  commentId: F:OSR_Client.Configuration.Config.LeagueClientProcess
+  id: LeagueClientProcess
+  parent: OSR_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LeagueClientProcess
+  nameWithType: Config.LeagueClientProcess
+  fullName: OSR_Client.Configuration.Config.LeagueClientProcess
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: LeagueClientProcess
+    path: ../OSR-Client/Configuration/Config.cs
+    startLine: 16
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.Configuration
+  syntax:
+    content: public static string LeagueClientProcess
+    return:
+      type: System.String
+    content.vb: Public Shared LeagueClientProcess As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSR_Client.Configuration.Config.LeagueClientFullFilePath
+  commentId: F:OSR_Client.Configuration.Config.LeagueClientFullFilePath
+  id: LeagueClientFullFilePath
+  parent: OSR_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LeagueClientFullFilePath
+  nameWithType: Config.LeagueClientFullFilePath
+  fullName: OSR_Client.Configuration.Config.LeagueClientFullFilePath
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: LeagueClientFullFilePath
+    path: ../OSR-Client/Configuration/Config.cs
+    startLine: 17
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.Configuration
+  syntax:
+    content: public static string LeagueClientFullFilePath
+    return:
+      type: System.String
+    content.vb: Public Shared LeagueClientFullFilePath As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSR_Client.Configuration.Config.LeagueClientFilePath
+  commentId: F:OSR_Client.Configuration.Config.LeagueClientFilePath
+  id: LeagueClientFilePath
+  parent: OSR_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LeagueClientFilePath
+  nameWithType: Config.LeagueClientFilePath
+  fullName: OSR_Client.Configuration.Config.LeagueClientFilePath
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: LeagueClientFilePath
+    path: ../OSR-Client/Configuration/Config.cs
+    startLine: 18
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.Configuration
+  syntax:
+    content: public static string LeagueClientFilePath
+    return:
+      type: System.String
+    content.vb: Public Shared LeagueClientFilePath As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSR_Client.Configuration.Config.LoadConfigHost
+  commentId: M:OSR_Client.Configuration.Config.LoadConfigHost
+  id: LoadConfigHost
+  parent: OSR_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigHost()
+  nameWithType: Config.LoadConfigHost()
+  fullName: OSR_Client.Configuration.Config.LoadConfigHost()
+  type: Method
+  source:
+    remote:
+      path: OSR-Client/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: LoadConfigHost
+    path: ../OSR-Client/Configuration/Config.cs
+    startLine: 23
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.Configuration
+  summary: "\nLoads the config from the config file.\n"
+  example: []
+  syntax:
+    content: public static void LoadConfigHost()
+    content.vb: Public Shared Sub LoadConfigHost
+  overload: OSR_Client.Configuration.Config.LoadConfigHost*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSR_Client.Configuration
+  commentId: N:OSR_Client.Configuration
+  name: OSR_Client.Configuration
+  nameWithType: OSR_Client.Configuration
+  fullName: OSR_Client.Configuration
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSR_Client.Configuration.Config.LoadConfigHost*
+  commentId: Overload:OSR_Client.Configuration.Config.LoadConfigHost
+  name: LoadConfigHost
+  nameWithType: Config.LoadConfigHost
+  fullName: OSR_Client.Configuration.Config.LoadConfigHost

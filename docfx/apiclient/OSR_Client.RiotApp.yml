@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSR_Client.RiotApp
+  commentId: N:OSR_Client.RiotApp
+  id: OSR_Client.RiotApp
+  children:
+  - OSR_Client.RiotApp.LaunchChecker
+  - OSR_Client.RiotApp.ProcessInfo
+  langs:
+  - csharp
+  - vb
+  name: OSR_Client.RiotApp
+  nameWithType: OSR_Client.RiotApp
+  fullName: OSR_Client.RiotApp
+  type: Namespace
+  assemblies:
+  - OSR-Client
+references:
+- uid: OSR_Client.RiotApp.LaunchChecker
+  commentId: T:OSR_Client.RiotApp.LaunchChecker
+  name: LaunchChecker
+  nameWithType: LaunchChecker
+  fullName: OSR_Client.RiotApp.LaunchChecker
+- uid: OSR_Client.RiotApp.ProcessInfo
+  commentId: T:OSR_Client.RiotApp.ProcessInfo
+  name: ProcessInfo
+  nameWithType: ProcessInfo
+  fullName: OSR_Client.RiotApp.ProcessInfo

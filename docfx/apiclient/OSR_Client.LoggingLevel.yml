@@ -1,0 +1,213 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSR_Client.LoggingLevel
+  commentId: T:OSR_Client.LoggingLevel
+  id: LoggingLevel
+  parent: OSR_Client
+  children:
+  - OSR_Client.LoggingLevel.DEBUG
+  - OSR_Client.LoggingLevel.ERROR
+  - OSR_Client.LoggingLevel.INFO
+  - OSR_Client.LoggingLevel.OFF
+  - OSR_Client.LoggingLevel.WARN
+  langs:
+  - csharp
+  - vb
+  name: LoggingLevel
+  nameWithType: LoggingLevel
+  fullName: OSR_Client.LoggingLevel
+  type: Enum
+  source:
+    remote:
+      path: OSR-Client/Logging/OSRLogger.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: LoggingLevel
+    path: ../OSR-Client/Logging/OSRLogger.cs
+    startLine: 191
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client
+  summary: "\nLevel of logging\n"
+  example: []
+  syntax:
+    content: public enum LoggingLevel
+    content.vb: Public Enum LoggingLevel
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: OSR_Client.LoggingLevel.OFF
+  commentId: F:OSR_Client.LoggingLevel.OFF
+  id: OFF
+  parent: OSR_Client.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: OFF
+  nameWithType: LoggingLevel.OFF
+  fullName: OSR_Client.LoggingLevel.OFF
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Logging/OSRLogger.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: OFF
+    path: ../OSR-Client/Logging/OSRLogger.cs
+    startLine: 193
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client
+  syntax:
+    content: OFF = 0
+    return:
+      type: OSR_Client.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSR_Client.LoggingLevel.ERROR
+  commentId: F:OSR_Client.LoggingLevel.ERROR
+  id: ERROR
+  parent: OSR_Client.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: ERROR
+  nameWithType: LoggingLevel.ERROR
+  fullName: OSR_Client.LoggingLevel.ERROR
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Logging/OSRLogger.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: ERROR
+    path: ../OSR-Client/Logging/OSRLogger.cs
+    startLine: 194
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client
+  syntax:
+    content: ERROR = 1
+    return:
+      type: OSR_Client.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSR_Client.LoggingLevel.WARN
+  commentId: F:OSR_Client.LoggingLevel.WARN
+  id: WARN
+  parent: OSR_Client.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: WARN
+  nameWithType: LoggingLevel.WARN
+  fullName: OSR_Client.LoggingLevel.WARN
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Logging/OSRLogger.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: WARN
+    path: ../OSR-Client/Logging/OSRLogger.cs
+    startLine: 195
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client
+  syntax:
+    content: WARN = 2
+    return:
+      type: OSR_Client.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSR_Client.LoggingLevel.INFO
+  commentId: F:OSR_Client.LoggingLevel.INFO
+  id: INFO
+  parent: OSR_Client.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: INFO
+  nameWithType: LoggingLevel.INFO
+  fullName: OSR_Client.LoggingLevel.INFO
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Logging/OSRLogger.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: INFO
+    path: ../OSR-Client/Logging/OSRLogger.cs
+    startLine: 196
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client
+  syntax:
+    content: INFO = 3
+    return:
+      type: OSR_Client.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSR_Client.LoggingLevel.DEBUG
+  commentId: F:OSR_Client.LoggingLevel.DEBUG
+  id: DEBUG
+  parent: OSR_Client.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: DEBUG
+  nameWithType: LoggingLevel.DEBUG
+  fullName: OSR_Client.LoggingLevel.DEBUG
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/Logging/OSRLogger.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: DEBUG
+    path: ../OSR-Client/Logging/OSRLogger.cs
+    startLine: 197
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client
+  syntax:
+    content: DEBUG = 4
+    return:
+      type: OSR_Client.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: OSR_Client
+  commentId: N:OSR_Client
+  name: OSR_Client
+  nameWithType: OSR_Client
+  fullName: OSR_Client
+- uid: OSR_Client.LoggingLevel
+  commentId: T:OSR_Client.LoggingLevel
+  parent: OSR_Client
+  name: LoggingLevel
+  nameWithType: LoggingLevel
+  fullName: OSR_Client.LoggingLevel

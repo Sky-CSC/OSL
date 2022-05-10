@@ -1,4 +1,16 @@
 ### YamlMime:TableOfContent
+- uid: OSR_Server
+  name: OSR_Server
+  items:
+  - uid: OSR_Server.LoggingLevel
+    name: LoggingLevel
+  - uid: OSR_Server.OSRLogger
+    name: OSRLogger
+- uid: OSR_Server.Configuration
+  name: OSR_Server.Configuration
+  items:
+  - uid: OSR_Server.Configuration.Config
+    name: Config
 - uid: OSR_Server.Data
   name: OSR_Server.Data
   items:
@@ -6,6 +18,15 @@
     name: WeatherForecast
   - uid: OSR_Server.Data.WeatherForecastService
     name: WeatherForecastService
+- uid: OSR_Server.FileManager
+  name: OSR_Server.FileManager
+  items:
+  - uid: OSR_Server.FileManager.FileManagerLocal
+    name: FileManagerLocal
+  - uid: OSR_Server.FileManager.JsonManagerLocal
+    name: JsonManagerLocal
+  - uid: OSR_Server.FileManager.JsonType
+    name: JsonType
 - uid: OSR_Server.Pages
   name: OSR_Server.Pages
   items:

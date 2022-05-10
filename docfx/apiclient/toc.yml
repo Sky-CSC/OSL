@@ -1,1 +1,29 @@
-- name: Introduction
+### YamlMime:TableOfContent
+- uid: OSR_Client
+  name: OSR_Client
+  items:
+  - uid: OSR_Client.LoggingLevel
+    name: LoggingLevel
+  - uid: OSR_Client.OSRLogger
+    name: OSRLogger
+- uid: OSR_Client.Configuration
+  name: OSR_Client.Configuration
+  items:
+  - uid: OSR_Client.Configuration.Config
+    name: Config
+- uid: OSR_Client.FileManager
+  name: OSR_Client.FileManager
+  items:
+  - uid: OSR_Client.FileManager.FileManagerLocal
+    name: FileManagerLocal
+  - uid: OSR_Client.FileManager.JsonManagerLocal
+    name: JsonManagerLocal
+  - uid: OSR_Client.FileManager.JsonType
+    name: JsonType
+- uid: OSR_Client.RiotApp
+  name: OSR_Client.RiotApp
+  items:
+  - uid: OSR_Client.RiotApp.LaunchChecker
+    name: LaunchChecker
+  - uid: OSR_Client.RiotApp.ProcessInfo
+    name: ProcessInfo

@@ -1,0 +1,578 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSR_Client.FileManager.FileManagerLocal
+  commentId: T:OSR_Client.FileManager.FileManagerLocal
+  id: FileManagerLocal
+  parent: OSR_Client.FileManager
+  children:
+  - OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
+  - OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
+  - OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
+  - OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
+  - OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: FileManagerLocal
+  nameWithType: FileManagerLocal
+  fullName: OSR_Client.FileManager.FileManagerLocal
+  type: Class
+  source:
+    remote:
+      path: OSR-Client/FileManager/FileManagerLocal.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: FileManagerLocal
+    path: ../OSR-Client/FileManager/FileManagerLocal.cs
+    startLine: 10
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.FileManager
+  syntax:
+    content: public class FileManagerLocal
+    content.vb: Public Class FileManagerLocal
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
+  commentId: M:OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
+  id: CreateFile(System.String)
+  parent: OSR_Client.FileManager.FileManagerLocal
+  langs:
+  - csharp
+  - vb
+  name: CreateFile(String)
+  nameWithType: FileManagerLocal.CreateFile(String)
+  fullName: OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSR-Client/FileManager/FileManagerLocal.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: CreateFile
+    path: ../OSR-Client/FileManager/FileManagerLocal.cs
+    startLine: 17
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.FileManager
+  summary: "\nCreates a new file in the local file system\n"
+  example: []
+  syntax:
+    content: public static void CreateFile(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub CreateFile(filePath As String)
+  overload: OSR_Client.FileManager.FileManagerLocal.CreateFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
+  commentId: M:OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
+  id: DeleteFile(System.String)
+  parent: OSR_Client.FileManager.FileManagerLocal
+  langs:
+  - csharp
+  - vb
+  name: DeleteFile(String)
+  nameWithType: FileManagerLocal.DeleteFile(String)
+  fullName: OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSR-Client/FileManager/FileManagerLocal.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: DeleteFile
+    path: ../OSR-Client/FileManager/FileManagerLocal.cs
+    startLine: 37
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.FileManager
+  summary: "\nDeletes a file in the local file system\n"
+  example: []
+  syntax:
+    content: public static void DeleteFile(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub DeleteFile(filePath As String)
+  overload: OSR_Client.FileManager.FileManagerLocal.DeleteFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
+  commentId: M:OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
+  id: RewrittenFile(System.String,System.String)
+  parent: OSR_Client.FileManager.FileManagerLocal
+  langs:
+  - csharp
+  - vb
+  name: RewrittenFile(String, String)
+  nameWithType: FileManagerLocal.RewrittenFile(String, String)
+  fullName: OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: OSR-Client/FileManager/FileManagerLocal.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: RewrittenFile
+    path: ../OSR-Client/FileManager/FileManagerLocal.cs
+    startLine: 59
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.FileManager
+  summary: "\nRewrite data in file\n"
+  example: []
+  syntax:
+    content: public static void RewrittenFile(string filePath, string content)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: ''
+    - id: content
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub RewrittenFile(filePath As String, content As String)
+  overload: OSR_Client.FileManager.FileManagerLocal.RewrittenFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
+  commentId: M:OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
+  id: WriteInFile(System.String,System.String)
+  parent: OSR_Client.FileManager.FileManagerLocal
+  langs:
+  - csharp
+  - vb
+  name: WriteInFile(String, String)
+  nameWithType: FileManagerLocal.WriteInFile(String, String)
+  fullName: OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: OSR-Client/FileManager/FileManagerLocal.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: WriteInFile
+    path: ../OSR-Client/FileManager/FileManagerLocal.cs
+    startLine: 78
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.FileManager
+  summary: "\nWrite data in file\n"
+  example: []
+  syntax:
+    content: public static void WriteInFile(string filePath, string content)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: ''
+    - id: content
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub WriteInFile(filePath As String, content As String)
+  overload: OSR_Client.FileManager.FileManagerLocal.WriteInFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
+  commentId: M:OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
+  id: ReadInFile(System.String)
+  parent: OSR_Client.FileManager.FileManagerLocal
+  langs:
+  - csharp
+  - vb
+  name: ReadInFile(String)
+  nameWithType: FileManagerLocal.ReadInFile(String)
+  fullName: OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSR-Client/FileManager/FileManagerLocal.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: ReadInFile
+    path: ../OSR-Client/FileManager/FileManagerLocal.cs
+    startLine: 104
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.FileManager
+  summary: "\nRead data in file\n"
+  example: []
+  syntax:
+    content: public static string ReadInFile(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function ReadInFile(filePath As String) As String
+  overload: OSR_Client.FileManager.FileManagerLocal.ReadInFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSR_Client.FileManager
+  commentId: N:OSR_Client.FileManager
+  name: OSR_Client.FileManager
+  nameWithType: OSR_Client.FileManager
+  fullName: OSR_Client.FileManager
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSR_Client.FileManager.FileManagerLocal.CreateFile*
+  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.CreateFile
+  name: CreateFile
+  nameWithType: FileManagerLocal.CreateFile
+  fullName: OSR_Client.FileManager.FileManagerLocal.CreateFile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSR_Client.FileManager.FileManagerLocal.DeleteFile*
+  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.DeleteFile
+  name: DeleteFile
+  nameWithType: FileManagerLocal.DeleteFile
+  fullName: OSR_Client.FileManager.FileManagerLocal.DeleteFile
+- uid: OSR_Client.FileManager.FileManagerLocal.RewrittenFile*
+  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.RewrittenFile
+  name: RewrittenFile
+  nameWithType: FileManagerLocal.RewrittenFile
+  fullName: OSR_Client.FileManager.FileManagerLocal.RewrittenFile
+- uid: OSR_Client.FileManager.FileManagerLocal.WriteInFile*
+  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.WriteInFile
+  name: WriteInFile
+  nameWithType: FileManagerLocal.WriteInFile
+  fullName: OSR_Client.FileManager.FileManagerLocal.WriteInFile
+- uid: OSR_Client.FileManager.FileManagerLocal.ReadInFile*
+  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.ReadInFile
+  name: ReadInFile
+  nameWithType: FileManagerLocal.ReadInFile
+  fullName: OSR_Client.FileManager.FileManagerLocal.ReadInFile

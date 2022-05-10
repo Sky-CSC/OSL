@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSR_Server
+  commentId: N:OSR_Server
+  id: OSR_Server
+  children:
+  - OSR_Server.LoggingLevel
+  - OSR_Server.OSRLogger
+  langs:
+  - csharp
+  - vb
+  name: OSR_Server
+  nameWithType: OSR_Server
+  fullName: OSR_Server
+  type: Namespace
+  assemblies:
+  - OSR-Server
+references:
+- uid: OSR_Server.OSRLogger
+  commentId: T:OSR_Server.OSRLogger
+  name: OSRLogger
+  nameWithType: OSRLogger
+  fullName: OSR_Server.OSRLogger
+- uid: OSR_Server.LoggingLevel
+  commentId: T:OSR_Server.LoggingLevel
+  parent: OSR_Server
+  name: LoggingLevel
+  nameWithType: LoggingLevel
+  fullName: OSR_Server.LoggingLevel
+- uid: OSR_Server
+  commentId: N:OSR_Server
+  name: OSR_Server
+  nameWithType: OSR_Server
+  fullName: OSR_Server
