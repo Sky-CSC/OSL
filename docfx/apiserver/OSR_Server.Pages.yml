@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSR_Server.Pages
+  commentId: N:OSR_Server.Pages
+  id: OSR_Server.Pages
+  children:
+  - OSR_Server.Pages.ErrorModel
+  langs:
+  - csharp
+  - vb
+  name: OSR_Server.Pages
+  nameWithType: OSR_Server.Pages
+  fullName: OSR_Server.Pages
+  type: Namespace
+  assemblies:
+  - OSR-Server
+references:
+- uid: OSR_Server.Pages.ErrorModel
+  commentId: T:OSR_Server.Pages.ErrorModel
+  name: ErrorModel
+  nameWithType: ErrorModel
+  fullName: OSR_Server.Pages.ErrorModel

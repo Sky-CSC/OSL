@@ -1,0 +1,16 @@
+{
+  "OSR_Server.Data": "OSR_Server.Data.yml",
+  "OSR_Server.Data.WeatherForecast": "OSR_Server.Data.WeatherForecast.yml",
+  "OSR_Server.Data.WeatherForecast.Date": "OSR_Server.Data.WeatherForecast.yml",
+  "OSR_Server.Data.WeatherForecast.Summary": "OSR_Server.Data.WeatherForecast.yml",
+  "OSR_Server.Data.WeatherForecast.TemperatureC": "OSR_Server.Data.WeatherForecast.yml",
+  "OSR_Server.Data.WeatherForecast.TemperatureF": "OSR_Server.Data.WeatherForecast.yml",
+  "OSR_Server.Data.WeatherForecastService": "OSR_Server.Data.WeatherForecastService.yml",
+  "OSR_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)": "OSR_Server.Data.WeatherForecastService.yml",
+  "OSR_Server.Pages": "OSR_Server.Pages.yml",
+  "OSR_Server.Pages.ErrorModel": "OSR_Server.Pages.ErrorModel.yml",
+  "OSR_Server.Pages.ErrorModel.#ctor(ILogger{OSR_Server.Pages.ErrorModel})": "OSR_Server.Pages.ErrorModel.yml",
+  "OSR_Server.Pages.ErrorModel.OnGet": "OSR_Server.Pages.ErrorModel.yml",
+  "OSR_Server.Pages.ErrorModel.RequestId": "OSR_Server.Pages.ErrorModel.yml",
+  "OSR_Server.Pages.ErrorModel.ShowRequestId": "OSR_Server.Pages.ErrorModel.yml"
+}
