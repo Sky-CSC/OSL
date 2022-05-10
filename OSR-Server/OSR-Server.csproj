@@ -7,4 +7,18 @@
     <RootNamespace>OSR_Server</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Configuration\configCDragon.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Configuration\configCDragon.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
 </Project>
