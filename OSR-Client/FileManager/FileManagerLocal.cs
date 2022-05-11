@@ -116,6 +116,28 @@ namespace OSR_Client.FileManager
             }
             return content;
         }
+
+        /// <summary>
+        /// Read in file if is use by an other application (lockfile)
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public static string RestrictedAccess(string filePath)
+        {
+            string content = "";
+            try
+            {
+                var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                var reader = new StreamReader(fileStream);
+                content = reader.ReadLine();
+                _logger.log(LoggingLevel.INFO, "ReadInFile()", $"File read : {filePath}");
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "ReadInFile()", e.Message);
+            }
+            return content;
+        }
     }
 }
 
