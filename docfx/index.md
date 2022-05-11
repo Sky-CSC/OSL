@@ -1,4 +1,12 @@
 # Welcome to the OSR : **Overlay Spectator Riot**
+![work-in-progress](https://img.shields.io/badge/respos%20status-WIP-yellow)
+![stability](https://img.shields.io/badge/stability-experimental-orange)
+![language](https://img.shields.io/badge/language-c%23-brightgreen)
+![.Net-6.0](https://img.shields.io/badge/.NET-6.0-brightgreen)
+![platform](https://img.shields.io/badge/platform-windows-brightgreen)
+![license](https://img.shields.io/badge/license-comming%20soon-critical)
+![riot](https://img.shields.io/badge/game-League%20of%20Legends-blue)
+![riot2](https://img.shields.io/badge/game-RIOT-blue)
 
 Here you'll find the OSR-Client and OSR-Server for the Overlay Spectator Riot software suit.
 
