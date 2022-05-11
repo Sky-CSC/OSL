@@ -5,8 +5,8 @@
 ![.Net-6.0](https://img.shields.io/badge/.NET-6.0-brightgreen)
 ![platform](https://img.shields.io/badge/platform-windows-brightgreen)
 ![license](https://img.shields.io/badge/license-comming%20soon-critical)
-![riot](https://img.shields.io/badge/game-League%20of%20Legends-blue)
-![riot2](https://img.shields.io/badge/game-RIOT-blue)
+![riot](https://img.shields.io/badge/api-League%20of%20Legends-blue)
+![riot2](https://img.shields.io/badge/api-RIOT-blue)
 
 Here you'll find the OSR-Client and OSR-Server for the Overlay Spectator Riot software suit.
 
