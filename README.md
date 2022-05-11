@@ -18,5 +18,7 @@ See the [documentation](https://sky-csc.github.io/OSR/) for further informations
 
 ⚠️**The license of this code is not given yet, it is coming soon**⚠️
 
+---
+
 ### **Legal disclaimer**
 OSR isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
