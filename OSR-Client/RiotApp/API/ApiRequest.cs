@@ -18,7 +18,6 @@ namespace OSR_Client.RiotApp.API
         {
             SSL.BypassSSL();
             string httpsLocalHost = Config.localIpHttps + ":" + Config.lockFilePort + nameRequest;
-
             try
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(httpsLocalHost);
@@ -52,30 +51,4 @@ namespace OSR_Client.RiotApp.API
         }
     }
 
-    public class LcuApi
-    {
-        public static readonly string riotclientappname = "/riotclient/app-name"; //Application name without file extension
-        public static readonly string lolgameflowv1session = "/lol-gameflow/v1/session"; //
-        public static readonly string lolgameflowv1gameflowphase = "/lol-gameflow/v1/gameflow-phase"; //
-        public static readonly string lolchampselectv1session = "/lol-champ-select/v1/session"; //
-        public static readonly string lolsummonerv1summoners = "/lol-summoner/v1/summoners/"; // 
-        public static readonly string lolchampselectv1gridchampions = "/lol-champ-select/v1/grid-champions/"; //
-        public class GameFlowPhase
-        {
-            public static readonly string None = "\"None\"";
-            public static readonly string Lobby = "\"Lobby\"";
-            public static readonly string Matchmaking = "\"Matchmaking\"";
-            public static readonly string CheckedIntoTournament = "\"CheckedIntoTournament\"";
-            public static readonly string ReadyCheck = "\"ReadyCheck\"";
-            public static readonly string ChampSelect = "\"ChampSelect\"";
-            public static readonly string GameStart = "\"GameStart\"";
-            public static readonly string FailedToLaunch = "\"FailedToLaunch\"";
-            public static readonly string InProgress = "\"InProgress\"";
-            public static readonly string Reconnect = "\"Reconnect\"";
-            public static readonly string WaitingForStats = "\"WaitingForStats\"";
-            public static readonly string PreEndOfGame = "\"PreEndOfGame\"";
-            public static readonly string EndOfGame = "\"EndOfGame\"";
-            public static readonly string TerminatedInError = "\"TerminatedInError\"";
-        }
-    }
 }

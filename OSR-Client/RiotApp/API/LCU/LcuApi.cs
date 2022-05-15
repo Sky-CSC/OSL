@@ -1,8 +1,10 @@
-﻿using System;
+﻿using OSR_Client.RiotApp.DataProcessing;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static OSR_Client.RiotApp.API.LCU.GameFlowPhase;
 
 namespace OSR_Client.RiotApp.API.LCU
 {
@@ -11,77 +13,89 @@ namespace OSR_Client.RiotApp.API.LCU
         private static OSRLogger _logger = new OSRLogger("LcuApi");
         public static void GameFlowPhaseCheck(string gameFlowPhase)
         {
-            if (gameFlowPhase.Equals(GameFlowPhase.None))
+            if (gameFlowPhase == null)
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.None}");
+                _logger.log(LoggingLevel.ERROR, "GameFlowPhaseCheck()", "GameFlowPhase is null");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.Lobby))
+            else if (gameFlowPhase.Equals(None))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.Lobby}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {None}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.Matchmaking))
+            else if (gameFlowPhase.Equals(Lobby))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.Matchmaking}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {Lobby}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.CheckedIntoTournament))
+            else if (gameFlowPhase.Equals(Matchmaking))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.CheckedIntoTournament}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {Matchmaking}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.ReadyCheck))
+            else if (gameFlowPhase.Equals(CheckedIntoTournament))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.ReadyCheck}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {CheckedIntoTournament}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.ChampSelect))
+            else if (gameFlowPhase.Equals(ReadyCheck))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.ChampSelect}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {ReadyCheck}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.GameStart))
+            else if (gameFlowPhase.Equals(ChampSelect))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.GameStart}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {ChampSelect}");
+                ChampionSelect.ManageChampionSelect();
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.FailedToLaunch))
+            else if (gameFlowPhase.Equals(GameStart))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.FailedToLaunch}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {GameStart}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.InProgress))
+            else if (gameFlowPhase.Equals(FailedToLaunch))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.InProgress}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {FailedToLaunch}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.Reconnect))
+            else if (gameFlowPhase.Equals(InProgress))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.Reconnect}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {InProgress}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.WaitingForStats))
+            else if (gameFlowPhase.Equals(Reconnect))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.WaitingForStats}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {Reconnect}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.PreEndOfGame))
+            else if (gameFlowPhase.Equals(WaitingForStats))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.PreEndOfGame}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {WaitingForStats}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.EndOfGame))
+            else if (gameFlowPhase.Equals(PreEndOfGame))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.EndOfGame}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {PreEndOfGame}");
             }
-            else if (gameFlowPhase.Equals(GameFlowPhase.TerminatedInError))
+            else if (gameFlowPhase.Equals(EndOfGame))
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase is {GameFlowPhase.TerminatedInError}");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {EndOfGame}");
+            }
+            else if (gameFlowPhase.Equals(TerminatedInError))
+            {
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {TerminatedInError}");
             }
             else
             {
-                _logger.log(LoggingLevel.INFO, "RequestGameClientAPI", $"GameFlowPhase not exist");
+                _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase not exist");
             }
         }
     }
     public class UrlRequest
     {
-        public static readonly string riotclientappname = "/riotclient/app-name"; //Application name without file extension
-        public static readonly string lolgameflowv1session = "/lol-gameflow/v1/session"; //
-        public static readonly string lolgameflowv1gameflowphase = "/lol-gameflow/v1/gameflow-phase"; //
-        public static readonly string lolchampselectv1session = "/lol-champ-select/v1/session"; //
-        public static readonly string lolsummonerv1summoners = "/lol-summoner/v1/summoners/"; // 
-        public static readonly string lolchampselectv1gridchampions = "/lol-champ-select/v1/grid-champions/"; //
-        
+        public static string riotclientappname = "/riotclient/app-name"; //Application name without file extension
+        public static string lolgameflowv1session = "/lol-gameflow/v1/session"; //
+        public static string lolgameflowv1gameflowphase = "/lol-gameflow/v1/gameflow-phase"; //
+        public static string lolsummonerv1summoners = "/lol-summoner/v1/summoners/"; // 
+
+
+        //lol-champ-select
+        public static string lolchampselectv1gridchampions = "/lol-champ-select/v1/grid-champions/"; //
+        public static string lolchampselectv1session = "/lol-champ-select/v1/session"; //
+        public static string lolchampselectv1bannablechampionids = "/lol-champ-select/v1/bannable-champion-ids"; //All champ possible to ban
+        public static string lolchampselectv1currentchampion = "/lol-champ-select/v1/current-champion"; //No info
+
+        //lol-champ-select-legacy
+        public static string lolchampselectlegacyv1session = "/lol-champ-select-legacy/v1/session";
     }
     public class GameFlowPhase
     {
