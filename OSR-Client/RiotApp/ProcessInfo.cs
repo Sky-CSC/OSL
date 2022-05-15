@@ -10,6 +10,11 @@ namespace OSR_Client.RiotApp
     public class ProcessInfo
     {
         private static OSRLogger _logger = new OSRLogger("ProcessInfo");
+        /// <summary>
+        /// Gets the process info by name
+        /// </summary>
+        /// <param name="nameProcess"></param>
+        /// <returns></returns>
         public static Process[] NameProcessInfo(string nameProcess)
         {
             try
@@ -31,7 +36,11 @@ namespace OSR_Client.RiotApp
                 return Array.Empty<Process>();
             }
         }
-
+        /// <summary>
+        /// Gets the process info by id
+        /// </summary>
+        /// <param name="idProcess"></param>
+        /// <returns></returns>
         public static Process IdProcessInfo(int idProcess)
         {
             try
