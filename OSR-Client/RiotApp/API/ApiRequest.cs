@@ -38,6 +38,26 @@ namespace OSR_Client.RiotApp.API
             //_logger.log(LoggingLevel.ERROR, "RequestGameClientAPI", "Request to " + httpsLocalHost + " failed");
             //return null;
         }
+
+        public static string RequestGameClientReplayAPI(string nameRequest)
+        {
+            SSL.BypassSSL();
+            string httpsLocalHost = Config.localIpHttps + ":" + Config.portRiot + nameRequest;
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(httpsLocalHost);
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                Stream resStream = response.GetResponseStream();
+                StreamReader reader = new StreamReader(resStream);
+                _logger.log(LoggingLevel.INFO, "RequestGameClientReplayAPI", "Request to " + httpsLocalHost + " was successful");
+                return reader.ReadToEnd();
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "RequestGameClientReplayAPI", "Request to " + httpsLocalHost + " failed, " + e.Message);
+                return null;
+            }
+        }
     }
     class SSL
     {

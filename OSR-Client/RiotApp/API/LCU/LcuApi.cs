@@ -1,4 +1,5 @@
-﻿using OSR_Client.RiotApp.DataProcessing;
+﻿using OSR_Client.RiotApp.API.Replay;
+using OSR_Client.RiotApp.DataProcessing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +14,29 @@ namespace OSR_Client.RiotApp.API.LCU
         private static OSRLogger _logger = new OSRLogger("LcuApi");
         public static void GameFlowPhaseCheck(string gameFlowPhase)
         {
+            //Error, impossible to recive corect information of LCUAPI
             if (gameFlowPhase == null)
             {
                 _logger.log(LoggingLevel.ERROR, "GameFlowPhaseCheck()", "GameFlowPhase is null");
             }
+
+            //There are no specific things going on, BUT it is possible that it is a finished part that we want to look at
             else if (gameFlowPhase.Equals(None))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {None}");
+                //Check if a game is running
+                if (ReplayApi.GameEndButReplay() != null)
+                {
+                    _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", "Game found");
+                    //If the game is finish and we want to watch it, no champ select display but, champ pick and ban display
+                    InGameProcess.InGame();
+                }
+                else
+                {
+                    _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", "No game found");
+                }
             }
+
             else if (gameFlowPhase.Equals(Lobby))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {Lobby}");
@@ -37,11 +53,14 @@ namespace OSR_Client.RiotApp.API.LCU
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {ReadyCheck}");
             }
+
+            //We are in Champion Selection
             else if (gameFlowPhase.Equals(ChampSelect))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {ChampSelect}");
-                ChampionSelect.ManageChampionSelect();
+                ChampSelectProcess.InChampSelect();
             }
+
             else if (gameFlowPhase.Equals(GameStart))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {GameStart}");
@@ -50,10 +69,14 @@ namespace OSR_Client.RiotApp.API.LCU
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {FailedToLaunch}");
             }
+
+            //We are in Game
             else if (gameFlowPhase.Equals(InProgress))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {InProgress}");
+                InGameProcess.InGame();
             }
+
             else if (gameFlowPhase.Equals(Reconnect))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {Reconnect}");
@@ -82,20 +105,20 @@ namespace OSR_Client.RiotApp.API.LCU
     }
     public class UrlRequest
     {
-        public static string riotclientappname = "/riotclient/app-name"; //Application name without file extension
-        public static string lolgameflowv1session = "/lol-gameflow/v1/session"; //
-        public static string lolgameflowv1gameflowphase = "/lol-gameflow/v1/gameflow-phase"; //
-        public static string lolsummonerv1summoners = "/lol-summoner/v1/summoners/"; // 
+        public static readonly string riotclientappname = "/riotclient/app-name"; //Application name without file extension
+        public static readonly string lolgameflowv1session = "/lol-gameflow/v1/session"; //
+        public static readonly string lolgameflowv1gameflowphase = "/lol-gameflow/v1/gameflow-phase"; //
+        public static readonly string lolsummonerv1summoners = "/lol-summoner/v1/summoners/"; // 
 
 
         //lol-champ-select
-        public static string lolchampselectv1gridchampions = "/lol-champ-select/v1/grid-champions/"; //
-        public static string lolchampselectv1session = "/lol-champ-select/v1/session"; //
-        public static string lolchampselectv1bannablechampionids = "/lol-champ-select/v1/bannable-champion-ids"; //All champ possible to ban
-        public static string lolchampselectv1currentchampion = "/lol-champ-select/v1/current-champion"; //No info
+        public static readonly string lolchampselectv1gridchampions = "/lol-champ-select/v1/grid-champions/"; //
+        public static readonly string lolchampselectv1session = "/lol-champ-select/v1/session"; //
+        public static readonly string lolchampselectv1bannablechampionids = "/lol-champ-select/v1/bannable-champion-ids"; //All champ possible to ban
+        public static readonly string lolchampselectv1currentchampion = "/lol-champ-select/v1/current-champion"; //No info
 
         //lol-champ-select-legacy
-        public static string lolchampselectlegacyv1session = "/lol-champ-select-legacy/v1/session";
+        public static readonly string lolchampselectlegacyv1session = "/lol-champ-select-legacy/v1/session";
     }
     public class GameFlowPhase
     {
