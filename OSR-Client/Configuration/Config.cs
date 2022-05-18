@@ -27,6 +27,8 @@ namespace OSR_Client.Configuration
         public static string portRiot = "2999";
         public static string GameClientApiLocalHost = "";
         public static string GameClientApiPassword = "";
+        //public static string LiveEventsAPIIP = "127.0.0.1";
+        public static int LiveEventsAPIPort = 34243;
 
         /// <summary>
         /// Loads the config from the config file.
