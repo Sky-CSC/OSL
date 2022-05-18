@@ -9,7 +9,7 @@
 ![riot2](https://img.shields.io/badge/api-RIOT-blue)
 
 Here you'll find the OSR-Client and OSR-Server for the Overlay Spectator Riot software suit.
-See the [documentation](https://sky-csc.github.io/OSR/) for further informations
+See the **[documentation](https://sky-csc.github.io/OSR/)** for further informations
 
 ---
 ### This project permite to have an overlay for display informattion in champion-select, in-game and in end-game in streamings.
