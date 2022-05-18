@@ -27,3 +27,17 @@
     name: LaunchChecker
   - uid: OSR_Client.RiotApp.ProcessInfo
     name: ProcessInfo
+- uid: OSR_Client.RiotApp.API.LCU
+  name: OSR_Client.RiotApp.API.LCU
+  items:
+  - uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase
+    name: GameFlowPhase
+  - uid: OSR_Client.RiotApp.API.LCU.LcuApi
+    name: LcuApi
+  - uid: OSR_Client.RiotApp.API.LCU.UrlRequest
+    name: UrlRequest
+- uid: OSR_Client.RiotApp.API.Replay
+  name: OSR_Client.RiotApp.API.Replay
+  items:
+  - uid: OSR_Client.RiotApp.API.Replay.UrlRequest
+    name: UrlRequest

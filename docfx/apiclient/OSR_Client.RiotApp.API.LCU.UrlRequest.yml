@@ -1,37 +1,40 @@
 ### YamlMime:ManagedReference
 items:
-- uid: OSR_Client.FileManager.FileManagerLocal
-  commentId: T:OSR_Client.FileManager.FileManagerLocal
-  id: FileManagerLocal
-  parent: OSR_Client.FileManager
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest
+  commentId: T:OSR_Client.RiotApp.API.LCU.UrlRequest
+  id: UrlRequest
+  parent: OSR_Client.RiotApp.API.LCU
   children:
-  - OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
-  - OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
-  - OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
-  - OSR_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
-  - OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
-  - OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
+  - OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
+  - OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
+  - OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
+  - OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
+  - OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
+  - OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
+  - OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
+  - OSR_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
+  - OSR_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
   langs:
   - csharp
   - vb
-  name: FileManagerLocal
-  nameWithType: FileManagerLocal
-  fullName: OSR_Client.FileManager.FileManagerLocal
+  name: UrlRequest
+  nameWithType: UrlRequest
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest
   type: Class
   source:
     remote:
-      path: OSR-Client/FileManager/FileManagerLocal.cs
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSR.git
-    id: FileManagerLocal
-    path: ../OSR-Client/FileManager/FileManagerLocal.cs
-    startLine: 10
+    id: UrlRequest
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 105
   assemblies:
   - OSR-Client
-  namespace: OSR_Client.FileManager
+  namespace: OSR_Client.RiotApp.API.LCU
   syntax:
-    content: public class FileManagerLocal
-    content.vb: Public Class FileManagerLocal
+    content: public class UrlRequest
+    content.vb: Public Class UrlRequest
   inheritance:
   - System.Object
   inheritedMembers:
@@ -48,252 +51,327 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
-  id: CreateFile(System.String)
-  parent: OSR_Client.FileManager.FileManagerLocal
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
+  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
+  id: riotclientappname
+  parent: OSR_Client.RiotApp.API.LCU.UrlRequest
   langs:
   - csharp
   - vb
-  name: CreateFile(String)
-  nameWithType: FileManagerLocal.CreateFile(String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
-  type: Method
+  name: riotclientappname
+  nameWithType: UrlRequest.riotclientappname
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
+  type: Field
   source:
     remote:
-      path: OSR-Client/FileManager/FileManagerLocal.cs
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSR.git
-    id: CreateFile
-    path: ../OSR-Client/FileManager/FileManagerLocal.cs
-    startLine: 17
+    id: riotclientappname
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 107
   assemblies:
   - OSR-Client
-  namespace: OSR_Client.FileManager
-  summary: "\nCreates a new file in the local file system\n"
-  example: []
+  namespace: OSR_Client.RiotApp.API.LCU
   syntax:
-    content: public static void CreateFile(string filePath)
-    parameters:
-    - id: filePath
-      type: System.String
-      description: ''
-    content.vb: Public Shared Sub CreateFile(filePath As String)
-  overload: OSR_Client.FileManager.FileManagerLocal.CreateFile*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
-  id: DeleteFile(System.String)
-  parent: OSR_Client.FileManager.FileManagerLocal
-  langs:
-  - csharp
-  - vb
-  name: DeleteFile(String)
-  nameWithType: FileManagerLocal.DeleteFile(String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
-  type: Method
-  source:
-    remote:
-      path: OSR-Client/FileManager/FileManagerLocal.cs
-      branch: main
-      repo: https://github.com/Sky-CSC/OSR.git
-    id: DeleteFile
-    path: ../OSR-Client/FileManager/FileManagerLocal.cs
-    startLine: 37
-  assemblies:
-  - OSR-Client
-  namespace: OSR_Client.FileManager
-  summary: "\nDeletes a file in the local file system\n"
-  example: []
-  syntax:
-    content: public static void DeleteFile(string filePath)
-    parameters:
-    - id: filePath
-      type: System.String
-      description: ''
-    content.vb: Public Shared Sub DeleteFile(filePath As String)
-  overload: OSR_Client.FileManager.FileManagerLocal.DeleteFile*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
-  id: RewrittenFile(System.String,System.String)
-  parent: OSR_Client.FileManager.FileManagerLocal
-  langs:
-  - csharp
-  - vb
-  name: RewrittenFile(String, String)
-  nameWithType: FileManagerLocal.RewrittenFile(String, String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String, System.String)
-  type: Method
-  source:
-    remote:
-      path: OSR-Client/FileManager/FileManagerLocal.cs
-      branch: main
-      repo: https://github.com/Sky-CSC/OSR.git
-    id: RewrittenFile
-    path: ../OSR-Client/FileManager/FileManagerLocal.cs
-    startLine: 59
-  assemblies:
-  - OSR-Client
-  namespace: OSR_Client.FileManager
-  summary: "\nRewrite data in file\n"
-  example: []
-  syntax:
-    content: public static void RewrittenFile(string filePath, string content)
-    parameters:
-    - id: filePath
-      type: System.String
-      description: ''
-    - id: content
-      type: System.String
-      description: ''
-    content.vb: Public Shared Sub RewrittenFile(filePath As String, content As String)
-  overload: OSR_Client.FileManager.FileManagerLocal.RewrittenFile*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
-  id: WriteInFile(System.String,System.String)
-  parent: OSR_Client.FileManager.FileManagerLocal
-  langs:
-  - csharp
-  - vb
-  name: WriteInFile(String, String)
-  nameWithType: FileManagerLocal.WriteInFile(String, String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String, System.String)
-  type: Method
-  source:
-    remote:
-      path: OSR-Client/FileManager/FileManagerLocal.cs
-      branch: main
-      repo: https://github.com/Sky-CSC/OSR.git
-    id: WriteInFile
-    path: ../OSR-Client/FileManager/FileManagerLocal.cs
-    startLine: 78
-  assemblies:
-  - OSR-Client
-  namespace: OSR_Client.FileManager
-  summary: "\nWrite data in file\n"
-  example: []
-  syntax:
-    content: public static void WriteInFile(string filePath, string content)
-    parameters:
-    - id: filePath
-      type: System.String
-      description: ''
-    - id: content
-      type: System.String
-      description: ''
-    content.vb: Public Shared Sub WriteInFile(filePath As String, content As String)
-  overload: OSR_Client.FileManager.FileManagerLocal.WriteInFile*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
-  id: ReadInFile(System.String)
-  parent: OSR_Client.FileManager.FileManagerLocal
-  langs:
-  - csharp
-  - vb
-  name: ReadInFile(String)
-  nameWithType: FileManagerLocal.ReadInFile(String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
-  type: Method
-  source:
-    remote:
-      path: OSR-Client/FileManager/FileManagerLocal.cs
-      branch: main
-      repo: https://github.com/Sky-CSC/OSR.git
-    id: ReadInFile
-    path: ../OSR-Client/FileManager/FileManagerLocal.cs
-    startLine: 104
-  assemblies:
-  - OSR-Client
-  namespace: OSR_Client.FileManager
-  summary: "\nRead data in file\n"
-  example: []
-  syntax:
-    content: public static string ReadInFile(string filePath)
-    parameters:
-    - id: filePath
-      type: System.String
-      description: ''
+    content: public static readonly string riotclientappname
     return:
       type: System.String
-      description: ''
-    content.vb: Public Shared Function ReadInFile(filePath As String) As String
-  overload: OSR_Client.FileManager.FileManagerLocal.ReadInFile*
+    content.vb: Public Shared ReadOnly riotclientappname As String
   modifiers.csharp:
   - public
   - static
+  - readonly
   modifiers.vb:
   - Public
   - Shared
-- uid: OSR_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
-  id: RestrictedAccess(System.String)
-  parent: OSR_Client.FileManager.FileManagerLocal
+  - ReadOnly
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
+  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
+  id: lolgameflowv1session
+  parent: OSR_Client.RiotApp.API.LCU.UrlRequest
   langs:
   - csharp
   - vb
-  name: RestrictedAccess(String)
-  nameWithType: FileManagerLocal.RestrictedAccess(String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
-  type: Method
+  name: lolgameflowv1session
+  nameWithType: UrlRequest.lolgameflowv1session
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
+  type: Field
   source:
     remote:
-      path: OSR-Client/FileManager/FileManagerLocal.cs
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSR.git
-    id: RestrictedAccess
-    path: ../OSR-Client/FileManager/FileManagerLocal.cs
-    startLine: 124
+    id: lolgameflowv1session
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 108
   assemblies:
   - OSR-Client
-  namespace: OSR_Client.FileManager
-  summary: "\nRead in file if is use by an other application (lockfile)\n"
-  example: []
+  namespace: OSR_Client.RiotApp.API.LCU
   syntax:
-    content: public static string RestrictedAccess(string filePath)
-    parameters:
-    - id: filePath
-      type: System.String
-      description: ''
+    content: public static readonly string lolgameflowv1session
     return:
       type: System.String
-      description: ''
-    content.vb: Public Shared Function RestrictedAccess(filePath As String) As String
-  overload: OSR_Client.FileManager.FileManagerLocal.RestrictedAccess*
+    content.vb: Public Shared ReadOnly lolgameflowv1session As String
   modifiers.csharp:
   - public
   - static
+  - readonly
   modifiers.vb:
   - Public
   - Shared
+  - ReadOnly
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
+  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
+  id: lolgameflowv1gameflowphase
+  parent: OSR_Client.RiotApp.API.LCU.UrlRequest
+  langs:
+  - csharp
+  - vb
+  name: lolgameflowv1gameflowphase
+  nameWithType: UrlRequest.lolgameflowv1gameflowphase
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: lolgameflowv1gameflowphase
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 109
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.RiotApp.API.LCU
+  syntax:
+    content: public static readonly string lolgameflowv1gameflowphase
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly lolgameflowv1gameflowphase As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
+  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
+  id: lolsummonerv1summoners
+  parent: OSR_Client.RiotApp.API.LCU.UrlRequest
+  langs:
+  - csharp
+  - vb
+  name: lolsummonerv1summoners
+  nameWithType: UrlRequest.lolsummonerv1summoners
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: lolsummonerv1summoners
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 110
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.RiotApp.API.LCU
+  syntax:
+    content: public static readonly string lolsummonerv1summoners
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly lolsummonerv1summoners As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
+  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
+  id: lolchampselectv1gridchampions
+  parent: OSR_Client.RiotApp.API.LCU.UrlRequest
+  langs:
+  - csharp
+  - vb
+  name: lolchampselectv1gridchampions
+  nameWithType: UrlRequest.lolchampselectv1gridchampions
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: lolchampselectv1gridchampions
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 114
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.RiotApp.API.LCU
+  syntax:
+    content: public static readonly string lolchampselectv1gridchampions
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly lolchampselectv1gridchampions As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
+  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
+  id: lolchampselectv1session
+  parent: OSR_Client.RiotApp.API.LCU.UrlRequest
+  langs:
+  - csharp
+  - vb
+  name: lolchampselectv1session
+  nameWithType: UrlRequest.lolchampselectv1session
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: lolchampselectv1session
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 115
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.RiotApp.API.LCU
+  syntax:
+    content: public static readonly string lolchampselectv1session
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly lolchampselectv1session As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
+  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
+  id: lolchampselectv1bannablechampionids
+  parent: OSR_Client.RiotApp.API.LCU.UrlRequest
+  langs:
+  - csharp
+  - vb
+  name: lolchampselectv1bannablechampionids
+  nameWithType: UrlRequest.lolchampselectv1bannablechampionids
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: lolchampselectv1bannablechampionids
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 116
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.RiotApp.API.LCU
+  syntax:
+    content: public static readonly string lolchampselectv1bannablechampionids
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly lolchampselectv1bannablechampionids As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
+  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
+  id: lolchampselectv1currentchampion
+  parent: OSR_Client.RiotApp.API.LCU.UrlRequest
+  langs:
+  - csharp
+  - vb
+  name: lolchampselectv1currentchampion
+  nameWithType: UrlRequest.lolchampselectv1currentchampion
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: lolchampselectv1currentchampion
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 117
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.RiotApp.API.LCU
+  syntax:
+    content: public static readonly string lolchampselectv1currentchampion
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly lolchampselectv1currentchampion As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
+  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
+  id: lolchampselectlegacyv1session
+  parent: OSR_Client.RiotApp.API.LCU.UrlRequest
+  langs:
+  - csharp
+  - vb
+  name: lolchampselectlegacyv1session
+  nameWithType: UrlRequest.lolchampselectlegacyv1session
+  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
+  type: Field
+  source:
+    remote:
+      path: OSR-Client/RiotApp/API/LCU/LcuApi.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSR.git
+    id: lolchampselectlegacyv1session
+    path: ../OSR-Client/RiotApp/API/LCU/LcuApi.cs
+    startLine: 120
+  assemblies:
+  - OSR-Client
+  namespace: OSR_Client.RiotApp.API.LCU
+  syntax:
+    content: public static readonly string lolchampselectlegacyv1session
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly lolchampselectlegacyv1session As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 references:
-- uid: OSR_Client.FileManager
-  commentId: N:OSR_Client.FileManager
-  name: OSR_Client.FileManager
-  nameWithType: OSR_Client.FileManager
-  fullName: OSR_Client.FileManager
+- uid: OSR_Client.RiotApp.API.LCU
+  commentId: N:OSR_Client.RiotApp.API.LCU
+  name: OSR_Client.RiotApp.API.LCU
+  nameWithType: OSR_Client.RiotApp.API.LCU
+  fullName: OSR_Client.RiotApp.API.LCU
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -586,11 +664,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSR_Client.FileManager.FileManagerLocal.CreateFile*
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.CreateFile
-  name: CreateFile
-  nameWithType: FileManagerLocal.CreateFile
-  fullName: OSR_Client.FileManager.FileManagerLocal.CreateFile
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -598,28 +671,3 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: OSR_Client.FileManager.FileManagerLocal.DeleteFile*
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.DeleteFile
-  name: DeleteFile
-  nameWithType: FileManagerLocal.DeleteFile
-  fullName: OSR_Client.FileManager.FileManagerLocal.DeleteFile
-- uid: OSR_Client.FileManager.FileManagerLocal.RewrittenFile*
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.RewrittenFile
-  name: RewrittenFile
-  nameWithType: FileManagerLocal.RewrittenFile
-  fullName: OSR_Client.FileManager.FileManagerLocal.RewrittenFile
-- uid: OSR_Client.FileManager.FileManagerLocal.WriteInFile*
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.WriteInFile
-  name: WriteInFile
-  nameWithType: FileManagerLocal.WriteInFile
-  fullName: OSR_Client.FileManager.FileManagerLocal.WriteInFile
-- uid: OSR_Client.FileManager.FileManagerLocal.ReadInFile*
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.ReadInFile
-  name: ReadInFile
-  nameWithType: FileManagerLocal.ReadInFile
-  fullName: OSR_Client.FileManager.FileManagerLocal.ReadInFile
-- uid: OSR_Client.FileManager.FileManagerLocal.RestrictedAccess*
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.RestrictedAccess
-  name: RestrictedAccess
-  nameWithType: FileManagerLocal.RestrictedAccess
-  fullName: OSR_Client.FileManager.FileManagerLocal.RestrictedAccess

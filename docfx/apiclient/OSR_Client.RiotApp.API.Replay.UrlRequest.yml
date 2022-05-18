@@ -1,33 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: OSR_Client.RiotApp.ProcessInfo
-  commentId: T:OSR_Client.RiotApp.ProcessInfo
-  id: ProcessInfo
-  parent: OSR_Client.RiotApp
+- uid: OSR_Client.RiotApp.API.Replay.UrlRequest
+  commentId: T:OSR_Client.RiotApp.API.Replay.UrlRequest
+  id: UrlRequest
+  parent: OSR_Client.RiotApp.API.Replay
   children:
-  - OSR_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
-  - OSR_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
+  - OSR_Client.RiotApp.API.Replay.UrlRequest.replaygame
   langs:
   - csharp
   - vb
-  name: ProcessInfo
-  nameWithType: ProcessInfo
-  fullName: OSR_Client.RiotApp.ProcessInfo
+  name: UrlRequest
+  nameWithType: UrlRequest
+  fullName: OSR_Client.RiotApp.API.Replay.UrlRequest
   type: Class
   source:
     remote:
-      path: OSR-Client/RiotApp/ProcessInfo.cs
+      path: OSR-Client/RiotApp/API/Replay/ReplayApi.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSR.git
-    id: ProcessInfo
-    path: ../OSR-Client/RiotApp/ProcessInfo.cs
-    startLine: 9
+    id: UrlRequest
+    path: ../OSR-Client/RiotApp/API/Replay/ReplayApi.cs
+    startLine: 30
   assemblies:
   - OSR-Client
-  namespace: OSR_Client.RiotApp
+  namespace: OSR_Client.RiotApp.API.Replay
   syntax:
-    content: public class ProcessInfo
-    content.vb: Public Class ProcessInfo
+    content: public class UrlRequest
+    content.vb: Public Class UrlRequest
   inheritance:
   - System.Object
   inheritedMembers:
@@ -44,94 +43,47 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSR_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
-  commentId: M:OSR_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
-  id: NameProcessInfo(System.String)
-  parent: OSR_Client.RiotApp.ProcessInfo
+- uid: OSR_Client.RiotApp.API.Replay.UrlRequest.replaygame
+  commentId: F:OSR_Client.RiotApp.API.Replay.UrlRequest.replaygame
+  id: replaygame
+  parent: OSR_Client.RiotApp.API.Replay.UrlRequest
   langs:
   - csharp
   - vb
-  name: NameProcessInfo(String)
-  nameWithType: ProcessInfo.NameProcessInfo(String)
-  fullName: OSR_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
-  type: Method
+  name: replaygame
+  nameWithType: UrlRequest.replaygame
+  fullName: OSR_Client.RiotApp.API.Replay.UrlRequest.replaygame
+  type: Field
   source:
     remote:
-      path: OSR-Client/RiotApp/ProcessInfo.cs
+      path: OSR-Client/RiotApp/API/Replay/ReplayApi.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSR.git
-    id: NameProcessInfo
-    path: ../OSR-Client/RiotApp/ProcessInfo.cs
-    startLine: 17
+    id: replaygame
+    path: ../OSR-Client/RiotApp/API/Replay/ReplayApi.cs
+    startLine: 32
   assemblies:
   - OSR-Client
-  namespace: OSR_Client.RiotApp
-  summary: "\nGets the process info by name\n"
-  example: []
+  namespace: OSR_Client.RiotApp.API.Replay
   syntax:
-    content: public static Process[] NameProcessInfo(string nameProcess)
-    parameters:
-    - id: nameProcess
+    content: public static readonly string replaygame
+    return:
       type: System.String
-      description: ''
-    return:
-      type: System.Diagnostics.Process[]
-      description: ''
-    content.vb: Public Shared Function NameProcessInfo(nameProcess As String) As Process()
-  overload: OSR_Client.RiotApp.ProcessInfo.NameProcessInfo*
+    content.vb: Public Shared ReadOnly replaygame As String
   modifiers.csharp:
   - public
   - static
+  - readonly
   modifiers.vb:
   - Public
   - Shared
-- uid: OSR_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
-  commentId: M:OSR_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
-  id: IdProcessInfo(System.Int32)
-  parent: OSR_Client.RiotApp.ProcessInfo
-  langs:
-  - csharp
-  - vb
-  name: IdProcessInfo(Int32)
-  nameWithType: ProcessInfo.IdProcessInfo(Int32)
-  fullName: OSR_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
-  type: Method
-  source:
-    remote:
-      path: OSR-Client/RiotApp/ProcessInfo.cs
-      branch: main
-      repo: https://github.com/Sky-CSC/OSR.git
-    id: IdProcessInfo
-    path: ../OSR-Client/RiotApp/ProcessInfo.cs
-    startLine: 43
-  assemblies:
-  - OSR-Client
-  namespace: OSR_Client.RiotApp
-  summary: "\nGets the process info by id\n"
-  example: []
-  syntax:
-    content: public static Process IdProcessInfo(int idProcess)
-    parameters:
-    - id: idProcess
-      type: System.Int32
-      description: ''
-    return:
-      type: System.Diagnostics.Process
-      description: ''
-    content.vb: Public Shared Function IdProcessInfo(idProcess As Integer) As Process
-  overload: OSR_Client.RiotApp.ProcessInfo.IdProcessInfo*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
+  - ReadOnly
 references:
-- uid: OSR_Client.RiotApp
-  commentId: N:OSR_Client.RiotApp
-  name: OSR_Client.RiotApp
-  nameWithType: OSR_Client.RiotApp
-  fullName: OSR_Client.RiotApp
+- uid: OSR_Client.RiotApp.API.Replay
+  commentId: N:OSR_Client.RiotApp.API.Replay
+  name: OSR_Client.RiotApp.API.Replay
+  nameWithType: OSR_Client.RiotApp.API.Replay
+  fullName: OSR_Client.RiotApp.API.Replay
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -424,11 +376,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSR_Client.RiotApp.ProcessInfo.NameProcessInfo*
-  commentId: Overload:OSR_Client.RiotApp.ProcessInfo.NameProcessInfo
-  name: NameProcessInfo
-  nameWithType: ProcessInfo.NameProcessInfo
-  fullName: OSR_Client.RiotApp.ProcessInfo.NameProcessInfo
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -436,54 +383,3 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: System.Diagnostics.Process[]
-  isExternal: true
-  name: Process[]
-  nameWithType: Process[]
-  fullName: System.Diagnostics.Process[]
-  nameWithType.vb: Process()
-  fullName.vb: System.Diagnostics.Process()
-  name.vb: Process()
-  spec.csharp:
-  - uid: System.Diagnostics.Process
-    name: Process
-    nameWithType: Process
-    fullName: System.Diagnostics.Process
-    isExternal: true
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  spec.vb:
-  - uid: System.Diagnostics.Process
-    name: Process
-    nameWithType: Process
-    fullName: System.Diagnostics.Process
-    isExternal: true
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-- uid: OSR_Client.RiotApp.ProcessInfo.IdProcessInfo*
-  commentId: Overload:OSR_Client.RiotApp.ProcessInfo.IdProcessInfo
-  name: IdProcessInfo
-  nameWithType: ProcessInfo.IdProcessInfo
-  fullName: OSR_Client.RiotApp.ProcessInfo.IdProcessInfo
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: System.Diagnostics.Process
-  commentId: T:System.Diagnostics.Process
-  parent: System.Diagnostics
-  isExternal: true
-  name: Process
-  nameWithType: Process
-  fullName: System.Diagnostics.Process
-- uid: System.Diagnostics
-  commentId: N:System.Diagnostics
-  isExternal: true
-  name: System.Diagnostics
-  nameWithType: System.Diagnostics
-  fullName: System.Diagnostics

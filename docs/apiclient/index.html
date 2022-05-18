@@ -132,6 +132,30 @@
                             <a href="OSR_Client.RiotApp.ProcessInfo.html" title="ProcessInfo" class="">ProcessInfo</a>
                           </li>
                         </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="OSR_Client.RiotApp.API.LCU.html" title="OSR_Client.RiotApp.API.LCU" class="">OSR_Client.RiotApp.API.LCU</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="OSR_Client.RiotApp.API.LCU.GameFlowPhase.html" title="GameFlowPhase" class="">GameFlowPhase</a>
+                          </li>
+                          <li class="">
+                            <a href="OSR_Client.RiotApp.API.LCU.LcuApi.html" title="LcuApi" class="">LcuApi</a>
+                          </li>
+                          <li class="">
+                            <a href="OSR_Client.RiotApp.API.LCU.UrlRequest.html" title="UrlRequest" class="">UrlRequest</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="OSR_Client.RiotApp.API.Replay.html" title="OSR_Client.RiotApp.API.Replay" class="">OSR_Client.RiotApp.API.Replay</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="OSR_Client.RiotApp.API.Replay.UrlRequest.html" title="UrlRequest" class="">UrlRequest</a>
+                          </li>
+                        </ul>  </li>
                   </ul>        </div>
               </div>
             </div>
@@ -142,6 +166,267 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="developper-documentation-client">Developper Documentation <strong>client</strong></h1>
 
+<h2 id="game-client-api">Game Client API</h2>
+<p><a href="https://developer.riotgames.com/docs/lol#general_game-constants">Game Client API</a>
+For recive data from a game add to <code>C:/Riot Games/League of Legends/Config/game.cfg</code></p>
+<pre><code>[General]
+EnableReplayApi=1
+</code></pre>
+<p>add to <code>C:/Riot Games/League of Legends/Config/game.cfg</code> for see a more graphic timer for dragon and baron</p>
+<pre><code>[Spectator]
+eSportsNeutralTimers=1
+</code></pre>
+<h2 id="live-events-api-">Live Events API :</h2>
+<p><a href="https://github.com/SkinSpotlights/LiveEventsDocumentation">Live Events API</a> is a undocumentated API part of League of Legends that can be enabled via a config and a list of events that you wish to receive updates for. The API is only available in Spectator/Replays.</p>
+<p>Documentation of all json recive is comming</p>
+<p>used :</p>
+<ul>
+<li>OnKillDragon</li>
+<li>OnKillDragon_Spectator</li>
+<li>OnKillRiftHerald</li>
+<li>OnKillRiftHerald_Spectator</li>
+<li>OnSummonRiftHerald</li>
+<li>OnKillWorm</li>
+<li>OnKillWorm_Spectator</li>
+<li>OnDragonSoulGiven</li>
+<li>OnNeutrakMinionKill</li>
+</ul>
+<p>the mess :</p>
+<ul>
+<li>OnDelete</li>
+<li>OnSpawn</li>
+<li>OnDie</li>
+<li>OnKill</li>
+<li>OnChampionDie</li>
+<li>OnChampionLevelUp</li>
+<li>OnChampionKillPre</li>
+<li>OnChampionKill</li>
+<li>OnChampionKillPost</li>
+<li>OnChampionSingleKill</li>
+<li>OnChampionDoubleKill</li>
+<li>OnChampionTripleKill</li>
+<li>OnChampionQuadraKill</li>
+<li>OnChampionPentaKill</li>
+<li>OnChampionUnrealKill</li>
+<li>OnFirstBlood</li>
+<li>OnFirstBloodAssist</li>
+<li>OnDamageTaken</li>
+<li>OnDamageGiven</li>
+<li>OnSpellCast1</li>
+<li>OnSpellCast2</li>
+<li>OnSpellCast3</li>
+<li>OnSpellCast4</li>
+<li>OnSpellAvatarCast1</li>
+<li>OnSpellAvatarCast2</li>
+<li>OnGoldSpent</li>
+<li>OnGoldEarned</li>
+<li>OnItemConsumeablePurchased</li>
+<li>OnCriticalStrike</li>
+<li>OnAce</li>
+<li>OnReincarnate</li>
+<li>OnReviveAlly</li>
+<li>OnChangeChampion</li>
+<li>OnResetChampion</li>
+<li>OnDampenerKill</li>
+<li>OnDampenerDie</li>
+<li>OnDampenerRespawnSoon</li>
+<li>OnDampenerRespawn</li>
+<li>OnDampenerDamage</li>
+<li>OnTurretKill</li>
+<li>OnTurretDie</li>
+<li>OnTurretDamage</li>
+<li>OnTurretFirstBlood</li>
+<li>OnStructureKill</li>
+<li>OnMinionKill</li>
+<li>OnNeutralMinionKill</li>
+<li>OnNeutralMinionCampCleared</li>
+<li>OnAcquireRedBuffFromNeutral</li>
+<li>OnAcquireBlueBuffFromNeutral</li>
+<li>OnHQKill</li>
+<li>OnHQDie</li>
+<li>OnHQDamage</li>
+<li>OnCastHeal</li>
+<li>OnBuff</li>
+<li>OnCrowdControlDealt</li>
+<li>OnCrowdControlExpired</li>
+<li>OnKillingSpree</li>
+<li>OnKillingSpreeSet1</li>
+<li>OnKillingSpreeSet2</li>
+<li>OnKillingSpreeSet3</li>
+<li>OnKillingSpreeSet4</li>
+<li>OnKillingSpreeSet5</li>
+<li>OnKillingSpreeSet6</li>
+<li>OnKilledUnitOnKillingSpree</li>
+<li>OnKilledUnitOnKillingSpreeSet1</li>
+<li>OnKilledUnitOnKillingSpreeSet2</li>
+<li>OnKilledUnitOnKillingSpreeSet3</li>
+<li>OnKilledUnitOnKillingSpreeSet4</li>
+<li>OnKilledUnitOnKillingSpreeSet5</li>
+<li>OnKilledUnitOnKillingSpreeSet6</li>
+<li>OnKilledUnitOnKillingSpreeDoubleKill</li>
+<li>OnKilledUnitOnKillingSpreeTripleKill</li>
+<li>OnKilledUnitOnKillingSpreeQuadraKill</li>
+<li>OnKilledUnitOnKillingSpreePentaKill</li>
+<li>OnKilledUnitOnKillingSpreeUnrealKill</li>
+<li>OnDeathAssist</li>
+<li>OnQuit</li>
+<li>OnLeave</li>
+<li>OnReconnect</li>
+<li>OnGameEnter</li>
+<li>OnGameStart</li>
+<li>OnAssistingSpreeSet1</li>
+<li>OnAssistingSpreeSet2</li>
+<li>OnChampionTripleAssist</li>
+<li>OnChampionPentaAssist</li>
+<li>OnPing</li>
+<li>OnPingPlayer</li>
+<li>OnPingBuilding</li>
+<li>OnPingOther</li>
+<li>OnEndGame</li>
+<li>OnSpellLevelup1</li>
+<li>OnSpellLevelup2</li>
+<li>OnSpellLevelup3</li>
+<li>OnSpellLevelup4</li>
+<li>OnSpellEvolve1</li>
+<li>OnSpellEvolve2</li>
+<li>OnSpellEvolve3</li>
+<li>OnSpellEvolve4</li>
+<li>OnItemPurchased</li>
+<li>OnItemSold</li>
+<li>OnItemRemoved</li>
+<li>OnItemUndo</li>
+<li>OnItemCallout</li>
+<li>OnItemChange</li>
+<li>OnUndoEnabledChange</li>
+<li>OnShopItemSubstitutionChange</li>
+<li>OnShopMenuOpen</li>
+<li>OnShopMenuClose</li>
+<li>OnSurrenderVoteStart</li>
+<li>OnSurrenderVote</li>
+<li>OnSurrenderVoteAlready</li>
+<li>OnSurrenderFailedVotes</li>
+<li>OnSurrenderTooEarly</li>
+<li>OnSurrenderAgreed</li>
+<li>OnSurrenderSpam</li>
+<li>OnNormalAfkSurrenderAllowed</li>
+<li>OnSurrenderEarlyAllowed</li>
+<li>OnSurrenderEarlyAccomplice</li>
+<li>OnSurrenderEarlyOver</li>
+<li>OnSurrenderEarlyFailed</li>
+<li>OnSurrenderEarlyFailedNoLongerAvailable</li>
+<li>OnSurrenderEarlyFailedDisabled</li>
+<li>OnSurrenderEarlyTooEarly</li>
+<li>OnSurrenderEarlyFailedNeverAvailable</li>
+<li>OnEarlySurrenderVoteStart</li>
+<li>OnUnanimousSurrenderVoteStart</li>
+<li>OnUnanimousSurrenderFailedVotes</li>
+<li>OnUnanimousAfkSurrenderAllowed</li>
+<li>OnPause</li>
+<li>OnPauseResume</li>
+<li>OnMinionsSpawn</li>
+<li>OnStartGameMessage1</li>
+<li>OnStartGameMessage2</li>
+<li>OnStartGameMessage3</li>
+<li>OnStartGameMessage4</li>
+<li>OnStartGameMessage5</li>
+<li>OnAlert</li>
+<li>OnAudioEventFinished</li>
+<li>OnNexusCrystalStart</li>
+<li>OnCapturePointNeutralized_A</li>
+<li>OnCapturePointNeutralized_B</li>
+<li>OnCapturePointNeutralized_C</li>
+<li>OnCapturePointNeutralized_D</li>
+<li>OnCapturePointNeutralized_E</li>
+<li>OnCapturePointCaptured_A</li>
+<li>OnCapturePointCaptured_B</li>
+<li>OnCapturePointCaptured_C</li>
+<li>OnCapturePointCaptured_D</li>
+<li>OnCapturePointCaptured_E</li>
+<li>OnCapturePointFiveCap</li>
+<li>OnVictoryPointThreshold1</li>
+<li>OnVictoryPointThreshold2</li>
+<li>OnVictoryPointThreshold3</li>
+<li>OnVictoryPointThreshold4</li>
+<li>OnGameModeAnnouncement1</li>
+<li>OnGameModeAnnouncement2</li>
+<li>OnGameModeAnnouncement3</li>
+<li>OnGameModeAnnouncement4</li>
+<li>OnGameModeAnnouncement5</li>
+<li>OnGameModeAnnouncement6</li>
+<li>OnGameModeAnnouncement7</li>
+<li>OnGameModeAnnouncement8</li>
+<li>OnGameModeAnnouncement9</li>
+<li>OnGameModeAnnouncement10</li>
+<li>OnGameModeAnnouncement11</li>
+<li>OnGameModeAnnouncement12</li>
+<li>OnGameModeAnnouncement13</li>
+<li>OnGameModeAnnouncement14</li>
+<li>OnGameModeAnnouncement15</li>
+<li>OnGameModeAnnouncement16</li>
+<li>OnReplayFastForwardStart</li>
+<li>OnReplayFastForwardEnd</li>
+<li>OnReplayOnKeyframeFinished</li>
+<li>OnReplayDestroyAllObjects</li>
+<li>OnKillDragon</li>
+<li>OnKillDragon_Spectator</li>
+<li>OnKillDragonSteal</li>
+<li>OnKillRiftHerald</li>
+<li>OnKillRiftHerald_Spectator</li>
+<li>OnKillRiftHeraldSteal</li>
+<li>OnSummonRiftHerald</li>
+<li>OnKillWorm</li>
+<li>OnKillWorm_Spectator</li>
+<li>OnKillWormSteal</li>
+<li>OnKillSpiderBoss</li>
+<li>OnKillSpiderBoss_Spectator</li>
+<li>OnCaptureAltar</li>
+<li>OnCaptureAltar_Spectator</li>
+<li>OnPlaceWard</li>
+<li>OnKillWard</li>
+<li>OnMinionAscended</li>
+<li>OnChampionAscended</li>
+<li>OnClearAscended</li>
+<li>OnGameStatEvent</li>
+<li>OnRelativeTeamColorChange</li>
+<li>OnMapSkinSwap</li>
+<li>OnResetGame</li>
+<li>OnResetGameCompleted</li>
+<li>OnShutdown</li>
+<li>OnMute</li>
+<li>OnChampionTransformNone</li>
+<li>OnChampionTransformAssassin</li>
+<li>OnChampionTransformSlayer</li>
+<li>OnReceiveShield</li>
+<li>OnGrantShield</li>
+<li>OnDamageShielded</li>
+<li>OnMaterialOverride</li>
+<li>OnObjectiveStolen</li>
+<li>OnObjectiveTaken</li>
+<li>OnNextDragonQueued</li>
+<li>OnGearChanged</li>
+<li>OnSummonerEmotePlayed</li>
+<li>OnSummonerEmoteEnd</li>
+<li>OnCustomStatStoneEvent</li>
+<li>OnStatStoneMilestoneHitEvent</li>
+<li>OnEnterStealth</li>
+<li>OnExitStealth</li>
+<li>OnPetSpawned</li>
+<li>OnLifeSteal</li>
+<li>OnSpellVamp</li>
+<li>OnLocalPlayerLoadoutBound</li>
+<li>OnTurretPlateDestroyed</li>
+<li>OnPlantActivated</li>
+<li>OnEnterPlayerVisibility</li>
+<li>OnDragonSoulGiven</li>
+<li>OnDisconnect</li>
+<li>OnConnect</li>
+</ul>
+<h2 id="spectator-visuel">Spectator Visuel</h2>
+<ul>
+<li><code>ctrl + maj + w</code> for change max zoom of map</li>
+<li><code>x</code> for total gold</li>
+<li></li>
+</ul>
 </article>
           </div>
           
