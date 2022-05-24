@@ -1,4 +1,4 @@
-# **OSR** : Overlay Spectator Riot 
+# **OSL** : Overlay Spectator Live
 ![work-in-progress](https://img.shields.io/badge/respos%20status-WIP-yellow)
 ![stability](https://img.shields.io/badge/stability-experimental-orange)
 ![language](https://img.shields.io/badge/language-c%23-brightgreen)
@@ -8,8 +8,8 @@
 ![riot](https://img.shields.io/badge/api-League%20of%20Legends-blue)
 ![riot2](https://img.shields.io/badge/api-RIOT-blue)
 
-Here you'll find the OSR-Client and OSR-Server for the Overlay Spectator Riot software suit.
-See the **[documentation](https://sky-csc.github.io/OSR/)** for further informations
+Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live software suit.
+See the **[documentation](https://sky-csc.github.io/OSL/)** for further informations
 
 ---
 ### This project permite to have an overlay for display informattion in champion-select, in-game and in end-game in streamings.
@@ -21,4 +21,6 @@ See the **[documentation](https://sky-csc.github.io/OSR/)** for further informat
 ---
 
 ### **Legal disclaimer**
-OSR isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+OSL isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+
+OSL was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.

@@ -1,4 +1,4 @@
-# Welcome to the OSR : **Overlay Spectator Riot**
+# Welcome to the OSL : **Overlay Spectator Live**
 ![work-in-progress](https://img.shields.io/badge/respos%20status-WIP-yellow)
 ![stability](https://img.shields.io/badge/stability-experimental-orange)
 ![language](https://img.shields.io/badge/language-c%23-brightgreen)
@@ -8,7 +8,7 @@
 ![riot](https://img.shields.io/badge/api-League%20of%20Legends-blue)
 ![riot2](https://img.shields.io/badge/api-RIOT-blue)
 
-Here you'll find the OSR-Client and OSR-Server for the Overlay Spectator Riot software suit.
+Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live software suit.
 
 For more information, please refer to these different documentations.
 - **Client**
@@ -39,4 +39,5 @@ For more information, please refer to these different documentations.
 
 > [!WARNING]
 > **Legal disclaimer**
-> OSR isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+> OSL isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+> OSL was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.

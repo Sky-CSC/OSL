@@ -6,7 +6,7 @@
           "files": [
             "**.csproj"
           ],
-          "src": "../OSR-Client/"
+          "src": "../OSL-Client/"
         }
       ],
       "dest": "apiclient",
@@ -19,7 +19,7 @@
           "files": [
             "**.csproj"
           ],
-          "src": "../OSR-Server/"
+          "src": "../OSL-Server/"
         }
       ],
       "dest": "apiserver",
