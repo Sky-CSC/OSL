@@ -1,5 +1,8 @@
 # Welcome to the **client** documentation.
 
+> [!WARNING] 
+> **Documentation in progress** 
+
 ## Futures Features
 - ### Chek if riot app are **launch**, **close**, **crash**
 

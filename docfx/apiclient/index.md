@@ -1,5 +1,8 @@
 # Developper Documentation **client**
 
+> [!WARNING] 
+> **Documentation in progress** 
+
 ## Riot API
 - Spectator-v4 (get information of a player in game)
     - /lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId}

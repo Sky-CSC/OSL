@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client
+  commentId: N:OSL_Client
+  id: OSL_Client
+  children:
+  - OSL_Client.LoggingLevel
+  - OSL_Client.OSLLogger
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client
+  nameWithType: OSL_Client
+  fullName: OSL_Client
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.OSLLogger
+  commentId: T:OSL_Client.OSLLogger
+  name: OSLLogger
+  nameWithType: OSLLogger
+  fullName: OSL_Client.OSLLogger
+- uid: OSL_Client.LoggingLevel
+  commentId: T:OSL_Client.LoggingLevel
+  parent: OSL_Client
+  name: LoggingLevel
+  nameWithType: LoggingLevel
+  fullName: OSL_Client.LoggingLevel
+- uid: OSL_Client
+  commentId: N:OSL_Client
+  name: OSL_Client
+  nameWithType: OSL_Client
+  fullName: OSL_Client

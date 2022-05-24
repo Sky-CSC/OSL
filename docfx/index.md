@@ -10,7 +10,10 @@
 
 Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live software suit.
 
-For more information, please refer to these different documentations.
+## Applications architecture 
+![](picture/OSL-architecture.drawio.png)
+
+## For more information, please refer to these different documentations.
 - **Client**
 > [!NOTE] 
 > How to use the app, what information he send att **Server**

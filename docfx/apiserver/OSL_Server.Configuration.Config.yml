@@ -1,0 +1,625 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Configuration.Config
+  commentId: T:OSL_Server.Configuration.Config
+  id: Config
+  parent: OSL_Server.Configuration
+  children:
+  - OSL_Server.Configuration.Config.championSummary
+  - OSL_Server.Configuration.Config.items
+  - OSL_Server.Configuration.Config.LoadConfigCDragon
+  - OSL_Server.Configuration.Config.patch
+  - OSL_Server.Configuration.Config.perks
+  - OSL_Server.Configuration.Config.perkstyles
+  - OSL_Server.Configuration.Config.region
+  - OSL_Server.Configuration.Config.summonerSpells
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: Config
+  fullName: OSL_Server.Configuration.Config
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Config
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 11
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public class Config
+    content.vb: Public Class Config
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Configuration.Config.patch
+  commentId: F:OSL_Server.Configuration.Config.patch
+  id: patch
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: patch
+  nameWithType: Config.patch
+  fullName: OSL_Server.Configuration.Config.patch
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: patch
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static string patch
+    return:
+      type: System.String
+    content.vb: Public Shared patch As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.region
+  commentId: F:OSL_Server.Configuration.Config.region
+  id: region
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: region
+  nameWithType: Config.region
+  fullName: OSL_Server.Configuration.Config.region
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: region
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 16
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static string region
+    return:
+      type: System.String
+    content.vb: Public Shared region As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.championSummary
+  commentId: F:OSL_Server.Configuration.Config.championSummary
+  id: championSummary
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: championSummary
+  nameWithType: Config.championSummary
+  fullName: OSL_Server.Configuration.Config.championSummary
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: championSummary
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 17
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static string championSummary
+    return:
+      type: System.String
+    content.vb: Public Shared championSummary As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.items
+  commentId: F:OSL_Server.Configuration.Config.items
+  id: items
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: items
+  nameWithType: Config.items
+  fullName: OSL_Server.Configuration.Config.items
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: items
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 18
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static string items
+    return:
+      type: System.String
+    content.vb: Public Shared items As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.summonerSpells
+  commentId: F:OSL_Server.Configuration.Config.summonerSpells
+  id: summonerSpells
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: summonerSpells
+  nameWithType: Config.summonerSpells
+  fullName: OSL_Server.Configuration.Config.summonerSpells
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: summonerSpells
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 19
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static string summonerSpells
+    return:
+      type: System.String
+    content.vb: Public Shared summonerSpells As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.perks
+  commentId: F:OSL_Server.Configuration.Config.perks
+  id: perks
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: perks
+  nameWithType: Config.perks
+  fullName: OSL_Server.Configuration.Config.perks
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: perks
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 20
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static string perks
+    return:
+      type: System.String
+    content.vb: Public Shared perks As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.perkstyles
+  commentId: F:OSL_Server.Configuration.Config.perkstyles
+  id: perkstyles
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: perkstyles
+  nameWithType: Config.perkstyles
+  fullName: OSL_Server.Configuration.Config.perkstyles
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: perkstyles
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 21
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static string perkstyles
+    return:
+      type: System.String
+    content.vb: Public Shared perkstyles As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigCDragon
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigCDragon
+  id: LoadConfigCDragon
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigCDragon()
+  nameWithType: Config.LoadConfigCDragon()
+  fullName: OSL_Server.Configuration.Config.LoadConfigCDragon()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigCDragon
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 23
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigCDragon()
+    content.vb: Public Shared Sub LoadConfigCDragon
+  overload: OSL_Server.Configuration.Config.LoadConfigCDragon*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Configuration
+  commentId: N:OSL_Server.Configuration
+  name: OSL_Server.Configuration
+  nameWithType: OSL_Server.Configuration
+  fullName: OSL_Server.Configuration
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.Configuration.Config.LoadConfigCDragon*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigCDragon
+  name: LoadConfigCDragon
+  nameWithType: Config.LoadConfigCDragon
+  fullName: OSL_Server.Configuration.Config.LoadConfigCDragon

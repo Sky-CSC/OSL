@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.RiotApp.API.Replay
+  commentId: N:OSL_Client.RiotApp.API.Replay
+  id: OSL_Client.RiotApp.API.Replay
+  children:
+  - OSL_Client.RiotApp.API.Replay.UrlRequest
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.RiotApp.API.Replay
+  nameWithType: OSL_Client.RiotApp.API.Replay
+  fullName: OSL_Client.RiotApp.API.Replay
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.RiotApp.API.Replay.UrlRequest
+  commentId: T:OSL_Client.RiotApp.API.Replay.UrlRequest
+  name: UrlRequest
+  nameWithType: UrlRequest
+  fullName: OSL_Client.RiotApp.API.Replay.UrlRequest

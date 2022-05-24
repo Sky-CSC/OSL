@@ -1,43 +1,43 @@
 ### YamlMime:TableOfContent
-- uid: OSR_Client
-  name: OSR_Client
+- uid: OSL_Client
+  name: OSL_Client
   items:
-  - uid: OSR_Client.LoggingLevel
+  - uid: OSL_Client.LoggingLevel
     name: LoggingLevel
-  - uid: OSR_Client.OSRLogger
-    name: OSRLogger
-- uid: OSR_Client.Configuration
-  name: OSR_Client.Configuration
+  - uid: OSL_Client.OSLLogger
+    name: OSLLogger
+- uid: OSL_Client.Configuration
+  name: OSL_Client.Configuration
   items:
-  - uid: OSR_Client.Configuration.Config
+  - uid: OSL_Client.Configuration.Config
     name: Config
-- uid: OSR_Client.FileManager
-  name: OSR_Client.FileManager
+- uid: OSL_Client.FileManager
+  name: OSL_Client.FileManager
   items:
-  - uid: OSR_Client.FileManager.FileManagerLocal
+  - uid: OSL_Client.FileManager.FileManagerLocal
     name: FileManagerLocal
-  - uid: OSR_Client.FileManager.JsonManagerLocal
+  - uid: OSL_Client.FileManager.JsonManagerLocal
     name: JsonManagerLocal
-  - uid: OSR_Client.FileManager.JsonType
+  - uid: OSL_Client.FileManager.JsonType
     name: JsonType
-- uid: OSR_Client.RiotApp
-  name: OSR_Client.RiotApp
+- uid: OSL_Client.RiotApp
+  name: OSL_Client.RiotApp
   items:
-  - uid: OSR_Client.RiotApp.LaunchChecker
+  - uid: OSL_Client.RiotApp.LaunchChecker
     name: LaunchChecker
-  - uid: OSR_Client.RiotApp.ProcessInfo
+  - uid: OSL_Client.RiotApp.ProcessInfo
     name: ProcessInfo
-- uid: OSR_Client.RiotApp.API.LCU
-  name: OSR_Client.RiotApp.API.LCU
+- uid: OSL_Client.RiotApp.API.LCU
+  name: OSL_Client.RiotApp.API.LCU
   items:
-  - uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase
+  - uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase
     name: GameFlowPhase
-  - uid: OSR_Client.RiotApp.API.LCU.LcuApi
+  - uid: OSL_Client.RiotApp.API.LCU.LcuApi
     name: LcuApi
-  - uid: OSR_Client.RiotApp.API.LCU.UrlRequest
+  - uid: OSL_Client.RiotApp.API.LCU.UrlRequest
     name: UrlRequest
-- uid: OSR_Client.RiotApp.API.Replay
-  name: OSR_Client.RiotApp.API.Replay
+- uid: OSL_Client.RiotApp.API.Replay
+  name: OSL_Client.RiotApp.API.Replay
   items:
-  - uid: OSR_Client.RiotApp.API.Replay.UrlRequest
+  - uid: OSL_Client.RiotApp.API.Replay.UrlRequest
     name: UrlRequest

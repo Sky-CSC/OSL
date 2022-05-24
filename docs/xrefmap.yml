@@ -1,985 +1,985 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: OSR_Client
-  name: OSR_Client
-  href: apiclient/OSR_Client.html
-  commentId: N:OSR_Client
-  fullName: OSR_Client
-  nameWithType: OSR_Client
-- uid: OSR_Client.Configuration
-  name: OSR_Client.Configuration
-  href: apiclient/OSR_Client.Configuration.html
-  commentId: N:OSR_Client.Configuration
-  fullName: OSR_Client.Configuration
-  nameWithType: OSR_Client.Configuration
-- uid: OSR_Client.Configuration.Config
+- uid: OSL_Client
+  name: OSL_Client
+  href: apiclient/OSL_Client.html
+  commentId: N:OSL_Client
+  fullName: OSL_Client
+  nameWithType: OSL_Client
+- uid: OSL_Client.Configuration
+  name: OSL_Client.Configuration
+  href: apiclient/OSL_Client.Configuration.html
+  commentId: N:OSL_Client.Configuration
+  fullName: OSL_Client.Configuration
+  nameWithType: OSL_Client.Configuration
+- uid: OSL_Client.Configuration.Config
   name: Config
-  href: apiclient/OSR_Client.Configuration.Config.html
-  commentId: T:OSR_Client.Configuration.Config
-  fullName: OSR_Client.Configuration.Config
+  href: apiclient/OSL_Client.Configuration.Config.html
+  commentId: T:OSL_Client.Configuration.Config
+  fullName: OSL_Client.Configuration.Config
   nameWithType: Config
-- uid: OSR_Client.Configuration.Config.GameClientApiLocalHost
+- uid: OSL_Client.Configuration.Config.GameClientApiLocalHost
   name: GameClientApiLocalHost
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_GameClientApiLocalHost
-  commentId: F:OSR_Client.Configuration.Config.GameClientApiLocalHost
-  fullName: OSR_Client.Configuration.Config.GameClientApiLocalHost
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_GameClientApiLocalHost
+  commentId: F:OSL_Client.Configuration.Config.GameClientApiLocalHost
+  fullName: OSL_Client.Configuration.Config.GameClientApiLocalHost
   nameWithType: Config.GameClientApiLocalHost
-- uid: OSR_Client.Configuration.Config.GameClientApiPassword
+- uid: OSL_Client.Configuration.Config.GameClientApiPassword
   name: GameClientApiPassword
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_GameClientApiPassword
-  commentId: F:OSR_Client.Configuration.Config.GameClientApiPassword
-  fullName: OSR_Client.Configuration.Config.GameClientApiPassword
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_GameClientApiPassword
+  commentId: F:OSL_Client.Configuration.Config.GameClientApiPassword
+  fullName: OSL_Client.Configuration.Config.GameClientApiPassword
   nameWithType: Config.GameClientApiPassword
-- uid: OSR_Client.Configuration.Config.ip
+- uid: OSL_Client.Configuration.Config.ip
   name: ip
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_ip
-  commentId: F:OSR_Client.Configuration.Config.ip
-  fullName: OSR_Client.Configuration.Config.ip
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_ip
+  commentId: F:OSL_Client.Configuration.Config.ip
+  fullName: OSL_Client.Configuration.Config.ip
   nameWithType: Config.ip
-- uid: OSR_Client.Configuration.Config.leagueClientFullFilePath
+- uid: OSL_Client.Configuration.Config.leagueClientFullFilePath
   name: leagueClientFullFilePath
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_leagueClientFullFilePath
-  commentId: F:OSR_Client.Configuration.Config.leagueClientFullFilePath
-  fullName: OSR_Client.Configuration.Config.leagueClientFullFilePath
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_leagueClientFullFilePath
+  commentId: F:OSL_Client.Configuration.Config.leagueClientFullFilePath
+  fullName: OSL_Client.Configuration.Config.leagueClientFullFilePath
   nameWithType: Config.leagueClientFullFilePath
-- uid: OSR_Client.Configuration.Config.leagueClientPath
+- uid: OSL_Client.Configuration.Config.leagueClientPath
   name: leagueClientPath
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_leagueClientPath
-  commentId: F:OSR_Client.Configuration.Config.leagueClientPath
-  fullName: OSR_Client.Configuration.Config.leagueClientPath
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_leagueClientPath
+  commentId: F:OSL_Client.Configuration.Config.leagueClientPath
+  fullName: OSL_Client.Configuration.Config.leagueClientPath
   nameWithType: Config.leagueClientPath
-- uid: OSR_Client.Configuration.Config.leagueClientProcess
+- uid: OSL_Client.Configuration.Config.leagueClientProcess
   name: leagueClientProcess
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_leagueClientProcess
-  commentId: F:OSR_Client.Configuration.Config.leagueClientProcess
-  fullName: OSR_Client.Configuration.Config.leagueClientProcess
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_leagueClientProcess
+  commentId: F:OSL_Client.Configuration.Config.leagueClientProcess
+  fullName: OSL_Client.Configuration.Config.leagueClientProcess
   nameWithType: Config.leagueClientProcess
-- uid: OSR_Client.Configuration.Config.LiveEventsAPIPort
+- uid: OSL_Client.Configuration.Config.LiveEventsAPIPort
   name: LiveEventsAPIPort
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_LiveEventsAPIPort
-  commentId: F:OSR_Client.Configuration.Config.LiveEventsAPIPort
-  fullName: OSR_Client.Configuration.Config.LiveEventsAPIPort
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_LiveEventsAPIPort
+  commentId: F:OSL_Client.Configuration.Config.LiveEventsAPIPort
+  fullName: OSL_Client.Configuration.Config.LiveEventsAPIPort
   nameWithType: Config.LiveEventsAPIPort
-- uid: OSR_Client.Configuration.Config.LoadConfigHost
+- uid: OSL_Client.Configuration.Config.LoadConfigHost
   name: LoadConfigHost()
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_LoadConfigHost
-  commentId: M:OSR_Client.Configuration.Config.LoadConfigHost
-  fullName: OSR_Client.Configuration.Config.LoadConfigHost()
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_LoadConfigHost
+  commentId: M:OSL_Client.Configuration.Config.LoadConfigHost
+  fullName: OSL_Client.Configuration.Config.LoadConfigHost()
   nameWithType: Config.LoadConfigHost()
-- uid: OSR_Client.Configuration.Config.LoadConfigHost*
+- uid: OSL_Client.Configuration.Config.LoadConfigHost*
   name: LoadConfigHost
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_LoadConfigHost_
-  commentId: Overload:OSR_Client.Configuration.Config.LoadConfigHost
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_LoadConfigHost_
+  commentId: Overload:OSL_Client.Configuration.Config.LoadConfigHost
   isSpec: "True"
-  fullName: OSR_Client.Configuration.Config.LoadConfigHost
+  fullName: OSL_Client.Configuration.Config.LoadConfigHost
   nameWithType: Config.LoadConfigHost
-- uid: OSR_Client.Configuration.Config.localIpHttp
+- uid: OSL_Client.Configuration.Config.localIpHttp
   name: localIpHttp
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_localIpHttp
-  commentId: F:OSR_Client.Configuration.Config.localIpHttp
-  fullName: OSR_Client.Configuration.Config.localIpHttp
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_localIpHttp
+  commentId: F:OSL_Client.Configuration.Config.localIpHttp
+  fullName: OSL_Client.Configuration.Config.localIpHttp
   nameWithType: Config.localIpHttp
-- uid: OSR_Client.Configuration.Config.localIpHttps
+- uid: OSL_Client.Configuration.Config.localIpHttps
   name: localIpHttps
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_localIpHttps
-  commentId: F:OSR_Client.Configuration.Config.localIpHttps
-  fullName: OSR_Client.Configuration.Config.localIpHttps
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_localIpHttps
+  commentId: F:OSL_Client.Configuration.Config.localIpHttps
+  fullName: OSL_Client.Configuration.Config.localIpHttps
   nameWithType: Config.localIpHttps
-- uid: OSR_Client.Configuration.Config.lockFilePassword
+- uid: OSL_Client.Configuration.Config.lockFilePassword
   name: lockFilePassword
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_lockFilePassword
-  commentId: F:OSR_Client.Configuration.Config.lockFilePassword
-  fullName: OSR_Client.Configuration.Config.lockFilePassword
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_lockFilePassword
+  commentId: F:OSL_Client.Configuration.Config.lockFilePassword
+  fullName: OSL_Client.Configuration.Config.lockFilePassword
   nameWithType: Config.lockFilePassword
-- uid: OSR_Client.Configuration.Config.lockFilePath
+- uid: OSL_Client.Configuration.Config.lockFilePath
   name: lockFilePath
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_lockFilePath
-  commentId: F:OSR_Client.Configuration.Config.lockFilePath
-  fullName: OSR_Client.Configuration.Config.lockFilePath
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_lockFilePath
+  commentId: F:OSL_Client.Configuration.Config.lockFilePath
+  fullName: OSL_Client.Configuration.Config.lockFilePath
   nameWithType: Config.lockFilePath
-- uid: OSR_Client.Configuration.Config.lockFilePort
+- uid: OSL_Client.Configuration.Config.lockFilePort
   name: lockFilePort
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_lockFilePort
-  commentId: F:OSR_Client.Configuration.Config.lockFilePort
-  fullName: OSR_Client.Configuration.Config.lockFilePort
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_lockFilePort
+  commentId: F:OSL_Client.Configuration.Config.lockFilePort
+  fullName: OSL_Client.Configuration.Config.lockFilePort
   nameWithType: Config.lockFilePort
-- uid: OSR_Client.Configuration.Config.lockFileProcessId
+- uid: OSL_Client.Configuration.Config.lockFileProcessId
   name: lockFileProcessId
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_lockFileProcessId
-  commentId: F:OSR_Client.Configuration.Config.lockFileProcessId
-  fullName: OSR_Client.Configuration.Config.lockFileProcessId
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_lockFileProcessId
+  commentId: F:OSL_Client.Configuration.Config.lockFileProcessId
+  fullName: OSL_Client.Configuration.Config.lockFileProcessId
   nameWithType: Config.lockFileProcessId
-- uid: OSR_Client.Configuration.Config.loginRiot
+- uid: OSL_Client.Configuration.Config.loginRiot
   name: loginRiot
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_loginRiot
-  commentId: F:OSR_Client.Configuration.Config.loginRiot
-  fullName: OSR_Client.Configuration.Config.loginRiot
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_loginRiot
+  commentId: F:OSL_Client.Configuration.Config.loginRiot
+  fullName: OSL_Client.Configuration.Config.loginRiot
   nameWithType: Config.loginRiot
-- uid: OSR_Client.Configuration.Config.port
+- uid: OSL_Client.Configuration.Config.port
   name: port
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_port
-  commentId: F:OSR_Client.Configuration.Config.port
-  fullName: OSR_Client.Configuration.Config.port
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_port
+  commentId: F:OSL_Client.Configuration.Config.port
+  fullName: OSL_Client.Configuration.Config.port
   nameWithType: Config.port
-- uid: OSR_Client.Configuration.Config.portRiot
+- uid: OSL_Client.Configuration.Config.portRiot
   name: portRiot
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_portRiot
-  commentId: F:OSR_Client.Configuration.Config.portRiot
-  fullName: OSR_Client.Configuration.Config.portRiot
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_portRiot
+  commentId: F:OSL_Client.Configuration.Config.portRiot
+  fullName: OSL_Client.Configuration.Config.portRiot
   nameWithType: Config.portRiot
-- uid: OSR_Client.Configuration.Config.SetHostPassGameClientApi
+- uid: OSL_Client.Configuration.Config.SetHostPassGameClientApi
   name: SetHostPassGameClientApi()
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_SetHostPassGameClientApi
-  commentId: M:OSR_Client.Configuration.Config.SetHostPassGameClientApi
-  fullName: OSR_Client.Configuration.Config.SetHostPassGameClientApi()
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_SetHostPassGameClientApi
+  commentId: M:OSL_Client.Configuration.Config.SetHostPassGameClientApi
+  fullName: OSL_Client.Configuration.Config.SetHostPassGameClientApi()
   nameWithType: Config.SetHostPassGameClientApi()
-- uid: OSR_Client.Configuration.Config.SetHostPassGameClientApi*
+- uid: OSL_Client.Configuration.Config.SetHostPassGameClientApi*
   name: SetHostPassGameClientApi
-  href: apiclient/OSR_Client.Configuration.Config.html#OSR_Client_Configuration_Config_SetHostPassGameClientApi_
-  commentId: Overload:OSR_Client.Configuration.Config.SetHostPassGameClientApi
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_SetHostPassGameClientApi_
+  commentId: Overload:OSL_Client.Configuration.Config.SetHostPassGameClientApi
   isSpec: "True"
-  fullName: OSR_Client.Configuration.Config.SetHostPassGameClientApi
+  fullName: OSL_Client.Configuration.Config.SetHostPassGameClientApi
   nameWithType: Config.SetHostPassGameClientApi
-- uid: OSR_Client.FileManager
-  name: OSR_Client.FileManager
-  href: apiclient/OSR_Client.FileManager.html
-  commentId: N:OSR_Client.FileManager
-  fullName: OSR_Client.FileManager
-  nameWithType: OSR_Client.FileManager
-- uid: OSR_Client.FileManager.FileManagerLocal
+- uid: OSL_Client.FileManager
+  name: OSL_Client.FileManager
+  href: apiclient/OSL_Client.FileManager.html
+  commentId: N:OSL_Client.FileManager
+  fullName: OSL_Client.FileManager
+  nameWithType: OSL_Client.FileManager
+- uid: OSL_Client.FileManager.FileManagerLocal
   name: FileManagerLocal
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html
-  commentId: T:OSR_Client.FileManager.FileManagerLocal
-  fullName: OSR_Client.FileManager.FileManagerLocal
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html
+  commentId: T:OSL_Client.FileManager.FileManagerLocal
+  fullName: OSL_Client.FileManager.FileManagerLocal
   nameWithType: FileManagerLocal
-- uid: OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
+- uid: OSL_Client.FileManager.FileManagerLocal.CreateFile(System.String)
   name: CreateFile(String)
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_CreateFile_System_String_
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.CreateFile(System.String)
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_CreateFile_System_String_
+  commentId: M:OSL_Client.FileManager.FileManagerLocal.CreateFile(System.String)
+  fullName: OSL_Client.FileManager.FileManagerLocal.CreateFile(System.String)
   nameWithType: FileManagerLocal.CreateFile(String)
-- uid: OSR_Client.FileManager.FileManagerLocal.CreateFile*
+- uid: OSL_Client.FileManager.FileManagerLocal.CreateFile*
   name: CreateFile
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_CreateFile_
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.CreateFile
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_CreateFile_
+  commentId: Overload:OSL_Client.FileManager.FileManagerLocal.CreateFile
   isSpec: "True"
-  fullName: OSR_Client.FileManager.FileManagerLocal.CreateFile
+  fullName: OSL_Client.FileManager.FileManagerLocal.CreateFile
   nameWithType: FileManagerLocal.CreateFile
-- uid: OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
+- uid: OSL_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
   name: DeleteFile(String)
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_DeleteFile_System_String_
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_DeleteFile_System_String_
+  commentId: M:OSL_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
+  fullName: OSL_Client.FileManager.FileManagerLocal.DeleteFile(System.String)
   nameWithType: FileManagerLocal.DeleteFile(String)
-- uid: OSR_Client.FileManager.FileManagerLocal.DeleteFile*
+- uid: OSL_Client.FileManager.FileManagerLocal.DeleteFile*
   name: DeleteFile
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_DeleteFile_
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.DeleteFile
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_DeleteFile_
+  commentId: Overload:OSL_Client.FileManager.FileManagerLocal.DeleteFile
   isSpec: "True"
-  fullName: OSR_Client.FileManager.FileManagerLocal.DeleteFile
+  fullName: OSL_Client.FileManager.FileManagerLocal.DeleteFile
   nameWithType: FileManagerLocal.DeleteFile
-- uid: OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
+- uid: OSL_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
   name: ReadInFile(String)
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_ReadInFile_System_String_
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_ReadInFile_System_String_
+  commentId: M:OSL_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
+  fullName: OSL_Client.FileManager.FileManagerLocal.ReadInFile(System.String)
   nameWithType: FileManagerLocal.ReadInFile(String)
-- uid: OSR_Client.FileManager.FileManagerLocal.ReadInFile*
+- uid: OSL_Client.FileManager.FileManagerLocal.ReadInFile*
   name: ReadInFile
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_ReadInFile_
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.ReadInFile
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_ReadInFile_
+  commentId: Overload:OSL_Client.FileManager.FileManagerLocal.ReadInFile
   isSpec: "True"
-  fullName: OSR_Client.FileManager.FileManagerLocal.ReadInFile
+  fullName: OSL_Client.FileManager.FileManagerLocal.ReadInFile
   nameWithType: FileManagerLocal.ReadInFile
-- uid: OSR_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
+- uid: OSL_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
   name: RestrictedAccess(String)
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_RestrictedAccess_System_String_
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_RestrictedAccess_System_String_
+  commentId: M:OSL_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
+  fullName: OSL_Client.FileManager.FileManagerLocal.RestrictedAccess(System.String)
   nameWithType: FileManagerLocal.RestrictedAccess(String)
-- uid: OSR_Client.FileManager.FileManagerLocal.RestrictedAccess*
+- uid: OSL_Client.FileManager.FileManagerLocal.RestrictedAccess*
   name: RestrictedAccess
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_RestrictedAccess_
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.RestrictedAccess
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_RestrictedAccess_
+  commentId: Overload:OSL_Client.FileManager.FileManagerLocal.RestrictedAccess
   isSpec: "True"
-  fullName: OSR_Client.FileManager.FileManagerLocal.RestrictedAccess
+  fullName: OSL_Client.FileManager.FileManagerLocal.RestrictedAccess
   nameWithType: FileManagerLocal.RestrictedAccess
-- uid: OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
+- uid: OSL_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
   name: RewrittenFile(String, String)
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_RewrittenFile_System_String_System_String_
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.RewrittenFile(System.String, System.String)
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_RewrittenFile_System_String_System_String_
+  commentId: M:OSL_Client.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
+  fullName: OSL_Client.FileManager.FileManagerLocal.RewrittenFile(System.String, System.String)
   nameWithType: FileManagerLocal.RewrittenFile(String, String)
-- uid: OSR_Client.FileManager.FileManagerLocal.RewrittenFile*
+- uid: OSL_Client.FileManager.FileManagerLocal.RewrittenFile*
   name: RewrittenFile
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_RewrittenFile_
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.RewrittenFile
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_RewrittenFile_
+  commentId: Overload:OSL_Client.FileManager.FileManagerLocal.RewrittenFile
   isSpec: "True"
-  fullName: OSR_Client.FileManager.FileManagerLocal.RewrittenFile
+  fullName: OSL_Client.FileManager.FileManagerLocal.RewrittenFile
   nameWithType: FileManagerLocal.RewrittenFile
-- uid: OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
+- uid: OSL_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
   name: WriteInFile(String, String)
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_WriteInFile_System_String_System_String_
-  commentId: M:OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
-  fullName: OSR_Client.FileManager.FileManagerLocal.WriteInFile(System.String, System.String)
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_WriteInFile_System_String_System_String_
+  commentId: M:OSL_Client.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
+  fullName: OSL_Client.FileManager.FileManagerLocal.WriteInFile(System.String, System.String)
   nameWithType: FileManagerLocal.WriteInFile(String, String)
-- uid: OSR_Client.FileManager.FileManagerLocal.WriteInFile*
+- uid: OSL_Client.FileManager.FileManagerLocal.WriteInFile*
   name: WriteInFile
-  href: apiclient/OSR_Client.FileManager.FileManagerLocal.html#OSR_Client_FileManager_FileManagerLocal_WriteInFile_
-  commentId: Overload:OSR_Client.FileManager.FileManagerLocal.WriteInFile
+  href: apiclient/OSL_Client.FileManager.FileManagerLocal.html#OSL_Client_FileManager_FileManagerLocal_WriteInFile_
+  commentId: Overload:OSL_Client.FileManager.FileManagerLocal.WriteInFile
   isSpec: "True"
-  fullName: OSR_Client.FileManager.FileManagerLocal.WriteInFile
+  fullName: OSL_Client.FileManager.FileManagerLocal.WriteInFile
   nameWithType: FileManagerLocal.WriteInFile
-- uid: OSR_Client.FileManager.JsonManagerLocal
+- uid: OSL_Client.FileManager.JsonManagerLocal
   name: JsonManagerLocal
-  href: apiclient/OSR_Client.FileManager.JsonManagerLocal.html
-  commentId: T:OSR_Client.FileManager.JsonManagerLocal
-  fullName: OSR_Client.FileManager.JsonManagerLocal
+  href: apiclient/OSL_Client.FileManager.JsonManagerLocal.html
+  commentId: T:OSL_Client.FileManager.JsonManagerLocal
+  fullName: OSL_Client.FileManager.JsonManagerLocal
   nameWithType: JsonManagerLocal
-- uid: OSR_Client.FileManager.JsonType
+- uid: OSL_Client.FileManager.JsonType
   name: JsonType
-  href: apiclient/OSR_Client.FileManager.JsonType.html
-  commentId: T:OSR_Client.FileManager.JsonType
-  fullName: OSR_Client.FileManager.JsonType
+  href: apiclient/OSL_Client.FileManager.JsonType.html
+  commentId: T:OSL_Client.FileManager.JsonType
+  fullName: OSL_Client.FileManager.JsonType
   nameWithType: JsonType
-- uid: OSR_Client.LoggingLevel
+- uid: OSL_Client.LoggingLevel
   name: LoggingLevel
-  href: apiclient/OSR_Client.LoggingLevel.html
-  commentId: T:OSR_Client.LoggingLevel
-  fullName: OSR_Client.LoggingLevel
+  href: apiclient/OSL_Client.LoggingLevel.html
+  commentId: T:OSL_Client.LoggingLevel
+  fullName: OSL_Client.LoggingLevel
   nameWithType: LoggingLevel
-- uid: OSR_Client.LoggingLevel.DEBUG
+- uid: OSL_Client.LoggingLevel.DEBUG
   name: DEBUG
-  href: apiclient/OSR_Client.LoggingLevel.html#OSR_Client_LoggingLevel_DEBUG
-  commentId: F:OSR_Client.LoggingLevel.DEBUG
-  fullName: OSR_Client.LoggingLevel.DEBUG
+  href: apiclient/OSL_Client.LoggingLevel.html#OSL_Client_LoggingLevel_DEBUG
+  commentId: F:OSL_Client.LoggingLevel.DEBUG
+  fullName: OSL_Client.LoggingLevel.DEBUG
   nameWithType: LoggingLevel.DEBUG
-- uid: OSR_Client.LoggingLevel.ERROR
+- uid: OSL_Client.LoggingLevel.ERROR
   name: ERROR
-  href: apiclient/OSR_Client.LoggingLevel.html#OSR_Client_LoggingLevel_ERROR
-  commentId: F:OSR_Client.LoggingLevel.ERROR
-  fullName: OSR_Client.LoggingLevel.ERROR
+  href: apiclient/OSL_Client.LoggingLevel.html#OSL_Client_LoggingLevel_ERROR
+  commentId: F:OSL_Client.LoggingLevel.ERROR
+  fullName: OSL_Client.LoggingLevel.ERROR
   nameWithType: LoggingLevel.ERROR
-- uid: OSR_Client.LoggingLevel.INFO
+- uid: OSL_Client.LoggingLevel.INFO
   name: INFO
-  href: apiclient/OSR_Client.LoggingLevel.html#OSR_Client_LoggingLevel_INFO
-  commentId: F:OSR_Client.LoggingLevel.INFO
-  fullName: OSR_Client.LoggingLevel.INFO
+  href: apiclient/OSL_Client.LoggingLevel.html#OSL_Client_LoggingLevel_INFO
+  commentId: F:OSL_Client.LoggingLevel.INFO
+  fullName: OSL_Client.LoggingLevel.INFO
   nameWithType: LoggingLevel.INFO
-- uid: OSR_Client.LoggingLevel.OFF
+- uid: OSL_Client.LoggingLevel.OFF
   name: OFF
-  href: apiclient/OSR_Client.LoggingLevel.html#OSR_Client_LoggingLevel_OFF
-  commentId: F:OSR_Client.LoggingLevel.OFF
-  fullName: OSR_Client.LoggingLevel.OFF
+  href: apiclient/OSL_Client.LoggingLevel.html#OSL_Client_LoggingLevel_OFF
+  commentId: F:OSL_Client.LoggingLevel.OFF
+  fullName: OSL_Client.LoggingLevel.OFF
   nameWithType: LoggingLevel.OFF
-- uid: OSR_Client.LoggingLevel.WARN
+- uid: OSL_Client.LoggingLevel.WARN
   name: WARN
-  href: apiclient/OSR_Client.LoggingLevel.html#OSR_Client_LoggingLevel_WARN
-  commentId: F:OSR_Client.LoggingLevel.WARN
-  fullName: OSR_Client.LoggingLevel.WARN
+  href: apiclient/OSL_Client.LoggingLevel.html#OSL_Client_LoggingLevel_WARN
+  commentId: F:OSL_Client.LoggingLevel.WARN
+  fullName: OSL_Client.LoggingLevel.WARN
   nameWithType: LoggingLevel.WARN
-- uid: OSR_Client.OSRLogger
-  name: OSRLogger
-  href: apiclient/OSR_Client.OSRLogger.html
-  commentId: T:OSR_Client.OSRLogger
-  fullName: OSR_Client.OSRLogger
-  nameWithType: OSRLogger
-- uid: OSR_Client.OSRLogger.#ctor(System.String,System.Nullable{OSR_Client.LoggingLevel})
-  name: OSRLogger(String, Nullable<LoggingLevel>)
-  href: apiclient/OSR_Client.OSRLogger.html#OSR_Client_OSRLogger__ctor_System_String_System_Nullable_OSR_Client_LoggingLevel__
-  commentId: M:OSR_Client.OSRLogger.#ctor(System.String,System.Nullable{OSR_Client.LoggingLevel})
-  name.vb: OSRLogger(String, Nullable(Of LoggingLevel))
-  fullName: OSR_Client.OSRLogger.OSRLogger(System.String, System.Nullable<OSR_Client.LoggingLevel>)
-  fullName.vb: OSR_Client.OSRLogger.OSRLogger(System.String, System.Nullable(Of OSR_Client.LoggingLevel))
-  nameWithType: OSRLogger.OSRLogger(String, Nullable<LoggingLevel>)
-  nameWithType.vb: OSRLogger.OSRLogger(String, Nullable(Of LoggingLevel))
-- uid: OSR_Client.OSRLogger.#ctor*
-  name: OSRLogger
-  href: apiclient/OSR_Client.OSRLogger.html#OSR_Client_OSRLogger__ctor_
-  commentId: Overload:OSR_Client.OSRLogger.#ctor
+- uid: OSL_Client.OSLLogger
+  name: OSLLogger
+  href: apiclient/OSL_Client.OSLLogger.html
+  commentId: T:OSL_Client.OSLLogger
+  fullName: OSL_Client.OSLLogger
+  nameWithType: OSLLogger
+- uid: OSL_Client.OSLLogger.#ctor(System.String,System.Nullable{OSL_Client.LoggingLevel})
+  name: OSLLogger(String, Nullable<LoggingLevel>)
+  href: apiclient/OSL_Client.OSLLogger.html#OSL_Client_OSLLogger__ctor_System_String_System_Nullable_OSL_Client_LoggingLevel__
+  commentId: M:OSL_Client.OSLLogger.#ctor(System.String,System.Nullable{OSL_Client.LoggingLevel})
+  name.vb: OSLLogger(String, Nullable(Of LoggingLevel))
+  fullName: OSL_Client.OSLLogger.OSLLogger(System.String, System.Nullable<OSL_Client.LoggingLevel>)
+  fullName.vb: OSL_Client.OSLLogger.OSLLogger(System.String, System.Nullable(Of OSL_Client.LoggingLevel))
+  nameWithType: OSLLogger.OSLLogger(String, Nullable<LoggingLevel>)
+  nameWithType.vb: OSLLogger.OSLLogger(String, Nullable(Of LoggingLevel))
+- uid: OSL_Client.OSLLogger.#ctor*
+  name: OSLLogger
+  href: apiclient/OSL_Client.OSLLogger.html#OSL_Client_OSLLogger__ctor_
+  commentId: Overload:OSL_Client.OSLLogger.#ctor
   isSpec: "True"
-  fullName: OSR_Client.OSRLogger.OSRLogger
-  nameWithType: OSRLogger.OSRLogger
-- uid: OSR_Client.OSRLogger.contextPrefix
+  fullName: OSL_Client.OSLLogger.OSLLogger
+  nameWithType: OSLLogger.OSLLogger
+- uid: OSL_Client.OSLLogger.contextPrefix
   name: contextPrefix
-  href: apiclient/OSR_Client.OSRLogger.html#OSR_Client_OSRLogger_contextPrefix
-  commentId: F:OSR_Client.OSRLogger.contextPrefix
-  fullName: OSR_Client.OSRLogger.contextPrefix
-  nameWithType: OSRLogger.contextPrefix
-- uid: OSR_Client.OSRLogger.DefaultLoggingLevel
+  href: apiclient/OSL_Client.OSLLogger.html#OSL_Client_OSLLogger_contextPrefix
+  commentId: F:OSL_Client.OSLLogger.contextPrefix
+  fullName: OSL_Client.OSLLogger.contextPrefix
+  nameWithType: OSLLogger.contextPrefix
+- uid: OSL_Client.OSLLogger.DefaultLoggingLevel
   name: DefaultLoggingLevel
-  href: apiclient/OSR_Client.OSRLogger.html#OSR_Client_OSRLogger_DefaultLoggingLevel
-  commentId: F:OSR_Client.OSRLogger.DefaultLoggingLevel
-  fullName: OSR_Client.OSRLogger.DefaultLoggingLevel
-  nameWithType: OSRLogger.DefaultLoggingLevel
-- uid: OSR_Client.OSRLogger.log(OSR_Client.LoggingLevel,System.String,System.Object)
+  href: apiclient/OSL_Client.OSLLogger.html#OSL_Client_OSLLogger_DefaultLoggingLevel
+  commentId: F:OSL_Client.OSLLogger.DefaultLoggingLevel
+  fullName: OSL_Client.OSLLogger.DefaultLoggingLevel
+  nameWithType: OSLLogger.DefaultLoggingLevel
+- uid: OSL_Client.OSLLogger.log(OSL_Client.LoggingLevel,System.String,System.Object)
   name: log(LoggingLevel, String, Object)
-  href: apiclient/OSR_Client.OSRLogger.html#OSR_Client_OSRLogger_log_OSR_Client_LoggingLevel_System_String_System_Object_
-  commentId: M:OSR_Client.OSRLogger.log(OSR_Client.LoggingLevel,System.String,System.Object)
-  fullName: OSR_Client.OSRLogger.log(OSR_Client.LoggingLevel, System.String, System.Object)
-  nameWithType: OSRLogger.log(LoggingLevel, String, Object)
-- uid: OSR_Client.OSRLogger.log*
+  href: apiclient/OSL_Client.OSLLogger.html#OSL_Client_OSLLogger_log_OSL_Client_LoggingLevel_System_String_System_Object_
+  commentId: M:OSL_Client.OSLLogger.log(OSL_Client.LoggingLevel,System.String,System.Object)
+  fullName: OSL_Client.OSLLogger.log(OSL_Client.LoggingLevel, System.String, System.Object)
+  nameWithType: OSLLogger.log(LoggingLevel, String, Object)
+- uid: OSL_Client.OSLLogger.log*
   name: log
-  href: apiclient/OSR_Client.OSRLogger.html#OSR_Client_OSRLogger_log_
-  commentId: Overload:OSR_Client.OSRLogger.log
+  href: apiclient/OSL_Client.OSLLogger.html#OSL_Client_OSLLogger_log_
+  commentId: Overload:OSL_Client.OSLLogger.log
   isSpec: "True"
-  fullName: OSR_Client.OSRLogger.log
-  nameWithType: OSRLogger.log
-- uid: OSR_Client.OSRLogger.LogLevel
+  fullName: OSL_Client.OSLLogger.log
+  nameWithType: OSLLogger.log
+- uid: OSL_Client.OSLLogger.LogLevel
   name: LogLevel
-  href: apiclient/OSR_Client.OSRLogger.html#OSR_Client_OSRLogger_LogLevel
-  commentId: F:OSR_Client.OSRLogger.LogLevel
-  fullName: OSR_Client.OSRLogger.LogLevel
-  nameWithType: OSRLogger.LogLevel
-- uid: OSR_Client.RiotApp
-  name: OSR_Client.RiotApp
-  href: apiclient/OSR_Client.RiotApp.html
-  commentId: N:OSR_Client.RiotApp
-  fullName: OSR_Client.RiotApp
-  nameWithType: OSR_Client.RiotApp
-- uid: OSR_Client.RiotApp.API.LCU
-  name: OSR_Client.RiotApp.API.LCU
-  href: apiclient/OSR_Client.RiotApp.API.LCU.html
-  commentId: N:OSR_Client.RiotApp.API.LCU
-  fullName: OSR_Client.RiotApp.API.LCU
-  nameWithType: OSR_Client.RiotApp.API.LCU
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase
+  href: apiclient/OSL_Client.OSLLogger.html#OSL_Client_OSLLogger_LogLevel
+  commentId: F:OSL_Client.OSLLogger.LogLevel
+  fullName: OSL_Client.OSLLogger.LogLevel
+  nameWithType: OSLLogger.LogLevel
+- uid: OSL_Client.RiotApp
+  name: OSL_Client.RiotApp
+  href: apiclient/OSL_Client.RiotApp.html
+  commentId: N:OSL_Client.RiotApp
+  fullName: OSL_Client.RiotApp
+  nameWithType: OSL_Client.RiotApp
+- uid: OSL_Client.RiotApp.API.LCU
+  name: OSL_Client.RiotApp.API.LCU
+  href: apiclient/OSL_Client.RiotApp.API.LCU.html
+  commentId: N:OSL_Client.RiotApp.API.LCU
+  fullName: OSL_Client.RiotApp.API.LCU
+  nameWithType: OSL_Client.RiotApp.API.LCU
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase
   name: GameFlowPhase
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html
-  commentId: T:OSR_Client.RiotApp.API.LCU.GameFlowPhase
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html
+  commentId: T:OSL_Client.RiotApp.API.LCU.GameFlowPhase
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase
   nameWithType: GameFlowPhase
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.ChampSelect
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.ChampSelect
   name: ChampSelect
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_ChampSelect
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.ChampSelect
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.ChampSelect
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_ChampSelect
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.ChampSelect
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.ChampSelect
   nameWithType: GameFlowPhase.ChampSelect
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.CheckedIntoTournament
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.CheckedIntoTournament
   name: CheckedIntoTournament
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_CheckedIntoTournament
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.CheckedIntoTournament
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.CheckedIntoTournament
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_CheckedIntoTournament
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.CheckedIntoTournament
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.CheckedIntoTournament
   nameWithType: GameFlowPhase.CheckedIntoTournament
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.EndOfGame
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.EndOfGame
   name: EndOfGame
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_EndOfGame
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.EndOfGame
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.EndOfGame
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_EndOfGame
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.EndOfGame
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.EndOfGame
   nameWithType: GameFlowPhase.EndOfGame
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.FailedToLaunch
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.FailedToLaunch
   name: FailedToLaunch
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_FailedToLaunch
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.FailedToLaunch
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.FailedToLaunch
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_FailedToLaunch
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.FailedToLaunch
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.FailedToLaunch
   nameWithType: GameFlowPhase.FailedToLaunch
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.GameStart
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.GameStart
   name: GameStart
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_GameStart
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.GameStart
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.GameStart
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_GameStart
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.GameStart
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.GameStart
   nameWithType: GameFlowPhase.GameStart
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.InProgress
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.InProgress
   name: InProgress
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_InProgress
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.InProgress
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.InProgress
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_InProgress
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.InProgress
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.InProgress
   nameWithType: GameFlowPhase.InProgress
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.Lobby
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.Lobby
   name: Lobby
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_Lobby
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.Lobby
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.Lobby
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_Lobby
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.Lobby
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.Lobby
   nameWithType: GameFlowPhase.Lobby
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.Matchmaking
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.Matchmaking
   name: Matchmaking
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_Matchmaking
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.Matchmaking
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.Matchmaking
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_Matchmaking
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.Matchmaking
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.Matchmaking
   nameWithType: GameFlowPhase.Matchmaking
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.None
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.None
   name: None
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_None
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.None
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.None
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_None
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.None
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.None
   nameWithType: GameFlowPhase.None
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.PreEndOfGame
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.PreEndOfGame
   name: PreEndOfGame
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_PreEndOfGame
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.PreEndOfGame
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.PreEndOfGame
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_PreEndOfGame
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.PreEndOfGame
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.PreEndOfGame
   nameWithType: GameFlowPhase.PreEndOfGame
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.ReadyCheck
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.ReadyCheck
   name: ReadyCheck
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_ReadyCheck
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.ReadyCheck
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.ReadyCheck
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_ReadyCheck
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.ReadyCheck
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.ReadyCheck
   nameWithType: GameFlowPhase.ReadyCheck
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.Reconnect
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.Reconnect
   name: Reconnect
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_Reconnect
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.Reconnect
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.Reconnect
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_Reconnect
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.Reconnect
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.Reconnect
   nameWithType: GameFlowPhase.Reconnect
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.TerminatedInError
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.TerminatedInError
   name: TerminatedInError
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_TerminatedInError
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.TerminatedInError
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.TerminatedInError
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_TerminatedInError
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.TerminatedInError
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.TerminatedInError
   nameWithType: GameFlowPhase.TerminatedInError
-- uid: OSR_Client.RiotApp.API.LCU.GameFlowPhase.WaitingForStats
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase.WaitingForStats
   name: WaitingForStats
-  href: apiclient/OSR_Client.RiotApp.API.LCU.GameFlowPhase.html#OSR_Client_RiotApp_API_LCU_GameFlowPhase_WaitingForStats
-  commentId: F:OSR_Client.RiotApp.API.LCU.GameFlowPhase.WaitingForStats
-  fullName: OSR_Client.RiotApp.API.LCU.GameFlowPhase.WaitingForStats
+  href: apiclient/OSL_Client.RiotApp.API.LCU.GameFlowPhase.html#OSL_Client_RiotApp_API_LCU_GameFlowPhase_WaitingForStats
+  commentId: F:OSL_Client.RiotApp.API.LCU.GameFlowPhase.WaitingForStats
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhase.WaitingForStats
   nameWithType: GameFlowPhase.WaitingForStats
-- uid: OSR_Client.RiotApp.API.LCU.LcuApi
+- uid: OSL_Client.RiotApp.API.LCU.LcuApi
   name: LcuApi
-  href: apiclient/OSR_Client.RiotApp.API.LCU.LcuApi.html
-  commentId: T:OSR_Client.RiotApp.API.LCU.LcuApi
-  fullName: OSR_Client.RiotApp.API.LCU.LcuApi
+  href: apiclient/OSL_Client.RiotApp.API.LCU.LcuApi.html
+  commentId: T:OSL_Client.RiotApp.API.LCU.LcuApi
+  fullName: OSL_Client.RiotApp.API.LCU.LcuApi
   nameWithType: LcuApi
-- uid: OSR_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck(System.String)
+- uid: OSL_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck(System.String)
   name: GameFlowPhaseCheck(String)
-  href: apiclient/OSR_Client.RiotApp.API.LCU.LcuApi.html#OSR_Client_RiotApp_API_LCU_LcuApi_GameFlowPhaseCheck_System_String_
-  commentId: M:OSR_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck(System.String)
-  fullName: OSR_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck(System.String)
+  href: apiclient/OSL_Client.RiotApp.API.LCU.LcuApi.html#OSL_Client_RiotApp_API_LCU_LcuApi_GameFlowPhaseCheck_System_String_
+  commentId: M:OSL_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck(System.String)
+  fullName: OSL_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck(System.String)
   nameWithType: LcuApi.GameFlowPhaseCheck(String)
-- uid: OSR_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck*
+- uid: OSL_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck*
   name: GameFlowPhaseCheck
-  href: apiclient/OSR_Client.RiotApp.API.LCU.LcuApi.html#OSR_Client_RiotApp_API_LCU_LcuApi_GameFlowPhaseCheck_
-  commentId: Overload:OSR_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck
+  href: apiclient/OSL_Client.RiotApp.API.LCU.LcuApi.html#OSL_Client_RiotApp_API_LCU_LcuApi_GameFlowPhaseCheck_
+  commentId: Overload:OSL_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck
   isSpec: "True"
-  fullName: OSR_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck
+  fullName: OSL_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck
   nameWithType: LcuApi.GameFlowPhaseCheck
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest
   name: UrlRequest
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html
-  commentId: T:OSR_Client.RiotApp.API.LCU.UrlRequest
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html
+  commentId: T:OSL_Client.RiotApp.API.LCU.UrlRequest
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest
   nameWithType: UrlRequest
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
   name: lolchampselectlegacyv1session
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html#OSR_Client_RiotApp_API_LCU_UrlRequest_lolchampselectlegacyv1session
-  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html#OSL_Client_RiotApp_API_LCU_UrlRequest_lolchampselectlegacyv1session
+  commentId: F:OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectlegacyv1session
   nameWithType: UrlRequest.lolchampselectlegacyv1session
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
   name: lolchampselectv1bannablechampionids
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html#OSR_Client_RiotApp_API_LCU_UrlRequest_lolchampselectv1bannablechampionids
-  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html#OSL_Client_RiotApp_API_LCU_UrlRequest_lolchampselectv1bannablechampionids
+  commentId: F:OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1bannablechampionids
   nameWithType: UrlRequest.lolchampselectv1bannablechampionids
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
   name: lolchampselectv1currentchampion
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html#OSR_Client_RiotApp_API_LCU_UrlRequest_lolchampselectv1currentchampion
-  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html#OSL_Client_RiotApp_API_LCU_UrlRequest_lolchampselectv1currentchampion
+  commentId: F:OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1currentchampion
   nameWithType: UrlRequest.lolchampselectv1currentchampion
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
   name: lolchampselectv1gridchampions
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html#OSR_Client_RiotApp_API_LCU_UrlRequest_lolchampselectv1gridchampions
-  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html#OSL_Client_RiotApp_API_LCU_UrlRequest_lolchampselectv1gridchampions
+  commentId: F:OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1gridchampions
   nameWithType: UrlRequest.lolchampselectv1gridchampions
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
   name: lolchampselectv1session
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html#OSR_Client_RiotApp_API_LCU_UrlRequest_lolchampselectv1session
-  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html#OSL_Client_RiotApp_API_LCU_UrlRequest_lolchampselectv1session
+  commentId: F:OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest.lolchampselectv1session
   nameWithType: UrlRequest.lolchampselectv1session
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
   name: lolgameflowv1gameflowphase
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html#OSR_Client_RiotApp_API_LCU_UrlRequest_lolgameflowv1gameflowphase
-  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html#OSL_Client_RiotApp_API_LCU_UrlRequest_lolgameflowv1gameflowphase
+  commentId: F:OSL_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1gameflowphase
   nameWithType: UrlRequest.lolgameflowv1gameflowphase
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
   name: lolgameflowv1session
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html#OSR_Client_RiotApp_API_LCU_UrlRequest_lolgameflowv1session
-  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html#OSL_Client_RiotApp_API_LCU_UrlRequest_lolgameflowv1session
+  commentId: F:OSL_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest.lolgameflowv1session
   nameWithType: UrlRequest.lolgameflowv1session
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
   name: lolsummonerv1summoners
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html#OSR_Client_RiotApp_API_LCU_UrlRequest_lolsummonerv1summoners
-  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html#OSL_Client_RiotApp_API_LCU_UrlRequest_lolsummonerv1summoners
+  commentId: F:OSL_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest.lolsummonerv1summoners
   nameWithType: UrlRequest.lolsummonerv1summoners
-- uid: OSR_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
+- uid: OSL_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
   name: riotclientappname
-  href: apiclient/OSR_Client.RiotApp.API.LCU.UrlRequest.html#OSR_Client_RiotApp_API_LCU_UrlRequest_riotclientappname
-  commentId: F:OSR_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
-  fullName: OSR_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
+  href: apiclient/OSL_Client.RiotApp.API.LCU.UrlRequest.html#OSL_Client_RiotApp_API_LCU_UrlRequest_riotclientappname
+  commentId: F:OSL_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
+  fullName: OSL_Client.RiotApp.API.LCU.UrlRequest.riotclientappname
   nameWithType: UrlRequest.riotclientappname
-- uid: OSR_Client.RiotApp.API.Replay
-  name: OSR_Client.RiotApp.API.Replay
-  href: apiclient/OSR_Client.RiotApp.API.Replay.html
-  commentId: N:OSR_Client.RiotApp.API.Replay
-  fullName: OSR_Client.RiotApp.API.Replay
-  nameWithType: OSR_Client.RiotApp.API.Replay
-- uid: OSR_Client.RiotApp.API.Replay.UrlRequest
+- uid: OSL_Client.RiotApp.API.Replay
+  name: OSL_Client.RiotApp.API.Replay
+  href: apiclient/OSL_Client.RiotApp.API.Replay.html
+  commentId: N:OSL_Client.RiotApp.API.Replay
+  fullName: OSL_Client.RiotApp.API.Replay
+  nameWithType: OSL_Client.RiotApp.API.Replay
+- uid: OSL_Client.RiotApp.API.Replay.UrlRequest
   name: UrlRequest
-  href: apiclient/OSR_Client.RiotApp.API.Replay.UrlRequest.html
-  commentId: T:OSR_Client.RiotApp.API.Replay.UrlRequest
-  fullName: OSR_Client.RiotApp.API.Replay.UrlRequest
+  href: apiclient/OSL_Client.RiotApp.API.Replay.UrlRequest.html
+  commentId: T:OSL_Client.RiotApp.API.Replay.UrlRequest
+  fullName: OSL_Client.RiotApp.API.Replay.UrlRequest
   nameWithType: UrlRequest
-- uid: OSR_Client.RiotApp.API.Replay.UrlRequest.replaygame
+- uid: OSL_Client.RiotApp.API.Replay.UrlRequest.replaygame
   name: replaygame
-  href: apiclient/OSR_Client.RiotApp.API.Replay.UrlRequest.html#OSR_Client_RiotApp_API_Replay_UrlRequest_replaygame
-  commentId: F:OSR_Client.RiotApp.API.Replay.UrlRequest.replaygame
-  fullName: OSR_Client.RiotApp.API.Replay.UrlRequest.replaygame
+  href: apiclient/OSL_Client.RiotApp.API.Replay.UrlRequest.html#OSL_Client_RiotApp_API_Replay_UrlRequest_replaygame
+  commentId: F:OSL_Client.RiotApp.API.Replay.UrlRequest.replaygame
+  fullName: OSL_Client.RiotApp.API.Replay.UrlRequest.replaygame
   nameWithType: UrlRequest.replaygame
-- uid: OSR_Client.RiotApp.LaunchChecker
+- uid: OSL_Client.RiotApp.LaunchChecker
   name: LaunchChecker
-  href: apiclient/OSR_Client.RiotApp.LaunchChecker.html
-  commentId: T:OSR_Client.RiotApp.LaunchChecker
-  fullName: OSR_Client.RiotApp.LaunchChecker
+  href: apiclient/OSL_Client.RiotApp.LaunchChecker.html
+  commentId: T:OSL_Client.RiotApp.LaunchChecker
+  fullName: OSL_Client.RiotApp.LaunchChecker
   nameWithType: LaunchChecker
-- uid: OSR_Client.RiotApp.LaunchChecker.LoLLauncherCheck
+- uid: OSL_Client.RiotApp.LaunchChecker.LoLLauncherCheck
   name: LoLLauncherCheck()
-  href: apiclient/OSR_Client.RiotApp.LaunchChecker.html#OSR_Client_RiotApp_LaunchChecker_LoLLauncherCheck
-  commentId: M:OSR_Client.RiotApp.LaunchChecker.LoLLauncherCheck
-  fullName: OSR_Client.RiotApp.LaunchChecker.LoLLauncherCheck()
+  href: apiclient/OSL_Client.RiotApp.LaunchChecker.html#OSL_Client_RiotApp_LaunchChecker_LoLLauncherCheck
+  commentId: M:OSL_Client.RiotApp.LaunchChecker.LoLLauncherCheck
+  fullName: OSL_Client.RiotApp.LaunchChecker.LoLLauncherCheck()
   nameWithType: LaunchChecker.LoLLauncherCheck()
-- uid: OSR_Client.RiotApp.LaunchChecker.LoLLauncherCheck*
+- uid: OSL_Client.RiotApp.LaunchChecker.LoLLauncherCheck*
   name: LoLLauncherCheck
-  href: apiclient/OSR_Client.RiotApp.LaunchChecker.html#OSR_Client_RiotApp_LaunchChecker_LoLLauncherCheck_
-  commentId: Overload:OSR_Client.RiotApp.LaunchChecker.LoLLauncherCheck
+  href: apiclient/OSL_Client.RiotApp.LaunchChecker.html#OSL_Client_RiotApp_LaunchChecker_LoLLauncherCheck_
+  commentId: Overload:OSL_Client.RiotApp.LaunchChecker.LoLLauncherCheck
   isSpec: "True"
-  fullName: OSR_Client.RiotApp.LaunchChecker.LoLLauncherCheck
+  fullName: OSL_Client.RiotApp.LaunchChecker.LoLLauncherCheck
   nameWithType: LaunchChecker.LoLLauncherCheck
-- uid: OSR_Client.RiotApp.ProcessInfo
+- uid: OSL_Client.RiotApp.ProcessInfo
   name: ProcessInfo
-  href: apiclient/OSR_Client.RiotApp.ProcessInfo.html
-  commentId: T:OSR_Client.RiotApp.ProcessInfo
-  fullName: OSR_Client.RiotApp.ProcessInfo
+  href: apiclient/OSL_Client.RiotApp.ProcessInfo.html
+  commentId: T:OSL_Client.RiotApp.ProcessInfo
+  fullName: OSL_Client.RiotApp.ProcessInfo
   nameWithType: ProcessInfo
-- uid: OSR_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
+- uid: OSL_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
   name: IdProcessInfo(Int32)
-  href: apiclient/OSR_Client.RiotApp.ProcessInfo.html#OSR_Client_RiotApp_ProcessInfo_IdProcessInfo_System_Int32_
-  commentId: M:OSR_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
-  fullName: OSR_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
+  href: apiclient/OSL_Client.RiotApp.ProcessInfo.html#OSL_Client_RiotApp_ProcessInfo_IdProcessInfo_System_Int32_
+  commentId: M:OSL_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
+  fullName: OSL_Client.RiotApp.ProcessInfo.IdProcessInfo(System.Int32)
   nameWithType: ProcessInfo.IdProcessInfo(Int32)
-- uid: OSR_Client.RiotApp.ProcessInfo.IdProcessInfo*
+- uid: OSL_Client.RiotApp.ProcessInfo.IdProcessInfo*
   name: IdProcessInfo
-  href: apiclient/OSR_Client.RiotApp.ProcessInfo.html#OSR_Client_RiotApp_ProcessInfo_IdProcessInfo_
-  commentId: Overload:OSR_Client.RiotApp.ProcessInfo.IdProcessInfo
+  href: apiclient/OSL_Client.RiotApp.ProcessInfo.html#OSL_Client_RiotApp_ProcessInfo_IdProcessInfo_
+  commentId: Overload:OSL_Client.RiotApp.ProcessInfo.IdProcessInfo
   isSpec: "True"
-  fullName: OSR_Client.RiotApp.ProcessInfo.IdProcessInfo
+  fullName: OSL_Client.RiotApp.ProcessInfo.IdProcessInfo
   nameWithType: ProcessInfo.IdProcessInfo
-- uid: OSR_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
+- uid: OSL_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
   name: NameProcessInfo(String)
-  href: apiclient/OSR_Client.RiotApp.ProcessInfo.html#OSR_Client_RiotApp_ProcessInfo_NameProcessInfo_System_String_
-  commentId: M:OSR_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
-  fullName: OSR_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
+  href: apiclient/OSL_Client.RiotApp.ProcessInfo.html#OSL_Client_RiotApp_ProcessInfo_NameProcessInfo_System_String_
+  commentId: M:OSL_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
+  fullName: OSL_Client.RiotApp.ProcessInfo.NameProcessInfo(System.String)
   nameWithType: ProcessInfo.NameProcessInfo(String)
-- uid: OSR_Client.RiotApp.ProcessInfo.NameProcessInfo*
+- uid: OSL_Client.RiotApp.ProcessInfo.NameProcessInfo*
   name: NameProcessInfo
-  href: apiclient/OSR_Client.RiotApp.ProcessInfo.html#OSR_Client_RiotApp_ProcessInfo_NameProcessInfo_
-  commentId: Overload:OSR_Client.RiotApp.ProcessInfo.NameProcessInfo
+  href: apiclient/OSL_Client.RiotApp.ProcessInfo.html#OSL_Client_RiotApp_ProcessInfo_NameProcessInfo_
+  commentId: Overload:OSL_Client.RiotApp.ProcessInfo.NameProcessInfo
   isSpec: "True"
-  fullName: OSR_Client.RiotApp.ProcessInfo.NameProcessInfo
+  fullName: OSL_Client.RiotApp.ProcessInfo.NameProcessInfo
   nameWithType: ProcessInfo.NameProcessInfo
-- uid: OSR_Server
-  name: OSR_Server
-  href: apiserver/OSR_Server.html
-  commentId: N:OSR_Server
-  fullName: OSR_Server
-  nameWithType: OSR_Server
-- uid: OSR_Server.Configuration
-  name: OSR_Server.Configuration
-  href: apiserver/OSR_Server.Configuration.html
-  commentId: N:OSR_Server.Configuration
-  fullName: OSR_Server.Configuration
-  nameWithType: OSR_Server.Configuration
-- uid: OSR_Server.Configuration.Config
+- uid: OSL_Server
+  name: OSL_Server
+  href: apiserver/OSL_Server.html
+  commentId: N:OSL_Server
+  fullName: OSL_Server
+  nameWithType: OSL_Server
+- uid: OSL_Server.Configuration
+  name: OSL_Server.Configuration
+  href: apiserver/OSL_Server.Configuration.html
+  commentId: N:OSL_Server.Configuration
+  fullName: OSL_Server.Configuration
+  nameWithType: OSL_Server.Configuration
+- uid: OSL_Server.Configuration.Config
   name: Config
-  href: apiserver/OSR_Server.Configuration.Config.html
-  commentId: T:OSR_Server.Configuration.Config
-  fullName: OSR_Server.Configuration.Config
+  href: apiserver/OSL_Server.Configuration.Config.html
+  commentId: T:OSL_Server.Configuration.Config
+  fullName: OSL_Server.Configuration.Config
   nameWithType: Config
-- uid: OSR_Server.Configuration.Config.championSummary
+- uid: OSL_Server.Configuration.Config.championSummary
   name: championSummary
-  href: apiserver/OSR_Server.Configuration.Config.html#OSR_Server_Configuration_Config_championSummary
-  commentId: F:OSR_Server.Configuration.Config.championSummary
-  fullName: OSR_Server.Configuration.Config.championSummary
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_championSummary
+  commentId: F:OSL_Server.Configuration.Config.championSummary
+  fullName: OSL_Server.Configuration.Config.championSummary
   nameWithType: Config.championSummary
-- uid: OSR_Server.Configuration.Config.items
+- uid: OSL_Server.Configuration.Config.items
   name: items
-  href: apiserver/OSR_Server.Configuration.Config.html#OSR_Server_Configuration_Config_items
-  commentId: F:OSR_Server.Configuration.Config.items
-  fullName: OSR_Server.Configuration.Config.items
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_items
+  commentId: F:OSL_Server.Configuration.Config.items
+  fullName: OSL_Server.Configuration.Config.items
   nameWithType: Config.items
-- uid: OSR_Server.Configuration.Config.LoadConfigCDragon
+- uid: OSL_Server.Configuration.Config.LoadConfigCDragon
   name: LoadConfigCDragon()
-  href: apiserver/OSR_Server.Configuration.Config.html#OSR_Server_Configuration_Config_LoadConfigCDragon
-  commentId: M:OSR_Server.Configuration.Config.LoadConfigCDragon
-  fullName: OSR_Server.Configuration.Config.LoadConfigCDragon()
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_LoadConfigCDragon
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigCDragon
+  fullName: OSL_Server.Configuration.Config.LoadConfigCDragon()
   nameWithType: Config.LoadConfigCDragon()
-- uid: OSR_Server.Configuration.Config.LoadConfigCDragon*
+- uid: OSL_Server.Configuration.Config.LoadConfigCDragon*
   name: LoadConfigCDragon
-  href: apiserver/OSR_Server.Configuration.Config.html#OSR_Server_Configuration_Config_LoadConfigCDragon_
-  commentId: Overload:OSR_Server.Configuration.Config.LoadConfigCDragon
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_LoadConfigCDragon_
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigCDragon
   isSpec: "True"
-  fullName: OSR_Server.Configuration.Config.LoadConfigCDragon
+  fullName: OSL_Server.Configuration.Config.LoadConfigCDragon
   nameWithType: Config.LoadConfigCDragon
-- uid: OSR_Server.Configuration.Config.patch
+- uid: OSL_Server.Configuration.Config.patch
   name: patch
-  href: apiserver/OSR_Server.Configuration.Config.html#OSR_Server_Configuration_Config_patch
-  commentId: F:OSR_Server.Configuration.Config.patch
-  fullName: OSR_Server.Configuration.Config.patch
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_patch
+  commentId: F:OSL_Server.Configuration.Config.patch
+  fullName: OSL_Server.Configuration.Config.patch
   nameWithType: Config.patch
-- uid: OSR_Server.Configuration.Config.perks
+- uid: OSL_Server.Configuration.Config.perks
   name: perks
-  href: apiserver/OSR_Server.Configuration.Config.html#OSR_Server_Configuration_Config_perks
-  commentId: F:OSR_Server.Configuration.Config.perks
-  fullName: OSR_Server.Configuration.Config.perks
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_perks
+  commentId: F:OSL_Server.Configuration.Config.perks
+  fullName: OSL_Server.Configuration.Config.perks
   nameWithType: Config.perks
-- uid: OSR_Server.Configuration.Config.perkstyles
+- uid: OSL_Server.Configuration.Config.perkstyles
   name: perkstyles
-  href: apiserver/OSR_Server.Configuration.Config.html#OSR_Server_Configuration_Config_perkstyles
-  commentId: F:OSR_Server.Configuration.Config.perkstyles
-  fullName: OSR_Server.Configuration.Config.perkstyles
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_perkstyles
+  commentId: F:OSL_Server.Configuration.Config.perkstyles
+  fullName: OSL_Server.Configuration.Config.perkstyles
   nameWithType: Config.perkstyles
-- uid: OSR_Server.Configuration.Config.region
+- uid: OSL_Server.Configuration.Config.region
   name: region
-  href: apiserver/OSR_Server.Configuration.Config.html#OSR_Server_Configuration_Config_region
-  commentId: F:OSR_Server.Configuration.Config.region
-  fullName: OSR_Server.Configuration.Config.region
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_region
+  commentId: F:OSL_Server.Configuration.Config.region
+  fullName: OSL_Server.Configuration.Config.region
   nameWithType: Config.region
-- uid: OSR_Server.Configuration.Config.summonerSpells
+- uid: OSL_Server.Configuration.Config.summonerSpells
   name: summonerSpells
-  href: apiserver/OSR_Server.Configuration.Config.html#OSR_Server_Configuration_Config_summonerSpells
-  commentId: F:OSR_Server.Configuration.Config.summonerSpells
-  fullName: OSR_Server.Configuration.Config.summonerSpells
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_summonerSpells
+  commentId: F:OSL_Server.Configuration.Config.summonerSpells
+  fullName: OSL_Server.Configuration.Config.summonerSpells
   nameWithType: Config.summonerSpells
-- uid: OSR_Server.Data
-  name: OSR_Server.Data
-  href: apiserver/OSR_Server.Data.html
-  commentId: N:OSR_Server.Data
-  fullName: OSR_Server.Data
-  nameWithType: OSR_Server.Data
-- uid: OSR_Server.Data.WeatherForecast
+- uid: OSL_Server.Data
+  name: OSL_Server.Data
+  href: apiserver/OSL_Server.Data.html
+  commentId: N:OSL_Server.Data
+  fullName: OSL_Server.Data
+  nameWithType: OSL_Server.Data
+- uid: OSL_Server.Data.WeatherForecast
   name: WeatherForecast
-  href: apiserver/OSR_Server.Data.WeatherForecast.html
-  commentId: T:OSR_Server.Data.WeatherForecast
-  fullName: OSR_Server.Data.WeatherForecast
+  href: apiserver/OSL_Server.Data.WeatherForecast.html
+  commentId: T:OSL_Server.Data.WeatherForecast
+  fullName: OSL_Server.Data.WeatherForecast
   nameWithType: WeatherForecast
-- uid: OSR_Server.Data.WeatherForecast.Date
+- uid: OSL_Server.Data.WeatherForecast.Date
   name: Date
-  href: apiserver/OSR_Server.Data.WeatherForecast.html#OSR_Server_Data_WeatherForecast_Date
-  commentId: P:OSR_Server.Data.WeatherForecast.Date
-  fullName: OSR_Server.Data.WeatherForecast.Date
+  href: apiserver/OSL_Server.Data.WeatherForecast.html#OSL_Server_Data_WeatherForecast_Date
+  commentId: P:OSL_Server.Data.WeatherForecast.Date
+  fullName: OSL_Server.Data.WeatherForecast.Date
   nameWithType: WeatherForecast.Date
-- uid: OSR_Server.Data.WeatherForecast.Date*
+- uid: OSL_Server.Data.WeatherForecast.Date*
   name: Date
-  href: apiserver/OSR_Server.Data.WeatherForecast.html#OSR_Server_Data_WeatherForecast_Date_
-  commentId: Overload:OSR_Server.Data.WeatherForecast.Date
+  href: apiserver/OSL_Server.Data.WeatherForecast.html#OSL_Server_Data_WeatherForecast_Date_
+  commentId: Overload:OSL_Server.Data.WeatherForecast.Date
   isSpec: "True"
-  fullName: OSR_Server.Data.WeatherForecast.Date
+  fullName: OSL_Server.Data.WeatherForecast.Date
   nameWithType: WeatherForecast.Date
-- uid: OSR_Server.Data.WeatherForecast.Summary
+- uid: OSL_Server.Data.WeatherForecast.Summary
   name: Summary
-  href: apiserver/OSR_Server.Data.WeatherForecast.html#OSR_Server_Data_WeatherForecast_Summary
-  commentId: P:OSR_Server.Data.WeatherForecast.Summary
-  fullName: OSR_Server.Data.WeatherForecast.Summary
+  href: apiserver/OSL_Server.Data.WeatherForecast.html#OSL_Server_Data_WeatherForecast_Summary
+  commentId: P:OSL_Server.Data.WeatherForecast.Summary
+  fullName: OSL_Server.Data.WeatherForecast.Summary
   nameWithType: WeatherForecast.Summary
-- uid: OSR_Server.Data.WeatherForecast.Summary*
+- uid: OSL_Server.Data.WeatherForecast.Summary*
   name: Summary
-  href: apiserver/OSR_Server.Data.WeatherForecast.html#OSR_Server_Data_WeatherForecast_Summary_
-  commentId: Overload:OSR_Server.Data.WeatherForecast.Summary
+  href: apiserver/OSL_Server.Data.WeatherForecast.html#OSL_Server_Data_WeatherForecast_Summary_
+  commentId: Overload:OSL_Server.Data.WeatherForecast.Summary
   isSpec: "True"
-  fullName: OSR_Server.Data.WeatherForecast.Summary
+  fullName: OSL_Server.Data.WeatherForecast.Summary
   nameWithType: WeatherForecast.Summary
-- uid: OSR_Server.Data.WeatherForecast.TemperatureC
+- uid: OSL_Server.Data.WeatherForecast.TemperatureC
   name: TemperatureC
-  href: apiserver/OSR_Server.Data.WeatherForecast.html#OSR_Server_Data_WeatherForecast_TemperatureC
-  commentId: P:OSR_Server.Data.WeatherForecast.TemperatureC
-  fullName: OSR_Server.Data.WeatherForecast.TemperatureC
+  href: apiserver/OSL_Server.Data.WeatherForecast.html#OSL_Server_Data_WeatherForecast_TemperatureC
+  commentId: P:OSL_Server.Data.WeatherForecast.TemperatureC
+  fullName: OSL_Server.Data.WeatherForecast.TemperatureC
   nameWithType: WeatherForecast.TemperatureC
-- uid: OSR_Server.Data.WeatherForecast.TemperatureC*
+- uid: OSL_Server.Data.WeatherForecast.TemperatureC*
   name: TemperatureC
-  href: apiserver/OSR_Server.Data.WeatherForecast.html#OSR_Server_Data_WeatherForecast_TemperatureC_
-  commentId: Overload:OSR_Server.Data.WeatherForecast.TemperatureC
+  href: apiserver/OSL_Server.Data.WeatherForecast.html#OSL_Server_Data_WeatherForecast_TemperatureC_
+  commentId: Overload:OSL_Server.Data.WeatherForecast.TemperatureC
   isSpec: "True"
-  fullName: OSR_Server.Data.WeatherForecast.TemperatureC
+  fullName: OSL_Server.Data.WeatherForecast.TemperatureC
   nameWithType: WeatherForecast.TemperatureC
-- uid: OSR_Server.Data.WeatherForecast.TemperatureF
+- uid: OSL_Server.Data.WeatherForecast.TemperatureF
   name: TemperatureF
-  href: apiserver/OSR_Server.Data.WeatherForecast.html#OSR_Server_Data_WeatherForecast_TemperatureF
-  commentId: P:OSR_Server.Data.WeatherForecast.TemperatureF
-  fullName: OSR_Server.Data.WeatherForecast.TemperatureF
+  href: apiserver/OSL_Server.Data.WeatherForecast.html#OSL_Server_Data_WeatherForecast_TemperatureF
+  commentId: P:OSL_Server.Data.WeatherForecast.TemperatureF
+  fullName: OSL_Server.Data.WeatherForecast.TemperatureF
   nameWithType: WeatherForecast.TemperatureF
-- uid: OSR_Server.Data.WeatherForecast.TemperatureF*
+- uid: OSL_Server.Data.WeatherForecast.TemperatureF*
   name: TemperatureF
-  href: apiserver/OSR_Server.Data.WeatherForecast.html#OSR_Server_Data_WeatherForecast_TemperatureF_
-  commentId: Overload:OSR_Server.Data.WeatherForecast.TemperatureF
+  href: apiserver/OSL_Server.Data.WeatherForecast.html#OSL_Server_Data_WeatherForecast_TemperatureF_
+  commentId: Overload:OSL_Server.Data.WeatherForecast.TemperatureF
   isSpec: "True"
-  fullName: OSR_Server.Data.WeatherForecast.TemperatureF
+  fullName: OSL_Server.Data.WeatherForecast.TemperatureF
   nameWithType: WeatherForecast.TemperatureF
-- uid: OSR_Server.Data.WeatherForecastService
+- uid: OSL_Server.Data.WeatherForecastService
   name: WeatherForecastService
-  href: apiserver/OSR_Server.Data.WeatherForecastService.html
-  commentId: T:OSR_Server.Data.WeatherForecastService
-  fullName: OSR_Server.Data.WeatherForecastService
+  href: apiserver/OSL_Server.Data.WeatherForecastService.html
+  commentId: T:OSL_Server.Data.WeatherForecastService
+  fullName: OSL_Server.Data.WeatherForecastService
   nameWithType: WeatherForecastService
-- uid: OSR_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
+- uid: OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
   name: GetForecastAsync(DateTime)
-  href: apiserver/OSR_Server.Data.WeatherForecastService.html#OSR_Server_Data_WeatherForecastService_GetForecastAsync_DateTime_
-  commentId: M:OSR_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
-  fullName: OSR_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
+  href: apiserver/OSL_Server.Data.WeatherForecastService.html#OSL_Server_Data_WeatherForecastService_GetForecastAsync_DateTime_
+  commentId: M:OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
+  fullName: OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
   nameWithType: WeatherForecastService.GetForecastAsync(DateTime)
-- uid: OSR_Server.Data.WeatherForecastService.GetForecastAsync*
+- uid: OSL_Server.Data.WeatherForecastService.GetForecastAsync*
   name: GetForecastAsync
-  href: apiserver/OSR_Server.Data.WeatherForecastService.html#OSR_Server_Data_WeatherForecastService_GetForecastAsync_
-  commentId: Overload:OSR_Server.Data.WeatherForecastService.GetForecastAsync
+  href: apiserver/OSL_Server.Data.WeatherForecastService.html#OSL_Server_Data_WeatherForecastService_GetForecastAsync_
+  commentId: Overload:OSL_Server.Data.WeatherForecastService.GetForecastAsync
   isSpec: "True"
-  fullName: OSR_Server.Data.WeatherForecastService.GetForecastAsync
+  fullName: OSL_Server.Data.WeatherForecastService.GetForecastAsync
   nameWithType: WeatherForecastService.GetForecastAsync
-- uid: OSR_Server.FileManager
-  name: OSR_Server.FileManager
-  href: apiserver/OSR_Server.FileManager.html
-  commentId: N:OSR_Server.FileManager
-  fullName: OSR_Server.FileManager
-  nameWithType: OSR_Server.FileManager
-- uid: OSR_Server.FileManager.FileManagerLocal
+- uid: OSL_Server.FileManager
+  name: OSL_Server.FileManager
+  href: apiserver/OSL_Server.FileManager.html
+  commentId: N:OSL_Server.FileManager
+  fullName: OSL_Server.FileManager
+  nameWithType: OSL_Server.FileManager
+- uid: OSL_Server.FileManager.FileManagerLocal
   name: FileManagerLocal
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html
-  commentId: T:OSR_Server.FileManager.FileManagerLocal
-  fullName: OSR_Server.FileManager.FileManagerLocal
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html
+  commentId: T:OSL_Server.FileManager.FileManagerLocal
+  fullName: OSL_Server.FileManager.FileManagerLocal
   nameWithType: FileManagerLocal
-- uid: OSR_Server.FileManager.FileManagerLocal.CreateFile(System.String)
+- uid: OSL_Server.FileManager.FileManagerLocal.CreateFile(System.String)
   name: CreateFile(String)
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_CreateFile_System_String_
-  commentId: M:OSR_Server.FileManager.FileManagerLocal.CreateFile(System.String)
-  fullName: OSR_Server.FileManager.FileManagerLocal.CreateFile(System.String)
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_CreateFile_System_String_
+  commentId: M:OSL_Server.FileManager.FileManagerLocal.CreateFile(System.String)
+  fullName: OSL_Server.FileManager.FileManagerLocal.CreateFile(System.String)
   nameWithType: FileManagerLocal.CreateFile(String)
-- uid: OSR_Server.FileManager.FileManagerLocal.CreateFile*
+- uid: OSL_Server.FileManager.FileManagerLocal.CreateFile*
   name: CreateFile
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_CreateFile_
-  commentId: Overload:OSR_Server.FileManager.FileManagerLocal.CreateFile
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_CreateFile_
+  commentId: Overload:OSL_Server.FileManager.FileManagerLocal.CreateFile
   isSpec: "True"
-  fullName: OSR_Server.FileManager.FileManagerLocal.CreateFile
+  fullName: OSL_Server.FileManager.FileManagerLocal.CreateFile
   nameWithType: FileManagerLocal.CreateFile
-- uid: OSR_Server.FileManager.FileManagerLocal.DeleteFile(System.String)
+- uid: OSL_Server.FileManager.FileManagerLocal.DeleteFile(System.String)
   name: DeleteFile(String)
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_DeleteFile_System_String_
-  commentId: M:OSR_Server.FileManager.FileManagerLocal.DeleteFile(System.String)
-  fullName: OSR_Server.FileManager.FileManagerLocal.DeleteFile(System.String)
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_DeleteFile_System_String_
+  commentId: M:OSL_Server.FileManager.FileManagerLocal.DeleteFile(System.String)
+  fullName: OSL_Server.FileManager.FileManagerLocal.DeleteFile(System.String)
   nameWithType: FileManagerLocal.DeleteFile(String)
-- uid: OSR_Server.FileManager.FileManagerLocal.DeleteFile*
+- uid: OSL_Server.FileManager.FileManagerLocal.DeleteFile*
   name: DeleteFile
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_DeleteFile_
-  commentId: Overload:OSR_Server.FileManager.FileManagerLocal.DeleteFile
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_DeleteFile_
+  commentId: Overload:OSL_Server.FileManager.FileManagerLocal.DeleteFile
   isSpec: "True"
-  fullName: OSR_Server.FileManager.FileManagerLocal.DeleteFile
+  fullName: OSL_Server.FileManager.FileManagerLocal.DeleteFile
   nameWithType: FileManagerLocal.DeleteFile
-- uid: OSR_Server.FileManager.FileManagerLocal.ReadInFile(System.String)
+- uid: OSL_Server.FileManager.FileManagerLocal.ReadInFile(System.String)
   name: ReadInFile(String)
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_ReadInFile_System_String_
-  commentId: M:OSR_Server.FileManager.FileManagerLocal.ReadInFile(System.String)
-  fullName: OSR_Server.FileManager.FileManagerLocal.ReadInFile(System.String)
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_ReadInFile_System_String_
+  commentId: M:OSL_Server.FileManager.FileManagerLocal.ReadInFile(System.String)
+  fullName: OSL_Server.FileManager.FileManagerLocal.ReadInFile(System.String)
   nameWithType: FileManagerLocal.ReadInFile(String)
-- uid: OSR_Server.FileManager.FileManagerLocal.ReadInFile*
+- uid: OSL_Server.FileManager.FileManagerLocal.ReadInFile*
   name: ReadInFile
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_ReadInFile_
-  commentId: Overload:OSR_Server.FileManager.FileManagerLocal.ReadInFile
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_ReadInFile_
+  commentId: Overload:OSL_Server.FileManager.FileManagerLocal.ReadInFile
   isSpec: "True"
-  fullName: OSR_Server.FileManager.FileManagerLocal.ReadInFile
+  fullName: OSL_Server.FileManager.FileManagerLocal.ReadInFile
   nameWithType: FileManagerLocal.ReadInFile
-- uid: OSR_Server.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
+- uid: OSL_Server.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
   name: RewrittenFile(String, String)
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_RewrittenFile_System_String_System_String_
-  commentId: M:OSR_Server.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
-  fullName: OSR_Server.FileManager.FileManagerLocal.RewrittenFile(System.String, System.String)
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_RewrittenFile_System_String_System_String_
+  commentId: M:OSL_Server.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
+  fullName: OSL_Server.FileManager.FileManagerLocal.RewrittenFile(System.String, System.String)
   nameWithType: FileManagerLocal.RewrittenFile(String, String)
-- uid: OSR_Server.FileManager.FileManagerLocal.RewrittenFile*
+- uid: OSL_Server.FileManager.FileManagerLocal.RewrittenFile*
   name: RewrittenFile
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_RewrittenFile_
-  commentId: Overload:OSR_Server.FileManager.FileManagerLocal.RewrittenFile
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_RewrittenFile_
+  commentId: Overload:OSL_Server.FileManager.FileManagerLocal.RewrittenFile
   isSpec: "True"
-  fullName: OSR_Server.FileManager.FileManagerLocal.RewrittenFile
+  fullName: OSL_Server.FileManager.FileManagerLocal.RewrittenFile
   nameWithType: FileManagerLocal.RewrittenFile
-- uid: OSR_Server.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
+- uid: OSL_Server.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
   name: WriteInFile(String, String)
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_WriteInFile_System_String_System_String_
-  commentId: M:OSR_Server.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
-  fullName: OSR_Server.FileManager.FileManagerLocal.WriteInFile(System.String, System.String)
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_WriteInFile_System_String_System_String_
+  commentId: M:OSL_Server.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
+  fullName: OSL_Server.FileManager.FileManagerLocal.WriteInFile(System.String, System.String)
   nameWithType: FileManagerLocal.WriteInFile(String, String)
-- uid: OSR_Server.FileManager.FileManagerLocal.WriteInFile*
+- uid: OSL_Server.FileManager.FileManagerLocal.WriteInFile*
   name: WriteInFile
-  href: apiserver/OSR_Server.FileManager.FileManagerLocal.html#OSR_Server_FileManager_FileManagerLocal_WriteInFile_
-  commentId: Overload:OSR_Server.FileManager.FileManagerLocal.WriteInFile
+  href: apiserver/OSL_Server.FileManager.FileManagerLocal.html#OSL_Server_FileManager_FileManagerLocal_WriteInFile_
+  commentId: Overload:OSL_Server.FileManager.FileManagerLocal.WriteInFile
   isSpec: "True"
-  fullName: OSR_Server.FileManager.FileManagerLocal.WriteInFile
+  fullName: OSL_Server.FileManager.FileManagerLocal.WriteInFile
   nameWithType: FileManagerLocal.WriteInFile
-- uid: OSR_Server.FileManager.JsonManagerLocal
+- uid: OSL_Server.FileManager.JsonManagerLocal
   name: JsonManagerLocal
-  href: apiserver/OSR_Server.FileManager.JsonManagerLocal.html
-  commentId: T:OSR_Server.FileManager.JsonManagerLocal
-  fullName: OSR_Server.FileManager.JsonManagerLocal
+  href: apiserver/OSL_Server.FileManager.JsonManagerLocal.html
+  commentId: T:OSL_Server.FileManager.JsonManagerLocal
+  fullName: OSL_Server.FileManager.JsonManagerLocal
   nameWithType: JsonManagerLocal
-- uid: OSR_Server.FileManager.JsonType
+- uid: OSL_Server.FileManager.JsonType
   name: JsonType
-  href: apiserver/OSR_Server.FileManager.JsonType.html
-  commentId: T:OSR_Server.FileManager.JsonType
-  fullName: OSR_Server.FileManager.JsonType
+  href: apiserver/OSL_Server.FileManager.JsonType.html
+  commentId: T:OSL_Server.FileManager.JsonType
+  fullName: OSL_Server.FileManager.JsonType
   nameWithType: JsonType
-- uid: OSR_Server.LoggingLevel
+- uid: OSL_Server.LoggingLevel
   name: LoggingLevel
-  href: apiserver/OSR_Server.LoggingLevel.html
-  commentId: T:OSR_Server.LoggingLevel
-  fullName: OSR_Server.LoggingLevel
+  href: apiserver/OSL_Server.LoggingLevel.html
+  commentId: T:OSL_Server.LoggingLevel
+  fullName: OSL_Server.LoggingLevel
   nameWithType: LoggingLevel
-- uid: OSR_Server.LoggingLevel.DEBUG
+- uid: OSL_Server.LoggingLevel.DEBUG
   name: DEBUG
-  href: apiserver/OSR_Server.LoggingLevel.html#OSR_Server_LoggingLevel_DEBUG
-  commentId: F:OSR_Server.LoggingLevel.DEBUG
-  fullName: OSR_Server.LoggingLevel.DEBUG
+  href: apiserver/OSL_Server.LoggingLevel.html#OSL_Server_LoggingLevel_DEBUG
+  commentId: F:OSL_Server.LoggingLevel.DEBUG
+  fullName: OSL_Server.LoggingLevel.DEBUG
   nameWithType: LoggingLevel.DEBUG
-- uid: OSR_Server.LoggingLevel.ERROR
+- uid: OSL_Server.LoggingLevel.ERROR
   name: ERROR
-  href: apiserver/OSR_Server.LoggingLevel.html#OSR_Server_LoggingLevel_ERROR
-  commentId: F:OSR_Server.LoggingLevel.ERROR
-  fullName: OSR_Server.LoggingLevel.ERROR
+  href: apiserver/OSL_Server.LoggingLevel.html#OSL_Server_LoggingLevel_ERROR
+  commentId: F:OSL_Server.LoggingLevel.ERROR
+  fullName: OSL_Server.LoggingLevel.ERROR
   nameWithType: LoggingLevel.ERROR
-- uid: OSR_Server.LoggingLevel.INFO
+- uid: OSL_Server.LoggingLevel.INFO
   name: INFO
-  href: apiserver/OSR_Server.LoggingLevel.html#OSR_Server_LoggingLevel_INFO
-  commentId: F:OSR_Server.LoggingLevel.INFO
-  fullName: OSR_Server.LoggingLevel.INFO
+  href: apiserver/OSL_Server.LoggingLevel.html#OSL_Server_LoggingLevel_INFO
+  commentId: F:OSL_Server.LoggingLevel.INFO
+  fullName: OSL_Server.LoggingLevel.INFO
   nameWithType: LoggingLevel.INFO
-- uid: OSR_Server.LoggingLevel.OFF
+- uid: OSL_Server.LoggingLevel.OFF
   name: OFF
-  href: apiserver/OSR_Server.LoggingLevel.html#OSR_Server_LoggingLevel_OFF
-  commentId: F:OSR_Server.LoggingLevel.OFF
-  fullName: OSR_Server.LoggingLevel.OFF
+  href: apiserver/OSL_Server.LoggingLevel.html#OSL_Server_LoggingLevel_OFF
+  commentId: F:OSL_Server.LoggingLevel.OFF
+  fullName: OSL_Server.LoggingLevel.OFF
   nameWithType: LoggingLevel.OFF
-- uid: OSR_Server.LoggingLevel.WARN
+- uid: OSL_Server.LoggingLevel.WARN
   name: WARN
-  href: apiserver/OSR_Server.LoggingLevel.html#OSR_Server_LoggingLevel_WARN
-  commentId: F:OSR_Server.LoggingLevel.WARN
-  fullName: OSR_Server.LoggingLevel.WARN
+  href: apiserver/OSL_Server.LoggingLevel.html#OSL_Server_LoggingLevel_WARN
+  commentId: F:OSL_Server.LoggingLevel.WARN
+  fullName: OSL_Server.LoggingLevel.WARN
   nameWithType: LoggingLevel.WARN
-- uid: OSR_Server.OSRLogger
-  name: OSRLogger
-  href: apiserver/OSR_Server.OSRLogger.html
-  commentId: T:OSR_Server.OSRLogger
-  fullName: OSR_Server.OSRLogger
-  nameWithType: OSRLogger
-- uid: OSR_Server.OSRLogger.#ctor(System.String,System.Nullable{OSR_Server.LoggingLevel})
-  name: OSRLogger(String, Nullable<LoggingLevel>)
-  href: apiserver/OSR_Server.OSRLogger.html#OSR_Server_OSRLogger__ctor_System_String_System_Nullable_OSR_Server_LoggingLevel__
-  commentId: M:OSR_Server.OSRLogger.#ctor(System.String,System.Nullable{OSR_Server.LoggingLevel})
-  name.vb: OSRLogger(String, Nullable(Of LoggingLevel))
-  fullName: OSR_Server.OSRLogger.OSRLogger(System.String, System.Nullable<OSR_Server.LoggingLevel>)
-  fullName.vb: OSR_Server.OSRLogger.OSRLogger(System.String, System.Nullable(Of OSR_Server.LoggingLevel))
-  nameWithType: OSRLogger.OSRLogger(String, Nullable<LoggingLevel>)
-  nameWithType.vb: OSRLogger.OSRLogger(String, Nullable(Of LoggingLevel))
-- uid: OSR_Server.OSRLogger.#ctor*
-  name: OSRLogger
-  href: apiserver/OSR_Server.OSRLogger.html#OSR_Server_OSRLogger__ctor_
-  commentId: Overload:OSR_Server.OSRLogger.#ctor
+- uid: OSL_Server.OSLLogger
+  name: OSLLogger
+  href: apiserver/OSL_Server.OSLLogger.html
+  commentId: T:OSL_Server.OSLLogger
+  fullName: OSL_Server.OSLLogger
+  nameWithType: OSLLogger
+- uid: OSL_Server.OSLLogger.#ctor(System.String,System.Nullable{OSL_Server.LoggingLevel})
+  name: OSLLogger(String, Nullable<LoggingLevel>)
+  href: apiserver/OSL_Server.OSLLogger.html#OSL_Server_OSLLogger__ctor_System_String_System_Nullable_OSL_Server_LoggingLevel__
+  commentId: M:OSL_Server.OSLLogger.#ctor(System.String,System.Nullable{OSL_Server.LoggingLevel})
+  name.vb: OSLLogger(String, Nullable(Of LoggingLevel))
+  fullName: OSL_Server.OSLLogger.OSLLogger(System.String, System.Nullable<OSL_Server.LoggingLevel>)
+  fullName.vb: OSL_Server.OSLLogger.OSLLogger(System.String, System.Nullable(Of OSL_Server.LoggingLevel))
+  nameWithType: OSLLogger.OSLLogger(String, Nullable<LoggingLevel>)
+  nameWithType.vb: OSLLogger.OSLLogger(String, Nullable(Of LoggingLevel))
+- uid: OSL_Server.OSLLogger.#ctor*
+  name: OSLLogger
+  href: apiserver/OSL_Server.OSLLogger.html#OSL_Server_OSLLogger__ctor_
+  commentId: Overload:OSL_Server.OSLLogger.#ctor
   isSpec: "True"
-  fullName: OSR_Server.OSRLogger.OSRLogger
-  nameWithType: OSRLogger.OSRLogger
-- uid: OSR_Server.OSRLogger.contextPrefix
+  fullName: OSL_Server.OSLLogger.OSLLogger
+  nameWithType: OSLLogger.OSLLogger
+- uid: OSL_Server.OSLLogger.contextPrefix
   name: contextPrefix
-  href: apiserver/OSR_Server.OSRLogger.html#OSR_Server_OSRLogger_contextPrefix
-  commentId: F:OSR_Server.OSRLogger.contextPrefix
-  fullName: OSR_Server.OSRLogger.contextPrefix
-  nameWithType: OSRLogger.contextPrefix
-- uid: OSR_Server.OSRLogger.DefaultLoggingLevel
+  href: apiserver/OSL_Server.OSLLogger.html#OSL_Server_OSLLogger_contextPrefix
+  commentId: F:OSL_Server.OSLLogger.contextPrefix
+  fullName: OSL_Server.OSLLogger.contextPrefix
+  nameWithType: OSLLogger.contextPrefix
+- uid: OSL_Server.OSLLogger.DefaultLoggingLevel
   name: DefaultLoggingLevel
-  href: apiserver/OSR_Server.OSRLogger.html#OSR_Server_OSRLogger_DefaultLoggingLevel
-  commentId: F:OSR_Server.OSRLogger.DefaultLoggingLevel
-  fullName: OSR_Server.OSRLogger.DefaultLoggingLevel
-  nameWithType: OSRLogger.DefaultLoggingLevel
-- uid: OSR_Server.OSRLogger.log(OSR_Server.LoggingLevel,System.String,System.Object)
+  href: apiserver/OSL_Server.OSLLogger.html#OSL_Server_OSLLogger_DefaultLoggingLevel
+  commentId: F:OSL_Server.OSLLogger.DefaultLoggingLevel
+  fullName: OSL_Server.OSLLogger.DefaultLoggingLevel
+  nameWithType: OSLLogger.DefaultLoggingLevel
+- uid: OSL_Server.OSLLogger.log(OSL_Server.LoggingLevel,System.String,System.Object)
   name: log(LoggingLevel, String, Object)
-  href: apiserver/OSR_Server.OSRLogger.html#OSR_Server_OSRLogger_log_OSR_Server_LoggingLevel_System_String_System_Object_
-  commentId: M:OSR_Server.OSRLogger.log(OSR_Server.LoggingLevel,System.String,System.Object)
-  fullName: OSR_Server.OSRLogger.log(OSR_Server.LoggingLevel, System.String, System.Object)
-  nameWithType: OSRLogger.log(LoggingLevel, String, Object)
-- uid: OSR_Server.OSRLogger.log*
+  href: apiserver/OSL_Server.OSLLogger.html#OSL_Server_OSLLogger_log_OSL_Server_LoggingLevel_System_String_System_Object_
+  commentId: M:OSL_Server.OSLLogger.log(OSL_Server.LoggingLevel,System.String,System.Object)
+  fullName: OSL_Server.OSLLogger.log(OSL_Server.LoggingLevel, System.String, System.Object)
+  nameWithType: OSLLogger.log(LoggingLevel, String, Object)
+- uid: OSL_Server.OSLLogger.log*
   name: log
-  href: apiserver/OSR_Server.OSRLogger.html#OSR_Server_OSRLogger_log_
-  commentId: Overload:OSR_Server.OSRLogger.log
+  href: apiserver/OSL_Server.OSLLogger.html#OSL_Server_OSLLogger_log_
+  commentId: Overload:OSL_Server.OSLLogger.log
   isSpec: "True"
-  fullName: OSR_Server.OSRLogger.log
-  nameWithType: OSRLogger.log
-- uid: OSR_Server.OSRLogger.LogLevel
+  fullName: OSL_Server.OSLLogger.log
+  nameWithType: OSLLogger.log
+- uid: OSL_Server.OSLLogger.LogLevel
   name: LogLevel
-  href: apiserver/OSR_Server.OSRLogger.html#OSR_Server_OSRLogger_LogLevel
-  commentId: F:OSR_Server.OSRLogger.LogLevel
-  fullName: OSR_Server.OSRLogger.LogLevel
-  nameWithType: OSRLogger.LogLevel
-- uid: OSR_Server.Pages
-  name: OSR_Server.Pages
-  href: apiserver/OSR_Server.Pages.html
-  commentId: N:OSR_Server.Pages
-  fullName: OSR_Server.Pages
-  nameWithType: OSR_Server.Pages
-- uid: OSR_Server.Pages.ErrorModel
+  href: apiserver/OSL_Server.OSLLogger.html#OSL_Server_OSLLogger_LogLevel
+  commentId: F:OSL_Server.OSLLogger.LogLevel
+  fullName: OSL_Server.OSLLogger.LogLevel
+  nameWithType: OSLLogger.LogLevel
+- uid: OSL_Server.Pages
+  name: OSL_Server.Pages
+  href: apiserver/OSL_Server.Pages.html
+  commentId: N:OSL_Server.Pages
+  fullName: OSL_Server.Pages
+  nameWithType: OSL_Server.Pages
+- uid: OSL_Server.Pages.ErrorModel
   name: ErrorModel
-  href: apiserver/OSR_Server.Pages.ErrorModel.html
-  commentId: T:OSR_Server.Pages.ErrorModel
-  fullName: OSR_Server.Pages.ErrorModel
+  href: apiserver/OSL_Server.Pages.ErrorModel.html
+  commentId: T:OSL_Server.Pages.ErrorModel
+  fullName: OSL_Server.Pages.ErrorModel
   nameWithType: ErrorModel
-- uid: OSR_Server.Pages.ErrorModel.#ctor(ILogger{OSR_Server.Pages.ErrorModel})
+- uid: OSL_Server.Pages.ErrorModel.#ctor(ILogger{OSL_Server.Pages.ErrorModel})
   name: ErrorModel(ILogger<ErrorModel>)
-  href: apiserver/OSR_Server.Pages.ErrorModel.html#OSR_Server_Pages_ErrorModel__ctor_ILogger_OSR_Server_Pages_ErrorModel__
-  commentId: M:OSR_Server.Pages.ErrorModel.#ctor(ILogger{OSR_Server.Pages.ErrorModel})
+  href: apiserver/OSL_Server.Pages.ErrorModel.html#OSL_Server_Pages_ErrorModel__ctor_ILogger_OSL_Server_Pages_ErrorModel__
+  commentId: M:OSL_Server.Pages.ErrorModel.#ctor(ILogger{OSL_Server.Pages.ErrorModel})
   name.vb: ErrorModel(ILogger(Of ErrorModel))
-  fullName: OSR_Server.Pages.ErrorModel.ErrorModel(ILogger<OSR_Server.Pages.ErrorModel>)
-  fullName.vb: OSR_Server.Pages.ErrorModel.ErrorModel(ILogger(Of OSR_Server.Pages.ErrorModel))
+  fullName: OSL_Server.Pages.ErrorModel.ErrorModel(ILogger<OSL_Server.Pages.ErrorModel>)
+  fullName.vb: OSL_Server.Pages.ErrorModel.ErrorModel(ILogger(Of OSL_Server.Pages.ErrorModel))
   nameWithType: ErrorModel.ErrorModel(ILogger<ErrorModel>)
   nameWithType.vb: ErrorModel.ErrorModel(ILogger(Of ErrorModel))
-- uid: OSR_Server.Pages.ErrorModel.#ctor*
+- uid: OSL_Server.Pages.ErrorModel.#ctor*
   name: ErrorModel
-  href: apiserver/OSR_Server.Pages.ErrorModel.html#OSR_Server_Pages_ErrorModel__ctor_
-  commentId: Overload:OSR_Server.Pages.ErrorModel.#ctor
+  href: apiserver/OSL_Server.Pages.ErrorModel.html#OSL_Server_Pages_ErrorModel__ctor_
+  commentId: Overload:OSL_Server.Pages.ErrorModel.#ctor
   isSpec: "True"
-  fullName: OSR_Server.Pages.ErrorModel.ErrorModel
+  fullName: OSL_Server.Pages.ErrorModel.ErrorModel
   nameWithType: ErrorModel.ErrorModel
-- uid: OSR_Server.Pages.ErrorModel.OnGet
+- uid: OSL_Server.Pages.ErrorModel.OnGet
   name: OnGet()
-  href: apiserver/OSR_Server.Pages.ErrorModel.html#OSR_Server_Pages_ErrorModel_OnGet
-  commentId: M:OSR_Server.Pages.ErrorModel.OnGet
-  fullName: OSR_Server.Pages.ErrorModel.OnGet()
+  href: apiserver/OSL_Server.Pages.ErrorModel.html#OSL_Server_Pages_ErrorModel_OnGet
+  commentId: M:OSL_Server.Pages.ErrorModel.OnGet
+  fullName: OSL_Server.Pages.ErrorModel.OnGet()
   nameWithType: ErrorModel.OnGet()
-- uid: OSR_Server.Pages.ErrorModel.OnGet*
+- uid: OSL_Server.Pages.ErrorModel.OnGet*
   name: OnGet
-  href: apiserver/OSR_Server.Pages.ErrorModel.html#OSR_Server_Pages_ErrorModel_OnGet_
-  commentId: Overload:OSR_Server.Pages.ErrorModel.OnGet
+  href: apiserver/OSL_Server.Pages.ErrorModel.html#OSL_Server_Pages_ErrorModel_OnGet_
+  commentId: Overload:OSL_Server.Pages.ErrorModel.OnGet
   isSpec: "True"
-  fullName: OSR_Server.Pages.ErrorModel.OnGet
+  fullName: OSL_Server.Pages.ErrorModel.OnGet
   nameWithType: ErrorModel.OnGet
-- uid: OSR_Server.Pages.ErrorModel.RequestId
+- uid: OSL_Server.Pages.ErrorModel.RequestId
   name: RequestId
-  href: apiserver/OSR_Server.Pages.ErrorModel.html#OSR_Server_Pages_ErrorModel_RequestId
-  commentId: P:OSR_Server.Pages.ErrorModel.RequestId
-  fullName: OSR_Server.Pages.ErrorModel.RequestId
+  href: apiserver/OSL_Server.Pages.ErrorModel.html#OSL_Server_Pages_ErrorModel_RequestId
+  commentId: P:OSL_Server.Pages.ErrorModel.RequestId
+  fullName: OSL_Server.Pages.ErrorModel.RequestId
   nameWithType: ErrorModel.RequestId
-- uid: OSR_Server.Pages.ErrorModel.RequestId*
+- uid: OSL_Server.Pages.ErrorModel.RequestId*
   name: RequestId
-  href: apiserver/OSR_Server.Pages.ErrorModel.html#OSR_Server_Pages_ErrorModel_RequestId_
-  commentId: Overload:OSR_Server.Pages.ErrorModel.RequestId
+  href: apiserver/OSL_Server.Pages.ErrorModel.html#OSL_Server_Pages_ErrorModel_RequestId_
+  commentId: Overload:OSL_Server.Pages.ErrorModel.RequestId
   isSpec: "True"
-  fullName: OSR_Server.Pages.ErrorModel.RequestId
+  fullName: OSL_Server.Pages.ErrorModel.RequestId
   nameWithType: ErrorModel.RequestId
-- uid: OSR_Server.Pages.ErrorModel.ShowRequestId
+- uid: OSL_Server.Pages.ErrorModel.ShowRequestId
   name: ShowRequestId
-  href: apiserver/OSR_Server.Pages.ErrorModel.html#OSR_Server_Pages_ErrorModel_ShowRequestId
-  commentId: P:OSR_Server.Pages.ErrorModel.ShowRequestId
-  fullName: OSR_Server.Pages.ErrorModel.ShowRequestId
+  href: apiserver/OSL_Server.Pages.ErrorModel.html#OSL_Server_Pages_ErrorModel_ShowRequestId
+  commentId: P:OSL_Server.Pages.ErrorModel.ShowRequestId
+  fullName: OSL_Server.Pages.ErrorModel.ShowRequestId
   nameWithType: ErrorModel.ShowRequestId
-- uid: OSR_Server.Pages.ErrorModel.ShowRequestId*
+- uid: OSL_Server.Pages.ErrorModel.ShowRequestId*
   name: ShowRequestId
-  href: apiserver/OSR_Server.Pages.ErrorModel.html#OSR_Server_Pages_ErrorModel_ShowRequestId_
-  commentId: Overload:OSR_Server.Pages.ErrorModel.ShowRequestId
+  href: apiserver/OSL_Server.Pages.ErrorModel.html#OSL_Server_Pages_ErrorModel_ShowRequestId_
+  commentId: Overload:OSL_Server.Pages.ErrorModel.ShowRequestId
   isSpec: "True"
-  fullName: OSR_Server.Pages.ErrorModel.ShowRequestId
+  fullName: OSL_Server.Pages.ErrorModel.ShowRequestId
   nameWithType: ErrorModel.ShowRequestId

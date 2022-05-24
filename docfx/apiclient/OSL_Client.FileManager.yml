@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.FileManager
+  commentId: N:OSL_Client.FileManager
+  id: OSL_Client.FileManager
+  children:
+  - OSL_Client.FileManager.FileManagerLocal
+  - OSL_Client.FileManager.JsonManagerLocal
+  - OSL_Client.FileManager.JsonType
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.FileManager
+  nameWithType: OSL_Client.FileManager
+  fullName: OSL_Client.FileManager
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.FileManager.FileManagerLocal
+  commentId: T:OSL_Client.FileManager.FileManagerLocal
+  name: FileManagerLocal
+  nameWithType: FileManagerLocal
+  fullName: OSL_Client.FileManager.FileManagerLocal
+- uid: OSL_Client.FileManager.JsonManagerLocal
+  commentId: T:OSL_Client.FileManager.JsonManagerLocal
+  name: JsonManagerLocal
+  nameWithType: JsonManagerLocal
+  fullName: OSL_Client.FileManager.JsonManagerLocal
+- uid: OSL_Client.FileManager.JsonType
+  commentId: T:OSL_Client.FileManager.JsonType
+  name: JsonType
+  nameWithType: JsonType
+  fullName: OSL_Client.FileManager.JsonType
