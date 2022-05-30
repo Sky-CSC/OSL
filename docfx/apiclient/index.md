@@ -2,12 +2,137 @@
 
 > [!WARNING] 
 > **Documentation in progress** 
+---
+### Local game information
+- Drakes
+  ```diff
+  - Live Events API :
+  OnKillDragon_Spectator (default)
+  OnKill
+  OnNeutralMinionKill	
+  ```
+- Baron
+  ```diff
+  - Live Events API :
+  OnKillWorm_Spectator (default)
+  OnKill
+  OnNeutralMinionKill
+  ```
+- Herald
+  - Kill
+    ```diff
+    - Live Events API :
+    OnNeutralMinionKill (default)
+    OnKill
+    ```
+  - Take Relic :
+    ```diff
+    - Live Events API :
+    OnMinionKill (default)	
+	OnKill
+	```
+  -  Launch :
+     ```diff
+     - Live Events API :	
+	 OnSummonRiftHerald (default)	
+     ```
+- Helder Drake
+  ```diff
+  - Live Events API :
+  OnKillDragon_Spectator (default)
+  OnKill
+  OnNeutralMinionKill	
+  ```
+- Turret 
+  ```diff
+  - Live Events API :
+  OnTurretDie (default)
+  - Game Client API :
+  https://127.0.0.1:2999/liveclientdata/allgamedata
+  ```
+- Inib
+  ```diff
+  - Game Client API :
+  https://127.0.0.1:2999/liveclientdata/allgamedata (default)
+  - Live Events API :
+  OnDampenerDie
+  ```
+- Minion
+  ```diff
+  - Live Events API :
+  OnMinionKill (default)
+  OnKill (default) "HiddenMinion"
+  ```
+- Summoner Kill
+  ```diff
+  - Live Events API :
+  OnChampionKill (default)
+  OnDeathAssist (default)
+  OnShutdown
+  OnChampionKillPre
+  OnKill
+  - Game Client API :
+  https://127.0.0.1:2999/liveclientdata/playerlist
+  ```
+- Item
+  ```diff
+  - Game Client API :
+  https://127.0.0.1:2999/liveclientdata/playerlist
+  https://127.0.0.1:2999/liveclientdata/playeritems?summonerName=Phenix%20NemBot
+  ```
+- Ward
+  ```diff
+  - Game Client API :
+  https://127.0.0.1:2999/liveclientdata/playerlist
+  ```
+- Summoners Spell
+  ```diff
+  - Game Client API :
+  https://127.0.0.1:2999/liveclientdata/playerlist
+  ```
+- Level Up
+  ```diff
+  - Game Client API :
+  https://127.0.0.1:2999/liveclientdata/playerlist
+  ```
+- Position
+  ```diff
+  Read in memory
+  ```
+- Mana²
+  ```diff
+  Read in memory
+  ```
+- MaxMana
+  ```diff
+  Read in memory
+  ```
+- Health
+  ```diff
+  Read in memory
+  ```
+- MaxHealth
+  ```diff
+  Read in memory
+  ```
+- CurrentGold
+  ```diff
+  Read in memory
+  ```
+- GoldTotal
+  ```diff
+  Read in memory
+  ```
+- EXP
+  ```diff
+  Read in memory
+  ```
 
-## Riot API
-- Spectator-v4 (get information of a player in game)
-    - /lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId}
-- Summoner-V4 (get summoners information)
-    - /lol/summoner/v4/summoners/by-name/{summonerName} (get encryptedSummonerId)
+- Damages
+  ```diff
+
+  ```
+---
 
 
 ## Game Client API
