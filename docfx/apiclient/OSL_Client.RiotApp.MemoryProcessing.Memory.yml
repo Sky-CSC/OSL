@@ -1,0 +1,1093 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Memory
+  id: Memory
+  parent: OSL_Client.RiotApp.MemoryProcessing
+  children:
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.ConvertToFloatArray(System.Byte[])
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.GetChampionObjectSize(System.Int32)
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.GetModuleAddress(System.String)
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.Initialize(System.Diagnostics.Process)
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.IsConnected
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.m_baseAddress
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.m_iNumberOfBytesRead
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.m_iNumberOfBytesWritten
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.m_pProcessHandle
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.m_Process
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMatrix``1(System.Int32,System.Int32)
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory(System.Int32,System.Int32)
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory``1(System.Int32)
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory``1(System.Int32,System.Char[])
+  - OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory``1(System.Int32,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: Memory
+  nameWithType: Memory
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory
+  type: Class
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Memory
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 10
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public class Memory
+    content.vb: Public Class Memory
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.m_Process
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Memory.m_Process
+  id: m_Process
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: m_Process
+  nameWithType: Memory.m_Process
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.m_Process
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: m_Process
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 14
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static Process m_Process
+    return:
+      type: System.Diagnostics.Process
+    content.vb: Public Shared m_Process As Process
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.m_pProcessHandle
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Memory.m_pProcessHandle
+  id: m_pProcessHandle
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: m_pProcessHandle
+  nameWithType: Memory.m_pProcessHandle
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.m_pProcessHandle
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: m_pProcessHandle
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 15
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static IntPtr m_pProcessHandle
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared m_pProcessHandle As IntPtr
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.m_iNumberOfBytesRead
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Memory.m_iNumberOfBytesRead
+  id: m_iNumberOfBytesRead
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: m_iNumberOfBytesRead
+  nameWithType: Memory.m_iNumberOfBytesRead
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.m_iNumberOfBytesRead
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: m_iNumberOfBytesRead
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 17
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static int m_iNumberOfBytesRead
+    return:
+      type: System.Int32
+    content.vb: Public Shared m_iNumberOfBytesRead As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.m_iNumberOfBytesWritten
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Memory.m_iNumberOfBytesWritten
+  id: m_iNumberOfBytesWritten
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: m_iNumberOfBytesWritten
+  nameWithType: Memory.m_iNumberOfBytesWritten
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.m_iNumberOfBytesWritten
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: m_iNumberOfBytesWritten
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 18
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static int m_iNumberOfBytesWritten
+    return:
+      type: System.Int32
+    content.vb: Public Shared m_iNumberOfBytesWritten As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.m_baseAddress
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Memory.m_baseAddress
+  id: m_baseAddress
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: m_baseAddress
+  nameWithType: Memory.m_baseAddress
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.m_baseAddress
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: m_baseAddress
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 20
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static int m_baseAddress
+    return:
+      type: System.Int32
+    content.vb: Public Shared m_baseAddress As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.IsConnected
+  commentId: P:OSL_Client.RiotApp.MemoryProcessing.Memory.IsConnected
+  id: IsConnected
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: IsConnected
+  nameWithType: Memory.IsConnected
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.IsConnected
+  type: Property
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: IsConnected
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 22
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static bool IsConnected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared ReadOnly Property IsConnected As Boolean
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.IsConnected*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.Initialize(System.Diagnostics.Process)
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Memory.Initialize(System.Diagnostics.Process)
+  id: Initialize(System.Diagnostics.Process)
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: Initialize(Process)
+  nameWithType: Memory.Initialize(Process)
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.Initialize(System.Diagnostics.Process)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Initialize
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 25
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static bool Initialize(Process p)
+    parameters:
+    - id: p
+      type: System.Diagnostics.Process
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Initialize(p As Process) As Boolean
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.Initialize*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.GetModuleAddress(System.String)
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Memory.GetModuleAddress(System.String)
+  id: GetModuleAddress(System.String)
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: GetModuleAddress(String)
+  nameWithType: Memory.GetModuleAddress(String)
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.GetModuleAddress(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetModuleAddress
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 38
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static IntPtr GetModuleAddress(string ModuleName)
+    parameters:
+    - id: ModuleName
+      type: System.String
+    return:
+      type: System.IntPtr
+    content.vb: Public Shared Function GetModuleAddress(ModuleName As String) As IntPtr
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.GetModuleAddress*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory``1(System.Int32)
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory``1(System.Int32)
+  id: ReadMemory``1(System.Int32)
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: ReadMemory<T>(Int32)
+  nameWithType: Memory.ReadMemory<T>(Int32)
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory<T>(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReadMemory
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 56
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: >-
+      public static T ReadMemory<T>(int Address)
+          where T : struct
+    parameters:
+    - id: Address
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function ReadMemory(Of T As Structure)(Address As Integer) As T
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory*
+  nameWithType.vb: Memory.ReadMemory(Of T)(Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory(Of T)(System.Int32)
+  name.vb: ReadMemory(Of T)(Int32)
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory(System.Int32,System.Int32)
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory(System.Int32,System.Int32)
+  id: ReadMemory(System.Int32,System.Int32)
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: ReadMemory(Int32, Int32)
+  nameWithType: Memory.ReadMemory(Int32, Int32)
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReadMemory
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 65
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static byte[] ReadMemory(int Address, int size)
+    parameters:
+    - id: Address
+      type: System.Int32
+    - id: size
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function ReadMemory(Address As Integer, size As Integer) As Byte()
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMatrix``1(System.Int32,System.Int32)
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMatrix``1(System.Int32,System.Int32)
+  id: ReadMatrix``1(System.Int32,System.Int32)
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: ReadMatrix<T>(Int32, Int32)
+  nameWithType: Memory.ReadMatrix<T>(Int32, Int32)
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMatrix<T>(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReadMatrix
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 74
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: >-
+      public static float[] ReadMatrix<T>(int Address, int MatrixSize)
+          where T : struct
+    parameters:
+    - id: Address
+      type: System.Int32
+    - id: MatrixSize
+      type: System.Int32
+    typeParameters:
+    - id: T
+    return:
+      type: System.Single[]
+    content.vb: Public Shared Function ReadMatrix(Of T As Structure)(Address As Integer, MatrixSize As Integer) As Single()
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMatrix*
+  nameWithType.vb: Memory.ReadMatrix(Of T)(Int32, Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMatrix(Of T)(System.Int32, System.Int32)
+  name.vb: ReadMatrix(Of T)(Int32, Int32)
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory``1(System.Int32,System.Object)
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory``1(System.Int32,System.Object)
+  id: WriteMemory``1(System.Int32,System.Object)
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: WriteMemory<T>(Int32, Object)
+  nameWithType: Memory.WriteMemory<T>(Int32, Object)
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory<T>(System.Int32, System.Object)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: WriteMemory
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 83
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static void WriteMemory<T>(int Address, object Value)
+    parameters:
+    - id: Address
+      type: System.Int32
+    - id: Value
+      type: System.Object
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub WriteMemory(Of T)(Address As Integer, Value As Object)
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory*
+  nameWithType.vb: Memory.WriteMemory(Of T)(Int32, Object)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory(Of T)(System.Int32, System.Object)
+  name.vb: WriteMemory(Of T)(Int32, Object)
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory``1(System.Int32,System.Char[])
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory``1(System.Int32,System.Char[])
+  id: WriteMemory``1(System.Int32,System.Char[])
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: WriteMemory<T>(Int32, Char[])
+  nameWithType: Memory.WriteMemory<T>(Int32, Char[])
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory<T>(System.Int32, System.Char[])
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: WriteMemory
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 90
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static void WriteMemory<T>(int Address, char[] Value)
+    parameters:
+    - id: Address
+      type: System.Int32
+    - id: Value
+      type: System.Char[]
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub WriteMemory(Of T)(Address As Integer, Value As Char())
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory*
+  nameWithType.vb: Memory.WriteMemory(Of T)(Int32, Char())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory(Of T)(System.Int32, System.Char())
+  name.vb: WriteMemory(Of T)(Int32, Char())
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.ConvertToFloatArray(System.Byte[])
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Memory.ConvertToFloatArray(System.Byte[])
+  id: ConvertToFloatArray(System.Byte[])
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: ConvertToFloatArray(Byte[])
+  nameWithType: Memory.ConvertToFloatArray(Byte[])
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.ConvertToFloatArray(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ConvertToFloatArray
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 98
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static float[] ConvertToFloatArray(byte[] bytes)
+    parameters:
+    - id: bytes
+      type: System.Byte[]
+    return:
+      type: System.Single[]
+    content.vb: Public Shared Function ConvertToFloatArray(bytes As Byte()) As Single()
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.ConvertToFloatArray*
+  nameWithType.vb: Memory.ConvertToFloatArray(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: OSL_Client.RiotApp.MemoryProcessing.Memory.ConvertToFloatArray(System.Byte())
+  name.vb: ConvertToFloatArray(Byte())
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.GetChampionObjectSize(System.Int32)
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Memory.GetChampionObjectSize(System.Int32)
+  id: GetChampionObjectSize(System.Int32)
+  parent: OSL_Client.RiotApp.MemoryProcessing.Memory
+  langs:
+  - csharp
+  - vb
+  name: GetChampionObjectSize(Int32)
+  nameWithType: Memory.GetChampionObjectSize(Int32)
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.GetChampionObjectSize(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetChampionObjectSize
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
+    startLine: 139
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public static int GetChampionObjectSize(int Address)
+    parameters:
+    - id: Address
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function GetChampionObjectSize(Address As Integer) As Integer
+  overload: OSL_Client.RiotApp.MemoryProcessing.Memory.GetChampionObjectSize*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Client.RiotApp.MemoryProcessing
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing
+  name: OSL_Client.RiotApp.MemoryProcessing
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing
+  fullName: OSL_Client.RiotApp.MemoryProcessing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Diagnostics.Process
+  commentId: T:System.Diagnostics.Process
+  parent: System.Diagnostics
+  isExternal: true
+  name: Process
+  nameWithType: Process
+  fullName: System.Diagnostics.Process
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.IsConnected*
+  commentId: Overload:OSL_Client.RiotApp.MemoryProcessing.Memory.IsConnected
+  name: IsConnected
+  nameWithType: Memory.IsConnected
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.IsConnected
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.Initialize*
+  commentId: Overload:OSL_Client.RiotApp.MemoryProcessing.Memory.Initialize
+  name: Initialize
+  nameWithType: Memory.Initialize
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.Initialize
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.GetModuleAddress*
+  commentId: Overload:OSL_Client.RiotApp.MemoryProcessing.Memory.GetModuleAddress
+  name: GetModuleAddress
+  nameWithType: Memory.GetModuleAddress
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.GetModuleAddress
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory*
+  commentId: Overload:OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory
+  name: ReadMemory
+  nameWithType: Memory.ReadMemory
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMemory
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  commentId: '!:T'
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMatrix*
+  commentId: Overload:OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMatrix
+  name: ReadMatrix
+  nameWithType: Memory.ReadMatrix
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.ReadMatrix
+- uid: System.Single[]
+  isExternal: true
+  name: Single[]
+  nameWithType: Single[]
+  fullName: System.Single[]
+  nameWithType.vb: Single()
+  fullName.vb: System.Single()
+  name.vb: Single()
+  spec.csharp:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory*
+  commentId: Overload:OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory
+  name: WriteMemory
+  nameWithType: Memory.WriteMemory
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.WriteMemory
+- uid: System.Char[]
+  isExternal: true
+  name: Char[]
+  nameWithType: Char[]
+  fullName: System.Char[]
+  nameWithType.vb: Char()
+  fullName.vb: System.Char()
+  name.vb: Char()
+  spec.csharp:
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.ConvertToFloatArray*
+  commentId: Overload:OSL_Client.RiotApp.MemoryProcessing.Memory.ConvertToFloatArray
+  name: ConvertToFloatArray
+  nameWithType: Memory.ConvertToFloatArray
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.ConvertToFloatArray
+- uid: OSL_Client.RiotApp.MemoryProcessing.Memory.GetChampionObjectSize*
+  commentId: Overload:OSL_Client.RiotApp.MemoryProcessing.Memory.GetChampionObjectSize
+  name: GetChampionObjectSize
+  nameWithType: Memory.GetChampionObjectSize
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Memory.GetChampionObjectSize

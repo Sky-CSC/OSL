@@ -41,3 +41,34 @@
   items:
   - uid: OSL_Client.RiotApp.API.Replay.UrlRequest
     name: UrlRequest
+- uid: OSL_Client.RiotApp.MemoryProcessing
+  name: OSL_Client.RiotApp.MemoryProcessing
+  items:
+  - uid: OSL_Client.RiotApp.MemoryProcessing.AppStateController
+    name: AppStateController
+  - uid: OSL_Client.RiotApp.MemoryProcessing.ByteUtils
+    name: ByteUtils
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Champion
+    name: Champion
+  - uid: OSL_Client.RiotApp.MemoryProcessing.ChampionLevel
+    name: ChampionLevel
+  - uid: OSL_Client.RiotApp.MemoryProcessing.FarsightController
+    name: FarsightController
+  - uid: OSL_Client.RiotApp.MemoryProcessing.FarsightController.Offsets
+    name: FarsightController.Offsets
+  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    name: GameObject
+  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject.Offsets
+    name: GameObject.Offsets
+  - uid: OSL_Client.RiotApp.MemoryProcessing.HexStringJsonConverter
+    name: HexStringJsonConverter
+  - uid: OSL_Client.RiotApp.MemoryProcessing.JSONConfig
+    name: JSONConfig
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Memory
+    name: Memory
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Memory.MEMORY_BASIC_INFORMATION
+    name: Memory.MEMORY_BASIC_INFORMATION
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Offsets
+    name: Offsets
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+    name: Snapshot

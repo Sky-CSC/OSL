@@ -2,11 +2,13 @@
 
 > [!WARNING] 
 > **Documentation in progress** 
+
 ---
+
 ## **API/Tools used :**
 ### <ins>**Game Client API :**
 [Game Client API](https://developer.riotgames.com/docs/lol#general_game-constants)
-For recive data from a game add to ```C:/Riot Games/League of Legends/Config/game.cfg```
+For recive data from a game add to `C:/Riot Games/League of Legends/Config/game.cfg`
 ```
 [General]
 EnableReplayApi=1

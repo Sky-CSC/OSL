@@ -4,6 +4,7 @@
 > **Documentation in progress** 
 
 ---
+
 ## Enable data collection
 ### <ins>Game Client API :
 [Game Client API](https://developer.riotgames.com/docs/lol#general_game-constants)

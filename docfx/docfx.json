@@ -71,10 +71,25 @@
     "dest": "../docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
-    "template": [
-      "statictoc",
-      "darkfx"
-    ],
+    //"template": [
+    //  "statictoc",
+    //  //"darkfx",
+    //  "SingulinkFX"
+    //],
+    "globalMetadata": {
+      "_appTitle": "OSL",
+      "_appName": "Overlay Spectator Live",
+      "_appFaviconPath": "picture/Icone_Feu.png",
+      "_appLogoPath": "picture/Icone_Feu.png",
+      "_appFooter": "<strong><a href='https://github.com/Sky-CSC?tab=repositories'>Sky csc</a> </strong>",
+      "_copyrightFooter": "© Sky csc. All rights reserved.",
+      "_enableSearch": true,
+      "_disableSideFilter": false,
+      "_enableNewTab": true,
+      "_disableContribution": false,
+      "_disableBreadcrumb": false
+    },
+    "template": [ "default", "templates/singulinkfx", "plugins/memberpage.2.59.0/content" ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,

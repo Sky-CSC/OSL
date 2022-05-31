@@ -1,0 +1,947 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  id: Snapshot
+  parent: OSL_Client.RiotApp.MemoryProcessing
+  children:
+  - OSL_Client.RiotApp.MemoryProcessing.Snapshot.#ctor
+  - OSL_Client.RiotApp.MemoryProcessing.Snapshot.Baron
+  - OSL_Client.RiotApp.MemoryProcessing.Snapshot.Champions
+  - OSL_Client.RiotApp.MemoryProcessing.Snapshot.Dragon
+  - OSL_Client.RiotApp.MemoryProcessing.Snapshot.Herald
+  - OSL_Client.RiotApp.MemoryProcessing.Snapshot.IndexToNetID
+  - OSL_Client.RiotApp.MemoryProcessing.Snapshot.ObjectMap
+  - OSL_Client.RiotApp.MemoryProcessing.Snapshot.UpdatedThisFrame
+  langs:
+  - csharp
+  - vb
+  name: Snapshot
+  nameWithType: Snapshot
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  type: Class
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Snapshot
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+    startLine: 8
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public class Snapshot
+    content.vb: Public Class Snapshot
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Champions
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Snapshot.Champions
+  id: Champions
+  parent: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  langs:
+  - csharp
+  - vb
+  name: Champions
+  nameWithType: Snapshot.Champions
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Champions
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Champions
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+    startLine: 10
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public List<GameObject> Champions
+    return:
+      type: System.Collections.Generic.List{OSL_Client.RiotApp.MemoryProcessing.GameObject}
+    content.vb: Public Champions As List(Of GameObject)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Dragon
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Snapshot.Dragon
+  id: Dragon
+  parent: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  langs:
+  - csharp
+  - vb
+  name: Dragon
+  nameWithType: Snapshot.Dragon
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Dragon
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Dragon
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+    startLine: 11
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public GameObject Dragon
+    return:
+      type: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    content.vb: Public Dragon As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Baron
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Snapshot.Baron
+  id: Baron
+  parent: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  langs:
+  - csharp
+  - vb
+  name: Baron
+  nameWithType: Snapshot.Baron
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Baron
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Baron
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+    startLine: 12
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public GameObject Baron
+    return:
+      type: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    content.vb: Public Baron As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Herald
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Snapshot.Herald
+  id: Herald
+  parent: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  langs:
+  - csharp
+  - vb
+  name: Herald
+  nameWithType: Snapshot.Herald
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Herald
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Herald
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+    startLine: 13
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public GameObject Herald
+    return:
+      type: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    content.vb: Public Herald As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot.ObjectMap
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Snapshot.ObjectMap
+  id: ObjectMap
+  parent: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  langs:
+  - csharp
+  - vb
+  name: ObjectMap
+  nameWithType: Snapshot.ObjectMap
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot.ObjectMap
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ObjectMap
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+    startLine: 14
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public Dictionary<int, GameObject> ObjectMap
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,OSL_Client.RiotApp.MemoryProcessing.GameObject}
+    content.vb: Public ObjectMap As Dictionary(Of Integer, GameObject)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot.IndexToNetID
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Snapshot.IndexToNetID
+  id: IndexToNetID
+  parent: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  langs:
+  - csharp
+  - vb
+  name: IndexToNetID
+  nameWithType: Snapshot.IndexToNetID
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot.IndexToNetID
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: IndexToNetID
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+    startLine: 15
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public Dictionary<short, int> IndexToNetID
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int16,System.Int32}
+    content.vb: Public IndexToNetID As Dictionary(Of Short, Integer)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot.UpdatedThisFrame
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Snapshot.UpdatedThisFrame
+  id: UpdatedThisFrame
+  parent: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  langs:
+  - csharp
+  - vb
+  name: UpdatedThisFrame
+  nameWithType: Snapshot.UpdatedThisFrame
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot.UpdatedThisFrame
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: UpdatedThisFrame
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+    startLine: 17
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public HashSet<int> UpdatedThisFrame
+    return:
+      type: System.Collections.Generic.HashSet{System.Int32}
+    content.vb: Public UpdatedThisFrame As HashSet(Of Integer)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot.#ctor
+  commentId: M:OSL_Client.RiotApp.MemoryProcessing.Snapshot.#ctor
+  id: '#ctor'
+  parent: OSL_Client.RiotApp.MemoryProcessing.Snapshot
+  langs:
+  - csharp
+  - vb
+  name: Snapshot()
+  nameWithType: Snapshot.Snapshot()
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Snapshot()
+  type: Constructor
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: .ctor
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
+    startLine: 18
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing
+  syntax:
+    content: public Snapshot()
+    content.vb: Public Sub New
+  overload: OSL_Client.RiotApp.MemoryProcessing.Snapshot.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Client.RiotApp.MemoryProcessing
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing
+  name: OSL_Client.RiotApp.MemoryProcessing
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing
+  fullName: OSL_Client.RiotApp.MemoryProcessing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{OSL_Client.RiotApp.MemoryProcessing.GameObject}
+  commentId: T:System.Collections.Generic.List{OSL_Client.RiotApp.MemoryProcessing.GameObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<GameObject>
+  nameWithType: List<GameObject>
+  fullName: System.Collections.Generic.List<OSL_Client.RiotApp.MemoryProcessing.GameObject>
+  nameWithType.vb: List(Of GameObject)
+  fullName.vb: System.Collections.Generic.List(Of OSL_Client.RiotApp.MemoryProcessing.GameObject)
+  name.vb: List(Of GameObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.GameObject
+  parent: OSL_Client.RiotApp.MemoryProcessing
+  name: GameObject
+  nameWithType: GameObject
+  fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
+- uid: System.Collections.Generic.Dictionary{System.Int32,OSL_Client.RiotApp.MemoryProcessing.GameObject}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,OSL_Client.RiotApp.MemoryProcessing.GameObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Int32, GameObject>
+  nameWithType: Dictionary<Int32, GameObject>
+  fullName: System.Collections.Generic.Dictionary<System.Int32, OSL_Client.RiotApp.MemoryProcessing.GameObject>
+  nameWithType.vb: Dictionary(Of Int32, GameObject)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Int32, OSL_Client.RiotApp.MemoryProcessing.GameObject)
+  name.vb: Dictionary(Of Int32, GameObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    name: GameObject
+    nameWithType: GameObject
+    fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary{System.Int16,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int16,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Int16, Int32>
+  nameWithType: Dictionary<Int16, Int32>
+  fullName: System.Collections.Generic.Dictionary<System.Int16, System.Int32>
+  nameWithType.vb: Dictionary(Of Int16, Int32)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Int16, System.Int32)
+  name.vb: Dictionary(Of Int16, Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.HashSet{System.Int32}
+  commentId: T:System.Collections.Generic.HashSet{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  name: HashSet<Int32>
+  nameWithType: HashSet<Int32>
+  fullName: System.Collections.Generic.HashSet<System.Int32>
+  nameWithType.vb: HashSet(Of Int32)
+  fullName.vb: System.Collections.Generic.HashSet(Of System.Int32)
+  name.vb: HashSet(Of Int32)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    nameWithType: HashSet
+    fullName: System.Collections.Generic.HashSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot.#ctor*
+  commentId: Overload:OSL_Client.RiotApp.MemoryProcessing.Snapshot.#ctor
+  name: Snapshot
+  nameWithType: Snapshot.Snapshot
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Snapshot.Snapshot

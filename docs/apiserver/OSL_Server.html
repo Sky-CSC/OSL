@@ -1,156 +1,97 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace OSL_Server
-   </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace OSL_Server
-   ">
-    <meta name="generator" content="docfx 2.59.0.0">
     
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../styles/docfx.css">
-    <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc">
-    <meta property="docfx:tocrel" content="toc">
-    
-    
-    
-  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Namespace OSL_Server
+     | OSL </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Namespace OSL_Server
+     | OSL ">
+      <meta name="generator" content="docfx 2.59.0.0">
+      
+      <link rel="shortcut icon" href="../picture/Icone_Feu.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+      
+      <meta property="docfx:rel" content="../">
+      <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../index.html">
+              <img src="../picture/Icone_Feu.png" alt="Overlay Spectator Live" class="logomark">
+              <span class="brand-title">Overlay Spectator Live</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../index.html">
+                          <img src="../picture/Icone_Feu.png" alt="Overlay Spectator Live" class="logomark">
+                          <span class="brand-title">Overlay Spectator Live</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
                 </div>
-              </form>
-                
-                <ul class="nav level1 navbar-nav">
-                      <li>
-                          <a href="../clientdoc/intro.html" title="Client Documentation">Client Documentation</a>
-                      </li>
-                      <li>
-                          <a href="../serverdoc/intro.html" title="Server Documentation">Server Documentation</a>
-                      </li>
-                      <li>
-                          <a href="../apiclient/index.html" title="Developer Documentation Client">Developer Documentation Client</a>
-                      </li>
-                      <li>
-                          <a href="../apiserver/index.html" title="Developer Documentation Server">Developer Documentation Server</a>
-                      </li>
-                </ul>    </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
-        </div>
-      </header>
-      <div role="main" class="container body-content hide-when-search">
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div>
-              <div class="sidefilter">
-                <form class="toc-filter">
-                  <span class="glyphicon glyphicon-filter filter-icon"></span>
-                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
-                </form>
-              </div>
-              <div class="sidetoc">
-                <div class="toc" id="toc">
+                <div class="footer">
+                  <strong><a href='https://github.com/Sky-CSC?tab=repositories'>Sky csc</a> </strong>
                   
-                  <ul class="nav level1">
-                    <li class="active">
-                      <span class="expand-stub"></span>
-                      <a href="OSL_Server.html" title="OSL_Server" class="active">OSL_Server</a>
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
                         
-                        <ul class="nav level2">
-                          <li class="">
-                            <a href="OSL_Server.LoggingLevel.html" title="LoggingLevel" class="">LoggingLevel</a>
-                          </li>
-                          <li class="">
-                            <a href="OSL_Server.OSLLogger.html" title="OSLLogger" class="">OSLLogger</a>
-                          </li>
-                        </ul>  </li>
-                    <li class="">
-                      <span class="expand-stub"></span>
-                      <a href="OSL_Server.Configuration.html" title="OSL_Server.Configuration" class="">OSL_Server.Configuration</a>
-                        
-                        <ul class="nav level2">
-                          <li class="">
-                            <a href="OSL_Server.Configuration.Config.html" title="Config" class="">Config</a>
-                          </li>
-                        </ul>  </li>
-                    <li class="">
-                      <span class="expand-stub"></span>
-                      <a href="OSL_Server.Data.html" title="OSL_Server.Data" class="">OSL_Server.Data</a>
-                        
-                        <ul class="nav level2">
-                          <li class="">
-                            <a href="OSL_Server.Data.WeatherForecast.html" title="WeatherForecast" class="">WeatherForecast</a>
-                          </li>
-                          <li class="">
-                            <a href="OSL_Server.Data.WeatherForecastService.html" title="WeatherForecastService" class="">WeatherForecastService</a>
-                          </li>
-                        </ul>  </li>
-                    <li class="">
-                      <span class="expand-stub"></span>
-                      <a href="OSL_Server.FileManager.html" title="OSL_Server.FileManager" class="">OSL_Server.FileManager</a>
-                        
-                        <ul class="nav level2">
-                          <li class="">
-                            <a href="OSL_Server.FileManager.FileManagerLocal.html" title="FileManagerLocal" class="">FileManagerLocal</a>
-                          </li>
-                          <li class="">
-                            <a href="OSL_Server.FileManager.JsonManagerLocal.html" title="JsonManagerLocal" class="">JsonManagerLocal</a>
-                          </li>
-                          <li class="">
-                            <a href="OSL_Server.FileManager.JsonType.html" title="JsonType" class="">JsonType</a>
-                          </li>
-                        </ul>  </li>
-                    <li class="">
-                      <span class="expand-stub"></span>
-                      <a href="OSL_Server.Pages.html" title="OSL_Server.Pages" class="">OSL_Server.Pages</a>
-                        
-                        <ul class="nav level2">
-                          <li class="">
-                            <a href="OSL_Server.Pages.ErrorModel.html" title="ErrorModel" class="">ErrorModel</a>
-                          </li>
-                        </ul>  </li>
-                  </ul>        </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="OSL_Server">
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="OSL_Server">
   
   <h1 id="OSL_Server" data-uid="OSL_Server" class="text-break">Namespace OSL_Server
   </h1>
@@ -159,77 +100,32 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="OSL_Server.OSLLogger.html">OSLLogger</a></h4>
+      <h5><a class="xref" href="OSL_Server.OSLLogger.html">OSLLogger</a></h5>
       <section><p>Logger</p>
 </section>
     <h3 id="enums">Enums
   </h3>
-      <h4><a class="xref" href="OSL_Server.LoggingLevel.html">LoggingLevel</a></h4>
+      <h5><a class="xref" href="OSL_Server.LoggingLevel.html">LoggingLevel</a></h5>
       <section><p>Level of logging</p>
 </section>
 </article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                </ul>
-              </div>
-              <div class="toggle-mode">
-                <div class="icon">
-                  <i aria-hidden="true">☀</i>
                 </div>
-                <label class="switch">
-                  <input type="checkbox" id="switch-style">
-                  <span class="slider round"></span>
-                </label>
-                <div class="icon">
-                  <i aria-hidden="true">☾</i>
+
+                <div class="copyright-footer">
+                    <span>&#169; Sky csc. All rights reserved.</span>
                 </div>
-              </div>
-          
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <h5>In This Article</h5>
-              <div></div>
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-              </nav>
-            </div>
-          </div>
+            </main>
         </div>
-      </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <div class="pull-left">
-              
-              <span>Find this project on <a href="https://github.com/Le-clan-des-Semi-Croustillant/"><strong>GitHub</strong> </a>
-              </span> 
-            </div>
-            <div class="toggle-mode pull-right visible-sm visible-xs">
-              <div class="icon">
-                <i aria-hidden="true">☀</i>
-              </div>
-              <label class="switch">
-                <input type="checkbox" id="switch-style-m">
-                <span class="slider round"></span>
-              </label>
-              <div class="icon">
-                <i aria-hidden="true">☾</i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <script type="text/javascript" src="../styles/toggle-theme.js"></script>
-      </footer>    </div>
-    
-    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
-  </body>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>    </body>
 </html>
