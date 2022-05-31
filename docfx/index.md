@@ -14,16 +14,16 @@ Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live so
 ![](picture/OSL-architecture.drawio.png)
 
 ## For more information, please refer to these different documentations.
-- [**Client**](/clientdoc/intro.md)
+- [**Client**](clientdoc/intro.md)
 > [!NOTE] 
 > How to use the app, what information he send att **Server**
-- [**Server**](/serverdoc/intro.html)
+- [**Server**](serverdoc/intro.md)
 > [!NOTE]
 > How to use the app and retrive information. What is displayed, the information you can retrieve and display during the selection of champions, during the game and at the end of the game
-- [**Developer Client**](/apiclient/index.html)
+- [**Developer Client**](apiclient/index.md)
 > [!NOTE]
 > What information he send att **Server** in which data format, explenation of the code
-- [**Developer Server**](/apiserver/index.html)
+- [**Developer Server**](apiserver/index.md)
 > [!NOTE]
 > What information he recive to **Client** in which data format, explenation of the code
 
