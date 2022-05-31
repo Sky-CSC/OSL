@@ -6,7 +6,7 @@
 ---
 
 ## Enable data collection
-### <ins>Game Client API :
+### <ins>**Game Client API :**
 [Game Client API](https://developer.riotgames.com/docs/lol#general_game-constants)
 For recive data from a game add to ```C:/Riot Games/League of Legends/Config/game.cfg```
 ```
@@ -18,6 +18,27 @@ add to ```C:/Riot Games/League of Legends/Config/game.cfg``` for see a more grap
 ```
 [Spectator]
 eSportsNeutralTimers=1
+```
+
+### <ins>**Live Events API :**
+[Live Events API](https://github.com/SkinSpotlights/LiveEventsDocumentation) For recive data from a game add to ```C:/Riot Games/League of Legends/Config/game.cfg```
+
+```
+[LiveEvents]
+Enable=1
+Port=34243
+```
+Next in ```C:/Riot Games/League of Legends/Config/``` create file ```LiveEvents.ini``` and copy on it
+```
+OnKill
+OnKillDragon_Spectator
+OnNeutralMinionKill
+OnMinionKill
+OnSummonRiftHerald
+OnKillWorm_Spectator
+OnTurretDie
+OnMinionKill
+OnChampionKill
 ```
 
 ---
