@@ -1,4 +1,4 @@
-# Developper Documentation **client**
+# Developper Documentation **Client**
 
 > [!WARNING] 
 > **Documentation in progress** 
@@ -163,122 +163,113 @@ Download example of a curent ChampSelect **Not completed!!**
 
 ---
 
-## <ins>Local game information "InGame"
+## <ins>**Local game information "InGame"**
 This information about the game is sent to the server, it is retrieved by the different APIs.
 
-- Drakes (Elder, Fire, Hextech, Air, Water, Chemtech, Earth) **Check Data !!**
-  <details>
-  <summary><b>API</b></summary>
+## Drakes (Elder, Fire, Hextech, Air, Water, Chemtech, Earth) **Check Data !!**
 
-  ```diff
-  - Live Events API :
-  OnKillDragon_Spectator (default)
-  OnKill
-  OnNeutralMinionKill	
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
-  
-  ```json
-  {
+```diff
+- Live Events API :
+OnKillDragon_Spectator (default)
+OnKill
+OnNeutralMinionKill	
+```
+
+<details>
+	<summary><b>Example value</b></summary>
+
+```json
+{
 	"eventname": "OnKillDragon_Spectator",
 	"other": "SRU_Dragon_",
 	"otherTeam": "Neutral",
 	"source": "Sky csc",
 	"sourceID": "6",
 	"sourceTeam": "Chaos"
-  }
-  or
-  {
+}
+or
+{
 	"eventname": "OnKillDragon_Spectator",
 	"other": "SRU_Dragon_Fire",
 	"otherTeam": "Neutral",
 	"source": "Sky csc",
 	"sourceID": "6",
 	"sourceTeam": "Chaos"
-  }
-  or
-  {
+}
+or
+{
 	"eventname": "OnKillDragon_Spectator",
 	"other": "SRU_Dragon_Hextech",
 	"otherTeam": "Neutral",
 	"source": "Sky csc",
 	"sourceID": "1",
 	"sourceTeam": "Order"
-  }
-  or
-  {
+}
+or
+{
 	"eventname": "OnKillDragon_Spectator",
 	"other": "SRU_Dragon_Air",
 	"otherTeam": "Neutral",
 	"source": "Sky csc",
 	"sourceID": "5",
 	"sourceTeam": "Chaos"
-  }
-  or
-  {
+}
+or
+{
 	"eventname": "OnKillDragon_Spectator",
 	"other": "SRU_Dragon_Water",
 	"otherTeam": "Neutral",
 	"source": "Sky csc",
 	"sourceID": "5",
 	"sourceTeam": "Chaos"
-  }
-  or
-  {
+}
+or
+{
 	"eventname": "OnKillDragon_Spectator",
 	"other": "SRU_Dragon_Chemtech",
 	"otherTeam": "Neutral",
 	"source": "Sky csc",
 	"sourceID": "5",
 	"sourceTeam": "Chaos"
-  }
-  or
-  {
+}
+or
+{
 	"eventname": "OnKillDragon_Spectator",
 	"other": "SRU_Dragon_Earth",
 	"otherTeam": "Neutral",
 	"source": "Sky csc",
 	"sourceID": "5",
 	"sourceTeam": "Chaos"
-  }
-  ```
-  </detail>
-  </detail>
-<br>
+}
+```
+</details>
 
-- Baron
-  <details>
-  <summary><b>API</b></summary>
+## Baron
 
-  ```diff
-  - Live Events API :
-  OnKillWorm_Spectator (default)
-  OnKill
-  OnNeutralMinionKill
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
+```diff
+- Live Events API :
+OnKillWorm_Spectator (default)
+OnKill
+OnNeutralMinionKill
+```
+
+<details>
+<summary><b>Example value</b></summary>
   
-  ```json
-  {
+```json
+{
 	"eventname": "OnKillWorm_Spectator",
 	"other": "SRU_Baron12.1.1",
 	"otherTeam": "Neutral",
 	"source": "Sky csc",
 	"sourceID": "1",
 	"sourceTeam": "Order"
-  }
-  ```
-  </detail>
-  </detail>
-<br>
+}
+```
+</details>
 
-- Herald
-  - Kill
-    <details>
-    <summary><b>API</b></summary>
-
+## Herald
+- Kill
     ```diff
     - Live Events API :
     OnNeutralMinionKill (default)
@@ -297,12 +288,9 @@ This information about the game is sent to the server, it is retrieved by the di
 	  "sourceTeam": "Order"
     }
 	```
-	</detail></detail>
+	</detail>
     	
-  - Take Relic :
-    <details>
-    <summary><b>API</b></summary>
-
+- Take Relic :
     ```diff
     - Live Events API :
     OnMinionKill (default)	
@@ -320,12 +308,10 @@ This information about the game is sent to the server, it is retrieved by the di
 	  "sourceTeam": "Neutral"
     }
 	```
-	</detail></detail>	
-  - Launch :
-    <details>
-    <summary><b>API</b></summary>
+	</detail>
 
-	```diff
+- Launch :
+    ```diff
     - Live Events API :	
 	OnSummonRiftHerald (default)	
     ```
@@ -343,247 +329,209 @@ This information about the game is sent to the server, it is retrieved by the di
 	}
 	```
 	</detail>
-	</detail>
 <br>
 
-- Turret
-  <details>
-  <summary><b>API</b></summary>
+## Turret
+```diff
+- Live Events API :
+OnTurretDie (default)
+- Game Client API :
+https://127.0.0.1:2999/liveclientdata/allgamedata
+```
+<details>
+<summary><b>Example value</b></summary>
 
-  ```diff
-  - Live Events API :
-  OnTurretDie (default)
-  - Game Client API :
-  https://127.0.0.1:2999/liveclientdata/allgamedata
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
-
-  ```json
-  {
+```json
+{
 	"eventname": "OnTurretDie",
 	"other": "Sky csc",
 	"otherID": "0",
 	"otherTeam": "Order",
 	"source": "Turret_T2_R_03_A",
 	"sourceTeam": "Chaos"
-  }
-  or
-  {
+}
+or
+{
 	"eventname": "OnTurretDie",
 	"other": "Minion_T200L2S26N0162",
 	"otherTeam": "Chaos",
 	"source": "Turret_T1_L_03_A",
 	"sourceTeam": "Order"
-  }
-  or
-  {
+}
+or
+{
 	"eventname": "OnTurretDie",
 	"other": "Sky csc",
 	"otherID": "7",
 	"otherTeam": "Chaos",
 	"source": "Turret_T1_R_02_A",
 	"sourceTeam": "Order"
-  }
-  ```
-  </detail>
-  </detail>
+}
+```
+</details>
+
+## Inib **Check Data !!**
+
+```diff
+- Game Client API :
+https://127.0.0.1:2999/liveclientdata/allgamedata (default)
+- Live Events API :
+OnDampenerDie
+```
+<details>
+<summary><b>Example value</b></summary>
+
+```json
+{
+
+}
+```
+</details>
+
+## Minion **Check Data !!**
+```diff
+- Live Events API :
+OnMinionKill (default)
+OnKill (default for "HiddenMinion")
+```
+<details>
+<summary><b>Example value</b></summary>
+
+```json
+{
+
+}
+```
+</details>
 <br>
 
-- Inib **Check Data !!**
-  <details>
-  <summary><b>API</b></summary>
+## Summoner Kill **Check Data !!**
+```diff
+- Live Events API :
+OnChampionKill (default)
+OnDeathAssist (default)
+OnShutdown
+OnChampionKillPre
+OnKill
+- Game Client API :
+https://127.0.0.1:2999/liveclientdata/playerlist
+```
+<details>
+<summary><b>Example value</b></summary>
 
-  ```diff
-  - Game Client API :
-  https://127.0.0.1:2999/liveclientdata/allgamedata (default)
-  - Live Events API :
-  OnDampenerDie
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
+```json
+{
 
-  ```json
-  {
+}
+```
+</details>
 
-  }
-  ```
-  </detail>
-  </detail>
-<br>
+## Item **Check Data !!**
+```diff
+- Game Client API :
+https://127.0.0.1:2999/liveclientdata/playerlist
+https://127.0.0.1:2999/liveclientdata/playeritems?summonerName=Phenix%20NemBot
+```
+<details>
+<summary><b>Example value</b></summary>
 
-- Minion **Check Data !!**
-  <details>
-  <summary><b>API</b></summary>
+```json
+{
 
-  ```diff
-  - Live Events API :
-  OnMinionKill (default)
-  OnKill (default for "HiddenMinion")
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
+}
+```
+</details>
 
-  ```json
-  {
+## Ward **Check Data !!**
+```diff
+- Game Client API :
+https://127.0.0.1:2999/liveclientdata/playerlist
+```
+<details>
+<summary><b>Example value</b></summary>
 
-  }
-  ```
-  </detail>
-  </detail>
-<br>
+```json
+{
 
-- Summoner Kill **Check Data !!**
-  <details>
-  <summary><b>API</b></summary>
+}
+```
+</details>
 
-  ```diff
-  - Live Events API :
-  OnChampionKill (default)
-  OnDeathAssist (default)
-  OnShutdown
-  OnChampionKillPre
-  OnKill
-  - Game Client API :
-  https://127.0.0.1:2999/liveclientdata/playerlist
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
+## Summoners Spell **Check Data !!**
+```diff
+- Game Client API :
+https://127.0.0.1:2999/liveclientdata/playerlist
+```
+<details>
+<summary><b>Example value</b></summary>
 
-  ```json
-  {
+```json
+{
 
-  }
-  ```
-  </detail>
-  </detail>
-<br>
+}
+```
+</details>
 
-- Item **Check Data !!**
-  <details>
-  <summary><b>API</b></summary>
+## Level Up **Check Data !!**
+```diff 
+- Game Client API :
+https://127.0.0.1:2999/liveclientdata/playerlist
+```
+<details>
+<summary><b>Example value</b></summary>
 
-  ```diff
-  - Game Client API :
-  https://127.0.0.1:2999/liveclientdata/playerlist
-  https://127.0.0.1:2999/liveclientdata/playeritems?summonerName=Phenix%20NemBot
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
+```json
+{
 
-  ```json
-  {
+}
+```
+</details>
 
-  }
-  ```
-  </detail>
-  </detail>
-<br>
-
-- Ward **Check Data !!**
-  <details>
-  <summary><b>API</b></summary>
-
-  ```diff
-  - Game Client API :
-  https://127.0.0.1:2999/liveclientdata/playerlist
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
-
-  ```json
-  {
-
-  }
-  ```
-  </detail>
-  </detail>
-<br>
-
-- Summoners Spell **Check Data !!**
-  <details>
-  <summary><b>API</b></summary>
-
-  ```diff
-  - Game Client API :
-  https://127.0.0.1:2999/liveclientdata/playerlist
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
-
-  ```json
-  {
-
-  }
-  ```
-  </detail>
-  </detail>
-<br>
-
-- Level Up **Check Data !!**
-  <details>
-  <summary><b>API</b></summary>
-
-  ```diff 
-  - Game Client API :
-  https://127.0.0.1:2999/liveclientdata/playerlist
-  ```
-  <details>
-  <summary><b>Example value</b></summary>
-
-  ```json
-  {
-
-  }
-  ```
-  </detail>
-  </detail>
-<br>
-
-- Position
+## Position
   ```diff
   - Read in memory
   ```
-- Mana
+## Mana
   ```diff
   - Read in memory
   ```
-- MaxMana
+## MaxMana
   ```diff
   - Read in memory
   ```
-- Health
+## Health
   ```diff
   - Read in memory
   ```
-- MaxHealth
+## MaxHealth
   ```diff
   - Read in memory
   ```
-- CurrentGold
+## CurrentGold
   ```diff
   - Read in memory
   ```
-- GoldTotal
+## GoldTotal
   ```diff
   - Read in memory
   ```
-- EXP
+## EXP
   ```diff
   - Read in memory
   ```
 
-- Damages
+## Damages
   ```diff
   - Unknown
   ```
+
 ---
 
-## Documentation of **Live Events API**
+## <ins>Documentation of **Live Events API**
 This documentation concern just **Replay** or **Spectator** mode
 If he is note ```no information``` he is possible he exist in other game mode or I juts don't found it in a spécific game
 
-#### Patern :
+## Patern :
 
 - **"eventname"**: Name of the event
 - **"other"** : Name of the summoner, turret or mobs (minion, neutral mobs, drake, nash, ...) in game he is impacted by the action
@@ -604,1839 +552,1948 @@ If he is note ```no information``` he is possible he exist in other game mode or
 }
 ```
 
-#### All the information :
+## All the information :
 
-- **OnDelete**
-  <details>
-  <summary><b>Example value</b></summary>
+- <span style="color:red">**OnDelete**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-  ```json
-  {
-	"eventname": "OnDelete"
-  }
-  ```
-  </details>
-<br>
+	```json
+	{
+		"eventname": "OnDelete"
+	}
+	```
+	</details>
 
 - OnSpawn ```no information```
-- **OnDie**
-  <details>
-  <summary><b>Example value</b></summary>
-  
-  ```json
-  Exemple 1: 
-  {
-	"eventname": "OnDie",
-	"other": "WilsonMagicWand",
-	"otherID": "0",
-	"otherTeam": "Order",
-	"source": "Le JOAT",
-	"sourceID": "8",
-	"sourceTeam": "Chaos"
-  }
-  Exemple 2:
-  {
-	"eventname": "OnDie",
-	"other": "Turret_T1_R_03_A",
-	"otherTeam": "Order",
-	"source": "100M girls Dream",
-	"sourceID": "9",
-	"sourceTeam": "Chaos"
-  }
-  Exemple 3:
-  {
-	"eventname": "OnDie",
-	"other": "Phenix NemBot",
-	"otherID": "4",
-	"otherTeam": "Order",
-	"source": "ThreshLostSoul",
-	"sourceTeam": "Order"
-  }
-  Exemple 4:
-  {
-	"eventname": "OnDie",
-	"other": "CampRespawn",
-	"otherTeam": "Neutral",
-	"source": "CampRespawn",
-	"sourceTeam": "Neutral"
-  }
-  Exemple 5:
-  {
-	"eventname": "OnDie",
-	"other": "Simp Eboy",
-	"otherID": "1",
-	"otherTeam": "Order",
-	"source": "SRU_Red4.1.1",
-	"sourceTeam": "Neutral"
-  }
-  Exemple 6:
-  {
-	"eventname": "OnDie",
-	"other": "ScrandHD",
-	"otherID": "2",
-	"otherTeam": "Order",
-	"source": "Minion_T200L1S01N0001",
-	"sourceTeam": "Chaos"
-  }
-  Exemple 7:
-  {
-	"eventname": "OnDie",
-	"other": "Minion_T100L1S01N0003",
-	"otherTeam": "Order",
-	"source": "Minion_T200L1S01N0000",
-	"sourceTeam": "Chaos"
-  }
-  Exemple 8:
-  {
-	"eventname": "OnDie",
-	"other": "Pou Lord",
-	"otherID": "6",
-	"otherTeam": "Chaos",
-	"source": "SRU_MurkwolfMini8.1.3",
-	"sourceTeam": "Neutral"
-  }
-  Exemple 9:
-  {
-	"eventname": "OnDie",
-	"other": "Osman �st�ner",
-	"otherID": "7",
-	"otherTeam": "Chaos",
-	"source": "Minion_T100L1S01N0001",
-	"sourceTeam": "Order"
-  }
-  Exemple 10:
-  {
-	"eventname": "OnDie",
-	"other": "DO U KNO DA WAE",
-	"otherID": "5",
-	"otherTeam": "Chaos",
-	"source": "BlobDrop",
-	"sourceTeam": "Chaos"
-  }
-  Exemple 11:
-  {
-	"eventname": "OnDie",
-	"other": "ScrandHD",
-	"otherID": "2",
-	"otherTeam": "Order",
-	"source": "EyebeamVision",
-	"sourceTeam": "Order"
-  }
-  Exemple 12:
-  {
-	"eventname": "OnDie",
-	"other": "ScrandHD",
-	"otherID": "2",
-	"otherTeam": "Order",
-	"source": "Poot",
-	"sourceTeam": "Order"
-  }
-  Exemple 13:
-  {
-	"eventname": "OnDie",
-	"other": "HuSaw",
-	"otherID": "3",
-	"otherTeam": "Order",
-	"source": "SightWard",
-	"sourceTeam": "Order"
-  }
-  Exemple 14
-  {
-	"eventname": "OnDie",
-	"other": "Turret_T1_L_03_A",
-	"otherTeam": "Order",
-	"source": "Minion_T200L2S01N0000",
-	"sourceTeam": "Chaos"
-  }
-  Exemple 14:
-  {
-	"eventname": "OnDie",
-	"other": "Pou Lord",
-	"otherID": "6",
-	"otherTeam": "Chaos",
-	"source": "SRU_Gromp14.1.1",
-	"sourceTeam": "Neutral"
-  }
-  Exemple 15:
-  {
-	"eventname": "OnDie",
-	"other": "Pou Lord",
-	"otherID": "6",
-	"otherTeam": "Chaos",
-	"source": "SRU_Blue7.1.1",
-	"sourceTeam": "Neutral"
-  }
-  Exemple 16:
-  {
-	"eventname": "OnDie",
-	"other": "Simp Eboy",
-	"otherID": "1",
-	"otherTeam": "Order",
-	"source": "SRU_Blue1.1.1",
-	"sourceTeam": "Neutral"
-  } 
-  Exemple 17:
-  {
-	"eventname": "OnDie",
-	"other": "100M girls Dream",
-	"otherID": "9",
-	"otherTeam": "Chaos",
-	"source": "Phenix NemBot",
-	"sourceID": "4",
-	"sourceTeam": "Order"
-  }
-  Exemple 18:
-  {
-	"eventname": "OnDie",
-	"other": "Phenix NemBot",
-	"otherID": "4",
-	"otherTeam": "Order",
-	"source": "100M girls Dream",
-	"sourceID": "9",
-	"sourceTeam": "Chaos"
-  }
-  Exemple 19:
-  {
-	"eventname": "OnDie",
-	"other": "WardCorpse",
-	"otherTeam": "Neutral",
-	"source": "WardCorpse",
-	"sourceTeam": "Neutral"
-  }
-  Exemple 20:
-  {
-	"eventname": "OnDie",
-	"other": "Pou Lord",
-	"otherID": "6",
-	"otherTeam": "Chaos",
-	"source": "SRU_RazorbeakMini9.1.5",
-	"sourceTeam": "Neutral"
-  }
-  Exemple 21:
-  {
-	"eventname": "OnDie",
-	"other": "Pou Lord",
-	"otherID": "6",
-	"otherTeam": "Chaos",
-	"source": "SRU_RazorbeakMini9.1.6",
-	"sourceTeam": "Neutral"
-  }
-  Exemple 22:
-  {
-	"eventname": "OnDie",
-	"other": "Pou Lord",
-	"otherID": "6",
-	"otherTeam": "Chaos",
-	"source": "SRU_Razorbeak9.1.1",
-	"sourceTeam": "Neutral"
-  }
-  .....
-  ```
-  </detail>
-<br>
 
-- **OnKill**
-  <details>
-  <summary><b>Example value</b></summary>
+- <span style="color:red">**OnDie**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+	
+	```json
+	Exemple 1: 
+	{
+		"eventname": "OnDie",
+		"other": "WilsonMagicWand",
+		"otherID": "0",
+		"otherTeam": "Order",
+		"source": "Le JOAT",
+		"sourceID": "8",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2:
+	{
+		"eventname": "OnDie",
+		"other": "Turret_T1_R_03_A",
+		"otherTeam": "Order",
+		"source": "100M girls Dream",
+		"sourceID": "9",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 3:
+	{
+		"eventname": "OnDie",
+		"other": "Phenix NemBot",
+		"otherID": "4",
+		"otherTeam": "Order",
+		"source": "ThreshLostSoul",
+		"sourceTeam": "Order"
+	}
+	Exemple 4:
+	{
+		"eventname": "OnDie",
+		"other": "CampRespawn",
+		"otherTeam": "Neutral",
+		"source": "CampRespawn",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 5:
+	{
+		"eventname": "OnDie",
+		"other": "Simp Eboy",
+		"otherID": "1",
+		"otherTeam": "Order",
+		"source": "SRU_Red4.1.1",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 6:
+	{
+		"eventname": "OnDie",
+		"other": "ScrandHD",
+		"otherID": "2",
+		"otherTeam": "Order",
+		"source": "Minion_T200L1S01N0001",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 7:
+	{
+		"eventname": "OnDie",
+		"other": "Minion_T100L1S01N0003",
+		"otherTeam": "Order",
+		"source": "Minion_T200L1S01N0000",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 8:
+	{
+		"eventname": "OnDie",
+		"other": "Pou Lord",
+		"otherID": "6",
+		"otherTeam": "Chaos",
+		"source": "SRU_MurkwolfMini8.1.3",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 9:
+	{
+		"eventname": "OnDie",
+		"other": "Osman �st�ner",
+		"otherID": "7",
+		"otherTeam": "Chaos",
+		"source": "Minion_T100L1S01N0001",
+		"sourceTeam": "Order"
+	}
+	Exemple 10:
+	{
+		"eventname": "OnDie",
+		"other": "DO U KNO DA WAE",
+		"otherID": "5",
+		"otherTeam": "Chaos",
+		"source": "BlobDrop",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 11:
+	{
+		"eventname": "OnDie",
+		"other": "ScrandHD",
+		"otherID": "2",
+		"otherTeam": "Order",
+		"source": "EyebeamVision",
+		"sourceTeam": "Order"
+	}
+	Exemple 12:
+	{
+		"eventname": "OnDie",
+		"other": "ScrandHD",
+		"otherID": "2",
+		"otherTeam": "Order",
+		"source": "Poot",
+		"sourceTeam": "Order"
+	}
+	Exemple 13:
+	{
+		"eventname": "OnDie",
+		"other": "HuSaw",
+		"otherID": "3",
+		"otherTeam": "Order",
+		"source": "SightWard",
+		"sourceTeam": "Order"
+	}
+	Exemple 14
+	{
+		"eventname": "OnDie",
+		"other": "Turret_T1_L_03_A",
+		"otherTeam": "Order",
+		"source": "Minion_T200L2S01N0000",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 14:
+	{
+		"eventname": "OnDie",
+		"other": "Pou Lord",
+		"otherID": "6",
+		"otherTeam": "Chaos",
+		"source": "SRU_Gromp14.1.1",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 15:
+	{
+		"eventname": "OnDie",
+		"other": "Pou Lord",
+		"otherID": "6",
+		"otherTeam": "Chaos",
+		"source": "SRU_Blue7.1.1",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 16:
+	{
+		"eventname": "OnDie",
+		"other": "Simp Eboy",
+		"otherID": "1",
+		"otherTeam": "Order",
+		"source": "SRU_Blue1.1.1",
+		"sourceTeam": "Neutral"
+	} 
+	Exemple 17:
+	{
+		"eventname": "OnDie",
+		"other": "100M girls Dream",
+		"otherID": "9",
+		"otherTeam": "Chaos",
+		"source": "Phenix NemBot",
+		"sourceID": "4",
+		"sourceTeam": "Order"
+	}
+	Exemple 18:
+	{
+		"eventname": "OnDie",
+		"other": "Phenix NemBot",
+		"otherID": "4",
+		"otherTeam": "Order",
+		"source": "100M girls Dream",
+		"sourceID": "9",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 19:
+	{
+		"eventname": "OnDie",
+		"other": "WardCorpse",
+		"otherTeam": "Neutral",
+		"source": "WardCorpse",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 20:
+	{
+		"eventname": "OnDie",
+		"other": "Pou Lord",
+		"otherID": "6",
+		"otherTeam": "Chaos",
+		"source": "SRU_RazorbeakMini9.1.5",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 21:
+	{
+		"eventname": "OnDie",
+		"other": "Pou Lord",
+		"otherID": "6",
+		"otherTeam": "Chaos",
+		"source": "SRU_RazorbeakMini9.1.6",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 22:
+	{
+		"eventname": "OnDie",
+		"other": "Pou Lord",
+		"otherID": "6",
+		"otherTeam": "Chaos",
+		"source": "SRU_Razorbeak9.1.1",
+		"sourceTeam": "Neutral"
+	}
+	.....
+	```
+	</detail>
 
-  ```json
-  .... beaucoup
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKill**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnChampionDie**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	.... beaucoup
+	```
+	</details>
 
-  ```json
-  Exemple 1:
-  {
-  	"eventname": "OnChampionDie",
-  	"other": "WilsonMagicWand",
-  	"otherID": "0",
-  	"otherTeam": "Order",
-  	"source": "Le JOAT",
-  	"sourceID": "8",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2:
-  {
-  	"eventname": "OnChampionDie",
-  	"other": "Turret_T1_R_03_A",
-  	"otherTeam": "Order",
-  	"source": "100M girls Dream",
-  	"sourceID": "9",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 3:
-  {
-  	"eventname": "OnChampionDie",
-  	"other": "100M girls Dream",
-  	"otherID": "9",
-  	"otherTeam": "Chaos",
-  	"source": "Phenix NemBot",
-  	"sourceID": "4",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnChampionDie**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1:
+	{
+		"eventname": "OnChampionDie",
+		"other": "WilsonMagicWand",
+		"otherID": "0",
+		"otherTeam": "Order",
+		"source": "Le JOAT",
+		"sourceID": "8",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2:
+	{
+		"eventname": "OnChampionDie",
+		"other": "Turret_T1_R_03_A",
+		"otherTeam": "Order",
+		"source": "100M girls Dream",
+		"sourceID": "9",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 3:
+	{
+		"eventname": "OnChampionDie",
+		"other": "100M girls Dream",
+		"otherID": "9",
+		"otherTeam": "Chaos",
+		"source": "Phenix NemBot",
+		"sourceID": "4",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnChampionLevelUp ```no information```
-- **OnChampionKillPre**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1:
-  {
-  	"eventname": "OnChampionKillPre",
-  	"other": "Le JOAT",
-  	"otherID": "8",
-  	"otherTeam": "Chaos",
-  	"source": "WilsonMagicWand",
-  	"sourceID": "0",
-  	"sourceTeam": "Order"
-  }
-  Exemple 2:
-  {
-  	"eventname": "OnChampionKillPre",
-  	"other": "Phenix NemBot",
-  	"otherID": "4",
-  	"otherTeam": "Order",
-  	"source": "100M girls Dream",
-  	"sourceID": "9",
-  	"sourceTeam": "Chaos"
-  }
-  
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnChampionKillPre**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnChampionKill**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exemple 1:
+	{
+		"eventname": "OnChampionKillPre",
+		"other": "Le JOAT",
+		"otherID": "8",
+		"otherTeam": "Chaos",
+		"source": "WilsonMagicWand",
+		"sourceID": "0",
+		"sourceTeam": "Order"
+	}
+	Exemple 2:
+	{
+		"eventname": "OnChampionKillPre",
+		"other": "Phenix NemBot",
+		"otherID": "4",
+		"otherTeam": "Order",
+		"source": "100M girls Dream",
+		"sourceID": "9",
+		"sourceTeam": "Chaos"
+	}
+	
+	```
+	</details>
 
-  ```json
-  Exemple 1:
-  {
-  	"eventname": "OnChampionKill",
-  	"other": "Phenix NemBot",
-  	"otherID": "4",
-  	"otherTeam": "Order",
-  	"source": "DO U KNO DA WAE",
-  	"sourceID": "5",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2:
-  {
-  	"eventname": "OnChampionKill",
-  	"other": "DO U KNO DA WAE",
-  	"otherID": "5",
-  	"otherTeam": "Chaos",
-  	"source": "HuSaw",
-  	"sourceID": "3",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnChampionKill**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1:
+	{
+		"eventname": "OnChampionKill",
+		"other": "Phenix NemBot",
+		"otherID": "4",
+		"otherTeam": "Order",
+		"source": "DO U KNO DA WAE",
+		"sourceID": "5",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2:
+	{
+		"eventname": "OnChampionKill",
+		"other": "DO U KNO DA WAE",
+		"otherID": "5",
+		"otherTeam": "Chaos",
+		"source": "HuSaw",
+		"sourceID": "3",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnChampionKillPost ```no information```
+
 - OnChampionSingleKill ```no information but possible exist```
-- **OnChampionDoubleKill**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exempel 1:
-  {
-  	"eventname": "OnChampionDoubleKill",
-  	"other": "Le JOAT",
-  	"otherID": "8",
-  	"otherTeam": "Chaos",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  Exempel 2:
-  {
-  	"eventname": "OnChampionDoubleKill",
-  	"other": "HuSaw",
-  	"otherID": "3",
-  	"otherTeam": "Order",
-  	"source": "DO U KNO DA WAE",
-  	"sourceID": "5",
-  	"sourceTeam": "Chaos"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnChampionDoubleKill**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnChampionTripleKill**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exempel 1:
+	{
+		"eventname": "OnChampionDoubleKill",
+		"other": "Le JOAT",
+		"otherID": "8",
+		"otherTeam": "Chaos",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	Exempel 2:
+	{
+		"eventname": "OnChampionDoubleKill",
+		"other": "HuSaw",
+		"otherID": "3",
+		"otherTeam": "Order",
+		"source": "DO U KNO DA WAE",
+		"sourceID": "5",
+		"sourceTeam": "Chaos"
+	}
+	```
+	</details>
 
-  ```json
-  Exempel 1:
-  {
-  	"eventname": "OnChampionTripleKill",
-  	"other": "Osman �st�ner",
-  	"otherID": "7",
-  	"otherTeam": "Chaos",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnChampionTripleKill**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exempel 1:
+	{
+		"eventname": "OnChampionTripleKill",
+		"other": "Osman �st�ner",
+		"otherID": "7",
+		"otherTeam": "Chaos",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnChampionQuadraKill ```no information but possible exist```
+
 - OnChampionPentaKill ```no information but possible exist```
+
 - OnChampionUnrealKill ```no information but possible exist```
-- **OnFirstBlood**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnFirstBlood",
-  	"other": "Le JOAT",
-  	"otherID": "8",
-  	"otherTeam": "Chaos",
-  	"source": "WilsonMagicWand",
-  	"sourceID": "0",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnFirstBlood**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnFirstBloodAssist**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnFirstBlood",
+		"other": "Le JOAT",
+		"otherID": "8",
+		"otherTeam": "Chaos",
+		"source": "WilsonMagicWand",
+		"sourceID": "0",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  {
-  	"eventname": "OnFirstBloodAssist",
-  	"source": "NameSummoner",
-  	"sourceID": "IdSummoner",
-  	"sourceTeam": "NameTeam"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnFirstBloodAssist**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnFirstBloodAssist",
+		"source": "NameSummoner",
+		"sourceID": "IdSummoner",
+		"sourceTeam": "NameTeam"
+	}
+	```
+	</details>
 
 - OnDamageTaken ```no information```
-- **OnDamageGiven**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnDamageGiven",
-  	"other": "Minion_T100L0S01N0002",
-  	"otherTeam": "Order",
-  	"source": "Minion_T200L0S01N0002",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnDamageGiven",
-  	"other": "Minion_T200L2S01N0002",
-  	"otherTeam": "Chaos",
-  	"source": "Minion_T100L2S01N0002",
-  	"sourceTeam": "Order"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnDamageGiven",
-  	"other": "SRU_Blue7.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 4 :
-  {
-  	"eventname": "OnDamageGiven",
-  	"other": "SRU_Murkwolf8.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 5 :
-  {
-  	"eventname": "OnDamageGiven",
-  	"other": "Minion_T200L1S01N0001",
-  	"otherTeam": "Chaos",
-  	"source": "ScrandHD",
-  	"sourceID": "2",
-  	"sourceTeam": "Order"
-  }
-  Exemple 6 :
-  {
-  	"eventname": "OnDamageGiven",
-  	"other": "Osman �st�ner",
-  	"otherID": "7",
-  	"otherTeam": "Chaos",
-  	"source": "ScrandHD",
-  	"sourceID": "2",
-  	"sourceTeam": "Order"
-  }
-  ......
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnDamageGiven**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnDamageGiven",
+		"other": "Minion_T100L0S01N0002",
+		"otherTeam": "Order",
+		"source": "Minion_T200L0S01N0002",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnDamageGiven",
+		"other": "Minion_T200L2S01N0002",
+		"otherTeam": "Chaos",
+		"source": "Minion_T100L2S01N0002",
+		"sourceTeam": "Order"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnDamageGiven",
+		"other": "SRU_Blue7.1.1",
+		"otherTeam": "Neutral",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 4 :
+	{
+		"eventname": "OnDamageGiven",
+		"other": "SRU_Murkwolf8.1.1",
+		"otherTeam": "Neutral",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 5 :
+	{
+		"eventname": "OnDamageGiven",
+		"other": "Minion_T200L1S01N0001",
+		"otherTeam": "Chaos",
+		"source": "ScrandHD",
+		"sourceID": "2",
+		"sourceTeam": "Order"
+	}
+	Exemple 6 :
+	{
+		"eventname": "OnDamageGiven",
+		"other": "Osman �st�ner",
+		"otherID": "7",
+		"otherTeam": "Chaos",
+		"source": "ScrandHD",
+		"sourceID": "2",
+		"sourceTeam": "Order"
+	}
+	......
+	```
+	</details>
 
 - OnSpellCast1 ```no information```
+
 - OnSpellCast2 ```no information```
+
 - OnSpellCast3 ```no information```
+
 - OnSpellCast4 ```no information```
+
 - OnSpellAvatarCast1 ```no information```
+
 - OnSpellAvatarCast2 ```no information```
+
 - OnGoldSpent ```no information```
+
 - OnGoldEarned ```no information```
+
 - OnItemConsumeablePurchased ```no information```
+
 - OnCriticalStrike ```no information```
-- **OnAce** 
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnAce",
-  	"other": "Le JOAT",
-  	"otherID": "8",
-  	"otherTeam": "Chaos",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnAce**</span> 
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnReincarnate**
-- <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnAce",
+		"other": "Le JOAT",
+		"otherID": "8",
+		"otherTeam": "Chaos",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnReincarnate",
-  	"source": "Le JOAT",
-  	"sourceID": "8",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnReincarnate",
-  	"source": "Phenix NemBot",
-  	"sourceID": "4",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnReincarnate**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnReincarnate",
+		"source": "Le JOAT",
+		"sourceID": "8",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnReincarnate",
+		"source": "Phenix NemBot",
+		"sourceID": "4",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnReviveAlly ```no information BUT```
-- **OnChangeChampion**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnChangeChampion"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnChangeChampion**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnChangeChampion"
+	}
+	```
+	</details>
 
 - OnResetChampion ```no information```
+
 - OnDampenerKill ```no information```
-- **OnDampenerDie**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnDampenerDie",
-  	"other": "Minion_T100L0S45N0284",
-  	"otherTeam": "Order"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnDampenerDie",
-  	"other": "Simp Eboy",
-  	"otherID": "1",
-  	"otherTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnDampenerDie**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnDampenerRespawnSoon**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnDampenerDie",
+		"other": "Minion_T100L0S45N0284",
+		"otherTeam": "Order"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnDampenerDie",
+		"other": "Simp Eboy",
+		"otherID": "1",
+		"otherTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  {
-  	"eventname": "OnDampenerRespawnSoon"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnDampenerRespawnSoon**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnDampenerRespawn**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnDampenerRespawnSoon"
+	}
+	```
+	</details>	
 
-  ```json
-  {
-  	"eventname": "OnDampenerRespawn"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnDampenerRespawn**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnDampenerRespawn"
+	}
+	```
+	</details>
 
 - OnDampenerDamage ```no information```
-- OnTurretKill ```no information```
-- **OnTurretDie**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnTurretDie",
-  	"other": "Minion_T200L0S18N0111",
-  	"otherTeam": "Chaos",
-  	"source": "Turret_T1_R_03_A",
-  	"sourceTeam": "Order"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnTurretDie",
-  	"other": "Minion_T100L1S58N0370",
-  	"otherTeam": "Order",
-  	"source": "Turret_T2_C_01_A",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnTurretDie",
-  	"other": "Osman �st�ner",
-  	"otherID": "7",
-  	"otherTeam": "Chaos",
-  	"source": "Turret_T1_C_05_A",
-  	"sourceTeam": "Order"
-  }
-  Exemple 4 :
-  {
-  	"eventname": "OnTurretDie",
-  	"other": "Simp Eboy",
-  	"otherID": "1",
-  	"otherTeam": "Order",
-  	"source": "Turret_T2_L_03_A",
-  	"sourceTeam": "Chaos"
-  }
-  ```
-  </details>
-<br>
+- OnTurretKill ```no information```
+
+- <span style="color:red">**OnTurretDie**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnTurretDie",
+		"other": "Minion_T200L0S18N0111",
+		"otherTeam": "Chaos",
+		"source": "Turret_T1_R_03_A",
+		"sourceTeam": "Order"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnTurretDie",
+		"other": "Minion_T100L1S58N0370",
+		"otherTeam": "Order",
+		"source": "Turret_T2_C_01_A",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnTurretDie",
+		"other": "Osman �st�ner",
+		"otherID": "7",
+		"otherTeam": "Chaos",
+		"source": "Turret_T1_C_05_A",
+		"sourceTeam": "Order"
+	}
+	Exemple 4 :
+	{
+		"eventname": "OnTurretDie",
+		"other": "Simp Eboy",
+		"otherID": "1",
+		"otherTeam": "Order",
+		"source": "Turret_T2_L_03_A",
+		"sourceTeam": "Chaos"
+	}
+	```
+	</details>
 
 - OnTurretDamage ```no information```
-- **OnTurretFirstBlood**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnTurretFirstBlood",
-  	"other": "Minion_T200L0S18N0111",
-  	"otherTeam": "Chaos",
-  	"source": "Turret_T1_R_03_A",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnTurretFirstBlood**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnTurretFirstBlood",
+		"other": "Minion_T200L0S18N0111",
+		"otherTeam": "Chaos",
+		"source": "Turret_T1_R_03_A",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnStructureKill ```no information```
-- **OnMinionKill**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnMinionKill",
-  	"other": "Minion_T200L1S18N0113",
-  	"otherTeam": "Chaos",
-  	"source": "Minion_T100L1S19N0118",
-  	"sourceTeam": "Order"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnMinionKill",
-  	"other": "Minion_T100L2S18N0111",
-  	"otherTeam": "Order",
-  	"source": "Turret_T2_L_03_A",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnMinionKill",
-  	"other": "Minion_T100L0S19N0118",
-  	"otherTeam": "Order",
-  	"source": "100M girls Dream",
-  	"sourceID": "9",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 4 :
-  {
-  	"eventname": "OnMinionKill",
-  	"other": "Pou Lord",
-  	"otherTeam": "Chaos",
-  	"source": "Phenix NemBot",
-  	"sourceID": "4",
-  	"sourceTeam": "Order"
-  }
-  Exemple 5 :
-  {
-  	"eventname": "OnMinionKill",
-  	"other": "Minion_T200L2S22N0137",
-  	"otherTeam": "Chaos",
-  	"source": "Turret_T1_L_03_A",
-  	"sourceTeam": "Order"
-  }
-  ....
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnMinionKill**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnNeutralMinionKill**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnMinionKill",
+		"other": "Minion_T200L1S18N0113",
+		"otherTeam": "Chaos",
+		"source": "Minion_T100L1S19N0118",
+		"sourceTeam": "Order"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnMinionKill",
+		"other": "Minion_T100L2S18N0111",
+		"otherTeam": "Order",
+		"source": "Turret_T2_L_03_A",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnMinionKill",
+		"other": "Minion_T100L0S19N0118",
+		"otherTeam": "Order",
+		"source": "100M girls Dream",
+		"sourceID": "9",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 4 :
+	{
+		"eventname": "OnMinionKill",
+		"other": "Pou Lord",
+		"otherTeam": "Chaos",
+		"source": "Phenix NemBot",
+		"sourceID": "4",
+		"sourceTeam": "Order"
+	}
+	Exemple 5 :
+	{
+		"eventname": "OnMinionKill",
+		"other": "Minion_T200L2S22N0137",
+		"otherTeam": "Chaos",
+		"source": "Turret_T1_L_03_A",
+		"sourceTeam": "Order"
+	}
+	....
+	```
+	</details>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnNeutralMinionKill",
-  	"other": "CampRespawn",
-  	"otherTeam": "Neutral",
-  	"source": "CampRespawn",
-  	"sourceTeam": "Neutral"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnNeutralMinionKill",
-  	"other": "SRU_Red4.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnNeutralMinionKill",
-  	"other": "SRU_MurkwolfMini8.1.3",
-  	"otherTeam": "Neutral",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 4 :
-  {
-  	"eventname": "OnNeutralMinionKill",
-  	"other": "SRU_MurkwolfMini8.1.2",
-  	"otherTeam": "Neutral",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 5 :
-  {
-  	"eventname": "OnNeutralMinionKill",
-  	"other": "SRU_Murkwolf8.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 6 :
-  {
-  	"eventname": "OnNeutralMinionKill",
-  	"other": "SRU_Murkwolf2.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  Exemple 7 :
-  {
-  	"eventname": "OnNeutralMinionKill",
-  	"other": "SRU_Gromp14.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 8 :
-  {
-  	"eventname": "OnNeutralMinionKill",
-  	"other": "SRU_RazorbeakMini9.1.5",
-  	"otherTeam": "Neutral",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  ....
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnNeutralMinionKill**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnNeutralMinionKill",
+		"other": "CampRespawn",
+		"otherTeam": "Neutral",
+		"source": "CampRespawn",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnNeutralMinionKill",
+		"other": "SRU_Red4.1.1",
+		"otherTeam": "Neutral",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnNeutralMinionKill",
+		"other": "SRU_MurkwolfMini8.1.3",
+		"otherTeam": "Neutral",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 4 :
+	{
+		"eventname": "OnNeutralMinionKill",
+		"other": "SRU_MurkwolfMini8.1.2",
+		"otherTeam": "Neutral",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 5 :
+	{
+		"eventname": "OnNeutralMinionKill",
+		"other": "SRU_Murkwolf8.1.1",
+		"otherTeam": "Neutral",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 6 :
+	{
+		"eventname": "OnNeutralMinionKill",
+		"other": "SRU_Murkwolf2.1.1",
+		"otherTeam": "Neutral",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	Exemple 7 :
+	{
+		"eventname": "OnNeutralMinionKill",
+		"other": "SRU_Gromp14.1.1",
+		"otherTeam": "Neutral",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 8 :
+	{
+		"eventname": "OnNeutralMinionKill",
+		"other": "SRU_RazorbeakMini9.1.5",
+		"otherTeam": "Neutral",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	....
+	```
+	</details>
 
 - OnNeutralMinionCampCleared ```no information```
-- OnAcquireRedBuffFromNeutral ```no information```
-- OnAcquireBlueBuffFromNeutral ```no information```
-- **OnHQKill**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnHQKill",
-  	"other": "WilsonMagicWand",
-  	"otherID": "0",
-  	"otherTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- OnAcquireRedBuffFromNeutral ```no information```
+
+- OnAcquireBlueBuffFromNeutral ```no information```
+
+- <span style="color:red">**OnHQKill**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnHQKill",
+		"other": "WilsonMagicWand",
+		"otherID": "0",
+		"otherTeam": "Order"
+	}
+	```
+	</details>
 
 - OnHQDie ```no information```
-- OnHQDamage ```no information```
-- **OnCastHeal**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnCastHeal",
-  	"other": "Simp Eboy",
-  	"otherID": "1",
-  	"otherTeam": "Order",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnCastHeal",
-  	"other": "WilsonMagicWand",
-  	"otherID": "0",
-  	"otherTeam": "Order",
-  	"source": "WilsonMagicWand",
-  	"sourceID": "0",
-  	"sourceTeam": "Order"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnCastHeal",
-  	"other": "Pou Lord",
-  	"otherID": "6",
-  	"otherTeam": "Chaos",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  ```
-  </details>
-<br>
+- OnHQDamage ```no information```
+
+- <span style="color:red">**OnCastHeal**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnCastHeal",
+		"other": "Simp Eboy",
+		"otherID": "1",
+		"otherTeam": "Order",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnCastHeal",
+		"other": "WilsonMagicWand",
+		"otherID": "0",
+		"otherTeam": "Order",
+		"source": "WilsonMagicWand",
+		"sourceID": "0",
+		"sourceTeam": "Order"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnCastHeal",
+		"other": "Pou Lord",
+		"otherID": "6",
+		"otherTeam": "Chaos",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	```
+	</details>
 
 - OnBuff ```no information```
+
 - OnCrowdControlDealt ```no information```
+
 - OnCrowdControlExpired ```no information```
-- **OnKillingSpree**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnKillingSpree",
-  	"other": "Simp Eboy",
-  	"otherID": "1",
-  	"otherTeam": "Order",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillingSpree**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnKillingSpreeSet1**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnKillingSpree",
+		"other": "Simp Eboy",
+		"otherID": "1",
+		"otherTeam": "Order",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnKillingSpreeSet1",
-  	"other": "Phenix NemBot",
-  	"otherID": "4",
-  	"otherTeam": "Order",
-  	"source": "Osman �st�ner",
-  	"sourceID": "7",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnKillingSpreeSet1",
-  	"other": "100M girls Dream",
-  	"otherID": "9",
-  	"otherTeam": "Chaos",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillingSpreeSet1**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnKillingSpreeSet2**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnKillingSpreeSet1",
+		"other": "Phenix NemBot",
+		"otherID": "4",
+		"otherTeam": "Order",
+		"source": "Osman �st�ner",
+		"sourceID": "7",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnKillingSpreeSet1",
+		"other": "100M girls Dream",
+		"otherID": "9",
+		"otherTeam": "Chaos",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnKillingSpreeSet2",
-  	"other": "Phenix NemBot",
-  	"otherID": "4",
-  	"otherTeam": "Order",
-  	"source": "Osman �st�ner",
-  	"sourceID": "7",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnKillingSpreeSet2",
-  	"other": "Le JOAT",
-  	"otherID": "8",
-  	"otherTeam": "Chaos",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillingSpreeSet2**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnKillingSpreeSet3**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnKillingSpreeSet2",
+		"other": "Phenix NemBot",
+		"otherID": "4",
+		"otherTeam": "Order",
+		"source": "Osman �st�ner",
+		"sourceID": "7",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnKillingSpreeSet2",
+		"other": "Le JOAT",
+		"otherID": "8",
+		"otherTeam": "Chaos",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  {
-	"eventname": "OnKillingSpreeSet3",
-	"other": "DO U KNO DA WAE",
-	"otherID": "5",
-	"otherTeam": "Chaos",
-	"source": "HuSaw",
-	"sourceID": "3",
-	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillingSpreeSet3**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnKillingSpreeSet4**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnKillingSpreeSet3",
+		"other": "DO U KNO DA WAE",
+		"otherID": "5",
+		"otherTeam": "Chaos",
+		"source": "HuSaw",
+		"sourceID": "3",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  {
-	"eventname": "OnKillingSpreeSet4",
-	"other": "100M girls Dream",
-	"otherID": "9",
-	"otherTeam": "Chaos",
-	"source": "HuSaw",
-	"sourceID": "3",
-	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillingSpreeSet4**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnKillingSpreeSet5**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnKillingSpreeSet4",
+		"other": "100M girls Dream",
+		"otherID": "9",
+		"otherTeam": "Chaos",
+		"source": "HuSaw",
+		"sourceID": "3",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  {
-	"eventname": "OnKillingSpreeSet5",
-	"other": "Osman �st�ner",
-	"otherID": "7",
-	"otherTeam": "Chaos",
-	"source": "HuSaw",
-	"sourceID": "3",
-	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillingSpreeSet5**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnKillingSpreeSet6**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnKillingSpreeSet5",
+		"other": "Osman �st�ner",
+		"otherID": "7",
+		"otherTeam": "Chaos",
+		"source": "HuSaw",
+		"sourceID": "3",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  {
-	"eventname": "OnKillingSpreeSet6",
-	"other": "Le JOAT",
-	"otherID": "8",
-	"otherTeam": "Chaos",
-	"source": "HuSaw",
-	"sourceID": "3",
-	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillingSpreeSet6**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnKillingSpreeSet6",
+		"other": "Le JOAT",
+		"otherID": "8",
+		"otherTeam": "Chaos",
+		"source": "HuSaw",
+		"sourceID": "3",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnKilledUnitOnKillingSpree ```no information```
+
 - OnKilledUnitOnKillingSpreeSet1 ```no information```
+
 - OnKilledUnitOnKillingSpreeSet2 ```no information```
+
 - OnKilledUnitOnKillingSpreeSet3 ```no information```
+
 - OnKilledUnitOnKillingSpreeSet4 ```no information```
+
 - OnKilledUnitOnKillingSpreeSet5 ```no information```
+
 - OnKilledUnitOnKillingSpreeSet6 ```no information```
+
 - OnKilledUnitOnKillingSpreeDoubleKill ```no information```
+
 - OnKilledUnitOnKillingSpreeTripleKill ```no information```
+
 - OnKilledUnitOnKillingSpreeQuadraKill ```no information```
+
 - OnKilledUnitOnKillingSpreePentaKill ```no information```
+
 - OnKilledUnitOnKillingSpreeUnrealKill ```no information```
-- **OnDeathAssist**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnDeathAssist",
-  	"other": "Phenix NemBot",
-  	"otherID": "4",
-  	"otherTeam": "Order",
-  	"source": "Le JOAT",
-  	"sourceID": "8",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnDeathAssist",
-  	"other": "100M girls Dream",
-  	"otherID": "9",
-  	"otherTeam": "Chaos",
-  	"source": "HuSaw",
-  	"sourceID": "3",
-  	"sourceTeam": "Order"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnDeathAssist",
-  	"other": "Turret_T1_R_03_A",
-  	"otherTeam": "Order",
-  	"source": "100M girls Dream",
-  	"sourceID": "9",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 4 :
-  {
-  	"eventname": "OnDeathAssist",
-  	"other": "SRU_Dragon_Air",
-  	"otherTeam": "Neutral",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 5 :
-  {
-  	"eventname": "OnDeathAssist",
-  	"other": "SRU_RiftHerald17.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "ScrandHD",
-  	"sourceID": "2",
-  	"sourceTeam": "Order"
-  }
-  Exemple 6 :
-  {
-  	"eventname": "OnDeathAssist",
-  	"other": "SRU_RiftHerald17.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "100M girls Dream",
-  	"sourceID": "9",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 7 :
-  {
-  	"eventname": "OnDeathAssist",
-  	"other": "SRU_Baron12.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "ScrandHD",
-  	"sourceID": "2",
-  	"sourceTeam": "Order"
-  }
-  Exemple 8 :
-  {
-  	"eventname": "OnDeathAssist",
-  	"other": "SRU_Baron12.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "100M girls Dream",
-  	"sourceID": "9",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 9 :
-  {
-  	"eventname": "OnDeathAssist",
-  	"source": "WilsonMagicWand",
-  	"sourceID": "0",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnDeathAssist**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnQuit**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnDeathAssist",
+		"other": "Phenix NemBot",
+		"otherID": "4",
+		"otherTeam": "Order",
+		"source": "Le JOAT",
+		"sourceID": "8",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnDeathAssist",
+		"other": "100M girls Dream",
+		"otherID": "9",
+		"otherTeam": "Chaos",
+		"source": "HuSaw",
+		"sourceID": "3",
+		"sourceTeam": "Order"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnDeathAssist",
+		"other": "Turret_T1_R_03_A",
+		"otherTeam": "Order",
+		"source": "100M girls Dream",
+		"sourceID": "9",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 4 :
+	{
+		"eventname": "OnDeathAssist",
+		"other": "SRU_Dragon_Air",
+		"otherTeam": "Neutral",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 5 :
+	{
+		"eventname": "OnDeathAssist",
+		"other": "SRU_RiftHerald17.1.1",
+		"otherTeam": "Neutral",
+		"source": "ScrandHD",
+		"sourceID": "2",
+		"sourceTeam": "Order"
+	}
+	Exemple 6 :
+	{
+		"eventname": "OnDeathAssist",
+		"other": "SRU_RiftHerald17.1.1",
+		"otherTeam": "Neutral",
+		"source": "100M girls Dream",
+		"sourceID": "9",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 7 :
+	{
+		"eventname": "OnDeathAssist",
+		"other": "SRU_Baron12.1.1",
+		"otherTeam": "Neutral",
+		"source": "ScrandHD",
+		"sourceID": "2",
+		"sourceTeam": "Order"
+	}
+	Exemple 8 :
+	{
+		"eventname": "OnDeathAssist",
+		"other": "SRU_Baron12.1.1",
+		"otherTeam": "Neutral",
+		"source": "100M girls Dream",
+		"sourceID": "9",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 9 :
+	{
+		"eventname": "OnDeathAssist",
+		"source": "WilsonMagicWand",
+		"sourceID": "0",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  {
-  	"eventname": "OnQuit",
-  	"source": "Le JOAT",
-  	"sourceID": "8",
-  	"sourceTeam": "Chaos"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnQuit**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnQuit",
+		"source": "Le JOAT",
+		"sourceID": "8",
+		"sourceTeam": "Chaos"
+	}
+	```
+	</details>
 
 - OnLeave ```no information BUT```
+
 - OnReconnect ```no information BUT```
+
 - OnGameEnter ```no information```
+
 - OnGameStart ```no information```
+
 - OnAssistingSpreeSet1 ```no information```
+
 - OnAssistingSpreeSet2 ```no information```
+
 - OnChampionTripleAssist ```no information```
+
 - OnChampionPentaAssist ```no information```
-- **OnPing**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-	"eventname": "OnPing"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnPing**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnPingPlayer**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnPing"
+	}
+	```
+	</details>
 
-  ```json
-  {
-	"eventname": "OnPingPlayer"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnPingPlayer**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnPingBuilding**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnPingPlayer"
+	}
+	```
+	</details>
 
-  ```json
-  {
-	"eventname": "OnPingBuilding"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnPingBuilding**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnPingOther**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnPingBuilding"
+	}
+	```
+	</details>
 
-  ```json
-  {
-	"eventname": "OnPingOther"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnPingOther**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnPingOther"
+	}
+	```
+	</details>
 
 - OnEndGame ```no information```
-- OnSpellLevelup1 ```no information```
-- OnSpellLevelup2 ```no information```
-- OnSpellLevelup3 ```no information```
-- OnSpellLevelup4 ```no information```
-- OnSpellEvolve1 ```no information```
-- OnSpellEvolve2 ```no information```
-- OnSpellEvolve3 ```no information```
-- OnSpellEvolve4 ```no information```
-- OnItemPurchased ```no information```
-- OnItemSold ```no information```
-- OnItemRemoved ```no information```
-- OnItemUndo ```no information```
-- **OnItemCallout**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnItemCallout",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  Exemple 2 :
-  {
-	"eventname": "OnItemCallout",
-	"source": "Le JOAT",
-	"sourceID": "8",
-	"sourceTeam": "Chaos"
-  }
-  ```
-  </details>
-<br>
+- OnSpellLevelup1 ```no information```
+
+- OnSpellLevelup2 ```no information```
+
+- OnSpellLevelup3 ```no information```
+
+- OnSpellLevelup4 ```no information```
+
+- OnSpellEvolve1 ```no information```
+
+- OnSpellEvolve2 ```no information```
+
+- OnSpellEvolve3 ```no information```
+
+- OnSpellEvolve4 ```no information```
+
+- OnItemPurchased ```no information```
+
+- OnItemSold ```no information```
+
+- OnItemRemoved ```no information```
+
+- OnItemUndo ```no information```
+
+- <span style="color:red">**OnItemCallout**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnItemCallout",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnItemCallout",
+		"source": "Le JOAT",
+		"sourceID": "8",
+		"sourceTeam": "Chaos"
+	}
+	```
+	</details>
 
 - OnItemChange ```no information```
-- OnUndoEnabledChange ```no information```
-- OnShopItemSubstitutionChange ```no information```
-- OnShopMenuOpen ```no information```
-- OnShopMenuClose ```no information```
-- OnSurrenderVoteStart ```no information```
-- OnSurrenderVote ```no information```
-- OnSurrenderVoteAlready ```no information```
-- **OnSurrenderFailedVotes**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-	"eventname": "OnSurrenderFailedVotes",
-	"source": "DO U KNO DA WAE",
-	"sourceID": "5",
-	"sourceTeam": "Chaos"
-  }
-  ```
-  </details>
-<br>
+- OnUndoEnabledChange ```no information```
+
+- OnShopItemSubstitutionChange ```no information```
+
+- OnShopMenuOpen ```no information```
+
+- OnShopMenuClose ```no information```
+
+- OnSurrenderVoteStart ```no information```
+
+- OnSurrenderVote ```no information```
+
+- OnSurrenderVoteAlready ```no information```
+
+- <span style="color:red">**OnSurrenderFailedVotes**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnSurrenderFailedVotes",
+		"source": "DO U KNO DA WAE",
+		"sourceID": "5",
+		"sourceTeam": "Chaos"
+	}
+	```
+	</details>
 
 - OnSurrenderTooEarly ```no information```
+
 - OnSurrenderAgreed ```no information```
+
 - OnSurrenderSpam ```no information```
+
 - OnNormalAfkSurrenderAllowed ```no information```
+
 - OnSurrenderEarlyAllowed ```no information```
+
 - OnSurrenderEarlyAccomplice ```no information```
+
 - OnSurrenderEarlyOver ```no information```
+
 - OnSurrenderEarlyFailed ```no information```
+
 - OnSurrenderEarlyFailedNoLongerAvailable ```no information```
+
 - OnSurrenderEarlyFailedDisabled ```no information```
+
 - OnSurrenderEarlyTooEarly ```no information```
+
 - OnSurrenderEarlyFailedNeverAvailable ```no information```
+
 - OnEarlySurrenderVoteStart ```no information```
+
 - OnUnanimousSurrenderVoteStart ```no information```
+
 - OnUnanimousSurrenderFailedVotes ```no information```
+
 - OnUnanimousAfkSurrenderAllowed ```no information```
+
 - OnPause ```no information BUT```
+
 - OnPauseResume ```no information BUT```
-- **OnMinionsSpawn**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-	"eventname": "OnMinionsSpawn"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnMinionsSpawn**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnStartGameMessage1**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnMinionsSpawn"
+	}
+	```
+	</details>
 
-  ```json
-  {
-	"eventname": "OnStartGameMessage1"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnStartGameMessage1**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnStartGameMessage2**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnStartGameMessage1"
+	}
+	```
+	</details>
 
-  ```json
-  {
-	"eventname": "OnStartGameMessage2"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnStartGameMessage2**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnStartGameMessage2"
+	}
+	```
+	</details>
 
 - OnStartGameMessage3 ```no information```
+
 - OnStartGameMessage4 ```no information```
+
 - OnStartGameMessage5 ```no information```
+
 - OnAlert ```no information```
+
 - OnAudioEventFinished ```no information```
-- **OnNexusCrystalStart**
-  <details>
-  <summary><b>Example value</b></summary>
-  
-  ```json
-  {
-	"eventname": "OnNexusCrystalStart"
-  }
-  ```
-  </details>
-<br>
+
+- <span style="color:red">**OnNexusCrystalStart**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+	
+	```json
+	{
+		"eventname": "OnNexusCrystalStart"
+	}
+	```
+	</details>
 
 - OnCapturePointNeutralized_A ```no information```
-- OnCapturePointNeutralized_B ```no information```
-- OnCapturePointNeutralized_C ```no information```
-- OnCapturePointNeutralized_D ```no information```
-- OnCapturePointNeutralized_E ```no information```
-- OnCapturePointCaptured_A ```no information```
-- OnCapturePointCaptured_B ```no information```
-- OnCapturePointCaptured_C ```no information```
-- OnCapturePointCaptured_D ```no information```
-- OnCapturePointCaptured_E ```no information```
-- OnCapturePointFiveCap ```no information```
-- OnVictoryPointThreshold1 ```no information```
-- OnVictoryPointThreshold2 ```no information```
-- OnVictoryPointThreshold3 ```no information```
-- OnVictoryPointThreshold4 ```no information```
-- OnGameModeAnnouncement1 ```no information```
-- OnGameModeAnnouncement2 ```no information```
-- OnGameModeAnnouncement3 ```no information```
-- OnGameModeAnnouncement4 ```no information```
-- **OnGameModeAnnouncement5**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnGameModeAnnouncement5"
-  }
-  ```
-  </details>
-<br>
+- OnCapturePointNeutralized_B ```no information```
+
+- OnCapturePointNeutralized_C ```no information```
+
+- OnCapturePointNeutralized_D ```no information```
+
+- OnCapturePointNeutralized_E ```no information```
+
+- OnCapturePointCaptured_A ```no information```
+
+- OnCapturePointCaptured_B ```no information```
+
+- OnCapturePointCaptured_C ```no information```
+
+- OnCapturePointCaptured_D ```no information```
+
+- OnCapturePointCaptured_E ```no information```
+
+- OnCapturePointFiveCap ```no information```
+
+- OnVictoryPointThreshold1 ```no information```
+
+- OnVictoryPointThreshold2 ```no information```
+
+- OnVictoryPointThreshold3 ```no information```
+
+- OnVictoryPointThreshold4 ```no information```
+
+- OnGameModeAnnouncement1 ```no information```
+
+- OnGameModeAnnouncement2 ```no information```
+
+- OnGameModeAnnouncement3 ```no information```
+
+- OnGameModeAnnouncement4 ```no information```
+
+- <span style="color:red">**OnGameModeAnnouncement5**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnGameModeAnnouncement5"
+	}
+	```
+	</details>
 
 - OnGameModeAnnouncement6 ```no information```
+
 - OnGameModeAnnouncement7 ```no information```
+
 - OnGameModeAnnouncement8 ```no information```
+
 - OnGameModeAnnouncement9 ```no information```
+
 - OnGameModeAnnouncement10 ```no information```
+
 - OnGameModeAnnouncement11 ```no information```
+
 - OnGameModeAnnouncement12 ```no information```
+
 - OnGameModeAnnouncement13 ```no information```
+
 - OnGameModeAnnouncement14 ```no information```
+
 - OnGameModeAnnouncement15 ```no information```
+
 - OnGameModeAnnouncement16 ```no information```
+
 - OnReplayFastForwardStart ```no information```
+
 - OnReplayFastForwardEnd ```no information```
+
 - OnReplayOnKeyframeFinished ```no information```
+
 - OnReplayDestroyAllObjects ```no information```
+
 - OnKillDragon ```no information```
-- **OnKillDragon_Spectator**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnKillDragon_Spectator",
-  	"other": "SRU_Dragon_Fire",
-  	"otherTeam": "Neutral",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnKillDragon_Spectator",
-  	"other": "SRU_Dragon_Air",
-  	"otherTeam": "Neutral",
-  	"source": "DO U KNO DA WAE",
-  	"sourceID": "5",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnKillDragon_Spectator",
-  	"other": "SRU_Dragon_Hextech",
-  	"otherTeam": "Neutral",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillDragon_Spectator**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnKillDragonSteal**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnKillDragon_Spectator",
+		"other": "SRU_Dragon_Fire",
+		"otherTeam": "Neutral",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnKillDragon_Spectator",
+		"other": "SRU_Dragon_Air",
+		"otherTeam": "Neutral",
+		"source": "DO U KNO DA WAE",
+		"sourceID": "5",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnKillDragon_Spectator",
+		"other": "SRU_Dragon_Hextech",
+		"otherTeam": "Neutral",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	
+	```
+	</details>
 
-  ```json
-  {
-  	"eventname": "OnKillDragonSteal",
-  	"other": "SRU_Dragon_Hextech",
-  	"otherTeam": "Neutral",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillDragonSteal**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnKillDragonSteal",
+		"other": "SRU_Dragon_Hextech",
+		"otherTeam": "Neutral",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnKillRiftHerald ```no information```
-- OnKillRiftHerald_Spectator ```no information```
-- OnKillRiftHeraldSteal ```no information```
-- **OnSummonRiftHerald**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnSummonRiftHerald",
-  	"other": "RiftHeraldMercenary",
-  	"otherTeam": "Order",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- OnKillRiftHerald_Spectator ```no information```
+
+- OnKillRiftHeraldSteal ```no information```
+
+- <span style="color:red">**OnSummonRiftHerald**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnSummonRiftHerald",
+		"other": "RiftHeraldMercenary",
+		"otherTeam": "Order",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnKillWorm ```no information```
-- **OnKillWorm_Spectator**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnKillWorm_Spectator",
-  	"other": "SRU_Baron12.1.1",
-  	"otherTeam": "Neutral",
-  	"source": "Simp Eboy",
-  	"sourceID": "1",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnKillWorm_Spectator**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnKillWorm_Spectator",
+		"other": "SRU_Baron12.1.1",
+		"otherTeam": "Neutral",
+		"source": "Simp Eboy",
+		"sourceID": "1",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnKillWormSteal
-- OnKillSpiderBoss ```no information```
-- OnKillSpiderBoss_Spectator ```no information```
-- OnCaptureAltar ```no information```
-- OnCaptureAltar_Spectator ```no information```
-- OnPlaceWard ```no information```
-- **OnKillWard**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnKillWard",
-  	"other": "SightWard",
-  	"otherTeam": "Order",
-  	"source": "DO U KNO DA WAE",
-  	"sourceID": "5",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnKillWard",
-  	"other": "JammerDevice",
-  	"otherTeam": "Chaos",
-  	"source": "WilsonMagicWand",
-  	"sourceID": "0",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- OnKillSpiderBoss ```no information```
+
+- OnKillSpiderBoss_Spectator ```no information```
+
+- OnCaptureAltar ```no information```
+
+- OnCaptureAltar_Spectator ```no information```
+
+- OnPlaceWard ```no information```
+
+- <span style="color:red">**OnKillWard**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnKillWard",
+		"other": "SightWard",
+		"otherTeam": "Order",
+		"source": "DO U KNO DA WAE",
+		"sourceID": "5",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnKillWard",
+		"other": "JammerDevice",
+		"otherTeam": "Chaos",
+		"source": "WilsonMagicWand",
+		"sourceID": "0",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnMinionAscended  ```no information```
-- OnChampionAscended  ```no information```
-- OnClearAscended  ```no information```
-- **OnGameStatEvent**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-  	"eventname": "OnGameStatEvent",
-  	"other": "100M girls Dream",
-  	"otherID": "9",
-  	"otherTeam": "Chaos"
-  }
-  ```
-  </details>
-<br>
+- OnChampionAscended  ```no information```
+
+- OnClearAscended  ```no information```
+
+- <span style="color:red">**OnGameStatEvent**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	{
+		"eventname": "OnGameStatEvent",
+		"other": "100M girls Dream",
+		"otherID": "9",
+		"otherTeam": "Chaos"
+	}
+	```
+	</details>
 
 - OnRelativeTeamColorChange ```no information```
-- OnMapSkinSwap ```no information```
-- OnResetGame ```no information```
-- OnResetGameCompleted ```no information```
-- **OnShutdown**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnShutdown",
-  	"other": "Simp Eboy",
-  	"otherID": "1",
-  	"otherTeam": "Order",
-  	"source": "Osman �st�ner",
-  	"sourceID": "7",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnShutdown",
-  	"other": "Le JOAT",
-  	"otherID": "8",
-  	"otherTeam": "Chaos",
-  	"source": "WilsonMagicWand",
-  	"sourceID": "0",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- OnMapSkinSwap ```no information```
+
+- OnResetGame ```no information```
+
+- OnResetGameCompleted ```no information```
+
+- <span style="color:red">**OnShutdown**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnShutdown",
+		"other": "Simp Eboy",
+		"otherID": "1",
+		"otherTeam": "Order",
+		"source": "Osman �st�ner",
+		"sourceID": "7",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnShutdown",
+		"other": "Le JOAT",
+		"otherID": "8",
+		"otherTeam": "Chaos",
+		"source": "WilsonMagicWand",
+		"sourceID": "0",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnMute ```no information```
+
 - OnChampionTransformNone ```no information```
+
 - OnChampionTransformAssassin ```no information```
+
 - OnChampionTransformSlayer ```no information```
-- **OnReceiveShield**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnReceiveShield",
-  	"source": "100M girls Dream",
-  	"sourceID": "9",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnReceiveShield",
-  	"source": "Sru_Crab15.1.1",
-  	"sourceTeam": "Neutral"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnReceiveShield",
-  	"source": "Sru_Crab16.1.1",
-  	"sourceTeam": "Neutral"
-  }
-  Exemple 4 :
-  {
-  	"eventname": "OnReceiveShield",
-  	"source": "WilsonMagicWand",
-  	"sourceID": "0",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnReceiveShield**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnGrantShield**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnReceiveShield",
+		"source": "100M girls Dream",
+		"sourceID": "9",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnReceiveShield",
+		"source": "Sru_Crab15.1.1",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnReceiveShield",
+		"source": "Sru_Crab16.1.1",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 4 :
+	{
+		"eventname": "OnReceiveShield",
+		"source": "WilsonMagicWand",
+		"sourceID": "0",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnGrantShield",
-  	"source": "HuSaw",
-  	"sourceID": "3",
-  	"sourceTeam": "Order"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnGrantShield",
-  	"source": "Osman �st�ner",
-  	"sourceID": "7",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnGrantShield",
-  	"source": "Sru_Crab15.1.1",
-  	"sourceTeam": "Neutral"
-  }
-  Exemple 4 :
-  {
-  	"eventname": "OnGrantShield",
-  	"source": "Sru_Crab16.1.1",
-  	"sourceTeam": "Neutral"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnGrantShield**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnGrantShield",
+		"source": "HuSaw",
+		"sourceID": "3",
+		"sourceTeam": "Order"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnGrantShield",
+		"source": "Osman �st�ner",
+		"sourceID": "7",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnGrantShield",
+		"source": "Sru_Crab15.1.1",
+		"sourceTeam": "Neutral"
+	}
+	Exemple 4 :
+	{
+		"eventname": "OnGrantShield",
+		"source": "Sru_Crab16.1.1",
+		"sourceTeam": "Neutral"
+	}
+	```
+	</details>
 
 - OnDamageShielded ```no information```
-- OnMaterialOverride ```no information```
-- OnObjectiveStolen ```no information```
-- OnObjectiveTaken ```no information```
-- OnNextDragonQueued ```no information```
-- OnGearChanged ```no information```
-- **OnSummonerEmotePlayed**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnSummonerEmotePlayed",
-  	"source": "Phenix NemBot",
-  	"sourceID": "4",
-  	"sourceTeam": "Order"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnSummonerEmotePlayed",
-  	"source": "Pou Lord",
-  	"sourceID": "6",
-  	"sourceTeam": "Chaos"
-  }
-  ```
-  </details>
-<br>
+- OnMaterialOverride ```no information```
+
+- OnObjectiveStolen ```no information```
+
+- OnObjectiveTaken ```no information```
+
+- OnNextDragonQueued ```no information```
+
+- OnGearChanged ```no information```
+
+- <span style="color:red">**OnSummonerEmotePlayed**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnSummonerEmotePlayed",
+		"source": "Phenix NemBot",
+		"sourceID": "4",
+		"sourceTeam": "Order"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnSummonerEmotePlayed",
+		"source": "Pou Lord",
+		"sourceID": "6",
+		"sourceTeam": "Chaos"
+	}
+	```
+	</details>
 
 - OnSummonerEmoteEnd ```no information```
+
 - OnCustomStatStoneEvent ```no information```
-- **OnStatStoneMilestoneHitEvent**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  {
-	"eventname": "OnStatStoneMilestoneHitEvent"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnStatStoneMilestoneHitEvent**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnEnterStealth**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	{
+		"eventname": "OnStatStoneMilestoneHitEvent"
+	}
+	```
+	</details>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnEnterStealth",
-  	"other": "VisionWard",
-  	"otherTeam": "Chaos",
-  	"source": "VisionWard",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnEnterStealth",
-  	"other": "VisionWard",
-  	"otherTeam": "Order",
-  	"source": "VisionWard",
-  	"sourceTeam": "Order"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnEnterStealth",
-  	"other": "SightWard",
-  	"otherTeam": "Order",
-  	"source": "SightWard",
-  	"sourceTeam": "Order"
-  }
-  Exemple 4 :
-  {
-  	"eventname": "OnEnterStealth",
-  	"other": "SightWard",
-  	"otherTeam": "Chaos",
-  	"source": "SightWard",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 5 :
-  {
-  	"eventname": "OnEnterStealth",
-  	"other": "HuSaw",
-  	"otherID": "3",
-  	"otherTeam": "Order",
-  	"source": "HuSaw",
-  	"sourceID": "3",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnEnterStealth**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
-- **OnExitStealth**
-  <details>
-  <summary><b>Example value</b></summary>
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnEnterStealth",
+		"other": "VisionWard",
+		"otherTeam": "Chaos",
+		"source": "VisionWard",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnEnterStealth",
+		"other": "VisionWard",
+		"otherTeam": "Order",
+		"source": "VisionWard",
+		"sourceTeam": "Order"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnEnterStealth",
+		"other": "SightWard",
+		"otherTeam": "Order",
+		"source": "SightWard",
+		"sourceTeam": "Order"
+	}
+	Exemple 4 :
+	{
+		"eventname": "OnEnterStealth",
+		"other": "SightWard",
+		"otherTeam": "Chaos",
+		"source": "SightWard",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 5 :
+	{
+		"eventname": "OnEnterStealth",
+		"other": "HuSaw",
+		"otherID": "3",
+		"otherTeam": "Order",
+		"source": "HuSaw",
+		"sourceID": "3",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnExitStealth",
-  	"other": "SightWard",
-  	"otherTeam": "Order",
-  	"source": "SightWard",
-  	"sourceTeam": "Order"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnExitStealth",
-  	"other": "SightWard",
-  	"otherTeam": "Chaos",
-  	"source": "SightWard",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnExitStealth",
-  	"other": "VisionWard",
-  	"otherTeam": "Chaos",
-  	"source": "VisionWard",
-  	"sourceTeam": "Chaos"
-  }
-  Exemple 4 :
-  {
-  	"eventname": "OnExitStealth",
-  	"other": "VisionWard",
-  	"otherTeam": "Order",
-  	"source": "VisionWard",
-  	"sourceTeam": "Order"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnExitStealth**</span>
+	<details>
+	<summary><b>Example value</b></summary>
+
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnExitStealth",
+		"other": "SightWard",
+		"otherTeam": "Order",
+		"source": "SightWard",
+		"sourceTeam": "Order"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnExitStealth",
+		"other": "SightWard",
+		"otherTeam": "Chaos",
+		"source": "SightWard",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnExitStealth",
+		"other": "VisionWard",
+		"otherTeam": "Chaos",
+		"source": "VisionWard",
+		"sourceTeam": "Chaos"
+	}
+	Exemple 4 :
+	{
+		"eventname": "OnExitStealth",
+		"other": "VisionWard",
+		"otherTeam": "Order",
+		"source": "VisionWard",
+		"sourceTeam": "Order"
+	}
+	```
+	</details>
 
 - OnPetSpawned ```no information```
+
 - OnLifeSteal ```no information```
+
 - OnSpellVamp ```no information```
+
 - OnLocalPlayerLoadoutBound ```no information```
-- **OnTurretPlateDestroyed**
-  <details>
-  <summary><b>Example value</b></summary>
 
-  ```json
-  Exemple 1 :
-  {
-  	"eventname": "OnTurretPlateDestroyed",
-  	"other": "Turret_T1_C_05_A",
-  	"otherTeam": "Order",
-  	"source": "Turret_T1_C_05_A",
-  	"sourceTeam": "Order"
-  }
-  Exemple 2 :
-  {
-  	"eventname": "OnTurretPlateDestroyed",
-  	"other": "Turret_T1_R_03_A",
-  	"otherTeam": "Order",
-  	"source": "Turret_T1_R_03_A",
-  	"sourceTeam": "Order"
-  }
-  Exemple 3 :
-  {
-  	"eventname": "OnTurretPlateDestroyed",
-  	"other": "Turret_T2_L_03_A",
-  	"otherTeam": "Chaos",
-  	"source": "Turret_T2_L_03_A",
-  	"sourceTeam": "Chaos"
-  }
-  ```
-  </details>
-<br>
+- <span style="color:red">**OnTurretPlateDestroyed**</span>
+	<details>
+	<summary><b>Example value</b></summary>
 
+	```json
+	Exemple 1 :
+	{
+		"eventname": "OnTurretPlateDestroyed",
+		"other": "Turret_T1_C_05_A",
+		"otherTeam": "Order",
+		"source": "Turret_T1_C_05_A",
+		"sourceTeam": "Order"
+	}
+	Exemple 2 :
+	{
+		"eventname": "OnTurretPlateDestroyed",
+		"other": "Turret_T1_R_03_A",
+		"otherTeam": "Order",
+		"source": "Turret_T1_R_03_A",
+		"sourceTeam": "Order"
+	}
+	Exemple 3 :
+	{
+		"eventname": "OnTurretPlateDestroyed",
+		"other": "Turret_T2_L_03_A",
+		"otherTeam": "Chaos",
+		"source": "Turret_T2_L_03_A",
+		"sourceTeam": "Chaos"
+	}
+	```
+	</details>
+	
 - OnPlantActivated ```no information```
+
 - OnEnterPlayerVisibility ```no information```
+
 - OnDragonSoulGiven ```no information```
+
 - OnDisconnect ```no information```
+
 - OnConnect ```no information```
 
-#### Information that can be found 
-- Turret :
-```
-Turret_T1_L_03_A //T1 Top Blue
-Turret_T1_L_02_A //T2 Top Blue
-Turret_T1_C_06_A //T3 Top Blue
+### Information in "eventname" that can be found 
 
-Turret_T1_R_03_A //T1 Bot Blue
-Turret_T1_R_02_A //T2 Bot Blue
-Turret_T1_C_07_A //T3 Bot Blue
+- **Turret :**
+	<details>
+	<summary><b>Data</b></summary>
+	
+	```
+	Turret_T1_L_03_A //T1 Top Blue
+	Turret_T1_L_02_A //T2 Top Blue
+	Turret_T1_C_06_A //T3 Top Blue
 
-Turret_T1_C_05_A //T1 Mid Blue
-Turret_T1_C_04_A //T2 Mid Blue
-Turret_T1_C_03_A //T3 Mid Blue
+	Turret_T1_R_03_A //T1 Bot Blue
+	Turret_T1_R_02_A //T2 Bot Blue
+	Turret_T1_C_07_A //T3 Bot Blue
 
-Turret_T1_C_01_A //T4 Nexus Top Blue
-Turret_T1_C_02_A //T4 Nexus Bot Blue
+	Turret_T1_C_05_A //T1 Mid Blue
+	Turret_T1_C_04_A //T2 Mid Blue
+	Turret_T1_C_03_A //T3 Mid Blue
 
-Turret_T2_L_03_A //T1 Top Red
-Turret_T2_L_02_A //T2 Top Red
-Turret_T2_L_01_A //T3 Top Red
+	Turret_T1_C_01_A //T4 Nexus Top Blue
+	Turret_T1_C_02_A //T4 Nexus Bot Blue
 
-Turret_T2_R_03_A //T1 Bot Red
-Turret_T2_R_02_A //T2 Bot Red
-Turret_T2_R_01_A //T3 Bot Red
+	Turret_T2_L_03_A //T1 Top Red
+	Turret_T2_L_02_A //T2 Top Red
+	Turret_T2_L_01_A //T3 Top Red
 
-Turret_T2_C_05_A //T1 Bot Red
-Turret_T2_C_04_A //T2 Bot Red
-Turret_T2_C_03_A //T3 Bot Red
+	Turret_T2_R_03_A //T1 Bot Red
+	Turret_T2_R_02_A //T2 Bot Red
+	Turret_T2_R_01_A //T3 Bot Red
 
-Turret_T2_C_02_A //T4 Nexus Top Red
-Turret_T2_C_01_A //T4 Nexus Bot Red
-```
+	Turret_T2_C_05_A //T1 Bot Red
+	Turret_T2_C_04_A //T2 Bot Red
+	Turret_T2_C_03_A //T3 Bot Red
 
-- Inib :
-```
-Not information in game
-Barracks_T1_L1 //Inib Top Blue
-Barracks_T1_R1 //Inib Bot Blue
-Barracks_T1_C1 //Inib Mid Blue
+	Turret_T2_C_02_A //T4 Nexus Top Red
+	Turret_T2_C_01_A //T4 Nexus Bot Red
+	```
+	</details>
 
-Barracks_T2_L1 //Inib Top Red
-Barracks_T2_R1 //Inib Bot Red
-Barracks_T2_C1 //Inib Mid Red
-```
+- Inib ```Not information in game```
 
-- Jungler Mobs :
-    - Dragons :
+- **Dragons :**
+	<details>
+	<summary><b>Data</b></summary>
+
 	```
 	SRU_Dragon_Fire
 	SRU_Dragon_Air
@@ -2446,23 +2503,35 @@ Barracks_T2_C1 //Inib Mid Red
 	SRU_Dragon_
 	SRU_Dragon_Elder
 	```
-    - Herald :
+	</details>
+
+- **Herald :**
+	<details>
+	<summary><b>Data</b></summary>
+
 	```
 	SRU_RiftHerald17.1.1
 	Rift Herald Relic
 	RiftHeraldMercenary
 	```
-    - Baron :
+	</details>
+
+- **Baron :**
+	<details>
+	<summary><b>Data</b></summary>
+
 	```
 	SRU_BaronSpawn12.1.2
 	SRU_Baron12.1.1
 	```
-    - Red
-	- Blue
-	- Wolf
-	- Gromp
-	- Crab
-	- Krug
-	- Razorbeak
-	- WardCorpse
-	- PlantVision
+	</details>
+
+- Red
+- Blue
+- Wolf
+- Gromp
+- Crab
+- Krug
+- Razorbeak
+- WardCorpse
+- PlantVision

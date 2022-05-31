@@ -1,4 +1,4 @@
-# Developper Documentation **server**
+# Developper Documentation **Server**
 
 > [!WARNING] 
 > **Documentation in progress** 

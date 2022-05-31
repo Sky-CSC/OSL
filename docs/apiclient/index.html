@@ -5,9 +5,9 @@
     <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Developper Documentation client | OSL </title>
+      <title>Developper Documentation Client | OSL </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Developper Documentation client | OSL ">
+      <meta name="title" content="Developper Documentation Client | OSL ">
       <meta name="generator" content="docfx 2.59.0.0">
       
       <link rel="shortcut icon" href="../picture/Icone_Feu.png">
@@ -90,7 +90,7 @@
                         </div>
 
                     <article class="content wrap" id="_content" data-uid="">
-<h1 id="developper-documentation-client">Developper Documentation <strong>client</strong></h1>
+<h1 id="developper-documentation-client">Developper Documentation <strong>Client</strong></h1>
 
 <div class="WARNING">
 <h5>Warning</h5>
@@ -236,91 +236,81 @@ OnChampionKill
 <br><a href="../misc/lol-champ-selectv1session-ExampleValue-1.json">Pick Phase</a>
 <br><a href="../misc/lol-champ-selectv1session-ExampleValue-1.json">End Phase</a></p>
 <hr>
-<h2 id="local-game-information-ingame"><ins>Local game information &quot;InGame&quot;</ins></h2>
+<h2 id="local-game-information-ingame"><ins><strong>Local game information &quot;InGame&quot;</strong></ins></h2>
 <p>This information about the game is sent to the server, it is retrieved by the different APIs.</p>
-<ul>
-<li><p>Drakes (Elder, Fire, Hextech, Air, Water, Chemtech, Earth) <strong>Check Data !!</strong></p>
-<details>
-<summary><b>API</b></summary>
+<h2 id="drakes-elder-fire-hextech-air-water-chemtech-earth-check-data-">Drakes (Elder, Fire, Hextech, Air, Water, Chemtech, Earth) <strong>Check Data !!</strong></h2>
 <pre><code class="lang-diff">- Live Events API :
 OnKillDragon_Spectator (default)
 OnKill
 OnNeutralMinionKill	
 </code></pre>
 <details>
-<summary><b>Example value</b></summary>
+	<summary><b>Example value</b></summary>
 <pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Sky csc&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
+	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+	&quot;other&quot;: &quot;SRU_Dragon_&quot;,
+	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+	&quot;source&quot;: &quot;Sky csc&quot;,
+	&quot;sourceID&quot;: &quot;6&quot;,
+	&quot;sourceTeam&quot;: &quot;Chaos&quot;
 }
 or
 {
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Fire&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Sky csc&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
+	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+	&quot;other&quot;: &quot;SRU_Dragon_Fire&quot;,
+	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+	&quot;source&quot;: &quot;Sky csc&quot;,
+	&quot;sourceID&quot;: &quot;6&quot;,
+	&quot;sourceTeam&quot;: &quot;Chaos&quot;
 }
 or
 {
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Hextech&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Sky csc&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
+	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+	&quot;other&quot;: &quot;SRU_Dragon_Hextech&quot;,
+	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+	&quot;source&quot;: &quot;Sky csc&quot;,
+	&quot;sourceID&quot;: &quot;1&quot;,
+	&quot;sourceTeam&quot;: &quot;Order&quot;
 }
 or
 {
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Air&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Sky csc&quot;,
-  &quot;sourceID&quot;: &quot;5&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
+	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+	&quot;other&quot;: &quot;SRU_Dragon_Air&quot;,
+	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+	&quot;source&quot;: &quot;Sky csc&quot;,
+	&quot;sourceID&quot;: &quot;5&quot;,
+	&quot;sourceTeam&quot;: &quot;Chaos&quot;
 }
 or
 {
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Water&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Sky csc&quot;,
-  &quot;sourceID&quot;: &quot;5&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
+	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+	&quot;other&quot;: &quot;SRU_Dragon_Water&quot;,
+	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+	&quot;source&quot;: &quot;Sky csc&quot;,
+	&quot;sourceID&quot;: &quot;5&quot;,
+	&quot;sourceTeam&quot;: &quot;Chaos&quot;
 }
 or
 {
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Chemtech&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Sky csc&quot;,
-  &quot;sourceID&quot;: &quot;5&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
+	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+	&quot;other&quot;: &quot;SRU_Dragon_Chemtech&quot;,
+	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+	&quot;source&quot;: &quot;Sky csc&quot;,
+	&quot;sourceID&quot;: &quot;5&quot;,
+	&quot;sourceTeam&quot;: &quot;Chaos&quot;
 }
 or
 {
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Earth&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Sky csc&quot;,
-  &quot;sourceID&quot;: &quot;5&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
+	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+	&quot;other&quot;: &quot;SRU_Dragon_Earth&quot;,
+	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+	&quot;source&quot;: &quot;Sky csc&quot;,
+	&quot;sourceID&quot;: &quot;5&quot;,
+	&quot;sourceTeam&quot;: &quot;Chaos&quot;
 }
 </code></pre>
-
-
-</details></details></li>
-</ul>
-<br>
-<ul>
-<li><p>Baron</p>
-<details>
-<summary><b>API</b></summary>
+</details>
+<h2 id="baron">Baron</h2>
 <pre><code class="lang-diff">- Live Events API :
 OnKillWorm_Spectator (default)
 OnKill
@@ -328,90 +318,75 @@ OnNeutralMinionKill
 </code></pre>
 <details>
 <summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnKillWorm_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Baron12.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Sky csc&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
+  
+```json
+{
+	"eventname": "OnKillWorm_Spectator",
+	"other": "SRU_Baron12.1.1",
+	"otherTeam": "Neutral",
+	"source": "Sky csc",
+	"sourceID": "1",
+	"sourceTeam": "Order"
 }
-</code></pre>
-
-
-</details></details></li>
-</ul>
-<br>
-<ul>
-<li>Herald
+```
+</details>
+<h2 id="herald">Herald</h2>
 <ul>
 <li><p>Kill</p>
-<details>
-<summary><b>API</b></summary>
 <pre><code class="lang-diff">- Live Events API :
 OnNeutralMinionKill (default)
 OnKill
 </code></pre>
-<details>
-<summary><b>Example value</b></summary>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+    &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
+    &quot;other&quot;: &quot;SRU_RiftHerald17.1.1&quot;,
+    &quot;otherTeam&quot;: &quot;Neutral&quot;,
+    &quot;source&quot;: &quot;Sky csc&quot;,
+    &quot;sourceID&quot;: &quot;1&quot;,
+    &quot;sourceTeam&quot;: &quot;Order&quot;
+}
+</code></pre>
+  
+</details></li>
+<li><p>Take Relic :</p>
+<pre><code class="lang-diff">- Live Events API :
+OnMinionKill (default)	
+  OnKill
+</code></pre>
+  <details>
+  <summary><b>Example value</b></summary>
 <pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
-  &quot;other&quot;: &quot;SRU_RiftHerald17.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
+    &quot;eventname&quot;: &quot;OnMinionKill&quot;,
+    &quot;other&quot;: &quot;Rift Herald Relic&quot;,
+    &quot;otherTeam&quot;: &quot;Order&quot;,
+    &quot;source&quot;: &quot;SRU_RiftHerald17.1.1&quot;,
+    &quot;sourceTeam&quot;: &quot;Neutral&quot;
+}
+</code></pre>
+  
+</details></li>
+<li><p>Launch :</p>
+<pre><code class="lang-diff">- Live Events API :	
+  OnSummonRiftHerald (default)	
+</code></pre>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  &quot;eventname&quot;: &quot;OnSummonRiftHerald&quot;,
+  &quot;other&quot;: &quot;RiftHeraldMercenary&quot;,
+  &quot;otherTeam&quot;: &quot;Order&quot;,
   &quot;source&quot;: &quot;Sky csc&quot;,
   &quot;sourceID&quot;: &quot;1&quot;,
   &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+  }
 </code></pre>
-<p>
-</details></details></li>
-<li><p>Take Relic :</p>
-<details>
-<summary><b>API</b></summary>
-<pre><code class="lang-diff">- Live Events API :
-OnMinionKill (default)	
-OnKill
-</code></pre>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnMinionKill&quot;,
-  &quot;other&quot;: &quot;Rift Herald Relic&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;SRU_RiftHerald17.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-</code></pre>
-<p>
-</details></details></li>
-<li><p>Launch :</p>
-<details>
-<summary><b>API</b></summary>
-<pre><code class="lang-diff">- Live Events API :	
-OnSummonRiftHerald (default)	
-</code></pre>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-&quot;eventname&quot;: &quot;OnSummonRiftHerald&quot;,
-&quot;other&quot;: &quot;RiftHeraldMercenary&quot;,
-&quot;otherTeam&quot;: &quot;Order&quot;,
-&quot;source&quot;: &quot;Sky csc&quot;,
-&quot;sourceID&quot;: &quot;1&quot;,
-&quot;sourceTeam&quot;: &quot;Order&quot;
-}
-</code></pre>
-
-
-</details></details></li>
-</ul>
-</li>
+  
+</details></li>
 </ul>
 <br>
-<ul>
-<li><p>Turret</p>
-<details>
-<summary><b>API</b></summary>
+<h2 id="turret">Turret</h2>
 <pre><code class="lang-diff">- Live Events API :
 OnTurretDie (default)
 - Game Client API :
@@ -420,40 +395,33 @@ https://127.0.0.1:2999/liveclientdata/allgamedata
 <details>
 <summary><b>Example value</b></summary>
 <pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnTurretDie&quot;,
-  &quot;other&quot;: &quot;Sky csc&quot;,
-  &quot;otherID&quot;: &quot;0&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Turret_T2_R_03_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
+	&quot;eventname&quot;: &quot;OnTurretDie&quot;,
+	&quot;other&quot;: &quot;Sky csc&quot;,
+	&quot;otherID&quot;: &quot;0&quot;,
+	&quot;otherTeam&quot;: &quot;Order&quot;,
+	&quot;source&quot;: &quot;Turret_T2_R_03_A&quot;,
+	&quot;sourceTeam&quot;: &quot;Chaos&quot;
 }
 or
 {
-  &quot;eventname&quot;: &quot;OnTurretDie&quot;,
-  &quot;other&quot;: &quot;Minion_T200L2S26N0162&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Turret_T1_L_03_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
+	&quot;eventname&quot;: &quot;OnTurretDie&quot;,
+	&quot;other&quot;: &quot;Minion_T200L2S26N0162&quot;,
+	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+	&quot;source&quot;: &quot;Turret_T1_L_03_A&quot;,
+	&quot;sourceTeam&quot;: &quot;Order&quot;
 }
 or
 {
-  &quot;eventname&quot;: &quot;OnTurretDie&quot;,
-  &quot;other&quot;: &quot;Sky csc&quot;,
-  &quot;otherID&quot;: &quot;7&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Turret_T1_R_02_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
+	&quot;eventname&quot;: &quot;OnTurretDie&quot;,
+	&quot;other&quot;: &quot;Sky csc&quot;,
+	&quot;otherID&quot;: &quot;7&quot;,
+	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+	&quot;source&quot;: &quot;Turret_T1_R_02_A&quot;,
+	&quot;sourceTeam&quot;: &quot;Order&quot;
 }
 </code></pre>
-
-
-</details></details></li>
-</ul>
-<br>
-<ul>
-<li><p>Inib <strong>Check Data !!</strong></p>
-<details>
-<summary><b>API</b></summary>
+</details>
+<h2 id="inib-check-data-">Inib <strong>Check Data !!</strong></h2>
 <pre><code class="lang-diff">- Game Client API :
 https://127.0.0.1:2999/liveclientdata/allgamedata (default)
 - Live Events API :
@@ -465,15 +433,8 @@ OnDampenerDie
 
 }
 </code></pre>
-
-
-</details></details></li>
-</ul>
-<br>
-<ul>
-<li><p>Minion <strong>Check Data !!</strong></p>
-<details>
-<summary><b>API</b></summary>
+</details>
+<h2 id="minion-check-data-">Minion <strong>Check Data !!</strong></h2>
 <pre><code class="lang-diff">- Live Events API :
 OnMinionKill (default)
 OnKill (default for &quot;HiddenMinion&quot;)
@@ -484,15 +445,9 @@ OnKill (default for &quot;HiddenMinion&quot;)
 
 }
 </code></pre>
-
-
-</details></details></li>
-</ul>
+</details>
 <br>
-<ul>
-<li><p>Summoner Kill <strong>Check Data !!</strong></p>
-<details>
-<summary><b>API</b></summary>
+<h2 id="summoner-kill-check-data-">Summoner Kill <strong>Check Data !!</strong></h2>
 <pre><code class="lang-diff">- Live Events API :
 OnChampionKill (default)
 OnDeathAssist (default)
@@ -508,15 +463,8 @@ https://127.0.0.1:2999/liveclientdata/playerlist
 
 }
 </code></pre>
-
-
-</details></details></li>
-</ul>
-<br>
-<ul>
-<li><p>Item <strong>Check Data !!</strong></p>
-<details>
-<summary><b>API</b></summary>
+</details>
+<h2 id="item-check-data-">Item <strong>Check Data !!</strong></h2>
 <pre><code class="lang-diff">- Game Client API :
 https://127.0.0.1:2999/liveclientdata/playerlist
 https://127.0.0.1:2999/liveclientdata/playeritems?summonerName=Phenix%20NemBot
@@ -527,15 +475,8 @@ https://127.0.0.1:2999/liveclientdata/playeritems?summonerName=Phenix%20NemBot
 
 }
 </code></pre>
-
-
-</details></details></li>
-</ul>
-<br>
-<ul>
-<li><p>Ward <strong>Check Data !!</strong></p>
-<details>
-<summary><b>API</b></summary>
+</details>
+<h2 id="ward-check-data-">Ward <strong>Check Data !!</strong></h2>
 <pre><code class="lang-diff">- Game Client API :
 https://127.0.0.1:2999/liveclientdata/playerlist
 </code></pre>
@@ -545,15 +486,8 @@ https://127.0.0.1:2999/liveclientdata/playerlist
 
 }
 </code></pre>
-
-
-</details></details></li>
-</ul>
-<br>
-<ul>
-<li><p>Summoners Spell <strong>Check Data !!</strong></p>
-<details>
-<summary><b>API</b></summary>
+</details>
+<h2 id="summoners-spell-check-data-">Summoners Spell <strong>Check Data !!</strong></h2>
 <pre><code class="lang-diff">- Game Client API :
 https://127.0.0.1:2999/liveclientdata/playerlist
 </code></pre>
@@ -563,15 +497,8 @@ https://127.0.0.1:2999/liveclientdata/playerlist
 
 }
 </code></pre>
-
-
-</details></details></li>
-</ul>
-<br>
-<ul>
-<li><p>Level Up <strong>Check Data !!</strong></p>
-<details>
-<summary><b>API</b></summary>
+</details>
+<h2 id="level-up-check-data-">Level Up <strong>Check Data !!</strong></h2>
 <pre><code class="lang-diff">- Game Client API :
 https://127.0.0.1:2999/liveclientdata/playerlist
 </code></pre>
@@ -581,54 +508,39 @@ https://127.0.0.1:2999/liveclientdata/playerlist
 
 }
 </code></pre>
-
-
-</details></details></li>
-</ul>
-<br>
-<ul>
-<li><p>Position</p>
+</details>
+<h2 id="position">Position</h2>
 <pre><code class="lang-diff">- Read in memory
 </code></pre>
-</li>
-<li><p>Mana</p>
+<h2 id="mana">Mana</h2>
 <pre><code class="lang-diff">- Read in memory
 </code></pre>
-</li>
-<li><p>MaxMana</p>
+<h2 id="maxmana">MaxMana</h2>
 <pre><code class="lang-diff">- Read in memory
 </code></pre>
-</li>
-<li><p>Health</p>
+<h2 id="health">Health</h2>
 <pre><code class="lang-diff">- Read in memory
 </code></pre>
-</li>
-<li><p>MaxHealth</p>
+<h2 id="maxhealth">MaxHealth</h2>
 <pre><code class="lang-diff">- Read in memory
 </code></pre>
-</li>
-<li><p>CurrentGold</p>
+<h2 id="currentgold">CurrentGold</h2>
 <pre><code class="lang-diff">- Read in memory
 </code></pre>
-</li>
-<li><p>GoldTotal</p>
+<h2 id="goldtotal">GoldTotal</h2>
 <pre><code class="lang-diff">- Read in memory
 </code></pre>
-</li>
-<li><p>EXP</p>
+<h2 id="exp">EXP</h2>
 <pre><code class="lang-diff">- Read in memory
 </code></pre>
-</li>
-<li><p>Damages</p>
+<h2 id="damages">Damages</h2>
 <pre><code class="lang-diff">- Unknown
 </code></pre>
-</li>
-</ul>
 <hr>
-<h2 id="documentation-of-live-events-api">Documentation of <strong>Live Events API</strong></h2>
+<h2 id="documentation-of-live-events-api"><ins>Documentation of <strong>Live Events API</strong></ins></h2>
 <p>This documentation concern just <strong>Replay</strong> or <strong>Spectator</strong> mode
 If he is note <code>no information</code> he is possible he exist in other game mode or I juts don't found it in a spécific game</p>
-<h4 id="patern-">Patern :</h4>
+<h2 id="patern-">Patern :</h2>
 <ul>
 <li><strong>&quot;eventname&quot;</strong>: Name of the event</li>
 <li><strong>&quot;other&quot;</strong> : Name of the summoner, turret or mobs (minion, neutral mobs, drake, nash, ...) in game he is impacted by the action</li>
@@ -648,503 +560,470 @@ If he is note <code>no information</code> he is possible he exist in other game 
 	&quot;sourceTeam&quot;: &quot;string?&quot; //Possible to be null
 }
 </code></pre>
-<h4 id="all-the-information-">All the information :</h4>
+<h2 id="all-the-information-">All the information :</h2>
 <ul>
-<li><p><strong>OnDelete</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnDelete&quot;
-}
+<li><p><span style="color:red"><strong>OnDelete</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnDelete&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnSpawn <code>no information</code></p>
 </li>
-<li><p><strong>OnDie</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1: 
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;otherID&quot;: &quot;0&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Le JOAT&quot;,
-  &quot;sourceID&quot;: &quot;8&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Turret_T1_R_03_A&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;100M girls Dream&quot;,
-  &quot;sourceID&quot;: &quot;9&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 3:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Phenix NemBot&quot;,
-  &quot;otherID&quot;: &quot;4&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;ThreshLostSoul&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 4:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;CampRespawn&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;CampRespawn&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 5:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Simp Eboy&quot;,
-  &quot;otherID&quot;: &quot;1&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;SRU_Red4.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 6:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;ScrandHD&quot;,
-  &quot;otherID&quot;: &quot;2&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Minion_T200L1S01N0001&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 7:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Minion_T100L1S01N0003&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Minion_T200L1S01N0000&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 8:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Pou Lord&quot;,
-  &quot;otherID&quot;: &quot;6&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;SRU_MurkwolfMini8.1.3&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 9:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Osman �st�ner&quot;,
-  &quot;otherID&quot;: &quot;7&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Minion_T100L1S01N0001&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 10:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;DO U KNO DA WAE&quot;,
-  &quot;otherID&quot;: &quot;5&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;BlobDrop&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 11:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;ScrandHD&quot;,
-  &quot;otherID&quot;: &quot;2&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;EyebeamVision&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 12:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;ScrandHD&quot;,
-  &quot;otherID&quot;: &quot;2&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Poot&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 13:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;HuSaw&quot;,
-  &quot;otherID&quot;: &quot;3&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;SightWard&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 14
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Turret_T1_L_03_A&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Minion_T200L2S01N0000&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 14:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Pou Lord&quot;,
-  &quot;otherID&quot;: &quot;6&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;SRU_Gromp14.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 15:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Pou Lord&quot;,
-  &quot;otherID&quot;: &quot;6&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;SRU_Blue7.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 16:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Simp Eboy&quot;,
-  &quot;otherID&quot;: &quot;1&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;SRU_Blue1.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-} 
-Exemple 17:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;100M girls Dream&quot;,
-  &quot;otherID&quot;: &quot;9&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Phenix NemBot&quot;,
-  &quot;sourceID&quot;: &quot;4&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 18:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Phenix NemBot&quot;,
-  &quot;otherID&quot;: &quot;4&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;100M girls Dream&quot;,
-  &quot;sourceID&quot;: &quot;9&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 19:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;WardCorpse&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;WardCorpse&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 20:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Pou Lord&quot;,
-  &quot;otherID&quot;: &quot;6&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;SRU_RazorbeakMini9.1.5&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 21:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Pou Lord&quot;,
-  &quot;otherID&quot;: &quot;6&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;SRU_RazorbeakMini9.1.6&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 22:
-{
-  &quot;eventname&quot;: &quot;OnDie&quot;,
-  &quot;other&quot;: &quot;Pou Lord&quot;,
-  &quot;otherID&quot;: &quot;6&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;SRU_Razorbeak9.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-.....
+<li><p><span style="color:red"><strong>OnDie</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1: 
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;otherID&quot;: &quot;0&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Le JOAT&quot;,
+  	&quot;sourceID&quot;: &quot;8&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Turret_T1_R_03_A&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;100M girls Dream&quot;,
+  	&quot;sourceID&quot;: &quot;9&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 3:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;otherID&quot;: &quot;4&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;ThreshLostSoul&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 4:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;CampRespawn&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;CampRespawn&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 5:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Simp Eboy&quot;,
+  	&quot;otherID&quot;: &quot;1&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;SRU_Red4.1.1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 6:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;ScrandHD&quot;,
+  	&quot;otherID&quot;: &quot;2&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Minion_T200L1S01N0001&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 7:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Minion_T100L1S01N0003&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Minion_T200L1S01N0000&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 8:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Pou Lord&quot;,
+  	&quot;otherID&quot;: &quot;6&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;SRU_MurkwolfMini8.1.3&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 9:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Osman �st�ner&quot;,
+  	&quot;otherID&quot;: &quot;7&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Minion_T100L1S01N0001&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 10:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;DO U KNO DA WAE&quot;,
+  	&quot;otherID&quot;: &quot;5&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;BlobDrop&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 11:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;ScrandHD&quot;,
+  	&quot;otherID&quot;: &quot;2&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;EyebeamVision&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 12:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;ScrandHD&quot;,
+  	&quot;otherID&quot;: &quot;2&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Poot&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 13:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;HuSaw&quot;,
+  	&quot;otherID&quot;: &quot;3&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;SightWard&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 14
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Turret_T1_L_03_A&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Minion_T200L2S01N0000&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 14:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Pou Lord&quot;,
+  	&quot;otherID&quot;: &quot;6&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;SRU_Gromp14.1.1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 15:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Pou Lord&quot;,
+  	&quot;otherID&quot;: &quot;6&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;SRU_Blue7.1.1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 16:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Simp Eboy&quot;,
+  	&quot;otherID&quot;: &quot;1&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;SRU_Blue1.1.1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  } 
+  Exemple 17:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;100M girls Dream&quot;,
+  	&quot;otherID&quot;: &quot;9&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;sourceID&quot;: &quot;4&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 18:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;otherID&quot;: &quot;4&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;100M girls Dream&quot;,
+  	&quot;sourceID&quot;: &quot;9&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 19:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;WardCorpse&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;WardCorpse&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 20:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Pou Lord&quot;,
+  	&quot;otherID&quot;: &quot;6&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;SRU_RazorbeakMini9.1.5&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 21:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Pou Lord&quot;,
+  	&quot;otherID&quot;: &quot;6&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;SRU_RazorbeakMini9.1.6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 22:
+  {
+  	&quot;eventname&quot;: &quot;OnDie&quot;,
+  	&quot;other&quot;: &quot;Pou Lord&quot;,
+  	&quot;otherID&quot;: &quot;6&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;SRU_Razorbeak9.1.1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  .....
 </code></pre>
-
+  
 </details></li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnKill</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">.... beaucoup
+<li><p><span style="color:red"><strong>OnKill</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  .... beaucoup
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnChampionDie</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1:
-{
-  &quot;eventname&quot;: &quot;OnChampionDie&quot;,
-  &quot;other&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;otherID&quot;: &quot;0&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Le JOAT&quot;,
-  &quot;sourceID&quot;: &quot;8&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2:
-{
-  &quot;eventname&quot;: &quot;OnChampionDie&quot;,
-  &quot;other&quot;: &quot;Turret_T1_R_03_A&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;100M girls Dream&quot;,
-  &quot;sourceID&quot;: &quot;9&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 3:
-{
-  &quot;eventname&quot;: &quot;OnChampionDie&quot;,
-  &quot;other&quot;: &quot;100M girls Dream&quot;,
-  &quot;otherID&quot;: &quot;9&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Phenix NemBot&quot;,
-  &quot;sourceID&quot;: &quot;4&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnChampionDie</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionDie&quot;,
+  	&quot;other&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;otherID&quot;: &quot;0&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Le JOAT&quot;,
+  	&quot;sourceID&quot;: &quot;8&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionDie&quot;,
+  	&quot;other&quot;: &quot;Turret_T1_R_03_A&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;100M girls Dream&quot;,
+  	&quot;sourceID&quot;: &quot;9&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 3:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionDie&quot;,
+  	&quot;other&quot;: &quot;100M girls Dream&quot;,
+  	&quot;otherID&quot;: &quot;9&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;sourceID&quot;: &quot;4&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnChampionLevelUp <code>no information</code></p>
 </li>
-<li><p><strong>OnChampionKillPre</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1:
-{
-  &quot;eventname&quot;: &quot;OnChampionKillPre&quot;,
-  &quot;other&quot;: &quot;Le JOAT&quot;,
-  &quot;otherID&quot;: &quot;8&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;sourceID&quot;: &quot;0&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 2:
-{
-  &quot;eventname&quot;: &quot;OnChampionKillPre&quot;,
-  &quot;other&quot;: &quot;Phenix NemBot&quot;,
-  &quot;otherID&quot;: &quot;4&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;100M girls Dream&quot;,
-  &quot;sourceID&quot;: &quot;9&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnChampionKillPre</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionKillPre&quot;,
+  	&quot;other&quot;: &quot;Le JOAT&quot;,
+  	&quot;otherID&quot;: &quot;8&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;sourceID&quot;: &quot;0&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionKillPre&quot;,
+  	&quot;other&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;otherID&quot;: &quot;4&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;100M girls Dream&quot;,
+  	&quot;sourceID&quot;: &quot;9&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
 
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnChampionKill</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1:
-{
-  &quot;eventname&quot;: &quot;OnChampionKill&quot;,
-  &quot;other&quot;: &quot;Phenix NemBot&quot;,
-  &quot;otherID&quot;: &quot;4&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
-  &quot;sourceID&quot;: &quot;5&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2:
-{
-  &quot;eventname&quot;: &quot;OnChampionKill&quot;,
-  &quot;other&quot;: &quot;DO U KNO DA WAE&quot;,
-  &quot;otherID&quot;: &quot;5&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;HuSaw&quot;,
-  &quot;sourceID&quot;: &quot;3&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnChampionKill</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionKill&quot;,
+  	&quot;other&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;otherID&quot;: &quot;4&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
+  	&quot;sourceID&quot;: &quot;5&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionKill&quot;,
+  	&quot;other&quot;: &quot;DO U KNO DA WAE&quot;,
+  	&quot;otherID&quot;: &quot;5&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;HuSaw&quot;,
+  	&quot;sourceID&quot;: &quot;3&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnChampionKillPost <code>no information</code></p>
 </li>
 <li><p>OnChampionSingleKill <code>no information but possible exist</code></p>
 </li>
-<li><p><strong>OnChampionDoubleKill</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exempel 1:
-{
-  &quot;eventname&quot;: &quot;OnChampionDoubleKill&quot;,
-  &quot;other&quot;: &quot;Le JOAT&quot;,
-  &quot;otherID&quot;: &quot;8&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exempel 2:
-{
-  &quot;eventname&quot;: &quot;OnChampionDoubleKill&quot;,
-  &quot;other&quot;: &quot;HuSaw&quot;,
-  &quot;otherID&quot;: &quot;3&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
-  &quot;sourceID&quot;: &quot;5&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnChampionDoubleKill</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exempel 1:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionDoubleKill&quot;,
+  	&quot;other&quot;: &quot;Le JOAT&quot;,
+  	&quot;otherID&quot;: &quot;8&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exempel 2:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionDoubleKill&quot;,
+  	&quot;other&quot;: &quot;HuSaw&quot;,
+  	&quot;otherID&quot;: &quot;3&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
+  	&quot;sourceID&quot;: &quot;5&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnChampionTripleKill</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exempel 1:
-{
-  &quot;eventname&quot;: &quot;OnChampionTripleKill&quot;,
-  &quot;other&quot;: &quot;Osman �st�ner&quot;,
-  &quot;otherID&quot;: &quot;7&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnChampionTripleKill</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exempel 1:
+  {
+  	&quot;eventname&quot;: &quot;OnChampionTripleKill&quot;,
+  	&quot;other&quot;: &quot;Osman �st�ner&quot;,
+  	&quot;otherID&quot;: &quot;7&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnChampionQuadraKill <code>no information but possible exist</code></p>
 </li>
 <li><p>OnChampionPentaKill <code>no information but possible exist</code></p>
 </li>
 <li><p>OnChampionUnrealKill <code>no information but possible exist</code></p>
 </li>
-<li><p><strong>OnFirstBlood</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnFirstBlood&quot;,
-  &quot;other&quot;: &quot;Le JOAT&quot;,
-  &quot;otherID&quot;: &quot;8&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;sourceID&quot;: &quot;0&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnFirstBlood</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnFirstBlood&quot;,
+  	&quot;other&quot;: &quot;Le JOAT&quot;,
+  	&quot;otherID&quot;: &quot;8&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;sourceID&quot;: &quot;0&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnFirstBloodAssist</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnFirstBloodAssist&quot;,
-  &quot;source&quot;: &quot;NameSummoner&quot;,
-  &quot;sourceID&quot;: &quot;IdSummoner&quot;,
-  &quot;sourceTeam&quot;: &quot;NameTeam&quot;
-}
+<li><p><span style="color:red"><strong>OnFirstBloodAssist</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnFirstBloodAssist&quot;,
+  	&quot;source&quot;: &quot;NameSummoner&quot;,
+  	&quot;sourceID&quot;: &quot;IdSummoner&quot;,
+  	&quot;sourceTeam&quot;: &quot;NameTeam&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnDamageTaken <code>no information</code></p>
 </li>
-<li><p><strong>OnDamageGiven</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnDamageGiven&quot;,
-  &quot;other&quot;: &quot;Minion_T100L0S01N0002&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Minion_T200L0S01N0002&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnDamageGiven&quot;,
-  &quot;other&quot;: &quot;Minion_T200L2S01N0002&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Minion_T100L2S01N0002&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnDamageGiven&quot;,
-  &quot;other&quot;: &quot;SRU_Blue7.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 4 :
-{
-  &quot;eventname&quot;: &quot;OnDamageGiven&quot;,
-  &quot;other&quot;: &quot;SRU_Murkwolf8.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 5 :
-{
-  &quot;eventname&quot;: &quot;OnDamageGiven&quot;,
-  &quot;other&quot;: &quot;Minion_T200L1S01N0001&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;ScrandHD&quot;,
-  &quot;sourceID&quot;: &quot;2&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 6 :
-{
-  &quot;eventname&quot;: &quot;OnDamageGiven&quot;,
-  &quot;other&quot;: &quot;Osman �st�ner&quot;,
-  &quot;otherID&quot;: &quot;7&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;ScrandHD&quot;,
-  &quot;sourceID&quot;: &quot;2&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-......
+<li><p><span style="color:red"><strong>OnDamageGiven</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnDamageGiven&quot;,
+  	&quot;other&quot;: &quot;Minion_T100L0S01N0002&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Minion_T200L0S01N0002&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnDamageGiven&quot;,
+  	&quot;other&quot;: &quot;Minion_T200L2S01N0002&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Minion_T100L2S01N0002&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnDamageGiven&quot;,
+  	&quot;other&quot;: &quot;SRU_Blue7.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 4 :
+  {
+  	&quot;eventname&quot;: &quot;OnDamageGiven&quot;,
+  	&quot;other&quot;: &quot;SRU_Murkwolf8.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 5 :
+  {
+  	&quot;eventname&quot;: &quot;OnDamageGiven&quot;,
+  	&quot;other&quot;: &quot;Minion_T200L1S01N0001&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;ScrandHD&quot;,
+  	&quot;sourceID&quot;: &quot;2&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 6 :
+  {
+  	&quot;eventname&quot;: &quot;OnDamageGiven&quot;,
+  	&quot;other&quot;: &quot;Osman �st�ner&quot;,
+  	&quot;otherID&quot;: &quot;7&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;ScrandHD&quot;,
+  	&quot;sourceID&quot;: &quot;2&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  ......
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnSpellCast1 <code>no information</code></p>
 </li>
 <li><p>OnSpellCast2 <code>no information</code></p>
@@ -1165,530 +1044,472 @@ Exemple 6 :
 </li>
 <li><p>OnCriticalStrike <code>no information</code></p>
 </li>
-<li><p><strong>OnAce</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnAce&quot;,
-  &quot;other&quot;: &quot;Le JOAT&quot;,
-  &quot;otherID&quot;: &quot;8&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnAce</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnAce&quot;,
+  	&quot;other&quot;: &quot;Le JOAT&quot;,
+  	&quot;otherID&quot;: &quot;8&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnReincarnate</strong></p>
-</li>
-<li><details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnReincarnate&quot;,
-  &quot;source&quot;: &quot;Le JOAT&quot;,
-  &quot;sourceID&quot;: &quot;8&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnReincarnate&quot;,
-  &quot;source&quot;: &quot;Phenix NemBot&quot;,
-  &quot;sourceID&quot;: &quot;4&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnReincarnate</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnReincarnate&quot;,
+  	&quot;source&quot;: &quot;Le JOAT&quot;,
+  	&quot;sourceID&quot;: &quot;8&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnReincarnate&quot;,
+  	&quot;source&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;sourceID&quot;: &quot;4&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnReviveAlly <code>no information BUT</code></p>
 </li>
-<li><p><strong>OnChangeChampion</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnChangeChampion&quot;
-}
+<li><p><span style="color:red"><strong>OnChangeChampion</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnChangeChampion&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnResetChampion <code>no information</code></p>
 </li>
 <li><p>OnDampenerKill <code>no information</code></p>
 </li>
-<li><p><strong>OnDampenerDie</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnDampenerDie&quot;,
-  &quot;other&quot;: &quot;Minion_T100L0S45N0284&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnDampenerDie&quot;,
-  &quot;other&quot;: &quot;Simp Eboy&quot;,
-  &quot;otherID&quot;: &quot;1&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnDampenerDie</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnDampenerDie&quot;,
+  	&quot;other&quot;: &quot;Minion_T100L0S45N0284&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnDampenerDie&quot;,
+  	&quot;other&quot;: &quot;Simp Eboy&quot;,
+  	&quot;otherID&quot;: &quot;1&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnDampenerRespawnSoon</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnDampenerRespawnSoon&quot;
-}
+<li><p><span style="color:red"><strong>OnDampenerRespawnSoon</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnDampenerRespawnSoon&quot;
+  }
 </code></pre>
-</details>
+  </details>	
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnDampenerRespawn</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnDampenerRespawn&quot;
-}
+<li><p><span style="color:red"><strong>OnDampenerRespawn</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnDampenerRespawn&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnDampenerDamage <code>no information</code></p>
 </li>
 <li><p>OnTurretKill <code>no information</code></p>
 </li>
-<li><p><strong>OnTurretDie</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnTurretDie&quot;,
-  &quot;other&quot;: &quot;Minion_T200L0S18N0111&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Turret_T1_R_03_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnTurretDie&quot;,
-  &quot;other&quot;: &quot;Minion_T100L1S58N0370&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Turret_T2_C_01_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnTurretDie&quot;,
-  &quot;other&quot;: &quot;Osman �st�ner&quot;,
-  &quot;otherID&quot;: &quot;7&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Turret_T1_C_05_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 4 :
-{
-  &quot;eventname&quot;: &quot;OnTurretDie&quot;,
-  &quot;other&quot;: &quot;Simp Eboy&quot;,
-  &quot;otherID&quot;: &quot;1&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Turret_T2_L_03_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnTurretDie</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnTurretDie&quot;,
+  	&quot;other&quot;: &quot;Minion_T200L0S18N0111&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Turret_T1_R_03_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnTurretDie&quot;,
+  	&quot;other&quot;: &quot;Minion_T100L1S58N0370&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Turret_T2_C_01_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnTurretDie&quot;,
+  	&quot;other&quot;: &quot;Osman �st�ner&quot;,
+  	&quot;otherID&quot;: &quot;7&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Turret_T1_C_05_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 4 :
+  {
+  	&quot;eventname&quot;: &quot;OnTurretDie&quot;,
+  	&quot;other&quot;: &quot;Simp Eboy&quot;,
+  	&quot;otherID&quot;: &quot;1&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Turret_T2_L_03_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnTurretDamage <code>no information</code></p>
 </li>
-<li><p><strong>OnTurretFirstBlood</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnTurretFirstBlood&quot;,
-  &quot;other&quot;: &quot;Minion_T200L0S18N0111&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Turret_T1_R_03_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnTurretFirstBlood</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnTurretFirstBlood&quot;,
+  	&quot;other&quot;: &quot;Minion_T200L0S18N0111&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Turret_T1_R_03_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnStructureKill <code>no information</code></p>
 </li>
-<li><p><strong>OnMinionKill</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnMinionKill&quot;,
-  &quot;other&quot;: &quot;Minion_T200L1S18N0113&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Minion_T100L1S19N0118&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnMinionKill&quot;,
-  &quot;other&quot;: &quot;Minion_T100L2S18N0111&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Turret_T2_L_03_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnMinionKill&quot;,
-  &quot;other&quot;: &quot;Minion_T100L0S19N0118&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;100M girls Dream&quot;,
-  &quot;sourceID&quot;: &quot;9&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 4 :
-{
-  &quot;eventname&quot;: &quot;OnMinionKill&quot;,
-  &quot;other&quot;: &quot;Pou Lord&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Phenix NemBot&quot;,
-  &quot;sourceID&quot;: &quot;4&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 5 :
-{
-  &quot;eventname&quot;: &quot;OnMinionKill&quot;,
-  &quot;other&quot;: &quot;Minion_T200L2S22N0137&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Turret_T1_L_03_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-....
+<li><p><span style="color:red"><strong>OnMinionKill</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnMinionKill&quot;,
+  	&quot;other&quot;: &quot;Minion_T200L1S18N0113&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Minion_T100L1S19N0118&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnMinionKill&quot;,
+  	&quot;other&quot;: &quot;Minion_T100L2S18N0111&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Turret_T2_L_03_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnMinionKill&quot;,
+  	&quot;other&quot;: &quot;Minion_T100L0S19N0118&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;100M girls Dream&quot;,
+  	&quot;sourceID&quot;: &quot;9&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 4 :
+  {
+  	&quot;eventname&quot;: &quot;OnMinionKill&quot;,
+  	&quot;other&quot;: &quot;Pou Lord&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;sourceID&quot;: &quot;4&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 5 :
+  {
+  	&quot;eventname&quot;: &quot;OnMinionKill&quot;,
+  	&quot;other&quot;: &quot;Minion_T200L2S22N0137&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Turret_T1_L_03_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  ....
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnNeutralMinionKill</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
-  &quot;other&quot;: &quot;CampRespawn&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;CampRespawn&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
-  &quot;other&quot;: &quot;SRU_Red4.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
-  &quot;other&quot;: &quot;SRU_MurkwolfMini8.1.3&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 4 :
-{
-  &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
-  &quot;other&quot;: &quot;SRU_MurkwolfMini8.1.2&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 5 :
-{
-  &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
-  &quot;other&quot;: &quot;SRU_Murkwolf8.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 6 :
-{
-  &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
-  &quot;other&quot;: &quot;SRU_Murkwolf2.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 7 :
-{
-  &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
-  &quot;other&quot;: &quot;SRU_Gromp14.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 8 :
-{
-  &quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
-  &quot;other&quot;: &quot;SRU_RazorbeakMini9.1.5&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-....
+<li><p><span style="color:red"><strong>OnNeutralMinionKill</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
+  	&quot;other&quot;: &quot;CampRespawn&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;CampRespawn&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
+  	&quot;other&quot;: &quot;SRU_Red4.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
+  	&quot;other&quot;: &quot;SRU_MurkwolfMini8.1.3&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 4 :
+  {
+  	&quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
+  	&quot;other&quot;: &quot;SRU_MurkwolfMini8.1.2&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 5 :
+  {
+  	&quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
+  	&quot;other&quot;: &quot;SRU_Murkwolf8.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 6 :
+  {
+  	&quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
+  	&quot;other&quot;: &quot;SRU_Murkwolf2.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 7 :
+  {
+  	&quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
+  	&quot;other&quot;: &quot;SRU_Gromp14.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 8 :
+  {
+  	&quot;eventname&quot;: &quot;OnNeutralMinionKill&quot;,
+  	&quot;other&quot;: &quot;SRU_RazorbeakMini9.1.5&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  ....
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnNeutralMinionCampCleared <code>no information</code></p>
 </li>
 <li><p>OnAcquireRedBuffFromNeutral <code>no information</code></p>
 </li>
 <li><p>OnAcquireBlueBuffFromNeutral <code>no information</code></p>
 </li>
-<li><p><strong>OnHQKill</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnHQKill&quot;,
-  &quot;other&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;otherID&quot;: &quot;0&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnHQKill</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnHQKill&quot;,
+  	&quot;other&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;otherID&quot;: &quot;0&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnHQDie <code>no information</code></p>
 </li>
 <li><p>OnHQDamage <code>no information</code></p>
 </li>
-<li><p><strong>OnCastHeal</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnCastHeal&quot;,
-  &quot;other&quot;: &quot;Simp Eboy&quot;,
-  &quot;otherID&quot;: &quot;1&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnCastHeal&quot;,
-  &quot;other&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;otherID&quot;: &quot;0&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;sourceID&quot;: &quot;0&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnCastHeal&quot;,
-  &quot;other&quot;: &quot;Pou Lord&quot;,
-  &quot;otherID&quot;: &quot;6&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnCastHeal</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnCastHeal&quot;,
+  	&quot;other&quot;: &quot;Simp Eboy&quot;,
+  	&quot;otherID&quot;: &quot;1&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnCastHeal&quot;,
+  	&quot;other&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;otherID&quot;: &quot;0&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;sourceID&quot;: &quot;0&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnCastHeal&quot;,
+  	&quot;other&quot;: &quot;Pou Lord&quot;,
+  	&quot;otherID&quot;: &quot;6&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnBuff <code>no information</code></p>
 </li>
 <li><p>OnCrowdControlDealt <code>no information</code></p>
 </li>
 <li><p>OnCrowdControlExpired <code>no information</code></p>
 </li>
-<li><p><strong>OnKillingSpree</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnKillingSpree&quot;,
-  &quot;other&quot;: &quot;Simp Eboy&quot;,
-  &quot;otherID&quot;: &quot;1&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillingSpree</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnKillingSpree&quot;,
+  	&quot;other&quot;: &quot;Simp Eboy&quot;,
+  	&quot;otherID&quot;: &quot;1&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnKillingSpreeSet1</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnKillingSpreeSet1&quot;,
-  &quot;other&quot;: &quot;Phenix NemBot&quot;,
-  &quot;otherID&quot;: &quot;4&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Osman �st�ner&quot;,
-  &quot;sourceID&quot;: &quot;7&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnKillingSpreeSet1&quot;,
-  &quot;other&quot;: &quot;100M girls Dream&quot;,
-  &quot;otherID&quot;: &quot;9&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillingSpreeSet1</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnKillingSpreeSet1&quot;,
+  	&quot;other&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;otherID&quot;: &quot;4&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Osman �st�ner&quot;,
+  	&quot;sourceID&quot;: &quot;7&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnKillingSpreeSet1&quot;,
+  	&quot;other&quot;: &quot;100M girls Dream&quot;,
+  	&quot;otherID&quot;: &quot;9&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnKillingSpreeSet2</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnKillingSpreeSet2&quot;,
-  &quot;other&quot;: &quot;Phenix NemBot&quot;,
-  &quot;otherID&quot;: &quot;4&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Osman �st�ner&quot;,
-  &quot;sourceID&quot;: &quot;7&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnKillingSpreeSet2&quot;,
-  &quot;other&quot;: &quot;Le JOAT&quot;,
-  &quot;otherID&quot;: &quot;8&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillingSpreeSet2</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnKillingSpreeSet2&quot;,
+  	&quot;other&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;otherID&quot;: &quot;4&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Osman �st�ner&quot;,
+  	&quot;sourceID&quot;: &quot;7&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnKillingSpreeSet2&quot;,
+  	&quot;other&quot;: &quot;Le JOAT&quot;,
+  	&quot;otherID&quot;: &quot;8&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnKillingSpreeSet3</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnKillingSpreeSet3&quot;,
-  &quot;other&quot;: &quot;DO U KNO DA WAE&quot;,
-  &quot;otherID&quot;: &quot;5&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;HuSaw&quot;,
-  &quot;sourceID&quot;: &quot;3&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillingSpreeSet3</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnKillingSpreeSet3&quot;,
+  	&quot;other&quot;: &quot;DO U KNO DA WAE&quot;,
+  	&quot;otherID&quot;: &quot;5&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;HuSaw&quot;,
+  	&quot;sourceID&quot;: &quot;3&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnKillingSpreeSet4</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnKillingSpreeSet4&quot;,
-  &quot;other&quot;: &quot;100M girls Dream&quot;,
-  &quot;otherID&quot;: &quot;9&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;HuSaw&quot;,
-  &quot;sourceID&quot;: &quot;3&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillingSpreeSet4</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnKillingSpreeSet4&quot;,
+  	&quot;other&quot;: &quot;100M girls Dream&quot;,
+  	&quot;otherID&quot;: &quot;9&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;HuSaw&quot;,
+  	&quot;sourceID&quot;: &quot;3&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnKillingSpreeSet5</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnKillingSpreeSet5&quot;,
-  &quot;other&quot;: &quot;Osman �st�ner&quot;,
-  &quot;otherID&quot;: &quot;7&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;HuSaw&quot;,
-  &quot;sourceID&quot;: &quot;3&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillingSpreeSet5</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnKillingSpreeSet5&quot;,
+  	&quot;other&quot;: &quot;Osman �st�ner&quot;,
+  	&quot;otherID&quot;: &quot;7&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;HuSaw&quot;,
+  	&quot;sourceID&quot;: &quot;3&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnKillingSpreeSet6</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnKillingSpreeSet6&quot;,
-  &quot;other&quot;: &quot;Le JOAT&quot;,
-  &quot;otherID&quot;: &quot;8&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;HuSaw&quot;,
-  &quot;sourceID&quot;: &quot;3&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillingSpreeSet6</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnKillingSpreeSet6&quot;,
+  	&quot;other&quot;: &quot;Le JOAT&quot;,
+  	&quot;otherID&quot;: &quot;8&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;HuSaw&quot;,
+  	&quot;sourceID&quot;: &quot;3&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnKilledUnitOnKillingSpree <code>no information</code></p>
 </li>
 <li><p>OnKilledUnitOnKillingSpreeSet1 <code>no information</code></p>
@@ -1713,111 +1534,105 @@ Exemple 2 :
 </li>
 <li><p>OnKilledUnitOnKillingSpreeUnrealKill <code>no information</code></p>
 </li>
-<li><p><strong>OnDeathAssist</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnDeathAssist&quot;,
-  &quot;other&quot;: &quot;Phenix NemBot&quot;,
-  &quot;otherID&quot;: &quot;4&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Le JOAT&quot;,
-  &quot;sourceID&quot;: &quot;8&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnDeathAssist&quot;,
-  &quot;other&quot;: &quot;100M girls Dream&quot;,
-  &quot;otherID&quot;: &quot;9&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;HuSaw&quot;,
-  &quot;sourceID&quot;: &quot;3&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnDeathAssist&quot;,
-  &quot;other&quot;: &quot;Turret_T1_R_03_A&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;100M girls Dream&quot;,
-  &quot;sourceID&quot;: &quot;9&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 4 :
-{
-  &quot;eventname&quot;: &quot;OnDeathAssist&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Air&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 5 :
-{
-  &quot;eventname&quot;: &quot;OnDeathAssist&quot;,
-  &quot;other&quot;: &quot;SRU_RiftHerald17.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;ScrandHD&quot;,
-  &quot;sourceID&quot;: &quot;2&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 6 :
-{
-  &quot;eventname&quot;: &quot;OnDeathAssist&quot;,
-  &quot;other&quot;: &quot;SRU_RiftHerald17.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;100M girls Dream&quot;,
-  &quot;sourceID&quot;: &quot;9&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 7 :
-{
-  &quot;eventname&quot;: &quot;OnDeathAssist&quot;,
-  &quot;other&quot;: &quot;SRU_Baron12.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;ScrandHD&quot;,
-  &quot;sourceID&quot;: &quot;2&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 8 :
-{
-  &quot;eventname&quot;: &quot;OnDeathAssist&quot;,
-  &quot;other&quot;: &quot;SRU_Baron12.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;100M girls Dream&quot;,
-  &quot;sourceID&quot;: &quot;9&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 9 :
-{
-  &quot;eventname&quot;: &quot;OnDeathAssist&quot;,
-  &quot;source&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;sourceID&quot;: &quot;0&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnDeathAssist</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnDeathAssist&quot;,
+  	&quot;other&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;otherID&quot;: &quot;4&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Le JOAT&quot;,
+  	&quot;sourceID&quot;: &quot;8&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnDeathAssist&quot;,
+  	&quot;other&quot;: &quot;100M girls Dream&quot;,
+  	&quot;otherID&quot;: &quot;9&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;HuSaw&quot;,
+  	&quot;sourceID&quot;: &quot;3&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnDeathAssist&quot;,
+  	&quot;other&quot;: &quot;Turret_T1_R_03_A&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;100M girls Dream&quot;,
+  	&quot;sourceID&quot;: &quot;9&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 4 :
+  {
+  	&quot;eventname&quot;: &quot;OnDeathAssist&quot;,
+  	&quot;other&quot;: &quot;SRU_Dragon_Air&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 5 :
+  {
+  	&quot;eventname&quot;: &quot;OnDeathAssist&quot;,
+  	&quot;other&quot;: &quot;SRU_RiftHerald17.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;ScrandHD&quot;,
+  	&quot;sourceID&quot;: &quot;2&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 6 :
+  {
+  	&quot;eventname&quot;: &quot;OnDeathAssist&quot;,
+  	&quot;other&quot;: &quot;SRU_RiftHerald17.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;100M girls Dream&quot;,
+  	&quot;sourceID&quot;: &quot;9&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 7 :
+  {
+  	&quot;eventname&quot;: &quot;OnDeathAssist&quot;,
+  	&quot;other&quot;: &quot;SRU_Baron12.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;ScrandHD&quot;,
+  	&quot;sourceID&quot;: &quot;2&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 8 :
+  {
+  	&quot;eventname&quot;: &quot;OnDeathAssist&quot;,
+  	&quot;other&quot;: &quot;SRU_Baron12.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;100M girls Dream&quot;,
+  	&quot;sourceID&quot;: &quot;9&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 9 :
+  {
+  	&quot;eventname&quot;: &quot;OnDeathAssist&quot;,
+  	&quot;source&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;sourceID&quot;: &quot;0&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnQuit</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnQuit&quot;,
-  &quot;source&quot;: &quot;Le JOAT&quot;,
-  &quot;sourceID&quot;: &quot;8&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnQuit</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnQuit&quot;,
+  	&quot;source&quot;: &quot;Le JOAT&quot;,
+  	&quot;sourceID&quot;: &quot;8&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnLeave <code>no information BUT</code></p>
 </li>
 <li><p>OnReconnect <code>no information BUT</code></p>
@@ -1834,54 +1649,42 @@ Exemple 9 :
 </li>
 <li><p>OnChampionPentaAssist <code>no information</code></p>
 </li>
-<li><p><strong>OnPing</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnPing&quot;
-}
+<li><p><span style="color:red"><strong>OnPing</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnPing&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnPingPlayer</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnPingPlayer&quot;
-}
+<li><p><span style="color:red"><strong>OnPingPlayer</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnPingPlayer&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnPingBuilding</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnPingBuilding&quot;
-}
+<li><p><span style="color:red"><strong>OnPingBuilding</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnPingBuilding&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnPingOther</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnPingOther&quot;
-}
+<li><p><span style="color:red"><strong>OnPingOther</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnPingOther&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnEndGame <code>no information</code></p>
 </li>
 <li><p>OnSpellLevelup1 <code>no information</code></p>
@@ -1908,29 +1711,26 @@ Exemple 9 :
 </li>
 <li><p>OnItemUndo <code>no information</code></p>
 </li>
-<li><p><strong>OnItemCallout</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnItemCallout&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnItemCallout&quot;,
-  &quot;source&quot;: &quot;Le JOAT&quot;,
-  &quot;sourceID&quot;: &quot;8&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnItemCallout</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnItemCallout&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnItemCallout&quot;,
+  	&quot;source&quot;: &quot;Le JOAT&quot;,
+  	&quot;sourceID&quot;: &quot;8&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnItemChange <code>no information</code></p>
 </li>
 <li><p>OnUndoEnabledChange <code>no information</code></p>
@@ -1947,21 +1747,18 @@ Exemple 2 :
 </li>
 <li><p>OnSurrenderVoteAlready <code>no information</code></p>
 </li>
-<li><p><strong>OnSurrenderFailedVotes</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnSurrenderFailedVotes&quot;,
-  &quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
-  &quot;sourceID&quot;: &quot;5&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnSurrenderFailedVotes</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnSurrenderFailedVotes&quot;,
+  	&quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
+  	&quot;sourceID&quot;: &quot;5&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnSurrenderTooEarly <code>no information</code></p>
 </li>
 <li><p>OnSurrenderAgreed <code>no information</code></p>
@@ -1998,42 +1795,33 @@ Exemple 2 :
 </li>
 <li><p>OnPauseResume <code>no information BUT</code></p>
 </li>
-<li><p><strong>OnMinionsSpawn</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnMinionsSpawn&quot;
-}
+<li><p><span style="color:red"><strong>OnMinionsSpawn</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnMinionsSpawn&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnStartGameMessage1</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnStartGameMessage1&quot;
-}
+<li><p><span style="color:red"><strong>OnStartGameMessage1</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnStartGameMessage1&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnStartGameMessage2</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnStartGameMessage2&quot;
-}
+<li><p><span style="color:red"><strong>OnStartGameMessage2</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnStartGameMessage2&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnStartGameMessage3 <code>no information</code></p>
 </li>
 <li><p>OnStartGameMessage4 <code>no information</code></p>
@@ -2044,18 +1832,15 @@ Exemple 2 :
 </li>
 <li><p>OnAudioEventFinished <code>no information</code></p>
 </li>
-<li><p><strong>OnNexusCrystalStart</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnNexusCrystalStart&quot;
-}
+<li><p><span style="color:red"><strong>OnNexusCrystalStart</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnNexusCrystalStart&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnCapturePointNeutralized_A <code>no information</code></p>
 </li>
 <li><p>OnCapturePointNeutralized_B <code>no information</code></p>
@@ -2094,18 +1879,15 @@ Exemple 2 :
 </li>
 <li><p>OnGameModeAnnouncement4 <code>no information</code></p>
 </li>
-<li><p><strong>OnGameModeAnnouncement5</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnGameModeAnnouncement5&quot;
-}
+<li><p><span style="color:red"><strong>OnGameModeAnnouncement5</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnGameModeAnnouncement5&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnGameModeAnnouncement6 <code>no information</code></p>
 </li>
 <li><p>OnGameModeAnnouncement7 <code>no information</code></p>
@@ -2138,102 +1920,90 @@ Exemple 2 :
 </li>
 <li><p>OnKillDragon <code>no information</code></p>
 </li>
-<li><p><strong>OnKillDragon_Spectator</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Fire&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Air&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
-  &quot;sourceID&quot;: &quot;5&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Hextech&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillDragon_Spectator</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+  	&quot;other&quot;: &quot;SRU_Dragon_Fire&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+  	&quot;other&quot;: &quot;SRU_Dragon_Air&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
+  	&quot;sourceID&quot;: &quot;5&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnKillDragon_Spectator&quot;,
+  	&quot;other&quot;: &quot;SRU_Dragon_Hextech&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnKillDragonSteal</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnKillDragonSteal&quot;,
-  &quot;other&quot;: &quot;SRU_Dragon_Hextech&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillDragonSteal</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnKillDragonSteal&quot;,
+  	&quot;other&quot;: &quot;SRU_Dragon_Hextech&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnKillRiftHerald <code>no information</code></p>
 </li>
 <li><p>OnKillRiftHerald_Spectator <code>no information</code></p>
 </li>
 <li><p>OnKillRiftHeraldSteal <code>no information</code></p>
 </li>
-<li><p><strong>OnSummonRiftHerald</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnSummonRiftHerald&quot;,
-  &quot;other&quot;: &quot;RiftHeraldMercenary&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnSummonRiftHerald</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnSummonRiftHerald&quot;,
+  	&quot;other&quot;: &quot;RiftHeraldMercenary&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnKillWorm <code>no information</code></p>
 </li>
-<li><p><strong>OnKillWorm_Spectator</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnKillWorm_Spectator&quot;,
-  &quot;other&quot;: &quot;SRU_Baron12.1.1&quot;,
-  &quot;otherTeam&quot;: &quot;Neutral&quot;,
-  &quot;source&quot;: &quot;Simp Eboy&quot;,
-  &quot;sourceID&quot;: &quot;1&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillWorm_Spectator</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnKillWorm_Spectator&quot;,
+  	&quot;other&quot;: &quot;SRU_Baron12.1.1&quot;,
+  	&quot;otherTeam&quot;: &quot;Neutral&quot;,
+  	&quot;source&quot;: &quot;Simp Eboy&quot;,
+  	&quot;sourceID&quot;: &quot;1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnKillWormSteal</p>
 </li>
 <li><p>OnKillSpiderBoss <code>no information</code></p>
@@ -2246,54 +2016,48 @@ Exemple 3 :
 </li>
 <li><p>OnPlaceWard <code>no information</code></p>
 </li>
-<li><p><strong>OnKillWard</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnKillWard&quot;,
-  &quot;other&quot;: &quot;SightWard&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
-  &quot;sourceID&quot;: &quot;5&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnKillWard&quot;,
-  &quot;other&quot;: &quot;JammerDevice&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;sourceID&quot;: &quot;0&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnKillWard</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnKillWard&quot;,
+  	&quot;other&quot;: &quot;SightWard&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;DO U KNO DA WAE&quot;,
+  	&quot;sourceID&quot;: &quot;5&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnKillWard&quot;,
+  	&quot;other&quot;: &quot;JammerDevice&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;sourceID&quot;: &quot;0&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnMinionAscended  <code>no information</code></p>
 </li>
 <li><p>OnChampionAscended  <code>no information</code></p>
 </li>
 <li><p>OnClearAscended  <code>no information</code></p>
 </li>
-<li><p><strong>OnGameStatEvent</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnGameStatEvent&quot;,
-  &quot;other&quot;: &quot;100M girls Dream&quot;,
-  &quot;otherID&quot;: &quot;9&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnGameStatEvent</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnGameStatEvent&quot;,
+  	&quot;other&quot;: &quot;100M girls Dream&quot;,
+  	&quot;otherID&quot;: &quot;9&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnRelativeTeamColorChange <code>no information</code></p>
 </li>
 <li><p>OnMapSkinSwap <code>no information</code></p>
@@ -2302,35 +2066,32 @@ Exemple 2 :
 </li>
 <li><p>OnResetGameCompleted <code>no information</code></p>
 </li>
-<li><p><strong>OnShutdown</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnShutdown&quot;,
-  &quot;other&quot;: &quot;Simp Eboy&quot;,
-  &quot;otherID&quot;: &quot;1&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Osman �st�ner&quot;,
-  &quot;sourceID&quot;: &quot;7&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnShutdown&quot;,
-  &quot;other&quot;: &quot;Le JOAT&quot;,
-  &quot;otherID&quot;: &quot;8&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;sourceID&quot;: &quot;0&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnShutdown</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnShutdown&quot;,
+  	&quot;other&quot;: &quot;Simp Eboy&quot;,
+  	&quot;otherID&quot;: &quot;1&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Osman �st�ner&quot;,
+  	&quot;sourceID&quot;: &quot;7&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnShutdown&quot;,
+  	&quot;other&quot;: &quot;Le JOAT&quot;,
+  	&quot;otherID&quot;: &quot;8&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;sourceID&quot;: &quot;0&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnMute <code>no information</code></p>
 </li>
 <li><p>OnChampionTransformNone <code>no information</code></p>
@@ -2339,76 +2100,70 @@ Exemple 2 :
 </li>
 <li><p>OnChampionTransformSlayer <code>no information</code></p>
 </li>
-<li><p><strong>OnReceiveShield</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnReceiveShield&quot;,
-  &quot;source&quot;: &quot;100M girls Dream&quot;,
-  &quot;sourceID&quot;: &quot;9&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnReceiveShield&quot;,
-  &quot;source&quot;: &quot;Sru_Crab15.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnReceiveShield&quot;,
-  &quot;source&quot;: &quot;Sru_Crab16.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 4 :
-{
-  &quot;eventname&quot;: &quot;OnReceiveShield&quot;,
-  &quot;source&quot;: &quot;WilsonMagicWand&quot;,
-  &quot;sourceID&quot;: &quot;0&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnReceiveShield</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnReceiveShield&quot;,
+  	&quot;source&quot;: &quot;100M girls Dream&quot;,
+  	&quot;sourceID&quot;: &quot;9&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnReceiveShield&quot;,
+  	&quot;source&quot;: &quot;Sru_Crab15.1.1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnReceiveShield&quot;,
+  	&quot;source&quot;: &quot;Sru_Crab16.1.1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 4 :
+  {
+  	&quot;eventname&quot;: &quot;OnReceiveShield&quot;,
+  	&quot;source&quot;: &quot;WilsonMagicWand&quot;,
+  	&quot;sourceID&quot;: &quot;0&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnGrantShield</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnGrantShield&quot;,
-  &quot;source&quot;: &quot;HuSaw&quot;,
-  &quot;sourceID&quot;: &quot;3&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnGrantShield&quot;,
-  &quot;source&quot;: &quot;Osman �st�ner&quot;,
-  &quot;sourceID&quot;: &quot;7&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnGrantShield&quot;,
-  &quot;source&quot;: &quot;Sru_Crab15.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
-Exemple 4 :
-{
-  &quot;eventname&quot;: &quot;OnGrantShield&quot;,
-  &quot;source&quot;: &quot;Sru_Crab16.1.1&quot;,
-  &quot;sourceTeam&quot;: &quot;Neutral&quot;
-}
+<li><p><span style="color:red"><strong>OnGrantShield</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnGrantShield&quot;,
+  	&quot;source&quot;: &quot;HuSaw&quot;,
+  	&quot;sourceID&quot;: &quot;3&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnGrantShield&quot;,
+  	&quot;source&quot;: &quot;Osman �st�ner&quot;,
+  	&quot;sourceID&quot;: &quot;7&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnGrantShield&quot;,
+  	&quot;source&quot;: &quot;Sru_Crab15.1.1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
+  Exemple 4 :
+  {
+  	&quot;eventname&quot;: &quot;OnGrantShield&quot;,
+  	&quot;source&quot;: &quot;Sru_Crab16.1.1&quot;,
+  	&quot;sourceTeam&quot;: &quot;Neutral&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnDamageShielded <code>no information</code></p>
 </li>
 <li><p>OnMaterialOverride <code>no information</code></p>
@@ -2421,137 +2176,125 @@ Exemple 4 :
 </li>
 <li><p>OnGearChanged <code>no information</code></p>
 </li>
-<li><p><strong>OnSummonerEmotePlayed</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnSummonerEmotePlayed&quot;,
-  &quot;source&quot;: &quot;Phenix NemBot&quot;,
-  &quot;sourceID&quot;: &quot;4&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnSummonerEmotePlayed&quot;,
-  &quot;source&quot;: &quot;Pou Lord&quot;,
-  &quot;sourceID&quot;: &quot;6&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnSummonerEmotePlayed</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnSummonerEmotePlayed&quot;,
+  	&quot;source&quot;: &quot;Phenix NemBot&quot;,
+  	&quot;sourceID&quot;: &quot;4&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnSummonerEmotePlayed&quot;,
+  	&quot;source&quot;: &quot;Pou Lord&quot;,
+  	&quot;sourceID&quot;: &quot;6&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnSummonerEmoteEnd <code>no information</code></p>
 </li>
 <li><p>OnCustomStatStoneEvent <code>no information</code></p>
 </li>
-<li><p><strong>OnStatStoneMilestoneHitEvent</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">{
-  &quot;eventname&quot;: &quot;OnStatStoneMilestoneHitEvent&quot;
-}
+<li><p><span style="color:red"><strong>OnStatStoneMilestoneHitEvent</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  {
+  	&quot;eventname&quot;: &quot;OnStatStoneMilestoneHitEvent&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnEnterStealth</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnEnterStealth&quot;,
-  &quot;other&quot;: &quot;VisionWard&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;VisionWard&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnEnterStealth&quot;,
-  &quot;other&quot;: &quot;VisionWard&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;VisionWard&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnEnterStealth&quot;,
-  &quot;other&quot;: &quot;SightWard&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;SightWard&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 4 :
-{
-  &quot;eventname&quot;: &quot;OnEnterStealth&quot;,
-  &quot;other&quot;: &quot;SightWard&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;SightWard&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 5 :
-{
-  &quot;eventname&quot;: &quot;OnEnterStealth&quot;,
-  &quot;other&quot;: &quot;HuSaw&quot;,
-  &quot;otherID&quot;: &quot;3&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;HuSaw&quot;,
-  &quot;sourceID&quot;: &quot;3&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnEnterStealth</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnEnterStealth&quot;,
+  	&quot;other&quot;: &quot;VisionWard&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;VisionWard&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnEnterStealth&quot;,
+  	&quot;other&quot;: &quot;VisionWard&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;VisionWard&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnEnterStealth&quot;,
+  	&quot;other&quot;: &quot;SightWard&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;SightWard&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 4 :
+  {
+  	&quot;eventname&quot;: &quot;OnEnterStealth&quot;,
+  	&quot;other&quot;: &quot;SightWard&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;SightWard&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 5 :
+  {
+  	&quot;eventname&quot;: &quot;OnEnterStealth&quot;,
+  	&quot;other&quot;: &quot;HuSaw&quot;,
+  	&quot;otherID&quot;: &quot;3&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;HuSaw&quot;,
+  	&quot;sourceID&quot;: &quot;3&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
-<li><p><strong>OnExitStealth</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnExitStealth&quot;,
-  &quot;other&quot;: &quot;SightWard&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;SightWard&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnExitStealth&quot;,
-  &quot;other&quot;: &quot;SightWard&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;SightWard&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnExitStealth&quot;,
-  &quot;other&quot;: &quot;VisionWard&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;VisionWard&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
-Exemple 4 :
-{
-  &quot;eventname&quot;: &quot;OnExitStealth&quot;,
-  &quot;other&quot;: &quot;VisionWard&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;VisionWard&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
+<li><p><span style="color:red"><strong>OnExitStealth</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnExitStealth&quot;,
+  	&quot;other&quot;: &quot;SightWard&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;SightWard&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnExitStealth&quot;,
+  	&quot;other&quot;: &quot;SightWard&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;SightWard&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnExitStealth&quot;,
+  	&quot;other&quot;: &quot;VisionWard&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;VisionWard&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
+  Exemple 4 :
+  {
+  	&quot;eventname&quot;: &quot;OnExitStealth&quot;,
+  	&quot;other&quot;: &quot;VisionWard&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;VisionWard&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
 </code></pre>
-</details>
+  </details>
 </li>
-</ul>
-<br>
-<ul>
 <li><p>OnPetSpawned <code>no information</code></p>
 </li>
 <li><p>OnLifeSteal <code>no information</code></p>
@@ -2560,96 +2303,89 @@ Exemple 4 :
 </li>
 <li><p>OnLocalPlayerLoadoutBound <code>no information</code></p>
 </li>
-<li><p><strong>OnTurretPlateDestroyed</strong></p>
-<details>
-<summary><b>Example value</b></summary>
-<pre><code class="lang-json">Exemple 1 :
-{
-  &quot;eventname&quot;: &quot;OnTurretPlateDestroyed&quot;,
-  &quot;other&quot;: &quot;Turret_T1_C_05_A&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Turret_T1_C_05_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 2 :
-{
-  &quot;eventname&quot;: &quot;OnTurretPlateDestroyed&quot;,
-  &quot;other&quot;: &quot;Turret_T1_R_03_A&quot;,
-  &quot;otherTeam&quot;: &quot;Order&quot;,
-  &quot;source&quot;: &quot;Turret_T1_R_03_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Order&quot;
-}
-Exemple 3 :
-{
-  &quot;eventname&quot;: &quot;OnTurretPlateDestroyed&quot;,
-  &quot;other&quot;: &quot;Turret_T2_L_03_A&quot;,
-  &quot;otherTeam&quot;: &quot;Chaos&quot;,
-  &quot;source&quot;: &quot;Turret_T2_L_03_A&quot;,
-  &quot;sourceTeam&quot;: &quot;Chaos&quot;
-}
+<li><p><span style="color:red"><strong>OnTurretPlateDestroyed</strong></span></p>
+  <details>
+  <summary><b>Example value</b></summary>
+<pre><code class="lang-json">  Exemple 1 :
+  {
+  	&quot;eventname&quot;: &quot;OnTurretPlateDestroyed&quot;,
+  	&quot;other&quot;: &quot;Turret_T1_C_05_A&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Turret_T1_C_05_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 2 :
+  {
+  	&quot;eventname&quot;: &quot;OnTurretPlateDestroyed&quot;,
+  	&quot;other&quot;: &quot;Turret_T1_R_03_A&quot;,
+  	&quot;otherTeam&quot;: &quot;Order&quot;,
+  	&quot;source&quot;: &quot;Turret_T1_R_03_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Order&quot;
+  }
+  Exemple 3 :
+  {
+  	&quot;eventname&quot;: &quot;OnTurretPlateDestroyed&quot;,
+  	&quot;other&quot;: &quot;Turret_T2_L_03_A&quot;,
+  	&quot;otherTeam&quot;: &quot;Chaos&quot;,
+  	&quot;source&quot;: &quot;Turret_T2_L_03_A&quot;,
+  	&quot;sourceTeam&quot;: &quot;Chaos&quot;
+  }
 </code></pre>
-</details>
+  </details>
+</li>
+<li><p>OnPlantActivated <code>no information</code></p>
+</li>
+<li><p>OnEnterPlayerVisibility <code>no information</code></p>
+</li>
+<li><p>OnDragonSoulGiven <code>no information</code></p>
+</li>
+<li><p>OnDisconnect <code>no information</code></p>
+</li>
+<li><p>OnConnect <code>no information</code></p>
 </li>
 </ul>
-<br>
+<h3 id="information-in-eventname-that-can-be-found">Information in &quot;eventname&quot; that can be found</h3>
 <ul>
-<li>OnPlantActivated <code>no information</code></li>
-<li>OnEnterPlayerVisibility <code>no information</code></li>
-<li>OnDragonSoulGiven <code>no information</code></li>
-<li>OnDisconnect <code>no information</code></li>
-<li>OnConnect <code>no information</code></li>
-</ul>
-<h4 id="information-that-can-be-found">Information that can be found</h4>
-<ul>
-<li>Turret :</li>
-</ul>
-<pre><code>Turret_T1_L_03_A //T1 Top Blue
-Turret_T1_L_02_A //T2 Top Blue
-Turret_T1_C_06_A //T3 Top Blue
+<li><p><strong>Turret :</strong></p>
+  <details>
+  <summary><b>Data</b></summary>
+<pre><code>  Turret_T1_L_03_A //T1 Top Blue
+  Turret_T1_L_02_A //T2 Top Blue
+  Turret_T1_C_06_A //T3 Top Blue
 
-Turret_T1_R_03_A //T1 Bot Blue
-Turret_T1_R_02_A //T2 Bot Blue
-Turret_T1_C_07_A //T3 Bot Blue
+  Turret_T1_R_03_A //T1 Bot Blue
+  Turret_T1_R_02_A //T2 Bot Blue
+  Turret_T1_C_07_A //T3 Bot Blue
 
-Turret_T1_C_05_A //T1 Mid Blue
-Turret_T1_C_04_A //T2 Mid Blue
-Turret_T1_C_03_A //T3 Mid Blue
+  Turret_T1_C_05_A //T1 Mid Blue
+  Turret_T1_C_04_A //T2 Mid Blue
+  Turret_T1_C_03_A //T3 Mid Blue
 
-Turret_T1_C_01_A //T4 Nexus Top Blue
-Turret_T1_C_02_A //T4 Nexus Bot Blue
+  Turret_T1_C_01_A //T4 Nexus Top Blue
+  Turret_T1_C_02_A //T4 Nexus Bot Blue
 
-Turret_T2_L_03_A //T1 Top Red
-Turret_T2_L_02_A //T2 Top Red
-Turret_T2_L_01_A //T3 Top Red
+  Turret_T2_L_03_A //T1 Top Red
+  Turret_T2_L_02_A //T2 Top Red
+  Turret_T2_L_01_A //T3 Top Red
 
-Turret_T2_R_03_A //T1 Bot Red
-Turret_T2_R_02_A //T2 Bot Red
-Turret_T2_R_01_A //T3 Bot Red
+  Turret_T2_R_03_A //T1 Bot Red
+  Turret_T2_R_02_A //T2 Bot Red
+  Turret_T2_R_01_A //T3 Bot Red
 
-Turret_T2_C_05_A //T1 Bot Red
-Turret_T2_C_04_A //T2 Bot Red
-Turret_T2_C_03_A //T3 Bot Red
+  Turret_T2_C_05_A //T1 Bot Red
+  Turret_T2_C_04_A //T2 Bot Red
+  Turret_T2_C_03_A //T3 Bot Red
 
-Turret_T2_C_02_A //T4 Nexus Top Red
-Turret_T2_C_01_A //T4 Nexus Bot Red
+  Turret_T2_C_02_A //T4 Nexus Top Red
+  Turret_T2_C_01_A //T4 Nexus Bot Red
 </code></pre>
-<ul>
-<li>Inib :</li>
-</ul>
-<pre><code>Not information in game
-Barracks_T1_L1 //Inib Top Blue
-Barracks_T1_R1 //Inib Bot Blue
-Barracks_T1_C1 //Inib Mid Blue
-
-Barracks_T2_L1 //Inib Top Red
-Barracks_T2_R1 //Inib Bot Red
-Barracks_T2_C1 //Inib Mid Red
-</code></pre>
-<ul>
-<li>Jungler Mobs :
-<ul>
-<li>Dragons :</li>
-</ul>
+  </details>
+</li>
+<li><p>Inib <code>Not information in game</code></p>
+</li>
+<li><p><strong>Dragons :</strong></p>
+  <details>
+  <summary><b>Data</b></summary>
 <pre><code>  SRU_Dragon_Fire
   SRU_Dragon_Air
   SRU_Dragon_Hextech
@@ -2658,30 +2394,42 @@ Barracks_T2_C1 //Inib Mid Red
   SRU_Dragon_
   SRU_Dragon_Elder
 </code></pre>
-<ul>
-<li>Herald :</li>
-</ul>
+  </details>
+</li>
+<li><p><strong>Herald :</strong></p>
+  <details>
+  <summary><b>Data</b></summary>
 <pre><code>  SRU_RiftHerald17.1.1
   Rift Herald Relic
   RiftHeraldMercenary
 </code></pre>
-<ul>
-<li>Baron :</li>
-</ul>
+  </details>
+</li>
+<li><p><strong>Baron :</strong></p>
+  <details>
+  <summary><b>Data</b></summary>
 <pre><code>  SRU_BaronSpawn12.1.2
   SRU_Baron12.1.1
 </code></pre>
-<ul>
-<li>Red</li>
-<li>Blue</li>
-<li>Wolf</li>
-<li>Gromp</li>
-<li>Crab</li>
-<li>Krug</li>
-<li>Razorbeak</li>
-<li>WardCorpse</li>
-<li>PlantVision</li>
-</ul>
+  </details>
+</li>
+<li><p>Red</p>
+</li>
+<li><p>Blue</p>
+</li>
+<li><p>Wolf</p>
+</li>
+<li><p>Gromp</p>
+</li>
+<li><p>Crab</p>
+</li>
+<li><p>Krug</p>
+</li>
+<li><p>Razorbeak</p>
+</li>
+<li><p>WardCorpse</p>
+</li>
+<li><p>PlantVision</p>
 </li>
 </ul>
 </article>

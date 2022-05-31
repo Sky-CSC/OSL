@@ -1,4 +1,4 @@
-# Welcome to the OSL : **Overlay Spectator Live**
+# OSL : **Overlay Spectator Live**
 ![work-in-progress](https://img.shields.io/badge/respos%20status-WIP-yellow)
 ![stability](https://img.shields.io/badge/stability-experimental-orange)
 ![language](https://img.shields.io/badge/language-c%23-brightgreen)
