@@ -1,0 +1,91 @@
+{
+  "actions": [
+    {
+      "additionalProp1": {}
+    }
+  ],
+  "allowBattleBoost": true,
+  "allowDuplicatePicks": true,
+  "allowLockedEvents": true,
+  "allowRerolling": true,
+  "allowSkinSelection": true,
+  "bans": {
+    "myTeamBans": [
+      0
+    ],
+    "numBans": 0,
+    "theirTeamBans": [
+      0
+    ]
+  },
+  "benchChampionIds": [
+    0
+  ],
+  "benchEnabled": true,
+  "boostableSkinCount": 0,
+  "chatDetails": {
+    "chatRoomName": "string",
+    "chatRoomPassword": "string"
+  },
+  "counter": 0,
+  "entitledFeatureState": {
+    "additionalRerolls": 0,
+    "unlockedSkinIds": [
+      0
+    ]
+  },
+  "gameId": 0,
+  "hasSimultaneousBans": true,
+  "hasSimultaneousPicks": true,
+  "isCustomGame": true,
+  "isSpectating": true,
+  "localPlayerCellId": 0,
+  "lockedEventIndex": 0,
+  "myTeam": [
+    {
+      "assignedPosition": "string",
+      "cellId": 0,
+      "championId": 0,
+      "championPickIntent": 0,
+      "entitledFeatureType": "string",
+      "selectedSkinId": 0,
+      "spell1Id": 0,
+      "spell2Id": 0,
+      "summonerId": 0,
+      "team": 0,
+      "wardSkinId": 0
+    }
+  ],
+  "recoveryCounter": 0,
+  "rerollsRemaining": 0,
+  "skipChampionSelect": true,
+  "theirTeam": [
+    {
+      "assignedPosition": "string",
+      "cellId": 0,
+      "championId": 0,
+      "championPickIntent": 0,
+      "entitledFeatureType": "string",
+      "selectedSkinId": 0,
+      "spell1Id": 0,
+      "spell2Id": 0,
+      "summonerId": 0,
+      "team": 0,
+      "wardSkinId": 0
+    }
+  ],
+  "timer": {
+    "adjustedTimeLeftInPhase": 0,
+    "internalNowInEpochMs": 0,
+    "isInfinite": true,
+    "phase": "string",
+    "totalTimeInPhase": 0
+  },
+  "trades": [
+    {
+      "cellId": 0,
+      "id": 0,
+      "state": "AVAILABLE"
+    }
+  ]
+}

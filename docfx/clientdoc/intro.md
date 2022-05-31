@@ -3,6 +3,32 @@
 > [!WARNING] 
 > **Documentation in progress** 
 
+---
+## Enable data collection
+### <ins>Game Client API :
+[Game Client API](https://developer.riotgames.com/docs/lol#general_game-constants)
+For recive data from a game add to ```C:/Riot Games/League of Legends/Config/game.cfg```
+```
+[General]
+EnableReplayApi=1
+```
+
+add to ```C:/Riot Games/League of Legends/Config/game.cfg``` for see a more graphic timer for dragon and baron  
+```
+[Spectator]
+eSportsNeutralTimers=1
+```
+
+---
+
+## Spectator Visuel
+
+- ```ctrl + maj + w``` for change max zoom of map
+- ```x``` for total gold
+- 
+
+---
+
 ## Futures Features
 - ### Chek if riot app are **launch**, **close**, **crash**
 
