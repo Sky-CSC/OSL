@@ -16,6 +16,8 @@ Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live so
 Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live software suit.
 This project permite to have an overlay for display informattion in **Whaiting a Game**, **Champ Select**, **Whaiting Game Start**, **In Game** and **End Game** in streamings.
 
+---
+
 <h2>
 
 See the **[documentation](https://sky-csc.github.io/OSL/)** for further informations
@@ -23,6 +25,7 @@ See the **[documentation](https://sky-csc.github.io/OSL/)** for further informat
 </h2>
 
 ---
+
 ### This project permite to have an overlay for display informattion in champion-select, in-game and in end-game in streamings.
 
 ℹ️**If you have any suggestions don't hesitate**ℹ️
