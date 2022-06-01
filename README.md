@@ -1,15 +1,26 @@
-# **OSL** : Overlay Spectator Live
+# OSL : **Overlay Spectator Live**
 ![work-in-progress](https://img.shields.io/badge/respos%20status-WIP-yellow)
 ![stability](https://img.shields.io/badge/stability-experimental-orange)
 ![language](https://img.shields.io/badge/language-c%23-brightgreen)
 ![.Net-6.0](https://img.shields.io/badge/.NET-6.0-brightgreen)
 ![platform](https://img.shields.io/badge/platform-windows-brightgreen)
 ![license](https://img.shields.io/badge/license-comming%20soon-critical)
-![riot](https://img.shields.io/badge/api-League%20of%20Legends-blue)
-![riot2](https://img.shields.io/badge/api-RIOT-blue)
+![LoL1](https://img.shields.io/badge/Game%20Client%20API-League%20of%20Legends-blue)
+![LoL2](https://img.shields.io/badge/Game%20Client%20Replay%20API-League%20of%20Legends-blue)
+![LoL3](https://img.shields.io/badge/Live%20Events%20API-League%20of%20Legends-blue)
+![LoL4](https://img.shields.io/badge/Memory%20Reader-League%20of%20Legends-blue)
+![riot1](https://img.shields.io/badge/Web%20API%20Riot-RIOT-blue)
+![riot2](https://img.shields.io/badge/CDragon%20API-CDragon-blue)
 
 Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live software suit.
+Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live software suit.
+This project permite to have an overlay for display informattion in **Whaiting a Game**, **Champ Select**, **Whaiting Game Start**, **In Game** and **End Game** in streamings.
+
+<h2>
+
 See the **[documentation](https://sky-csc.github.io/OSL/)** for further informations
+
+</h2>
 
 ---
 ### This project permite to have an overlay for display informattion in champion-select, in-game and in end-game in streamings.
