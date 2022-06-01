@@ -1,13 +1,15 @@
 # **Client** Documentation
 
-> [!WARNING] 
+---
+
+> [!CAUTION] 
 > **Documentation in progress** 
 
 ---
 
 ## Enable data collection
 ### <ins>**Game Client API :**
-[Game Client API](https://developer.riotgames.com/docs/lol#general_game-constants)
+[Game Client API](https://developer.riotgames.com/docs/lol#league-client-api)
 For recive data from a game add to ```C:/Riot Games/League of Legends/Config/game.cfg```
 ```
 [General]

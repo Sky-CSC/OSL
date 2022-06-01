@@ -92,14 +92,15 @@
                     <article class="content wrap" id="_content" data-uid="">
 <h1 id="client-documentation"><strong>Client</strong> Documentation</h1>
 
-<div class="WARNING">
-<h5>Warning</h5>
+<hr>
+<div class="CAUTION">
+<h5>Caution</h5>
 <p><strong>Documentation in progress</strong></p>
 </div>
 <hr>
 <h2 id="enable-data-collection">Enable data collection</h2>
-<h3 id="game-client-api-"><ins>Game Client API :</ins></h3>
-<p><a href="https://developer.riotgames.com/docs/lol#general_game-constants">Game Client API</a>
+<h3 id="game-client-api-"><ins><strong>Game Client API :</strong></ins></h3>
+<p><a href="https://developer.riotgames.com/docs/lol#league-client-api">Game Client API</a>
 For recive data from a game add to <code>C:/Riot Games/League of Legends/Config/game.cfg</code></p>
 <pre><code>[General]
 EnableReplayApi=1
@@ -107,6 +108,23 @@ EnableReplayApi=1
 <p>add to <code>C:/Riot Games/League of Legends/Config/game.cfg</code> for see a more graphic timer for dragon and baron</p>
 <pre><code>[Spectator]
 eSportsNeutralTimers=1
+</code></pre>
+<h3 id="live-events-api-"><ins><strong>Live Events API :</strong></ins></h3>
+<p><a href="https://github.com/SkinSpotlights/LiveEventsDocumentation">Live Events API</a> For recive data from a game add to <code>C:/Riot Games/League of Legends/Config/game.cfg</code></p>
+<pre><code>[LiveEvents]
+Enable=1
+Port=34243
+</code></pre>
+<p>Next in <code>C:/Riot Games/League of Legends/Config/</code> create file <code>LiveEvents.ini</code> and copy on it</p>
+<pre><code>OnKill
+OnKillDragon_Spectator
+OnNeutralMinionKill
+OnMinionKill
+OnSummonRiftHerald
+OnKillWorm_Spectator
+OnTurretDie
+OnMinionKill
+OnChampionKill
 </code></pre>
 <hr>
 <h2 id="spectator-visuel">Spectator Visuel</h2>

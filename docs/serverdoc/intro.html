@@ -92,17 +92,39 @@
                     <article class="content wrap" id="_content" data-uid="">
 <h1 id="server-documentation"><strong>Server</strong> Documentation</h1>
 
-<div class="WARNING">
-<h5>Warning</h5>
+<hr>
+<div class="CAUTION">
+<h5>Caution</h5>
 <p><strong>Documentation in progress</strong></p>
+<p><strong>These features are under development, they are not available</strong></p>
 </div>
+<hr>
+<p>This document explains how to use and connect to the server to receive the different overlay.
+The information you can receive from the game is listed, and separated into 5 categories. It is possible to disable or enable all options.</p>
+<p><strong>Whaiting a Game</strong> : This overlay displays information about the players in the next game.</p>
+<p><strong>Champ Select</strong> : This overlay display information when champ select of the match is in progress.</p>
+<p><strong>Whaiting Game Start</strong> :  This overlay displays information while waiting for the game to start because of the delay between the game and the broadcast for the viewers.</p>
+<p><strong>In Game</strong> : This overlay display information when spectator game is in progress.</p>
+<p><strong>End Game</strong> : This overlay display information when the game is over.</p>
+<hr>
+<h2 id="obs-configuration-"><strong>OBS</strong> configuration :</h2>
+<p>Add to your différents scènes the différents URL, you can found this URL on your personal area, in games, game-xxxxxxxxxx, in <strong>Whaiting a Game</strong>, <strong>Champ Select</strong>, <strong>Whaiting Game Start</strong>, <strong>In Game</strong> and <strong>End Game</strong>.</p>
+<p>The URL is like <a href="https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsdd">https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsdd</a> he is generate randomly</p>
+<hr>
+<h2 id="information-display-on-overlay">Information display on overlay</h2>
 <p><span style="color:yellow">information</span> : Display information if the default riot overlay is disabled</p>
-<p><span style="color:green">information ?</span> : Only if reading from memory is enabled. If memory reading is enabled, the default riot overlay can be disabled.</p>
+<p><span style="color:green">information</span> : Only if reading from memory is enabled. If memory reading is enabled, the default riot overlay can be disabled.</p>
+<p><span style="color:darkred">information</span> : Data not found at this time</p>
 <h3 id="information-display-with-overlay-whaiting-a-game"><ins>Information display with overlay <strong>Whaiting a Game</strong></ins></h3>
 <ul>
-<li></li>
+<li>Number of lose and vircory in ranked solo/duo and flex</li>
 </ul>
-<h3 id="information-display-with-overlay-in-champ-select"><ins>Information display with overlay in <strong>champ select</strong></ins></h3>
+<p>Video example Whaiting a Game</p>
+<p><a href="https://www.youtube.com/watch?v=y-jzB9q54Ng"><img src="https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" alt="Video example Whaiting a Game"></a></p>
+<!-- <a href="http://www.youtube.com/watch?feature=player_embedded&v=y-jzB9q54Ng?
+" target="_blank"><img src="http://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" 
+alt="Video example Whaiting a Game" width="240" height="180" border="0" /></a> -->
+<h3 id="information-display-with-overlay-in-champ-select"><ins>Information display with overlay in <strong>Champ Select</strong></ins></h3>
 <p>Linked att game :</p>
 <ul>
 <li>Champion Ban</li>
@@ -123,29 +145,33 @@
 <li>Stats Champ Ban</li>
 <li>Stats Champ Pick</li>
 <li>Stats Champ Winrate</li>
-<li>Stats Summoners on champ</li>
 </ul>
+<p>Video example Champ Select</p>
+<p><a href="https://www.youtube.com/watch?v=y-jzB9q54Ng"><img src="https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" alt="Video example Whaiting a Game"></a></p>
 <h3 id="information-display-with-overlay-whaiting-game-start"><ins>Information display with overlay <strong>Whaiting Game Start</strong></ins></h3>
 <ul>
-<li></li>
+<li>Stats of players in the champ pick</li>
+<li>Stats Summoners on champ</li>
 </ul>
+<p>Video example Whaiting Game Start</p>
+<p><a href="https://www.youtube.com/watch?v=y-jzB9q54Ng"><img src="https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" alt="Video example Whaiting a Game"></a></p>
 <h3 id="information-display-with-overlay-in-game"><ins>Information display with overlay <strong>In Game</strong></ins></h3>
 <p>Inter of game :</p>
 <ul>
 <li>LevelUp</li>
 <li>Itemps buy</li>
-<li>Dragon (Kill, <span style="color:green">next ?</span>, soul)</li>
-<li>Elder Dragon (Timer, buff, all champ kill, <span style="color:green">gold diff ?</span>, <span style="color:green">damege diff ?</span>, next helder drake)</li>
-<li>Baron (buff, timer, all champ dead, <span style="color:green">gold diff ?</span>, <span style="color:green">damage diff ?</span>, next nash)</li>
+<li>Dragon (Kill, <span style="color:darkred">next</span>, soul)</li>
+<li>Elder Dragon (Timer, buff, all champ kill, <span style="color:green">gold diff</span>, <span style="color:green">damege diff</span>, next helder drake)</li>
+<li>Baron (buff, timer, all champ dead, <span style="color:green">gold diff</span>, <span style="color:green">damage diff</span>, next nash)</li>
 <li>Herald (buff, timer, launch or not, take or not)</li>
 <li><span style="color:yellow">Kill</span></li>
 <li><span style="color:yellow">Tower</span></li>
 <li><span style="color:yellow">Timer</span></li>
-<li><span style="color:green">Gold ?</span></li>
-<li><span style="color:green">XP + Level ?</span></li>
-<li><span style="color:green">Damage dead ?</span></li>
-<li><span style="color:green">Damage dead during fight ?</span></li>
-<li><span style="color:green">Gold win during fight ?</span></li>
+<li><span style="color:green">Gold</span></li>
+<li><span style="color:green">Gold win during fight</span></li>
+<li><span style="color:green">XP + Level</span></li>
+<li><span style="color:darkred">Damage dead</span></li>
+<li><span style="color:darkred">Damage dead during fight</span></li>
 </ul>
 <p>Exter of game :</p>
 <ul>
@@ -155,6 +181,8 @@
 <li>Lose/Win</li>
 <li>Video</li>
 </ul>
+<p>Video example In Game</p>
+<p><a href="https://www.youtube.com/watch?v=y-jzB9q54Ng"><img src="https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" alt="Video example Whaiting a Game"></a></p>
 <h3 id="information-display-with-overlay-in-end-game"><ins>Information display with overlay in <strong>End Game</strong></ins></h3>
 <ul>
 <li>Dega</li>
@@ -162,6 +190,8 @@
 <li>Objectif</li>
 <li>Size</li>
 </ul>
+<p>Video example End Game</p>
+<p><a href="https://www.youtube.com/watch?v=y-jzB9q54Ng"><img src="https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" alt="Video example Whaiting a Game"></a></p>
 </article>
                 </div>
 

@@ -1,13 +1,15 @@
 # Developper Documentation **Client**
 
-> [!WARNING] 
+---
+
+> [!CAUTION] 
 > **Documentation in progress** 
 
 ---
 
 ## **API/Tools used :**
 ### <ins>**Game Client API :**
-[Game Client API](https://developer.riotgames.com/docs/lol#general_game-constants)
+[Game Client API](https://developer.riotgames.com/docs/lol#league-client-api)
 For recive data from a game add to `C:/Riot Games/League of Legends/Config/game.cfg`
 ```
 [General]
@@ -527,7 +529,11 @@ https://127.0.0.1:2999/liveclientdata/playerlist
 
 ---
 
-## <ins>Documentation of **Live Events API**
+<ins> 
+
+## Documentation of **Live Events API**
+</ins>
+
 This documentation concern just **Replay** or **Spectator** mode
 If he is note ```no information``` he is possible he exist in other game mode or I juts don't found it in a spécific game
 

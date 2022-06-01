@@ -1,9 +1,19 @@
 # Developper Documentation **Server**
 
-> [!WARNING] 
-> **Documentation in progress** 
 ---
-### Game information obtained remotely
+
+> [!CAUTION] 
+> **Documentation in progress** 
+
+---
+
+## **API/Tools used :**
+## Web API Riot
+[Riot API](https://developer.riotgames.com/apis) used for take many information
+
+---
+
+## Game information obtained remotely
 - Runes/Perks/Masteries :
   ```diff
   - Riot API :
@@ -16,8 +26,7 @@
   ```
 ---
 
-## Riot API
-[Riot API](https://developer.riotgames.com/apis) used for take many information
+
 
 ### Information used :
 
