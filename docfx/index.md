@@ -13,7 +13,7 @@
 ![riot2](https://img.shields.io/badge/CDragon%20API-CDragon-blue)
 
 Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live software suit.
-This project permite to have an overlay for display informattion in **Whaiting a Game**, **Champ Select**, **Whaiting Game Start**, **In Game** and **End Game** in streamings.
+This project permite to have an overlay for display informattion in **Waiting a Game**, **Champ Select**, **Waiting Game Start**, **In Game** and **End Game** in streamings.
 
 ## Applications architecture 
 ![](picture/OSL-architecture2.drawio.png)

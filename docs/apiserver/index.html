@@ -101,36 +101,25 @@
 <h2 id="apitools-used-"><strong>API/Tools used :</strong></h2>
 <h2 id="web-api-riot">Web API Riot</h2>
 <p><a href="https://developer.riotgames.com/apis">Riot API</a> used for take many information</p>
+<h2 id="cdragon-api-"><strong>CDragon API :</strong></h2>
+<p><a href="https://www.communitydragon.org/">CDragon API</a> used for take picture of game and build overlays</p>
 <hr>
-<h2 id="game-information-obtained-remotely">Game information obtained remotely</h2>
+<h2 id="game-information-take-with-web-api-riot">Game information take with Web API Riot</h2>
 <ul>
-<li>Runes/Perks/Masteries :
-<pre><code class="lang-diff">- Riot API :
+<li>Runes/Perks/Masteries (Used for found rune of all player of the curent game) :
+<pre><code class="lang-diff">- Riot API (Spectator-v4) :
 /lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId} (default)
 </code></pre>
 </li>
-<li>Summoners Spell
-<pre><code class="lang-diff">- Riot API :
+<li>Summoners Spell (Used for found accountId (encryptedSummonerId) of summonerName) :
+<pre><code class="lang-diff">- Riot API (Summoner-V4) :
 /lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId} (default)
 </code></pre>
 </li>
 </ul>
 <hr>
-<h3 id="information-used-">Information used :</h3>
-<ul>
-<li><p>Spectator-v4 (get information of a player in game)</p>
-<ul>
-<li>/lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId}	
-<br>Used for found rune of all player of the game</li>
-</ul>
-</li>
-<li><p>Summoner-V4 (get summoners information)</p>
-<ul>
-<li>/lol/summoner/v4/summoners/by-name/{summonerName}
-<br>Used for found accountId (encryptedSummonerId) of summonerName</li>
-</ul>
-</li>
-</ul>
+<h2 id="endpoint-of-cdragon">Endpoint of CDragon</h2>
+<p><a href="https://cdn.communitydragon.org/endpoints">Endpoint</a></p>
 </article>
                 </div>
 
