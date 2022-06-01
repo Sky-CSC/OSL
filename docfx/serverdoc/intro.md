@@ -45,7 +45,11 @@ The URL is like https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsd
 
 Video example Whaiting a Game
 
-[![Video example Whaiting a Game](https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg)](https://www.youtube.com/watch?v=y-jzB9q54Ng)
+<!-- https://youtu.be/46wy47H3D6o?list=PLk9GhrqI8Se0fgkxp_Ceb3V5A89m0kk4T -->
+
+[![Video example Whaiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
+
+<!-- [![Video example Whaiting a Game](https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg)](https://www.youtube.com/watch?v=y-jzB9q54Ng) -->
 
 <!-- <a href="http://www.youtube.com/watch?feature=player_embedded&v=y-jzB9q54Ng?
 " target="_blank"><img src="http://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" 
@@ -73,7 +77,7 @@ Take off game :
 
 Video example Champ Select
 
-[![Video example Whaiting a Game](https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg)](https://www.youtube.com/watch?v=y-jzB9q54Ng)
+[![Video example Whaiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
 
 ### <ins>Information display with overlay **Whaiting Game Start**
 - Stats of players in the champ pick
@@ -81,7 +85,7 @@ Video example Champ Select
 
 Video example Whaiting Game Start
 
-[![Video example Whaiting a Game](https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg)](https://www.youtube.com/watch?v=y-jzB9q54Ng)
+[![Video example Whaiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
  
 ### <ins>Information display with overlay **In Game**
 Inter of game :
@@ -109,7 +113,7 @@ Exter of game :
 
 Video example In Game
 
-[![Video example Whaiting a Game](https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg)](https://www.youtube.com/watch?v=y-jzB9q54Ng)
+[![Video example Whaiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
 
 ### <ins>Information display with overlay in **End Game**
 - Dega
@@ -119,4 +123,4 @@ Video example In Game
 
 Video example End Game
 
-[![Video example Whaiting a Game](https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg)](https://www.youtube.com/watch?v=y-jzB9q54Ng)
+[![Video example Whaiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
