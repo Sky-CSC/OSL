@@ -133,13 +133,17 @@ public class DirectoryManagerLocal
             try
             {
                 Directory.CreateDirectory(directoryPath);
-                _logger.log(LoggingLevel.INFO, "CreateDirectory", $"Directory create : {directoryPath}");
+                //_logger.log(LoggingLevel.INFO, "CreateDirectory", $"Directory create : {directoryPath}");
             }
             catch (Exception ex)
             {
                 //throw new Exception(ex.Message);
-                _logger.log(LoggingLevel.ERROR, "CreateDirectory", ex.Message);
+                _logger.log(LoggingLevel.ERROR, "CreateDirectory", $"Error creation directory {ex.Message}");
             }
+        }
+        else
+        {
+            //_logger.log(LoggingLevel.INFO, "CreateDirectory", $"Already created : {directoryPath}");
         }
     }
     /// <summary>
@@ -161,6 +165,18 @@ public class DirectoryManagerLocal
                 _logger.log(LoggingLevel.ERROR, "DeleteDirectory", ex.Message);
             }
         }
+    }
+
+    public static void DirectoryInitDataCDragon(string numPatch, string region)
+    {
+        string championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
+        string itemsDirectory = "./" + numPatch + "/" + region + "/" + "Items" + "/";
+        string summonerSpellsDirectory = "./" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
+        string perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+        CreateDirectory(championDirectory);
+        CreateDirectory(itemsDirectory);
+        CreateDirectory(summonerSpellsDirectory);
+        CreateDirectory(perksDirectory);
     }
 }
 
