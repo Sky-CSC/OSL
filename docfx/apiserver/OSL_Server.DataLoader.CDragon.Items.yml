@@ -1,32 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: OSL_Server.Data.WeatherForecastService
-  commentId: T:OSL_Server.Data.WeatherForecastService
-  id: WeatherForecastService
-  parent: OSL_Server.Data
+- uid: OSL_Server.DataLoader.CDragon.Items
+  commentId: T:OSL_Server.DataLoader.CDragon.Items
+  id: Items
+  parent: OSL_Server.DataLoader.CDragon
   children:
-  - OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
+  - OSL_Server.DataLoader.CDragon.Items.#ctor
+  - OSL_Server.DataLoader.CDragon.Items.From
+  - OSL_Server.DataLoader.CDragon.Items.IconPath
+  - OSL_Server.DataLoader.CDragon.Items.Id
+  - OSL_Server.DataLoader.CDragon.Items.Name
+  - OSL_Server.DataLoader.CDragon.Items.To
   langs:
   - csharp
   - vb
-  name: WeatherForecastService
-  nameWithType: WeatherForecastService
-  fullName: OSL_Server.Data.WeatherForecastService
+  name: Items
+  nameWithType: Items
+  fullName: OSL_Server.DataLoader.CDragon.Items
   type: Class
   source:
     remote:
-      path: OSL-Server/Data/WeatherForecastService.cs
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSL.git
-    id: WeatherForecastService
-    path: ../OSL-Server/Data/WeatherForecastService.cs
-    startLine: 2
+    id: Items
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 226
   assemblies:
   - OSL-Server
-  namespace: OSL_Server.Data
+  namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nItems information\n"
+  example: []
   syntax:
-    content: public class WeatherForecastService
-    content.vb: Public Class WeatherForecastService
+    content: public class Items
+    content.vb: Public Class Items
   inheritance:
   - System.Object
   inheritedMembers:
@@ -43,47 +50,217 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
-  commentId: M:OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
-  id: GetForecastAsync(DateTime)
-  parent: OSL_Server.Data.WeatherForecastService
+- uid: OSL_Server.DataLoader.CDragon.Items.Id
+  commentId: P:OSL_Server.DataLoader.CDragon.Items.Id
+  id: Id
+  parent: OSL_Server.DataLoader.CDragon.Items
   langs:
   - csharp
   - vb
-  name: GetForecastAsync(DateTime)
-  nameWithType: WeatherForecastService.GetForecastAsync(DateTime)
-  fullName: OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
-  type: Method
+  name: Id
+  nameWithType: Items.Id
+  fullName: OSL_Server.DataLoader.CDragon.Items.Id
+  type: Property
   source:
     remote:
-      path: OSL-Server/Data/WeatherForecastService.cs
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSL.git
-    id: GetForecastAsync
-    path: ../OSL-Server/Data/WeatherForecastService.cs
-    startLine: 9
+    id: Id
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 228
   assemblies:
   - OSL-Server
-  namespace: OSL_Server.Data
+  namespace: OSL_Server.DataLoader.CDragon
   syntax:
-    content: public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
-    parameters:
-    - id: startDate
-      type: DateTime
+    content: public int Id { get; set; }
+    parameters: []
     return:
-      type: Task{OSL_Server.Data.WeatherForecast[]}
-    content.vb: Public Function GetForecastAsync(startDate As DateTime) As Task(Of WeatherForecast())
-  overload: OSL_Server.Data.WeatherForecastService.GetForecastAsync*
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: OSL_Server.DataLoader.CDragon.Items.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Items.Name
+  commentId: P:OSL_Server.DataLoader.CDragon.Items.Name
+  id: Name
+  parent: OSL_Server.DataLoader.CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Items.Name
+  fullName: OSL_Server.DataLoader.CDragon.Items.Name
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Name
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 229
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: OSL_Server.DataLoader.CDragon.Items.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Items.IconPath
+  commentId: P:OSL_Server.DataLoader.CDragon.Items.IconPath
+  id: IconPath
+  parent: OSL_Server.DataLoader.CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: IconPath
+  nameWithType: Items.IconPath
+  fullName: OSL_Server.DataLoader.CDragon.Items.IconPath
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: IconPath
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 230
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public string IconPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IconPath As String
+  overload: OSL_Server.DataLoader.CDragon.Items.IconPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Items.From
+  commentId: P:OSL_Server.DataLoader.CDragon.Items.From
+  id: From
+  parent: OSL_Server.DataLoader.CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: From
+  nameWithType: Items.From
+  fullName: OSL_Server.DataLoader.CDragon.Items.From
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: From
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 231
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public List<string> From { get; set; }
+    parameters: []
+    return:
+      type: List{System.String}
+    content.vb: Public Property From As List(Of String)
+  overload: OSL_Server.DataLoader.CDragon.Items.From*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Items.To
+  commentId: P:OSL_Server.DataLoader.CDragon.Items.To
+  id: To
+  parent: OSL_Server.DataLoader.CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: To
+  nameWithType: Items.To
+  fullName: OSL_Server.DataLoader.CDragon.Items.To
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: To
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 232
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public List<string> To { get; set; }
+    parameters: []
+    return:
+      type: List{System.String}
+    content.vb: Public Property To As List(Of String)
+  overload: OSL_Server.DataLoader.CDragon.Items.To*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Items.#ctor
+  commentId: M:OSL_Server.DataLoader.CDragon.Items.#ctor
+  id: '#ctor'
+  parent: OSL_Server.DataLoader.CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: Items()
+  nameWithType: Items.Items()
+  fullName: OSL_Server.DataLoader.CDragon.Items.Items()
+  type: Constructor
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: .ctor
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 233
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public Items()
+    content.vb: Public Sub New
+  overload: OSL_Server.DataLoader.CDragon.Items.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: OSL_Server.Data
-  commentId: N:OSL_Server.Data
-  name: OSL_Server.Data
-  nameWithType: OSL_Server.Data
-  fullName: OSL_Server.Data
+- uid: OSL_Server.DataLoader.CDragon
+  commentId: N:OSL_Server.DataLoader.CDragon
+  name: OSL_Server.DataLoader.CDragon
+  nameWithType: OSL_Server.DataLoader.CDragon
+  fullName: OSL_Server.DataLoader.CDragon
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -376,76 +553,96 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Server.Data.WeatherForecastService.GetForecastAsync*
-  commentId: Overload:OSL_Server.Data.WeatherForecastService.GetForecastAsync
-  name: GetForecastAsync
-  nameWithType: WeatherForecastService.GetForecastAsync
-  fullName: OSL_Server.Data.WeatherForecastService.GetForecastAsync
-- uid: DateTime
+- uid: OSL_Server.DataLoader.CDragon.Items.Id*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Items.Id
+  name: Id
+  nameWithType: Items.Id
+  fullName: OSL_Server.DataLoader.CDragon.Items.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
-  name: DateTime
-  nameWithType: DateTime
-  fullName: DateTime
-- uid: Task{OSL_Server.Data.WeatherForecast[]}
-  commentId: '!:Task{OSL_Server.Data.WeatherForecast[]}'
-  definition: Task`1
-  name: Task<WeatherForecast[]>
-  nameWithType: Task<WeatherForecast[]>
-  fullName: Task<OSL_Server.Data.WeatherForecast[]>
-  nameWithType.vb: Task(Of WeatherForecast())
-  fullName.vb: Task(Of OSL_Server.Data.WeatherForecast())
-  name.vb: Task(Of WeatherForecast())
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.DataLoader.CDragon.Items.Name*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Items.Name
+  name: Name
+  nameWithType: Items.Name
+  fullName: OSL_Server.DataLoader.CDragon.Items.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.DataLoader.CDragon.Items.IconPath*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Items.IconPath
+  name: IconPath
+  nameWithType: Items.IconPath
+  fullName: OSL_Server.DataLoader.CDragon.Items.IconPath
+- uid: OSL_Server.DataLoader.CDragon.Items.From*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Items.From
+  name: From
+  nameWithType: Items.From
+  fullName: OSL_Server.DataLoader.CDragon.Items.From
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
   spec.csharp:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: OSL_Server.Data.WeatherForecast
-    name: WeatherForecast
-    nameWithType: WeatherForecast
-    fullName: OSL_Server.Data.WeatherForecast
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: OSL_Server.Data.WeatherForecast
-    name: WeatherForecast
-    nameWithType: WeatherForecast
-    fullName: OSL_Server.Data.WeatherForecast
-  - name: ()
-    nameWithType: ()
-    fullName: ()
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Task`1
+- uid: List`1
   isExternal: true
-  name: Task<>
-  nameWithType: Task<>
-  fullName: Task<>
-  nameWithType.vb: Task(Of )
-  fullName.vb: Task(Of )
-  name.vb: Task(Of )
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -457,10 +654,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -471,3 +668,13 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: OSL_Server.DataLoader.CDragon.Items.To*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Items.To
+  name: To
+  nameWithType: Items.To
+  fullName: OSL_Server.DataLoader.CDragon.Items.To
+- uid: OSL_Server.DataLoader.CDragon.Items.#ctor*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Items.#ctor
+  name: Items
+  nameWithType: Items.Items
+  fullName: OSL_Server.DataLoader.CDragon.Items.Items

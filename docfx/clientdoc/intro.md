@@ -55,6 +55,8 @@ OnChampionKill
 
 ## Features
 - Chek if riot app are **launch**, **close**, **crash**
-- Send information to the server if it is during ChampSelect
-- Send information to the server if game is in Progress
-- Sends information to the server if the game is finished
+- Send information to the server in :
+  - **Champ Select** (champ select of the match is in progress)
+  - **Waiting Game Start** (information while waiting for the game to start)
+  - **In Game** (spectator game is in progress)
+  - **End Game** (game is over)

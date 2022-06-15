@@ -33,7 +33,6 @@ items:
     content: 'public class ChampionLevel : IComparable'
     content.vb: >-
       Public Class ChampionLevel
-
           Implements IComparable
   inheritance:
   - System.Object

@@ -18,6 +18,53 @@
     name: WeatherForecast
   - uid: OSL_Server.Data.WeatherForecastService
     name: WeatherForecastService
+- uid: OSL_Server.DataLoader.CDragon
+  name: OSL_Server.DataLoader.CDragon
+  items:
+  - uid: OSL_Server.DataLoader.CDragon.CDragon
+    name: CDragon
+  - uid: OSL_Server.DataLoader.CDragon.CDragon.Download
+    name: CDragon.Download
+  - uid: OSL_Server.DataLoader.CDragon.CDragonInfo
+    name: CDragonInfo
+  - uid: OSL_Server.DataLoader.CDragon.Champion
+    name: Champion
+  - uid: OSL_Server.DataLoader.CDragon.ChampionManager
+    name: ChampionManager
+  - uid: OSL_Server.DataLoader.CDragon.DataCDragon
+    name: DataCDragon
+  - uid: OSL_Server.DataLoader.CDragon.ItemManager
+    name: ItemManager
+  - uid: OSL_Server.DataLoader.CDragon.Items
+    name: Items
+  - uid: OSL_Server.DataLoader.CDragon.Patch
+    name: Patch
+  - uid: OSL_Server.DataLoader.CDragon.Perks
+    name: Perks
+  - uid: OSL_Server.DataLoader.CDragon.PerksManager
+    name: PerksManager
+  - uid: OSL_Server.DataLoader.CDragon.Region
+    name: Region
+  - uid: OSL_Server.DataLoader.CDragon.RegionContent
+    name: RegionContent
+  - uid: OSL_Server.DataLoader.CDragon.Skins
+    name: Skins
+  - uid: OSL_Server.DataLoader.CDragon.Sound
+    name: Sound
+  - uid: OSL_Server.DataLoader.CDragon.SummonerSpellManager
+    name: SummonerSpellManager
+  - uid: OSL_Server.DataLoader.CDragon.SummonerSpells
+    name: SummonerSpells
+- uid: OSL_Server.DataReciveClient
+  name: OSL_Server.DataReciveClient
+  items:
+  - uid: OSL_Server.DataReciveClient.ReciveFromClient
+    name: ReciveFromClient
+- uid: OSL_Server.Download
+  name: OSL_Server.Download
+  items:
+  - uid: OSL_Server.Download.Download
+    name: Download
 - uid: OSL_Server.FileManager
   name: OSL_Server.FileManager
   items:

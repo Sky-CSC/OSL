@@ -358,7 +358,6 @@ items:
   syntax:
     content: >-
       public static T ReadMemory<T>(int Address)
-
           where T : struct
     parameters:
     - id: Address
@@ -442,7 +441,6 @@ items:
   syntax:
     content: >-
       public static float[] ReadMatrix<T>(int Address, int MatrixSize)
-
           where T : struct
     parameters:
     - id: Address

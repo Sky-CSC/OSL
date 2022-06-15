@@ -1,32 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: OSL_Server.Data.WeatherForecastService
-  commentId: T:OSL_Server.Data.WeatherForecastService
-  id: WeatherForecastService
-  parent: OSL_Server.Data
+- uid: OSL_Server.DataLoader.CDragon.Sound
+  commentId: T:OSL_Server.DataLoader.CDragon.Sound
+  id: Sound
+  parent: OSL_Server.DataLoader.CDragon
   children:
-  - OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
+  - OSL_Server.DataLoader.CDragon.Sound.BanPath
+  - OSL_Server.DataLoader.CDragon.Sound.ChoosePath
+  - OSL_Server.DataLoader.CDragon.Sound.SfxPath
   langs:
   - csharp
   - vb
-  name: WeatherForecastService
-  nameWithType: WeatherForecastService
-  fullName: OSL_Server.Data.WeatherForecastService
+  name: Sound
+  nameWithType: Sound
+  fullName: OSL_Server.DataLoader.CDragon.Sound
   type: Class
   source:
     remote:
-      path: OSL-Server/Data/WeatherForecastService.cs
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSL.git
-    id: WeatherForecastService
-    path: ../OSL-Server/Data/WeatherForecastService.cs
-    startLine: 2
+    id: Sound
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 203
   assemblies:
   - OSL-Server
-  namespace: OSL_Server.Data
+  namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nSound data\n"
+  example: []
   syntax:
-    content: public class WeatherForecastService
-    content.vb: Public Class WeatherForecastService
+    content: public class Sound
+    content.vb: Public Class Sound
   inheritance:
   - System.Object
   inheritedMembers:
@@ -43,47 +47,117 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
-  commentId: M:OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
-  id: GetForecastAsync(DateTime)
-  parent: OSL_Server.Data.WeatherForecastService
+- uid: OSL_Server.DataLoader.CDragon.Sound.ChoosePath
+  commentId: P:OSL_Server.DataLoader.CDragon.Sound.ChoosePath
+  id: ChoosePath
+  parent: OSL_Server.DataLoader.CDragon.Sound
   langs:
   - csharp
   - vb
-  name: GetForecastAsync(DateTime)
-  nameWithType: WeatherForecastService.GetForecastAsync(DateTime)
-  fullName: OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
-  type: Method
+  name: ChoosePath
+  nameWithType: Sound.ChoosePath
+  fullName: OSL_Server.DataLoader.CDragon.Sound.ChoosePath
+  type: Property
   source:
     remote:
-      path: OSL-Server/Data/WeatherForecastService.cs
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSL.git
-    id: GetForecastAsync
-    path: ../OSL-Server/Data/WeatherForecastService.cs
-    startLine: 9
+    id: ChoosePath
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 205
   assemblies:
   - OSL-Server
-  namespace: OSL_Server.Data
+  namespace: OSL_Server.DataLoader.CDragon
   syntax:
-    content: public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
-    parameters:
-    - id: startDate
-      type: DateTime
+    content: public string ChoosePath { get; set; }
+    parameters: []
     return:
-      type: Task{OSL_Server.Data.WeatherForecast[]}
-    content.vb: Public Function GetForecastAsync(startDate As DateTime) As Task(Of WeatherForecast())
-  overload: OSL_Server.Data.WeatherForecastService.GetForecastAsync*
+      type: System.String
+    content.vb: Public Property ChoosePath As String
+  overload: OSL_Server.DataLoader.CDragon.Sound.ChoosePath*
   modifiers.csharp:
   - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Sound.BanPath
+  commentId: P:OSL_Server.DataLoader.CDragon.Sound.BanPath
+  id: BanPath
+  parent: OSL_Server.DataLoader.CDragon.Sound
+  langs:
+  - csharp
+  - vb
+  name: BanPath
+  nameWithType: Sound.BanPath
+  fullName: OSL_Server.DataLoader.CDragon.Sound.BanPath
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BanPath
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 206
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public string BanPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BanPath As String
+  overload: OSL_Server.DataLoader.CDragon.Sound.BanPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Sound.SfxPath
+  commentId: P:OSL_Server.DataLoader.CDragon.Sound.SfxPath
+  id: SfxPath
+  parent: OSL_Server.DataLoader.CDragon.Sound
+  langs:
+  - csharp
+  - vb
+  name: SfxPath
+  nameWithType: Sound.SfxPath
+  fullName: OSL_Server.DataLoader.CDragon.Sound.SfxPath
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SfxPath
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 207
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public string SfxPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SfxPath As String
+  overload: OSL_Server.DataLoader.CDragon.Sound.SfxPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
   modifiers.vb:
   - Public
 references:
-- uid: OSL_Server.Data
-  commentId: N:OSL_Server.Data
-  name: OSL_Server.Data
-  nameWithType: OSL_Server.Data
-  fullName: OSL_Server.Data
+- uid: OSL_Server.DataLoader.CDragon
+  commentId: N:OSL_Server.DataLoader.CDragon
+  name: OSL_Server.DataLoader.CDragon
+  nameWithType: OSL_Server.DataLoader.CDragon
+  fullName: OSL_Server.DataLoader.CDragon
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -376,98 +450,25 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Server.Data.WeatherForecastService.GetForecastAsync*
-  commentId: Overload:OSL_Server.Data.WeatherForecastService.GetForecastAsync
-  name: GetForecastAsync
-  nameWithType: WeatherForecastService.GetForecastAsync
-  fullName: OSL_Server.Data.WeatherForecastService.GetForecastAsync
-- uid: DateTime
+- uid: OSL_Server.DataLoader.CDragon.Sound.ChoosePath*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Sound.ChoosePath
+  name: ChoosePath
+  nameWithType: Sound.ChoosePath
+  fullName: OSL_Server.DataLoader.CDragon.Sound.ChoosePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
-  name: DateTime
-  nameWithType: DateTime
-  fullName: DateTime
-- uid: Task{OSL_Server.Data.WeatherForecast[]}
-  commentId: '!:Task{OSL_Server.Data.WeatherForecast[]}'
-  definition: Task`1
-  name: Task<WeatherForecast[]>
-  nameWithType: Task<WeatherForecast[]>
-  fullName: Task<OSL_Server.Data.WeatherForecast[]>
-  nameWithType.vb: Task(Of WeatherForecast())
-  fullName.vb: Task(Of OSL_Server.Data.WeatherForecast())
-  name.vb: Task(Of WeatherForecast())
-  spec.csharp:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: OSL_Server.Data.WeatherForecast
-    name: WeatherForecast
-    nameWithType: WeatherForecast
-    fullName: OSL_Server.Data.WeatherForecast
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: OSL_Server.Data.WeatherForecast
-    name: WeatherForecast
-    nameWithType: WeatherForecast
-    fullName: OSL_Server.Data.WeatherForecast
-  - name: ()
-    nameWithType: ()
-    fullName: ()
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Task`1
-  isExternal: true
-  name: Task<>
-  nameWithType: Task<>
-  fullName: Task<>
-  nameWithType.vb: Task(Of )
-  fullName.vb: Task(Of )
-  name.vb: Task(Of )
-  spec.csharp:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Task`1
-    name: Task
-    nameWithType: Task
-    fullName: Task
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: )
-    nameWithType: )
-    fullName: )
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.DataLoader.CDragon.Sound.BanPath*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Sound.BanPath
+  name: BanPath
+  nameWithType: Sound.BanPath
+  fullName: OSL_Server.DataLoader.CDragon.Sound.BanPath
+- uid: OSL_Server.DataLoader.CDragon.Sound.SfxPath*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Sound.SfxPath
+  name: SfxPath
+  nameWithType: Sound.SfxPath
+  fullName: OSL_Server.DataLoader.CDragon.Sound.SfxPath

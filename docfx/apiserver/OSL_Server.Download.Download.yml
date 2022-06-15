@@ -1,32 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: OSL_Server.Data.WeatherForecastService
-  commentId: T:OSL_Server.Data.WeatherForecastService
-  id: WeatherForecastService
-  parent: OSL_Server.Data
+- uid: OSL_Server.Download.Download
+  commentId: T:OSL_Server.Download.Download
+  id: Download
+  parent: OSL_Server.Download
   children:
-  - OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
+  - OSL_Server.Download.Download.downloadAllFile
+  - OSL_Server.Download.Download.DownloadFileAsync(Uri,System.String)
+  - OSL_Server.Download.Download.DownloadStringAsync(Uri)
+  - OSL_Server.Download.Download.errorDownloadAllFile
   langs:
   - csharp
   - vb
-  name: WeatherForecastService
-  nameWithType: WeatherForecastService
-  fullName: OSL_Server.Data.WeatherForecastService
+  name: Download
+  nameWithType: Download
+  fullName: OSL_Server.Download.Download
   type: Class
   source:
     remote:
-      path: OSL-Server/Data/WeatherForecastService.cs
+      path: OSL-Server/Download/Download.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSL.git
-    id: WeatherForecastService
-    path: ../OSL-Server/Data/WeatherForecastService.cs
-    startLine: 2
+    id: Download
+    path: ../OSL-Server/Download/Download.cs
+    startLine: 4
   assemblies:
   - OSL-Server
-  namespace: OSL_Server.Data
+  namespace: OSL_Server.Download
   syntax:
-    content: public class WeatherForecastService
-    content.vb: Public Class WeatherForecastService
+    content: public class Download
+    content.vb: Public Class Download
   inheritance:
   - System.Object
   inheritedMembers:
@@ -43,47 +46,154 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
-  commentId: M:OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
-  id: GetForecastAsync(DateTime)
-  parent: OSL_Server.Data.WeatherForecastService
+- uid: OSL_Server.Download.Download.downloadAllFile
+  commentId: F:OSL_Server.Download.Download.downloadAllFile
+  id: downloadAllFile
+  parent: OSL_Server.Download.Download
   langs:
   - csharp
   - vb
-  name: GetForecastAsync(DateTime)
-  nameWithType: WeatherForecastService.GetForecastAsync(DateTime)
-  fullName: OSL_Server.Data.WeatherForecastService.GetForecastAsync(DateTime)
+  name: downloadAllFile
+  nameWithType: Download.downloadAllFile
+  fullName: OSL_Server.Download.Download.downloadAllFile
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Download/Download.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: downloadAllFile
+    path: ../OSL-Server/Download/Download.cs
+    startLine: 7
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Download
+  syntax:
+    content: public static int downloadAllFile
+    return:
+      type: System.Int32
+    content.vb: Public Shared downloadAllFile As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Download.Download.errorDownloadAllFile
+  commentId: F:OSL_Server.Download.Download.errorDownloadAllFile
+  id: errorDownloadAllFile
+  parent: OSL_Server.Download.Download
+  langs:
+  - csharp
+  - vb
+  name: errorDownloadAllFile
+  nameWithType: Download.errorDownloadAllFile
+  fullName: OSL_Server.Download.Download.errorDownloadAllFile
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Download/Download.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: errorDownloadAllFile
+    path: ../OSL-Server/Download/Download.cs
+    startLine: 8
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Download
+  syntax:
+    content: public static int errorDownloadAllFile
+    return:
+      type: System.Int32
+    content.vb: Public Shared errorDownloadAllFile As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Download.Download.DownloadStringAsync(Uri)
+  commentId: M:OSL_Server.Download.Download.DownloadStringAsync(Uri)
+  id: DownloadStringAsync(Uri)
+  parent: OSL_Server.Download.Download
+  langs:
+  - csharp
+  - vb
+  name: DownloadStringAsync(Uri)
+  nameWithType: Download.DownloadStringAsync(Uri)
+  fullName: OSL_Server.Download.Download.DownloadStringAsync(Uri)
   type: Method
   source:
     remote:
-      path: OSL-Server/Data/WeatherForecastService.cs
+      path: OSL-Server/Download/Download.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSL.git
-    id: GetForecastAsync
-    path: ../OSL-Server/Data/WeatherForecastService.cs
+    id: DownloadStringAsync
+    path: ../OSL-Server/Download/Download.cs
     startLine: 9
   assemblies:
   - OSL-Server
-  namespace: OSL_Server.Data
+  namespace: OSL_Server.Download
   syntax:
-    content: public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
+    content: public static async Task<string> DownloadStringAsync(Uri url)
     parameters:
-    - id: startDate
-      type: DateTime
+    - id: url
+      type: Uri
     return:
-      type: Task{OSL_Server.Data.WeatherForecast[]}
-    content.vb: Public Function GetForecastAsync(startDate As DateTime) As Task(Of WeatherForecast())
-  overload: OSL_Server.Data.WeatherForecastService.GetForecastAsync*
+      type: Task{System.String}
+    content.vb: Public Shared Function DownloadStringAsync(url As Uri) As Task(Of String)
+  overload: OSL_Server.Download.Download.DownloadStringAsync*
   modifiers.csharp:
   - public
+  - static
+  - async
   modifiers.vb:
   - Public
+  - Shared
+- uid: OSL_Server.Download.Download.DownloadFileAsync(Uri,System.String)
+  commentId: M:OSL_Server.Download.Download.DownloadFileAsync(Uri,System.String)
+  id: DownloadFileAsync(Uri,System.String)
+  parent: OSL_Server.Download.Download
+  langs:
+  - csharp
+  - vb
+  name: DownloadFileAsync(Uri, String)
+  nameWithType: Download.DownloadFileAsync(Uri, String)
+  fullName: OSL_Server.Download.Download.DownloadFileAsync(Uri, System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Download/Download.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DownloadFileAsync
+    path: ../OSL-Server/Download/Download.cs
+    startLine: 29
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Download
+  syntax:
+    content: public static async void DownloadFileAsync(Uri url, string outputPath)
+    parameters:
+    - id: url
+      type: Uri
+    - id: outputPath
+      type: System.String
+    content.vb: Public Shared Sub DownloadFileAsync(url As Uri, outputPath As String)
+  overload: OSL_Server.Download.Download.DownloadFileAsync*
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
 references:
-- uid: OSL_Server.Data
-  commentId: N:OSL_Server.Data
-  name: OSL_Server.Data
-  nameWithType: OSL_Server.Data
-  fullName: OSL_Server.Data
+- uid: OSL_Server.Download
+  commentId: N:OSL_Server.Download
+  name: OSL_Server.Download
+  nameWithType: OSL_Server.Download
+  fullName: OSL_Server.Download
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -376,25 +486,32 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Server.Data.WeatherForecastService.GetForecastAsync*
-  commentId: Overload:OSL_Server.Data.WeatherForecastService.GetForecastAsync
-  name: GetForecastAsync
-  nameWithType: WeatherForecastService.GetForecastAsync
-  fullName: OSL_Server.Data.WeatherForecastService.GetForecastAsync
-- uid: DateTime
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
-  name: DateTime
-  nameWithType: DateTime
-  fullName: DateTime
-- uid: Task{OSL_Server.Data.WeatherForecast[]}
-  commentId: '!:Task{OSL_Server.Data.WeatherForecast[]}'
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.Download.Download.DownloadStringAsync*
+  commentId: Overload:OSL_Server.Download.Download.DownloadStringAsync
+  name: DownloadStringAsync
+  nameWithType: Download.DownloadStringAsync
+  fullName: OSL_Server.Download.Download.DownloadStringAsync
+- uid: Uri
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: Uri
+- uid: Task{System.String}
+  commentId: '!:Task{System.String}'
   definition: Task`1
-  name: Task<WeatherForecast[]>
-  nameWithType: Task<WeatherForecast[]>
-  fullName: Task<OSL_Server.Data.WeatherForecast[]>
-  nameWithType.vb: Task(Of WeatherForecast())
-  fullName.vb: Task(Of OSL_Server.Data.WeatherForecast())
-  name.vb: Task(Of WeatherForecast())
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: Task(Of System.String)
+  name.vb: Task(Of String)
   spec.csharp:
   - uid: Task`1
     name: Task
@@ -404,13 +521,11 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: OSL_Server.Data.WeatherForecast
-    name: WeatherForecast
-    nameWithType: WeatherForecast
-    fullName: OSL_Server.Data.WeatherForecast
-  - name: '[]'
-    nameWithType: '[]'
-    fullName: '[]'
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -423,13 +538,11 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: OSL_Server.Data.WeatherForecast
-    name: WeatherForecast
-    nameWithType: WeatherForecast
-    fullName: OSL_Server.Data.WeatherForecast
-  - name: ()
-    nameWithType: ()
-    fullName: ()
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -471,3 +584,15 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: OSL_Server.Download.Download.DownloadFileAsync*
+  commentId: Overload:OSL_Server.Download.Download.DownloadFileAsync
+  name: DownloadFileAsync
+  nameWithType: Download.DownloadFileAsync
+  fullName: OSL_Server.Download.Download.DownloadFileAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

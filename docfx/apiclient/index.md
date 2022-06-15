@@ -183,7 +183,7 @@ OnNeutralMinionKill
 ```json
 {
 	"eventname": "OnKillDragon_Spectator",
-	"other": "SRU_Dragon_",
+	"other": "SRU_Dragon_Elder",
 	"otherTeam": "Neutral",
 	"source": "Sky csc",
 	"sourceID": "6",
@@ -257,7 +257,7 @@ OnNeutralMinionKill
 
 <details>
 <summary><b>Example value</b></summary>
-  
+
 ```json
 {
 	"eventname": "OnKillWorm_Spectator",

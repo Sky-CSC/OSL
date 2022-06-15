@@ -1,33 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: OSL_Server.Configuration.Config
-  commentId: T:OSL_Server.Configuration.Config
-  id: Config
-  parent: OSL_Server.Configuration
+- uid: OSL_Server.DataLoader.CDragon.Skins
+  commentId: T:OSL_Server.DataLoader.CDragon.Skins
+  id: Skins
+  parent: OSL_Server.DataLoader.CDragon
   children:
-  - OSL_Server.Configuration.Config.LoadConfig
-  - OSL_Server.Configuration.Config.LoadConfigCDragon
+  - OSL_Server.DataLoader.CDragon.Skins.Id
+  - OSL_Server.DataLoader.CDragon.Skins.IsBase
+  - OSL_Server.DataLoader.CDragon.Skins.LoadScreenPath
+  - OSL_Server.DataLoader.CDragon.Skins.SplashePath
+  - OSL_Server.DataLoader.CDragon.Skins.SplasheUncenteredPath
+  - OSL_Server.DataLoader.CDragon.Skins.TilePath
   langs:
   - csharp
   - vb
-  name: Config
-  nameWithType: Config
-  fullName: OSL_Server.Configuration.Config
+  name: Skins
+  nameWithType: Skins
+  fullName: OSL_Server.DataLoader.CDragon.Skins
   type: Class
   source:
     remote:
-      path: OSL-Server/Configuration/Config.cs
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSL.git
-    id: Config
-    path: ../OSL-Server/Configuration/Config.cs
-    startLine: 12
+    id: Skins
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 213
   assemblies:
   - OSL-Server
-  namespace: OSL_Server.Configuration
+  namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nSkins information\n"
+  example: []
   syntax:
-    content: public class Config
-    content.vb: Public Class Config
+    content: public class Skins
+    content.vb: Public Class Skins
   inheritance:
   - System.Object
   inheritedMembers:
@@ -44,76 +50,222 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.Configuration.Config.LoadConfig
-  commentId: M:OSL_Server.Configuration.Config.LoadConfig
-  id: LoadConfig
-  parent: OSL_Server.Configuration.Config
+- uid: OSL_Server.DataLoader.CDragon.Skins.Id
+  commentId: P:OSL_Server.DataLoader.CDragon.Skins.Id
+  id: Id
+  parent: OSL_Server.DataLoader.CDragon.Skins
   langs:
   - csharp
   - vb
-  name: LoadConfig()
-  nameWithType: Config.LoadConfig()
-  fullName: OSL_Server.Configuration.Config.LoadConfig()
-  type: Method
+  name: Id
+  nameWithType: Skins.Id
+  fullName: OSL_Server.DataLoader.CDragon.Skins.Id
+  type: Property
   source:
     remote:
-      path: OSL-Server/Configuration/Config.cs
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSL.git
-    id: LoadConfig
-    path: ../OSL-Server/Configuration/Config.cs
-    startLine: 16
+    id: Id
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 215
   assemblies:
   - OSL-Server
-  namespace: OSL_Server.Configuration
+  namespace: OSL_Server.DataLoader.CDragon
   syntax:
-    content: public static void LoadConfig()
-    content.vb: Public Shared Sub LoadConfig
-  overload: OSL_Server.Configuration.Config.LoadConfig*
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: OSL_Server.DataLoader.CDragon.Skins.Id*
   modifiers.csharp:
   - public
-  - static
+  - get
+  - set
   modifiers.vb:
   - Public
-  - Shared
-- uid: OSL_Server.Configuration.Config.LoadConfigCDragon
-  commentId: M:OSL_Server.Configuration.Config.LoadConfigCDragon
-  id: LoadConfigCDragon
-  parent: OSL_Server.Configuration.Config
+- uid: OSL_Server.DataLoader.CDragon.Skins.IsBase
+  commentId: P:OSL_Server.DataLoader.CDragon.Skins.IsBase
+  id: IsBase
+  parent: OSL_Server.DataLoader.CDragon.Skins
   langs:
   - csharp
   - vb
-  name: LoadConfigCDragon()
-  nameWithType: Config.LoadConfigCDragon()
-  fullName: OSL_Server.Configuration.Config.LoadConfigCDragon()
-  type: Method
+  name: IsBase
+  nameWithType: Skins.IsBase
+  fullName: OSL_Server.DataLoader.CDragon.Skins.IsBase
+  type: Property
   source:
     remote:
-      path: OSL-Server/Configuration/Config.cs
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
       branch: main
       repo: https://github.com/Sky-CSC/OSL.git
-    id: LoadConfigCDragon
-    path: ../OSL-Server/Configuration/Config.cs
-    startLine: 21
+    id: IsBase
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 216
   assemblies:
   - OSL-Server
-  namespace: OSL_Server.Configuration
+  namespace: OSL_Server.DataLoader.CDragon
   syntax:
-    content: public static void LoadConfigCDragon()
-    content.vb: Public Shared Sub LoadConfigCDragon
-  overload: OSL_Server.Configuration.Config.LoadConfigCDragon*
+    content: public bool IsBase { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsBase As Boolean
+  overload: OSL_Server.DataLoader.CDragon.Skins.IsBase*
   modifiers.csharp:
   - public
-  - static
+  - get
+  - set
   modifiers.vb:
   - Public
-  - Shared
+- uid: OSL_Server.DataLoader.CDragon.Skins.SplashePath
+  commentId: P:OSL_Server.DataLoader.CDragon.Skins.SplashePath
+  id: SplashePath
+  parent: OSL_Server.DataLoader.CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: SplashePath
+  nameWithType: Skins.SplashePath
+  fullName: OSL_Server.DataLoader.CDragon.Skins.SplashePath
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SplashePath
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 217
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public string SplashePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SplashePath As String
+  overload: OSL_Server.DataLoader.CDragon.Skins.SplashePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Skins.SplasheUncenteredPath
+  commentId: P:OSL_Server.DataLoader.CDragon.Skins.SplasheUncenteredPath
+  id: SplasheUncenteredPath
+  parent: OSL_Server.DataLoader.CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: SplasheUncenteredPath
+  nameWithType: Skins.SplasheUncenteredPath
+  fullName: OSL_Server.DataLoader.CDragon.Skins.SplasheUncenteredPath
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SplasheUncenteredPath
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 218
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public string SplasheUncenteredPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SplasheUncenteredPath As String
+  overload: OSL_Server.DataLoader.CDragon.Skins.SplasheUncenteredPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Skins.TilePath
+  commentId: P:OSL_Server.DataLoader.CDragon.Skins.TilePath
+  id: TilePath
+  parent: OSL_Server.DataLoader.CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: TilePath
+  nameWithType: Skins.TilePath
+  fullName: OSL_Server.DataLoader.CDragon.Skins.TilePath
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TilePath
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 219
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public string TilePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TilePath As String
+  overload: OSL_Server.DataLoader.CDragon.Skins.TilePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.CDragon.Skins.LoadScreenPath
+  commentId: P:OSL_Server.DataLoader.CDragon.Skins.LoadScreenPath
+  id: LoadScreenPath
+  parent: OSL_Server.DataLoader.CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: LoadScreenPath
+  nameWithType: Skins.LoadScreenPath
+  fullName: OSL_Server.DataLoader.CDragon.Skins.LoadScreenPath
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadScreenPath
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 220
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public string LoadScreenPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LoadScreenPath As String
+  overload: OSL_Server.DataLoader.CDragon.Skins.LoadScreenPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
-- uid: OSL_Server.Configuration
-  commentId: N:OSL_Server.Configuration
-  name: OSL_Server.Configuration
-  nameWithType: OSL_Server.Configuration
-  fullName: OSL_Server.Configuration
+- uid: OSL_Server.DataLoader.CDragon
+  commentId: N:OSL_Server.DataLoader.CDragon
+  name: OSL_Server.DataLoader.CDragon
+  nameWithType: OSL_Server.DataLoader.CDragon
+  fullName: OSL_Server.DataLoader.CDragon
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -406,13 +558,54 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Server.Configuration.Config.LoadConfig*
-  commentId: Overload:OSL_Server.Configuration.Config.LoadConfig
-  name: LoadConfig
-  nameWithType: Config.LoadConfig
-  fullName: OSL_Server.Configuration.Config.LoadConfig
-- uid: OSL_Server.Configuration.Config.LoadConfigCDragon*
-  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigCDragon
-  name: LoadConfigCDragon
-  nameWithType: Config.LoadConfigCDragon
-  fullName: OSL_Server.Configuration.Config.LoadConfigCDragon
+- uid: OSL_Server.DataLoader.CDragon.Skins.Id*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Skins.Id
+  name: Id
+  nameWithType: Skins.Id
+  fullName: OSL_Server.DataLoader.CDragon.Skins.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.DataLoader.CDragon.Skins.IsBase*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Skins.IsBase
+  name: IsBase
+  nameWithType: Skins.IsBase
+  fullName: OSL_Server.DataLoader.CDragon.Skins.IsBase
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Server.DataLoader.CDragon.Skins.SplashePath*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Skins.SplashePath
+  name: SplashePath
+  nameWithType: Skins.SplashePath
+  fullName: OSL_Server.DataLoader.CDragon.Skins.SplashePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.DataLoader.CDragon.Skins.SplasheUncenteredPath*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Skins.SplasheUncenteredPath
+  name: SplasheUncenteredPath
+  nameWithType: Skins.SplasheUncenteredPath
+  fullName: OSL_Server.DataLoader.CDragon.Skins.SplasheUncenteredPath
+- uid: OSL_Server.DataLoader.CDragon.Skins.TilePath*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Skins.TilePath
+  name: TilePath
+  nameWithType: Skins.TilePath
+  fullName: OSL_Server.DataLoader.CDragon.Skins.TilePath
+- uid: OSL_Server.DataLoader.CDragon.Skins.LoadScreenPath*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.Skins.LoadScreenPath
+  name: LoadScreenPath
+  nameWithType: Skins.LoadScreenPath
+  fullName: OSL_Server.DataLoader.CDragon.Skins.LoadScreenPath

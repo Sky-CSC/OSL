@@ -1,0 +1,661 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataLoader.CDragon.CDragon
+  commentId: T:OSL_Server.DataLoader.CDragon.CDragon
+  id: CDragon
+  parent: OSL_Server.DataLoader.CDragon
+  children:
+  - OSL_Server.DataLoader.CDragon.CDragon.championSummary
+  - OSL_Server.DataLoader.CDragon.CDragon.dataCDragon
+  - OSL_Server.DataLoader.CDragon.CDragon.dataCDragonPath
+  - OSL_Server.DataLoader.CDragon.CDragon.items
+  - OSL_Server.DataLoader.CDragon.CDragon.patch
+  - OSL_Server.DataLoader.CDragon.CDragon.perks
+  - OSL_Server.DataLoader.CDragon.CDragon.perkstyles
+  - OSL_Server.DataLoader.CDragon.CDragon.region
+  - OSL_Server.DataLoader.CDragon.CDragon.summonerSpells
+  langs:
+  - csharp
+  - vb
+  name: CDragon
+  nameWithType: CDragon
+  fullName: OSL_Server.DataLoader.CDragon.CDragon
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: CDragon
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 6
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public class CDragon
+    content.vb: Public Class CDragon
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.DataLoader.CDragon.CDragon.dataCDragon
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.dataCDragon
+  id: dataCDragon
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: dataCDragon
+  nameWithType: CDragon.dataCDragon
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.dataCDragon
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: dataCDragon
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 9
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static DataCDragon dataCDragon
+    return:
+      type: OSL_Server.DataLoader.CDragon.DataCDragon
+    content.vb: Public Shared dataCDragon As DataCDragon
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.patch
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.patch
+  id: patch
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: patch
+  nameWithType: CDragon.patch
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.patch
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: patch
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 12
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string patch
+    return:
+      type: System.String
+    content.vb: Public Shared patch As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.region
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.region
+  id: region
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: region
+  nameWithType: CDragon.region
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.region
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: region
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 13
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string region
+    return:
+      type: System.String
+    content.vb: Public Shared region As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.championSummary
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.championSummary
+  id: championSummary
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: championSummary
+  nameWithType: CDragon.championSummary
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.championSummary
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: championSummary
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 14
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string championSummary
+    return:
+      type: System.String
+    content.vb: Public Shared championSummary As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.items
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.items
+  id: items
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: items
+  nameWithType: CDragon.items
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.items
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: items
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string items
+    return:
+      type: System.String
+    content.vb: Public Shared items As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.summonerSpells
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.summonerSpells
+  id: summonerSpells
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: summonerSpells
+  nameWithType: CDragon.summonerSpells
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.summonerSpells
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: summonerSpells
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 16
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string summonerSpells
+    return:
+      type: System.String
+    content.vb: Public Shared summonerSpells As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.perks
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.perks
+  id: perks
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: perks
+  nameWithType: CDragon.perks
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.perks
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: perks
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 17
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string perks
+    return:
+      type: System.String
+    content.vb: Public Shared perks As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.perkstyles
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.perkstyles
+  id: perkstyles
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: perkstyles
+  nameWithType: CDragon.perkstyles
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.perkstyles
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: perkstyles
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 18
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string perkstyles
+    return:
+      type: System.String
+    content.vb: Public Shared perkstyles As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.dataCDragonPath
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.dataCDragonPath
+  id: dataCDragonPath
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: dataCDragonPath
+  nameWithType: CDragon.dataCDragonPath
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.dataCDragonPath
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: dataCDragonPath
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 20
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string dataCDragonPath
+    return:
+      type: System.String
+    content.vb: Public Shared dataCDragonPath As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.DataLoader.CDragon
+  commentId: N:OSL_Server.DataLoader.CDragon
+  name: OSL_Server.DataLoader.CDragon
+  nameWithType: OSL_Server.DataLoader.CDragon
+  fullName: OSL_Server.DataLoader.CDragon
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.DataLoader.CDragon.DataCDragon
+  commentId: T:OSL_Server.DataLoader.CDragon.DataCDragon
+  parent: OSL_Server.DataLoader.CDragon
+  name: DataCDragon
+  nameWithType: DataCDragon
+  fullName: OSL_Server.DataLoader.CDragon.DataCDragon
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

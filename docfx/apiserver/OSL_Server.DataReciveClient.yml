@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataReciveClient
+  commentId: N:OSL_Server.DataReciveClient
+  id: OSL_Server.DataReciveClient
+  children:
+  - OSL_Server.DataReciveClient.ReciveFromClient
+  langs:
+  - csharp
+  - vb
+  name: OSL_Server.DataReciveClient
+  nameWithType: OSL_Server.DataReciveClient
+  fullName: OSL_Server.DataReciveClient
+  type: Namespace
+  assemblies:
+  - OSL-Server
+references:
+- uid: OSL_Server.DataReciveClient.ReciveFromClient
+  commentId: T:OSL_Server.DataReciveClient.ReciveFromClient
+  name: ReciveFromClient
+  nameWithType: ReciveFromClient
+  fullName: OSL_Server.DataReciveClient.ReciveFromClient

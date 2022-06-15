@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Download
+  commentId: N:OSL_Server.Download
+  id: OSL_Server.Download
+  children:
+  - OSL_Server.Download.Download
+  langs:
+  - csharp
+  - vb
+  name: OSL_Server.Download
+  nameWithType: OSL_Server.Download
+  fullName: OSL_Server.Download
+  type: Namespace
+  assemblies:
+  - OSL-Server
+references:
+- uid: OSL_Server.Download.Download
+  commentId: T:OSL_Server.Download.Download
+  name: Download
+  nameWithType: Download
+  fullName: OSL_Server.Download.Download

@@ -1,0 +1,536 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataLoader.CDragon.ChampionManager
+  commentId: T:OSL_Server.DataLoader.CDragon.ChampionManager
+  id: ChampionManager
+  parent: OSL_Server.DataLoader.CDragon
+  children:
+  - OSL_Server.DataLoader.CDragon.ChampionManager.ChampionAsyncDownload(System.Int32,System.Int32,System.String,System.String,System.String,System.String)
+  - OSL_Server.DataLoader.CDragon.ChampionManager.DownloadChampion(System.String,System.String)
+  - OSL_Server.DataLoader.CDragon.ChampionManager.UpdateDataCDragonChampion(System.Int32,System.Int32,System.Object,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: ChampionManager
+  nameWithType: ChampionManager
+  fullName: OSL_Server.DataLoader.CDragon.ChampionManager
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/ChampionManager.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionManager
+    path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
+    startLine: 4
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public class ChampionManager
+    content.vb: Public Class ChampionManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.DataLoader.CDragon.ChampionManager.DownloadChampion(System.String,System.String)
+  commentId: M:OSL_Server.DataLoader.CDragon.ChampionManager.DownloadChampion(System.String,System.String)
+  id: DownloadChampion(System.String,System.String)
+  parent: OSL_Server.DataLoader.CDragon.ChampionManager
+  langs:
+  - csharp
+  - vb
+  name: DownloadChampion(String, String)
+  nameWithType: ChampionManager.DownloadChampion(String, String)
+  fullName: OSL_Server.DataLoader.CDragon.ChampionManager.DownloadChampion(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/ChampionManager.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DownloadChampion
+    path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
+    startLine: 12
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nRecover all champ existing and is data\n"
+  example: []
+  syntax:
+    content: public static void DownloadChampion(string numPatch, string region)
+    parameters:
+    - id: numPatch
+      type: System.String
+      description: ''
+    - id: region
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub DownloadChampion(numPatch As String, region As String)
+  overload: OSL_Server.DataLoader.CDragon.ChampionManager.DownloadChampion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.ChampionManager.ChampionAsyncDownload(System.Int32,System.Int32,System.String,System.String,System.String,System.String)
+  commentId: M:OSL_Server.DataLoader.CDragon.ChampionManager.ChampionAsyncDownload(System.Int32,System.Int32,System.String,System.String,System.String,System.String)
+  id: ChampionAsyncDownload(System.Int32,System.Int32,System.String,System.String,System.String,System.String)
+  parent: OSL_Server.DataLoader.CDragon.ChampionManager
+  langs:
+  - csharp
+  - vb
+  name: ChampionAsyncDownload(Int32, Int32, String, String, String, String)
+  nameWithType: ChampionManager.ChampionAsyncDownload(Int32, Int32, String, String, String, String)
+  fullName: OSL_Server.DataLoader.CDragon.ChampionManager.ChampionAsyncDownload(System.Int32, System.Int32, System.String, System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/ChampionManager.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionAsyncDownload
+    path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
+    startLine: 84
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nDownload and save in local square, sound, splashe, splashe uncentered, loading screen of champ async\n"
+  example: []
+  syntax:
+    content: public static void ChampionAsyncDownload(int indexPatch, int indexRegion, string numPatch, string region, string championDirectory, string champID)
+    parameters:
+    - id: indexPatch
+      type: System.Int32
+      description: ''
+    - id: indexRegion
+      type: System.Int32
+      description: ''
+    - id: numPatch
+      type: System.String
+      description: ''
+    - id: region
+      type: System.String
+      description: ''
+    - id: championDirectory
+      type: System.String
+      description: ''
+    - id: champID
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub ChampionAsyncDownload(indexPatch As Integer, indexRegion As Integer, numPatch As String, region As String, championDirectory As String, champID As String)
+  overload: OSL_Server.DataLoader.CDragon.ChampionManager.ChampionAsyncDownload*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.ChampionManager.UpdateDataCDragonChampion(System.Int32,System.Int32,System.Object,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:OSL_Server.DataLoader.CDragon.ChampionManager.UpdateDataCDragonChampion(System.Int32,System.Int32,System.Object,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  id: UpdateDataCDragonChampion(System.Int32,System.Int32,System.Object,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  parent: OSL_Server.DataLoader.CDragon.ChampionManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateDataCDragonChampion(Int32, Int32, Object, String, String, String, String, String, String, String, String)
+  nameWithType: ChampionManager.UpdateDataCDragonChampion(Int32, Int32, Object, String, String, String, String, String, String, String, String)
+  fullName: OSL_Server.DataLoader.CDragon.ChampionManager.UpdateDataCDragonChampion(System.Int32, System.Int32, System.Object, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/ChampionManager.cs
+      branch: main
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: UpdateDataCDragonChampion
+    path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
+    startLine: 193
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nUpdate champion in <see cref=\"!:dataCDragon\"></see>\n"
+  example: []
+  syntax:
+    content: public static void UpdateDataCDragonChampion(int indexPatch, int indexRegion, dynamic jsonChampionId, string squarePortrait, string championChoose, string championBan, string championSfx, string championSplashe, string championSplasheUncentered, string championTile, string championLoadScreen)
+    parameters:
+    - id: indexPatch
+      type: System.Int32
+      description: ''
+    - id: indexRegion
+      type: System.Int32
+      description: ''
+    - id: jsonChampionId
+      type: System.Object
+      description: ''
+    - id: squarePortrait
+      type: System.String
+      description: ''
+    - id: championChoose
+      type: System.String
+      description: ''
+    - id: championBan
+      type: System.String
+      description: ''
+    - id: championSfx
+      type: System.String
+      description: ''
+    - id: championSplashe
+      type: System.String
+      description: ''
+    - id: championSplasheUncentered
+      type: System.String
+      description: ''
+    - id: championTile
+      type: System.String
+      description: ''
+    - id: championLoadScreen
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub UpdateDataCDragonChampion(indexPatch As Integer, indexRegion As Integer, jsonChampionId As Object, squarePortrait As String, championChoose As String, championBan As String, championSfx As String, championSplashe As String, championSplasheUncentered As String, championTile As String, championLoadScreen As String)
+  overload: OSL_Server.DataLoader.CDragon.ChampionManager.UpdateDataCDragonChampion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.DataLoader.CDragon
+  commentId: N:OSL_Server.DataLoader.CDragon
+  name: OSL_Server.DataLoader.CDragon
+  nameWithType: OSL_Server.DataLoader.CDragon
+  fullName: OSL_Server.DataLoader.CDragon
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.DataLoader.CDragon.ChampionManager.DownloadChampion*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.ChampionManager.DownloadChampion
+  name: DownloadChampion
+  nameWithType: ChampionManager.DownloadChampion
+  fullName: OSL_Server.DataLoader.CDragon.ChampionManager.DownloadChampion
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.DataLoader.CDragon.ChampionManager.ChampionAsyncDownload*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.ChampionManager.ChampionAsyncDownload
+  name: ChampionAsyncDownload
+  nameWithType: ChampionManager.ChampionAsyncDownload
+  fullName: OSL_Server.DataLoader.CDragon.ChampionManager.ChampionAsyncDownload
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.DataLoader.CDragon.ChampionManager.UpdateDataCDragonChampion*
+  commentId: Overload:OSL_Server.DataLoader.CDragon.ChampionManager.UpdateDataCDragonChampion
+  name: UpdateDataCDragonChampion
+  nameWithType: ChampionManager.UpdateDataCDragonChampion
+  fullName: OSL_Server.DataLoader.CDragon.ChampionManager.UpdateDataCDragonChampion

@@ -30,7 +30,6 @@ items:
     content: 'public sealed class HexStringJsonConverter : JsonConverter'
     content.vb: >-
       Public NotInheritable Class HexStringJsonConverter
-
           Inherits JsonConverter
   inheritance:
   - System.Object
