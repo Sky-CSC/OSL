@@ -84,12 +84,14 @@ namespace OSL_Server.DataLoader.CDragon
                         //perkFullName = perkFullName.ToLower();
                         PerksAsyncDownload(indexPatch, indexRegion, numPatch, perk, perksDirectory, perkId, perkFullName);
                     }
-                    while (OSL_Server.Download.Download.downloadAllFile != 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0)
+                    int infini = 0;
+                    while (OSL_Server.Download.Download.downloadAllFile > 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0 && infini != 200)
                     {
-                        _logger.log(LoggingLevel.INFO, "DownloadPerks()", $"Waiting end DownloadFileAsync()");
+                        _logger.log(LoggingLevel.INFO, "PerksAsyncDownload()", $"Waiting end DownloadFileAsync() download : {Download.Download.downloadAllFile} error : {Download.Download.errorDownloadAllFile}");
+                        infini++;
                         Thread.Sleep(100);
                     }
-                    _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
+                    _logger.log(LoggingLevel.INFO, "PerksAsyncDownload()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
 
                 }
                 catch
@@ -128,9 +130,11 @@ namespace OSL_Server.DataLoader.CDragon
                         perkFullName = perkFullName.ToLower();
                         PerksAsyncDownload(indexPatch, indexRegion, numPatch, perk, perksDirectory, perkId, perkFullName);
                     }
-                    while (OSL_Server.Download.Download.downloadAllFile != 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0)
+                    int infini = 0;
+                    while (OSL_Server.Download.Download.downloadAllFile > 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0 && infini != 200)
                     {
-                        _logger.log(LoggingLevel.INFO, "DownloadPerks()", $"Waiting end DownloadFileAsync()");
+                        _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"Waiting end DownloadFileAsync() download : {Download.Download.downloadAllFile} error : {Download.Download.errorDownloadAllFile}");
+                        infini++;
                         Thread.Sleep(100);
                     }
                     _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");

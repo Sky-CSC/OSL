@@ -1,0 +1,71 @@
+﻿@page "/champselect"
+@using OSL_Server.DataLoader.CDragon
+
+<PageTitle>Champ Select</PageTitle>
+<div class="parent">
+    <div class="champSelect">
+        <div class="content">
+            <h2>Champ Select</h2>
+            @*<br /><button class="btn btn-primary button-form" @onclick="LinkGenerator"> Generate link </button>
+            <br />Link for acces to overlay : @linkOverlayChampSelect*@
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+
+<p>
+    @*Liste de patch et de région*@
+    <br />
+    <div class="patch">
+        Chose Patch and region <select name="patch" id="patch-select">
+            <option value="latest fr_fr">latest fr_fr</option>
+            @{
+                foreach (var patch in CDragon.dataCDragon.Patch)
+                {
+                    foreach (var region in patch.Region)
+                    {
+                        <option value="@patch.Name @region.Name">@patch.Name @region.Name</option>
+                    }
+                }
+            }
+        </select>
+    </div>
+
+    <br /><label for="favcolor">Color blue side texte :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side backgroud :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side border :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side timer backgroud :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side timer border :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side timer texte :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+
+    <br /><label for="favcolor">Color red side texte :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side backgroud :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side border :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side timer backgroud :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side timer border :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side timer texte :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+
+    <br /> <label> Ban background picture </label> <input type"texte" style="">
+    <br /> <label> Ban overlay picture </label> <input type"texte" style="">
+    <br /><label for="favcolor">Ban background color :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+
+    <br /> <label> Overlay background </label> <input type"texte" style="">
+</p>
+
+@code {
+
+}

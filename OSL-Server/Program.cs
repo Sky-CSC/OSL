@@ -1,8 +1,11 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Newtonsoft.Json;
 using OSL_Server.Configuration;
 using OSL_Server.Data;
 using OSL_Server.DataLoader.CDragon;
+using OSL_Server.DataReciveClient.Processing.ChampSelect;
+using OSL_Server.Pages;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,98 +33,39 @@ app.UseRouting();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
-Config.LoadConfig();
+Config.LoadConfigCDragon();
 
-CDragon.region = "fr_fr";
-string region = "fr_fr";
-CDragon.patch = "latest";
-string patch = "latest";
-CDragon.Download.DownloadFiles(patch, region);
+//Dowload default config
+//string region = "fr_fr";
+//string patch = "latest";
+//CDragon.Download.DownloadFiles(patch, region);
+//region = "en_gb";
+//patch = "latest";
+//CDragon.Download.DownloadFiles(patch, region);
 
-CDragon.region = "en_gb";
-region = "en_gb";
-CDragon.patch = "latest";
-patch = "latest";
-CDragon.Download.DownloadFiles(patch, region);
+//Faire une liste des patch et des région sur une page web et on sélectionne celui que l'on veut parmi la liste
 
-//print datat from dataCDragon
-//foreach (var patch in CDragon.dataCDragon.Patch)
-//{
-//    foreach (var region in patch.Region)
-//    {
-//        //region
-//        foreach (var champInfo in region.RegionContent.Champion)
-//        {
-//            Console.WriteLine(champInfo.Id);
-//            Console.WriteLine(champInfo.Name);
-//            Console.WriteLine(champInfo.Alias);
-//            Console.WriteLine(champInfo.SquarePortraitPath);
-//            Console.WriteLine(champInfo.Sound.ChoosePath);
-//            Console.WriteLine(champInfo.Sound.BanPath);
-//            Console.WriteLine(champInfo.Sound.SfxPath);
-//            foreach (var skinInfo in champInfo.Skins)
-//            {
-//                Console.WriteLine(skinInfo.Id);
-//                Console.WriteLine(skinInfo.IsBase);
-//                Console.WriteLine(skinInfo.SplashePath);
-//                Console.WriteLine(skinInfo.SplasheUncenteredPath);
-//                Console.WriteLine(skinInfo.TilePath);
-//                Console.WriteLine(skinInfo.LoadScreenPath);
-//            }
-//        }
-//    }
-//}
 
-//foreach (var patch in CDragon.dataCDragon.Patch)
-//{
-//    foreach (var region in patch.Region)
-//    {
-//        //region
-//        foreach (var items in region.RegionContent.Items)
-//        {
-//            Console.WriteLine(items.Id);
-//            Console.WriteLine(items.Name);
-//            Console.WriteLine(items.IconPath);
+Config.LoadConfigChampSelect();
+//Config.LoadConfig();
+//CDragonPage.UpdateManual();
+Thread DownloadFilesFr = new Thread(() => ChampSelectInfo.testChampSelectInfo());
+DownloadFilesFr.Start();
 
-//            foreach (var from in items.From)
-//            {
-//                Console.WriteLine(from);
-//            }
-//            foreach (var to in items.To)
-//            {
-//                Console.WriteLine(to);
-//            }
-//        }
-//    }
-//}
 
-//foreach (var patch in CDragon.dataCDragon.Patch)
-//{
-//    foreach (var region in patch.Region)
-//    {
-//        //region
-//        foreach (var items in region.RegionContent.SummonerSpells)
-//        {
-//            Console.WriteLine(items.Id);
-//            Console.WriteLine(items.Name);
-//            Console.WriteLine(items.IconPath);
-//        }
-//    }
-//}
+////CDragon.region = "fr_fr";
+//string region = "fr_fr";
+////CDragon.patch = "latest";
+//string patch = "latest";
+//CDragon.Download.DownloadFiles(patch, region);
 
-//foreach (var patchTemps in CDragon.dataCDragon.Patch)
-//{
-//    foreach (var regionTemps in patchTemps.Region)
-//    {
-//        //region
-//        foreach (var items in regionTemps.RegionContent.Perks)
-//        {
-//            Console.WriteLine(items.Id);
-//            Console.WriteLine(items.Name);
-//            Console.WriteLine(items.IconPath);
-//        }
-//    }
-//}
+////CDragon.region = "en_gb";
+//region = "en_gb";
+////CDragon.patch = "latest";
+//patch = "latest";
+//CDragon.Download.DownloadFiles(patch, region);
 
-//app.Run();
+//Console.WriteLine(JsonConvert.SerializeObject(CDragon.dataCDragon, Formatting.Indented));
+
+app.Run();
 

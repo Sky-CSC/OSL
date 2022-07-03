@@ -34,12 +34,14 @@ namespace OSL_Server.DataLoader.CDragon
                         DirectoryManagerLocal.CreateDirectory(championDirectory + champId + "/" + "Abilitys");
                         ChampionAsyncDownload(indexPatch, indexRegion, numPatch, region, championDirectory, champId);
                     }
-                    while (OSL_Server.Download.Download.downloadAllFile != 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0)
+                    int infini = 0;
+                    while (OSL_Server.Download.Download.downloadAllFile > 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0 && infini != 200)
                     {
-                        _logger.log(LoggingLevel.INFO, "ChampionAsyncDownload()", $"Waiting end DownloadFileAsync()");
+                        _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"Waiting end DownloadFileAsync() download : {Download.Download.downloadAllFile} error : {Download.Download.errorDownloadAllFile}");
+                        infini++;
                         Thread.Sleep(100);
                     }
-                    _logger.log(LoggingLevel.INFO, "ChampionAsyncDownload()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
+                    _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
                 }
                 catch (Exception e)
                 {

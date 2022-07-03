@@ -39,12 +39,14 @@ namespace OSL_Server.DataLoader.CDragon
                         summonersSpellFullName = summonersSpellFullName.ToLower();
                         SummonersSpellAsyncDownload(indexPatch, indexRegion, numPatch, summonersSpell, summonersSpellDirectory, summonersSpellId, summonersSpellFullName);
                     }
-                    while (OSL_Server.Download.Download.downloadAllFile != 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0)
+                    int infini = 0;
+                    while (OSL_Server.Download.Download.downloadAllFile > 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0 && infini != 200)
                     {
-                        _logger.log(LoggingLevel.INFO, "ItemsAsyncDownload()", $"Waiting end DownloadSummonersSpell()");
+                        _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"Waiting end DownloadFileAsync() download : {Download.Download.downloadAllFile} error : {Download.Download.errorDownloadAllFile}");
+                        infini++;
                         Thread.Sleep(100);
                     }
-                    _logger.log(LoggingLevel.INFO, "ItemsAsyncDownload()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
+                    _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
                 }
                 catch (Exception e)
                 {

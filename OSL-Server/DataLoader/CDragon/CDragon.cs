@@ -11,12 +11,16 @@ namespace OSL_Server.DataLoader.CDragon
 
 
         public static string patch = "latest";
+        public static string date = "";
         public static string region = "fr_fr";
         public static string championSummary = "champion-summary";
         public static string items = "items";
         public static string summonerSpells = "summoner-spells";
         public static string perks = "perks";
         public static string perkstyles = "perkstyles";
+
+        public static string defaultNumPatch = "";
+        public static string defaultRegionPatch = "";
 
         public static string dataCDragonPath = "./" + "dataCDragon.json";
         //Il contient tout les patch en local, les différentes régions qui y sont et un liens .json vers le numéro de patch et la région 
@@ -33,11 +37,10 @@ namespace OSL_Server.DataLoader.CDragon
             /// <param name="region"></param>
             public static void DownloadFiles(string patch, string region)
             {
-
                 //Download 
                 //https://raw.communitydragon.org/latest/content-metadata.json
                 Uri urlPatchContentMetadata = new($"https://raw.communitydragon.org/{patch}/content-metadata.json");
-                string numPatch = "latest";
+                string numPatch = patch;
                 try
                 {
                     string patchContentMetadata = OSL_Server.Download.Download.DownloadStringAsync(urlPatchContentMetadata).Result;
@@ -46,6 +49,13 @@ namespace OSL_Server.DataLoader.CDragon
                     {
                         dynamic jsonContentMetadata = JsonConvert.DeserializeObject(patchContentMetadata);
                         string ContentMetadataVersion = jsonContentMetadata.version;
+                        if (numPatch.Equals("latest"))
+                        {
+                            string[] split = ContentMetadataVersion.Split("+");
+                            CDragon.patch = split[0];
+                            //date now
+                            CDragon.date = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+                        }
                         string[] splitContentMetadata = ContentMetadataVersion.Split(".");
                         numPatch = splitContentMetadata[0] + "." + splitContentMetadata[1];
                         //_logger.log(LoggingLevel.INFO, "DownloadFiles()", $"Num patch : {numPatch}, Region : {region}");
@@ -61,6 +71,8 @@ namespace OSL_Server.DataLoader.CDragon
                 if (indexPatch != -1)
                 {
                     int indexRegion = dataCDragon.Patch[indexPatch].Region.FindIndex(x => x.Name == region);
+                    _logger.log(LoggingLevel.ERROR, "DownloadFiles()", $"Patch {numPatch}, {region}, {indexRegion}");
+
                     //If region already exist in dataCDragon
                     if (indexRegion == -1)
                     {
@@ -197,7 +209,7 @@ namespace OSL_Server.DataLoader.CDragon
             Skins = new List<Skins>();
         }
     }
-    
+
     /// <summary>
     /// Sound data
     /// </summary>

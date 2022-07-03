@@ -78,23 +78,24 @@ namespace OSL_Server.FileManager
         /// <param name="content"></param>
         public static void WriteInFile(string filePath, string content)
         {
-            if (File.Exists(filePath))
+            //if (File.Exists(filePath))
+            //{
+            try
             {
-                try
-                {
-                    using (StreamWriter sw = File.AppendText(filePath))
-                    {
-                        sw.WriteLine(content);
-                        sw.Close();
-                        sw.Dispose();
-                    }
-                    _logger.log(LoggingLevel.INFO, "WriteInFile", $"File write : {filePath}");
-                }
-                catch (Exception ex)
-                {
-                    //throw new Exception(ex.Message);
-                    _logger.log(LoggingLevel.ERROR, "WriteInFile", ex.Message);
-                }
+                //using (StreamWriter sw = File.AppendText(filePath))
+                //{
+                //    sw.WriteLine(content);
+                //    sw.Close();
+                //    sw.Dispose();
+                //}
+                //_logger.log(LoggingLevel.INFO, "WriteInFile", $"File write : {filePath}");
+                File.WriteAllText(filePath, content);
+            }
+            catch (Exception ex)
+            {
+                //throw new Exception(ex.Message);
+                _logger.log(LoggingLevel.ERROR, "WriteInFile", ex.Message);
+                //}
             }
         }
         /// <summary>
@@ -115,6 +116,30 @@ namespace OSL_Server.FileManager
                 _logger.log(LoggingLevel.ERROR, "ReadInFile", e.Message);
             }
             return content;
+        }
+
+        /// <summary>
+        /// Read data on file
+        /// </summary>
+        /// <param name="path">Path of file</param>
+        /// <returns>Data of file contenf</returns>
+        public static string ReadFilePath(string path)
+        {
+            string data = "";
+            try
+            {
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    data = sr.ReadToEnd();
+                    sr.Close();
+                    sr.Dispose();
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
+            return data;
         }
     }
 }
