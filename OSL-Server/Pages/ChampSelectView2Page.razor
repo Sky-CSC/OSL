@@ -1,0 +1,407 @@
+﻿@page "/champselectoverlay2"
+@using OSL_Server.DataReciveClient.Processing.ChampSelect;
+@using System.Timers
+@using static OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+@layout EmptyLayout
+
+<PageTitle>Champ Select Overlay 2</PageTitle>
+@if (overlayType2Loaded)
+{
+    <div class="display-champ-select">
+        @*<div class="display-champ-select" style="background: url(../assets/champselect/ChampSelectView2-2.png);">*@
+
+        <div class="overlay-type-2">
+            <div class="champ-select-footer-timer">
+                @if (SideInProgress() == 1)
+                {
+                    timerBlue = true;
+                    double multiCurentCount = 3.4;
+                    if(timerRed == true)
+                    {
+                        currentCount = 0;
+                        timerRed = false;
+                        timerBlueRed = false;
+                        
+                    }
+                    <div class="champ-select-footer-timer-blue" style="width: @sizeTimer(multiCurentCount);">
+                    </div>
+                }
+                else if (SideInProgress() == 2)
+                {
+                    timerRed = true;
+                    double multiCurentCount = 3.4;
+                    if(timerBlue == true)
+                    {
+                        currentCount = 0;
+                        timerBlue = false;
+                        timerBlueRed = false;
+                    }
+                    <div class="champ-select-footer-timer-red" style="width: @sizeTimer(multiCurentCount);">
+                    </div>
+                }
+                else
+                {
+                    timerBlueRed = true;
+                    double multiCurentCount = 1.5;
+                    if(timerBlue == true || timerRed == true)
+                    {
+                        currentCount = 0;
+                        timerBlue = false;
+                        timerRed = false;
+                    }
+                    <div class="champ-select-footer-timer-end" style="width: @sizeTimer(multiCurentCount);">
+                    </div>
+                }
+
+            </div>
+
+            <div class="champ-select-footer-pick">
+                <div class="side" id="blueSide">
+                    @{
+                        for (int indexSummoner = 0; indexSummoner < 5; indexSummoner++)
+                        {
+                            try
+                            {
+                                int cellId = ChampSelectInfo.session.MyTeam[indexSummoner].CellId;
+                                bool isNeedDisplay = true;
+
+                                foreach (var action in ChampSelectInfo.session.Actions)
+                                {
+                                    foreach (var inaction in action)
+                                    {
+                                        if (inaction.ActorCellId == cellId && inaction.IsInProgress == true && inaction.Type.Equals("pick"))
+                                        {
+                                            <div class="champ-wrapper">
+                                                <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
+                                                <div class="gradient-background-overlay"></div>
+                                                <div class="summoner-object-component">
+                                                    <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                                        @*Champion picture*@
+                                                        <div class="champ-picture" style="background-image: url(@getChampId(indexSummoner, 1));"></div>
+                                                        @*SummonerName*@
+                                                        <div class="summoner-name" style="background: #0b849e;"><div class="summoner-name-text">@getSummonerName(indexSummoner, 1)</div></div>
+                                                        <div class="pick-blink"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            isNeedDisplay = false;
+                                        }
+                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == false && inaction.Type.Equals("pick"))
+                                        {
+                                            <div class="champ-wrapper">
+                                                <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
+                                                <div class="gradient-background-overlay"></div>
+                                                <div class="summoner-object-component">
+                                                    <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                                        @*Champion picture*@
+                                                        <div class="champ-picture" style="background-image: url(@getChampId(indexSummoner, 1));"></div>
+                                                        @*SummonerName*@
+                                                        <div class="summoner-name" style="background: #010a13;"><div class="summoner-name-text">@getSummonerName(indexSummoner, 1)</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            isNeedDisplay = false;
+                                        }
+                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == true && inaction.Type.Equals("pick") && inaction.ChampionId == 0)
+                                        {
+                                            <div class="champ-wrapper">
+                                                <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
+                                                <div class="gradient-background-overlay"></div>
+                                                <div class="summoner-object-component">
+                                                    <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                                        @*Champion picture*@
+                                                        <div class="lane">
+                                                            <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                                        </div>
+                                                        @*SummonerName*@
+                                                        <div class="summoner-name"><div class="summoner-name-text">@getSummonerName(indexSummoner, 1)</div></div>
+                                                        <div class="pick-blink"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            isNeedDisplay = false;
+                                        }
+                                    }
+                                }
+                                if (ChampSelectInfo.session.MyTeam[indexSummoner].ChampionId == 0 && isNeedDisplay == true)
+                                {
+                                    <div class="champ-wrapper">
+                                        <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="summoner-object-component">
+                                            <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                                @*Champion picture*@
+                                                <div class="lane">
+                                                    <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                                </div>
+                                                @*SummonerName*@
+                                                <div class="summoner-name"><div class="summoner-name-text">@getSummonerName(indexSummoner, 1)</div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            catch
+                            {
+                                <div class="champ-wrapper">
+                                    <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
+                                    <div class="gradient-background-overlay"></div>
+                                    <div class="summoner-object-component">
+                                        <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                            @*Champion picture*@
+                                            <div class="lane">
+                                                <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                            </div>
+                                            @*SummonerName*@
+                                            <div class="summoner-name"><div class="summoner-name-text">Skynet</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+                <div class="champ-select-footer-pick-keystone">
+                </div>
+                <div class="side" id="redSide">
+                    @{
+                        for (int indexSummoner = 0; indexSummoner < 5; indexSummoner++)
+                        {
+                            try
+                            {
+                                int cellId = ChampSelectInfo.session.TheirTeam[indexSummoner].CellId;
+                                bool isNeedDisplay = true;
+
+                                foreach (var action in ChampSelectInfo.session.Actions)
+                                {
+                                    foreach (var inaction in action)
+                                    {
+                                        if (inaction.ActorCellId == cellId && inaction.IsInProgress == true && inaction.Type.Equals("pick"))
+                                        {
+                                            <div class="champ-wrapper">
+                                                <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
+                                                <div class="gradient-background-overlay"></div>
+                                                <div class="summoner-object-component">
+                                                    <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
+                                                        @*Champion picture*@
+                                                        <div class="champ-picture" style="background-image: url(@getChampId(indexSummoner, 2));"></div>
+                                                        @*SummonerName*@
+                                                        <div class="summoner-name" style="background: #be1e37;"><div class="summoner-name-text">@getSummonerName(indexSummoner, 2)</div></div>
+                                                        <div class="pick-blink"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            isNeedDisplay = false;
+                                        }
+                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == false && inaction.Type.Equals("pick"))
+                                        {
+                                            <div class="champ-wrapper">
+                                                <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
+                                                <div class="gradient-background-overlay"></div>
+                                                <div class="summoner-object-component">
+                                                    <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
+                                                        @*Champion picture*@
+                                                        <div class="champ-picture" style="background-image: url(@getChampId(indexSummoner, 2));"></div>
+                                                        @*SummonerName*@
+                                                        <div class="summoner-name" style="background: #010a13;"><div class="summoner-name-text">@getSummonerName(indexSummoner, 2)</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            isNeedDisplay = false;
+                                        }
+                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == true && inaction.Type.Equals("pick") && inaction.ChampionId == 0)
+                                        {
+                                            <div class="champ-wrapper">
+                                                <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
+                                                <div class="gradient-background-overlay"></div>
+                                                <div class="summoner-object-component">
+                                                    <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
+                                                        @*Champion picture*@
+                                                        <div class="lane">
+                                                            <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                                        </div>
+                                                        @*SummonerName*@
+                                                        <div class="summoner-name"><div class="summoner-name-text">@getSummonerName(indexSummoner, 2)</div></div>
+                                                        <div class="pick-blink"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            isNeedDisplay = false;
+                                        }
+                                    }
+                                }
+                                if (ChampSelectInfo.session.TheirTeam[indexSummoner].ChampionId == 0 && isNeedDisplay == true)
+                                {
+                                    <div class="champ-wrapper">
+                                        <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="summoner-object-component">
+                                            <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
+                                                @*Champion picture*@
+                                                <div class="lane">
+                                                    <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                                </div>
+                                                @*SummonerName*@
+                                                <div class="summoner-name"><div class="summoner-name-text">@getSummonerName(indexSummoner, 2)</div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            catch
+                            {
+                                <div class="champ-wrapper">
+                                    <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
+                                    <div class="gradient-background-overlay"></div>
+                                    <div class="summoner-object-component">
+                                        <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
+                                            @*Champion picture*@
+                                            <div class="lane">
+                                                <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                            </div>
+                                            @*SummonerName*@
+                                            <div class="summoner-name"><div class="summoner-name-text">Skynet</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+            @*Footer Ban*@
+            <div class="champ-select-footer-ban">
+                @*Footer text team blue side*@
+                <div class="champ-select-footer-blue-info">
+                    <div class="blue-text" style="color: black;font-size: 70px;">CSC</div>
+                </div>
+                @*Footer ban blue side*@
+                <div class="bans" id="blueBans">
+                    @{
+                        int i = 0;
+                        @*Ban already completed*@
+                        for (i = 0; i < ChampSelectInfo.session.Bans.MyTeamBans.Count(); i++)
+                        {
+                            <div class="ban-wrapper">
+                                <img class="ban-wrapper ban-veil" src="@DefaultSquare(i, 1)" />
+                                <img class="ban-icon" src="@BanOverlayPicture">
+                            </div>
+                        }
+
+                        @*Ban in progress*@
+                        foreach (var action in ChampSelectInfo.session.Actions)
+                        {
+                            foreach (var inaction in action)
+                            {
+                                if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 1 || inaction.PickTurn == 3 || inaction.PickTurn == 5 || inaction.PickTurn == 8 || inaction.PickTurn == 10))
+                                {
+                                    <div class="ban-wrapper ban-background" style="background-color: @BanBackgroundColor">
+                                        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
+                                    </div>
+                                    i++;
+                                }
+                            }
+                        }
+
+                        @*Ban on hold*@
+                        for (int j = i; j < 5; j++)
+                        {
+                            <div class="ban-wrapper">
+                                <img class="ban-wrapper" src="@BanBackgroundPicture" />
+                            </div>
+                        }
+                    }
+                </div>
+
+                @*Footer keystone*@
+                <div class="champ-select-footer-ban-keystone">
+                    <div class="patch-text">
+                        PATCH
+                        @*@Patch*@
+                    </div>
+                    <div class="patch-name">
+                        @DefaultPatch
+                    </div>
+
+                </div>
+
+                @*Footer ban red side*@
+                <div class="bans" id="redBans">
+                    @{
+                        int k = 0;
+                        @*Ban already completed*@
+                        for (k = 0; k < ChampSelectInfo.session.Bans.TheirTeamBans.Count(); k++)
+                        {
+                            <div class="ban-wrapper">
+                                @*<img class="ban-wrapper ban-veil" src="../assets/12.12/fr_fr/Champions/@ChampSelectInfo.session.Bans.TheirTeamBans[k]/Skins/@champDefaultSkinNumber(k)/@champDefaultSkinNumber(k)_Tile.jpg" />*@
+                                <img class="ban-wrapper ban-veil" src="@DefaultSquare(k, 2)" />
+                                <img class="ban-icon" src="@BanOverlayPicture">
+                            </div>
+                        }
+
+                        @*Ban in progress*@
+                        foreach (var action in ChampSelectInfo.session.Actions)
+                        {
+                            foreach (var inaction in action)
+                            {
+                                if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4 || inaction.PickTurn == 6 || inaction.PickTurn == 7 || inaction.PickTurn == 9))
+                                {
+                                    <div class="ban-wrapper">
+                                        <div class="ban-background" style="margin-left: 0px; background-color: @BanBackgroundColor"></div>
+                                        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
+                                    </div>
+                                    k++;
+                                }
+                            }
+                        }
+
+                        @*Ban on hold*@
+                        for (int j = k; j < 5; j++)
+                        {
+                            <div class="ban-wrapper">
+                                <img class="ban-wrapper" src="@BanBackgroundPicture" />
+                            </div>
+                        }
+                    }
+                </div>
+                @*Footer text team blue side*@
+                <div class="champ-select-footer-red-info">
+                    <div class="red-text" style="color: black;font-size: 70px;">CY</div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert">
+        <h1><strong>Info!</strong> Champ Select view 2 is disabled</h1>
+    </div>
+}
+
+
+@code {
+    private bool timerBlue = false;
+    private bool timerRed = false;
+    private bool timerBlueRed = false;
+    private int currentCount = 0;
+    private static int timePhase = 0;
+    private System.Timers.Timer timer = new(50);
+
+    protected override void OnInitialized()
+    {
+        timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        timer.Start();
+    }
+
+    private void OnTimerCallback()
+    {
+        _ = InvokeAsync(() =>
+        {
+            currentCount++;
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => timer.Dispose();
+}
