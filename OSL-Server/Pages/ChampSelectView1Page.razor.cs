@@ -9,6 +9,9 @@ namespace OSL_Server.Pages
     public partial class ChampSelectView1Page
     {
         private static OSLLogger _logger = new OSLLogger("ChampSelectView1Page");
+
+        public static bool overlayType1Loaded = false;
+
         //Personalisation Patch and Region
         public static string DefaultPatch = "latest";
         public static string DefaultRegion = "fr_fr";
@@ -79,6 +82,13 @@ namespace OSL_Server.Pages
             public string OverlayBackground { get; set; }
         }
 
+        public static void UpdateTimer(int timer, int reset)
+        {
+            //DateTime date1 = DateTime.Now;
+            //Console.WriteLine("seconde : " + date1.ToString("m:ss"));
+            timePhase = timer;
+        }
+
         private string PictureExist(string picture)
         {
             if (File.Exists(picture))
@@ -135,10 +145,11 @@ namespace OSL_Server.Pages
             {
                 return ChampSelectInfo.session.Bans.TheirTeamBans[index] * 1000;
             }
-        }
+        }        
 
         private string getCurentAction(int index, int team)
         {
+            //Console.WriteLine("getCurentAction");
             int cellId;
             if (team == 1)
             {

@@ -5,6 +5,7 @@
 
 div {
     font-family: MyFont;
+    font-weight: bold;
 }
 
 .display-champ-select {
@@ -14,6 +15,16 @@ div {
     position: absolute;
     /* border: 5px solid yellow;*/
 }
+
+.alert {
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    top: 20px;
+    width: 800px;
+    left: 20px;
+}
+
 
 /*##########################################################*/
 /*########################## Team ##########################*/

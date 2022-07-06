@@ -5,182 +5,197 @@
 @layout EmptyLayout
 
 <PageTitle>Champ Select Overlay 1</PageTitle>
-<div class="display-champ-select" style="background: url(@OverlayBackground)">
+@if (overlayType1Loaded)
+{
+    <div class="display-champ-select" style="background: url(@OverlayBackground)">
 
-    <div class="overlay-type-1">
-        <div class="champ-select-header">
-            <div class="chamSelect-header-blue-info">
-                @*Texte*@
-                @*Logo*@
-                @*Win/Loose*@
-                <h1 style="color: @ColorBlueTeamName">Sky-csc @BlueTeamName</h1>
-			    <h5 style="color: @ColorBlueTeamSubtext">Never losing @BlueTeamSubtext</h5>
-            </div>
-            <div class="chamSelect-header-blue-logo" style="visibility: @PictureExist(BlueLogo)">
-                <img class="chamSelect-header-blue-logo" src="@BlueLogo" />
-            </div>
-            <div class="chamSelect-header-blue-timer">
-                @{
-                    if (SideInProgress() == 1)
-                    {
-                        int timer = 0;
-                        timer = timePhase - currentCount / 2;
-                        if (timer <= 0)
+        <div class="overlay-type-1">
+            <div class="champ-select-header">
+                <div class="chamSelect-header-blue-info">
+                    <h1 style="color: @ColorBlueTeamName">Sky-csc @BlueTeamName</h1>
+                    <h5 style="color: @ColorBlueTeamSubtext">Never losing @BlueTeamSubtext</h5>
+                </div>
+                <div class="chamSelect-header-blue-logo" style="visibility: @PictureExist(BlueLogo)">
+                    <img class="chamSelect-header-blue-logo" src="@BlueLogo" />
+                </div>
+                <div class="chamSelect-header-blue-timer">
+                    @{
+                        if (SideInProgress() == 1)
                         {
-                            timer = 0;
-                        }
-                        if (timer <= 9)
-                        {
+                            timerBlue = true;
+                            if (timerRed == true)
+                            {
+                                //Timer précédent était rouge
+                                currentCount = 0;
+                                timerRed = false;
+                                timerBlueRed = false;
+                            }
+                            int timer = 0;
+                            timer = timePhase - currentCount / 2;
+                            //DateTime date1 = DateTime.Now;
+                            //long timer2 = timePhase - Int16.Parse(date1.ToString("ss"));
+                            //Console.WriteLine(timer);
+                            if (timer <= 0)
+                            {
+                                timer = 0;
+                            }
+                            if (timer <= 9)
+                            {
                                 <div class="timer timer-blue">
                                     <div class="timer-bg" style="background: @ColorBlueSideTimerBackgroud; border: @ColorBlueSideTimerBorder">
                                         <div class="timer-inner" id="timer-blue" style="left: 50px; color: @ColorBlueSideTimerTexte">@timer</div>
                                     </div>
                                 </div>
-                        }
-                        else
-                        {
+                            }
+                            else
+                            {
                                 <div class="timer timer-blue">
                                     <div class="timer-bg" style="background: @ColorBlueSideTimerBackgroud; border: @ColorBlueSideTimerBorder">
                                         <div class="timer-inner" id="timer-blue" style="color: @ColorBlueSideTimerTexte">@timer</div>
                                     </div>
                                 </div>
+                            }
                         }
-                    }
-                    else if (SideInProgress() == 0)
-                    {
-                        int timer = 0;
-                        timer = timePhase - currentCount / 2;
-                        if (timer <= 0)
+                        else if (SideInProgress() == 0)
                         {
-                            timer = 0;
-                        }
-                        if (timer <= 9)
-                        {
+                            timerBlueRed = true;
+                            if (timerRed == true || timerBlue == true)
+                            {
+                                //Timer précédent était rouge
+                                currentCount = 0;
+                                timerRed = false;
+                                timerBlue = false;
+                            }
+                            int timer = 0;
+                            timer = timePhase - currentCount / 2;
+                            if (timer <= 0)
+                            {
+                                timer = 0;
+                            }
+                            if (timer <= 9)
+                            {
                                 <div class="timer timer-blue">
                                     <div class="timer-bg" style="background: @ColorBlueSideTimerBackgroud; border: @ColorBlueSideTimerBorder">
                                         <div class="timer-inner" id="timer-blue" style="left: 50px; color: @ColorBlueSideTimerTexte">@timer</div>
                                     </div>
                                 </div>
-                        }
-                        else
-                        {
+                            }
+                            else
+                            {
                                 <div class="timer timer-blue">
                                     <div class="timer-bg" style="background: @ColorBlueSideTimerBackgroud; border: @ColorBlueSideTimerBorder">
                                         <div class="timer-inner" id="timer-blue" style="color: @ColorBlueSideTimerTexte">@timer</div>
                                     </div>
                                 </div>
+                            }
                         }
                     }
-                }
-            </div>
-            <div className="chamSelect-header-keystone">
-                @{
-                    if (SideInProgress() == 1)
-                    {
-                        //27
-                        //Afficher BAN_PICK et la phase de pick ou de ban en cours
-                    }
-                    else if (SideInProgress() == 2)
-                    {
-                        //27
-                        //Afficher BAN_PICK et la phase de pick ou de ban en cours
-                    }
-                    else if (SideInProgress() == 0)
-                    {
-
-                        //59sec
-                        //Afficher finalization
-                    }
-                }
-                @*Texte*@
-                @*Logo*@
-                @*Nom Tournoi*@
-            </div>
-            <div class="chamSelect-header-red-timer">
-                @{
-                    if (SideInProgress() == 2)
-                    {
-                        int timer = 0;
-                        timer = timePhase - currentCount / 2;
-                        if (timer <= 0)
+                </div>
+                <div className="chamSelect-header-keystone">
+                    @{
+                        if (SideInProgress() == 1)
                         {
-                            timer = 0;
+                            //27
+                            //Afficher BAN_PICK et la phase de pick ou de ban en cours
                         }
-                        if (timer <= 9)
+                        else if (SideInProgress() == 2)
                         {
+                            //27
+                            //Afficher BAN_PICK et la phase de pick ou de ban en cours
+                        }
+                        else if (SideInProgress() == 0)
+                        {
+                            //59sec
+                            //Afficher finalization
+                        }
+                    }
+                </div>
+                <div class="chamSelect-header-red-timer">
+                    @{
+                        if (SideInProgress() == 2)
+                        {
+                            timerRed = true;
+                            if (timerBlue == true)
+                            {
+                                //Timer précédent était rouge
+                                currentCount = 0;
+                                timerBlue = false;
+                                timerBlueRed = false;
+                            }
+                            int timer = 0;
+                            timer = timePhase - currentCount / 2;
+                            if (timer <= 0)
+                            {
+                                timer = 0;
+                            }
+                            if (timer <= 9)
+                            {
                                 <div class="timer timer-red">
                                     <div class="timer-bg" style="background: @ColorRedSideTimerBackgroud; border: @ColorRedSideTimerBorder">
                                         <div class="timer-inner" id="timer-red" style="left: 50px; color: @ColorRedSideTimerTexte">@timer</div>
                                     </div>
                                 </div>
-                        }
-                        else
-                        {
+                            }
+                            else
+                            {
                                 <div class="timer timer-red">
                                     <div class="timer-bg" style="background: @ColorRedSideTimerBackgroud; border: @ColorRedSideTimerBorder">
                                         <div class="timer-inner" id="timer-red" style="color: @ColorRedSideTimerTexte">@timer</div>
                                     </div>
                                 </div>
+                            }
                         }
-                    }
-                    else if (SideInProgress() == 0)
-                    {
-                        int timer = 0;
-                        timer = timePhase - currentCount / 2;
-                        if (timer <= 0)
+                        else if (SideInProgress() == 0)
                         {
-                            timer = 0;
-                        }
-                        if (timer <= 9)
-                        {
+                            timerBlueRed = true;
+                            if (timerRed == true || timerBlue == true)
+                            {
+                                //Timer précédent était rouge
+                                currentCount = 0;
+                                timerRed = false;
+                                timerBlue = false;
+                            }
+                            int timer = 0;
+                            timer = timePhase - currentCount / 2;
+                            if (timer <= 0)
+                            {
+                                timer = 0;
+                            }
+                            if (timer <= 9)
+                            {
                                 <div class="timer timer-red">
                                     <div class="timer-bg" style="background: @ColorRedSideTimerBackgroud; border: @ColorRedSideTimerBorder">
                                         <div class="timer-inner" id="timer-red" style="left: 50px; color: @ColorRedSideTimerTexte">@timer</div>
                                     </div>
                                 </div>
-                        }
-                        else
-                        {
+                            }
+                            else
+                            {
                                 <div class="timer timer-red">
                                     <div class="timer-bg" style="background: @ColorRedSideTimerBackgroud; border: @ColorRedSideTimerBorder">
                                         <div class="timer-inner" id="timer-red" style="color: @ColorRedSideTimerTexte">@timer</div>
                                     </div>
                                 </div>
+                            }
                         }
                     }
-                }
+                </div>
+                <div class="chamSelect-header-red-logo" style="visibility: @PictureExist(RedLogo)">
+                    <img class="chamSelect-header-red-logo" src="@RedLogo" />
+                </div>
+                <div class="chamSelect-header-red-info">
+                    <h1 style="color: @ColorRedTeamName">Skynet @RedTeamName</h1>
+                    <h5 style="color: @ColorRedTeamSubtext">Cyberdine System Comporation @RedTeamSubtext</h5>
+                </div>
             </div>
-             <div class="chamSelect-header-red-logo" style="visibility: @PictureExist(RedLogo)">
-                 <img class="chamSelect-header-red-logo" src="@RedLogo" />
-            </div>
-            <div class="chamSelect-header-red-info">
-                @*Texte*@
-                @*Logo*@
-                @*Win/Loose*@
-                <h1 style="color: @ColorRedTeamName">Skynet @RedTeamName</h1>
-			    <h5 style="color: @ColorRedTeamSubtext">Cyberdine System Comporation @RedTeamSubtext</h5>
-            </div>
-        </div>
 
-        @*Middle*@
-        <div class="champ-select-center">
-            @*Blue side display informations*@
-            <div class="side" id="blueSide">
-                @*- Si ban en cours
-                - faire clinioter
-                - texte banning
-
-                - Si pick en cours
-                - faire clinioter
-                - champ en sélection
-                - texte picking
-
-                - Pick effectué
-                - Subrilliance 1-2sec (pick fini et suivant en cours n+1)
-                *@
-                @{
-                    for (int indexChamp = 0; indexChamp < @ChampSelectInfo.session.MyTeam.Count(); indexChamp++)
-                    {
+            @*Middle*@
+            <div class="champ-select-center">
+                @*Blue side display informations*@
+                <div class="side" id="blueSide">
+                    @{
+                        for (int indexChamp = 0; indexChamp < @ChampSelectInfo.session.MyTeam.Count(); indexChamp++)
+                        {
                             <div class="champ-wrapper">
                                 <div class="base-color-background" style="background: @ColorBlueSideBackgroud; border: @ColorBlueSideBorder"></div>
                                 <div class="gradient-background-overlay"></div>
@@ -195,27 +210,27 @@
                                         <div class="summoner-spells">
                                             @*Summoners Spells*@
                                             @{
-                                            if (SideInProgress() == 0)
-                                            {
-                                                        <img class="spell" src="@getSpell(indexChamp, 1, 1)">
-                                                        <img class="spell" src="@getSpell(indexChamp, 1, 2)">
-                                            }
+                                                if (SideInProgress() == 0)
+                                                {
+                                                    <img class="spell" src="@getSpell(indexChamp, 1, 1)">
+                                                    <img class="spell" src="@getSpell(indexChamp, 1, 2)">
+                                                }
                                             }
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        }
                     }
-                }
-            </div>
-            <div class="champ-select-keystone">
-            </div>
+                </div>
+                <div class="champ-select-keystone">
+                </div>
 
-            @*Red side display informations*@
-            <div class="side" id="redSide">
-                @{
-                    for (int indexChamp = 0; indexChamp < @ChampSelectInfo.session.TheirTeam.Count(); indexChamp++)
-                    {
+                @*Red side display informations*@
+                <div class="side" id="redSide">
+                    @{
+                        for (int indexChamp = 0; indexChamp < @ChampSelectInfo.session.TheirTeam.Count(); indexChamp++)
+                        {
                             <div class="champ-wrapper">
                                 <div class="base-color-background" style="background: @ColorRedSideBackgroud; border: @ColorRedSideBorder"></div>
                                 <div class="gradient-background-overlay"></div>
@@ -230,120 +245,126 @@
                                         <div class="summoner-spells">
                                             @*Summoners Spells*@
                                             @{
-                                            if (SideInProgress() == 0)
-                                            {
-                                                        <img class="spell" src="@getSpell(indexChamp, 2, 1)">
-                                                        <img class="spell" src="@getSpell(indexChamp, 2, 2)">
-                                            }
+                                                if (SideInProgress() == 0)
+                                                {
+                                                    <img class="spell" src="@getSpell(indexChamp, 2, 1)">
+                                                    <img class="spell" src="@getSpell(indexChamp, 2, 2)">
+                                                }
                                             }
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        }
                     }
-                }
+                </div>
             </div>
-        </div>
 
-        @*Footer*@
-        <div class="champ-select-footer">
-            @*Footer ban blue side*@
-            <div class="bans" id="blueBans">
-                @{
-                    int i = 0;
+            @*Footer*@
+            <div class="champ-select-footer">
+                @*Footer ban blue side*@
+                <div class="bans" id="blueBans">
+                    @{
+                        int i = 0;
                         @*Ban already completed*@
-                    for (i = 0; i < ChampSelectInfo.session.Bans.MyTeamBans.Count(); i++)
-                    {
+                        for (i = 0; i < ChampSelectInfo.session.Bans.MyTeamBans.Count(); i++)
+                        {
                             <div class="ban-wrapper">
                                 <img class="ban-wrapper ban-veil" src="@DefaultSquare(i, 1)" />
                                 <img class="ban-icon" src="@BanOverlayPicture">
                             </div>
-                    }
+                        }
 
                         @*Ban in progress*@
-                    foreach (var action in ChampSelectInfo.session.Actions)
-                    {
-                        foreach (var inaction in action)
+                        foreach (var action in ChampSelectInfo.session.Actions)
                         {
-                            if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 1 || inaction.PickTurn == 3 || inaction.PickTurn == 5 || inaction.PickTurn == 8 || inaction.PickTurn == 10))
+                            foreach (var inaction in action)
                             {
+                                if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 1 || inaction.PickTurn == 3 || inaction.PickTurn == 5 || inaction.PickTurn == 8 || inaction.PickTurn == 10))
+                                {
                                     <div class="ban-wrapper ban-background" style="background-color: @BanBackgroundColor">
                                         <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
                                     </div>
-                                i++;
+                                    i++;
+                                }
                             }
                         }
-                    }
 
                         @*Ban on hold*@
-                    for (int j = i; j < 5; j++)
-                    {
+                        for (int j = i; j < 5; j++)
+                        {
                             <div class="ban-wrapper">
                                 <img class="ban-wrapper" src="@BanBackgroundPicture" />
                             </div>
+                        }
                     }
-                }
-            </div>
+                </div>
 
-            @*Footer keystone*@
-            <div className="champ-select-footer-keystone">
-                @*Texte*@
-                @*Logo*@
-                @*Pub ?*@
-            </div>
+                @*Footer keystone*@
+                <div className="champ-select-footer-keystone">
+                </div>
 
-            @*Footer ban red side*@
-            <div class="bans" id="redBans">
-                @{
-                    int k = 0;
+                @*Footer ban red side*@
+                <div class="bans" id="redBans">
+                    @{
+                        int k = 0;
                         @*Ban already completed*@
-                    for (k = 0; k < ChampSelectInfo.session.Bans.TheirTeamBans.Count(); k++)
-                    {
+                        for (k = 0; k < ChampSelectInfo.session.Bans.TheirTeamBans.Count(); k++)
+                        {
                             <div class="ban-wrapper">
                                 @*<img class="ban-wrapper ban-veil" src="../assets/12.12/fr_fr/Champions/@ChampSelectInfo.session.Bans.TheirTeamBans[k]/Skins/@champDefaultSkinNumber(k)/@champDefaultSkinNumber(k)_Tile.jpg" />*@
                                 <img class="ban-wrapper ban-veil" src="@DefaultSquare(k, 2)" />
                                 <img class="ban-icon" src="@BanOverlayPicture">
                             </div>
-                    }
+                        }
 
                         @*Ban in progress*@
-                    foreach (var action in ChampSelectInfo.session.Actions)
-                    {
-                        foreach (var inaction in action)
+                        foreach (var action in ChampSelectInfo.session.Actions)
                         {
-                            if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4 || inaction.PickTurn == 6 || inaction.PickTurn == 7 || inaction.PickTurn == 9))
+                            foreach (var inaction in action)
                             {
+                                if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4 || inaction.PickTurn == 6 || inaction.PickTurn == 7 || inaction.PickTurn == 9))
+                                {
                                     <div class="ban-wrapper">
                                         <div class="ban-background" style="margin-left: 4px; background-color: @BanBackgroundColor"></div>
                                         <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
                                     </div>
-                                k++;
+                                    k++;
+                                }
                             }
                         }
-                    }
 
                         @*Ban on hold*@
-                    for (int j = k; j < 5; j++)
-                    {
+                        for (int j = k; j < 5; j++)
+                        {
                             <div class="ban-wrapper">
                                 <img class="ban-wrapper" src="@BanBackgroundPicture" />
                             </div>
+                        }
                     }
-                }
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="Overlay-Type-2">
+}
+else
+{
+    <div class="alert">
+        <h1><strong>Info!</strong> Champ Select view 1 is disabled</h1>
     </div>
-</div>
+
+}
 
 
 @code {
-
-    public static int currentCount = 0;
-    public static int timePhase = 0;
-    private System.Timers.Timer timer = new(1000);
+    private bool timerBlue = false;
+    private bool timerRed = false;
+    private bool timerBlueRed = false;
+    private int currentCount = 0;
+    private static int timePhase = 0;
+    //private System.Timers.Timer timer = new(1000);
+    private System.Timers.Timer timer = new(500);
+    private static int alreadyInit = 0;
 
     protected override void OnInitialized()
     {
@@ -355,10 +376,12 @@
     {
         _ = InvokeAsync(() =>
         {
+            //currentCount = currentCount + 2;
             currentCount++;
             StateHasChanged();
         });
     }
 
     public void Dispose() => timer.Dispose();
+
 }
