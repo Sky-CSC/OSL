@@ -31,7 +31,7 @@
                                 timerBlueRed = false;
                             }
                             int timer = 0;
-                            timer = timePhase - currentCount / 2;
+                            timer = timePhase - currentCount;
                             //DateTime date1 = DateTime.Now;
                             //long timer2 = timePhase - Int16.Parse(date1.ToString("ss"));
                             //Console.WriteLine(timer);
@@ -67,7 +67,7 @@
                                 timerBlue = false;
                             }
                             int timer = 0;
-                            timer = timePhase - currentCount / 2;
+                            timer = timePhase - currentCount;
                             if (timer <= 0)
                             {
                                 timer = 0;
@@ -123,7 +123,7 @@
                                 timerBlueRed = false;
                             }
                             int timer = 0;
-                            timer = timePhase - currentCount / 2;
+                            timer = timePhase - currentCount;
                             if (timer <= 0)
                             {
                                 timer = 0;
@@ -156,7 +156,7 @@
                                 timerBlue = false;
                             }
                             int timer = 0;
-                            timer = timePhase - currentCount / 2;
+                            timer = timePhase - currentCount;
                             if (timer <= 0)
                             {
                                 timer = 0;
@@ -362,8 +362,7 @@ else
     private bool timerBlueRed = false;
     private int currentCount = 0;
     private static int timePhase = 0;
-    //private System.Timers.Timer timer = new(1000);
-    private System.Timers.Timer timer = new(500);
+    private System.Timers.Timer timer = new(1000);
     private static int alreadyInit = 0;
 
     protected override void OnInitialized()
@@ -376,7 +375,6 @@ else
     {
         _ = InvokeAsync(() =>
         {
-            //currentCount = currentCount + 2;
             currentCount++;
             StateHasChanged();
         });
