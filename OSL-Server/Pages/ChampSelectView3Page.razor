@@ -1,55 +1,55 @@
-﻿@page "/champselectoverlay3"
+﻿@page "/champselect/view3"
 @using OSL_Server.DataReciveClient.Processing.ChampSelect;
 @using System.Timers
 @using static OSL_Server.Pages.ChampSelectView1Page.ChampSelect
 @layout EmptyLayout
 
 <PageTitle>Champ Select Overlay 3</PageTitle>
-@if (overlayType3Loaded)
+@if (overlayLoaded)
 {
     <div class="display-champ-select">
         @*<div class="display-champ-select" style="background: url(../assets/champselect/ChampSelectView2-2.png);">*@
 
-        <div class="overlay-type-2">
-            <div class="champ-select-footer-timer">
+        <div class="overlay-type-3">
+            <div class="champ-select-footer-timer" style="background: @TimerBackground">
                 @if (SideInProgress() == 1)
                 {
                     timerBlue = true;
                     double multiCurentCount = 3.4;
-                    if(timerRed == true)
+                    if (timerRed == true)
                     {
                         currentCount = 0;
                         timerRed = false;
                         timerBlueRed = false;
-                        
+
                     }
-                    <div class="champ-select-footer-timer-blue" style="width: @sizeTimer(multiCurentCount);">
+                    <div class="champ-select-footer-timer-blue" style="width: @SizeTimer(multiCurentCount); background: @TimerBlue;">
                     </div>
                 }
                 else if (SideInProgress() == 2)
                 {
                     timerRed = true;
                     double multiCurentCount = 3.4;
-                    if(timerBlue == true)
+                    if (timerBlue == true)
                     {
                         currentCount = 0;
                         timerBlue = false;
                         timerBlueRed = false;
                     }
-                    <div class="champ-select-footer-timer-red" style="width: @sizeTimer(multiCurentCount);">
+                    <div class="champ-select-footer-timer-red" style="width: @SizeTimer(multiCurentCount); background: @TimerRed;">
                     </div>
                 }
                 else
                 {
                     timerBlueRed = true;
                     double multiCurentCount = 1.5;
-                    if(timerBlue == true || timerRed == true)
+                    if (timerBlue == true || timerRed == true)
                     {
                         currentCount = 0;
                         timerBlue = false;
                         timerRed = false;
                     }
-                    <div class="champ-select-footer-timer-end" style="width: @sizeTimer(multiCurentCount);">
+                    <div class="champ-select-footer-timer-end" style="width: @SizeTimer(multiCurentCount); background: @TimerEnd;">
                     </div>
                 }
 
@@ -72,50 +72,31 @@
                                         if (inaction.ActorCellId == cellId && inaction.IsInProgress == true && inaction.Type.Equals("pick"))
                                         {
                                             <div class="champ-wrapper">
-                                                <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
+                                                <div class="base-color-background" style="background: @BlueSideBackgroud;"></div>
                                                 <div class="gradient-background-overlay"></div>
                                                 <div class="summoner-object-component">
-                                                    <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                                    <div class="summoner-object-wrapper" style="color: @BlueSideSummoner;">
                                                         @*Champion picture*@
-                                                        <div class="champ-picture" style="background-image: url(@getChampId(indexSummoner, 1));"></div>
+                                                        <div class="champ-picture" style="background-image: url(@GetChampId(indexSummoner, 1));"></div>
                                                         @*SummonerName*@
-                                                        <div class="summoner-name" style="background: #0b849e;"><div class="summoner-name-text">@getSummonerName(indexSummoner, 1)</div></div>
-                                                        <div class="pick-blink"></div>
+                                                        <div class="summoner-name" style="background: @BlueSideBackgroudSummonerPick;"><div class="summoner-name-text">@GetSummonerName(indexSummoner, 1)</div></div>
+                                                        <div class="pick-blink" style="background: @BlueSideBlink"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                             isNeedDisplay = false;
                                         }
-                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == false && inaction.Type.Equals("pick"))
+                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == false && inaction.Type.Equals("pick") && inaction.Completed == true)
                                         {
                                             <div class="champ-wrapper">
-                                                <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
+                                                <div class="base-color-background" style="background: @BlueSideBackgroud;"></div>
                                                 <div class="gradient-background-overlay"></div>
                                                 <div class="summoner-object-component">
-                                                    <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                                    <div class="summoner-object-wrapper" style="color: @BlueSideSummoner;">
                                                         @*Champion picture*@
-                                                        <div class="champ-picture" style="background-image: url(@getChampId(indexSummoner, 1));"></div>
+                                                        <div class="champ-picture" style="background-image: url(@GetChampId(indexSummoner, 1));"></div>
                                                         @*SummonerName*@
-                                                        <div class="summoner-name" style="background: #010a13;"><div class="summoner-name-text">@getSummonerName(indexSummoner, 1)</div></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            isNeedDisplay = false;
-                                        }
-                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == true && inaction.Type.Equals("pick") && inaction.ChampionId == 0)
-                                        {
-                                            <div class="champ-wrapper">
-                                                <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
-                                                <div class="gradient-background-overlay"></div>
-                                                <div class="summoner-object-component">
-                                                    <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
-                                                        @*Champion picture*@
-                                                        <div class="lane">
-                                                            <img class="lane-picture" src="@getLaneId(indexSummoner)" />
-                                                        </div>
-                                                        @*SummonerName*@
-                                                        <div class="summoner-name"><div class="summoner-name-text">@getSummonerName(indexSummoner, 1)</div></div>
-                                                        <div class="pick-blink"></div>
+                                                        <div class="summoner-name" style="background: @BlueSideBackgroudSummonerPickEnd;"><div class="summoner-name-text">@GetSummonerName(indexSummoner, 1)</div></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -126,16 +107,16 @@
                                 if (ChampSelectInfo.session.MyTeam[indexSummoner].ChampionId == 0 && isNeedDisplay == true)
                                 {
                                     <div class="champ-wrapper">
-                                        <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
+                                        <div class="base-color-background" style="background: @BlueSideBackgroud;"></div>
                                         <div class="gradient-background-overlay"></div>
                                         <div class="summoner-object-component">
-                                            <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                            <div class="summoner-object-wrapper" style="color: @BlueSideSummoner;">
                                                 @*Champion picture*@
                                                 <div class="lane">
-                                                    <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                                    <img class="lane-picture" src="@GetLaneId(indexSummoner)" />
                                                 </div>
                                                 @*SummonerName*@
-                                                <div class="summoner-name"><div class="summoner-name-text">@getSummonerName(indexSummoner, 1)</div></div>
+                                                <div class="summoner-name"><div class="summoner-name-text">@GetSummonerName(indexSummoner, 1)</div></div>
                                             </div>
                                         </div>
                                     </div>
@@ -144,13 +125,13 @@
                             catch
                             {
                                 <div class="champ-wrapper">
-                                    <div class="base-color-background" style="background: @ColorBlueSideBackgroud;"></div>
+                                    <div class="base-color-background" style="background: @BlueSideBackgroud;"></div>
                                     <div class="gradient-background-overlay"></div>
                                     <div class="summoner-object-component">
-                                        <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                        <div class="summoner-object-wrapper" style="color: @BlueSideSummoner;">
                                             @*Champion picture*@
                                             <div class="lane">
-                                                <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                                <img class="lane-picture" src="@GetLaneId(indexSummoner)" />
                                             </div>
                                             @*SummonerName*@
                                             <div class="summoner-name"><div class="summoner-name-text">Skynet</div></div>
@@ -179,50 +160,31 @@
                                         if (inaction.ActorCellId == cellId && inaction.IsInProgress == true && inaction.Type.Equals("pick"))
                                         {
                                             <div class="champ-wrapper">
-                                                <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
+                                                <div class="base-color-background" style="background: @RedSideBackgroud;"></div>
                                                 <div class="gradient-background-overlay"></div>
                                                 <div class="summoner-object-component">
-                                                    <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
+                                                    <div class="summoner-object-wrapper" style="color: @RedSideSummoner;">
                                                         @*Champion picture*@
-                                                        <div class="champ-picture" style="background-image: url(@getChampId(indexSummoner, 2));"></div>
+                                                        <div class="champ-picture" style="background-image: url(@GetChampId(indexSummoner, 2));"></div>
                                                         @*SummonerName*@
-                                                        <div class="summoner-name" style="background: #be1e37;"><div class="summoner-name-text">@getSummonerName(indexSummoner, 2)</div></div>
-                                                        <div class="pick-blink"></div>
+                                                        <div class="summoner-name" style="background: @RedSideBackgroudSummonerPick;"><div class="summoner-name-text">@GetSummonerName(indexSummoner, 2)</div></div>
+                                                        <div class="pick-blink" style="background: @RedSideBlink"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                             isNeedDisplay = false;
                                         }
-                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == false && inaction.Type.Equals("pick"))
+                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == false && inaction.Type.Equals("pick") && inaction.Completed == true)
                                         {
                                             <div class="champ-wrapper">
-                                                <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
+                                                <div class="base-color-background" style="background: @RedSideBackgroud;"></div>
                                                 <div class="gradient-background-overlay"></div>
                                                 <div class="summoner-object-component">
-                                                    <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
+                                                    <div class="summoner-object-wrapper" style="color: @RedSideSummoner;">
                                                         @*Champion picture*@
-                                                        <div class="champ-picture" style="background-image: url(@getChampId(indexSummoner, 2));"></div>
+                                                        <div class="champ-picture" style="background-image: url(@GetChampId(indexSummoner, 2));"></div>
                                                         @*SummonerName*@
-                                                        <div class="summoner-name" style="background: #010a13;"><div class="summoner-name-text">@getSummonerName(indexSummoner, 2)</div></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            isNeedDisplay = false;
-                                        }
-                                        else if (inaction.ActorCellId == cellId && inaction.IsInProgress == true && inaction.Type.Equals("pick") && inaction.ChampionId == 0)
-                                        {
-                                            <div class="champ-wrapper">
-                                                <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
-                                                <div class="gradient-background-overlay"></div>
-                                                <div class="summoner-object-component">
-                                                    <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
-                                                        @*Champion picture*@
-                                                        <div class="lane">
-                                                            <img class="lane-picture" src="@getLaneId(indexSummoner)" />
-                                                        </div>
-                                                        @*SummonerName*@
-                                                        <div class="summoner-name"><div class="summoner-name-text">@getSummonerName(indexSummoner, 2)</div></div>
-                                                        <div class="pick-blink"></div>
+                                                        <div class="summoner-name" style="background: @RedSideBackgroudSummonerPickEnd;"><div class="summoner-name-text">@GetSummonerName(indexSummoner, 2)</div></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -233,16 +195,16 @@
                                 if (ChampSelectInfo.session.TheirTeam[indexSummoner].ChampionId == 0 && isNeedDisplay == true)
                                 {
                                     <div class="champ-wrapper">
-                                        <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
+                                        <div class="base-color-background" style="background: @RedSideBackgroud;"></div>
                                         <div class="gradient-background-overlay"></div>
                                         <div class="summoner-object-component">
-                                            <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
+                                            <div class="summoner-object-wrapper" style="color: @RedSideSummoner;">
                                                 @*Champion picture*@
                                                 <div class="lane">
-                                                    <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                                    <img class="lane-picture" src="@GetLaneId(indexSummoner)" />
                                                 </div>
                                                 @*SummonerName*@
-                                                <div class="summoner-name"><div class="summoner-name-text">@getSummonerName(indexSummoner, 2)</div></div>
+                                                <div class="summoner-name"><div class="summoner-name-text">@GetSummonerName(indexSummoner, 2)</div></div>
                                             </div>
                                         </div>
                                     </div>
@@ -251,13 +213,13 @@
                             catch
                             {
                                 <div class="champ-wrapper">
-                                    <div class="base-color-background" style="background: @ColorRedSideBackgroud;"></div>
+                                    <div class="base-color-background" style="background: @RedSideBackgroud;"></div>
                                     <div class="gradient-background-overlay"></div>
                                     <div class="summoner-object-component">
-                                        <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte;">
+                                        <div class="summoner-object-wrapper" style="color: @RedSideSummoner;">
                                             @*Champion picture*@
                                             <div class="lane">
-                                                <img class="lane-picture" src="@getLaneId(indexSummoner)" />
+                                                <img class="lane-picture" src="@GetLaneId(indexSummoner)" />
                                             </div>
                                             @*SummonerName*@
                                             <div class="summoner-name"><div class="summoner-name-text">Skynet</div></div>
@@ -273,7 +235,7 @@
             <div class="champ-select-footer-ban">
                 @*Footer text team blue side*@
                 <div class="champ-select-footer-blue-info">
-                    <div class="blue-text" style="color: black;font-size: 70px;">CSC</div>
+                    <div class="blue-text" style="color: @BlueSideTeamNameColor;font-size: @BlueSideTeamNameSize;">@BlueSideTeamName</div>
                 </div>
                 @*Footer ban blue side*@
                 <div class="bans" id="blueBans">
@@ -366,7 +328,7 @@
                 </div>
                 @*Footer text team blue side*@
                 <div class="champ-select-footer-red-info">
-                    <div class="red-text" style="color: black;font-size: 70px;">CY</div>
+                    <div class="red-text" style="color: @RedSideTeamNameColor;font-size: @RedSideTeamNameSize;">@RedSideTeamName</div>
                 </div>
             </div>
         </div>

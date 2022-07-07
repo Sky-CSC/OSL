@@ -1,19 +1,19 @@
-﻿@page "/champselectoverlay1"
+﻿@page "/champselect/view1"
 @using OSL_Server.DataReciveClient.Processing.ChampSelect;
 @using System.Timers
 @using static OSL_Server.Pages.ChampSelectView1Page.ChampSelect
 @layout EmptyLayout
 
 <PageTitle>Champ Select Overlay 1</PageTitle>
-@if (overlayType1Loaded)
+@if (overlayLoaded)
 {
     <div class="display-champ-select" style="background: url(@OverlayBackground)">
 
         <div class="overlay-type-1">
             <div class="champ-select-header">
                 <div class="chamSelect-header-blue-info">
-                    <h1 style="color: @ColorBlueTeamName">Sky-csc @BlueTeamName</h1>
-                    <h5 style="color: @ColorBlueTeamSubtext">Never losing @BlueTeamSubtext</h5>
+                    <h1 style="color: @BlueTeamNameColor">@BlueSideTeamName</h1>
+                    <h5 style="color: @BlueTeamSubtextColor">@BlueTeamSubtext</h5>
                 </div>
                 <div class="chamSelect-header-blue-logo" style="visibility: @PictureExist(BlueLogo)">
                     <img class="chamSelect-header-blue-logo" src="@BlueLogo" />
@@ -42,16 +42,16 @@
                             if (timer <= 9)
                             {
                                 <div class="timer timer-blue">
-                                    <div class="timer-bg" style="background: @ColorBlueSideTimerBackgroud; border: @ColorBlueSideTimerBorder">
-                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @ColorBlueSideTimerTexte">@timer</div>
+                                    <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
+                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @BlueSideTimerTexteColor">@timer</div>
                                     </div>
                                 </div>
                             }
                             else
                             {
                                 <div class="timer timer-blue">
-                                    <div class="timer-bg" style="background: @ColorBlueSideTimerBackgroud; border: @ColorBlueSideTimerBorder">
-                                        <div class="timer-inner" id="timer-blue" style="color: @ColorBlueSideTimerTexte">@timer</div>
+                                    <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
+                                        <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@timer</div>
                                     </div>
                                 </div>
                             }
@@ -75,16 +75,16 @@
                             if (timer <= 9)
                             {
                                 <div class="timer timer-blue">
-                                    <div class="timer-bg" style="background: @ColorBlueSideTimerBackgroud; border: @ColorBlueSideTimerBorder">
-                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @ColorBlueSideTimerTexte">@timer</div>
+                                    <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
+                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @BlueSideTimerTexteColor">@timer</div>
                                     </div>
                                 </div>
                             }
                             else
                             {
                                 <div class="timer timer-blue">
-                                    <div class="timer-bg" style="background: @ColorBlueSideTimerBackgroud; border: @ColorBlueSideTimerBorder">
-                                        <div class="timer-inner" id="timer-blue" style="color: @ColorBlueSideTimerTexte">@timer</div>
+                                    <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
+                                        <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@timer</div>
                                     </div>
                                 </div>
                             }
@@ -131,16 +131,16 @@
                             if (timer <= 9)
                             {
                                 <div class="timer timer-red">
-                                    <div class="timer-bg" style="background: @ColorRedSideTimerBackgroud; border: @ColorRedSideTimerBorder">
-                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @ColorRedSideTimerTexte">@timer</div>
+                                    <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
+                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @RedSideTimerTexteColor">@timer</div>
                                     </div>
                                 </div>
                             }
                             else
                             {
                                 <div class="timer timer-red">
-                                    <div class="timer-bg" style="background: @ColorRedSideTimerBackgroud; border: @ColorRedSideTimerBorder">
-                                        <div class="timer-inner" id="timer-red" style="color: @ColorRedSideTimerTexte">@timer</div>
+                                    <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
+                                        <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@timer</div>
                                     </div>
                                 </div>
                             }
@@ -164,16 +164,16 @@
                             if (timer <= 9)
                             {
                                 <div class="timer timer-red">
-                                    <div class="timer-bg" style="background: @ColorRedSideTimerBackgroud; border: @ColorRedSideTimerBorder">
-                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @ColorRedSideTimerTexte">@timer</div>
+                                    <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
+                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @RedSideTimerTexteColor">@timer</div>
                                     </div>
                                 </div>
                             }
                             else
                             {
                                 <div class="timer timer-red">
-                                    <div class="timer-bg" style="background: @ColorRedSideTimerBackgroud; border: @ColorRedSideTimerBorder">
-                                        <div class="timer-inner" id="timer-red" style="color: @ColorRedSideTimerTexte">@timer</div>
+                                    <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
+                                        <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@timer</div>
                                     </div>
                                 </div>
                             }
@@ -184,8 +184,8 @@
                     <img class="chamSelect-header-red-logo" src="@RedLogo" />
                 </div>
                 <div class="chamSelect-header-red-info">
-                    <h1 style="color: @ColorRedTeamName">Skynet @RedTeamName</h1>
-                    <h5 style="color: @ColorRedTeamSubtext">Cyberdine System Comporation @RedTeamSubtext</h5>
+                    <h1 style="color: @RedTeamNameColor">@RedSideTeamName</h1>
+                    <h5 style="color: @RedTeamSubtextColor">@RedTeamSubtext</h5>
                 </div>
             </div>
 
@@ -197,10 +197,10 @@
                         for (int indexChamp = 0; indexChamp < @ChampSelectInfo.session.MyTeam.Count(); indexChamp++)
                         {
                             <div class="champ-wrapper">
-                                <div class="base-color-background" style="background: @ColorBlueSideBackgroud; border: @ColorBlueSideBorder"></div>
+                                <div class="base-color-background" style="background: @BlueSideBackgroudColor; border: @BlueSideBorderColor"></div>
                                 <div class="gradient-background-overlay"></div>
                                 <div class="summoner-object-component">
-                                    <div class="summoner-object-wrapper" style="color: @ColorBlueSideTexte;">
+                                    <div class="summoner-object-wrapper" style="color: @BlueSideTexteColor;">
                                         @*Champion picture*@
                                         <div class="champ-picture" style="background-image: url(@getChampId(indexChamp, 1));"></div>
                                         @*Curent action*@
@@ -232,10 +232,10 @@
                         for (int indexChamp = 0; indexChamp < @ChampSelectInfo.session.TheirTeam.Count(); indexChamp++)
                         {
                             <div class="champ-wrapper">
-                                <div class="base-color-background" style="background: @ColorRedSideBackgroud; border: @ColorRedSideBorder"></div>
+                                <div class="base-color-background" style="background: @RedSideBackgroudColor; border: @RedSideBorderColor"></div>
                                 <div class="gradient-background-overlay"></div>
                                 <div class="summoner-object-component">
-                                    <div class="summoner-object-wrapper" style="color: @ColorRedSideTexte">
+                                    <div class="summoner-object-wrapper" style="color: @RedSideTexteColor">
                                         @*Champion picture*@
                                         <div class="champ-picture" style="background-image: url(@getChampId(indexChamp, 2));"></div>
                                         @*Curent action*@

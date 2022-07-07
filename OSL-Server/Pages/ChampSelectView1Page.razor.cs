@@ -10,59 +10,85 @@ namespace OSL_Server.Pages
     {
         private static OSLLogger _logger = new OSLLogger("ChampSelectView1Page");
 
-        public static bool overlayType1Loaded = false;
+        public static bool overlayLoaded = false;
 
         //Personalisation Patch and Region
         public static string DefaultPatch = "latest";
         public static string DefaultRegion = "fr_fr";
 
         //Personalisation Blue side
-        public static string BlueTeamName = "";
+        public static string BlueSideTeamName = "";
+        public static string BlueSideTeamNameSave = "";
         public static string BlueTeamSubtext = "";
-        public static string ColorBlueTeamName = "white";
-        public static string ColorBlueTeamSubtext = "white";
+        public static string BlueTeamSubtextSave = "";
+        public static string BlueTeamNameColor = "#ffffff";
+        public static string BlueTeamNameColorSave = "#ffffff";
+        public static string BlueTeamSubtextColor = "#ffffff";
+        public static string BlueTeamSubtextColorSave = "#ffffff";
         public static string BlueLogo = "";
-        public static string ColorBlueSideTexte = "white";
-        public static string ColorBlueSideBackgroud = "#0b849e";
-        public static string ColorBlueSideBorder = "5px solid yellow";
-        public static string ColorBlueSideTimerBackgroud = "#0b849e";
-        public static string ColorBlueSideTimerBorder = "5px solid blue";
-        public static string ColorBlueSideTimerTexte = "white";
+        public static string BlueLogoSave = "";
+        public static string BlueSideTexteColor = "#ffffff";
+        public static string BlueSideTexteColorSave = "#ffffff";
+        public static string BlueSideBackgroudColor = "#0b849e";
+        public static string BlueSideBackgroudColorSave = "#0b849e";
+        public static string BlueSideBorderColor = "5px solid yellow";
+        public static string BlueSideBorderColorSave = "5px solid yellow";
+        public static string BlueSideTimerBackgroudColor = "#0b849e";
+        public static string BlueSideTimerBackgroudColorSave = "#0b849e";
+        public static string BlueSideTimerBorderColor = "5px solid blue";
+        public static string BlueSideTimerBorderColorSave = "5px solid blue";
+        public static string BlueSideTimerTexteColor = "#ffffff";
+        public static string BlueSideTimerTexteColorSave = "#ffffff";
 
         //Personalisation Red side
-        public static string RedTeamName = "";
+        public static string RedSideTeamName = "";
+        public static string RedSideTeamNameSave = "";
         public static string RedTeamSubtext = "";
-        public static string ColorRedTeamName = "white";
-        public static string ColorRedTeamSubtext = "white";
+        public static string RedTeamSubtextSave = "";
+        public static string RedTeamNameColor = "#ffffff";
+        public static string RedTeamNameColorSave = "#ffffff";
+        public static string RedTeamSubtextColor = "#ffffff";
+        public static string RedTeamSubtextColorSave = "#ffffff";
         public static string RedLogo = "";
-        public static string ColorRedSideTexte = "white";
-        public static string ColorRedSideBackgroud = "#be1e37";
-        public static string ColorRedSideBorder = "5px solid yellow";
-        public static string ColorRedSideTimerBackgroud = "#be1e37";
-        public static string ColorRedSideTimerBorder = "5px solid red";
-        public static string ColorRedSideTimerTexte = "white";
+        public static string RedLogoSave = "";
+        public static string RedSideTexteColor = "#ffffff";
+        public static string RedSideTexteColorSave = "#ffffff";
+        public static string RedSideBackgroudColor = "#be1e37";
+        public static string RedSideBackgroudColorSave = "#be1e37";
+        public static string RedSideBorderColor = "5px solid yellow";
+        public static string RedSideBorderColorSave = "5px solid yellow";
+        public static string RedSideTimerBackgroudColor = "#be1e37";
+        public static string RedSideTimerBackgroudColorSave = "#be1e37";
+        public static string RedSideTimerBorderColor = "5px solid red";
+        public static string RedSideTimerBorderColorSave = "5px solid red";
+        public static string RedSideTimerTexteColor = "#ffffff";
+        public static string RedSideTimerTexteColorSave = "#ffffff";
 
         //Personalisation Ban
         public static string BanBackgroundPicture = "../assets/champselect/banning-1.png";
+        public static string BanBackgroundPictureSave = "../assets/champselect/banning-1.png";
         public static string BanOverlayPicture = "../assets/champselect/ban-completed-2.png";
+        public static string BanOverlayPictureSave = "../assets/champselect/ban-completed-2.png";
         public static string BanBackgroundColor = "#010a13";
+        public static string BanBackgroundColorSave = "#010a13";
 
         //Personalisation Background
         public static string OverlayBackground = "../assets/champselect/backgroud-view-1.png";
+        public static string OverlayBackgroundSave = "../assets/champselect/backgroud-view-1.png";
 
         public class ChampSelect
         {
             public string BlueTeamName { get; set; }
             public string BlueTeamSubtext { get; set; }
-            public string ColorBlueTeamName { get; set; }
-            public string ColorBlueTeamSubtext { get; set; }
+            public string BlueTeamNameColor { get; set; }
+            public string BlueTeamSubtextColor { get; set; }
             public string BlueLogo { get; set; }
             public string DefaultPatch { get; set; }
             public string DefaultRegion { get; set; }
-            public string ColorBlueSideTexte { get; set; }
-            public string ColorBlueSideBackgroud { get; set; }
-            public string ColorBlueSideBorder { get; set; }
-            public string ColorBlueSideTimerBackgroud { get; set; }
+            public string BlueSideTexteColor { get; set; }
+            public string BlueSideBackgroudColor { get; set; }
+            public string BlueSideBorderColor { get; set; }
+            public string BlueSideTimerBackgroudColor { get; set; }
             public string ColorBlueSideTimerBorder { get; set; }
             public string ColorBlueSideTimerTexte { get; set; }
             public string RedTeamName { get; set; }
@@ -81,6 +107,230 @@ namespace OSL_Server.Pages
             public string BanBackgroundColor { get; set; }
             public string OverlayBackground { get; set; }
         }
+
+        public static void ResetColor()
+        {
+            BlueSideTeamName = BlueSideTeamNameSave;
+            BlueTeamSubtext = BlueTeamSubtextSave;
+            BlueTeamNameColor = BlueTeamNameColorSave;
+            BlueTeamSubtextColor = BlueTeamSubtextColorSave;
+            BlueLogo = BlueLogoSave;
+            BlueSideTexteColor = BlueSideTexteColorSave;
+            BlueSideBackgroudColor = BlueSideBackgroudColorSave;
+            BlueSideBorderColor = BlueSideBorderColorSave;
+            BlueSideTimerBackgroudColor = BlueSideTimerBackgroudColorSave;
+            BlueSideTimerBorderColor = BlueSideTimerBorderColorSave;
+            BlueSideTimerTexteColor = BlueSideTimerTexteColorSave;
+            RedSideTeamName = RedSideTeamNameSave;
+            RedTeamSubtext = RedTeamSubtextSave;
+            RedTeamNameColor = RedTeamNameColorSave;
+            RedTeamSubtextColor = RedTeamSubtextColorSave;
+            RedLogo = RedLogoSave;
+            RedSideTexteColor = RedSideTexteColorSave;
+            RedSideBackgroudColor = RedSideBackgroudColorSave;
+            RedSideBorderColor = RedSideBorderColorSave;
+            RedSideTimerBackgroudColor = RedSideTimerBackgroudColorSave;
+            RedSideTimerBorderColor = RedSideTimerBorderColorSave;
+            RedSideTimerTexteColor = RedSideTimerTexteColorSave;
+            BanBackgroundPicture = BanBackgroundPictureSave;
+            BanOverlayPicture = BanOverlayPictureSave;
+            BanBackgroundColor = BanBackgroundColorSave;
+            OverlayBackground = OverlayBackgroundSave;
+        }
+
+        public static void SetBlueTeamNameColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = BlueTeamNameColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                BlueTeamNameColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+        public static void SetBlueTeamSubtextColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = BlueTeamSubtextColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                BlueTeamSubtextColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+        public static void SetBlueSideTexteColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = BlueSideTexteColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                BlueSideTexteColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+        public static void SetBlueSideBackgroudColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = BlueSideBackgroudColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                BlueSideBackgroudColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+        public static void SetBlueSideTimerBackgroudColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = BlueSideTimerBackgroudColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                BlueSideTimerBackgroudColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+        public static void SetBlueSideTimerTexteColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = BlueSideTimerTexteColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                BlueSideTimerTexteColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+        public static void SetRedTeamNameColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = RedTeamNameColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                RedTeamNameColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+        public static void SetRedTeamSubtextColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = RedTeamSubtextColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                RedTeamSubtextColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+        public static void SetRedSideTexteColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = RedSideTexteColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                RedSideTexteColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+        public static void SetRedSideBackgroudColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = RedSideBackgroudColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                RedSideBackgroudColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+        public static void SetRedSideTimerBackgroudColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = RedSideTimerBackgroudColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                RedSideTimerBackgroudColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+        public static void SetRedSideTimerTexteColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = RedSideTimerTexteColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                RedSideTimerTexteColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+        public static void SetBanBackgroundColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                ChampSelectPage.colorValue = BanBackgroundColor;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                BanBackgroundColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+
+
 
         public static void UpdateTimer(int timer, int reset)
         {
@@ -145,7 +395,7 @@ namespace OSL_Server.Pages
             {
                 return ChampSelectInfo.session.Bans.TheirTeamBans[index] * 1000;
             }
-        }        
+        }
 
         private string getCurentAction(int index, int team)
         {

@@ -1,3 +1,8 @@
+/*##########################################################*/
+/*######################## General #########################*/
+/*##########################################################*/
+
+
 @font-face {
     font-family: MyFont;
     src: url(../css/font/fonts/fontLoL.ttf);
@@ -16,6 +21,10 @@ div {
     /* border: 5px solid yellow;*/
 }
 
+/*##########################################################*/
+/*####################### Not Active #######################*/
+/*##########################################################*/
+
 .alert {
     padding: 20px;
     background-color: blue;
@@ -25,93 +34,6 @@ div {
     left: 20px;
 }
 
-
-/*##########################################################*/
-/*########################## Team ##########################*/
-/*##########################################################*/
-
-.chamSelect-header-blue-info {
-    position: absolute;
-    left: 20px;
-    width: 400px;
-    height: 108px;
-    top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    color: white;
-    /*text-align: center*/
-}
-
-    .chamSelect-header-blue-info h1 {
-        /*vertical-align: middle;
-        text-align: center*/
-        text-align: left;
-        margin: 0;
-    }
-
-    .chamSelect-header-blue-info h5 {
-        /*vertical-align: middle;
-        text-align: center;*/
-        text-align: left;
-        margin: 0;
-    }
-
-.chamSelect-header-blue-logo {
-    position: absolute;
-    left: 200px;
-    width: 150px;
-    height: 150px;
-    top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-/*.chamSelect-header-blue-logo-logo {
-    width: 200px;
-    height: 200px;
-}*/
-
-.chamSelect-header-red-info {
-    position: absolute;
-    right: 20px;
-    width: 400px;
-    height: 108px;
-    top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    color: white;
-}
-
-    .chamSelect-header-red-info h1 {
-        /*vertical-align: middle;
-        text-align: center;*/
-        text-align: right;
-        margin: 0;
-    }
-
-    .chamSelect-header-red-info h5 {
-        /*vertical-align: middle;*/
-        /*text-align: center;*/
-        text-align: right;
-        margin: 0;
-    }
-
-.chamSelect-header-red-logo {
-    position: absolute;
-    right: 200px;
-    width: 150px;
-    height: 150px;
-    top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
 /*##########################################################*/
 /*########################## Pick ##########################*/
 /*##########################################################*/
@@ -154,10 +76,6 @@ div {
     }
 }
 
-.color-name-pick {
-    background-color: red;
-}
-
 #blueSide .lane {
     width: 158px;
     height: 195px;
@@ -187,7 +105,6 @@ div {
     width: 790px;
     height: 245px;
     display: flex;
-    /*flex-direction: column;*/
 }
 
     .side .champ-wrapper {
@@ -228,14 +145,6 @@ div {
         .side .champ-wrapper:last-child .gradient-background-overlay {
             background-image: radial-gradient( ellipse 82% 128% at 50% 10%, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.91) 100% );
         }
-
-.summoner-object-component .summoner-object-wrapper .action-text {
-    direction: ltr;
-    opacity: 1;
-    position: absolute;
-    bottom: 30px;
-    transition: opacity 0.2s;
-}
 
 .summoner-object-component .summoner-object-wrapper {
     position: absolute;
@@ -284,14 +193,6 @@ div {
         /*border: 5px solid yellow;*/
     }
 
-    #blueSide .summoner-object-component .summoner-object-wrapper .action-text {
-        right: 15px;
-        animation-duration: 1.5s;
-        animation-name: banBlink;
-        animation-iteration-count: infinite;
-        transition: none;
-    }
-
     #blueSide .summoner-object-component .summoner-object-wrapper .summoner-name {
         position: absolute;
         background: none;
@@ -313,14 +214,6 @@ div {
     right: 0px;
     flex-direction: row-reverse;
 }
-
-    #redSide .summoner-object-component .summoner-object-wrapper .action-text {
-        left: 15px;
-        animation-duration: 1.5s;
-        animation-name: banBlink;
-        animation-iteration-count: infinite;
-        transition: none;
-    }
 
     #redSide .summoner-object-component .summoner-object-wrapper .summoner-name {
         position: absolute;
@@ -487,31 +380,11 @@ div {
 /*###########################################################*/
 /*######################## Team Text ########################*/
 /*###########################################################*/
-.champ-select-footer-red-info {
-    bottom: 15px;
-    width: 350px;
-    height: 80px;
-    right: 90px;
-    position: absolute;
-    text-align: center;
-}
-
-    .champ-select-footer-red-info
-    .red-text {
-        display: table-cell;
-        vertical-align: middle;
-        width: 350px;
-        height: 80px;
-        line-height: normal;
-        color: white;
-        font-size: 70px;
-    }
-
 .champ-select-footer-blue-info {
-    bottom: 15px;
-    width: 350px;
+    bottom: 30px;
+    width: 175px;
     height: 80px;
-    left: 90px;
+    left: 790px;
     position: absolute;
     text-align: center;
 }
@@ -524,7 +397,27 @@ div {
         height: 80px;
         line-height: normal;
         color: white;
-        font-size: 70px;
+        font-size: 20px;
+    }
+
+.champ-select-footer-red-info {
+    bottom: 30px;
+    width: 175px;
+    height: 80px;
+    right: 790px;
+    position: absolute;
+    text-align: center;
+}
+
+    .champ-select-footer-red-info
+    .red-text {
+        display: table-cell;
+        vertical-align: middle;
+        width: 350px;
+        height: 80px;
+        line-height: normal;
+        color: white;
+        font-size: 20px;
     }
 
 /*###########################################################*/
@@ -566,82 +459,6 @@ div {
     -webkit-filter: saturate(0.6);
 }
 
-.timer {
-    width: 148px;
-    height: 108px;
-    color: white;
-    position: absolute;
-    top: 0px;
-    padding-top: 33px;
-    font-size: 70px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: opacity 0.3s;
-    opacity: 1;
-}
-
-    .timer .timer-bg {
-        position: absolute;
-        top: 0;
-        width: 147px;
-        height: 163px;
-        transition: opacity 0.3s;
-    }
-
-    .timer .timer-inner {
-        position: absolute;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4), -1px 1px 3px rgba(0, 0, 0, 0.4), -1px -1px 3px rgba(0, 0, 0, 0.4), 1px -1px 3px rgba(0, 0, 0, 0.4);
-    }
-
-.timer-blue {
-    left: 0px;
-}
-
-    .timer-blue .timer-bg {
-        transform: skew(14deg);
-        background: #0b849e;
-        right: 0;
-        border: 5px solid blue;
-    }
-
-    .timer-blue
-    .timer-inner {
-        transform: skew(-14deg);
-        left: 30px;
-        top: 30px;
-    }
-
-.timer-red {
-    right: 0px;
-    text-align: right;
-}
-
-    .timer-red
-    .timer-bg {
-        transform: skew(-14deg);
-        background: #be1e37;
-        left: 0;
-        border: 5px solid red;
-    }
-
-
-    .timer-red
-    .timer-inner {
-        /*        display: ;
-        position: center;*/
-        left: 30px;
-        top: 30px;
-        transform: skew(14deg);
-    }
-
-
-.container {
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 125px;
-    height: 108px;
-}
 
 .center {
     display: flex;

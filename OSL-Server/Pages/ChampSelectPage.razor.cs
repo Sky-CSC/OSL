@@ -4,6 +4,8 @@ using OSL_Server.DataLoader.CDragon;
 using OSL_Server.Download;
 using OSL_Server.DataReciveClient.Processing.ChampSelect;
 
+using System.ComponentModel.DataAnnotations;
+
 namespace OSL_Server.Pages
 {
     public partial class ChampSelectPage
@@ -14,8 +16,44 @@ namespace OSL_Server.Pages
         public static string champBan1;
         //private static void LinkGenerator()
         //{
-            
+
         //    linkOverlayChampSelect = "tesmps";
+        //}
+
+        public static string ColorPickerOverlay1 = "hidden";
+        public static string ColorPickerOverlay2 = "hidden";
+        public static string ColorPickerOverlay3 = "hidden";
+        public static string colorValue = "#0000";
+
+        public class ChampSelectOverlayText
+        {
+            //[Required]
+            [StringLength(20, ErrorMessage = "Name is too long.")]
+            public string? BlueSideTeamName1 { get; set; }
+            [StringLength(11, ErrorMessage = "Name is too long.")]
+            public string? BlueSideTeamName2 { get; set; }
+            [StringLength(11, ErrorMessage = "Name is too long.")]
+            public string? BlueSideTeamName3 { get; set; }
+
+
+            [StringLength(20, ErrorMessage = "Name is too long.")]
+            public string? RedSideTeamName1 { get; set; }
+            [StringLength(11, ErrorMessage = "Name is too long.")]
+            public string? RedSideTeamName2 { get; set; }
+            [StringLength(11, ErrorMessage = "Name is too long.")]
+            public string? RedSideTeamName3 { get; set; }
+
+
+            [StringLength(30, ErrorMessage = "Name is too long.")]
+            public string? BlueTeamSubtext { get; set; }
+            [StringLength(30, ErrorMessage = "Name is too long.")]
+            public string? RedTeamSubtext { get; set; }
+        }
+
+        //private ExampleModel exampleModel = new();
+
+        //private void GetBlueSideTeamName() {
+        //    var saisie = 
         //}
 
         public static void DisplayInfo()
@@ -43,6 +81,92 @@ namespace OSL_Server.Pages
             //{
 
             //}
+        }
+        private string view1Enable = "";
+        private string view1EnableColor = "";
+        private string view2Enable = "";
+        private string view2EnableColor = "";
+        private string view3Enable = "";
+        private string view3EnableColor = "";
+        private void TexteOverlayView1()
+        {
+            if (ChampSelectView1Page.overlayLoaded == true)
+            {
+                view1Enable = "Disable";
+                view1EnableColor = "#be1e37";
+            }
+            else
+            {
+                view1Enable = "Enable";
+                view1EnableColor = "#0b849e";
+            }
+        }
+
+        private void EnableOverlayView1()
+        {
+            if (ChampSelectView1Page.overlayLoaded == false)
+            {
+                ChampSelectView1Page.overlayLoaded = true;
+            }
+            else
+            {
+                ChampSelectView1Page.overlayLoaded = false;
+            }
+            //StateHasChanged();
+        }
+
+        private void TexteOverlayView2()
+        {
+            if (ChampSelectView2Page.overlayLoaded == true)
+            {
+                view2Enable = "Disable";
+                view2EnableColor = "#be1e37";
+            }
+            else
+            {
+                view2Enable = "Enable";
+                view2EnableColor = "#0b849e";
+            }
+        }
+
+        private void EnableOverlayView2()
+        {
+            if (ChampSelectView2Page.overlayLoaded == false)
+            {
+                ChampSelectView2Page.overlayLoaded = true;
+            }
+            else
+            {
+                ChampSelectView2Page.overlayLoaded = false;
+            }
+            //StateHasChanged();
+        }
+
+        private void TexteOverlayView3()
+        {
+            if (ChampSelectView3Page.overlayLoaded == true)
+            {
+                view3Enable = "Disable";
+                view3EnableColor = "#be1e37";
+            }
+            else
+            {
+                view3Enable = "Enable";
+                view3EnableColor = "#0b849e";
+            }
+        }
+
+        private void EnableOverlayView3()
+        {
+            if (ChampSelectView3Page.overlayLoaded == false)
+            {
+                ChampSelectView3Page.overlayLoaded = true;
+            }
+            else
+            {
+                ChampSelectView3Page.overlayLoaded = false;
+            }
+            //StateHasChanged();
         }
     }
 }

@@ -1,3 +1,7 @@
+/*##########################################################*/
+/*######################## General #########################*/
+/*##########################################################*/
+
 @font-face {
     font-family: MyFont;
     src: url(../css/font/fonts/fontLoL.ttf);
@@ -15,6 +19,10 @@ div {
     position: absolute;
     /* border: 5px solid yellow;*/
 }
+
+/*##########################################################*/
+/*####################### Not Active #######################*/
+/*##########################################################*/
 
 .alert {
     padding: 20px;
@@ -69,10 +77,6 @@ div {
     align-items: flex-start;
     justify-content: center;
 }
-/*.chamSelect-header-blue-logo-logo {
-    width: 200px;
-    height: 200px;
-}*/
 
     .chamSelect-header-red-info {
         position: absolute;
@@ -88,15 +92,11 @@ div {
     }
 
     .chamSelect-header-red-info h1 {
-        /*vertical-align: middle;
-        text-align: center;*/
         text-align: right;
         margin: 0;
     }
 
     .chamSelect-header-red-info h5 {
-        /*vertical-align: middle;*/
-        /*text-align: center;*/
         text-align: right;
         margin: 0;
     }
@@ -483,14 +483,6 @@ div {
         transform: skew(14deg);
     }
 
-
-.container {
-    left: 0;
-    top: 0;
-    position: absolute;
-    width: 125px;
-    height: 108px;
-}
 
 .center {
     display: flex;
