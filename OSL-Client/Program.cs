@@ -6,6 +6,9 @@ using OSL_Client.RiotApp.API;
 using OSL_Client.RiotApp.API.LCU;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using OSL_Client.RiotApp.MemoryProcessing;
+using OSL_Client.Communication.OSLServer;
+using System.Net;
 
 Console.WriteLine("");
 OSLLogger logger = new("Program");
@@ -22,6 +25,9 @@ Console.ResetColor();
 //Config.LoadConfigHost();
 //Initialisation for acces att the champion selection or a game
 //PostCom.Test2();
+String data = "Bonjour Skynet";
+AsyncClient.StartClient(data);
+
 while (true)
 {
     if (LaunchChecker.LoLLauncherCheck())
@@ -38,6 +44,10 @@ while (true)
                 //    LcuApi.GameFlowPhaseCheck(gameFlowPhase);
 
                 //}
+                //Console.WriteLine("Start");
+                //TestClass.Test();
+                //Console.WriteLine("End");
+
                 string gameFlowPhase;
                 do
                 {
@@ -52,6 +62,8 @@ while (true)
         }
     }
 }
+
+
 //See what phase is of the game
 //if (ApiRequest.RequestGameClientAPI(LcuApi.lolgameflowv1session))
 //while (true)

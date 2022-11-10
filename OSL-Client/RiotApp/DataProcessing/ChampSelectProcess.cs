@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using OSL_Client.Communication.OSLServer;
 using OSL_Client.FileManager;
 using OSL_Client.RiotApp.API;
 using OSL_Client.RiotApp.API.LCU;
@@ -23,14 +24,15 @@ namespace OSL_Client.RiotApp.DataProcessing
         {
             NewGameProcess.IdGame = random.NextInt64(); //Possible server give IdGame
             //Send to server json
-            var champSelect = new ChampSelect
+            var champSelectStart = new GameFlowPhaseStatus
             {
-                IdGame = NewGameProcess.IdGame,
-                Info = "ChampSelect",
+                //IdGame = NewGameProcess.IdGame,
+                Phase = "ChampSelect",
                 Status = "Running",
                 Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
             };
-            string InChampSelectSend = JsonConvert.SerializeObject(champSelect); //send to server information
+            string InChampSelectStartSend = JsonConvert.SerializeObject(champSelectStart); //send to server information
+            AsyncClient.StartClient(InChampSelectStartSend);
 
             //All information necessary for display pick and ban overlay
             string champSelectContentPrevious = "";
@@ -38,7 +40,7 @@ namespace OSL_Client.RiotApp.DataProcessing
             int i = 0;
             while ((champSelectContent = ApiRequest.RequestGameClientAPI(UrlRequest.lolchampselectv1session)) != null)
             {
-                _logger.log(LoggingLevel.INFO, "ManageChampionSelect()", $"ChampSelectContent is {champSelectContent}");
+                //_logger.log(LoggingLevel.INFO, "ManageChampionSelect()", $"ChampSelectContent is {champSelectContent}");
                 if (!champSelectContent.Equals(champSelectContentPrevious))
                 {
                     champSelectContentPrevious = champSelectContent;
@@ -96,7 +98,11 @@ namespace OSL_Client.RiotApp.DataProcessing
                     FileManagerLocal.RewrittenFile($"E:/Overlay-found-riot/ChampSelectAll/champSelectAll{i}.json", champSelectContent);
                     _logger.log(LoggingLevel.INFO, "ManageChampionSelect()", "Send ChampSelectContent");
                     i++;
+
                     //Send to Server ChampSelectContent
+                    AsyncClient.StartClient(champSelectContent);
+
+
                 }
                 else
                 {
@@ -104,6 +110,16 @@ namespace OSL_Client.RiotApp.DataProcessing
                 }
                 Thread.Sleep(1000);
             }
+            //Send to server json
+            var champSelectEnd = new GameFlowPhaseStatus
+            {
+                //IdGame = NewGameProcess.IdGame,
+                Phase = "ChampSelect",
+                Status = "End",
+                Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+            };
+            string InChampSelectEndSend = JsonConvert.SerializeObject(champSelectEnd); //send to server information
+            AsyncClient.StartClient(InChampSelectEndSend);
             _logger.log(LoggingLevel.WARN, "ManageChampionSelect()", "End of ChampSelect");
         }
 
@@ -112,12 +128,12 @@ namespace OSL_Client.RiotApp.DataProcessing
             public string NameSummoner { get; set; }
         }
 
-        private class ChampSelect
-        {
-            public Int64 IdGame { get; set; }
-            public string? Info { get; set; }
-            public string? Status { get; set; }
-            public string? Date { get; set; }
-        }
+        //private class ChampSelect
+        //{
+        //    public Int64 IdGame { get; set; }
+        //    public string? Info { get; set; }
+        //    public string? Status { get; set; }
+        //    public string? Date { get; set; }
+        //}
     }
 }

@@ -103,6 +103,15 @@ namespace OSL_Client.RiotApp.API.LCU
             }
         }
     }
+
+    public class GameFlowPhaseStatus
+    {
+        //public Int64 IdGame { get; set; }
+        public string? Phase { get; set; }
+        public string? Status { get; set; }
+        public string? Date { get; set; }
+    }
+
     public class UrlRequest
     {
         public static readonly string riotclientappname = "/riotclient/app-name"; //Application name without file extension
@@ -114,6 +123,7 @@ namespace OSL_Client.RiotApp.API.LCU
         //lol-champ-select
         public static readonly string lolchampselectv1gridchampions = "/lol-champ-select/v1/grid-champions/"; //
         public static readonly string lolchampselectv1session = "/lol-champ-select/v1/session"; //
+        public static readonly string lolsummonerv1summonersid = "/lol-summoner/v1/summoners/"; //
         public static readonly string lolchampselectv1bannablechampionids = "/lol-champ-select/v1/bannable-champion-ids"; //All champ possible to ban
         public static readonly string lolchampselectv1currentchampion = "/lol-champ-select/v1/current-champion"; //No info
 
