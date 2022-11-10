@@ -4,72 +4,28 @@ using OSL_Server.Pages;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.AspNetCore.Components;
+using System.Net;
+using System.Runtime.Intrinsics.X86;
+using System.Text;
+using Newtonsoft.Json.Linq;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.AspNet.SignalR.Client.Http;
+using System.Diagnostics;
 
 namespace OSL_Server.DataReciveClient.Processing.ChampSelect
 {
     public class ChampSelectInfo
     {
-        public static string blueBan = "";
-        public static Session session = new();
-
-        //  protected override async Task OnInitializedAsync()
-        //  {
-        //      _hubConnection = new HubConnectionBuilder().WithUrl(navigationManager.ToAbsoluteUri("/boattypeshub")).AddNewtonsoftJsonProtocol(opts =>
-        //opts.PayloadSerializerSettings.TypeNameHandling = TypeNameHandling.Auto).Build();
-        //  }
-        public static void testChampSelectInfo()
+        private static OSLLogger _logger = new OSLLogger("ChampSelectInfo");
+        public static Session session;
+        public static void InChampSelect(string content)
         {
-            //Simulation data recive from client
-            int i = 0;
-            while (true)
-            {
-                if (i == 20)
-                {
-                    i = 0;
-                }
-                //if (i < 4)
-                //{
-                //    i++;
-                //}
-                //else
-                //{
-                //string file = FileManagerLocal.ReadInFile($"./ChampSelectInfo.json");
-                ////Data recive from client
-                //session = ChampSelectProcessingDataRecive(file);
-                //ChampSelectView1Page.blueBan2 = $"../assets/12.12/fr_fr/Champions/{session.Bans.MyTeamBans[1]}/default-square.png";
-                //Thread.Sleep(4000);
-                //string file2 = FileManagerLocal.ReadInFile($"./ChampSelectInfo2.json");
-                ////Data recive from client
-                //session = ChampSelectProcessingDataRecive(file2);
-                //ChampSelectView1Page.blueBan2 = $"../assets/12.12/fr_fr/Champions/{session.Bans.MyTeamBans[1]}/default-square.png";
-                //Thread.Sleep(4000);
-                //if (i == 0 || i == 10)
-                //{
-                //    ChampSelectView1Page.ColorBlueSideTexte = "blue";
-                //    ChampSelectView1Page.ColorRedSideTexte = "red";
-                //}
-                //if (i == 5 || i == 15)
-                //{
-                //    ChampSelectView1Page.ColorBlueSideTexte = "white";
-                //    ChampSelectView1Page.ColorRedSideTexte = "white";
-                //}
-                string file = FileManagerLocal.ReadInFile($"E:/Overlay-found-riot/ChampSelectAll/champSelectAll{i}.json");
-                session = ChampSelectProcessingDataRecive(file);
-                //Console.WriteLine(session.Timer.AdjustedTimeLeftInPhase);
-                //Console.WriteLine(session.Timer.InternalNowInEpochMs);
-                //Console.WriteLine(session.Timer.Phase);
-                //Console.WriteLine(session.Timer.TotalTimeInPhase);
-                int time = session.Timer.AdjustedTimeLeftInPhase;
-                int timer = (int)TimeSpan.FromMilliseconds((double)time).TotalSeconds;
-                ChampSelectView1Page.timePhase = timer;
-                ChampSelectView1Page.currentCount = 0;
-                Thread.Sleep(4000);
-                i++;
-                //}
-            }
-            //Console.WriteLine(JsonConvert.SerializeObject(session, Formatting.Indented));
-            //Display session in overlay
-            //ChampSelectPage.DisplayInfo();
+            session = ChampSelectProcessingDataRecive(content);
+            int time = session.Timer.AdjustedTimeLeftInPhase;
+            int timer = (int)TimeSpan.FromMilliseconds((double)time).TotalSeconds;
+            ChampSelectView1Page.UpdateTimer(timer, 0);
+            ChampSelectView2Page.UpdateTimer(timer, 0);
         }
 
         /// <summary>

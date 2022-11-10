@@ -6,6 +6,8 @@ using OSL_Server.Data;
 using OSL_Server.DataLoader.CDragon;
 using OSL_Server.DataReciveClient.Processing.ChampSelect;
 using OSL_Server.Pages;
+using MudBlazor.Services;
+using OSL_Server.Communication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+builder.Services.AddMudServices();
+
 
 var app = builder.Build();
 
@@ -46,11 +51,13 @@ Config.LoadConfigCDragon();
 //Faire une liste des patch et des région sur une page web et on sélectionne celui que l'on veut parmi la liste
 
 
-Config.LoadConfigChampSelect();
+Config.LoadConfigChampSelectView1();
+Config.LoadConfigChampSelectView2();
+Config.LoadConfigChampSelectView3();
 //Config.LoadConfig();
 //CDragonPage.UpdateManual();
-Thread DownloadFilesFr = new Thread(() => ChampSelectInfo.testChampSelectInfo());
-DownloadFilesFr.Start();
+//Thread DownloadFilesFr = new Thread(() => ChampSelectInfo.testChampSelectInfo());
+//DownloadFilesFr.Start();
 
 
 ////CDragon.region = "fr_fr";
@@ -67,5 +74,6 @@ DownloadFilesFr.Start();
 
 //Console.WriteLine(JsonConvert.SerializeObject(CDragon.dataCDragon, Formatting.Indented));
 
+AsyncServer.Run();
 app.Run();
 
