@@ -46,7 +46,7 @@ div {
     height: 245px;
     width: 160px;
     position: absolute;
-    background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #0b849e);
+    /*background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #0b849e);*/
 }
 
 
@@ -58,7 +58,7 @@ div {
     height: 245px;
     width: 160px;
     position: absolute;
-    background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #be1e37);
+    /*background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #be1e37);*/
 }
 
 @keyframes condemed_blink_effect {
@@ -338,7 +338,7 @@ div {
     position: absolute;
     /*    border-left: 10px solid yellow;
     border-right: 10px solid yellow;*/
-    background: linear-gradient(150deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%);
+    /*background: linear-gradient(150deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%);*/
     -webkit-filter: saturate(0.6);
 }
 

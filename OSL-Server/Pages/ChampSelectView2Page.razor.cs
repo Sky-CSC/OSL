@@ -24,22 +24,39 @@ namespace OSL_Server.Pages
         public static string TimerRed = "#be1e37";
         public static string TimerRedSaved = "#be1e37";
         public static string TimerEnd = "linear-gradient(90deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%)";
+        public static string TimerEndSave = "linear-gradient(90deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%)";
 
         //Personalisation Blue Side
-        public static string BlueSideBackgroudSaved = "#0b849e";
         public static string BlueSideBackgroud = "#0b849e";
+        public static string BlueSideBackgroudSaved = "#0b849e";
         public static string BlueSideSummoner = "#ffffff";
         public static string BlueSideSummonerSaved = "#ffffff";
         public static string BlueSideBackgroudSummonerPick = "#0b849e";
         public static string BlueSideBackgroudSummonerPickSaved = "#0b849e";
         public static string BlueSideBlink = "radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #0b849e)";
+        public static string BlueSideBlinkSaved = "radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #0b849e)";
         public static string BlueSideBackgroudSummonerPickEnd = "#010a13";
         public static string BlueSideBackgroudSummonerPickEndSaved = "#010a13";
-        public static string BlueSideTeamName = "CSC";
-        public static string BlueSideTeamNameSave = "CSC";
-        public static string BlueSideTeamNameColor = "#000000";
-        public static string BlueSideTeamNameColorSaved = "#000000";
+        public static string BlueSideTeamName = "";
+        public static string BlueSideTeamNameSave = "";
+        public static string BlueSideTeamNameColor = "#ffffff";
+        public static string BlueSideTeamNameColorSaved = "#ffffff";
         public static string BlueSideTeamNameSize = "70px";
+
+        //Personalisation Keystone
+        public static string KeystonePickColor = "linear-gradient(150deg, #0b849e 0%, #be1e37 100%)";
+        public static string KeystonePickColorDeg = "150";
+        public static string KeystonePickColor1 = "#00008bff";
+        public static string KeystonePickColorPercent1 = "0";
+        public static string KeystonePickColor2 = "#8b0000ff";
+        public static string KeystonePickColorPercent2 = "100";
+
+        public static string KeystonePickColorSave = "linear-gradient(150deg, #0b849e 0%, #be1e37 100%)";
+        public static string KeystonePickColorDegSave = "150";
+        public static string KeystonePickColor1Save = "#00008bff";
+        public static string KeystonePickColorPercent1Save = "0";
+        public static string KeystonePickColor2Save = "#8b0000ff";
+        public static string KeystonePickColorPercent2Save = "100";
 
         //Personalisation Red Side
         public static string RedSideBackgroud = "#be1e37";
@@ -48,13 +65,14 @@ namespace OSL_Server.Pages
         public static string RedSideSummonerSaved = "#ffffff";
         public static string RedSideBackgroudSummonerPick = "#be1e37";
         public static string RedSideBackgroudSummonerPickSaved = "#be1e37";
-        public static string RedSideBlink = "radial - gradient(ellipse, rgba(0, 0, 0, 0) 25 %, #be1e37)";
+        public static string RedSideBlink = "radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #be1e37)";
+        public static string RedSideBlinkSaved = "radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #be1e37)";
         public static string RedSideBackgroudSummonerPickEnd = "#010a13";
         public static string RedSideBackgroudSummonerPickEndSaved = "#010a13";
-        public static string RedSideTeamName = "CY";
-        public static string RedSideTeamNameSave = "CY";
-        public static string RedSideTeamNameColor = "#000000";
-        public static string RedSideTeamNameColorSaved = "#000000";
+        public static string RedSideTeamName = "";
+        public static string RedSideTeamNameSave = "";
+        public static string RedSideTeamNameColor = "#ffffff";
+        public static string RedSideTeamNameColorSaved = "#ffffff";
         public static string RedSideTeamNameSize = "70px";
 
         //Personalisation Ban
@@ -62,9 +80,6 @@ namespace OSL_Server.Pages
         public static string BanOverlayPicture = "../assets/champselect/ban-completed-2.png";
         public static string BanBackgroundColor = "#010a13";
         public static string BanBackgroundColorSave = "#010a13";
-
-        //Personalisation Background
-        public static string OverlayBackground = "../assets/champselect/backgroud-view-1.png";
 
         public class ChampSelect
         {
@@ -106,6 +121,15 @@ namespace OSL_Server.Pages
             BlueSideBackgroudSummonerPick = BlueSideBackgroudSummonerPickSaved;
             BlueSideBackgroudSummonerPickEnd = BlueSideBackgroudSummonerPickEndSaved;
             BlueSideTeamNameColor = BlueSideTeamNameColorSaved;
+
+            KeystonePickColor = KeystonePickColorSave;
+
+            KeystonePickColorDeg = KeystonePickColorDegSave;
+            KeystonePickColor1 = KeystonePickColor1Save;
+            KeystonePickColorPercent1 = KeystonePickColorPercent1Save;
+            KeystonePickColor2 = KeystonePickColor2Save;
+            KeystonePickColorPercent2 = KeystonePickColorPercent2Save;
+
             RedSideBackgroud = RedSideBackgroudSaved;
             RedSideSummoner = RedSideSummonerSaved;
             RedSideBackgroudSummonerPick = RedSideBackgroudSummonerPickSaved;
@@ -114,7 +138,9 @@ namespace OSL_Server.Pages
             BanBackgroundColor = BanBackgroundColorSave;
             BlueSideTeamName = BlueSideTeamNameSave;
             RedSideTeamName = RedSideTeamNameSave;
-
+            BlueSideBlink = BlueSideBlinkSaved;
+            RedSideBlink = RedSideBlinkSaved;
+            TimerEnd = TimerEndSave;
         }
         public static void SetTimerBackground()
         {
@@ -142,6 +168,8 @@ namespace OSL_Server.Pages
             {
                 ChampSelectPage.ColorPickerOverlay2 = "hidden";
                 TimerBlue = ChampSelectPage.colorValue;
+                TimerEnd = "linear-gradient(90deg, " + TimerBlue + " 0%, " + TimerRed + " 100%)";
+
             }
             //StateHasChanged();
         }
@@ -157,6 +185,7 @@ namespace OSL_Server.Pages
             {
                 ChampSelectPage.ColorPickerOverlay2 = "hidden";
                 TimerRed = ChampSelectPage.colorValue;
+                TimerEnd = "linear-gradient(90deg, " + TimerBlue + " 0%, " + TimerRed + " 100%)";
             }
             //StateHasChanged();
         }
@@ -172,6 +201,8 @@ namespace OSL_Server.Pages
             {
                 ChampSelectPage.ColorPickerOverlay2 = "hidden";
                 BlueSideBackgroud = ChampSelectPage.colorValue;
+                BlueSideBlink = "radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, " + BlueSideBackgroud + ")";
+                //KeystonePickColor = "linear-gradient(150deg, "+BlueSideBackgroud+ " 0%, "+RedSideBackgroud+" 100%)";
             }
         }
         public static void SetBlueSideSummoner()
@@ -226,6 +257,37 @@ namespace OSL_Server.Pages
                 BlueSideTeamNameColor = ChampSelectPage.colorValue;
             }
         }
+
+        public static void SetKeystoneColor1()
+        {
+            if (ChampSelectPage.ColorPickerOverlay2.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay2 = "visible";
+                ChampSelectPage.colorValue = KeystonePickColor1;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay2 = "hidden";
+                KeystonePickColor1 = ChampSelectPage.colorValue;
+                KeystonePickColor = $"linear-gradient({KeystonePickColorDeg}deg, {KeystonePickColor1} {KeystonePickColorPercent1}%, {KeystonePickColor2} {KeystonePickColorPercent2}%)";
+            }
+        }
+
+        public static void SetKeystoneColor2()
+        {
+            if (ChampSelectPage.ColorPickerOverlay2.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay2 = "visible";
+                ChampSelectPage.colorValue = KeystonePickColor2;
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay2 = "hidden";
+                KeystonePickColor2 = ChampSelectPage.colorValue;
+                KeystonePickColor = $"linear-gradient({KeystonePickColorDeg}deg, {KeystonePickColor1} {KeystonePickColorPercent1}%, {KeystonePickColor2} {KeystonePickColorPercent2}%)";
+            }
+        }
+
         public static void SetRedSideBackgroud()
         {
             if (ChampSelectPage.ColorPickerOverlay2.Equals("hidden"))
@@ -237,6 +299,8 @@ namespace OSL_Server.Pages
             {
                 ChampSelectPage.ColorPickerOverlay2 = "hidden";
                 RedSideBackgroud = ChampSelectPage.colorValue;
+                RedSideBlink = "radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, " + RedSideBackgroud + ")";
+                //KeystonePickColor = "linear-gradient(150deg, " + BlueSideBackgroud + " 0%, " + RedSideBackgroud + " 100%)";
             }
         }
         public static void SetRedSideSummoner()
@@ -304,6 +368,13 @@ namespace OSL_Server.Pages
                 ChampSelectPage.ColorPickerOverlay2 = "hidden";
                 BanBackgroundColor = ChampSelectPage.colorValue;
             }
+        }
+
+        public static void UpdateTimer(int timer, int reset)
+        {
+            //DateTime date1 = DateTime.Now;
+            //Console.WriteLine("seconde : " + date1.ToString("m:ss"));
+            timePhase = timer;
         }
 
         private string GetLaneId(int laneId)
@@ -379,11 +450,13 @@ namespace OSL_Server.Pages
         {
             if (team == 1)
             {
-                return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
+                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
+                return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
             }
             else
             {
-                return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
+                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
+                return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
             }
         }
 
@@ -472,9 +545,11 @@ namespace OSL_Server.Pages
             }
             if (spellId > 100 || spellId == 0)
             {
-                return "../assets/12.12/fr_fr/SummonerSpells/54.png";
+                //return "../assets/12.12/fr_fr/SummonerSpells/54.png";
+                return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/54.png";
             }
-            return $"../assets/12.12/fr_fr/SummonerSpells/{spellId}.png";
+            //return $"../assets/12.12/fr_fr/SummonerSpells/{spellId}.png";
+            return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/{spellId}.png";
         }
 
         private string GetChampId(int index, int team)
@@ -510,7 +585,8 @@ namespace OSL_Server.Pages
                     }
                 }
             }
-            return $"../assets/12.12/fr_fr/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
+            //return $"../assets/12.12/fr_fr/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
+            return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
         }
     }
 }
