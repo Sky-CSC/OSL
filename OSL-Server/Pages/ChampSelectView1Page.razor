@@ -7,8 +7,15 @@
 <PageTitle>Champ Select Overlay 1</PageTitle>
 @if (overlayLoaded)
 {
+    if (ChampSelectPage.OverlayText.OverlayBackground == false)
+    {
+        OverlayBackground = "none";
+    }
+    else
+    {
+        OverlayBackground = OverlayBackgroundSave;
+    }
     <div class="display-champ-select" style="background: url(@OverlayBackground)">
-
         <div class="overlay-type-1">
             <div class="champ-select-header">
                 <div class="chamSelect-header-blue-info">
@@ -202,7 +209,7 @@
                                 <div class="summoner-object-component">
                                     <div class="summoner-object-wrapper" style="color: @BlueSideTexteColor;">
                                         @*Champion picture*@
-                                        <div class="champ-picture" style="background-image: url(@getChampId(indexChamp, 1));"></div>
+                                        <div class="champ-picture" style="background-image: url(@getChampId(indexChamp, 1)); top: 5px; bottom: 5px; left: 5px; right: 5px;"></div>
                                         @*Curent action*@
                                         <div class="action-text">@getCurentAction(indexChamp, 1)</div>
                                         @*SummonerName*@
@@ -237,7 +244,7 @@
                                 <div class="summoner-object-component">
                                     <div class="summoner-object-wrapper" style="color: @RedSideTexteColor">
                                         @*Champion picture*@
-                                        <div class="champ-picture" style="background-image: url(@getChampId(indexChamp, 2));"></div>
+                                        <div class="champ-picture" style="background-image: url(@getChampId(indexChamp, 2)); top: 5px; bottom: 5px; left: 5px; right: 5px;"></div>
                                         @*Curent action*@
                                         <div class="action-text">@getCurentAction(indexChamp, 2)</div>
                                         @*SummonerName*@

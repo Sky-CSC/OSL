@@ -13,7 +13,7 @@ div {
 }
 
 .display-champ-select {
-    background: url(../assets/champselect/backgroud-view-1.png);
+    /*background: url(../assets/champselect/backgroud-view-1.png);*/
     height: 1080px;
     width: 1920px;
     position: absolute;
@@ -236,10 +236,10 @@ div {
     .summoner-object-wrapper
     .champ-picture {
         position: absolute;
-        top: 5px;
+        /*top: 5px;
         bottom: 5px;
         left: 5px;
-        right: 5px;
+        right: 5px;*/
         background-size: 100%;
         background-position: 0% 20%;
         opacity: 1;

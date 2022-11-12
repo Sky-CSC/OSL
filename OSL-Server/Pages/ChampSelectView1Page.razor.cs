@@ -31,12 +31,12 @@ namespace OSL_Server.Pages
         public static string BlueSideTexteColorSave = "#ffffff";
         public static string BlueSideBackgroudColor = "#0b849e";
         public static string BlueSideBackgroudColorSave = "#0b849e";
-        public static string BlueSideBorderColor = "5px solid yellow";
-        public static string BlueSideBorderColorSave = "5px solid yellow";
+        public static string BlueSideBorderColor = "5px solid #FFFF00";
+        public static string BlueSideBorderColorSave = "5px solid #FFFF00";
         public static string BlueSideTimerBackgroudColor = "#0b849e";
         public static string BlueSideTimerBackgroudColorSave = "#0b849e";
-        public static string BlueSideTimerBorderColor = "5px solid blue";
-        public static string BlueSideTimerBorderColorSave = "5px solid blue";
+        public static string BlueSideTimerBorderColor = "5px solid #0000FF";
+        public static string BlueSideTimerBorderColorSave = "5px solid #0000FF";
         public static string BlueSideTimerTexteColor = "#ffffff";
         public static string BlueSideTimerTexteColorSave = "#ffffff";
 
@@ -55,12 +55,12 @@ namespace OSL_Server.Pages
         public static string RedSideTexteColorSave = "#ffffff";
         public static string RedSideBackgroudColor = "#be1e37";
         public static string RedSideBackgroudColorSave = "#be1e37";
-        public static string RedSideBorderColor = "5px solid yellow";
-        public static string RedSideBorderColorSave = "5px solid yellow";
+        public static string RedSideBorderColor = "5px solid #FFFF00";
+        public static string RedSideBorderColorSave = "5px solid #FFFF00";
         public static string RedSideTimerBackgroudColor = "#be1e37";
         public static string RedSideTimerBackgroudColorSave = "#be1e37";
-        public static string RedSideTimerBorderColor = "5px solid red";
-        public static string RedSideTimerBorderColorSave = "5px solid red";
+        public static string RedSideTimerBorderColor = "5px solid #FF0000";
+        public static string RedSideTimerBorderColorSave = "5px solid #FF0000";
         public static string RedSideTimerTexteColor = "#ffffff";
         public static string RedSideTimerTexteColorSave = "#ffffff";
 
@@ -329,8 +329,77 @@ namespace OSL_Server.Pages
             //StateHasChanged();
         }
 
+        public static string BlueSideBorderColorNotSet = BlueSideBorderColor.Split(" ")[2];
+        public static void SetBlueSideBorderColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                string[] tempsBorderColor = BlueSideBorderColor.Split(" ");
+                ChampSelectPage.colorValue = tempsBorderColor[2];
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                BlueSideBorderColorNotSet = ChampSelectPage.colorValue;
+                //BlueSideBorderColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
 
+        public static string RedSideBorderColorNotSet = RedSideBorderColor.Split(" ")[2];
+        public static void SetRedSideBorderColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                string[] tempsBorderColor = BlueSideBorderColor.Split(" ");
+                ChampSelectPage.colorValue = tempsBorderColor[2];
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                RedSideBorderColorNotSet = ChampSelectPage.colorValue;
+                //BlueSideBorderColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
 
+        public static string BlueSideTimerBorderColorNotSet = BlueSideTimerBorderColor.Split(" ")[2];
+        public static void SetBlueSideTimerBorderColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                string[] tempsBorderColor = BlueSideTimerBorderColor.Split(" ");
+                ChampSelectPage.colorValue = tempsBorderColor[2];
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                BlueSideTimerBorderColorNotSet = ChampSelectPage.colorValue;
+                //BlueSideBorderColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
+
+        public static string RedSideTimerBorderColorNotSet = RedSideTimerBorderColor.Split(" ")[2];
+        public static void SetRedSideTimerBorderColor()
+        {
+            if (ChampSelectPage.ColorPickerOverlay1.Equals("hidden"))
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "visible";
+                string[] tempsBorderColor = BlueSideTimerBorderColor.Split(" ");
+                ChampSelectPage.colorValue = tempsBorderColor[2];
+            }
+            else
+            {
+                ChampSelectPage.ColorPickerOverlay1 = "hidden";
+                RedSideTimerBorderColorNotSet = ChampSelectPage.colorValue;
+                //BlueSideBorderColor = ChampSelectPage.colorValue;
+            }
+            //StateHasChanged();
+        }
 
         public static void UpdateTimer(int timer, int reset)
         {
@@ -377,11 +446,13 @@ namespace OSL_Server.Pages
         {
             if (team == 1)
             {
-                return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
+                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
+                return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
             }
             else
             {
-                return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
+                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
+                return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
             }
         }
 
@@ -471,9 +542,11 @@ namespace OSL_Server.Pages
             }
             if (spellId > 100 || spellId == 0)
             {
-                return "../assets/12.12/fr_fr/SummonerSpells/54.png";
+                //return $"../assets/12.12/fr_fr/SummonerSpells/54.png";
+                return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/54.png";
             }
-            return $"../assets/12.12/fr_fr/SummonerSpells/{spellId}.png";
+            //return $"../assets/12.12/fr_fr/SummonerSpells/{spellId}.png";
+            return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/{spellId}.png";
         }
 
         private string getChampId(int index, int team)
@@ -509,7 +582,8 @@ namespace OSL_Server.Pages
                     }
                 }
             }
-            return $"../assets/12.12/fr_fr/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
+            //return $"../assets/12.12/fr_fr/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
+            return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
         }
     }
 }
