@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OSL_Server.DataLoader.CDragon;
-using static OSL_Server.Pages.ChampSelectView1Page;
+using OSL_Server.Pages;
 
 namespace OSL_Server.Configuration
 {
@@ -18,7 +18,9 @@ namespace OSL_Server.Configuration
         public static void LoadConfig()
         {
             LoadConfigCDragon();
-            LoadConfigChampSelect();
+            //LoadConfigChampSelectView1();
+            //LoadConfigChampSelectView2();
+            //LoadConfigChampSelectView3();
         }
 
         public static void LoadConfigCDragon()
@@ -58,94 +60,147 @@ namespace OSL_Server.Configuration
             }
         }
 
-        public static void LoadConfigChampSelect()
+        //public static void LoadConfigChampSelectView1()
+        //{
+        //    string filePath = "./" + "Configuration" + "/" + "configChampSelectView1.json";
+        //    try
+        //    {
+        //        dynamic configChampSelect = JsonConvert.DeserializeObject<ChampSelectView1Page.ChampSelect>(FileManagerLocal.ReadInFile(filePath));
+        //        ChampSelectView1Page.DefaultPatch = configChampSelect.DefaultPatch;
+        //        ChampSelectView1Page.DefaultRegion = configChampSelect.DefaultRegion;
+
+        //        ChampSelectView1Page.BlueTeamName = configChampSelect.BlueTeamName;
+        //        ChampSelectView1Page.BlueTeamSubtext = configChampSelect.BlueTeamSubtext;
+        //        ChampSelectView1Page.BlueTeamNameColor = configChampSelect.BlueTeamNameColor;
+        //        ChampSelectView1Page.BlueTeamSubtextColor = configChampSelect.BlueTeamSubtextColor;
+        //        ChampSelectView1Page.BlueLogo = configChampSelect.BlueLogo;
+        //        ChampSelectView1Page.BlueSideTexteColor = configChampSelect.BlueSideTexteColor;
+        //        ChampSelectView1Page.BlueSideBackgroudColor = configChampSelect.BlueSideBackgroudColor;
+        //        ChampSelectView1Page.BlueSideBorderColor = configChampSelect.BlueSideBorderColor;
+        //        ChampSelectView1Page.BlueSideTimerBackgroudColor = configChampSelect.BlueSideTimerBackgroudColor;
+        //        ChampSelectView1Page.ColorBlueSideTimerBorder = configChampSelect.ColorBlueSideTimerBorder;
+        //        ChampSelectView1Page.ColorBlueSideTimerTexte = configChampSelect.ColorBlueSideTimerTexte;
+
+        //        ChampSelectView1Page.RedTeamName = configChampSelect.RedTeamName;
+        //        ChampSelectView1Page.RedTeamSubtext = configChampSelect.RedTeamSubtext;
+        //        ChampSelectView1Page.ColorRedTeamName = configChampSelect.ColorRedTeamName;
+        //        ChampSelectView1Page.ColorRedTeamSubtext = configChampSelect.ColorRedTeamSubtext;
+        //        ChampSelectView1Page.RedLogo = configChampSelect.RedLogo;
+        //        ChampSelectView1Page.ColorRedSideTexte = configChampSelect.ColorRedSideTexte;
+        //        ChampSelectView1Page.ColorRedSideBackgroud = configChampSelect.ColorRedSideBackgroud;
+        //        ChampSelectView1Page.ColorRedSideBorder = configChampSelect.ColorRedSideBorder;
+        //        ChampSelectView1Page.ColorRedSideTimerBackgroud = configChampSelect.ColorRedSideTimerBackgroud;
+        //        ChampSelectView1Page.ColorRedSideTimerBorder = configChampSelect.ColorRedSideTimerBorder;
+        //        ChampSelectView1Page.ColorRedSideTimerTexte = configChampSelect.ColorRedSideTimerTexte;
+
+        //        ChampSelectView1Page.BanBackgroundPicture = configChampSelect.BanBackgroundPicture;
+        //        ChampSelectView1Page.BanOverlayPicture = configChampSelect.BanOverlayPicture;
+        //        ChampSelectView1Page.BanBackgroundColor = configChampSelect.BanBackgroundColor;
+
+        //        ChampSelectView1Page.OverlayBackground = configChampSelect.OverlayBackground;
+        //        _logger.log(LoggingLevel.INFO, "LoadConfigChampSelect()", $"Config ChampSelect loaded to {filePath}");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        _logger.log(LoggingLevel.ERROR, "LoadConfigChampSelect()", $"Config loadeding error {filePath} {e.Message}");
+        //        var champSelectInformation = new ChampSelectView1Page.ChampSelect
+        //        {
+        //            DefaultPatch = "latest",
+        //            DefaultRegion = "fr_fr",
+
+        //            BlueTeamName = "",
+        //            BlueTeamSubtext = "",
+        //            BlueTeamNameColor = "white",
+        //            BlueTeamSubtextColor = "white",
+        //            BlueLogo = "",
+        //            BlueSideTexteColor = "white",
+        //            BlueSideBackgroudColor = "#0b849e",
+        //            BlueSideBorderColor = "5px solid yellow",
+        //            BlueSideTimerBackgroudColor = "#0b849e",
+        //            ColorBlueSideTimerBorder = "5px solid blue",
+        //            ColorBlueSideTimerTexte = "white",
+
+        //            RedTeamName = "",
+        //            RedTeamSubtext = "",
+        //            ColorRedTeamName = "white",
+        //            ColorRedTeamSubtext = "white",
+        //            RedLogo = "",
+        //            ColorRedSideTexte = "white",
+        //            ColorRedSideBackgroud = "#be1e37",
+        //            ColorRedSideBorder = "5px solid yellow",
+        //            ColorRedSideTimerBackgroud = "#be1e37",
+        //            ColorRedSideTimerBorder = "5px solid red",
+        //            ColorRedSideTimerTexte = "white",
+
+        //            BanBackgroundPicture = "../assets/champselect/banning-1.png",
+        //            BanOverlayPicture = "../assets/champselect/ban-completed-2.png",
+        //            BanBackgroundColor = "#010a13",
+
+        //            OverlayBackground = "../assets/champselect/backgroud-view-1.png"
+        //        };
+        //        string configChampSelect = JsonConvert.SerializeObject(champSelectInformation);
+        //        FileManagerLocal.RewrittenFile(filePath, configChampSelect);
+        //        _logger.log(LoggingLevel.WARN, "LoadConfigChampSelect()", $"Default Config created {filePath}");
+        //    }
+        //    if (ChampSelectView1Page.DefaultPatch.Equals("latest"))
+        //    {
+        //        //string[] temps = CDragon.patch.Split(".");
+        //        //DefaultPatch = temps[0] + "." + temps[1];
+        //        ChampSelectView1Page.DefaultPatch = "12.12";
+        //    }
+        //}
+
+        public static void LoadConfigChampSelectView1()
         {
-            string filePath = "./" + "Configuration" + "/" + "configChampSelect.json";
             try
             {
-                dynamic configChampSelect = JsonConvert.DeserializeObject<ChampSelect>(FileManagerLocal.ReadInFile(filePath));
-                DefaultPatch = configChampSelect.DefaultPatch;
-                DefaultRegion = configChampSelect.DefaultRegion;
-
-                BlueTeamName = configChampSelect.BlueTeamName;
-                BlueTeamSubtext = configChampSelect.BlueTeamSubtext;
-                ColorBlueTeamName = configChampSelect.ColorBlueTeamName;
-                ColorBlueTeamSubtext = configChampSelect.ColorBlueTeamSubtext;
-                BlueLogo = configChampSelect.BlueLogo;
-                ColorBlueSideTexte = configChampSelect.ColorBlueSideTexte;
-                ColorBlueSideBackgroud = configChampSelect.ColorBlueSideBackgroud;
-                ColorBlueSideBorder = configChampSelect.ColorBlueSideBorder;
-                ColorBlueSideTimerBackgroud = configChampSelect.ColorBlueSideTimerBackgroud;
-                ColorBlueSideTimerBorder = configChampSelect.ColorBlueSideTimerBorder;
-                ColorBlueSideTimerTexte = configChampSelect.ColorBlueSideTimerTexte;
-
-                RedTeamName = configChampSelect.RedTeamName;
-                RedTeamSubtext = configChampSelect.RedTeamSubtext;
-                ColorRedTeamName = configChampSelect.ColorRedTeamName;
-                ColorRedTeamSubtext = configChampSelect.ColorRedTeamSubtext;
-                RedLogo = configChampSelect.RedLogo;
-                ColorRedSideTexte = configChampSelect.ColorRedSideTexte;
-                ColorRedSideBackgroud = configChampSelect.ColorRedSideBackgroud;
-                ColorRedSideBorder = configChampSelect.ColorRedSideBorder;
-                ColorRedSideTimerBackgroud = configChampSelect.ColorRedSideTimerBackgroud;
-                ColorRedSideTimerBorder = configChampSelect.ColorRedSideTimerBorder;
-                ColorRedSideTimerTexte = configChampSelect.ColorRedSideTimerTexte;
-
-                BanBackgroundPicture = configChampSelect.BanBackgroundPicture;
-                BanOverlayPicture = configChampSelect.BanOverlayPicture;
-                BanBackgroundColor = configChampSelect.BanBackgroundColor;
-
-                OverlayBackground = configChampSelect.OverlayBackground;
-                _logger.log(LoggingLevel.INFO, "LoadConfigChampSelect()", $"Config ChampSelect loaded to {filePath}");
+                string[] temps = CDragon.patch.Split(".");
+                ChampSelectView1Page.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch(Exception e)
+            {
+                ChampSelectView1Page.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            ChampSelectView1Page.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView1", $"{ChampSelectView1Page.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView1", $"{ChampSelectView1Page.DefaultRegion}");
+            //ChampSelectView1Page.DefaultPatch = "12.12";
+        }
+        public static void LoadConfigChampSelectView2()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                ChampSelectView2Page.DefaultPatch = temps[0] + "." + temps[1];
             }
             catch (Exception e)
             {
-                _logger.log(LoggingLevel.ERROR, "LoadConfigChampSelect()", $"Config loadeding error {filePath} {e.Message}");
-                var champSelectInformation = new ChampSelect
-                {
-                    DefaultPatch = "latest",
-                    DefaultRegion = "fr_fr",
-
-                    BlueTeamName = "",
-                    BlueTeamSubtext = "",
-                    ColorBlueTeamName = "white",
-                    ColorBlueTeamSubtext = "white",
-                    BlueLogo = "",
-                    ColorBlueSideTexte = "white",
-                    ColorBlueSideBackgroud = "#0b849e",
-                    ColorBlueSideBorder = "5px solid yellow",
-                    ColorBlueSideTimerBackgroud = "#0b849e",
-                    ColorBlueSideTimerBorder = "5px solid blue",
-                    ColorBlueSideTimerTexte = "white",
-
-                    RedTeamName = "",
-                    RedTeamSubtext = "",
-                    ColorRedTeamName = "white",
-                    ColorRedTeamSubtext = "white",
-                    RedLogo = "",
-                    ColorRedSideTexte = "white",
-                    ColorRedSideBackgroud = "#be1e37",
-                    ColorRedSideBorder = "5px solid yellow",
-                    ColorRedSideTimerBackgroud = "#be1e37",
-                    ColorRedSideTimerBorder = "5px solid red",
-                    ColorRedSideTimerTexte = "white",
-
-                    BanBackgroundPicture = "../assets/champselect/banning-1.png",
-                    BanOverlayPicture = "../assets/champselect/ban-completed-2.png",
-                    BanBackgroundColor = "#010a13",
-
-                    OverlayBackground = "../assets/champselect/backgroud-view-1.png"
-                };
-                string configChampSelect = JsonConvert.SerializeObject(champSelectInformation);
-                FileManagerLocal.RewrittenFile(filePath, configChampSelect);
-                _logger.log(LoggingLevel.WARN, "LoadConfigChampSelect()", $"Default Config created {filePath}");
+                ChampSelectView2Page.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
-            if (DefaultPatch.Equals("latest"))
+            ChampSelectView2Page.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView2", $"{ChampSelectView2Page.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView2", $"{ChampSelectView2Page.DefaultRegion}");
+
+            //ChampSelectView2Page.DefaultPatch = "12.12";
+
+        }
+
+        public static void LoadConfigChampSelectView3()
+        {
+            try
             {
-                //string[] temps = CDragon.patch.Split(".");
-                //DefaultPatch = temps[0] + "." + temps[1];
-                DefaultPatch = "12.12";
+                string[] temps = CDragon.patch.Split(".");
+                ChampSelectView3Page.DefaultPatch = temps[0] + "." + temps[1];
             }
+            catch (Exception e)
+            {
+                ChampSelectView3Page.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            ChampSelectView3Page.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView3", $"{ChampSelectView3Page.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView3", $"{ChampSelectView3Page.DefaultRegion}");
+
+            //ChampSelectView3Page.DefaultPatch = "12.12";
         }
     }
 }
