@@ -212,7 +212,7 @@ div {
 
 #redSide {
     right: 0px;
-    flex-direction: row-reverse;
+    /*flex-direction: row-reverse;*/
 }
 
     #redSide .summoner-object-component .summoner-object-wrapper .summoner-name {

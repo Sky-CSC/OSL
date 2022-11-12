@@ -42,14 +42,14 @@ namespace OSL_Server.Pages
         public static string BlueSideTeamNameSize = "20px";
 
         //Personalisation Keystone
-        public static string KeystonePickColor = "linear-gradient(150deg, #0b849e 0%, #be1e37 100%)";
+        public static string KeystonePickColor = "linear-gradient(150deg, #00008bff 0%, #8b0000ff 100%)";
         public static string KeystonePickColorDeg = "150";
         public static string KeystonePickColor1 = "#00008bff";
         public static string KeystonePickColorPercent1 = "0";
         public static string KeystonePickColor2 = "#8b0000ff";
         public static string KeystonePickColorPercent2 = "100";
 
-        public static string KeystonePickColorSave = "linear-gradient(150deg, #0b849e 0%, #be1e37 100%)";
+        public static string KeystonePickColorSave = "linear-gradient(150deg, #00008bff 0%, #8b0000ff 100%)";
         public static string KeystonePickColorDegSave = "150";
         public static string KeystonePickColor1Save = "#00008bff";
         public static string KeystonePickColorPercent1Save = "0";
