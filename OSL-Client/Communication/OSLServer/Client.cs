@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using OSL_Client.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,8 +43,8 @@ namespace OSL_Client.Communication.OSLServer
         private static String response = String.Empty;
 
         //IP
-        private static string ip = "127.0.0.1";
-        private static int port = 45879;
+        //private static string ip = "127.0.0.1";
+        //private static int port = 45879;
 
         public static void StartClient(String data)
         {
@@ -53,9 +54,9 @@ namespace OSL_Client.Communication.OSLServer
                 // Establish the remote endpoint for the socket.  
                 // The name of the
                 // remote device is "host.contoso.com".  
-                IPHostEntry ipHostInfo = Dns.Resolve(ip);
+                IPHostEntry ipHostInfo = Dns.Resolve(Config.serverIPSocket);
                 IPAddress ipAddress = ipHostInfo.AddressList[0];
-                IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
+                IPEndPoint remoteEP = new IPEndPoint(ipAddress, Config.serverPortSocket);
 
                 // Create a TCP/IP socket.  
                 Socket client = new Socket(ipAddress.AddressFamily,
