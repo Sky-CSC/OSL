@@ -28,26 +28,87 @@ namespace OSL_Server.Pages
         public class ChampSelectOverlayText
         {
             //[Required]
-            [StringLength(20, ErrorMessage = "Name is too long.")]
+            [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
             public string? BlueSideTeamName1 { get; set; }
-            [StringLength(11, ErrorMessage = "Name is too long.")]
+            [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
             public string? BlueSideTeamName2 { get; set; }
-            [StringLength(11, ErrorMessage = "Name is too long.")]
+            [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
             public string? BlueSideTeamName3 { get; set; }
 
 
-            [StringLength(20, ErrorMessage = "Name is too long.")]
+            [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
             public string? RedSideTeamName1 { get; set; }
-            [StringLength(11, ErrorMessage = "Name is too long.")]
+            [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
             public string? RedSideTeamName2 { get; set; }
-            [StringLength(11, ErrorMessage = "Name is too long.")]
+            [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
             public string? RedSideTeamName3 { get; set; }
 
 
-            [StringLength(30, ErrorMessage = "Name is too long.")]
+            [StringLength(30, ErrorMessage = "Name is too long (30 character limit).")]
             public string? BlueTeamSubtext { get; set; }
-            [StringLength(30, ErrorMessage = "Name is too long.")]
+            [StringLength(30, ErrorMessage = "Name is too long (30 character limit).")]
             public string? RedTeamSubtext { get; set; }
+
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int BlueSideBorderColor { get; set; } = 5;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int RedSideBorderColor { get; set; } = 5;
+
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int BlueSideTimerBorderColor { get; set; } = 5;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int RedSideTimerBorderColor { get; set; } = 5;
+
+            [Required]
+            [Range(-360, 360, ErrorMessage = "Accommodation invalid (-360-360).")]
+            public int KeystonePickColorDeg2 { get; set; } = 150;
+            [Required]
+            [Range(-360, 360, ErrorMessage = "Accommodation invalid (-360-360).")]
+            public int KeystonePickColorDeg3 { get; set; } = 150;
+
+            [Required]
+            [Range(0, 100, ErrorMessage = "Accommodation invalid (0-100).")]
+            public int KeystonePickColorPercent12 { get; set; } = 0;
+            [Required]
+            [Range(0, 100, ErrorMessage = "Accommodation invalid (0-100).")]
+            public int KeystonePickColorPercent13 { get; set; } = 0;
+
+            [Required]
+            [Range(0, 100, ErrorMessage = "Accommodation invalid (0-100).")]
+            public int KeystonePickColorPercent22 { get; set; } = 100;
+            [Required]
+            [Range(0, 100, ErrorMessage = "Accommodation invalid (0-100).")]
+            public int KeystonePickColorPercent23 { get; set; } = 100;
+
+            public bool OverlayBackground { get; set; } = true;
+        }
+
+        private string TempsBlueSideBorderColor()
+        {
+            string[] tempsBorderColor = ChampSelectView1Page.BlueSideBorderColor.Split(" ");
+            return tempsBorderColor[2];
+        }
+
+        private string TempsRedSideBorderColor()
+        {
+            string[] tempsBorderColor = ChampSelectView1Page.RedSideBorderColor.Split(" ");
+            return tempsBorderColor[2];
+        }
+
+        private string TempsBlueSideTimerBorderColor()
+        {
+            string[] tempsBorderColor = ChampSelectView1Page.BlueSideTimerBorderColor.Split(" ");
+            return tempsBorderColor[2];
+        }
+
+        private string TempsRedSideTimerBorderColor()
+        {
+            string[] tempsBorderColor = ChampSelectView1Page.RedSideTimerBorderColor.Split(" ");
+            return tempsBorderColor[2];
         }
 
         //private ExampleModel exampleModel = new();
