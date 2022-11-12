@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
 
 using OSL_Server;
+using OSL_Server.Configuration;
+using OSL_Server.DataLoader.CDragon;
 
 namespace OSL_Server.FileManager
 {
@@ -192,12 +196,71 @@ public class DirectoryManagerLocal
         }
     }
 
+
+    public static DirectoryInfo CheckDirectory(string directoryPath)
+    {
+        DirectoryInfo d = new DirectoryInfo(directoryPath);
+        return d;
+    }
+
+    public static string CheckExistingDirectoryPatch(string directoryPath)
+    {
+        DirectoryInfo d = new DirectoryInfo(directoryPath);
+        var allDirectory = d.EnumerateDirectories();
+        DateTime defaultTime = new DateTime();
+        DirectoryInfo latestDirectory = null; 
+        foreach (DirectoryInfo directory in allDirectory)
+        {
+            if (directory.Name.Contains("."))
+            {
+                if(DateTime.Compare(defaultTime, directory.CreationTime) <= 0)
+                {
+                    defaultTime = directory.CreationTime;
+                    latestDirectory = directory;
+                }
+            }
+        }
+        return latestDirectory.Name;
+    }
+
+    public static string championDirectory;
+    public static string itemsDirectory;
+    public static string summonerSpellsDirectory;
+    public static string perksDirectory;
+    //public static void DirectoryInitDataCDragon(string numPatch, string region)
+    //{
+    //    championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
+    //    itemsDirectory = "./" + numPatch + "/" + region + "/" + "Items" + "/";
+    //    summonerSpellsDirectory = "./" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
+    //    perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+    //    CreateDirectory(championDirectory);
+    //    CreateDirectory(itemsDirectory);
+    //    CreateDirectory(summonerSpellsDirectory);
+    //    CreateDirectory(perksDirectory);
+    //}
+
+    //public static void DirectoryInitDataCDragon(string numPatch, string region)
+    //{
+    //    string championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
+    //    string itemsDirectory = "./" + numPatch + "/" + region + "/" + "Items" + "/";
+    //    string summonerSpellsDirectory = "./" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
+    //    string perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+    //    CreateDirectory(championDirectory);
+    //    CreateDirectory(itemsDirectory);
+    //    CreateDirectory(summonerSpellsDirectory);
+    //    CreateDirectory(perksDirectory);
+    //}
+
+    //public static string championDirectory;
+    //public static string itemsDirectory;
+    //public static string summonerSpellsDirectory;
+    //public static string perksDirectory;
     public static void DirectoryInitDataCDragon(string numPatch, string region)
     {
-        string championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
-        string itemsDirectory = "./" + numPatch + "/" + region + "/" + "Items" + "/";
-        string summonerSpellsDirectory = "./" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
-        string perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+        championDirectory = "./wwwroot/assets/" + numPatch + "/" + region + "/" + "Champions" + "/";
+        itemsDirectory = "./wwwroot/assets/" + numPatch + "/" + region + "/" + "Items" + "/";
+        summonerSpellsDirectory = "./wwwroot/assets/" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
+        perksDirectory = "./wwwroot/assets/" + numPatch + "/" + region + "/" + "Perks" + "/";
         CreateDirectory(championDirectory);
         CreateDirectory(itemsDirectory);
         CreateDirectory(summonerSpellsDirectory);
