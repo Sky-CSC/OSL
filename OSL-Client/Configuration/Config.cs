@@ -12,8 +12,8 @@ namespace OSL_Client.Configuration
     {
         private static OSLLogger _logger = new OSLLogger("Config");
 
-        public static string ip = "localhost";
-        public static int port = 456789;
+        public static string serverIPSocket = "localhost";
+        public static int serverPortSocket = 456789;
         public static string leagueClientProcess = "LeagueClient";
         public static string leagueClientFullFilePath = "";
         public static string leagueClientPath = "";
@@ -33,19 +33,19 @@ namespace OSL_Client.Configuration
         /// <summary>
         /// Loads the config from the config file.
         /// </summary>
-        public static void LoadConfigHost()
+        public static void LoadConfigServerSocket()
         {
-            string filePath = "./" + "Config" + "/" + "configHost.json";
+            string filePath = "./" + "Config" + "/" + "configServerSocket.json";
             dynamic configHost = JsonConvert.DeserializeObject(FileManagerLocal.ReadInFile(filePath));
             try
             {
-                ip = configHost.ip;
-                port = configHost.port;
-                _logger.log(LoggingLevel.INFO, "LoadConfigHost()", "Config host load");
+                serverIPSocket = configHost.ip;
+                serverPortSocket = configHost.port;
+                _logger.log(LoggingLevel.INFO, "LoadConfigServerSocket()", "Config host load");
             }
             catch (Exception e)
             {
-                _logger.log(LoggingLevel.ERROR, "LoadConfigHost()", e.Message);
+                _logger.log(LoggingLevel.ERROR, "LoadConfigServerSocket()", e.Message);
             }
         }
 
