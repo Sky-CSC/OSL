@@ -15,7 +15,8 @@ namespace OSL_Server.DataLoader.CDragon
             int indexPatch = CDragon.dataCDragon.Patch.FindIndex(x => x.Name == numPatch);
             int indexRegion = CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(x => x.Name == region);
 
-            string championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
+            //string championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
+            string championDirectory = DirectoryManagerLocal.championDirectory;
             Uri urlChampion = new($"https://raw.communitydragon.org/{numPatch}/plugins/rcp-be-lol-game-data/global/{region}/v1/{CDragon.championSummary}.json");
             string champion = OSL_Server.Download.Download.DownloadStringAsync(urlChampion).Result;
             if (champion != null)

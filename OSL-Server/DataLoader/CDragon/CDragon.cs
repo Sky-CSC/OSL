@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using Newtonsoft.Json;
+using OSL_Server.Configuration;
 using OSL_Server.Download;
 
 namespace OSL_Server.DataLoader.CDragon
@@ -121,6 +122,9 @@ namespace OSL_Server.DataLoader.CDragon
                     PerksManager.DownloadPerks(numPatch, regionTemps);
                     SummonerSpellManager.DownloadSummonersSpell(numPatch, regionTemps);
                 }
+                Config.LoadConfigChampSelectView1();
+                Config.LoadConfigChampSelectView2();
+                Config.LoadConfigChampSelectView3();
             }
         }
     }

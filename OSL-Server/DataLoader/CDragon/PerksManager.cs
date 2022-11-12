@@ -23,7 +23,8 @@ namespace OSL_Server.DataLoader.CDragon
             int indexPatch = CDragon.dataCDragon.Patch.FindIndex(x => x.Name == numPatch);
             int indexRegion = CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(x => x.Name == region);
 
-            string perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+            //string perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+            string perksDirectory = DirectoryManagerLocal.perksDirectory;
             DownloadPerksComposent(numPatch, region, perksDirectory, indexPatch, indexRegion);
             DownloadPerksStyle(numPatch, region, perksDirectory, indexPatch, indexRegion);
         }
@@ -49,7 +50,7 @@ namespace OSL_Server.DataLoader.CDragon
                     OSL_Server.Download.Download.errorDownloadAllFile = 0;
                     foreach (dynamic perk in jsonPerks)
                     {
-                        perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+                        perksDirectory = DirectoryManagerLocal.perksDirectory;
                         int perkId = perk.id;
                         //string perkName = perk.name;
                         string iconPath = perk.iconPath;
@@ -122,7 +123,7 @@ namespace OSL_Server.DataLoader.CDragon
                     OSL_Server.Download.Download.errorDownloadAllFile = 0;
                     foreach (dynamic perk in jsonPerks.styles)
                     {
-                        perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+                        perksDirectory = DirectoryManagerLocal.perksDirectory;
                         int perkId = perk.id;
                         string iconPath = perk.iconPath;
                         string[] parseIconPath = iconPath.Split('/');
