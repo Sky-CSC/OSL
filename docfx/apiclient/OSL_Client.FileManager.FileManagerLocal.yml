@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: OSL-Client/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: FileManagerLocal
     path: ../OSL-Client/FileManager/FileManagerLocal.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: OSL-Client/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: CreateFile
     path: ../OSL-Client/FileManager/FileManagerLocal.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: OSL-Client/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DeleteFile
     path: ../OSL-Client/FileManager/FileManagerLocal.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: OSL-Client/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: RewrittenFile
     path: ../OSL-Client/FileManager/FileManagerLocal.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: OSL-Client/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: WriteInFile
     path: ../OSL-Client/FileManager/FileManagerLocal.cs
@@ -220,7 +220,7 @@ items:
   source:
     remote:
       path: OSL-Client/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadInFile
     path: ../OSL-Client/FileManager/FileManagerLocal.cs
@@ -261,7 +261,7 @@ items:
   source:
     remote:
       path: OSL-Client/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: RestrictedAccess
     path: ../OSL-Client/FileManager/FileManagerLocal.cs

@@ -7,6 +7,7 @@ items:
   children:
   - OSL_Server.FileManager.FileManagerLocal.CreateFile(System.String)
   - OSL_Server.FileManager.FileManagerLocal.DeleteFile(System.String)
+  - OSL_Server.FileManager.FileManagerLocal.ReadFilePath(System.String)
   - OSL_Server.FileManager.FileManagerLocal.ReadInFile(System.String)
   - OSL_Server.FileManager.FileManagerLocal.RewrittenFile(System.String,System.String)
   - OSL_Server.FileManager.FileManagerLocal.WriteInFile(System.String,System.String)
@@ -20,11 +21,11 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: FileManagerLocal
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -61,11 +62,11 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: CreateFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -99,11 +100,11 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DeleteFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -137,11 +138,11 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: RewrittenFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 59
+    startLine: 63
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -178,11 +179,11 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: WriteInFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 78
+    startLine: 82
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -219,11 +220,11 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadInFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 104
+    startLine: 109
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -240,6 +241,47 @@ items:
       description: ''
     content.vb: Public Shared Function ReadInFile(filePath As String) As String
   overload: OSL_Server.FileManager.FileManagerLocal.ReadInFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.FileManager.FileManagerLocal.ReadFilePath(System.String)
+  commentId: M:OSL_Server.FileManager.FileManagerLocal.ReadFilePath(System.String)
+  id: ReadFilePath(System.String)
+  parent: OSL_Server.FileManager.FileManagerLocal
+  langs:
+  - csharp
+  - vb
+  name: ReadFilePath(String)
+  nameWithType: FileManagerLocal.ReadFilePath(String)
+  fullName: OSL_Server.FileManager.FileManagerLocal.ReadFilePath(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/FileManager/FileManagerLocal.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReadFilePath
+    path: ../OSL-Server/FileManager/FileManagerLocal.cs
+    startLine: 129
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.FileManager
+  summary: "\nRead data on file\n"
+  example: []
+  syntax:
+    content: public static string ReadFilePath(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: Path of file
+    return:
+      type: System.String
+      description: Data of file contenf
+    content.vb: Public Shared Function ReadFilePath(path As String) As String
+  overload: OSL_Server.FileManager.FileManagerLocal.ReadFilePath*
   modifiers.csharp:
   - public
   - static
@@ -576,3 +618,8 @@ references:
   name: ReadInFile
   nameWithType: FileManagerLocal.ReadInFile
   fullName: OSL_Server.FileManager.FileManagerLocal.ReadInFile
+- uid: OSL_Server.FileManager.FileManagerLocal.ReadFilePath*
+  commentId: Overload:OSL_Server.FileManager.FileManagerLocal.ReadFilePath
+  name: ReadFilePath
+  nameWithType: FileManagerLocal.ReadFilePath
+  fullName: OSL_Server.FileManager.FileManagerLocal.ReadFilePath

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: OSL-Server/Download/Download.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Download
     path: ../OSL-Server/Download/Download.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: OSL-Server/Download/Download.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: downloadAllFile
     path: ../OSL-Server/Download/Download.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: OSL-Server/Download/Download.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: errorDownloadAllFile
     path: ../OSL-Server/Download/Download.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: OSL-Server/Download/Download.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadStringAsync
     path: ../OSL-Server/Download/Download.cs
@@ -164,7 +164,7 @@ items:
   source:
     remote:
       path: OSL-Server/Download/Download.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadFileAsync
     path: ../OSL-Server/Download/Download.cs

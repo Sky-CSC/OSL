@@ -4,7 +4,8 @@ items:
   commentId: T:OSL_Server.DataReciveClient.ReciveFromClient
   id: ReciveFromClient
   parent: OSL_Server.DataReciveClient
-  children: []
+  children:
+  - OSL_Server.DataReciveClient.ReciveFromClient.ReadData(System.String)
   langs:
   - csharp
   - vb
@@ -15,11 +16,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/ReciveFromClient.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReciveFromClient
     path: ../OSL-Server/DataReciveClient/ReciveFromClient.cs
-    startLine: 2
+    startLine: 5
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient
@@ -42,6 +43,43 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: OSL_Server.DataReciveClient.ReciveFromClient.ReadData(System.String)
+  commentId: M:OSL_Server.DataReciveClient.ReciveFromClient.ReadData(System.String)
+  id: ReadData(System.String)
+  parent: OSL_Server.DataReciveClient.ReciveFromClient
+  langs:
+  - csharp
+  - vb
+  name: ReadData(String)
+  nameWithType: ReciveFromClient.ReadData(String)
+  fullName: OSL_Server.DataReciveClient.ReciveFromClient.ReadData(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/ReciveFromClient.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReadData
+    path: ../OSL-Server/DataReciveClient/ReciveFromClient.cs
+    startLine: 11
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient
+  syntax:
+    content: public static string ReadData(string content)
+    parameters:
+    - id: content
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function ReadData(content As String) As String
+  overload: OSL_Server.DataReciveClient.ReciveFromClient.ReadData*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: OSL_Server.DataReciveClient
   commentId: N:OSL_Server.DataReciveClient
@@ -340,3 +378,15 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: OSL_Server.DataReciveClient.ReciveFromClient.ReadData*
+  commentId: Overload:OSL_Server.DataReciveClient.ReciveFromClient.ReadData
+  name: ReadData
+  nameWithType: ReciveFromClient.ReadData
+  fullName: OSL_Server.DataReciveClient.ReciveFromClient.ReadData
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

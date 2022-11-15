@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/Replay/ReplayApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: UrlRequest
     path: ../OSL-Client/RiotApp/API/Replay/ReplayApi.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/Replay/ReplayApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: replaygame
     path: ../OSL-Client/RiotApp/API/Replay/ReplayApi.cs

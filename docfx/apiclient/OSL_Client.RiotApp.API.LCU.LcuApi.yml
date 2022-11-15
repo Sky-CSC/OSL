@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: LcuApi
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameFlowPhaseCheck
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs

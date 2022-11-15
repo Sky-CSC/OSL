@@ -7,12 +7,11 @@ items:
   children:
   - OSL_Client.Configuration.Config.GameClientApiLocalHost
   - OSL_Client.Configuration.Config.GameClientApiPassword
-  - OSL_Client.Configuration.Config.ip
   - OSL_Client.Configuration.Config.leagueClientFullFilePath
   - OSL_Client.Configuration.Config.leagueClientPath
   - OSL_Client.Configuration.Config.leagueClientProcess
   - OSL_Client.Configuration.Config.LiveEventsAPIPort
-  - OSL_Client.Configuration.Config.LoadConfigHost
+  - OSL_Client.Configuration.Config.LoadConfigServerSocket
   - OSL_Client.Configuration.Config.localIpHttp
   - OSL_Client.Configuration.Config.localIpHttps
   - OSL_Client.Configuration.Config.lockFilePassword
@@ -20,8 +19,9 @@ items:
   - OSL_Client.Configuration.Config.lockFilePort
   - OSL_Client.Configuration.Config.lockFileProcessId
   - OSL_Client.Configuration.Config.loginRiot
-  - OSL_Client.Configuration.Config.port
   - OSL_Client.Configuration.Config.portRiot
+  - OSL_Client.Configuration.Config.serverIPSocket
+  - OSL_Client.Configuration.Config.serverPortSocket
   - OSL_Client.Configuration.Config.SetHostPassGameClientApi
   langs:
   - csharp
@@ -33,7 +33,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Client/Configuration/Config.cs
@@ -60,66 +60,66 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Client.Configuration.Config.ip
-  commentId: F:OSL_Client.Configuration.Config.ip
-  id: ip
+- uid: OSL_Client.Configuration.Config.serverIPSocket
+  commentId: F:OSL_Client.Configuration.Config.serverIPSocket
+  id: serverIPSocket
   parent: OSL_Client.Configuration.Config
   langs:
   - csharp
   - vb
-  name: ip
-  nameWithType: Config.ip
-  fullName: OSL_Client.Configuration.Config.ip
+  name: serverIPSocket
+  nameWithType: Config.serverIPSocket
+  fullName: OSL_Client.Configuration.Config.serverIPSocket
   type: Field
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: ip
+    id: serverIPSocket
     path: ../OSL-Client/Configuration/Config.cs
     startLine: 14
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
   syntax:
-    content: public static string ip
+    content: public static string serverIPSocket
     return:
       type: System.String
-    content.vb: Public Shared ip As String
+    content.vb: Public Shared serverIPSocket As String
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: OSL_Client.Configuration.Config.port
-  commentId: F:OSL_Client.Configuration.Config.port
-  id: port
+- uid: OSL_Client.Configuration.Config.serverPortSocket
+  commentId: F:OSL_Client.Configuration.Config.serverPortSocket
+  id: serverPortSocket
   parent: OSL_Client.Configuration.Config
   langs:
   - csharp
   - vb
-  name: port
-  nameWithType: Config.port
-  fullName: OSL_Client.Configuration.Config.port
+  name: serverPortSocket
+  nameWithType: Config.serverPortSocket
+  fullName: OSL_Client.Configuration.Config.serverPortSocket
   type: Field
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: port
+    id: serverPortSocket
     path: ../OSL-Client/Configuration/Config.cs
     startLine: 15
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
   syntax:
-    content: public static int port
+    content: public static int serverPortSocket
     return:
       type: System.Int32
-    content.vb: Public Shared port As Integer
+    content.vb: Public Shared serverPortSocket As Integer
   modifiers.csharp:
   - public
   - static
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: leagueClientProcess
     path: ../OSL-Client/Configuration/Config.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: leagueClientFullFilePath
     path: ../OSL-Client/Configuration/Config.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: leagueClientPath
     path: ../OSL-Client/Configuration/Config.cs
@@ -239,7 +239,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFilePath
     path: ../OSL-Client/Configuration/Config.cs
@@ -272,7 +272,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFileProcessId
     path: ../OSL-Client/Configuration/Config.cs
@@ -305,7 +305,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFilePort
     path: ../OSL-Client/Configuration/Config.cs
@@ -338,7 +338,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFilePassword
     path: ../OSL-Client/Configuration/Config.cs
@@ -371,7 +371,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: localIpHttps
     path: ../OSL-Client/Configuration/Config.cs
@@ -404,7 +404,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: localIpHttp
     path: ../OSL-Client/Configuration/Config.cs
@@ -437,7 +437,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: loginRiot
     path: ../OSL-Client/Configuration/Config.cs
@@ -470,7 +470,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: portRiot
     path: ../OSL-Client/Configuration/Config.cs
@@ -503,7 +503,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameClientApiLocalHost
     path: ../OSL-Client/Configuration/Config.cs
@@ -536,7 +536,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameClientApiPassword
     path: ../OSL-Client/Configuration/Config.cs
@@ -569,7 +569,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: LiveEventsAPIPort
     path: ../OSL-Client/Configuration/Config.cs
@@ -588,23 +588,23 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: OSL_Client.Configuration.Config.LoadConfigHost
-  commentId: M:OSL_Client.Configuration.Config.LoadConfigHost
-  id: LoadConfigHost
+- uid: OSL_Client.Configuration.Config.LoadConfigServerSocket
+  commentId: M:OSL_Client.Configuration.Config.LoadConfigServerSocket
+  id: LoadConfigServerSocket
   parent: OSL_Client.Configuration.Config
   langs:
   - csharp
   - vb
-  name: LoadConfigHost()
-  nameWithType: Config.LoadConfigHost()
-  fullName: OSL_Client.Configuration.Config.LoadConfigHost()
+  name: LoadConfigServerSocket()
+  nameWithType: Config.LoadConfigServerSocket()
+  fullName: OSL_Client.Configuration.Config.LoadConfigServerSocket()
   type: Method
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: LoadConfigHost
+    id: LoadConfigServerSocket
     path: ../OSL-Client/Configuration/Config.cs
     startLine: 35
   assemblies:
@@ -613,9 +613,9 @@ items:
   summary: "\nLoads the config from the config file.\n"
   example: []
   syntax:
-    content: public static void LoadConfigHost()
-    content.vb: Public Shared Sub LoadConfigHost
-  overload: OSL_Client.Configuration.Config.LoadConfigHost*
+    content: public static void LoadConfigServerSocket()
+    content.vb: Public Shared Sub LoadConfigServerSocket
+  overload: OSL_Client.Configuration.Config.LoadConfigServerSocket*
   modifiers.csharp:
   - public
   - static
@@ -636,7 +636,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetHostPassGameClientApi
     path: ../OSL-Client/Configuration/Config.cs
@@ -968,11 +968,11 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: OSL_Client.Configuration.Config.LoadConfigHost*
-  commentId: Overload:OSL_Client.Configuration.Config.LoadConfigHost
-  name: LoadConfigHost
-  nameWithType: Config.LoadConfigHost
-  fullName: OSL_Client.Configuration.Config.LoadConfigHost
+- uid: OSL_Client.Configuration.Config.LoadConfigServerSocket*
+  commentId: Overload:OSL_Client.Configuration.Config.LoadConfigServerSocket
+  name: LoadConfigServerSocket
+  nameWithType: Config.LoadConfigServerSocket
+  fullName: OSL_Client.Configuration.Config.LoadConfigServerSocket
 - uid: OSL_Client.Configuration.Config.SetHostPassGameClientApi*
   commentId: Overload:OSL_Client.Configuration.Config.SetHostPassGameClientApi
   name: SetHostPassGameClientApi

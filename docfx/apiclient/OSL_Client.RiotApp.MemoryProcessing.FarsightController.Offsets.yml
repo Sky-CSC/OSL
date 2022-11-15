@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Offsets
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Manager
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: MapCount
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: MapRoot
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: MapNodeNetId
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: MapNodeObject
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs

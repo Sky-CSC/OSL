@@ -1,0 +1,562 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Communication.AsyncServer
+  commentId: T:OSL_Server.Communication.AsyncServer
+  id: AsyncServer
+  parent: OSL_Server.Communication
+  children:
+  - OSL_Server.Communication.AsyncServer.allDone
+  - OSL_Server.Communication.AsyncServer.IsRunning
+  - OSL_Server.Communication.AsyncServer.Port
+  - OSL_Server.Communication.AsyncServer.Run
+  - OSL_Server.Communication.AsyncServer.Stop
+  langs:
+  - csharp
+  - vb
+  name: AsyncServer
+  nameWithType: AsyncServer
+  fullName: OSL_Server.Communication.AsyncServer
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Communication/AsyncServer/Send.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: AsyncServer
+    path: ../OSL-Server/Communication/AsyncServer/Send.cs
+    startLine: 9
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  syntax:
+    content: public class AsyncServer
+    content.vb: Public Class AsyncServer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Communication.AsyncServer.Port
+  commentId: P:OSL_Server.Communication.AsyncServer.Port
+  id: Port
+  parent: OSL_Server.Communication.AsyncServer
+  langs:
+  - csharp
+  - vb
+  name: Port
+  nameWithType: AsyncServer.Port
+  fullName: OSL_Server.Communication.AsyncServer.Port
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Port
+    path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
+    startLine: 13
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  syntax:
+    content: public static int Port { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Shared Property Port As Integer
+  overload: OSL_Server.Communication.AsyncServer.Port*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Communication.AsyncServer.allDone
+  commentId: F:OSL_Server.Communication.AsyncServer.allDone
+  id: allDone
+  parent: OSL_Server.Communication.AsyncServer
+  langs:
+  - csharp
+  - vb
+  name: allDone
+  nameWithType: AsyncServer.allDone
+  fullName: OSL_Server.Communication.AsyncServer.allDone
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: allDone
+    path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
+    startLine: 16
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  syntax:
+    content: public static ManualResetEvent allDone
+    return:
+      type: ManualResetEvent
+    content.vb: Public Shared allDone As ManualResetEvent
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Communication.AsyncServer.IsRunning
+  commentId: M:OSL_Server.Communication.AsyncServer.IsRunning
+  id: IsRunning
+  parent: OSL_Server.Communication.AsyncServer
+  langs:
+  - csharp
+  - vb
+  name: IsRunning()
+  nameWithType: AsyncServer.IsRunning()
+  fullName: OSL_Server.Communication.AsyncServer.IsRunning()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: IsRunning
+    path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
+    startLine: 22
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nCheck if the server is running\n"
+  example: []
+  syntax:
+    content: public static bool IsRunning()
+    return:
+      type: System.Boolean
+      description: True if server is running
+    content.vb: Public Shared Function IsRunning As Boolean
+  overload: OSL_Server.Communication.AsyncServer.IsRunning*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Communication.AsyncServer.Run
+  commentId: M:OSL_Server.Communication.AsyncServer.Run
+  id: Run
+  parent: OSL_Server.Communication.AsyncServer
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: AsyncServer.Run()
+  fullName: OSL_Server.Communication.AsyncServer.Run()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Run
+    path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
+    startLine: 31
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nStart the server\n"
+  example: []
+  syntax:
+    content: public static void Run()
+    content.vb: Public Shared Sub Run
+  overload: OSL_Server.Communication.AsyncServer.Run*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Communication.AsyncServer.Stop
+  commentId: M:OSL_Server.Communication.AsyncServer.Stop
+  id: Stop
+  parent: OSL_Server.Communication.AsyncServer
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: AsyncServer.Stop()
+  fullName: OSL_Server.Communication.AsyncServer.Stop()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Stop
+    path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
+    startLine: 58
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nStop the server\n"
+  example: []
+  syntax:
+    content: public static void Stop()
+    content.vb: Public Shared Sub Stop
+  overload: OSL_Server.Communication.AsyncServer.Stop*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Communication
+  commentId: N:OSL_Server.Communication
+  name: OSL_Server.Communication
+  nameWithType: OSL_Server.Communication
+  fullName: OSL_Server.Communication
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.Communication.AsyncServer.Port*
+  commentId: Overload:OSL_Server.Communication.AsyncServer.Port
+  name: Port
+  nameWithType: AsyncServer.Port
+  fullName: OSL_Server.Communication.AsyncServer.Port
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ManualResetEvent
+  commentId: '!:ManualResetEvent'
+  isExternal: true
+  name: ManualResetEvent
+  nameWithType: ManualResetEvent
+  fullName: ManualResetEvent
+- uid: OSL_Server.Communication.AsyncServer.IsRunning*
+  commentId: Overload:OSL_Server.Communication.AsyncServer.IsRunning
+  name: IsRunning
+  nameWithType: AsyncServer.IsRunning
+  fullName: OSL_Server.Communication.AsyncServer.IsRunning
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Server.Communication.AsyncServer.Run*
+  commentId: Overload:OSL_Server.Communication.AsyncServer.Run
+  name: Run
+  nameWithType: AsyncServer.Run
+  fullName: OSL_Server.Communication.AsyncServer.Run
+- uid: OSL_Server.Communication.AsyncServer.Stop*
+  commentId: Overload:OSL_Server.Communication.AsyncServer.Stop
+  name: Stop
+  nameWithType: AsyncServer.Stop
+  fullName: OSL_Server.Communication.AsyncServer.Stop

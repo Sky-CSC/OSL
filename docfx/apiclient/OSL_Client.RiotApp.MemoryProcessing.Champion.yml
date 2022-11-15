@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Champion.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Champion
     path: ../OSL-Client/RiotApp/MemoryProcessing/Champion.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Champion.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Champions
     path: ../OSL-Client/RiotApp/MemoryProcessing/Champion.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Champion.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: id
     path: ../OSL-Client/RiotApp/MemoryProcessing/Champion.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Champion.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: key
     path: ../OSL-Client/RiotApp/MemoryProcessing/Champion.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Champion.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: name
     path: ../OSL-Client/RiotApp/MemoryProcessing/Champion.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Champion.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: splashImg
     path: ../OSL-Client/RiotApp/MemoryProcessing/Champion.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Champion.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: splashCenteredImg
     path: ../OSL-Client/RiotApp/MemoryProcessing/Champion.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Champion.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: loadingImg
     path: ../OSL-Client/RiotApp/MemoryProcessing/Champion.cs
@@ -283,7 +283,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Champion.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: squareImg
     path: ../OSL-Client/RiotApp/MemoryProcessing/Champion.cs

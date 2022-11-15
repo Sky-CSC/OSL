@@ -1,0 +1,1497 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  commentId: T:OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  id: ChampSelectView1Page.ChampSelect
+  parent: OSL_Server.Pages
+  children:
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundColor
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundPicture
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanOverlayPicture
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueLogo
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBorderColor
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTexteColor
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamName
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamNameColor
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtext
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBorder
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTexte
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamName
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultPatch
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultRegion
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.OverlayBackground
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedLogo
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamName
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamSubtext
+  langs:
+  - csharp
+  - vb
+  name: ChampSelectView1Page.ChampSelect
+  nameWithType: ChampSelectView1Page.ChampSelect
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampSelect
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 78
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public class ChampSelect
+    content.vb: Public Class ChampSelect
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamName
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamName
+  id: BlueTeamName
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamName
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueTeamName
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamName
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamName
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 80
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BlueTeamName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueTeamName As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtext
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtext
+  id: BlueTeamSubtext
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamSubtext
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueTeamSubtext
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtext
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamSubtext
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 81
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BlueTeamSubtext { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueTeamSubtext As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtext*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamNameColor
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamNameColor
+  id: BlueTeamNameColor
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamNameColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueTeamNameColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamNameColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamNameColor
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 82
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BlueTeamNameColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueTeamNameColor As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamNameColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor
+  id: BlueTeamSubtextColor
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamSubtextColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamSubtextColor
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 83
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BlueTeamSubtextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueTeamSubtextColor As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueLogo
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueLogo
+  id: BlueLogo
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BlueLogo
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueLogo
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueLogo
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueLogo
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 84
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BlueLogo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueLogo As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueLogo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultPatch
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultPatch
+  id: DefaultPatch
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: DefaultPatch
+  nameWithType: ChampSelectView1Page.ChampSelect.DefaultPatch
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultPatch
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultPatch
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 85
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string DefaultPatch { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultPatch As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultPatch*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultRegion
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultRegion
+  id: DefaultRegion
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: DefaultRegion
+  nameWithType: ChampSelectView1Page.ChampSelect.DefaultRegion
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultRegion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultRegion
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 86
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string DefaultRegion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultRegion As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultRegion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTexteColor
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTexteColor
+  id: BlueSideTexteColor
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BlueSideTexteColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueSideTexteColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTexteColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideTexteColor
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 87
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BlueSideTexteColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideTexteColor As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTexteColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor
+  id: BlueSideBackgroudColor
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BlueSideBackgroudColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideBackgroudColor
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 88
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BlueSideBackgroudColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideBackgroudColor As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBorderColor
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBorderColor
+  id: BlueSideBorderColor
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BlueSideBorderColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueSideBorderColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBorderColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideBorderColor
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 89
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BlueSideBorderColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideBorderColor As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBorderColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor
+  id: BlueSideTimerBackgroudColor
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BlueSideTimerBackgroudColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideTimerBackgroudColor
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 90
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BlueSideTimerBackgroudColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideTimerBackgroudColor As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder
+  id: ColorBlueSideTimerBorder
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorBlueSideTimerBorder
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorBlueSideTimerBorder
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 91
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorBlueSideTimerBorder { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorBlueSideTimerBorder As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte
+  id: ColorBlueSideTimerTexte
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorBlueSideTimerTexte
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorBlueSideTimerTexte
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 92
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorBlueSideTimerTexte { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorBlueSideTimerTexte As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamName
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamName
+  id: RedTeamName
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: RedTeamName
+  nameWithType: ChampSelectView1Page.ChampSelect.RedTeamName
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamName
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedTeamName
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 93
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string RedTeamName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedTeamName As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamSubtext
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamSubtext
+  id: RedTeamSubtext
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: RedTeamSubtext
+  nameWithType: ChampSelectView1Page.ChampSelect.RedTeamSubtext
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamSubtext
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedTeamSubtext
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 94
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string RedTeamSubtext { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedTeamSubtext As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamSubtext*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamName
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamName
+  id: ColorRedTeamName
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorRedTeamName
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedTeamName
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamName
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedTeamName
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 95
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorRedTeamName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedTeamName As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext
+  id: ColorRedTeamSubtext
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorRedTeamSubtext
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedTeamSubtext
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 96
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorRedTeamSubtext { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedTeamSubtext As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedLogo
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedLogo
+  id: RedLogo
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: RedLogo
+  nameWithType: ChampSelectView1Page.ChampSelect.RedLogo
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedLogo
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedLogo
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 97
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string RedLogo { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedLogo As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedLogo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTexte
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTexte
+  id: ColorRedSideTexte
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorRedSideTexte
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideTexte
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTexte
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedSideTexte
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 98
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorRedSideTexte { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedSideTexte As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTexte*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud
+  id: ColorRedSideBackgroud
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorRedSideBackgroud
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedSideBackgroud
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 99
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorRedSideBackgroud { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedSideBackgroud As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBorder
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBorder
+  id: ColorRedSideBorder
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorRedSideBorder
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideBorder
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBorder
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedSideBorder
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 100
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorRedSideBorder { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedSideBorder As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBorder*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud
+  id: ColorRedSideTimerBackgroud
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorRedSideTimerBackgroud
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedSideTimerBackgroud
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 101
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorRedSideTimerBackgroud { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedSideTimerBackgroud As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder
+  id: ColorRedSideTimerBorder
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorRedSideTimerBorder
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedSideTimerBorder
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 102
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorRedSideTimerBorder { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedSideTimerBorder As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte
+  id: ColorRedSideTimerTexte
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: ColorRedSideTimerTexte
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedSideTimerTexte
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 103
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string ColorRedSideTimerTexte { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedSideTimerTexte As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundPicture
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundPicture
+  id: BanBackgroundPicture
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BanBackgroundPicture
+  nameWithType: ChampSelectView1Page.ChampSelect.BanBackgroundPicture
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundPicture
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BanBackgroundPicture
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 104
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BanBackgroundPicture { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BanBackgroundPicture As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundPicture*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanOverlayPicture
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanOverlayPicture
+  id: BanOverlayPicture
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BanOverlayPicture
+  nameWithType: ChampSelectView1Page.ChampSelect.BanOverlayPicture
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanOverlayPicture
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BanOverlayPicture
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 105
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BanOverlayPicture { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BanOverlayPicture As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanOverlayPicture*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundColor
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundColor
+  id: BanBackgroundColor
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: BanBackgroundColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BanBackgroundColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BanBackgroundColor
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 106
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string BanBackgroundColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BanBackgroundColor As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.OverlayBackground
+  commentId: P:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.OverlayBackground
+  id: OverlayBackground
+  parent: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  langs:
+  - csharp
+  - vb
+  name: OverlayBackground
+  nameWithType: ChampSelectView1Page.ChampSelect.OverlayBackground
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.OverlayBackground
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView1Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: OverlayBackground
+    path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
+    startLine: 107
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string OverlayBackground { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OverlayBackground As String
+  overload: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.OverlayBackground*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Server.Pages
+  commentId: N:OSL_Server.Pages
+  name: OSL_Server.Pages
+  nameWithType: OSL_Server.Pages
+  fullName: OSL_Server.Pages
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamName*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamName
+  name: BlueTeamName
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueTeamName
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtext*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtext
+  name: BlueTeamSubtext
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueTeamSubtext
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtext
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamNameColor*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamNameColor
+  name: BlueTeamNameColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueTeamNameColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamNameColor
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor
+  name: BlueTeamSubtextColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueTeamSubtextColor
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueLogo*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueLogo
+  name: BlueLogo
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueLogo
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueLogo
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultPatch*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultPatch
+  name: DefaultPatch
+  nameWithType: ChampSelectView1Page.ChampSelect.DefaultPatch
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultPatch
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultRegion*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultRegion
+  name: DefaultRegion
+  nameWithType: ChampSelectView1Page.ChampSelect.DefaultRegion
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.DefaultRegion
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTexteColor*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTexteColor
+  name: BlueSideTexteColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueSideTexteColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTexteColor
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor
+  name: BlueSideBackgroudColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBackgroudColor
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBorderColor*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBorderColor
+  name: BlueSideBorderColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueSideBorderColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideBorderColor
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor
+  name: BlueSideTimerBackgroudColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BlueSideTimerBackgroudColor
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder
+  name: ColorBlueSideTimerBorder
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerBorder
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte
+  name: ColorBlueSideTimerTexte
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorBlueSideTimerTexte
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamName*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamName
+  name: RedTeamName
+  nameWithType: ChampSelectView1Page.ChampSelect.RedTeamName
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamName
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamSubtext*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamSubtext
+  name: RedTeamSubtext
+  nameWithType: ChampSelectView1Page.ChampSelect.RedTeamSubtext
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedTeamSubtext
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamName*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamName
+  name: ColorRedTeamName
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedTeamName
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamName
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext
+  name: ColorRedTeamSubtext
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedTeamSubtext
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedLogo*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedLogo
+  name: RedLogo
+  nameWithType: ChampSelectView1Page.ChampSelect.RedLogo
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.RedLogo
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTexte*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTexte
+  name: ColorRedSideTexte
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideTexte
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTexte
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud
+  name: ColorRedSideBackgroud
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBackgroud
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBorder*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBorder
+  name: ColorRedSideBorder
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideBorder
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideBorder
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud
+  name: ColorRedSideTimerBackgroud
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBackgroud
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder
+  name: ColorRedSideTimerBorder
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerBorder
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte
+  name: ColorRedSideTimerTexte
+  nameWithType: ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.ColorRedSideTimerTexte
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundPicture*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundPicture
+  name: BanBackgroundPicture
+  nameWithType: ChampSelectView1Page.ChampSelect.BanBackgroundPicture
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundPicture
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanOverlayPicture*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanOverlayPicture
+  name: BanOverlayPicture
+  nameWithType: ChampSelectView1Page.ChampSelect.BanOverlayPicture
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanOverlayPicture
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundColor*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundColor
+  name: BanBackgroundColor
+  nameWithType: ChampSelectView1Page.ChampSelect.BanBackgroundColor
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.BanBackgroundColor
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.OverlayBackground*
+  commentId: Overload:OSL_Server.Pages.ChampSelectView1Page.ChampSelect.OverlayBackground
+  name: OverlayBackground
+  nameWithType: ChampSelectView1Page.ChampSelect.OverlayBackground
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect.OverlayBackground

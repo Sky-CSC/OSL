@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.Communication.OSLServer
+  commentId: N:OSL_Client.Communication.OSLServer
+  id: OSL_Client.Communication.OSLServer
+  children:
+  - OSL_Client.Communication.OSLServer.AsyncClient
+  - OSL_Client.Communication.OSLServer.StateObject
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.Communication.OSLServer
+  nameWithType: OSL_Client.Communication.OSLServer
+  fullName: OSL_Client.Communication.OSLServer
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.Communication.OSLServer.StateObject
+  commentId: T:OSL_Client.Communication.OSLServer.StateObject
+  name: StateObject
+  nameWithType: StateObject
+  fullName: OSL_Client.Communication.OSLServer.StateObject
+- uid: OSL_Client.Communication.OSLServer.AsyncClient
+  commentId: T:OSL_Client.Communication.OSLServer.AsyncClient
+  name: AsyncClient
+  nameWithType: AsyncClient
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient

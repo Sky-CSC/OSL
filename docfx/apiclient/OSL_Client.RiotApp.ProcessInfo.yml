@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/ProcessInfo.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ProcessInfo
     path: ../OSL-Client/RiotApp/ProcessInfo.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/ProcessInfo.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: NameProcessInfo
     path: ../OSL-Client/RiotApp/ProcessInfo.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/ProcessInfo.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: IdProcessInfo
     path: ../OSL-Client/RiotApp/ProcessInfo.cs

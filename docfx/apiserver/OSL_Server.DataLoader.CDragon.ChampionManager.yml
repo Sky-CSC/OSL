@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/ChampionManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionManager
     path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/ChampionManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadChampion
     path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
@@ -100,11 +100,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/ChampionManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionAsyncDownload
     path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
-    startLine: 84
+    startLine: 87
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -153,11 +153,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/ChampionManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonChampion
     path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
-    startLine: 193
+    startLine: 196
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon

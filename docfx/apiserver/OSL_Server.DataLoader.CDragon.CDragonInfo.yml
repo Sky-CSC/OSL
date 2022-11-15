@@ -22,11 +22,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: CDragonInfo
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 118
+    startLine: 134
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -65,11 +65,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Patch
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 120
+    startLine: 136
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -100,11 +100,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Region
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 121
+    startLine: 137
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -135,11 +135,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionSummary
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 122
+    startLine: 138
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -170,11 +170,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Items
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 123
+    startLine: 139
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -205,11 +205,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerSpells
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 124
+    startLine: 140
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -240,11 +240,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Perks
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 125
+    startLine: 141
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -275,11 +275,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Perkstyles
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 126
+    startLine: 142
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon

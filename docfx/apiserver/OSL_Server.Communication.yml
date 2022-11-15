@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Communication
+  commentId: N:OSL_Server.Communication
+  id: OSL_Server.Communication
+  children:
+  - OSL_Server.Communication.AsyncServer
+  - OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: OSL_Server.Communication
+  nameWithType: OSL_Server.Communication
+  fullName: OSL_Server.Communication
+  type: Namespace
+  assemblies:
+  - OSL-Server
+references:
+- uid: OSL_Server.Communication.AsyncServer
+  commentId: T:OSL_Server.Communication.AsyncServer
+  name: AsyncServer
+  nameWithType: AsyncServer
+  fullName: OSL_Server.Communication.AsyncServer
+- uid: OSL_Server.Communication.ServerHub
+  commentId: T:OSL_Server.Communication.ServerHub
+  name: ServerHub
+  nameWithType: ServerHub
+  fullName: OSL_Server.Communication.ServerHub

@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: OSL-Client/FileManager/JsonManagerLocal.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: JsonType
     path: ../OSL-Client/FileManager/JsonManagerLocal.cs

@@ -4,6 +4,7 @@ items:
   commentId: N:OSL_Server.DataReciveClient
   id: OSL_Server.DataReciveClient
   children:
+  - OSL_Server.DataReciveClient.GameFlowPhaseStatus
   - OSL_Server.DataReciveClient.ReciveFromClient
   langs:
   - csharp
@@ -20,3 +21,8 @@ references:
   name: ReciveFromClient
   nameWithType: ReciveFromClient
   fullName: OSL_Server.DataReciveClient.ReciveFromClient
+- uid: OSL_Server.DataReciveClient.GameFlowPhaseStatus
+  commentId: T:OSL_Server.DataReciveClient.GameFlowPhaseStatus
+  name: GameFlowPhaseStatus
+  nameWithType: GameFlowPhaseStatus
+  fullName: OSL_Server.DataReciveClient.GameFlowPhaseStatus

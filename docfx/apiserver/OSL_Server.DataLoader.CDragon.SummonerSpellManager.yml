@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/SummonerSpellManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerSpellManager
     path: ../OSL-Server/DataLoader/CDragon/SummonerSpellManager.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/SummonerSpellManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadSummonersSpell
     path: ../OSL-Server/DataLoader/CDragon/SummonerSpellManager.cs
@@ -100,11 +100,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/SummonerSpellManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonersSpellAsyncDownload
     path: ../OSL-Server/DataLoader/CDragon/SummonerSpellManager.cs
-    startLine: 65
+    startLine: 68
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -156,11 +156,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/SummonerSpellManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonSummonersSpell
     path: ../OSL-Server/DataLoader/CDragon/SummonerSpellManager.cs
-    startLine: 80
+    startLine: 83
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
