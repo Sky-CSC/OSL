@@ -22,9 +22,9 @@ namespace OSL_Server.Pages
             _logger.log(LoggingLevel.INFO, "UpdateManual()", "Update in progress");
             Thread DownloadFilesFr = new Thread(() => CDragon.Download.DownloadFiles("latest", "fr_fr"));
             DownloadFilesFr.Start();
-            Thread.Sleep(1000);
-            Thread DownloadFilesEn = new Thread(() => CDragon.Download.DownloadFiles("latest", "en_gb"));
-            DownloadFilesEn.Start();
+            //Thread.Sleep(1000);
+            //Thread DownloadFilesEn = new Thread(() => CDragon.Download.DownloadFiles("latest", "en_gb"));
+            //DownloadFilesEn.Start();
         }
     }
 }
