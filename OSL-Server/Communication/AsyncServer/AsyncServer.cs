@@ -11,7 +11,7 @@ namespace OSL_Server.Communication
     {
         private static OSLLogger _logger = new OSLLogger("AsyncServer");
         private static Thread? thread = null;
-        public static int Port { get; set; } = 45879;
+        public static int Port { get; set; } = 45678;
         private static bool _stop = false;
         // Semaphore
         public static ManualResetEvent allDone = new ManualResetEvent(false);

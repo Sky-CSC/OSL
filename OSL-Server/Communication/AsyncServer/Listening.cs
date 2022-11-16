@@ -22,7 +22,7 @@ namespace OSL_Server.Communication
             //nimporte quelle ip
             IPAddress ipAddress = IPAddress.Any;
             //IPAddress ipAddress = ipHostInfo.AddressList[0];
-            _logger.log(LoggingLevel.INFO, "StartListening()", $"Host address : {ipAddress}");
+            _logger.log(LoggingLevel.INFO, "StartListening()", $"Host address : {ipAddress} Port : {Port}");
 
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, Port);
             Socket listener = new Socket(AddressFamily.InterNetworkV6,

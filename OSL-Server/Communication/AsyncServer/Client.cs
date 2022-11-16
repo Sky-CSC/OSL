@@ -18,6 +18,7 @@ namespace OSL_Server.Communication
             public Socket Listener { set; get; }
 
             public const int BufferSize = 1048576;
+            //public const int BufferSize = 1024;
             // Receive buffer.
             public byte[] buffer = new byte[BufferSize];
             // Received data string. 
