@@ -41,9 +41,9 @@ app.MapFallbackToPage("/_Host");
 Config.LoadConfigCDragon();
 
 //Dowload default config
-//string region = "fr_fr";
-//string patch = "latest";
-//CDragon.Download.DownloadFiles(patch, region);
+string region = "fr_fr";
+string patch = "latest";
+CDragon.Download.DownloadFiles(patch, region);
 //region = "en_gb";
 //patch = "latest";
 //CDragon.Download.DownloadFiles(patch, region);

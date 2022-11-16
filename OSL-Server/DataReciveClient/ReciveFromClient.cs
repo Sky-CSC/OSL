@@ -11,6 +11,7 @@ namespace OSL_Server.DataReciveClient
         private static bool champSelectStatus = false;
         public static string ReadData(string content)
         {
+            string returnData = "default data Server";
             try
             {
                 GameFlowPhaseStatus dataJsonRecive = JsonConvert.DeserializeObject<GameFlowPhaseStatus>(content);
@@ -23,6 +24,7 @@ namespace OSL_Server.DataReciveClient
                         if (dataJsonRecive.Status.Equals("Running"))
                         {
                             champSelectStatus = true;
+                            returnData = "champ select Server running";
                         }
                         else
                         {
@@ -31,12 +33,13 @@ namespace OSL_Server.DataReciveClient
                     }
                     else if (dataJsonRecive.Phase.Equals("InGame"))
                     {
-
+                        returnData = "in game Server running";
                     }
                 }
                 else
                 {
                     gameFlowPhaseStatus = false;
+                    returnData = "game flow phase Server OFF";
                 }
                 _logger.log(LoggingLevel.INFO, "ReadData()", "Read Json GameFlowPhaseStatus");
             }
@@ -44,6 +47,7 @@ namespace OSL_Server.DataReciveClient
             {
                 gameFlowPhaseStatus = false;
                 _logger.log(LoggingLevel.ERROR, "ReadData()", $"Error Read Json GameFlowPhaseStatus {e.Message}");
+                returnData = "game flow phase Server OFF";
             }
             if (!gameFlowPhaseStatus)
             {
@@ -53,14 +57,16 @@ namespace OSL_Server.DataReciveClient
                     if (champSelectStatus)
                     {
                         ChampSelectInfo.InChampSelect(content);
+                        returnData = "champ select Server running";
                     }
                 }
                 catch (Exception e)
                 {
                     _logger.log(LoggingLevel.ERROR, "ReadData()", $"Error Read Json {e.Message}");
+                    returnData = "game flow phase Server OFF";
                 }
             }
-            return "Bonjour";
+            return returnData;
         }
     }
     public class GameFlowPhaseStatus
