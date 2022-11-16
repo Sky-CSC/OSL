@@ -30,8 +30,8 @@ namespace OSL_Client.RiotApp.DataProcessing
                 string content = GetLiveEventsAPI();
                 if (content != null) {
                     //write in file
-                    FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date);
-                    FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", content);
+                    //FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date);
+                    FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date + "\n" + content);
                 }
                 //DisconnectLiveEventsAPI();
                 //}

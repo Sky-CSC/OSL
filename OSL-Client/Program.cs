@@ -25,7 +25,7 @@ Console.ResetColor();
 //Config.LoadConfigHost();
 //Initialisation for acces att the champion selection or a game
 //PostCom.Test2();
-String data = "Bonjour Skynet";
+String data = "Hello OSL-Server is OSL-Client managed by Skynet";
 AsyncClient.StartClient(data);
 
 while (true)

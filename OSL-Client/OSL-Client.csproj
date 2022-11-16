@@ -7,7 +7,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<StartupObject></StartupObject>
-		<ApplicationIcon>Icone_Feu.ico</ApplicationIcon>
+		<ApplicationIcon>Icone_Terre.ico</ApplicationIcon>
 		<Copyright>Sky-csc</Copyright>
 		<PackageProjectUrl>https://github.com/Sky-CSC/OSL</PackageProjectUrl>
 		<AssemblyVersion>0.1.0.0</AssemblyVersion>
@@ -15,7 +15,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Content Include="Icone_Feu.ico" />
+		<Content Include="Icone_Terre.ico" />
 	</ItemGroup>
 
 	<ItemGroup>
