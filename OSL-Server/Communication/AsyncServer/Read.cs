@@ -33,7 +33,7 @@ namespace OSL_Server.Communication
             if (bytesRead > 0)
             {
                 // There  might be more data, so store the data received so far.
-                client.sb.Append(Encoding.ASCII.GetString(
+                client.sb.Append(Encoding.UTF8.GetString(
                     client.buffer, 0, bytesRead));
 
                 // Check for end-of-file tag. If it is not there, read 
