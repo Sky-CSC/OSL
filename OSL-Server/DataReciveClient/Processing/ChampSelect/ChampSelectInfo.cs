@@ -76,6 +76,7 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
                 team.Spell2Id = jsonContentMetadata.myTeam[i].spell2Id;
                 team.SummonerId = jsonContentMetadata.myTeam[i].summonerId;
                 team.SummonerName = jsonContentMetadata.myTeam[i].summonerName;
+                team.TeamNum = jsonContentMetadata.myTeam[i].team;
                 session.MyTeam.Insert(i, team);
             }
 
@@ -88,6 +89,7 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
                 team.Spell2Id = jsonContentMetadata.theirTeam[i].spell2Id;
                 team.SummonerId = jsonContentMetadata.theirTeam[i].summonerId;
                 team.SummonerName = jsonContentMetadata.theirTeam[i].summonerName;
+                team.TeamNum = jsonContentMetadata.theirTeam[i].team;
                 session.TheirTeam.Insert(i, team);
             }
 
@@ -168,6 +170,7 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         public ulong Spell2Id { get; set; }
         public ulong SummonerId { get; set; }
         public string SummonerName { get; set; }
+        public int TeamNum { get; set; } //Team number
     }
 
     public class Timer
