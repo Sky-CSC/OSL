@@ -93,6 +93,10 @@
                         <InputCheckbox id="name" @bind-Value="OverlayText.OverlayBackground" />
                         @*<button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>*@
                     </EditForm>
+                    <EditForm Model="@OverlayText" OnValidSubmit="@OverlayBackgroundSubmit">
+                        <label style="font-weight: bold">Display Summoners Spell : </label>
+                        <InputCheckbox id="name" @bind-Value="OverlayText.DisplaySummonerSpell" />
+                    </EditForm>
                     @*Backgournd*@
 
                     <br />

@@ -217,7 +217,7 @@
                                         <div class="summoner-spells">
                                             @*Summoners Spells*@
                                             @{
-                                                if (SideInProgress() == 0)
+                                                if (SideInProgress() == 0 && @ChampSelectPage.OverlayText.DisplaySummonerSpell == true)
                                                 {
                                                     <img class="spell" src="@getSpell(indexChamp, 1, 1)">
                                                     <img class="spell" src="@getSpell(indexChamp, 1, 2)">
@@ -252,7 +252,7 @@
                                         <div class="summoner-spells">
                                             @*Summoners Spells*@
                                             @{
-                                                if (SideInProgress() == 0)
+                                                if (SideInProgress() == 0 && @ChampSelectPage.OverlayText.DisplaySummonerSpell == true)
                                                 {
                                                     <img class="spell" src="@getSpell(indexChamp, 2, 1)">
                                                     <img class="spell" src="@getSpell(indexChamp, 2, 2)">

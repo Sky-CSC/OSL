@@ -85,6 +85,7 @@ namespace OSL_Server.Pages
             public int KeystonePickColorPercent23 { get; set; } = 100;
 
             public bool OverlayBackground { get; set; } = true;
+            public bool DisplaySummonerSpell { get; set; } = false;
         }
 
         private string TempsBlueSideBorderColor()
