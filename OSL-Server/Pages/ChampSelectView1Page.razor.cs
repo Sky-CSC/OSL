@@ -420,6 +420,27 @@ namespace OSL_Server.Pages
             }
         }
 
+        //private int SideInProgress()
+        //{
+        //    foreach (var action in ChampSelectInfo.session.Actions)
+        //    {
+        //        foreach (var inaction in action)
+        //        {
+        //            if (inaction.IsInProgress == true)
+        //            {
+        //                if (inaction.ActorCellId == 0 || inaction.ActorCellId == 1 || inaction.ActorCellId == 2 || inaction.ActorCellId == 3 || inaction.ActorCellId == 4)
+        //                {
+        //                    return 1;
+        //                }
+        //                else
+        //                {
+        //                    return 2;
+        //                }
+        //            }
+        //        }
+        //    }
+        //    return 0;
+        //}
         private int SideInProgress()
         {
             foreach (var action in ChampSelectInfo.session.Actions)
@@ -428,14 +449,14 @@ namespace OSL_Server.Pages
                 {
                     if (inaction.IsInProgress == true)
                     {
-                        if (inaction.ActorCellId == 0 || inaction.ActorCellId == 1 || inaction.ActorCellId == 2 || inaction.ActorCellId == 3 || inaction.ActorCellId == 4)
+                        foreach (var inmyTeam in ChampSelectInfo.session.MyTeam)
                         {
-                            return 1;
+                            if (inaction.ActorCellId == inmyTeam.CellId && inmyTeam.TeamNum == 1)
+                            {
+                                return 1;
+                            }
                         }
-                        else
-                        {
-                            return 2;
-                        }
+                        return 2;
                     }
                 }
             }
