@@ -19,13 +19,58 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
     {
         private static OSLLogger _logger = new OSLLogger("ChampSelectInfo");
         public static Session session;
+        public static Session previousSession;
         public static void InChampSelect(string content)
         {
+            previousSession = session;
             session = ChampSelectProcessingDataRecive(content);
-            int time = session.Timer.AdjustedTimeLeftInPhase;
-            int timer = (int)TimeSpan.FromMilliseconds((double)time).TotalSeconds;
-            ChampSelectView1Page.UpdateTimer(timer, 0);
-            ChampSelectView2Page.UpdateTimer(timer, 0);
+            int lastAction = session.Actions.Count - 1;
+            int lastActionInAction = session.Actions[lastAction].Count - 1;
+            bool sameTurn = false;
+            if (previousSession != null)
+            {
+                int lastActionPreviousSession = previousSession.Actions.Count - 1;
+                int lastActionInActionPreviousSession = previousSession.Actions[lastActionPreviousSession].Count - 1;
+                if (previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Id == session.Actions[lastAction][lastActionInAction].Id)
+                {
+                    //Same turn
+                    sameTurn = true;
+                }
+                //if (previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Id == session.Actions[lastAction][lastActionInAction].Id && previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Completed.Equals(false))
+                //{
+                //    sameTurn = false;
+                //}
+            }
+            int timer = 0;
+            int timerFast = 0;
+            if (sameTurn == false && session.Actions[lastAction][lastActionInAction].Type.Equals("ban") && session.Actions[lastAction][lastActionInAction].Completed.Equals(false))
+            {
+                timer = 27;
+                ChampSelectTimer.phaseTimer.Stop();
+                ChampSelectTimer.DecreasingTimerChapSelect(timer);
+                timerFast = 1750;
+                ChampSelectTimer.phaseTimerFast.Stop();
+                ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 1);
+            }
+            else if (sameTurn == false && session.Actions[lastAction][lastActionInAction].Type.Equals("pick") && session.Actions[lastAction][lastActionInAction].Completed.Equals(false))
+            {
+                timer = 27;
+                ChampSelectTimer.phaseTimer.Stop();
+                ChampSelectTimer.DecreasingTimerChapSelect(timer);
+                timerFast = 1750;
+                ChampSelectTimer.phaseTimerFast.Stop();
+                ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 1);
+            }
+            else if (session.Actions[lastAction][lastActionInAction].Completed.Equals(true))
+            {
+                timer = 59;
+                ChampSelectTimer.phaseTimer.Stop();
+                ChampSelectTimer.DecreasingTimerChapSelect(timer);
+                timerFast = 1750;
+                ChampSelectTimer.phaseTimerFast.Stop();
+                ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 32);
+            }
+
         }
 
         /// <summary>
@@ -48,6 +93,7 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
                     actionJ.ActorCellId = jsonContentMetadata.actions[i][j].actorCellId;
                     actionJ.ChampionId = jsonContentMetadata.actions[i][j].championId;
                     actionJ.Completed = jsonContentMetadata.actions[i][j].completed;
+                    actionJ.Id = jsonContentMetadata.actions[i][j].id;
                     actionJ.IsInProgress = jsonContentMetadata.actions[i][j].isInProgress;
                     actionJ.PickTurn = jsonContentMetadata.actions[i][j].pickTurn;
                     actionJ.Type = jsonContentMetadata.actions[i][j].type;
@@ -146,6 +192,7 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         public int ActorCellId { get; set; }
         public int ChampionId { get; set; }
         public bool Completed { get; set; }
+        public int Id { get; set; }
         public bool IsInProgress { get; set; }
         public int PickTurn { get; set; }
         public string Type { get; set; }
