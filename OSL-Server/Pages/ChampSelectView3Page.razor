@@ -12,45 +12,75 @@
 
         <div class="overlay-type-3">
             <div class="champ-select-footer-timer" style="background: @TimerBackground">
-                @if (SideInProgress() == 1)
-                {
-                    timerBlue = true;
-                    double multiCurentCount = 3.4;
-                    if (timerRed == true)
-                    {
-                        currentCount = 0;
-                        timerRed = false;
-                        timerBlueRed = false;
+                @*@if (SideInProgress() == 1)
+            {
+            timerBlue = true;
+            double multiCurentCount = 3.4;
+            if (timerRed == true)
+            {
+            currentCount = 0;
+            timerRed = false;
+            timerBlueRed = false;
 
-                    }
-                    <div class="champ-select-footer-timer-blue" style="width: @SizeTimer(multiCurentCount); background: @TimerBlue;">
-                    </div>
+            }*@
+                @*Console.WriteLine("multiCurentCount");*@
+                @*<div class="champ-select-footer-timer-blue" style="width: @SizeTimer(multiCurentCount); background: @TimerBlue;">
+            </div>
+            }
+            else if (SideInProgress() == 2)
+            {
+            timerRed = true;
+            double multiCurentCount = 3.4;
+            if (timerBlue == true)
+            {
+            currentCount = 0;
+            timerBlue = false;
+            timerBlueRed = false;
+            }*@
+                @*Console.WriteLine("multiCurentCount");*@
+                @*<div class="champ-select-footer-timer-red" style="width: @SizeTimer(multiCurentCount); background: @TimerRed;">
+            </div>
+            }
+            else
+            {
+            timerBlueRed = true;
+            double multiCurentCount = 1.5;
+            if (timerBlue == true || timerRed == true)
+            {
+            currentCount = 0;
+            timerBlue = false;
+            timerRed = false;
+            }*@
+                @*Console.WriteLine("multiCurentCount");*@
+                @*<div class="champ-select-footer-timer-end" style="width: @SizeTimer(multiCurentCount); background: @TimerEnd;">
+            </div>
+            }*@
+                @{
+                    //string phaseTimer = ChampSelectTimer.phaseTimeFast.ToString() + "px";
+                    //Console.WriteLine($"Test  {ChampSelectTimer.phaseTimeFast}");
+                    //Console.WriteLine($"Test  {phaseTimer}");
                 }
-                else if (SideInProgress() == 2)
-                {
-                    timerRed = true;
-                    double multiCurentCount = 3.4;
-                    if (timerBlue == true)
+                @{
+                    if (@ChampSelectPage.OverlayText.EnableTimerView3 == true)
                     {
-                        currentCount = 0;
-                        timerBlue = false;
-                        timerBlueRed = false;
+                        if (SideInProgress() == 1)
+                        {
+
+                            @*<div class="champ-select-footer-timer-blue" style="width: @phaseTimer; background: @TimerBlue;">*@
+                            <div class="champ-select-footer-timer-blue" style="width: @(ChampSelectTimer.phaseTimeFast.ToString() + "px"); background: @TimerBlue;">
+                            </div>
+                        }
+                        else if (SideInProgress() == 2)
+                        {
+                            <div class="champ-select-footer-timer-red" style="width: @(ChampSelectTimer.phaseTimeFast.ToString() + "px"); background: @TimerRed;">
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="champ-select-footer-timer-end" style="width: @(ChampSelectTimer.phaseTimeFast.ToString() + "px"); background: @TimerEnd;">
+                            </div>
+                        }
                     }
-                    <div class="champ-select-footer-timer-red" style="width: @SizeTimer(multiCurentCount); background: @TimerRed;">
-                    </div>
-                }
-                else
-                {
-                    timerBlueRed = true;
-                    double multiCurentCount = 1.5;
-                    if (timerBlue == true || timerRed == true)
-                    {
-                        currentCount = 0;
-                        timerBlue = false;
-                        timerRed = false;
-                    }
-                    <div class="champ-select-footer-timer-end" style="width: @SizeTimer(multiCurentCount); background: @TimerEnd;">
-                    </div>
                 }
 
             </div>
@@ -146,6 +176,7 @@
                     }
                 </div>
                 <div class="champ-select-footer-pick-keystone" style="background: @KeystonePickColor">
+                    <div class="gradient-background-overlay"></div>
                 </div>
                 <div class="side" id="redSide">
                     @{
@@ -392,11 +423,11 @@ else
 
 
 @code {
-    private bool timerBlue = false;
-    private bool timerRed = false;
-    private bool timerBlueRed = false;
-    private int currentCount = 0;
-    private static int timePhase = 0;
+    //private bool timerBlue = false;
+    //private bool timerRed = false;
+    //private bool timerBlueRed = false;
+    //private int currentCount = 0;
+    //private static int timePhase = 0;
     private System.Timers.Timer timer = new(50);
 
     protected override void OnInitialized()
@@ -409,7 +440,8 @@ else
     {
         _ = InvokeAsync(() =>
         {
-            currentCount++;
+            //currentCount++;
+            //Console.WriteLine("Yolo");
             StateHasChanged();
         });
     }

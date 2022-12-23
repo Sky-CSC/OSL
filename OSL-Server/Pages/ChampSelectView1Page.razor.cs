@@ -491,6 +491,7 @@ namespace OSL_Server.Pages
 
         private string getCurentAction(int index, int team)
         {
+            string curentAction = "";
             //Console.WriteLine("getCurentAction");
             int cellId;
             if (team == 1)
@@ -511,17 +512,19 @@ namespace OSL_Server.Pages
                         {
                             if (inaction.Type.Equals("pick"))
                             {
-                                return "Picking";
+                                curentAction = "Picking";
+                                //return "Picking";
                             }
                             else if (inaction.Type.Equals("ban"))
                             {
-                                return "Banning";
+                                curentAction = "Banning";
+                                //return "Banning";
                             }
                         }
                     }
                 }
             }
-            return "";
+            return curentAction;
         }
 
         private string getSummonerName(int index, int team)

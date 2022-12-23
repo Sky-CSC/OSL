@@ -26,8 +26,8 @@ namespace OSL_Server.Pages
         public static string TimerEnd = "linear-gradient(90deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%)";
 
         //Personalisation Blue Side
-        public static string BlueSideBackgroudSaved = "#0b849e";
         public static string BlueSideBackgroud = "#0b849e";
+        public static string BlueSideBackgroudSaved = "#0b849e";
         public static string BlueSideSummoner = "#ffffff";
         public static string BlueSideSummonerSaved = "#ffffff";
         public static string BlueSideBackgroudSummonerPick = "#0b849e";
@@ -42,18 +42,18 @@ namespace OSL_Server.Pages
         public static string BlueSideTeamNameSize = "20px";
 
         //Personalisation Keystone
-        public static string KeystonePickColor = "linear-gradient(150deg, #00008bff 0%, #8b0000ff 100%)";
+        public static string KeystonePickColor = "linear-gradient(150deg, #0b849e 0%, #be1e37 100%)";
         public static string KeystonePickColorDeg = "150";
-        public static string KeystonePickColor1 = "#00008bff";
+        public static string KeystonePickColor1 = "#0b849e";
         public static string KeystonePickColorPercent1 = "0";
-        public static string KeystonePickColor2 = "#8b0000ff";
+        public static string KeystonePickColor2 = "#be1e37";
         public static string KeystonePickColorPercent2 = "100";
 
-        public static string KeystonePickColorSave = "linear-gradient(150deg, #00008bff 0%, #8b0000ff 100%)";
+        public static string KeystonePickColorSave = "linear-gradient(150deg, #0b849e 0%, #be1e37 100%)";
         public static string KeystonePickColorDegSave = "150";
-        public static string KeystonePickColor1Save = "#00008bff";
+        public static string KeystonePickColor1Save = "#0b849e";
         public static string KeystonePickColorPercent1Save = "0";
-        public static string KeystonePickColor2Save = "#8b0000ff";
+        public static string KeystonePickColor2Save = "#be1e37";
         public static string KeystonePickColorPercent2Save = "100";
 
         //Personalisation Red Side
@@ -352,16 +352,16 @@ namespace OSL_Server.Pages
             }
         }
 
-        private string SizeTimer(double multiCurentCount)
-        {
-            int size = 1750 - ((int)(currentCount * multiCurentCount) + timePhase);
-            //Console.WriteLine("size : " + size);
-            if (size <= 0)
-            {
-                size = 0;
-            }
-            return size.ToString() + "px";
-        }
+        //private string SizeTimer(double multiCurentCount)
+        //{
+        //    int size = 1750 - ((int)(currentCount * multiCurentCount) + timePhase);
+        //    //Console.WriteLine("size : " + size);
+        //    if (size <= 0)
+        //    {
+        //        size = 0;
+        //    }
+        //    return size.ToString() + "px";
+        //}
 
         private string PictureExist(string picture)
         {

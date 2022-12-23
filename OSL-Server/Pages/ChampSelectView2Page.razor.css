@@ -342,6 +342,15 @@ div {
     -webkit-filter: saturate(0.6);
 }
 
+.champ-select-footer-pick-keystone .gradient-background-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% );
+}
+
 /*###########################################################*/
 /*########################## Patch ##########################*/
 /*###########################################################*/
@@ -423,6 +432,56 @@ div {
 /*###########################################################*/
 /*########################## Timer ##########################*/
 /*###########################################################*/
+
+.bar {
+    /* font-size: 10px */
+    width: 30em height: 1em border-radius: 0.5em position: relative background: #f2f2f2 box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1)
+}
+
+    .bar .percentage {
+        position: relative font-size: 1em background: tomato height: 1em border-radius: 0.5em
+    }
+
+.has-tip:before,
+.has-tip:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+}
+
+.has-tip:before {
+    bottom: -10px;
+    right: -5px;
+    border: 5px solid;
+    border-color: transparent transparent tomato transparent;
+    transition: opacity 0.1s;
+}
+
+.has-tip:after {
+    content: attr(data-perc);
+    bottom: 0;
+    right: 0;
+    white-space: nowrap;
+    padding: 0.6em 1em;
+    border-radius: 2em;
+    line-height: 1;
+    color: #fff;
+    background: tomato;
+    transform: translateX(50%) translateY(100%);
+    transition: transform 0.2s, opacity 0.1s;
+}
+
+.has-tip:hover:before,
+.has-tip.active:before {
+    opacity: 1;
+}
+
+.has-tip:hover:after,
+.has-tip.active:after {
+    opacity: 1;
+    transform: translateX(50%) translateY(100%) translateY(10px);
+}
+
 .champ-select-footer-timer {
     bottom: 340px;
     width: 1740px;

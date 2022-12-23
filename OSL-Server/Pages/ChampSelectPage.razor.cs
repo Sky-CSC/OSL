@@ -86,6 +86,8 @@ namespace OSL_Server.Pages
 
             public bool OverlayBackground { get; set; } = true;
             public bool DisplaySummonerSpell { get; set; } = false;
+            public bool EnableTimerView2 { get; set; } = true;
+            public bool EnableTimerView3 { get; set; } = true;
         }
 
         private string TempsBlueSideBorderColor()

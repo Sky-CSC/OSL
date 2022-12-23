@@ -4,55 +4,98 @@
 @using static OSL_Server.Pages.ChampSelectView1Page.ChampSelect
 @layout EmptyLayout
 
+@inject IJSRuntime JS
+
+
 <PageTitle>Champ Select Overlay 2</PageTitle>
 @if (overlayLoaded)
 {
+    @*<div class="bar">
+        <div class="percentage has-tip" style="width: 50%" data-perc="50%">
+        </div>
+    </div>*@
+
+    @*string phaseTimerTest = ChampSelectTimer.phaseTimeFast.ToString() + "px";*@
+    @*<progress value="@ChampSelectTimer.phaseTimeFast" max="1750">70 %</progress>*@
+
+    @*<div class="col-md-4 p-3">
+        <RadzenCard>
+            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">ProgressBar in indeterminate mode</RadzenText>
+            <RadzenProgressBar Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+        </RadzenCard>
+    </div>*@
+
     <div class="display-champ-select">
         @*<div class="display-champ-select" style="background: url(../assets/champselect/ChampSelectView2-2.png);">*@
 
         <div class="overlay-type-2">
             <div class="champ-select-footer-timer" style="background: @TimerBackground">
-                @if (SideInProgress() == 1)
-                {
-                    timerBlue = true;
-                    double multiCurentCount = 3.4;
-                    if (timerRed == true)
-                    {
-                        currentCount = 0;
-                        timerRed = false;
-                        timerBlueRed = false;
+                @*@if (SideInProgress() == 1)
+            {
+            timerBlue = true;
+            double multiCurentCount = 3.4;
+            if (timerRed == true)
+            {
+            currentCount = 0;
+            timerRed = false;
+            timerBlueRed = false;
 
-                    }
-                    <div class="champ-select-footer-timer-blue" style="width: @SizeTimer(multiCurentCount); background: @TimerBlue;">
-                    </div>
-                }
-                else if (SideInProgress() == 2)
-                {
-                    timerRed = true;
-                    double multiCurentCount = 3.4;
-                    if (timerBlue == true)
+            }
+            <div class="champ-select-footer-timer-blue" style="width: @SizeTimer(multiCurentCount); background: @TimerBlue;">
+            </div>
+            }
+            else if (SideInProgress() == 2)
+            {
+            timerRed = true;
+            double multiCurentCount = 3.4;
+            if (timerBlue == true)
+            {
+            currentCount = 0;
+            timerBlue = false;
+            timerBlueRed = false;
+            }
+            <div class="champ-select-footer-timer-red" style="width: @SizeTimer(multiCurentCount); background: @TimerRed;">
+            </div>
+            }
+            else
+            {
+            timerBlueRed = true;
+            double multiCurentCount = 1.5;
+            if (timerBlue == true || timerRed == true)
+            {
+            currentCount = 0;
+            timerBlue = false;
+            timerRed = false;
+            }
+            <div class="champ-select-footer-timer-end" style="width: @SizeTimer(multiCurentCount); background: @TimerEnd;">
+            </div>
+            }*@
+                @{
+                    if (@ChampSelectPage.OverlayText.EnableTimerView2 == true)
                     {
-                        currentCount = 0;
-                        timerBlue = false;
-                        timerBlueRed = false;
-                    }
-                    <div class="champ-select-footer-timer-red" style="width: @SizeTimer(multiCurentCount); background: @TimerRed;">
-                    </div>
-                }
-                else
-                {
-                    timerBlueRed = true;
-                    double multiCurentCount = 1.5;
-                    if (timerBlue == true || timerRed == true)
-                    {
-                        currentCount = 0;
-                        timerBlue = false;
-                        timerRed = false;
-                    }
-                    <div class="champ-select-footer-timer-end" style="width: @SizeTimer(multiCurentCount); background: @TimerEnd;">
-                    </div>
-                }
+                        @*@{
+            string phaseTimer = ChampSelectTimer.phaseTimeFast.ToString() + "px";
+            //Console.WriteLine($"Test  {ChampSelectTimer.phaseTimeFast}");
+            //Console.WriteLine($"Test  {phaseTimer}");
+            }*@
+                        if (SideInProgress() == 1)
+                        {
 
+                            <div class="champ-select-footer-timer-blue" style="width: @(ChampSelectTimer.phaseTimeFast.ToString() + "px"); background: @TimerBlue;">
+                            </div>
+                        }
+                        else if (SideInProgress() == 2)
+                        {
+                            <div class="champ-select-footer-timer-red" style="width: @(ChampSelectTimer.phaseTimeFast.ToString() + "px"); background: @TimerRed;">
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="champ-select-footer-timer-end" style="width: @(ChampSelectTimer.phaseTimeFast.ToString() + "px"); background: @TimerEnd;">
+                            </div>
+                        }
+                    }
+                }
             </div>
 
             <div class="champ-select-footer-pick">
@@ -146,6 +189,7 @@
                     }
                 </div>
                 <div class="champ-select-footer-pick-keystone" style="background: @KeystonePickColor">
+                    <div class="gradient-background-overlay"></div>
                 </div>
                 <div class="side" id="redSide">
                     @{
@@ -388,16 +432,13 @@ else
     <div class="alert">
         <h1><strong>Info!</strong> Champ Select view 2 is disabled</h1>
     </div>
+    @* <progress value="@progressValue" max="1750" style="width: 100%">@(progressValue.ToString() + " px")</progress>
+    <button @onclick="@startProgress">Start</button>*@
 }
 
 
 @code {
-    private bool timerBlue = false;
-    private bool timerRed = false;
-    private bool timerBlueRed = false;
-    private int currentCount = 0;
-    private static int timePhase = 0;
-    private System.Timers.Timer timer = new(50);
+    private System.Timers.Timer timer = new(10);
 
     protected override void OnInitialized()
     {
@@ -409,10 +450,41 @@ else
     {
         _ = InvokeAsync(() =>
         {
-            currentCount++;
+            //progressValue++;
+            //startProgress();
             StateHasChanged();
         });
     }
 
     public void Dispose() => timer.Dispose();
+
+
+
+
+
+
+
+
+
+
+
+    //public int progressValue { get; set; } = 1750;
+
+    //private void startProgress()
+    //{
+    //    //while (progressValue != 0)
+    //    //{
+    //        progressValue--;
+    //        //Thread.Sleep(100);
+    //    //}
+    //    //StateHasChanged();
+    //    //for (int i = 0; i < 100; i++)
+    //    //{
+    //    //    this.progressValue = i;
+    //    //    StateHasChanged();
+    //    //    Thread.Sleep(100);
+    //    //}
+    //}
+
+
 }

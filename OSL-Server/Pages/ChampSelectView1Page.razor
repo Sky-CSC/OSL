@@ -29,28 +29,12 @@
                     @{
                         if (SideInProgress() == 1)
                         {
-                            timerBlue = true;
-                            if (timerRed == true)
-                            {
-                                //Timer précédent était rouge
-                                currentCount = 0;
-                                timerRed = false;
-                                timerBlueRed = false;
-                            }
-                            int timer = 0;
-                            timer = timePhase - currentCount;
-                            //DateTime date1 = DateTime.Now;
-                            //long timer2 = timePhase - Int16.Parse(date1.ToString("ss"));
-                            //Console.WriteLine(timer);
-                            if (timer <= 0)
-                            {
-                                timer = 0;
-                            }
-                            if (timer <= 9)
+                            if (ChampSelectTimer.phaseTime <= 9)
                             {
                                 <div class="timer timer-blue">
                                     <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
-                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @BlueSideTimerTexteColor">@timer</div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
@@ -58,32 +42,20 @@
                             {
                                 <div class="timer timer-blue">
                                     <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
-                                        <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@timer</div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
                         }
                         else if (SideInProgress() == 0)
                         {
-                            timerBlueRed = true;
-                            if (timerRed == true || timerBlue == true)
-                            {
-                                //Timer précédent était rouge
-                                currentCount = 0;
-                                timerRed = false;
-                                timerBlue = false;
-                            }
-                            int timer = 0;
-                            timer = timePhase - currentCount;
-                            if (timer <= 0)
-                            {
-                                timer = 0;
-                            }
-                            if (timer <= 9)
+                            if (ChampSelectTimer.phaseTime <= 9)
                             {
                                 <div class="timer timer-blue">
                                     <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
-                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @BlueSideTimerTexteColor">@timer</div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
@@ -91,7 +63,8 @@
                             {
                                 <div class="timer timer-blue">
                                     <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
-                                        <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@timer</div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
@@ -121,25 +94,12 @@
                     @{
                         if (SideInProgress() == 2)
                         {
-                            timerRed = true;
-                            if (timerBlue == true)
-                            {
-                                //Timer précédent était rouge
-                                currentCount = 0;
-                                timerBlue = false;
-                                timerBlueRed = false;
-                            }
-                            int timer = 0;
-                            timer = timePhase - currentCount;
-                            if (timer <= 0)
-                            {
-                                timer = 0;
-                            }
-                            if (timer <= 9)
+                            if (ChampSelectTimer.phaseTime <= 9)
                             {
                                 <div class="timer timer-red">
                                     <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
-                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @RedSideTimerTexteColor">@timer</div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
@@ -147,32 +107,20 @@
                             {
                                 <div class="timer timer-red">
                                     <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
-                                        <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@timer</div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
                         }
                         else if (SideInProgress() == 0)
                         {
-                            timerBlueRed = true;
-                            if (timerRed == true || timerBlue == true)
-                            {
-                                //Timer précédent était rouge
-                                currentCount = 0;
-                                timerRed = false;
-                                timerBlue = false;
-                            }
-                            int timer = 0;
-                            timer = timePhase - currentCount;
-                            if (timer <= 0)
-                            {
-                                timer = 0;
-                            }
-                            if (timer <= 9)
+                            if (ChampSelectTimer.phaseTime <= 9)
                             {
                                 <div class="timer timer-red">
                                     <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
-                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @RedSideTimerTexteColor">@timer</div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
@@ -180,7 +128,8 @@
                             {
                                 <div class="timer timer-red">
                                     <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
-                                        <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@timer</div>
+                                        <div class="gradient-background-overlay"></div>
+                                        <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
@@ -439,7 +388,7 @@ else
     private bool timerBlueRed = false;
     private int currentCount = 0;
     private static int timePhase = 0;
-    private System.Timers.Timer timer = new(1000);
+    private System.Timers.Timer timer = new(31);
     private static int alreadyInit = 0;
 
     protected override void OnInitialized()

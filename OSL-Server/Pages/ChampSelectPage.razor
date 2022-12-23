@@ -191,6 +191,11 @@
                     <EditForm Model="@OverlayText" OnValidSubmit="@SwitchSideRedBlue">
                         <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
                     </EditForm>
+                    <br />
+                    <EditForm Model="@OverlayText" OnValidSubmit="@OverlayBackgroundSubmit">
+                        <label style="font-weight: bold">Enable Timer : </label>
+                        <InputCheckbox id="name" @bind-Value="OverlayText.EnableTimerView2" />
+                    </EditForm>
 
                     <br /><spam style="font-weight: bold">Timer Background  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.TimerBackground" @onclick="@ChampSelectView2Page.SetTimerBackground"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.TimerBackground"> @ChampSelectView2Page.TimerBackground</spam>
                     <br /><spam style="font-weight: bold">Timer Blue  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.TimerBlue" @onclick="@ChampSelectView2Page.SetTimerBlue"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.TimerBlue"> @ChampSelectView2Page.TimerBlue</spam>
@@ -258,6 +263,11 @@
                     </EditForm>
                     <EditForm Model="@OverlayText" OnValidSubmit="@SwitchSideRedBlue">
                         <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                    </EditForm>
+                    <br />
+                    <EditForm Model="@OverlayText" OnValidSubmit="@OverlayBackgroundSubmit">
+                        <label style="font-weight: bold">Enable Timer : </label>
+                        <InputCheckbox id="name" @bind-Value="OverlayText.EnableTimerView3" />
                     </EditForm>
                     <br /><spam style="font-weight: bold">Timer Background  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.TimerBackground" @onclick="@ChampSelectView3Page.SetTimerBackground"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.TimerBackground"> @ChampSelectView3Page.TimerBackground</spam>
                     <br /><spam style="font-weight: bold">Timer Blue  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.TimerBlue" @onclick="@ChampSelectView3Page.SetTimerBlue"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.TimerBlue"> @ChampSelectView3Page.TimerBlue</spam>
@@ -489,7 +499,7 @@
         ChampSelectView1Page.RedSideTimerBorderColor = OverlayText.RedSideTimerBorderColor.ToString() + "px solid " + ChampSelectView1Page.RedSideTimerBorderColorNotSet;
     }
 
-     private void KeystonePickColorSubmitView2()
+    private void KeystonePickColorSubmitView2()
     {
         ChampSelectView2Page.KeystonePickColorDeg = OverlayText.KeystonePickColorDeg2.ToString();
         ChampSelectView2Page.KeystonePickColorPercent1 = OverlayText.KeystonePickColorPercent12.ToString();

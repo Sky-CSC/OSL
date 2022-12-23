@@ -437,6 +437,15 @@ div {
         transition: opacity 0.3s;
     }
 
+        .timer .timer-bg .gradient-background-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% );
+        }
+
     .timer .timer-inner {
         position: absolute;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4), -1px 1px 3px rgba(0, 0, 0, 0.4), -1px -1px 3px rgba(0, 0, 0, 0.4), 1px -1px 3px rgba(0, 0, 0, 0.4);
