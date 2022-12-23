@@ -29,7 +29,7 @@ namespace OSL_Client.RiotApp.API.LCU
                 {
                     _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", "Game found");
                     //If the game is finish and we want to watch it, no champ select display but, champ pick and ban display
-                    InGameProcess.InGame();
+                    //InGameProcess.InGame();
                 }
                 else
                 {
@@ -74,7 +74,7 @@ namespace OSL_Client.RiotApp.API.LCU
             else if (gameFlowPhase.Equals(InProgress))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {InProgress}");
-                InGameProcess.InGame();
+                //InGameProcess.InGame();
             }
 
             else if (gameFlowPhase.Equals(Reconnect))
