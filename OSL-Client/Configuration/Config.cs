@@ -12,8 +12,9 @@ namespace OSL_Client.Configuration
     {
         private static OSLLogger _logger = new OSLLogger("Config");
 
-        public static string serverIPSocket = "localhost";
-        public static int serverPortSocket = 456789;
+        //public static string serverIPSocket = "localhost";
+        public static string serverIPSocket = "127.0.0.1";
+        public static int serverPortSocket = 45678;
         public static string leagueClientProcess = "LeagueClient";
         public static string leagueClientFullFilePath = "";
         public static string leagueClientPath = "";
