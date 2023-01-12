@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace OSL_Client.Communication.OSLServer
-{   
+{
 
     // State object for receiving data from remote device.
     public class StateObject
@@ -46,7 +46,7 @@ namespace OSL_Client.Communication.OSLServer
         //private static string ip = "127.0.0.1";
         //private static int port = 45879;
 
-        public static void StartClient(String data)
+        public static bool StartClient(String data)
         {
             // Connect to a remote device.  
             try
@@ -54,9 +54,9 @@ namespace OSL_Client.Communication.OSLServer
                 // Establish the remote endpoint for the socket.  
                 // The name of the
                 // remote device is "host.contoso.com".  
-                IPHostEntry ipHostInfo = Dns.Resolve(Config.serverIPSocket);
+                IPHostEntry ipHostInfo = Dns.Resolve(Config.serverIPSocketOSLServer);
                 IPAddress ipAddress = ipHostInfo.AddressList[0];
-                IPEndPoint remoteEP = new IPEndPoint(ipAddress, Config.serverPortSocket);
+                IPEndPoint remoteEP = new IPEndPoint(ipAddress, Config.serverPortSocketOSLServer);
 
                 // Create a TCP/IP socket.  
                 Socket client = new Socket(ipAddress.AddressFamily,
@@ -65,6 +65,7 @@ namespace OSL_Client.Communication.OSLServer
                 // Connect to the remote endpoint.  
                 client.BeginConnect(remoteEP,
                     new AsyncCallback(ConnectCallback), client);
+                //Console.WriteLine(client.Connected);
                 connectDone.WaitOne();
 
                 //_logger.log(LoggingLevel.INFO, "StartClient()", "Data : " + data);
@@ -85,7 +86,9 @@ namespace OSL_Client.Communication.OSLServer
             catch (Exception e)
             {
                 _logger.log(LoggingLevel.ERROR, "StartClient()", "Error Client : " + e.Message);
+                return false;
             }
+            return true;
         }
     }
 }
