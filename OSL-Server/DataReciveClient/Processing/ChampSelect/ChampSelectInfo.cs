@@ -12,6 +12,8 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNet.SignalR.Client.Http;
 using System.Diagnostics;
+using OSL_Server.Communication;
+using System.Linq;
 
 namespace OSL_Server.DataReciveClient.Processing.ChampSelect
 {
@@ -20,58 +22,144 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         private static OSLLogger _logger = new OSLLogger("ChampSelectInfo");
         public static Session session;
         public static Session previousSession;
+        public static bool alreadyLastPhase = false;
+
         public static void InChampSelect(string content)
         {
             previousSession = session;
             session = ChampSelectProcessingDataRecive(content);
-            int lastAction = session.Actions.Count - 1;
-            int lastActionInAction = session.Actions[lastAction].Count - 1;
-            bool sameTurn = false;
-            if (previousSession != null)
-            {
-                int lastActionPreviousSession = previousSession.Actions.Count - 1;
-                int lastActionInActionPreviousSession = previousSession.Actions[lastActionPreviousSession].Count - 1;
-                if (previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Id == session.Actions[lastAction][lastActionInAction].Id)
-                {
-                    //Same turn
-                    sameTurn = true;
-                }
-                //if (previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Id == session.Actions[lastAction][lastActionInAction].Id && previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Completed.Equals(false))
-                //{
-                //    sameTurn = false;
-                //}
-            }
-            int timer = 0;
-            int timerFast = 0;
-            if (sameTurn == false && session.Actions[lastAction][lastActionInAction].Type.Equals("ban") && session.Actions[lastAction][lastActionInAction].Completed.Equals(false))
-            {
-                timer = 27;
-                ChampSelectTimer.phaseTimer.Stop();
-                ChampSelectTimer.DecreasingTimerChapSelect(timer);
-                timerFast = 1750;
-                ChampSelectTimer.phaseTimerFast.Stop();
-                ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 1);
-            }
-            else if (sameTurn == false && session.Actions[lastAction][lastActionInAction].Type.Equals("pick") && session.Actions[lastAction][lastActionInAction].Completed.Equals(false))
-            {
-                timer = 27;
-                ChampSelectTimer.phaseTimer.Stop();
-                ChampSelectTimer.DecreasingTimerChapSelect(timer);
-                timerFast = 1750;
-                ChampSelectTimer.phaseTimerFast.Stop();
-                ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 1);
-            }
-            else if (session.Actions[lastAction][lastActionInAction].Completed.Equals(true))
-            {
-                timer = 59;
-                ChampSelectTimer.phaseTimer.Stop();
-                ChampSelectTimer.DecreasingTimerChapSelect(timer);
-                timerFast = 1750;
-                ChampSelectTimer.phaseTimerFast.Stop();
-                ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 32);
-            }
 
+            bool sameTurn = false;
+            bool actionInProgress = false; 
+            //Console.WriteLine("YOLO ", session.Actions[0][0].ActorCellId.ToString());
+            _logger.log(LoggingLevel.INFO, "InChampSelect()", $"alreadyLastPhase {alreadyLastPhase}");
+
+            if (session.Timer.Phase.Equals("GAME_STARTING"))
+            {
+                ChampSelectTimer.phaseTimer.Stop();
+                ChampSelectTimer.DecreasingTimerChapSelect(180);
+                ChampSelectTimer.phaseTimerFast.Stop();
+                ChampSelectTimer.DecreasingTimerChapSelectFast(1750, 96);
+            }
+            else
+            {
+                foreach (var tabActions in session.Actions)
+                {
+                    foreach (var actions in tabActions)
+                    {
+                        if (actions.IsInProgress)
+                        {
+                            actionInProgress = true;
+                            alreadyLastPhase = false;
+                            if (actions.Type.Equals("ban") || actions.Type.Equals("pick"))
+                            {
+                                if (previousSession != null)
+                                {
+                                    foreach (var tabActionsPrevious in previousSession.Actions)
+                                    {
+                                        foreach (var actionsPrevious in tabActionsPrevious)
+                                        {
+                                            if (actionsPrevious.Id == actions.Id && !actionsPrevious.Completed && actionsPrevious.IsInProgress == actions.IsInProgress)
+                                            {
+                                                sameTurn = true;
+                                            }
+                                        }
+                                    }
+                                    if (!sameTurn)
+                                    {
+                                        ChampSelectTimer.phaseTimer.Stop();
+                                        ChampSelectTimer.DecreasingTimerChapSelect(27);
+                                        ChampSelectTimer.phaseTimerFast.Stop();
+                                        ChampSelectTimer.DecreasingTimerChapSelectFast(1750, 1);
+                                    }
+                                }
+                                else
+                                {
+                                    ChampSelectTimer.phaseTimer.Stop();
+                                    ChampSelectTimer.DecreasingTimerChapSelect(27);
+                                    ChampSelectTimer.phaseTimerFast.Stop();
+                                    ChampSelectTimer.DecreasingTimerChapSelectFast(1750, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (!actionInProgress && !alreadyLastPhase)
+                {
+                    //Console.WriteLine(session.Actions);
+                    //Console.WriteLine(previousSession.Actions);
+                    //Console.WriteLine("YOLO", Enumerable.SequenceEqual(session.Actions, previousSession.Actions));
+                    //Console.WriteLine("Oui ou non", session.Actions.  Contains(previousSession.Actions));
+                    //if (!session.Actions.Equals(previousSession.Actions))
+                    //{
+                    ChampSelectTimer.phaseTimer.Stop();
+                    ChampSelectTimer.DecreasingTimerChapSelect(59);
+                    ChampSelectTimer.phaseTimerFast.Stop();
+                    ChampSelectTimer.DecreasingTimerChapSelectFast(1750, 32);
+                    alreadyLastPhase = true;
+                    //}
+                }
+            }
         }
+
+        //public static void InChampSelect(string content)
+        //{
+        //    previousSession = session;
+        //    session = ChampSelectProcessingDataRecive(content);
+        //    int lastAction = session.Actions.Count - 1;
+        //    int lastActionInAction = session.Actions[lastAction].Count - 1;
+        //    bool sameTurn = false;
+        //    if (previousSession != null)
+        //    {
+        //        int lastActionPreviousSession = previousSession.Actions.Count - 1;
+        //        int lastActionInActionPreviousSession = previousSession.Actions[lastActionPreviousSession].Count - 1;
+        //        if (previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Id == session.Actions[lastAction][lastActionInAction].Id)
+        //        {
+        //            //Same turn
+        //            sameTurn = true;
+        //        }
+        //        //if (previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Id == session.Actions[lastAction][lastActionInAction].Id && previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Completed.Equals(false))
+        //        //{
+        //        //    sameTurn = false;
+        //        //}
+        //    }
+        //    int timer = 0;
+        //    int timerFast = 0;
+        //    _logger.log(LoggingLevel.INFO, "InChampSelect()", $"Last Action : {session.Actions[lastAction][lastActionInAction]}");
+
+        //    if (sameTurn == false && session.Actions[lastAction][lastActionInAction].Type.Equals("ban") && session.Actions[lastAction][lastActionInAction].Completed.Equals(false))
+        //    {
+        //        _logger.log(LoggingLevel.INFO, "InChampSelect()", $"Last Action ban : {session.Actions[lastAction][lastActionInAction]}");
+        //        timer = 27;
+        //        ChampSelectTimer.phaseTimer.Stop();
+        //        ChampSelectTimer.DecreasingTimerChapSelect(timer);
+        //        timerFast = 1750;
+        //        ChampSelectTimer.phaseTimerFast.Stop();
+        //        ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 1);
+        //    }
+        //    else if (sameTurn == false && session.Actions[lastAction][lastActionInAction].Type.Equals("pick") && session.Actions[lastAction][lastActionInAction].Completed.Equals(false))
+        //    {
+        //        _logger.log(LoggingLevel.INFO, "InChampSelect()", $"Last Action pick : {session.Actions[lastAction][lastActionInAction]}");
+        //        timer = 27;
+        //        ChampSelectTimer.phaseTimer.Stop();
+        //        ChampSelectTimer.DecreasingTimerChapSelect(timer);
+        //        timerFast = 1750;
+        //        ChampSelectTimer.phaseTimerFast.Stop();
+        //        ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 1);
+        //    }
+        //    else if (session.Actions[lastAction][lastActionInAction].Completed.Equals(true))
+        //    {
+        //        _logger.log(LoggingLevel.INFO, "InChampSelect()", $"Last Action end session: {session.Actions[lastAction][lastActionInAction]}");
+        //        timer = 59;
+        //        ChampSelectTimer.phaseTimer.Stop();
+        //        ChampSelectTimer.DecreasingTimerChapSelect(timer);
+        //        timerFast = 1750;
+        //        ChampSelectTimer.phaseTimerFast.Stop();
+        //        ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 32);
+        //    }
+
+        //}
 
         /// <summary>
         /// Write in a session the content of data recive by the client for make a 

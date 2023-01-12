@@ -62,7 +62,6 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         public static void DecreasingTimerChapSelectFast(int time, int interval)
         {
             //Pages.ChampSelectView2Page.progressValue = time;
-
             phaseTimeFast = time;
             phaseTimerFast = new System.Timers.Timer();
             phaseTimerFast.Elapsed += new ElapsedEventHandler(OnTimedEventFast);
