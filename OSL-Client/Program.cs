@@ -22,11 +22,16 @@ Console.WriteLine("# Hello and welcome to OSL manager #");
 Console.WriteLine("####################################\n");
 Console.ResetColor();
 
-//Config.LoadConfigHost();
+Config.LoadConfig();
 //Initialisation for acces att the champion selection or a game
 //PostCom.Test2();
 String data = "Hello OSL-Server is OSL-Client managed by Skynet";
 AsyncClient.StartClient(data);
+//while (!AsyncClient.StartClient(data))
+//{
+
+//    Thread.Sleep(1000);
+//}
 
 while (true)
 {
