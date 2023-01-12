@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OSL_Server.DataLoader.CDragon;
 using OSL_Server.Pages;
+using OSL_Server.Communication;
 
 namespace OSL_Server.Configuration
 {
@@ -17,10 +18,26 @@ namespace OSL_Server.Configuration
 
         public static void LoadConfig()
         {
+            LoadConfigServerSocket();
             LoadConfigCDragon();
             //LoadConfigChampSelectView1();
             //LoadConfigChampSelectView2();
             //LoadConfigChampSelectView3();
+        }
+
+        public static void LoadConfigServerSocket()
+        {
+            string filePath = "./" + "Configuration" + "/" + "configServerSocket.json";
+            dynamic configHost = JsonConvert.DeserializeObject(FileManagerLocal.ReadInFile(filePath));
+            try
+            {
+                AsyncServer.portSocketOSLServer = configHost.portOSLServer;
+                _logger.log(LoggingLevel.INFO, "LoadConfigServerSocket()", $"Config host load Port : {AsyncServer.portSocketOSLServer}");
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "LoadConfigServerSocket()", e.Message);
+            }
         }
 
         public static void LoadConfigCDragon()

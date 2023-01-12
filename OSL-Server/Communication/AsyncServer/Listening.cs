@@ -22,9 +22,9 @@ namespace OSL_Server.Communication
             //nimporte quelle ip
             IPAddress ipAddress = IPAddress.Any;
             //IPAddress ipAddress = ipHostInfo.AddressList[0];
-            _logger.log(LoggingLevel.INFO, "StartListening()", $"Host address : {ipAddress} Port : {Port}");
+            _logger.log(LoggingLevel.INFO, "StartListening()", $"Host address : {ipAddress} Port : {portSocketOSLServer}");
 
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, Port);
+            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, portSocketOSLServer);
             Socket listener = new Socket(AddressFamily.InterNetworkV6,
                 SocketType.Stream, ProtocolType.Tcp);
             listener.SetSocketOption(SocketOptionLevel.IPv6, SocketOptionName.IPv6Only, false);
@@ -47,7 +47,7 @@ namespace OSL_Server.Communication
                     allDone.Reset();
 
                     // Start an asynchronous socket to listen for connections.
-                    _logger.log(LoggingLevel.DEBUG, "StartListening()", $"Waiting for a connection... {Port}");
+                    _logger.log(LoggingLevel.DEBUG, "StartListening()", $"Waiting for a connection... {portSocketOSLServer}");
 
 
                     listener.BeginAccept(
