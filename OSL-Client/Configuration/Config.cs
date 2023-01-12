@@ -13,8 +13,8 @@ namespace OSL_Client.Configuration
         private static OSLLogger _logger = new OSLLogger("Config");
 
         //public static string serverIPSocket = "localhost";
-        public static string serverIPSocket = "127.0.0.1";
-        public static int serverPortSocket = 45678;
+        public static string serverIPSocketOSLServer = "127.0.0.1";
+        public static int serverPortSocketOSLServer = 45678;
         public static string leagueClientProcess = "LeagueClient";
         public static string leagueClientFullFilePath = "";
         public static string leagueClientPath = "";
@@ -31,18 +31,23 @@ namespace OSL_Client.Configuration
         //public static string LiveEventsAPIIP = "127.0.0.1";
         public static int LiveEventsAPIPort = 34243;
 
+        public static void LoadConfig()
+        {
+            LoadConfigServerSocket();
+        }
+
         /// <summary>
         /// Loads the config from the config file.
         /// </summary>
         public static void LoadConfigServerSocket()
         {
-            string filePath = "./" + "Config" + "/" + "configServerSocket.json";
+            string filePath = "./" + "Configuration" + "/" + "configServerSocketOSLServer.json";
             dynamic configHost = JsonConvert.DeserializeObject(FileManagerLocal.ReadInFile(filePath));
             try
             {
-                serverIPSocket = configHost.ip;
-                serverPortSocket = configHost.port;
-                _logger.log(LoggingLevel.INFO, "LoadConfigServerSocket()", "Config host load");
+                serverIPSocketOSLServer = configHost.ipOSLServer;
+                serverPortSocketOSLServer = configHost.portOSLServer;
+                _logger.log(LoggingLevel.INFO, "LoadConfigServerSocket()", $"Config host load Ip : {serverIPSocketOSLServer} Port : {serverPortSocketOSLServer}");
             }
             catch (Exception e)
             {
