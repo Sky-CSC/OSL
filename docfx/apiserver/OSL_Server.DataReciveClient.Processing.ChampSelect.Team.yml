@@ -11,6 +11,7 @@ items:
   - OSL_Server.DataReciveClient.Processing.ChampSelect.Team.Spell2Id
   - OSL_Server.DataReciveClient.Processing.ChampSelect.Team.SummonerId
   - OSL_Server.DataReciveClient.Processing.ChampSelect.Team.SummonerName
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
   langs:
   - csharp
   - vb
@@ -25,7 +26,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Team
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 162
+    startLine: 299
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -66,7 +67,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: CellId
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 164
+    startLine: 301
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -101,7 +102,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionId
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 165
+    startLine: 302
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -136,7 +137,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Spell1Id
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 166
+    startLine: 303
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -171,7 +172,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Spell2Id
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 167
+    startLine: 304
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -206,7 +207,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerId
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 168
+    startLine: 305
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -241,7 +242,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerName
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 169
+    startLine: 306
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -252,6 +253,41 @@ items:
       type: System.String
     content.vb: Public Property SummonerName As String
   overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.SummonerName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
+  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
+  id: TeamNum
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Team
+  langs:
+  - csharp
+  - vb
+  name: TeamNum
+  nameWithType: Team.TeamNum
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TeamNum
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 307
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public int TeamNum { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TeamNum As Integer
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum*
   modifiers.csharp:
   - public
   - get
@@ -607,3 +643,8 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
+  name: TeamNum
+  nameWithType: Team.TeamNum
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum

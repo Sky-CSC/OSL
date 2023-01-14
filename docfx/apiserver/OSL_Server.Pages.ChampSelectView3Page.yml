@@ -443,39 +443,6 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: OSL_Server.Pages.ChampSelectView3Page.BlueSideBackgroudSaved
-  commentId: F:OSL_Server.Pages.ChampSelectView3Page.BlueSideBackgroudSaved
-  id: BlueSideBackgroudSaved
-  parent: OSL_Server.Pages.ChampSelectView3Page
-  langs:
-  - csharp
-  - vb
-  name: BlueSideBackgroudSaved
-  nameWithType: ChampSelectView3Page.BlueSideBackgroudSaved
-  fullName: OSL_Server.Pages.ChampSelectView3Page.BlueSideBackgroudSaved
-  type: Field
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: BlueSideBackgroudSaved
-    path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
-    startLine: 28
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static string BlueSideBackgroudSaved
-    return:
-      type: System.String
-    content.vb: Public Shared BlueSideBackgroudSaved As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 - uid: OSL_Server.Pages.ChampSelectView3Page.BlueSideBackgroud
   commentId: F:OSL_Server.Pages.ChampSelectView3Page.BlueSideBackgroud
   id: BlueSideBackgroud
@@ -494,7 +461,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBackgroud
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
-    startLine: 29
+    startLine: 28
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -503,6 +470,39 @@ items:
     return:
       type: System.String
     content.vb: Public Shared BlueSideBackgroud As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.ChampSelectView3Page.BlueSideBackgroudSaved
+  commentId: F:OSL_Server.Pages.ChampSelectView3Page.BlueSideBackgroudSaved
+  id: BlueSideBackgroudSaved
+  parent: OSL_Server.Pages.ChampSelectView3Page
+  langs:
+  - csharp
+  - vb
+  name: BlueSideBackgroudSaved
+  nameWithType: ChampSelectView3Page.BlueSideBackgroudSaved
+  fullName: OSL_Server.Pages.ChampSelectView3Page.BlueSideBackgroudSaved
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideBackgroudSaved
+    path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
+    startLine: 29
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public static string BlueSideBackgroudSaved
+    return:
+      type: System.String
+    content.vb: Public Shared BlueSideBackgroudSaved As String
   modifiers.csharp:
   - public
   - static

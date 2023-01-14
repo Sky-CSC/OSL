@@ -299,7 +299,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DisplayInfo
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 119
+    startLine: 122
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages

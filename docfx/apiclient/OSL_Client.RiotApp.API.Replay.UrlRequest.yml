@@ -20,10 +20,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: UrlRequest
     path: ../OSL-Client/RiotApp/API/Replay/ReplayApi.cs
-    startLine: 30
+    startLine: 36
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.Replay
+  summary: "\nURL replay api\n"
+  example: []
   syntax:
     content: public class UrlRequest
     content.vb: Public Class UrlRequest
@@ -61,7 +63,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: replaygame
     path: ../OSL-Client/RiotApp/API/Replay/ReplayApi.cs
-    startLine: 32
+    startLine: 38
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.Replay

@@ -11,6 +11,7 @@ items:
   - OSL_Client.Configuration.Config.leagueClientPath
   - OSL_Client.Configuration.Config.leagueClientProcess
   - OSL_Client.Configuration.Config.LiveEventsAPIPort
+  - OSL_Client.Configuration.Config.LoadConfig
   - OSL_Client.Configuration.Config.LoadConfigServerSocket
   - OSL_Client.Configuration.Config.localIpHttp
   - OSL_Client.Configuration.Config.localIpHttps
@@ -20,8 +21,8 @@ items:
   - OSL_Client.Configuration.Config.lockFileProcessId
   - OSL_Client.Configuration.Config.loginRiot
   - OSL_Client.Configuration.Config.portRiot
-  - OSL_Client.Configuration.Config.serverIPSocket
-  - OSL_Client.Configuration.Config.serverPortSocket
+  - OSL_Client.Configuration.Config.serverIPSocketOSLServer
+  - OSL_Client.Configuration.Config.serverPortSocketOSLServer
   - OSL_Client.Configuration.Config.SetHostPassGameClientApi
   langs:
   - csharp
@@ -37,10 +38,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
+  summary: "\nModule for configure client application\n"
+  example: []
   syntax:
     content: public class Config
     content.vb: Public Class Config
@@ -60,66 +63,66 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Client.Configuration.Config.serverIPSocket
-  commentId: F:OSL_Client.Configuration.Config.serverIPSocket
-  id: serverIPSocket
+- uid: OSL_Client.Configuration.Config.serverIPSocketOSLServer
+  commentId: F:OSL_Client.Configuration.Config.serverIPSocketOSLServer
+  id: serverIPSocketOSLServer
   parent: OSL_Client.Configuration.Config
   langs:
   - csharp
   - vb
-  name: serverIPSocket
-  nameWithType: Config.serverIPSocket
-  fullName: OSL_Client.Configuration.Config.serverIPSocket
+  name: serverIPSocketOSLServer
+  nameWithType: Config.serverIPSocketOSLServer
+  fullName: OSL_Client.Configuration.Config.serverIPSocketOSLServer
   type: Field
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: serverIPSocket
+    id: serverIPSocketOSLServer
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
   syntax:
-    content: public static string serverIPSocket
+    content: public static string serverIPSocketOSLServer
     return:
       type: System.String
-    content.vb: Public Shared serverIPSocket As String
+    content.vb: Public Shared serverIPSocketOSLServer As String
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: OSL_Client.Configuration.Config.serverPortSocket
-  commentId: F:OSL_Client.Configuration.Config.serverPortSocket
-  id: serverPortSocket
+- uid: OSL_Client.Configuration.Config.serverPortSocketOSLServer
+  commentId: F:OSL_Client.Configuration.Config.serverPortSocketOSLServer
+  id: serverPortSocketOSLServer
   parent: OSL_Client.Configuration.Config
   langs:
   - csharp
   - vb
-  name: serverPortSocket
-  nameWithType: Config.serverPortSocket
-  fullName: OSL_Client.Configuration.Config.serverPortSocket
+  name: serverPortSocketOSLServer
+  nameWithType: Config.serverPortSocketOSLServer
+  fullName: OSL_Client.Configuration.Config.serverPortSocketOSLServer
   type: Field
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: serverPortSocket
+    id: serverPortSocketOSLServer
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
   syntax:
-    content: public static int serverPortSocket
+    content: public static int serverPortSocketOSLServer
     return:
       type: System.Int32
-    content.vb: Public Shared serverPortSocket As Integer
+    content.vb: Public Shared serverPortSocketOSLServer As Integer
   modifiers.csharp:
   - public
   - static
@@ -144,7 +147,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: leagueClientProcess
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -177,7 +180,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: leagueClientFullFilePath
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -210,7 +213,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: leagueClientPath
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -243,7 +246,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFilePath
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -276,7 +279,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFileProcessId
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 20
+    startLine: 24
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -309,7 +312,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFilePort
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 21
+    startLine: 25
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -342,7 +345,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFilePassword
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -375,7 +378,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: localIpHttps
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 23
+    startLine: 27
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -408,7 +411,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: localIpHttp
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -441,7 +444,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: loginRiot
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -474,7 +477,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: portRiot
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 26
+    startLine: 30
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -507,7 +510,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameClientApiLocalHost
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -540,7 +543,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameClientApiPassword
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 28
+    startLine: 32
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -573,7 +576,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LiveEventsAPIPort
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -582,6 +585,40 @@ items:
     return:
       type: System.Int32
     content.vb: Public Shared LiveEventsAPIPort As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.LoadConfig
+  commentId: M:OSL_Client.Configuration.Config.LoadConfig
+  id: LoadConfig
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig()
+  nameWithType: Config.LoadConfig()
+  fullName: OSL_Client.Configuration.Config.LoadConfig()
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfig
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 39
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  summary: "\nLoad configuration\n"
+  example: []
+  syntax:
+    content: public static void LoadConfig()
+    content.vb: Public Shared Sub LoadConfig
+  overload: OSL_Client.Configuration.Config.LoadConfig*
   modifiers.csharp:
   - public
   - static
@@ -606,7 +643,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigServerSocket
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 35
+    startLine: 47
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
@@ -640,14 +677,17 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetHostPassGameClientApi
     path: ../OSL-Client/Configuration/Config.cs
-    startLine: 51
+    startLine: 67
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
+  summary: "\nGame client api host and password\n"
+  example: []
   syntax:
     content: public static bool SetHostPassGameClientApi()
     return:
       type: System.Boolean
+      description: ''
     content.vb: Public Shared Function SetHostPassGameClientApi As Boolean
   overload: OSL_Client.Configuration.Config.SetHostPassGameClientApi*
   modifiers.csharp:
@@ -968,6 +1008,11 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: OSL_Client.Configuration.Config.LoadConfig*
+  commentId: Overload:OSL_Client.Configuration.Config.LoadConfig
+  name: LoadConfig
+  nameWithType: Config.LoadConfig
+  fullName: OSL_Client.Configuration.Config.LoadConfig
 - uid: OSL_Client.Configuration.Config.LoadConfigServerSocket*
   commentId: Overload:OSL_Client.Configuration.Config.LoadConfigServerSocket
   name: LoadConfigServerSocket

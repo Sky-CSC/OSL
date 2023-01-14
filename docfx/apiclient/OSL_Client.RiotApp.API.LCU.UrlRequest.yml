@@ -29,10 +29,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: UrlRequest
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 114
+    startLine: 127
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
+  summary: "\nList of url for local LCU riot api\n"
+  example: []
   syntax:
     content: public class UrlRequest
     content.vb: Public Class UrlRequest
@@ -70,7 +72,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: riotclientappname
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 116
+    startLine: 129
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -105,7 +107,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolgameflowv1session
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 117
+    startLine: 130
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -140,7 +142,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolgameflowv1gameflowphase
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 118
+    startLine: 131
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -175,7 +177,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolsummonerv1summoners
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 119
+    startLine: 132
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -210,7 +212,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1gridchampions
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 123
+    startLine: 136
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -245,7 +247,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1session
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 124
+    startLine: 137
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -280,7 +282,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolsummonerv1summonersid
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 125
+    startLine: 138
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -315,7 +317,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1bannablechampionids
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 126
+    startLine: 139
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -350,7 +352,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1currentchampion
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 127
+    startLine: 140
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -385,7 +387,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectlegacyv1session
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 130
+    startLine: 143
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU

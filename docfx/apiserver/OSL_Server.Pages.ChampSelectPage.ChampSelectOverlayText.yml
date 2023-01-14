@@ -11,6 +11,9 @@ items:
   - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.BlueSideTeamName3
   - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.BlueSideTimerBorderColor
   - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.BlueTeamSubtext
+  - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
   - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.KeystonePickColorDeg2
   - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.KeystonePickColorDeg3
   - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.KeystonePickColorPercent12
@@ -1104,6 +1107,111 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  commentId: P:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  id: DisplaySummonerSpell
+  parent: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText
+  langs:
+  - csharp
+  - vb
+  name: DisplaySummonerSpell
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectPage.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplaySummonerSpell
+    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
+    startLine: 87
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public bool DisplaySummonerSpell { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplaySummonerSpell As Boolean
+  overload: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  commentId: P:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  id: EnableTimerView2
+  parent: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText
+  langs:
+  - csharp
+  - vb
+  name: EnableTimerView2
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectPage.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EnableTimerView2
+    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
+    startLine: 88
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public bool EnableTimerView2 { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnableTimerView2 As Boolean
+  overload: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  commentId: P:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  id: EnableTimerView3
+  parent: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText
+  langs:
+  - csharp
+  - vb
+  name: EnableTimerView3
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectPage.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EnableTimerView3
+    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
+    startLine: 89
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public bool EnableTimerView3 { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnableTimerView3 As Boolean
+  overload: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: OSL_Server.Pages
   commentId: N:OSL_Server.Pages
@@ -1518,3 +1626,18 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell*
+  commentId: Overload:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  name: DisplaySummonerSpell
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2*
+  commentId: Overload:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  name: EnableTimerView2
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3*
+  commentId: Overload:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  name: EnableTimerView3
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3

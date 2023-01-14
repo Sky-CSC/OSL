@@ -78,6 +78,8 @@
     name: Bans
   - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo
     name: ChampSelectInfo
+  - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+    name: ChampSelectTimer
   - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
     name: Session
   - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Team

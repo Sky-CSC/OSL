@@ -22,10 +22,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameFlowPhaseStatus
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 106
+    startLine: 116
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
+  summary: "\nStatus send to client to know phase and this status\n"
+  example: []
   syntax:
     content: public class GameFlowPhaseStatus
     content.vb: Public Class GameFlowPhaseStatus
@@ -63,7 +65,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Phase
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 109
+    startLine: 119
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -98,7 +100,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Status
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 110
+    startLine: 120
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -133,7 +135,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Date
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 111
+    startLine: 121
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU

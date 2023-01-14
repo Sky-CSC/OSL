@@ -23,10 +23,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: StateObject
     path: ../OSL-Client/Communication/OSLServer/Client.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Communication.OSLServer
+  summary: "\nState object for receiving data from remote device.\n"
+  example: []
   syntax:
     content: public class StateObject
     content.vb: Public Class StateObject
@@ -64,7 +66,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: workSocket
     path: ../OSL-Client/Communication/OSLServer/Client.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Communication.OSLServer
@@ -95,7 +97,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BufferSize
     path: ../OSL-Client/Communication/OSLServer/Client.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Communication.OSLServer
@@ -128,7 +130,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: buffer
     path: ../OSL-Client/Communication/OSLServer/Client.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Communication.OSLServer
@@ -159,7 +161,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: sb
     path: ../OSL-Client/Communication/OSLServer/Client.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Communication.OSLServer

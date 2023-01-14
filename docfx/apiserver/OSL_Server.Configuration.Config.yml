@@ -10,6 +10,7 @@ items:
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView1
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView2
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView3
+  - OSL_Server.Configuration.Config.LoadConfigServerSocket
   langs:
   - csharp
   - vb
@@ -24,7 +25,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -65,7 +66,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfig
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -73,6 +74,38 @@ items:
     content: public static void LoadConfig()
     content.vb: Public Shared Sub LoadConfig
   overload: OSL_Server.Configuration.Config.LoadConfig*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigServerSocket
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigServerSocket
+  id: LoadConfigServerSocket
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigServerSocket()
+  nameWithType: Config.LoadConfigServerSocket()
+  fullName: OSL_Server.Configuration.Config.LoadConfigServerSocket()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigServerSocket
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 27
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigServerSocket()
+    content.vb: Public Shared Sub LoadConfigServerSocket
+  overload: OSL_Server.Configuration.Config.LoadConfigServerSocket*
   modifiers.csharp:
   - public
   - static
@@ -97,7 +130,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigCDragon
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 25
+    startLine: 42
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -129,7 +162,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView1
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 152
+    startLine: 169
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -161,7 +194,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView2
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 168
+    startLine: 185
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -193,7 +226,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView3
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 187
+    startLine: 204
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -510,6 +543,11 @@ references:
   name: LoadConfig
   nameWithType: Config.LoadConfig
   fullName: OSL_Server.Configuration.Config.LoadConfig
+- uid: OSL_Server.Configuration.Config.LoadConfigServerSocket*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigServerSocket
+  name: LoadConfigServerSocket
+  nameWithType: Config.LoadConfigServerSocket
+  fullName: OSL_Server.Configuration.Config.LoadConfigServerSocket
 - uid: OSL_Server.Configuration.Config.LoadConfigCDragon*
   commentId: Overload:OSL_Server.Configuration.Config.LoadConfigCDragon
   name: LoadConfigCDragon

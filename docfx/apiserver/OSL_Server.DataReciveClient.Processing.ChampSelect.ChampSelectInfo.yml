@@ -5,9 +5,11 @@ items:
   id: ChampSelectInfo
   parent: OSL_Server.DataReciveClient.Processing.ChampSelect
   children:
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.alreadyLastPhase
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.ChampSelectProcessingDataRecive(System.String)
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.ConvertTimer(OSL_Server.DataReciveClient.Processing.ChampSelect.Timer)
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.InChampSelect(System.String)
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.previousSession
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.session
   langs:
   - csharp
@@ -23,7 +25,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectInfo
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -64,7 +66,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: session
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -73,6 +75,72 @@ items:
     return:
       type: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
     content.vb: Public Shared session As Session
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.previousSession
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.previousSession
+  id: previousSession
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo
+  langs:
+  - csharp
+  - vb
+  name: previousSession
+  nameWithType: ChampSelectInfo.previousSession
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.previousSession
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: previousSession
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 23
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static Session previousSession
+    return:
+      type: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+    content.vb: Public Shared previousSession As Session
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.alreadyLastPhase
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.alreadyLastPhase
+  id: alreadyLastPhase
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo
+  langs:
+  - csharp
+  - vb
+  name: alreadyLastPhase
+  nameWithType: ChampSelectInfo.alreadyLastPhase
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.alreadyLastPhase
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: alreadyLastPhase
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 24
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static bool alreadyLastPhase
+    return:
+      type: System.Boolean
+    content.vb: Public Shared alreadyLastPhase As Boolean
   modifiers.csharp:
   - public
   - static
@@ -97,7 +165,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: InChampSelect
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 21
+    startLine: 26
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -132,7 +200,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectProcessingDataRecive
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 36
+    startLine: 169
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -173,7 +241,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 109
+    startLine: 245
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -500,6 +568,13 @@ references:
   name: Session
   nameWithType: Session
   fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.InChampSelect*
   commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.InChampSelect
   name: InChampSelect

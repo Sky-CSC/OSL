@@ -22,7 +22,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameFlowPhaseStatus
     path: ../OSL-Server/DataReciveClient/ReciveFromClient.cs
-    startLine: 65
+    startLine: 71
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient
@@ -63,7 +63,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Phase
     path: ../OSL-Server/DataReciveClient/ReciveFromClient.cs
-    startLine: 68
+    startLine: 74
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient
@@ -98,7 +98,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Status
     path: ../OSL-Server/DataReciveClient/ReciveFromClient.cs
-    startLine: 69
+    startLine: 75
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient
@@ -133,7 +133,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Date
     path: ../OSL-Server/DataReciveClient/ReciveFromClient.cs
-    startLine: 70
+    startLine: 76
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient

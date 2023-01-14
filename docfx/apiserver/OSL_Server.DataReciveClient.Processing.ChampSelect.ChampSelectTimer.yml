@@ -1,38 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
-  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
-  id: Actions
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  id: ChampSelectTimer
   parent: OSL_Server.DataReciveClient.Processing.ChampSelect
   children:
-  - OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ActorCellId
-  - OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ChampionId
-  - OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Completed
-  - OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
-  - OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.IsInProgress
-  - OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.PickTurn
-  - OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Type
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
   langs:
   - csharp
   - vb
-  name: Actions
-  nameWithType: Actions
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  name: ChampSelectTimer
+  nameWithType: ChampSelectTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
   type: Class
   source:
     remote:
-      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: Actions
-    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 277
+    id: ChampSelectTimer
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 7
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
   syntax:
-    content: public class Actions
-    content.vb: Public Class Actions
+    content: public class ChampSelectTimer
+    content.vb: Public Class ChampSelectTimer
   inheritance:
   - System.Object
   inheritedMembers:
@@ -49,251 +49,243 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ActorCellId
-  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ActorCellId
-  id: ActorCellId
-  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  id: gobalTimer
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
   langs:
   - csharp
   - vb
-  name: ActorCellId
-  nameWithType: Actions.ActorCellId
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ActorCellId
-  type: Property
+  name: gobalTimer
+  nameWithType: ChampSelectTimer.gobalTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  type: Field
   source:
     remote:
-      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: ActorCellId
-    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 279
+    id: gobalTimer
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 23
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
   syntax:
-    content: public int ActorCellId { get; set; }
-    parameters: []
+    content: public static int gobalTimer
     return:
       type: System.Int32
-    content.vb: Public Property ActorCellId As Integer
-  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ActorCellId*
+    content.vb: Public Shared gobalTimer As Integer
   modifiers.csharp:
   - public
-  - get
-  - set
+  - static
   modifiers.vb:
   - Public
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ChampionId
-  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ChampionId
-  id: ChampionId
-  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  id: phaseTime
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
   langs:
   - csharp
   - vb
-  name: ChampionId
-  nameWithType: Actions.ChampionId
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ChampionId
-  type: Property
+  name: phaseTime
+  nameWithType: ChampSelectTimer.phaseTime
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  type: Field
   source:
     remote:
-      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: ChampionId
-    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 280
+    id: phaseTime
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 24
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
   syntax:
-    content: public int ChampionId { get; set; }
-    parameters: []
+    content: public static int phaseTime
     return:
       type: System.Int32
-    content.vb: Public Property ChampionId As Integer
-  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ChampionId*
+    content.vb: Public Shared phaseTime As Integer
   modifiers.csharp:
   - public
-  - get
-  - set
+  - static
   modifiers.vb:
   - Public
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Completed
-  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Completed
-  id: Completed
-  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  id: phaseTimeFast
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
   langs:
   - csharp
   - vb
-  name: Completed
-  nameWithType: Actions.Completed
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Completed
-  type: Property
+  name: phaseTimeFast
+  nameWithType: ChampSelectTimer.phaseTimeFast
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  type: Field
   source:
     remote:
-      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: Completed
-    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 281
+    id: phaseTimeFast
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 25
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
   syntax:
-    content: public bool Completed { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property Completed As Boolean
-  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Completed*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
-  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
-  id: Id
-  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
-  langs:
-  - csharp
-  - vb
-  name: Id
-  nameWithType: Actions.Id
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
-  type: Property
-  source:
-    remote:
-      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: Id
-    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 282
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
-  syntax:
-    content: public int Id { get; set; }
-    parameters: []
+    content: public static int phaseTimeFast
     return:
       type: System.Int32
-    content.vb: Public Property Id As Integer
-  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id*
+    content.vb: Public Shared phaseTimeFast As Integer
   modifiers.csharp:
   - public
-  - get
-  - set
+  - static
   modifiers.vb:
   - Public
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.IsInProgress
-  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.IsInProgress
-  id: IsInProgress
-  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  id: phaseTimer
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
   langs:
   - csharp
   - vb
-  name: IsInProgress
-  nameWithType: Actions.IsInProgress
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.IsInProgress
-  type: Property
+  name: phaseTimer
+  nameWithType: ChampSelectTimer.phaseTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  type: Field
   source:
     remote:
-      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: IsInProgress
-    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 283
+    id: phaseTimer
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 26
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
   syntax:
-    content: public bool IsInProgress { get; set; }
-    parameters: []
+    content: public static Timer phaseTimer
     return:
-      type: System.Boolean
-    content.vb: Public Property IsInProgress As Boolean
-  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.IsInProgress*
+      type: System.Timers.Timer
+    content.vb: Public Shared phaseTimer As Timer
   modifiers.csharp:
   - public
-  - get
-  - set
+  - static
   modifiers.vb:
   - Public
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.PickTurn
-  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.PickTurn
-  id: PickTurn
-  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  id: phaseTimerFast
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
   langs:
   - csharp
   - vb
-  name: PickTurn
-  nameWithType: Actions.PickTurn
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.PickTurn
-  type: Property
+  name: phaseTimerFast
+  nameWithType: ChampSelectTimer.phaseTimerFast
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  type: Field
   source:
     remote:
-      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: PickTurn
-    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 284
+    id: phaseTimerFast
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 27
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
   syntax:
-    content: public int PickTurn { get; set; }
-    parameters: []
+    content: public static Timer phaseTimerFast
     return:
+      type: System.Timers.Timer
+    content.vb: Public Shared phaseTimerFast As Timer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  commentId: M:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  id: DecreasingTimerChapSelect(System.Int32)
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: DecreasingTimerChapSelect(Int32)
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelect(Int32)
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DecreasingTimerChapSelect
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 52
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static void DecreasingTimerChapSelect(int time)
+    parameters:
+    - id: time
       type: System.Int32
-    content.vb: Public Property PickTurn As Integer
-  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.PickTurn*
+    content.vb: Public Shared Sub DecreasingTimerChapSelect(time As Integer)
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect*
   modifiers.csharp:
   - public
-  - get
-  - set
+  - static
   modifiers.vb:
   - Public
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Type
-  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Type
-  id: Type
-  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  commentId: M:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  id: DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
   langs:
   - csharp
   - vb
-  name: Type
-  nameWithType: Actions.Type
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Type
-  type: Property
+  name: DecreasingTimerChapSelectFast(Int32, Int32)
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelectFast(Int32, Int32)
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32, System.Int32)
+  type: Method
   source:
     remote:
-      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: Type
-    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 285
+    id: DecreasingTimerChapSelectFast
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 61
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
   syntax:
-    content: public string Type { get; set; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public Property Type As String
-  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Type*
+    content: public static void DecreasingTimerChapSelectFast(int time, int interval)
+    parameters:
+    - id: time
+      type: System.Int32
+    - id: interval
+      type: System.Int32
+    content.vb: Public Shared Sub DecreasingTimerChapSelectFast(time As Integer, interval As Integer)
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast*
   modifiers.csharp:
   - public
-  - get
-  - set
+  - static
   modifiers.vb:
   - Public
+  - Shared
 references:
 - uid: OSL_Server.DataReciveClient.Processing.ChampSelect
   commentId: N:OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -592,11 +584,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ActorCellId*
-  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ActorCellId
-  name: ActorCellId
-  nameWithType: Actions.ActorCellId
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ActorCellId
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -604,47 +591,26 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ChampionId*
-  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ChampionId
-  name: ChampionId
-  nameWithType: Actions.ChampionId
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.ChampionId
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Completed*
-  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Completed
-  name: Completed
-  nameWithType: Actions.Completed
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Completed
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
+- uid: System.Timers.Timer
+  commentId: T:System.Timers.Timer
+  parent: System.Timers
   isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id*
-  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
-  name: Id
-  nameWithType: Actions.Id
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.IsInProgress*
-  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.IsInProgress
-  name: IsInProgress
-  nameWithType: Actions.IsInProgress
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.IsInProgress
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.PickTurn*
-  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.PickTurn
-  name: PickTurn
-  nameWithType: Actions.PickTurn
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.PickTurn
-- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Type*
-  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Type
-  name: Type
-  nameWithType: Actions.Type
-  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Type
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+  name: Timer
+  nameWithType: Timer
+  fullName: System.Timers.Timer
+- uid: System.Timers
+  commentId: N:System.Timers
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+  name: System.Timers
+  nameWithType: System.Timers
+  fullName: System.Timers
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect
+  name: DecreasingTimerChapSelect
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelect
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast
+  name: DecreasingTimerChapSelectFast
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelectFast
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast

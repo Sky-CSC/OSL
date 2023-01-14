@@ -79,7 +79,6 @@ items:
   - OSL_Server.Pages.ChampSelectView2Page.TimerEndSave
   - OSL_Server.Pages.ChampSelectView2Page.TimerRed
   - OSL_Server.Pages.ChampSelectView2Page.TimerRedSaved
-  - OSL_Server.Pages.ChampSelectView2Page.UpdateTimer(System.Int32,System.Int32)
   langs:
   - csharp
   - vb
@@ -2542,43 +2541,6 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: OSL_Server.Pages.ChampSelectView2Page.UpdateTimer(System.Int32,System.Int32)
-  commentId: M:OSL_Server.Pages.ChampSelectView2Page.UpdateTimer(System.Int32,System.Int32)
-  id: UpdateTimer(System.Int32,System.Int32)
-  parent: OSL_Server.Pages.ChampSelectView2Page
-  langs:
-  - csharp
-  - vb
-  name: UpdateTimer(Int32, Int32)
-  nameWithType: ChampSelectView2Page.UpdateTimer(Int32, Int32)
-  fullName: OSL_Server.Pages.ChampSelectView2Page.UpdateTimer(System.Int32, System.Int32)
-  type: Method
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectView2Page.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: UpdateTimer
-    path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 372
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static void UpdateTimer(int timer, int reset)
-    parameters:
-    - id: timer
-      type: System.Int32
-    - id: reset
-      type: System.Int32
-    content.vb: Public Shared Sub UpdateTimer(timer As Integer, reset As Integer)
-  overload: OSL_Server.Pages.ChampSelectView2Page.UpdateTimer*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 references:
 - uid: OSL_Server.Pages
   commentId: N:OSL_Server.Pages
@@ -2976,15 +2938,3 @@ references:
   name: SetBanBackgroundColor
   nameWithType: ChampSelectView2Page.SetBanBackgroundColor
   fullName: OSL_Server.Pages.ChampSelectView2Page.SetBanBackgroundColor
-- uid: OSL_Server.Pages.ChampSelectView2Page.UpdateTimer*
-  commentId: Overload:OSL_Server.Pages.ChampSelectView2Page.UpdateTimer
-  name: UpdateTimer
-  nameWithType: ChampSelectView2Page.UpdateTimer
-  fullName: OSL_Server.Pages.ChampSelectView2Page.UpdateTimer
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32

@@ -7,7 +7,7 @@ items:
   children:
   - OSL_Server.Communication.AsyncServer.allDone
   - OSL_Server.Communication.AsyncServer.IsRunning
-  - OSL_Server.Communication.AsyncServer.Port
+  - OSL_Server.Communication.AsyncServer.portSocketOSLServer
   - OSL_Server.Communication.AsyncServer.Run
   - OSL_Server.Communication.AsyncServer.Stop
   langs:
@@ -47,35 +47,35 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.Communication.AsyncServer.Port
-  commentId: P:OSL_Server.Communication.AsyncServer.Port
-  id: Port
+- uid: OSL_Server.Communication.AsyncServer.portSocketOSLServer
+  commentId: P:OSL_Server.Communication.AsyncServer.portSocketOSLServer
+  id: portSocketOSLServer
   parent: OSL_Server.Communication.AsyncServer
   langs:
   - csharp
   - vb
-  name: Port
-  nameWithType: AsyncServer.Port
-  fullName: OSL_Server.Communication.AsyncServer.Port
+  name: portSocketOSLServer
+  nameWithType: AsyncServer.portSocketOSLServer
+  fullName: OSL_Server.Communication.AsyncServer.portSocketOSLServer
   type: Property
   source:
     remote:
       path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: Port
+    id: portSocketOSLServer
     path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
     startLine: 13
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
   syntax:
-    content: public static int Port { get; set; }
+    content: public static int portSocketOSLServer { get; set; }
     parameters: []
     return:
       type: System.Int32
-    content.vb: Public Shared Property Port As Integer
-  overload: OSL_Server.Communication.AsyncServer.Port*
+    content.vb: Public Shared Property portSocketOSLServer As Integer
+  overload: OSL_Server.Communication.AsyncServer.portSocketOSLServer*
   modifiers.csharp:
   - public
   - static
@@ -520,11 +520,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Server.Communication.AsyncServer.Port*
-  commentId: Overload:OSL_Server.Communication.AsyncServer.Port
-  name: Port
-  nameWithType: AsyncServer.Port
-  fullName: OSL_Server.Communication.AsyncServer.Port
+- uid: OSL_Server.Communication.AsyncServer.portSocketOSLServer*
+  commentId: Overload:OSL_Server.Communication.AsyncServer.portSocketOSLServer
+  name: portSocketOSLServer
+  nameWithType: AsyncServer.portSocketOSLServer
+  fullName: OSL_Server.Communication.AsyncServer.portSocketOSLServer
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System

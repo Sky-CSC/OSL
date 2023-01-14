@@ -110,6 +110,19 @@ references:
   commentId: F:OSL_Client.Configuration.Config.LiveEventsAPIPort
   fullName: OSL_Client.Configuration.Config.LiveEventsAPIPort
   nameWithType: Config.LiveEventsAPIPort
+- uid: OSL_Client.Configuration.Config.LoadConfig
+  name: LoadConfig()
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_LoadConfig
+  commentId: M:OSL_Client.Configuration.Config.LoadConfig
+  fullName: OSL_Client.Configuration.Config.LoadConfig()
+  nameWithType: Config.LoadConfig()
+- uid: OSL_Client.Configuration.Config.LoadConfig*
+  name: LoadConfig
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_LoadConfig_
+  commentId: Overload:OSL_Client.Configuration.Config.LoadConfig
+  isSpec: "True"
+  fullName: OSL_Client.Configuration.Config.LoadConfig
+  nameWithType: Config.LoadConfig
 - uid: OSL_Client.Configuration.Config.LoadConfigServerSocket
   name: LoadConfigServerSocket()
   href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_LoadConfigServerSocket
@@ -171,18 +184,18 @@ references:
   commentId: F:OSL_Client.Configuration.Config.portRiot
   fullName: OSL_Client.Configuration.Config.portRiot
   nameWithType: Config.portRiot
-- uid: OSL_Client.Configuration.Config.serverIPSocket
-  name: serverIPSocket
-  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_serverIPSocket
-  commentId: F:OSL_Client.Configuration.Config.serverIPSocket
-  fullName: OSL_Client.Configuration.Config.serverIPSocket
-  nameWithType: Config.serverIPSocket
-- uid: OSL_Client.Configuration.Config.serverPortSocket
-  name: serverPortSocket
-  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_serverPortSocket
-  commentId: F:OSL_Client.Configuration.Config.serverPortSocket
-  fullName: OSL_Client.Configuration.Config.serverPortSocket
-  nameWithType: Config.serverPortSocket
+- uid: OSL_Client.Configuration.Config.serverIPSocketOSLServer
+  name: serverIPSocketOSLServer
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_serverIPSocketOSLServer
+  commentId: F:OSL_Client.Configuration.Config.serverIPSocketOSLServer
+  fullName: OSL_Client.Configuration.Config.serverIPSocketOSLServer
+  nameWithType: Config.serverIPSocketOSLServer
+- uid: OSL_Client.Configuration.Config.serverPortSocketOSLServer
+  name: serverPortSocketOSLServer
+  href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_serverPortSocketOSLServer
+  commentId: F:OSL_Client.Configuration.Config.serverPortSocketOSLServer
+  fullName: OSL_Client.Configuration.Config.serverPortSocketOSLServer
+  nameWithType: Config.serverPortSocketOSLServer
 - uid: OSL_Client.Configuration.Config.SetHostPassGameClientApi
   name: SetHostPassGameClientApi()
   href: apiclient/OSL_Client.Configuration.Config.html#OSL_Client_Configuration_Config_SetHostPassGameClientApi
@@ -286,18 +299,6 @@ references:
   isSpec: "True"
   fullName: OSL_Client.FileManager.FileManagerLocal.WriteInFile
   nameWithType: FileManagerLocal.WriteInFile
-- uid: OSL_Client.FileManager.JsonManagerLocal
-  name: JsonManagerLocal
-  href: apiclient/OSL_Client.FileManager.JsonManagerLocal.html
-  commentId: T:OSL_Client.FileManager.JsonManagerLocal
-  fullName: OSL_Client.FileManager.JsonManagerLocal
-  nameWithType: JsonManagerLocal
-- uid: OSL_Client.FileManager.JsonType
-  name: JsonType
-  href: apiclient/OSL_Client.FileManager.JsonType.html
-  commentId: T:OSL_Client.FileManager.JsonType
-  fullName: OSL_Client.FileManager.JsonType
-  nameWithType: JsonType
 - uid: OSL_Client.LoggingLevel
   name: LoggingLevel
   href: apiclient/OSL_Client.LoggingLevel.html
@@ -1942,19 +1943,19 @@ references:
   isSpec: "True"
   fullName: OSL_Server.Communication.AsyncServer.IsRunning
   nameWithType: AsyncServer.IsRunning
-- uid: OSL_Server.Communication.AsyncServer.Port
-  name: Port
-  href: apiserver/OSL_Server.Communication.AsyncServer.html#OSL_Server_Communication_AsyncServer_Port
-  commentId: P:OSL_Server.Communication.AsyncServer.Port
-  fullName: OSL_Server.Communication.AsyncServer.Port
-  nameWithType: AsyncServer.Port
-- uid: OSL_Server.Communication.AsyncServer.Port*
-  name: Port
-  href: apiserver/OSL_Server.Communication.AsyncServer.html#OSL_Server_Communication_AsyncServer_Port_
-  commentId: Overload:OSL_Server.Communication.AsyncServer.Port
+- uid: OSL_Server.Communication.AsyncServer.portSocketOSLServer
+  name: portSocketOSLServer
+  href: apiserver/OSL_Server.Communication.AsyncServer.html#OSL_Server_Communication_AsyncServer_portSocketOSLServer
+  commentId: P:OSL_Server.Communication.AsyncServer.portSocketOSLServer
+  fullName: OSL_Server.Communication.AsyncServer.portSocketOSLServer
+  nameWithType: AsyncServer.portSocketOSLServer
+- uid: OSL_Server.Communication.AsyncServer.portSocketOSLServer*
+  name: portSocketOSLServer
+  href: apiserver/OSL_Server.Communication.AsyncServer.html#OSL_Server_Communication_AsyncServer_portSocketOSLServer_
+  commentId: Overload:OSL_Server.Communication.AsyncServer.portSocketOSLServer
   isSpec: "True"
-  fullName: OSL_Server.Communication.AsyncServer.Port
-  nameWithType: AsyncServer.Port
+  fullName: OSL_Server.Communication.AsyncServer.portSocketOSLServer
+  nameWithType: AsyncServer.portSocketOSLServer
 - uid: OSL_Server.Communication.AsyncServer.Run
   name: Run()
   href: apiserver/OSL_Server.Communication.AsyncServer.html#OSL_Server_Communication_AsyncServer_Run
@@ -2168,6 +2169,19 @@ references:
   isSpec: "True"
   fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView3
   nameWithType: Config.LoadConfigChampSelectView3
+- uid: OSL_Server.Configuration.Config.LoadConfigServerSocket
+  name: LoadConfigServerSocket()
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_LoadConfigServerSocket
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigServerSocket
+  fullName: OSL_Server.Configuration.Config.LoadConfigServerSocket()
+  nameWithType: Config.LoadConfigServerSocket()
+- uid: OSL_Server.Configuration.Config.LoadConfigServerSocket*
+  name: LoadConfigServerSocket
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_LoadConfigServerSocket_
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigServerSocket
+  isSpec: "True"
+  fullName: OSL_Server.Configuration.Config.LoadConfigServerSocket
+  nameWithType: Config.LoadConfigServerSocket
 - uid: OSL_Server.Data
   name: OSL_Server.Data
   href: apiserver/OSL_Server.Data.html
@@ -3339,6 +3353,19 @@ references:
   isSpec: "True"
   fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Completed
   nameWithType: Actions.Completed
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
+  name: Id
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.html#OSL_Server_DataReciveClient_Processing_ChampSelect_Actions_Id
+  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
+  nameWithType: Actions.Id
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id*
+  name: Id
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.html#OSL_Server_DataReciveClient_Processing_ChampSelect_Actions_Id_
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
+  isSpec: "True"
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.Id
+  nameWithType: Actions.Id
 - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.IsInProgress
   name: IsInProgress
   href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.Actions.html#OSL_Server_DataReciveClient_Processing_ChampSelect_Actions_IsInProgress
@@ -3429,6 +3456,12 @@ references:
   commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo
   fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo
   nameWithType: ChampSelectInfo
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.alreadyLastPhase
+  name: alreadyLastPhase
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectInfo_alreadyLastPhase
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.alreadyLastPhase
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.alreadyLastPhase
+  nameWithType: ChampSelectInfo.alreadyLastPhase
 - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.ChampSelectProcessingDataRecive(System.String)
   name: ChampSelectProcessingDataRecive(String)
   href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectInfo_ChampSelectProcessingDataRecive_System_String_
@@ -3468,12 +3501,80 @@ references:
   isSpec: "True"
   fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.InChampSelect
   nameWithType: ChampSelectInfo.InChampSelect
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.previousSession
+  name: previousSession
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectInfo_previousSession
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.previousSession
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.previousSession
+  nameWithType: ChampSelectInfo.previousSession
 - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.session
   name: session
   href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectInfo_session
   commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.session
   fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.session
   nameWithType: ChampSelectInfo.session
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  name: ChampSelectTimer
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  nameWithType: ChampSelectTimer
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  name: DecreasingTimerChapSelect(Int32)
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectTimer_DecreasingTimerChapSelect_System_Int32_
+  commentId: M:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelect(Int32)
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect*
+  name: DecreasingTimerChapSelect
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectTimer_DecreasingTimerChapSelect_
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect
+  isSpec: "True"
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelect
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  name: DecreasingTimerChapSelectFast(Int32, Int32)
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectTimer_DecreasingTimerChapSelectFast_System_Int32_System_Int32_
+  commentId: M:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32, System.Int32)
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelectFast(Int32, Int32)
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast*
+  name: DecreasingTimerChapSelectFast
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectTimer_DecreasingTimerChapSelectFast_
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast
+  isSpec: "True"
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelectFast
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  name: gobalTimer
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectTimer_gobalTimer
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  nameWithType: ChampSelectTimer.gobalTimer
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  name: phaseTime
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectTimer_phaseTime
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  nameWithType: ChampSelectTimer.phaseTime
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  name: phaseTimeFast
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectTimer_phaseTimeFast
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  nameWithType: ChampSelectTimer.phaseTimeFast
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  name: phaseTimer
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectTimer_phaseTimer
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  nameWithType: ChampSelectTimer.phaseTimer
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  name: phaseTimerFast
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.html#OSL_Server_DataReciveClient_Processing_ChampSelect_ChampSelectTimer_phaseTimerFast
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  nameWithType: ChampSelectTimer.phaseTimerFast
 - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
   name: Session
   href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.Session.html
@@ -3642,6 +3743,19 @@ references:
   isSpec: "True"
   fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.SummonerName
   nameWithType: Team.SummonerName
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
+  name: TeamNum
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.Team.html#OSL_Server_DataReciveClient_Processing_ChampSelect_Team_TeamNum
+  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
+  nameWithType: Team.TeamNum
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum*
+  name: TeamNum
+  href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.Team.html#OSL_Server_DataReciveClient_Processing_ChampSelect_Team_TeamNum_
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
+  isSpec: "True"
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Team.TeamNum
+  nameWithType: Team.TeamNum
 - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
   name: Timer
   href: apiserver/OSL_Server.DataReciveClient.Processing.ChampSelect.Timer.html
@@ -4126,6 +4240,45 @@ references:
   isSpec: "True"
   fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.BlueTeamSubtext
   nameWithType: ChampSelectPage.ChampSelectOverlayText.BlueTeamSubtext
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  name: DisplaySummonerSpell
+  href: apiserver/OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.html#OSL_Server_Pages_ChampSelectPage_ChampSelectOverlayText_DisplaySummonerSpell
+  commentId: P:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell*
+  name: DisplaySummonerSpell
+  href: apiserver/OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.html#OSL_Server_Pages_ChampSelectPage_ChampSelectOverlayText_DisplaySummonerSpell_
+  commentId: Overload:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  isSpec: "True"
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.DisplaySummonerSpell
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  name: EnableTimerView2
+  href: apiserver/OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.html#OSL_Server_Pages_ChampSelectPage_ChampSelectOverlayText_EnableTimerView2
+  commentId: P:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2*
+  name: EnableTimerView2
+  href: apiserver/OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.html#OSL_Server_Pages_ChampSelectPage_ChampSelectOverlayText_EnableTimerView2_
+  commentId: Overload:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  isSpec: "True"
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.EnableTimerView2
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  name: EnableTimerView3
+  href: apiserver/OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.html#OSL_Server_Pages_ChampSelectPage_ChampSelectOverlayText_EnableTimerView3
+  commentId: P:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3*
+  name: EnableTimerView3
+  href: apiserver/OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.html#OSL_Server_Pages_ChampSelectPage_ChampSelectOverlayText_EnableTimerView3_
+  commentId: Overload:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  isSpec: "True"
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
+  nameWithType: ChampSelectPage.ChampSelectOverlayText.EnableTimerView3
 - uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.KeystonePickColorDeg2
   name: KeystonePickColorDeg2
   href: apiserver/OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText.html#OSL_Server_Pages_ChampSelectPage_ChampSelectOverlayText_KeystonePickColorDeg2
@@ -6228,19 +6381,6 @@ references:
   commentId: F:OSL_Server.Pages.ChampSelectView2Page.TimerRedSaved
   fullName: OSL_Server.Pages.ChampSelectView2Page.TimerRedSaved
   nameWithType: ChampSelectView2Page.TimerRedSaved
-- uid: OSL_Server.Pages.ChampSelectView2Page.UpdateTimer(System.Int32,System.Int32)
-  name: UpdateTimer(Int32, Int32)
-  href: apiserver/OSL_Server.Pages.ChampSelectView2Page.html#OSL_Server_Pages_ChampSelectView2Page_UpdateTimer_System_Int32_System_Int32_
-  commentId: M:OSL_Server.Pages.ChampSelectView2Page.UpdateTimer(System.Int32,System.Int32)
-  fullName: OSL_Server.Pages.ChampSelectView2Page.UpdateTimer(System.Int32, System.Int32)
-  nameWithType: ChampSelectView2Page.UpdateTimer(Int32, Int32)
-- uid: OSL_Server.Pages.ChampSelectView2Page.UpdateTimer*
-  name: UpdateTimer
-  href: apiserver/OSL_Server.Pages.ChampSelectView2Page.html#OSL_Server_Pages_ChampSelectView2Page_UpdateTimer_
-  commentId: Overload:OSL_Server.Pages.ChampSelectView2Page.UpdateTimer
-  isSpec: "True"
-  fullName: OSL_Server.Pages.ChampSelectView2Page.UpdateTimer
-  nameWithType: ChampSelectView2Page.UpdateTimer
 - uid: OSL_Server.Pages.ChampSelectView3Page
   name: ChampSelectView3Page
   href: apiserver/OSL_Server.Pages.ChampSelectView3Page.html

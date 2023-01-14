@@ -23,10 +23,6 @@
   items:
   - uid: OSL_Client.FileManager.FileManagerLocal
     name: FileManagerLocal
-  - uid: OSL_Client.FileManager.JsonManagerLocal
-    name: JsonManagerLocal
-  - uid: OSL_Client.FileManager.JsonType
-    name: JsonType
 - uid: OSL_Client.RiotApp
   name: OSL_Client.RiotApp
   items:
