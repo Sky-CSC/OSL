@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace OSL_Client.Configuration
 {
+    /// <summary>
+    /// Class for configure client application
+    /// </summary>
     public class Config
     {
         private static OSLLogger _logger = new OSLLogger("Config");
@@ -31,6 +34,9 @@ namespace OSL_Client.Configuration
         //public static string LiveEventsAPIIP = "127.0.0.1";
         public static int LiveEventsAPIPort = 34243;
 
+        /// <summary>
+        /// Load configuration
+        /// </summary>
         public static void LoadConfig()
         {
             LoadConfigServerSocket();
@@ -55,6 +61,10 @@ namespace OSL_Client.Configuration
             }
         }
 
+        /// <summary>
+        /// Game client api host and password
+        /// </summary>
+        /// <returns></returns>
         public static bool SetHostPassGameClientApi()
         {
             try

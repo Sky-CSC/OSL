@@ -9,6 +9,9 @@ using OSL_Client.FileManager;
 
 namespace OSL_Client.RiotApp.DataProcessing
 {
+    /// <summary>
+    /// In Game Process
+    /// </summary>
     internal class InGameProcess
     {
         private static OSLLogger _logger = new OSLLogger("InGameProcess");

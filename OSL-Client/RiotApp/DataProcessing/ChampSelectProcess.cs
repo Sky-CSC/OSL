@@ -12,6 +12,9 @@ using OSL_Client.RiotApp.API.LCU;
 
 namespace OSL_Client.RiotApp.DataProcessing
 {
+    /// <summary>
+    /// Champ select process
+    /// </summary>
     internal class ChampSelectProcess
     {
         private static OSLLogger _logger = new OSLLogger("ChampionSelect");
@@ -20,6 +23,9 @@ namespace OSL_Client.RiotApp.DataProcessing
         /// </summary>
         static private System.Random random = new System.Random(DateTime.Now.Millisecond);
 
+        /// <summary>
+        /// Send to socket server data recive from riot client from champ select, and add informations on him (summoner name, not just ID)
+        /// </summary>
         public static void InChampSelect()
         {
             NewGameProcess.IdGame = random.NextInt64(); //Possible server give IdGame
@@ -123,6 +129,9 @@ namespace OSL_Client.RiotApp.DataProcessing
             _logger.log(LoggingLevel.WARN, "ManageChampionSelect()", "End of ChampSelect");
         }
 
+        /// <summary>
+        /// Summoner name
+        /// </summary>
         private class summoner
         {
             public string NameSummoner { get; set; }

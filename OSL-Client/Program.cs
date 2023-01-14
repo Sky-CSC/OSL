@@ -17,15 +17,21 @@ OSLLogger logger = new("Program");
 //CloseEvent.SetConsoleCtrlHandler(CloseEvent.Handler, true);
 
 Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("####################################");
-Console.WriteLine("# Hello and welcome to OSL manager #");
-Console.WriteLine("####################################\n");
+Console.WriteLine("###########################################");
+Console.WriteLine("##### Hello and welcome to OSL Client #####");
+Console.WriteLine("###### Just let this run, do nothing ######");
+Console.WriteLine("# No forget to check if server is running #");
+Console.WriteLine("###########################################\n");
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine("###########################");
+Console.WriteLine("##### Version 0.1.0.0 #####");
+Console.WriteLine("###########################\n");
 Console.ResetColor();
 
 Config.LoadConfig();
 //Initialisation for acces att the champion selection or a game
 //PostCom.Test2();
-String data = "Hello OSL-Server is OSL-Client managed by Skynet";
+String data = "Hello OSL-Server is OSL-Client managed by Sky";
 AsyncClient.StartClient(data);
 //while (!AsyncClient.StartClient(data))
 //{
@@ -35,11 +41,11 @@ AsyncClient.StartClient(data);
 
 while (true)
 {
-    if (LaunchChecker.LoLLauncherCheck())
+    if (LaunchChecker.LoLLauncherCheck()) //Chek if lol is running
     {
-        if (FilesRiotApp.LockFileCheck())
+        if (FilesRiotApp.LockFileCheck()) //Get lock file pass
         {
-            if (Config.SetHostPassGameClientApi())
+            if (Config.SetHostPassGameClientApi()) //Get pass and host of client api
             {
                 //while (ProcessInfo.IdProcessInfo(Config.lockFileProcessId) != null)
                 //{
@@ -57,8 +63,8 @@ while (true)
                 do
                 {
                     Thread.Sleep(1000);
-                    gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase);
-                    LcuApi.GameFlowPhaseCheck(gameFlowPhase);
+                    gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase); //Request game client api
+                    LcuApi.GameFlowPhaseCheck(gameFlowPhase); //Check which phase
                     //string testInformation = ApiRequest.RequestGameClientAPI("/lol-perks/v1/currentpage");
                     //Console.WriteLine(testInformation);
                 }

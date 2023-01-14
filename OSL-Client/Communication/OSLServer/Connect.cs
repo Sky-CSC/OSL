@@ -7,8 +7,15 @@ using System.Threading.Tasks;
 
 namespace OSL_Client.Communication.OSLServer
 {
+    /// <summary>
+    /// Asynchrone client
+    /// </summary>
     public partial class AsyncClient
     {
+        /// <summary>
+        /// ConnectCallback
+        /// </summary>
+        /// <param name="ar"></param>
         private static void ConnectCallback(IAsyncResult ar)
         {
             try

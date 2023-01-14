@@ -10,10 +10,18 @@ using OSL_Client.Configuration;
 
 namespace OSL_Client.RiotApp.API
 {
+    /// <summary>
+    /// Api Request
+    /// </summary>
     internal class ApiRequest
     {
         private static OSLLogger _logger = new OSLLogger("ApiRequest");
 
+        /// <summary>
+        /// http request for game client api
+        /// </summary>
+        /// <param name="nameRequest"></param>
+        /// <returns></returns>
         public static string RequestGameClientAPI(string nameRequest)
         {
             SSL.BypassSSL();
@@ -39,6 +47,11 @@ namespace OSL_Client.RiotApp.API
             //return null;
         }
 
+        /// <summary>
+        /// http request for replay API
+        /// </summary>
+        /// <param name="nameRequest">URL request</param>
+        /// <returns></returns>
         public static string RequestGameClientReplayAPI(string nameRequest)
         {
             SSL.BypassSSL();
@@ -59,8 +72,14 @@ namespace OSL_Client.RiotApp.API
             }
         }
     }
+    /// <summary>
+    /// SSL
+    /// </summary>
     class SSL
     {
+        /// <summary>
+        /// Bypass SSL for avoid error caused by ssl
+        /// </summary>
         public static void BypassSSL()
         {
             ServicePointManager.ServerCertificateValidationCallback += new System.Net.Security.RemoteCertificateValidationCallback(ValidateServerCertificate);

@@ -7,8 +7,15 @@ using System.Threading.Tasks;
 
 namespace OSL_Client.Communication.OSLServer
 {
+    /// <summary>
+    /// Asynchrone client
+    /// </summary>
     public partial class AsyncClient
     {
+        /// <summary>
+        /// Receive
+        /// </summary>
+        /// <param name="client">Socket client</param>
         private static void Receive(Socket client)
         {
             try
@@ -27,6 +34,10 @@ namespace OSL_Client.Communication.OSLServer
             }
         }
 
+        /// <summary>
+        /// ReceiveCallback
+        /// </summary>
+        /// <param name="ar"></param>
         private static void ReceiveCallback(IAsyncResult ar)
         {
             try

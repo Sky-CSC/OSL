@@ -7,6 +7,9 @@ using static OSL_Client.RiotApp.API.Replay.UrlRequest;
 
 namespace OSL_Client.RiotApp.API.Replay
 {
+    /// <summary>
+    /// Replay Api
+    /// </summary>
     internal class ReplayApi
     {
         private static OSLLogger _logger = new OSLLogger("ReplayApi");
@@ -28,6 +31,9 @@ namespace OSL_Client.RiotApp.API.Replay
             }
         }
     }
+    /// <summary>
+    /// URL replay api
+    /// </summary>
     public class UrlRequest
     {
         public static readonly string replaygame = "/replay/game"; //Information about the game client process.

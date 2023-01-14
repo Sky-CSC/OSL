@@ -8,6 +8,9 @@ using OSL_Client;
 
 namespace OSL_Client.FileManager
 {
+    /// <summary>
+    /// Manage file in local
+    /// </summary>
     public class FileManagerLocal
     {
         private static OSLLogger _logger = new OSLLogger("FileManagerLocal");
@@ -141,6 +144,9 @@ namespace OSL_Client.FileManager
     }
 }
 
+/// <summary>
+/// Manage directory in local
+/// </summary>
 public class DirectoryManagerLocal
 {
     private static OSLLogger _logger = new("DirectoryManagerLocal");

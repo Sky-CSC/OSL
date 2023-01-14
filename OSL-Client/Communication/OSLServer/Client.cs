@@ -11,7 +11,9 @@ using System.Threading.Tasks;
 namespace OSL_Client.Communication.OSLServer
 {
 
-    // State object for receiving data from remote device.
+    /// <summary>
+    /// State object for receiving data from remote device.
+    /// </summary>
     public class StateObject
     {
         // Client socket.
@@ -24,6 +26,9 @@ namespace OSL_Client.Communication.OSLServer
         public StringBuilder sb = new StringBuilder();
     }
 
+    /// <summary>
+    /// Asynchrone client
+    /// </summary>
     public partial class AsyncClient
     {
         private static OSLLogger _logger = new OSLLogger("AsyncClient");
@@ -42,10 +47,11 @@ namespace OSL_Client.Communication.OSLServer
         // The response from the remote device.
         private static String response = String.Empty;
 
-        //IP
-        //private static string ip = "127.0.0.1";
-        //private static int port = 45879;
-
+        /// <summary>
+        /// Run connexion for connect to server
+        /// </summary>
+        /// <param name="data">data recive</param>
+        /// <returns>Connexion are enabled</returns>
         public static bool StartClient(String data)
         {
             // Connect to a remote device.  
@@ -56,6 +62,19 @@ namespace OSL_Client.Communication.OSLServer
                 // remote device is "host.contoso.com".  
                 IPHostEntry ipHostInfo = Dns.Resolve(Config.serverIPSocketOSLServer);
                 IPAddress ipAddress = ipHostInfo.AddressList[0];
+                foreach (IPAddress address in ipHostInfo.AddressList){
+                    if (address.AddressFamily.ToString() == ProtocolFamily.InterNetworkV6.ToString())
+                    {
+
+                    }
+                    else if (address.AddressFamily.ToString() == ProtocolFamily.InterNetwork.ToString())
+                    {
+                        ipAddress = address;
+                    }
+                }
+
+                _logger.log(LoggingLevel.INFO, "StartClient()", "ipAddress : " + ipAddress);
+
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, Config.serverPortSocketOSLServer);
 
                 // Create a TCP/IP socket.  

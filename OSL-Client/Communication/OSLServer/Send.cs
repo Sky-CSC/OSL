@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 
 namespace OSL_Client.Communication.OSLServer
 {
+    /// <summary>
+    /// Asynchrone client
+    /// </summary>
     public partial class AsyncClient
     {
+        /// <summary>
+        /// Send
+        /// </summary>
+        /// <param name="client">Socket client</param>
+        /// <param name="data">data to send</param>
         private static void Send(Socket client, String data)
         {
             // Convert the string data to byte data using ASCII encoding.  
@@ -19,6 +27,10 @@ namespace OSL_Client.Communication.OSLServer
                 new AsyncCallback(SendCallback), client);
         }
 
+        /// <summary>
+        /// SendCallback
+        /// </summary>
+        /// <param name="ar"></param>
         private static void SendCallback(IAsyncResult ar)
         {
             try
