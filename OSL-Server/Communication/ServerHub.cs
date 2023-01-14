@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace OSL_Server.Communication
 {
+    /// <summary>
+    /// Server Hub
+    /// </summary>
     public class ServerHub : Hub
     {
         private static OSLLogger _logger = new OSLLogger("ServerHub");

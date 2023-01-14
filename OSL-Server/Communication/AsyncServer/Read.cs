@@ -10,6 +10,9 @@ using OSL_Server.DataReciveClient;
 
 namespace OSL_Server.Communication
 {
+    /// <summary>
+    /// Async Server
+    /// </summary>
     public partial class AsyncServer
     {
         /// <summary>

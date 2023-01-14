@@ -2,6 +2,9 @@
 
 namespace OSL_Server.DataLoader.CDragon
 {
+    /// <summary>
+    /// Champion Manager
+    /// </summary>
     public class ChampionManager
     {
         private static OSLLogger _logger = new OSLLogger("ChampionManager");   

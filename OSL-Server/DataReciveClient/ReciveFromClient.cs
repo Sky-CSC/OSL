@@ -3,12 +3,20 @@ using OSL_Server.DataReciveClient.Processing.ChampSelect;
 
 namespace OSL_Server.DataReciveClient
 {
+    /// <summary>
+    /// Reciva data from client
+    /// </summary>
     public class ReciveFromClient
     {
         private static OSLLogger _logger = new OSLLogger("ReciveFromClient");
 
         private static bool gameFlowPhaseStatus = false;
         private static bool champSelectStatus = false;
+        /// <summary>
+        /// Read data for set right status
+        /// </summary>
+        /// <param name="content"></param>
+        /// <returns></returns>
         public static string ReadData(string content)
         {
             string returnData = "default data Server";
@@ -69,6 +77,9 @@ namespace OSL_Server.DataReciveClient
             return returnData;
         }
     }
+    /// <summary>
+    /// Game Flow Phase Status
+    /// </summary>
     public class GameFlowPhaseStatus
     {
         //public Int64 IdGame { get; set; }

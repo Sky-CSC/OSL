@@ -17,6 +17,9 @@ using System.Linq;
 
 namespace OSL_Server.DataReciveClient.Processing.ChampSelect
 {
+    /// <summary>
+    /// Champ Select Info
+    /// </summary>
     public class ChampSelectInfo
     {
         private static OSLLogger _logger = new OSLLogger("ChampSelectInfo");
@@ -24,6 +27,10 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         public static Session previousSession;
         public static bool alreadyLastPhase = false;
 
+        /// <summary>
+        /// Recive champ select information, regulation of timer on overlay
+        /// </summary>
+        /// <param name="content"></param>
         public static void InChampSelect(string content)
         {
             previousSession = session;
@@ -87,79 +94,14 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
 
                 if (!actionInProgress && !alreadyLastPhase)
                 {
-                    //Console.WriteLine(session.Actions);
-                    //Console.WriteLine(previousSession.Actions);
-                    //Console.WriteLine("YOLO", Enumerable.SequenceEqual(session.Actions, previousSession.Actions));
-                    //Console.WriteLine("Oui ou non", session.Actions.  Contains(previousSession.Actions));
-                    //if (!session.Actions.Equals(previousSession.Actions))
-                    //{
                     ChampSelectTimer.phaseTimer.Stop();
                     ChampSelectTimer.DecreasingTimerChapSelect(59);
                     ChampSelectTimer.phaseTimerFast.Stop();
                     ChampSelectTimer.DecreasingTimerChapSelectFast(1750, 32);
                     alreadyLastPhase = true;
-                    //}
                 }
             }
         }
-
-        //public static void InChampSelect(string content)
-        //{
-        //    previousSession = session;
-        //    session = ChampSelectProcessingDataRecive(content);
-        //    int lastAction = session.Actions.Count - 1;
-        //    int lastActionInAction = session.Actions[lastAction].Count - 1;
-        //    bool sameTurn = false;
-        //    if (previousSession != null)
-        //    {
-        //        int lastActionPreviousSession = previousSession.Actions.Count - 1;
-        //        int lastActionInActionPreviousSession = previousSession.Actions[lastActionPreviousSession].Count - 1;
-        //        if (previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Id == session.Actions[lastAction][lastActionInAction].Id)
-        //        {
-        //            //Same turn
-        //            sameTurn = true;
-        //        }
-        //        //if (previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Id == session.Actions[lastAction][lastActionInAction].Id && previousSession.Actions[lastActionPreviousSession][lastActionInActionPreviousSession].Completed.Equals(false))
-        //        //{
-        //        //    sameTurn = false;
-        //        //}
-        //    }
-        //    int timer = 0;
-        //    int timerFast = 0;
-        //    _logger.log(LoggingLevel.INFO, "InChampSelect()", $"Last Action : {session.Actions[lastAction][lastActionInAction]}");
-
-        //    if (sameTurn == false && session.Actions[lastAction][lastActionInAction].Type.Equals("ban") && session.Actions[lastAction][lastActionInAction].Completed.Equals(false))
-        //    {
-        //        _logger.log(LoggingLevel.INFO, "InChampSelect()", $"Last Action ban : {session.Actions[lastAction][lastActionInAction]}");
-        //        timer = 27;
-        //        ChampSelectTimer.phaseTimer.Stop();
-        //        ChampSelectTimer.DecreasingTimerChapSelect(timer);
-        //        timerFast = 1750;
-        //        ChampSelectTimer.phaseTimerFast.Stop();
-        //        ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 1);
-        //    }
-        //    else if (sameTurn == false && session.Actions[lastAction][lastActionInAction].Type.Equals("pick") && session.Actions[lastAction][lastActionInAction].Completed.Equals(false))
-        //    {
-        //        _logger.log(LoggingLevel.INFO, "InChampSelect()", $"Last Action pick : {session.Actions[lastAction][lastActionInAction]}");
-        //        timer = 27;
-        //        ChampSelectTimer.phaseTimer.Stop();
-        //        ChampSelectTimer.DecreasingTimerChapSelect(timer);
-        //        timerFast = 1750;
-        //        ChampSelectTimer.phaseTimerFast.Stop();
-        //        ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 1);
-        //    }
-        //    else if (session.Actions[lastAction][lastActionInAction].Completed.Equals(true))
-        //    {
-        //        _logger.log(LoggingLevel.INFO, "InChampSelect()", $"Last Action end session: {session.Actions[lastAction][lastActionInAction]}");
-        //        timer = 59;
-        //        ChampSelectTimer.phaseTimer.Stop();
-        //        ChampSelectTimer.DecreasingTimerChapSelect(timer);
-        //        timerFast = 1750;
-        //        ChampSelectTimer.phaseTimerFast.Stop();
-        //        ChampSelectTimer.DecreasingTimerChapSelectFast(timerFast, 32);
-        //    }
-
-        //}
 
         /// <summary>
         /// Write in a session the content of data recive by the client for make a 
@@ -257,7 +199,9 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
             return countDownSec;
         }
     }
-
+    /// <summary>
+    /// Session json
+    /// </summary>
     public class Session
     {
         public List<List<Actions>> Actions { get; set; }
@@ -275,6 +219,9 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         }
     }
 
+    /// <summary>
+    /// Actions json
+    /// </summary>
     public class Actions
     {
         public int ActorCellId { get; set; }
@@ -286,6 +233,9 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         public string Type { get; set; }
     }
 
+    /// <summary>
+    /// Bans json
+    /// </summary>
     public class Bans
     {
         public List<int> MyTeamBans { get; set; }
@@ -297,6 +247,9 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         }
     }
 
+    /// <summary>
+    /// Team json
+    /// </summary>
     public class Team
     {
         public int CellId { get; set; }
@@ -308,6 +261,9 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         public int TeamNum { get; set; } //Team number
     }
 
+    /// <summary>
+    /// Timer json
+    /// </summary>
     public class Timer
     {
         public int AdjustedTimeLeftInPhase { get; set; }

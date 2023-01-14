@@ -8,6 +8,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OSL_Server.Pages
 {
+    /// <summary>
+    /// Champ Select Page
+    /// </summary>
     public partial class ChampSelectPage
     {
         private static OSLLogger _logger = new OSLLogger("CDragonPage");

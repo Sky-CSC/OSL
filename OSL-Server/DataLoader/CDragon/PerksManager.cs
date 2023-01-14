@@ -2,6 +2,9 @@
 
 namespace OSL_Server.DataLoader.CDragon
 {
+    /// <summary>
+    /// Perks Manager
+    /// </summary>
     public class PerksManager
     {
         private static OSLLogger _logger = new OSLLogger("PerksManager");

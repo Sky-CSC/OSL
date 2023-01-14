@@ -2,6 +2,9 @@
 
 namespace OSL_Server.DataLoader.CDragon
 {
+    /// <summary>
+    /// Summoner Spell Manager
+    /// </summary>
     public class SummonerSpellManager
     {
         private static OSLLogger _logger = new OSLLogger("SummonerSpellManager");

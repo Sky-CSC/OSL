@@ -5,6 +5,9 @@ using OSL_Server.Download;
 
 namespace OSL_Server.DataLoader.CDragon
 {
+    /// <summary>
+    /// CDragon
+    /// </summary>
     public class CDragon
     {
         private static OSLLogger _logger = new OSLLogger("CDragon");
@@ -27,6 +30,10 @@ namespace OSL_Server.DataLoader.CDragon
         //Il contient tout les patch en local, les différentes régions qui y sont et un liens .json vers le numéro de patch et la région 
         //Ce second fichier répertorie tout les liens de chaque images
         //Il faut donc que je récupère le numéro de patch et la région du joueurs
+
+        /// <summary>
+        /// Download
+        /// </summary>
         public class Download
         {
             private static OSLLogger _logger = new OSLLogger("Download");

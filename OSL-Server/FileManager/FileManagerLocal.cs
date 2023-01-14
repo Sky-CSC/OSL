@@ -5,13 +5,15 @@ using System.Linq;
 using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
-
 using OSL_Server;
 using OSL_Server.Configuration;
 using OSL_Server.DataLoader.CDragon;
 
 namespace OSL_Server.FileManager
 {
+    /// <summary>
+    /// Manage file in local
+    /// </summary>
     public class FileManagerLocal
     {
         private static OSLLogger _logger = new OSLLogger("FileManagerLocal");
@@ -50,7 +52,6 @@ namespace OSL_Server.FileManager
                 }
                 catch (Exception ex)
                 {
-                    //throw new Exception(ex.Message);
                     _logger.log(LoggingLevel.ERROR, "DeleteFile", ex.Message);
                 }
             }
@@ -82,24 +83,14 @@ namespace OSL_Server.FileManager
         /// <param name="content"></param>
         public static void WriteInFile(string filePath, string content)
         {
-            //if (File.Exists(filePath))
-            //{
+
             try
             {
-                //using (StreamWriter sw = File.AppendText(filePath))
-                //{
-                //    sw.WriteLine(content);
-                //    sw.Close();
-                //    sw.Dispose();
-                //}
-                //_logger.log(LoggingLevel.INFO, "WriteInFile", $"File write : {filePath}");
                 File.WriteAllText(filePath, content);
             }
             catch (Exception ex)
             {
-                //throw new Exception(ex.Message);
                 _logger.log(LoggingLevel.ERROR, "WriteInFile", ex.Message);
-                //}
             }
         }
         /// <summary>
@@ -162,7 +153,7 @@ public class DirectoryManagerLocal
             try
             {
                 Directory.CreateDirectory(directoryPath);
-                //_logger.log(LoggingLevel.INFO, "CreateDirectory", $"Directory create : {directoryPath}");
+                _logger.log(LoggingLevel.INFO, "CreateDirectory", $"Directory create : {directoryPath}");
             }
             catch (Exception ex)
             {
@@ -172,7 +163,7 @@ public class DirectoryManagerLocal
         }
         else
         {
-            //_logger.log(LoggingLevel.INFO, "CreateDirectory", $"Already created : {directoryPath}");
+            _logger.log(LoggingLevel.INFO, "CreateDirectory", $"Already created : {directoryPath}");
         }
     }
     /// <summary>
@@ -190,19 +181,27 @@ public class DirectoryManagerLocal
             }
             catch (Exception ex)
             {
-                //throw new Exception(ex.Message);
                 _logger.log(LoggingLevel.ERROR, "DeleteDirectory", ex.Message);
             }
         }
     }
 
-
+    /// <summary>
+    /// Check Directory
+    /// </summary>
+    /// <param name="directoryPath"></param>
+    /// <returns></returns>
     public static DirectoryInfo CheckDirectory(string directoryPath)
     {
         DirectoryInfo d = new DirectoryInfo(directoryPath);
         return d;
     }
 
+    /// <summary>
+    /// Check Existing Directory Patch
+    /// </summary>
+    /// <param name="directoryPath"></param>
+    /// <returns></returns>
     public static string CheckExistingDirectoryPatch(string directoryPath)
     {
         DirectoryInfo d = new DirectoryInfo(directoryPath);
@@ -227,34 +226,12 @@ public class DirectoryManagerLocal
     public static string itemsDirectory;
     public static string summonerSpellsDirectory;
     public static string perksDirectory;
-    //public static void DirectoryInitDataCDragon(string numPatch, string region)
-    //{
-    //    championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
-    //    itemsDirectory = "./" + numPatch + "/" + region + "/" + "Items" + "/";
-    //    summonerSpellsDirectory = "./" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
-    //    perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
-    //    CreateDirectory(championDirectory);
-    //    CreateDirectory(itemsDirectory);
-    //    CreateDirectory(summonerSpellsDirectory);
-    //    CreateDirectory(perksDirectory);
-    //}
 
-    //public static void DirectoryInitDataCDragon(string numPatch, string region)
-    //{
-    //    string championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
-    //    string itemsDirectory = "./" + numPatch + "/" + region + "/" + "Items" + "/";
-    //    string summonerSpellsDirectory = "./" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
-    //    string perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
-    //    CreateDirectory(championDirectory);
-    //    CreateDirectory(itemsDirectory);
-    //    CreateDirectory(summonerSpellsDirectory);
-    //    CreateDirectory(perksDirectory);
-    //}
-
-    //public static string championDirectory;
-    //public static string itemsDirectory;
-    //public static string summonerSpellsDirectory;
-    //public static string perksDirectory;
+    /// <summary>
+    /// Directory Init Data CDragon for save locally
+    /// </summary>
+    /// <param name="numPatch"></param>
+    /// <param name="region"></param>
     public static void DirectoryInitDataCDragon(string numPatch, string region)
     {
         championDirectory = "./wwwroot/assets/" + numPatch + "/" + region + "/" + "Champions" + "/";

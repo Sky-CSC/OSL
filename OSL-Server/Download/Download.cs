@@ -2,11 +2,19 @@
 
 namespace OSL_Server.Download
 {
+    /// <summary>
+    /// Download file
+    /// </summary>
     public class Download
     {
         private static OSLLogger _logger = new OSLLogger("Download");
         public static int downloadAllFile;
         public static int errorDownloadAllFile;
+        /// <summary>
+        /// Download String Async
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         public static async Task<string> DownloadStringAsync(Uri url)
         {
             try
@@ -23,10 +31,13 @@ namespace OSL_Server.Download
             }
         }
 
-        //public static void DownloadFileAsync(Uri url, string filePath)
-        //{
         private static readonly HttpClient _httpClient = new HttpClient();
 
+        /// <summary>
+        /// Download File Async
+        /// </summary>
+        /// <param name="url"></param>
+        /// <param name="outputPath"></param>
         public static async void DownloadFileAsync(Uri url, string outputPath)
         {
             try
@@ -42,22 +53,6 @@ namespace OSL_Server.Download
                 errorDownloadAllFile++;
                 _logger.log(LoggingLevel.ERROR, "DownloadFileAsync()", $"Error download from {url} : {e.Message}");
             }
-            //try
-            //{
-            //HttpClient httpClient = new HttpClient();
-            //        private static readonly
-            //httpClient.DownloadFileAsync(url, filePath);
-            //byte[] response = await httpClient.GetByteArrayAsync(url);
-            //File.WriteAllBytes(filePath, response);
-            //_logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"File download from {url}");
-            //return response;
-            //}
-            //catch (Exception e)
-            //{
-            //    _logger.log(LoggingLevel.ERROR, "DownloadFileAsync()", $"Error download from {url}");
-            //    //return null;
-            //}
-            //}
         }
     }
 }

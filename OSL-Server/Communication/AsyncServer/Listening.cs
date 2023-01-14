@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace OSL_Server.Communication
 {
+    /// <summary>
+    /// Async Server
+    /// </summary>
     public partial class AsyncServer
     {
         /// <summary>

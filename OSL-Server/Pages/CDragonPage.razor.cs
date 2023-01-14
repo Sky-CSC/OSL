@@ -5,6 +5,9 @@ using OSL_Server.Download;
 
 namespace OSL_Server.Pages
 {
+    /// <summary>
+    /// CDragon Page
+    /// </summary>
     public partial class CDragonPage
     {
         private static OSLLogger _logger = new OSLLogger("CDragonPage");
@@ -22,9 +25,6 @@ namespace OSL_Server.Pages
             _logger.log(LoggingLevel.INFO, "UpdateManual()", "Update in progress");
             Thread DownloadFilesFr = new Thread(() => CDragon.Download.DownloadFiles("latest", "fr_fr"));
             DownloadFilesFr.Start();
-            //Thread.Sleep(1000);
-            //Thread DownloadFilesEn = new Thread(() => CDragon.Download.DownloadFiles("latest", "en_gb"));
-            //DownloadFilesEn.Start();
         }
     }
 }

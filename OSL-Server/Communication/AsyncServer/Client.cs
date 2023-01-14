@@ -4,6 +4,9 @@ using System.Text;
 
 namespace OSL_Server.Communication
 {
+    /// <summary>
+    /// Async Server
+    /// </summary>
     public partial class AsyncServer
     {
         /// <summary>

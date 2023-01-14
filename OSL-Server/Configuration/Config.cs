@@ -12,10 +12,16 @@ using OSL_Server.Communication;
 
 namespace OSL_Server.Configuration
 {
+    /// <summary>
+    /// Class for configure client application
+    /// </summary>
     public class Config
     {
         private static OSLLogger _logger = new OSLLogger("Config");
 
+        /// <summary>
+        /// Load configuration
+        /// </summary>
         public static void LoadConfig()
         {
             LoadConfigServerSocket();
@@ -25,6 +31,9 @@ namespace OSL_Server.Configuration
             //LoadConfigChampSelectView3();
         }
 
+        /// <summary>
+        /// Configuration of server socker port
+        /// </summary>
         public static void LoadConfigServerSocket()
         {
             string filePath = "./" + "Configuration" + "/" + "configServerSocket.json";
@@ -40,6 +49,9 @@ namespace OSL_Server.Configuration
             }
         }
 
+        /// <summary>
+        /// Load configuration of CDragon
+        /// </summary>
         public static void LoadConfigCDragon()
         {
 
@@ -167,6 +179,9 @@ namespace OSL_Server.Configuration
         //    }
         //}
 
+        /// <summary>
+        /// Load configuration Champ Select View1
+        /// </summary>
         public static void LoadConfigChampSelectView1()
         {
             try
@@ -183,6 +198,9 @@ namespace OSL_Server.Configuration
             _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView1", $"{ChampSelectView1Page.DefaultRegion}");
             //ChampSelectView1Page.DefaultPatch = "12.12";
         }
+        /// <summary>
+        /// Load configuration Champ Select View2
+        /// </summary>
         public static void LoadConfigChampSelectView2()
         {
             try
@@ -202,6 +220,9 @@ namespace OSL_Server.Configuration
 
         }
 
+        /// <summary>
+        /// Load configuration Champ Select View3
+        /// </summary>
         public static void LoadConfigChampSelectView3()
         {
             try

@@ -14,7 +14,7 @@
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </div>
-        <div class="nav-item px-3">
+        <div class="nav-item px-3" >
             <NavLink class="nav-link" href="cdragon">
                 <span class="oi oi-data-transfer-download" aria-hidden="true"></span> @*@Locales.CDragon*@ CDragon
             </NavLink>
@@ -60,8 +60,20 @@
 @code {
     private bool collapseNavMenu = true;
 
+    //private bool expandSubNavSettings;
+    //private string baseMenuClass = "navbar-collapse d-sm-inline-flex flex-sm-row-reverse";
+    //private string? NavMenuCssClass => baseMenuClass + (collapseNavMenu ? " collapse" : "");
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
+    //private void ToggleNavMenu()
+    //{
+    //    if (!expandSubNavSettings)
+    //    {
+    //        collapseNavMenu = !collapseNavMenu;
+    //    }
+
+
+    //}
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;

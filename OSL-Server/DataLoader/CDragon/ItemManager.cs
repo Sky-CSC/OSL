@@ -2,6 +2,9 @@
 
 namespace OSL_Server.DataLoader.CDragon
 {
+    /// <summary>
+    /// Item Manager
+    /// </summary>
     public class ItemManager
     {
         private static OSLLogger _logger = new OSLLogger("ItemManager");

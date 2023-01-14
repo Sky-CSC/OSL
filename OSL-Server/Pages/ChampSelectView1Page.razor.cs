@@ -6,6 +6,9 @@ using OSL_Server.DataReciveClient.Processing.ChampSelect;
 
 namespace OSL_Server.Pages
 {
+    /// <summary>
+    /// Champ Select View1 Page
+    /// </summary>
     public partial class ChampSelectView1Page
     {
         private static OSLLogger _logger = new OSLLogger("ChampSelectView1Page");
