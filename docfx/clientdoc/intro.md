@@ -6,7 +6,21 @@
 > **Documentation in progress** 
 
 ---
+Download last release : [First Release v0.1.0-alpha](https://github.com/Sky-CSC/OSL/releases/tag/v0.1.0-alpha)
 
+Not forget run ```OSL-Server.exe```, before run ```OSL-Client.exe```
+
+```Configuration/configHost.json``` : Configuration of Live Events API port
+
+```Configuration/configRiot.json``` : Name of windows process used by League of Legends
+
+```Configuration/configServerSocketOSLServer.json``` : IP and Port of server 
+- Default port : 45678
+- IP : is the IP of computer where you run ```OSL-Server.exe```
+
+You need just run ```OSL-Client.exe```, nothing more, make ```ctrl+c``` for close him.
+
+---
 ## Enable data collection
 ### <ins>**Game Client API :**
 [Game Client API](https://developer.riotgames.com/docs/lol#league-client-api)
