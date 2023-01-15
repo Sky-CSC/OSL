@@ -22,7 +22,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerSpells
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 259
+    startLine: 265
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Id
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 261
+    startLine: 267
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Name
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 262
+    startLine: 268
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -135,7 +135,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: IconPath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 263
+    startLine: 269
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon

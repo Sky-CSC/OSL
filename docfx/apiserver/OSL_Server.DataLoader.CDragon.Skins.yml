@@ -25,7 +25,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Skins
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 229
+    startLine: 235
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -68,7 +68,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Id
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 231
+    startLine: 237
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -103,7 +103,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsBase
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 232
+    startLine: 238
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -138,7 +138,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SplashePath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 233
+    startLine: 239
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -173,7 +173,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SplasheUncenteredPath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 234
+    startLine: 240
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -208,7 +208,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TilePath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 235
+    startLine: 241
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -243,7 +243,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadScreenPath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 236
+    startLine: 242
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon

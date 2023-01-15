@@ -30,6 +30,8 @@ items:
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nChamp Select Timer\n"
+  example: []
   syntax:
     content: public class ChampSelectTimer
     content.vb: Public Class ChampSelectTimer
@@ -67,7 +69,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: gobalTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 23
+    startLine: 9
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -100,7 +102,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTime
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 24
+    startLine: 10
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -133,7 +135,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimeFast
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 25
+    startLine: 11
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -166,7 +168,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 26
+    startLine: 12
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -199,7 +201,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimerFast
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 27
+    startLine: 13
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -232,15 +234,18 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelect
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 52
+    startLine: 48
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nDecreasing timer function (second display)\n"
+  example: []
   syntax:
     content: public static void DecreasingTimerChapSelect(int time)
     parameters:
     - id: time
       type: System.Int32
+      description: ''
     content.vb: Public Shared Sub DecreasingTimerChapSelect(time As Integer)
   overload: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect*
   modifiers.csharp:
@@ -267,17 +272,21 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelectFast
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 61
+    startLine: 62
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nDecreasing timer function (pixel display)\n"
+  example: []
   syntax:
     content: public static void DecreasingTimerChapSelectFast(int time, int interval)
     parameters:
     - id: time
       type: System.Int32
+      description: ''
     - id: interval
       type: System.Int32
+      description: ''
     content.vb: Public Shared Sub DecreasingTimerChapSelectFast(time As Integer, interval As Integer)
   overload: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast*
   modifiers.csharp:

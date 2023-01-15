@@ -25,10 +25,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: FileManagerLocal
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 14
+    startLine: 7
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
+  summary: "\nManage file in local\n"
+  example: []
   syntax:
     content: public class FileManagerLocal
     content.vb: Public Class FileManagerLocal
@@ -66,7 +68,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: CreateFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 21
+    startLine: 14
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -104,7 +106,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DeleteFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 41
+    startLine: 34
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -142,7 +144,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RewrittenFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 63
+    startLine: 55
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -183,7 +185,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: WriteInFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 82
+    startLine: 74
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -224,7 +226,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadInFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 109
+    startLine: 91
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager
@@ -265,7 +267,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadFilePath
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
-    startLine: 129
+    startLine: 111
   assemblies:
   - OSL-Server
   namespace: OSL_Server.FileManager

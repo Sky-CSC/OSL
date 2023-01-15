@@ -45,7 +45,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelect
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 83
+    startLine: 86
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -86,7 +86,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultPatch
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 85
+    startLine: 88
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -121,7 +121,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultRegion
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 86
+    startLine: 89
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -156,7 +156,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimerBackground
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 87
+    startLine: 90
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -191,7 +191,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimerBlue
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 88
+    startLine: 91
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -226,7 +226,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimerRed
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 89
+    startLine: 92
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -261,7 +261,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimerEnd
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 90
+    startLine: 93
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -296,7 +296,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBackgroud
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 91
+    startLine: 94
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -331,7 +331,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideSummoner
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 92
+    startLine: 95
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -366,7 +366,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBackgroudSummonerPick
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 93
+    startLine: 96
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -401,7 +401,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBlink
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 94
+    startLine: 97
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -436,7 +436,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBackgroudSummonerPickEnd
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 95
+    startLine: 98
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -471,7 +471,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamName
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 96
+    startLine: 99
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -506,7 +506,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamNameColor
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 97
+    startLine: 100
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -541,7 +541,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamNameSize
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 98
+    startLine: 101
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -576,7 +576,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBackgroud
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 99
+    startLine: 102
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -611,7 +611,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideSummoner
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 100
+    startLine: 103
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -646,7 +646,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBackgroudSummonerPick
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 101
+    startLine: 104
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -681,7 +681,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBlink
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 102
+    startLine: 105
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -716,7 +716,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBackgroudSummonerPickEnd
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 103
+    startLine: 106
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -751,7 +751,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamName
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 104
+    startLine: 107
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -786,7 +786,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamNameColor
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 105
+    startLine: 108
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -821,7 +821,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamNameSize
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 106
+    startLine: 109
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -856,7 +856,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanBackgroundPicture
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 107
+    startLine: 110
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -891,7 +891,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanOverlayPicture
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 108
+    startLine: 111
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -926,7 +926,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanBackgroundColor
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 109
+    startLine: 112
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -961,7 +961,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: OverlayBackground
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 110
+    startLine: 113
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages

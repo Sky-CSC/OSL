@@ -24,10 +24,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Timer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 310
+    startLine: 251
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nTimer json\n"
+  example: []
   syntax:
     content: public class Timer
     content.vb: Public Class Timer
@@ -65,7 +67,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: AdjustedTimeLeftInPhase
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 312
+    startLine: 253
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -100,7 +102,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: AdjustedTimeLeftInPhaseInSec
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 313
+    startLine: 254
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -135,7 +137,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: InternalNowInEpochMs
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 314
+    startLine: 255
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -170,7 +172,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Phase
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 315
+    startLine: 256
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -205,7 +207,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TotalTimeInPhase
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 316
+    startLine: 257
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect

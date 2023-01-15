@@ -20,10 +20,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReciveFromClient
     path: ../OSL-Server/DataReciveClient/ReciveFromClient.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient
+  summary: "\nReciva data from client\n"
+  example: []
   syntax:
     content: public class ReciveFromClient
     content.vb: Public Class ReciveFromClient
@@ -61,17 +63,21 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadData
     path: ../OSL-Server/DataReciveClient/ReciveFromClient.cs
-    startLine: 11
+    startLine: 19
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient
+  summary: "\nRead data for set right status\n"
+  example: []
   syntax:
     content: public static string ReadData(string content)
     parameters:
     - id: content
       type: System.String
+      description: ''
     return:
       type: System.String
+      description: ''
     content.vb: Public Shared Function ReadData(content As String) As String
   overload: OSL_Server.DataReciveClient.ReciveFromClient.ReadData*
   modifiers.csharp:

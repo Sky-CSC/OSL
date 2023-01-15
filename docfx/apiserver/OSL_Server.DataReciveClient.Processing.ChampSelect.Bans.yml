@@ -22,10 +22,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Bans
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 288
+    startLine: 223
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nBans json\n"
+  example: []
   syntax:
     content: public class Bans
     content.vb: Public Class Bans
@@ -63,7 +65,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: MyTeamBans
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 290
+    startLine: 225
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -98,7 +100,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TheirTeamBans
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 291
+    startLine: 226
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -133,7 +135,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 292
+    startLine: 227
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect

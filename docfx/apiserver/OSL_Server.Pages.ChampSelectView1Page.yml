@@ -97,10 +97,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectView1Page
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
+  summary: "\nChamp Select View1 Page\n"
+  example: []
   syntax:
     content: public class ChampSelectView1Page
     content.vb: Public Class ChampSelectView1Page
@@ -138,7 +140,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: overlayLoaded
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -171,7 +173,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultPatch
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -204,7 +206,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultRegion
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -237,7 +239,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamName
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -270,7 +272,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamNameSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -303,7 +305,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamSubtext
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -336,7 +338,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamSubtextSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -369,7 +371,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamNameColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -402,7 +404,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamNameColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 24
+    startLine: 27
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -435,7 +437,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamSubtextColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -468,7 +470,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamSubtextColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -501,7 +503,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueLogo
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -534,7 +536,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueLogoSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -567,7 +569,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTexteColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -600,7 +602,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTexteColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -633,7 +635,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBackgroudColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 31
+    startLine: 34
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -666,7 +668,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBackgroudColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 32
+    startLine: 35
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -699,7 +701,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBorderColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 33
+    startLine: 36
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -732,7 +734,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBorderColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -765,7 +767,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTimerBackgroudColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 35
+    startLine: 38
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -798,7 +800,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTimerBackgroudColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 36
+    startLine: 39
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -831,7 +833,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTimerBorderColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 37
+    startLine: 40
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -864,7 +866,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTimerBorderColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 38
+    startLine: 41
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -897,7 +899,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTimerTexteColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 39
+    startLine: 42
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -930,7 +932,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTimerTexteColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -963,7 +965,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamName
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 43
+    startLine: 46
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -996,7 +998,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamNameSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 44
+    startLine: 47
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1029,7 +1031,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamSubtext
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1062,7 +1064,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamSubtextSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 46
+    startLine: 49
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1095,7 +1097,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamNameColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 47
+    startLine: 50
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1128,7 +1130,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamNameColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 48
+    startLine: 51
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1161,7 +1163,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamSubtextColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 49
+    startLine: 52
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1194,7 +1196,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamSubtextColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 50
+    startLine: 53
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1227,7 +1229,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedLogo
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 51
+    startLine: 54
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1260,7 +1262,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedLogoSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 52
+    startLine: 55
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1293,7 +1295,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTexteColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 53
+    startLine: 56
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1326,7 +1328,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTexteColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 54
+    startLine: 57
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1359,7 +1361,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBackgroudColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 55
+    startLine: 58
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1392,7 +1394,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBackgroudColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 56
+    startLine: 59
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1425,7 +1427,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBorderColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 57
+    startLine: 60
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1458,7 +1460,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBorderColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 58
+    startLine: 61
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1491,7 +1493,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTimerBackgroudColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 59
+    startLine: 62
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1524,7 +1526,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTimerBackgroudColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 60
+    startLine: 63
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1557,7 +1559,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTimerBorderColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 61
+    startLine: 64
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1590,7 +1592,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTimerBorderColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 62
+    startLine: 65
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1623,7 +1625,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTimerTexteColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 63
+    startLine: 66
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1656,7 +1658,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTimerTexteColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 64
+    startLine: 67
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1689,7 +1691,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanBackgroundPicture
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 67
+    startLine: 70
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1722,7 +1724,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanBackgroundPictureSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 68
+    startLine: 71
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1755,7 +1757,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanOverlayPicture
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 69
+    startLine: 72
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1788,7 +1790,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanOverlayPictureSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 70
+    startLine: 73
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1821,7 +1823,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanBackgroundColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 71
+    startLine: 74
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1854,7 +1856,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanBackgroundColorSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 72
+    startLine: 75
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1887,7 +1889,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: OverlayBackground
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 75
+    startLine: 78
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1920,7 +1922,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: OverlayBackgroundSave
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 76
+    startLine: 79
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1953,7 +1955,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ResetColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 110
+    startLine: 113
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -1985,7 +1987,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueTeamNameColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 140
+    startLine: 143
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2017,7 +2019,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueTeamSubtextColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 154
+    startLine: 157
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2049,7 +2051,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideTexteColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 169
+    startLine: 172
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2081,7 +2083,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideBackgroudColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 184
+    startLine: 187
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2113,7 +2115,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideTimerBackgroudColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 198
+    startLine: 201
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2145,7 +2147,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideTimerTexteColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 212
+    startLine: 215
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2177,7 +2179,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedTeamNameColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 226
+    startLine: 229
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2209,7 +2211,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedTeamSubtextColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 241
+    startLine: 244
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2241,7 +2243,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideTexteColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 256
+    startLine: 259
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2273,7 +2275,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideBackgroudColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 271
+    startLine: 274
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2305,7 +2307,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideTimerBackgroudColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 286
+    startLine: 289
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2337,7 +2339,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideTimerTexteColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 301
+    startLine: 304
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2369,7 +2371,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBanBackgroundColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 316
+    startLine: 319
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2401,7 +2403,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBorderColorNotSet
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 331
+    startLine: 334
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2434,7 +2436,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideBorderColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 332
+    startLine: 335
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2466,7 +2468,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBorderColorNotSet
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 349
+    startLine: 352
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2499,7 +2501,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideBorderColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 350
+    startLine: 353
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2531,7 +2533,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTimerBorderColorNotSet
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 367
+    startLine: 370
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2564,7 +2566,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideTimerBorderColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 368
+    startLine: 371
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2596,7 +2598,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTimerBorderColorNotSet
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 385
+    startLine: 388
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2629,7 +2631,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideTimerBorderColor
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 386
+    startLine: 389
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -2661,7 +2663,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateTimer
     path: ../OSL-Server/Pages/ChampSelectView1Page.razor.cs
-    startLine: 403
+    startLine: 406
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages

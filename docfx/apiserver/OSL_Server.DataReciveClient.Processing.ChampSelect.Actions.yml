@@ -26,10 +26,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Actions
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 277
+    startLine: 209
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nActions json\n"
+  example: []
   syntax:
     content: public class Actions
     content.vb: Public Class Actions
@@ -67,7 +69,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ActorCellId
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 279
+    startLine: 211
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -102,7 +104,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionId
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 280
+    startLine: 212
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -137,7 +139,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Completed
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 281
+    startLine: 213
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -172,7 +174,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Id
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 282
+    startLine: 214
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -207,7 +209,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsInProgress
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 283
+    startLine: 215
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -242,7 +244,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: PickTurn
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 284
+    startLine: 216
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -277,7 +279,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Type
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 285
+    startLine: 217
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect

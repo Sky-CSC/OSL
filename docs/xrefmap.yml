@@ -2027,11 +2027,11 @@ references:
   isSpec: "True"
   fullName: OSL_Server.Communication.ServerHub.OnConnectedAsync
   nameWithType: ServerHub.OnConnectedAsync
-- uid: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(System.Exception)
+- uid: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
   name: OnDisconnectedAsync(Exception)
-  href: apiserver/OSL_Server.Communication.ServerHub.html#OSL_Server_Communication_ServerHub_OnDisconnectedAsync_System_Exception_
-  commentId: M:OSL_Server.Communication.ServerHub.OnDisconnectedAsync(System.Exception)
-  fullName: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(System.Exception)
+  href: apiserver/OSL_Server.Communication.ServerHub.html#OSL_Server_Communication_ServerHub_OnDisconnectedAsync_Exception_
+  commentId: M:OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
+  fullName: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
   nameWithType: ServerHub.OnDisconnectedAsync(Exception)
 - uid: OSL_Server.Communication.ServerHub.OnDisconnectedAsync*
   name: OnDisconnectedAsync
@@ -2182,6 +2182,19 @@ references:
   isSpec: "True"
   fullName: OSL_Server.Configuration.Config.LoadConfigServerSocket
   nameWithType: Config.LoadConfigServerSocket
+- uid: OSL_Server.Configuration.Config.LoadConfigTimer
+  name: LoadConfigTimer()
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_LoadConfigTimer
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigTimer
+  fullName: OSL_Server.Configuration.Config.LoadConfigTimer()
+  nameWithType: Config.LoadConfigTimer()
+- uid: OSL_Server.Configuration.Config.LoadConfigTimer*
+  name: LoadConfigTimer
+  href: apiserver/OSL_Server.Configuration.Config.html#OSL_Server_Configuration_Config_LoadConfigTimer_
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigTimer
+  isSpec: "True"
+  fullName: OSL_Server.Configuration.Config.LoadConfigTimer
+  nameWithType: Config.LoadConfigTimer
 - uid: OSL_Server.Data
   name: OSL_Server.Data
   href: apiserver/OSL_Server.Data.html
@@ -3986,18 +3999,6 @@ references:
   isSpec: "True"
   fullName: OSL_Server.FileManager.FileManagerLocal.WriteInFile
   nameWithType: FileManagerLocal.WriteInFile
-- uid: OSL_Server.FileManager.JsonManagerLocal
-  name: JsonManagerLocal
-  href: apiserver/OSL_Server.FileManager.JsonManagerLocal.html
-  commentId: T:OSL_Server.FileManager.JsonManagerLocal
-  fullName: OSL_Server.FileManager.JsonManagerLocal
-  nameWithType: JsonManagerLocal
-- uid: OSL_Server.FileManager.JsonType
-  name: JsonType
-  href: apiserver/OSL_Server.FileManager.JsonType.html
-  commentId: T:OSL_Server.FileManager.JsonType
-  fullName: OSL_Server.FileManager.JsonType
-  nameWithType: JsonType
 - uid: OSL_Server.LoggingLevel
   name: LoggingLevel
   href: apiserver/OSL_Server.LoggingLevel.html

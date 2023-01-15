@@ -8,7 +8,7 @@ items:
   - OSL_Server.Communication.ServerHub.IsPortBusy(System.Int32)
   - OSL_Server.Communication.ServerHub.IsServerRunning
   - OSL_Server.Communication.ServerHub.OnConnectedAsync
-  - OSL_Server.Communication.ServerHub.OnDisconnectedAsync(System.Exception)
+  - OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
   - OSL_Server.Communication.ServerHub.SendPort(System.Int32)
   - OSL_Server.Communication.ServerHub.TurnOff
   - OSL_Server.Communication.ServerHub.TurnOn
@@ -27,10 +27,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ServerHub
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 12
+    startLine: 10
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
+  summary: "\nServer Hub\n"
+  example: []
   syntax:
     content: 'public class ServerHub : Hub, IDisposable'
     content.vb: >-
@@ -43,6 +45,7 @@ items:
   implements:
   - System.IDisposable
   inheritedMembers:
+  - Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
   - Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
   - Microsoft.AspNetCore.SignalR.Hub.Dispose
   - Microsoft.AspNetCore.SignalR.Hub.Clients
@@ -79,7 +82,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsServerRunning
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 17
+    startLine: 15
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -116,7 +119,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateStatus
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 23
+    startLine: 21
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -125,7 +128,7 @@ items:
   syntax:
     content: public async Task UpdateStatus()
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
       description: ''
     content.vb: Public Function UpdateStatus As Task
   overload: OSL_Server.Communication.ServerHub.UpdateStatus*
@@ -152,7 +155,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SendPort
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 43
+    startLine: 41
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -165,7 +168,7 @@ items:
       type: System.Int32
       description: port
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
       description: ''
     content.vb: Public Function SendPort(port As Integer) As Task
   overload: OSL_Server.Communication.ServerHub.SendPort*
@@ -192,7 +195,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TurnOn
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 57
+    startLine: 55
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -201,7 +204,7 @@ items:
   syntax:
     content: public async Task TurnOn()
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
       description: ''
     content.vb: Public Function TurnOn As Task
   overload: OSL_Server.Communication.ServerHub.TurnOn*
@@ -228,7 +231,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TurnOff
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 67
+    startLine: 65
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -237,7 +240,7 @@ items:
   syntax:
     content: public async Task TurnOff()
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
       description: ''
     content.vb: Public Function TurnOff As Task
   overload: OSL_Server.Communication.ServerHub.TurnOff*
@@ -264,7 +267,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: OnConnectedAsync
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 77
+    startLine: 75
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -273,7 +276,7 @@ items:
   syntax:
     content: public override Task OnConnectedAsync()
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
       description: ''
     content.vb: Public Overrides Function OnConnectedAsync As Task
   overridden: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
@@ -284,16 +287,16 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-- uid: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(System.Exception)
-  commentId: M:OSL_Server.Communication.ServerHub.OnDisconnectedAsync(System.Exception)
-  id: OnDisconnectedAsync(System.Exception)
+- uid: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
+  commentId: M:OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
+  id: OnDisconnectedAsync(Exception)
   parent: OSL_Server.Communication.ServerHub
   langs:
   - csharp
   - vb
   name: OnDisconnectedAsync(Exception)
   nameWithType: ServerHub.OnDisconnectedAsync(Exception)
-  fullName: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(System.Exception)
+  fullName: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
   type: Method
   source:
     remote:
@@ -302,7 +305,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: OnDisconnectedAsync
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 87
+    startLine: 85
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -312,13 +315,12 @@ items:
     content: public override async Task OnDisconnectedAsync(Exception e)
     parameters:
     - id: e
-      type: System.Exception
+      type: Exception
       description: exeption type
     return:
-      type: System.Threading.Tasks.Task
+      type: Task
       description: ''
     content.vb: Public Overrides Function OnDisconnectedAsync(e As Exception) As Task
-  overridden: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
   overload: OSL_Server.Communication.ServerHub.OnDisconnectedAsync*
   modifiers.csharp:
   - public
@@ -345,7 +347,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsPortBusy
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 98
+    startLine: 96
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -395,6 +397,47 @@ references:
   name: IDisposable
   nameWithType: IDisposable
   fullName: System.IDisposable
+- uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  commentId: M:Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: OnDisconnectedAsync(Exception)
+  nameWithType: Hub.OnDisconnectedAsync(Exception)
+  fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+    name: OnDisconnectedAsync
+    nameWithType: Hub.OnDisconnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+    name: OnDisconnectedAsync
+    nameWithType: Hub.OnDisconnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
   commentId: M:Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
   parent: Microsoft.AspNetCore.SignalR.Hub
@@ -796,19 +839,11 @@ references:
   name: UpdateStatus
   nameWithType: ServerHub.UpdateStatus
   fullName: OSL_Server.Communication.ServerHub.UpdateStatus
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
+- uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks
+  fullName: Task
 - uid: OSL_Server.Communication.ServerHub.SendPort*
   commentId: Overload:OSL_Server.Communication.ServerHub.SendPort
   name: SendPort
@@ -867,59 +902,17 @@ references:
   name: OnConnectedAsync
   nameWithType: ServerHub.OnConnectedAsync
   fullName: OSL_Server.Communication.ServerHub.OnConnectedAsync
-- uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
-  commentId: M:Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
-  parent: Microsoft.AspNetCore.SignalR.Hub
-  isExternal: true
-  name: OnDisconnectedAsync(Exception)
-  nameWithType: Hub.OnDisconnectedAsync(Exception)
-  fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
-  spec.csharp:
-  - uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
-    name: OnDisconnectedAsync
-    nameWithType: Hub.OnDisconnectedAsync
-    fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Exception
-    name: Exception
-    nameWithType: Exception
-    fullName: System.Exception
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
-    name: OnDisconnectedAsync
-    nameWithType: Hub.OnDisconnectedAsync
-    fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Exception
-    name: Exception
-    nameWithType: Exception
-    fullName: System.Exception
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: OSL_Server.Communication.ServerHub.OnDisconnectedAsync*
   commentId: Overload:OSL_Server.Communication.ServerHub.OnDisconnectedAsync
   name: OnDisconnectedAsync
   nameWithType: ServerHub.OnDisconnectedAsync
   fullName: OSL_Server.Communication.ServerHub.OnDisconnectedAsync
-- uid: System.Exception
-  commentId: T:System.Exception
-  parent: System
+- uid: Exception
+  commentId: '!:Exception'
   isExternal: true
   name: Exception
   nameWithType: Exception
-  fullName: System.Exception
+  fullName: Exception
 - uid: OSL_Server.Communication.ServerHub.IsPortBusy*
   commentId: Overload:OSL_Server.Communication.ServerHub.IsPortBusy
   name: IsPortBusy

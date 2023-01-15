@@ -11,6 +11,7 @@ items:
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView2
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView3
   - OSL_Server.Configuration.Config.LoadConfigServerSocket
+  - OSL_Server.Configuration.Config.LoadConfigTimer
   langs:
   - csharp
   - vb
@@ -25,10 +26,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 14
+    startLine: 12
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nClass for configure client application\n"
+  example: []
   syntax:
     content: public class Config
     content.vb: Public Class Config
@@ -66,10 +69,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfig
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration\n"
+  example: []
   syntax:
     content: public static void LoadConfig()
     content.vb: Public Shared Sub LoadConfig
@@ -98,10 +103,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigServerSocket
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 27
+    startLine: 32
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nConfiguration of server socker port\n"
+  example: []
   syntax:
     content: public static void LoadConfigServerSocket()
     content.vb: Public Shared Sub LoadConfigServerSocket
@@ -130,14 +137,48 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigCDragon
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 42
+    startLine: 50
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration of CDragon\n"
+  example: []
   syntax:
     content: public static void LoadConfigCDragon()
     content.vb: Public Shared Sub LoadConfigCDragon
   overload: OSL_Server.Configuration.Config.LoadConfigCDragon*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigTimer
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigTimer
+  id: LoadConfigTimer
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigTimer()
+  nameWithType: Config.LoadConfigTimer()
+  fullName: OSL_Server.Configuration.Config.LoadConfigTimer()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigTimer
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 87
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigTimer()
+    content.vb: Public Shared Sub LoadConfigTimer
+  overload: OSL_Server.Configuration.Config.LoadConfigTimer*
   modifiers.csharp:
   - public
   - static
@@ -162,10 +203,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView1
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 169
+    startLine: 187
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration Champ Select View1\n"
+  example: []
   syntax:
     content: public static void LoadConfigChampSelectView1()
     content.vb: Public Shared Sub LoadConfigChampSelectView1
@@ -194,10 +237,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView2
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 185
+    startLine: 206
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration Champ Select View2\n"
+  example: []
   syntax:
     content: public static void LoadConfigChampSelectView2()
     content.vb: Public Shared Sub LoadConfigChampSelectView2
@@ -226,10 +271,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView3
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 204
+    startLine: 228
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration Champ Select View3\n"
+  example: []
   syntax:
     content: public static void LoadConfigChampSelectView3()
     content.vb: Public Shared Sub LoadConfigChampSelectView3
@@ -553,6 +600,11 @@ references:
   name: LoadConfigCDragon
   nameWithType: Config.LoadConfigCDragon
   fullName: OSL_Server.Configuration.Config.LoadConfigCDragon
+- uid: OSL_Server.Configuration.Config.LoadConfigTimer*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigTimer
+  name: LoadConfigTimer
+  nameWithType: Config.LoadConfigTimer
+  fullName: OSL_Server.Configuration.Config.LoadConfigTimer
 - uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView1*
   commentId: Overload:OSL_Server.Configuration.Config.LoadConfigChampSelectView1
   name: LoadConfigChampSelectView1

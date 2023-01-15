@@ -19,10 +19,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConfigPage
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
+  summary: "\nConfig Page\n"
+  example: []
   syntax:
     content: public class ConfigPage
     content.vb: Public Class ConfigPage

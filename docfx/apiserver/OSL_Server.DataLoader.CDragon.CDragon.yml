@@ -31,10 +31,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: CDragon
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nCDragon\n"
+  example: []
   syntax:
     content: public class CDragon
     content.vb: Public Class CDragon
@@ -72,7 +74,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: dataCDragon
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -105,7 +107,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: patch
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -138,7 +140,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: date
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -171,7 +173,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: region
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -204,7 +206,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: championSummary
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -237,7 +239,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: items
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -270,7 +272,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: summonerSpells
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -303,7 +305,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: perks
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -336,7 +338,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: perkstyles
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -369,7 +371,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: defaultNumPatch
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -402,7 +404,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: defaultRegionPatch
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -435,7 +437,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: dataCDragonPath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon

@@ -25,10 +25,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectInfo
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 19
+    startLine: 7
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nChamp Select Info\n"
+  example: []
   syntax:
     content: public class ChampSelectInfo
     content.vb: Public Class ChampSelectInfo
@@ -66,7 +68,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: session
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 22
+    startLine: 10
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -99,7 +101,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: previousSession
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 23
+    startLine: 11
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -132,7 +134,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: alreadyLastPhase
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 24
+    startLine: 12
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -165,15 +167,18 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: InChampSelect
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 26
+    startLine: 18
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nRecive champ select information, regulation of timer on overlay\n"
+  example: []
   syntax:
     content: public static void InChampSelect(string content)
     parameters:
     - id: content
       type: System.String
+      description: ''
     content.vb: Public Shared Sub InChampSelect(content As String)
   overload: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo.InChampSelect*
   modifiers.csharp:
@@ -200,7 +205,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectProcessingDataRecive
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 169
+    startLine: 96
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -241,7 +246,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 245
+    startLine: 172
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect

@@ -23,10 +23,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Download
     path: ../OSL-Server/Download/Download.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Download
+  summary: "\nDownload file\n"
+  example: []
   syntax:
     content: public class Download
     content.vb: Public Class Download
@@ -64,7 +66,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: downloadAllFile
     path: ../OSL-Server/Download/Download.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Download
@@ -97,7 +99,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: errorDownloadAllFile
     path: ../OSL-Server/Download/Download.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Download
@@ -130,17 +132,21 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadStringAsync
     path: ../OSL-Server/Download/Download.cs
-    startLine: 9
+    startLine: 15
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Download
+  summary: "\nDownload String Async\n"
+  example: []
   syntax:
     content: public static async Task<string> DownloadStringAsync(Uri url)
     parameters:
     - id: url
       type: Uri
+      description: ''
     return:
       type: Task{System.String}
+      description: ''
     content.vb: Public Shared Function DownloadStringAsync(url As Uri) As Task(Of String)
   overload: OSL_Server.Download.Download.DownloadStringAsync*
   modifiers.csharp:
@@ -168,17 +174,21 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadFileAsync
     path: ../OSL-Server/Download/Download.cs
-    startLine: 29
+    startLine: 38
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Download
+  summary: "\nDownload File Async\n"
+  example: []
   syntax:
     content: public static async void DownloadFileAsync(Uri url, string outputPath)
     parameters:
     - id: url
       type: Uri
+      description: ''
     - id: outputPath
       type: System.String
+      description: ''
     content.vb: Public Shared Sub DownloadFileAsync(url As Uri, outputPath As String)
   overload: OSL_Server.Download.Download.DownloadFileAsync*
   modifiers.csharp:

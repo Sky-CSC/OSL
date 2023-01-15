@@ -42,7 +42,7 @@ items:
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Configuration
-  summary: "\nModule for configure client application\n"
+  summary: "\nClass for configure client application\n"
   example: []
   syntax:
     content: public class Config

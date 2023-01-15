@@ -26,7 +26,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: CDragonInfo
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 134
+    startLine: 140
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -69,7 +69,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Patch
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 136
+    startLine: 142
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -104,7 +104,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Region
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 137
+    startLine: 143
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -139,7 +139,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionSummary
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 138
+    startLine: 144
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -174,7 +174,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Items
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 139
+    startLine: 145
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -209,7 +209,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerSpells
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 140
+    startLine: 146
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -244,7 +244,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Perks
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 141
+    startLine: 147
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -279,7 +279,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Perkstyles
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 142
+    startLine: 148
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon

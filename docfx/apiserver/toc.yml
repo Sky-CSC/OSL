@@ -96,10 +96,6 @@
   items:
   - uid: OSL_Server.FileManager.FileManagerLocal
     name: FileManagerLocal
-  - uid: OSL_Server.FileManager.JsonManagerLocal
-    name: JsonManagerLocal
-  - uid: OSL_Server.FileManager.JsonType
-    name: JsonType
 - uid: OSL_Server.Pages
   name: OSL_Server.Pages
   items:

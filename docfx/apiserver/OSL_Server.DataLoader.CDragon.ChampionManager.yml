@@ -22,10 +22,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionManager
     path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nChampion Manager\n"
+  example: []
   syntax:
     content: public class ChampionManager
     content.vb: Public Class ChampionManager
@@ -63,7 +65,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadChampion
     path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -104,7 +106,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionAsyncDownload
     path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
-    startLine: 87
+    startLine: 90
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -157,7 +159,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonChampion
     path: ../OSL-Server/DataLoader/CDragon/ChampionManager.cs
-    startLine: 196
+    startLine: 199
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
