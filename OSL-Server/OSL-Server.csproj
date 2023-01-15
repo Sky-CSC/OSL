@@ -16,6 +16,8 @@
 	<ItemGroup>
 		<Content Remove="Configuration\configCDragon.json" />
 		<Content Remove="Configuration\configChampSelectView1.json" />
+		<Content Remove="Configuration\configChampSelectView2.json" />
+		<Content Remove="Configuration\configChampSelectView3.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -23,6 +25,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Include="Configuration\configChampSelectView3.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="Configuration\configChampSelectView2.json">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 		<None Include="Configuration\configChampSelectView1.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
