@@ -47,6 +47,13 @@ namespace OSL_Server.Communication
             _logger.log(LoggingLevel.INFO, "SendPort()", $"Server port changed to : {port}");
             AsyncServer.Run();
         }
+        public static async Task SendPort()
+        {
+            _logger.log(LoggingLevel.INFO, "SendPort()", "A client ask to change the port");
+            AsyncServer.Stop();
+            _logger.log(LoggingLevel.INFO, "SendPort()", $"Server port changed to : {AsyncServer.portSocketOSLServer}");
+            AsyncServer.Run();
+        }
 
 
         /// <summary>
