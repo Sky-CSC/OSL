@@ -1,11 +1,5 @@
-﻿using Newtonsoft.Json;
-using OSL_Server.Communication;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Sockets;
+﻿using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 using OSL_Server.DataReciveClient;
 
 namespace OSL_Server.Communication
@@ -42,7 +36,7 @@ namespace OSL_Server.Communication
                 // Check for end-of-file tag. If it is not there, read 
                 // more data.
                 content = client.sb.ToString();
-                //_logger.log(LoggingLevel.INFO, "ReadCallback()", $"Content recived {content}");
+                _logger.log(LoggingLevel.INFO, "ReadCallback()", $"Content recived {content}");
 
                 string returnContent = ReciveFromClient.ReadData(content);
 

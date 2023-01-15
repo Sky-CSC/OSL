@@ -1,14 +1,9 @@
 ﻿using Newtonsoft.Json;
-using OSL_Server;
 using OSL_Server.FileManager;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OSL_Server.DataLoader.CDragon;
 using OSL_Server.Pages;
 using OSL_Server.Communication;
+using OSL_Server.DataReciveClient.Processing.ChampSelect;
 
 namespace OSL_Server.Configuration
 {
@@ -26,9 +21,10 @@ namespace OSL_Server.Configuration
         {
             LoadConfigServerSocket();
             LoadConfigCDragon();
-            //LoadConfigChampSelectView1();
-            //LoadConfigChampSelectView2();
-            //LoadConfigChampSelectView3();
+            LoadConfigTimer();
+            LoadConfigChampSelectView1();
+            LoadConfigChampSelectView2();
+            LoadConfigChampSelectView3();
         }
 
         /// <summary>
@@ -87,6 +83,13 @@ namespace OSL_Server.Configuration
                 _logger.log(LoggingLevel.WARN, "LoadConfigCDragon", $"Default Config created {filePath}");
 
             }
+        }
+
+        public static void LoadConfigTimer()
+        {
+            //Creation of timer for display him in champ select
+            ChampSelectTimer.DecreasingTimerChapSelect(100);
+            ChampSelectTimer.DecreasingTimerChapSelectFast(100, 50);
         }
 
         //public static void LoadConfigChampSelectView1()

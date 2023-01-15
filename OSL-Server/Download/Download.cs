@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace OSL_Server.Download
+﻿namespace OSL_Server.Download
 {
     /// <summary>
     /// Download file

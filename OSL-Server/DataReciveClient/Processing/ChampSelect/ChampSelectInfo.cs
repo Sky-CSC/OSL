@@ -1,19 +1,4 @@
 ﻿using Newtonsoft.Json;
-using OSL_Server.FileManager;
-using OSL_Server.Pages;
-using Microsoft.AspNetCore.Components.Forms;
-using Microsoft.AspNetCore.SignalR.Client;
-using Microsoft.AspNetCore.Components;
-using System.Net;
-using System.Runtime.Intrinsics.X86;
-using System.Text;
-using Newtonsoft.Json.Linq;
-using System.Net.Security;
-using System.Security.Cryptography.X509Certificates;
-using Microsoft.AspNet.SignalR.Client.Http;
-using System.Diagnostics;
-using OSL_Server.Communication;
-using System.Linq;
 
 namespace OSL_Server.DataReciveClient.Processing.ChampSelect
 {

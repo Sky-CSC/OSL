@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Sockets;
+﻿using System.Net.Sockets;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OSL_Server.Communication
 {
@@ -21,7 +16,7 @@ namespace OSL_Server.Communication
             byte[] bytes = new byte[1024];
 
             // Reservation of the listening port according to the IP of the server.
-            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             //nimporte quelle ip
             IPAddress ipAddress = IPAddress.Any;
             //IPAddress ipAddress = ipHostInfo.AddressList[0];

@@ -1,7 +1,5 @@
-﻿using System.Net;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using OSL_Server.Configuration;
-using OSL_Server.Download;
 
 namespace OSL_Server.DataLoader.CDragon
 {
@@ -132,6 +130,7 @@ namespace OSL_Server.DataLoader.CDragon
                 Config.LoadConfigChampSelectView1();
                 Config.LoadConfigChampSelectView2();
                 Config.LoadConfigChampSelectView3();
+                _logger.log(LoggingLevel.INFO, "DownloadFiles()", $"End download and charge config view");
             }
         }
     }

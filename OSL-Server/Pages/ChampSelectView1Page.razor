@@ -383,13 +383,9 @@ else
 
 
 @code {
-    private bool timerBlue = false;
-    private bool timerRed = false;
-    private bool timerBlueRed = false;
     private int currentCount = 0;
     private static int timePhase = 0;
     private System.Timers.Timer timer = new(31);
-    private static int alreadyInit = 0;
 
     protected override void OnInitialized()
     {
