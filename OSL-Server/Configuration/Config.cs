@@ -67,7 +67,7 @@ namespace OSL_Server.Configuration
             }
             catch (Exception e)
             {
-                _logger.log(LoggingLevel.ERROR, "LoadConfigCDragon", $"Config loadeding error {filePath}");
+                _logger.log(LoggingLevel.ERROR, "LoadConfigCDragon", $"Config loadeding error {filePath} : {e.Message}");
                 var cdragonInformation = new CDragonInfo
                 {
                     Patch = "latest",

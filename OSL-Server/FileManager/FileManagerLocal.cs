@@ -81,7 +81,7 @@ namespace OSL_Server.FileManager
             }
             catch (Exception ex)
             {
-                _logger.log(LoggingLevel.ERROR, "WriteInFile", ex.Message);
+                _logger.log(LoggingLevel.ERROR, "WriteInFile()", ex.Message);
             }
         }
         /// <summary>
@@ -99,7 +99,7 @@ namespace OSL_Server.FileManager
             }
             catch (Exception e)
             {
-                _logger.log(LoggingLevel.ERROR, "ReadInFile", e.Message);
+                _logger.log(LoggingLevel.ERROR, "ReadInFile()", e.Message);
             }
             return content;
         }
@@ -123,7 +123,7 @@ namespace OSL_Server.FileManager
             }
             catch (Exception e)
             {
-
+                _logger.log(LoggingLevel.ERROR, "ReadFilePath()", e.Message);
             }
             return data;
         }

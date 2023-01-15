@@ -112,7 +112,7 @@ namespace OSL_Server.Communication
                 Socket listener = new Socket(AddressFamily.InterNetworkV6,
                     SocketType.Stream, ProtocolType.Tcp);
                 listener.SetSocketOption(SocketOptionLevel.IPv6, SocketOptionName.IPv6Only, false);
-                IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());
+                IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
                 IPAddress ipAddress = ipHostInfo.AddressList[0];
                 listener.Bind(new IPEndPoint(ipAddress, port));
                 listener.Close();
@@ -120,10 +120,9 @@ namespace OSL_Server.Communication
             }
             catch (Exception e)
             {
-                _logger.log(LoggingLevel.DEBUG, "IsPortBusy()", $"Port busy: {port}: \"{e}\"");
+                _logger.log(LoggingLevel.DEBUG, "IsPortBusy()", $"Port busy: {port}: \"{e.Message}\"");
                 return false;
             }
-
             return true;
         }
     }

@@ -24,7 +24,7 @@
             }
             catch (Exception e)
             {
-                _logger.log(LoggingLevel.ERROR, "DownloadStringAsync()", $"Error download from {url}");
+                _logger.log(LoggingLevel.ERROR, "DownloadStringAsync()", $"Error download from {url} : {e.Message}");
                 return null;
             }
         }

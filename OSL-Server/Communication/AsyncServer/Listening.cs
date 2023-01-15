@@ -60,7 +60,7 @@ namespace OSL_Server.Communication
                 {
                     if (_StoppingIfRequested(listener))
                     {
-                        _logger.log(LoggingLevel.WARN, "StartListening()", "Server interrupted");
+                        _logger.log(LoggingLevel.WARN, "StartListening()", $"Server interrupted {e.Message}");
                         ServerHub.IsServerRunning = false;
                         return;
                     }
