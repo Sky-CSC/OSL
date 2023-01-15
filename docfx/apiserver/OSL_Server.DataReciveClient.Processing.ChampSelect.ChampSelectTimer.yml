@@ -1,0 +1,625 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  id: ChampSelectTimer
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect
+  children:
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  langs:
+  - csharp
+  - vb
+  name: ChampSelectTimer
+  nameWithType: ChampSelectTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampSelectTimer
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 7
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nChamp Select Timer\n"
+  example: []
+  syntax:
+    content: public class ChampSelectTimer
+    content.vb: Public Class ChampSelectTimer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  id: gobalTimer
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: gobalTimer
+  nameWithType: ChampSelectTimer.gobalTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: gobalTimer
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 9
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static int gobalTimer
+    return:
+      type: System.Int32
+    content.vb: Public Shared gobalTimer As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  id: phaseTime
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: phaseTime
+  nameWithType: ChampSelectTimer.phaseTime
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTime
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 10
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static int phaseTime
+    return:
+      type: System.Int32
+    content.vb: Public Shared phaseTime As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  id: phaseTimeFast
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: phaseTimeFast
+  nameWithType: ChampSelectTimer.phaseTimeFast
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimeFast
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 11
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static int phaseTimeFast
+    return:
+      type: System.Int32
+    content.vb: Public Shared phaseTimeFast As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  id: phaseTimer
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: phaseTimer
+  nameWithType: ChampSelectTimer.phaseTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimer
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 12
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static Timer phaseTimer
+    return:
+      type: System.Timers.Timer
+    content.vb: Public Shared phaseTimer As Timer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  id: phaseTimerFast
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: phaseTimerFast
+  nameWithType: ChampSelectTimer.phaseTimerFast
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimerFast
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 13
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static Timer phaseTimerFast
+    return:
+      type: System.Timers.Timer
+    content.vb: Public Shared phaseTimerFast As Timer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  commentId: M:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  id: DecreasingTimerChapSelect(System.Int32)
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: DecreasingTimerChapSelect(Int32)
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelect(Int32)
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DecreasingTimerChapSelect
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 48
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nDecreasing timer function (second display)\n"
+  example: []
+  syntax:
+    content: public static void DecreasingTimerChapSelect(int time)
+    parameters:
+    - id: time
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Sub DecreasingTimerChapSelect(time As Integer)
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  commentId: M:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  id: DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: DecreasingTimerChapSelectFast(Int32, Int32)
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelectFast(Int32, Int32)
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DecreasingTimerChapSelectFast
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 62
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nDecreasing timer function (pixel display)\n"
+  example: []
+  syntax:
+    content: public static void DecreasingTimerChapSelectFast(int time, int interval)
+    parameters:
+    - id: time
+      type: System.Int32
+      description: ''
+    - id: interval
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Sub DecreasingTimerChapSelectFast(time As Integer, interval As Integer)
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect
+  commentId: N:OSL_Server.DataReciveClient.Processing.ChampSelect
+  name: OSL_Server.DataReciveClient.Processing.ChampSelect
+  nameWithType: OSL_Server.DataReciveClient.Processing.ChampSelect
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Timers.Timer
+  commentId: T:System.Timers.Timer
+  parent: System.Timers
+  isExternal: true
+  name: Timer
+  nameWithType: Timer
+  fullName: System.Timers.Timer
+- uid: System.Timers
+  commentId: N:System.Timers
+  isExternal: true
+  name: System.Timers
+  nameWithType: System.Timers
+  fullName: System.Timers
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect
+  name: DecreasingTimerChapSelect
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelect
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast
+  name: DecreasingTimerChapSelectFast
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelectFast
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast

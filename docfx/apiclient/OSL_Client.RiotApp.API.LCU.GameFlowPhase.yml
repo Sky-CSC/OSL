@@ -29,14 +29,16 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameFlowPhase
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 122
+    startLine: 149
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
+  summary: "\nList of phase of LCU API\n"
+  example: []
   syntax:
     content: public class GameFlowPhase
     content.vb: Public Class GameFlowPhase
@@ -70,11 +72,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: None
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 124
+    startLine: 151
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -105,11 +107,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Lobby
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 125
+    startLine: 152
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -140,11 +142,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Matchmaking
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 126
+    startLine: 153
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -175,11 +177,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: CheckedIntoTournament
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 127
+    startLine: 154
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -210,11 +212,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadyCheck
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 128
+    startLine: 155
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -245,11 +247,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelect
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 129
+    startLine: 156
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -280,11 +282,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameStart
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 130
+    startLine: 157
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -315,11 +317,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: FailedToLaunch
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 131
+    startLine: 158
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -350,11 +352,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: InProgress
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 132
+    startLine: 159
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -385,11 +387,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Reconnect
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 133
+    startLine: 160
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -420,11 +422,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: WaitingForStats
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 134
+    startLine: 161
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -455,11 +457,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: PreEndOfGame
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 135
+    startLine: 162
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -490,11 +492,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: EndOfGame
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 136
+    startLine: 163
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -525,11 +527,11 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: TerminatedInError
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 137
+    startLine: 164
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU

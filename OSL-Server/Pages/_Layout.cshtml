@@ -8,10 +8,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="~/" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
+    <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link href="css/site.css" rel="stylesheet" />
     <link href="OSL-Server.styles.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: rgb(30,30,30);
+            color: white;
+        }
+    </style>
+
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+
 </head>
 <body>
     @RenderBody()
@@ -28,5 +42,6 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
+
 </body>
 </html>

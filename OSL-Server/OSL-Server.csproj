@@ -1,44 +1,67 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>OSL_Server</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>OSL_Server</RootNamespace>
+		<ApplicationIcon>Icone_Eau.ico</ApplicationIcon>
+		<Copyright>Sky-csc</Copyright>
+		<PackageProjectUrl>https://github.com/Sky-CSC/OSL</PackageProjectUrl>
+		<AssemblyVersion>0.1.0.0</AssemblyVersion>
+		<FileVersion>0.1.0.0</FileVersion>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Content Remove="Configuration\configCDragon.json" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Remove="Configuration\configCDragon.json" />
+		<Content Remove="Configuration\configChampSelectView1.json" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="Configuration\configCDragon.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="Icone_Eau.ico" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="Configuration\configChampSelectView1.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="Configuration\configCDragon.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Communication\" />
-    <Folder Include="DataLoader\WebApiRiot\" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="BlazorColorPicker" Version="2.1.0" />
+		<PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.6" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="6.0.6" />
+		<PackageReference Include="MudBlazor" Version="6.0.11" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="DataLoader\WebApiRiot\" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties appsettings_1json__JsonSchema="" />
+		</VisualStudio>
+	</ProjectExtensions>
 
 </Project>

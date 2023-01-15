@@ -9,9 +9,16 @@ using static OSL_Client.RiotApp.API.LCU.GameFlowPhase;
 
 namespace OSL_Client.RiotApp.API.LCU
 {
+    /// <summary>
+    /// Riot LCU API
+    /// </summary>
     public class LcuApi
     {
         private static OSLLogger _logger = new OSLLogger("LcuApi");
+        /// <summary>
+        /// Redirect to right phase
+        /// </summary>
+        /// <param name="gameFlowPhase">String of game flow phase</param>
         public static void GameFlowPhaseCheck(string gameFlowPhase)
         {
             //Error, impossible to recive corect information of LCUAPI
@@ -29,7 +36,7 @@ namespace OSL_Client.RiotApp.API.LCU
                 {
                     _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", "Game found");
                     //If the game is finish and we want to watch it, no champ select display but, champ pick and ban display
-                    InGameProcess.InGame();
+                    //InGameProcess.InGame();
                 }
                 else
                 {
@@ -74,7 +81,7 @@ namespace OSL_Client.RiotApp.API.LCU
             else if (gameFlowPhase.Equals(InProgress))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {InProgress}");
-                InGameProcess.InGame();
+                //InGameProcess.InGame();
             }
 
             else if (gameFlowPhase.Equals(Reconnect))
@@ -103,6 +110,21 @@ namespace OSL_Client.RiotApp.API.LCU
             }
         }
     }
+
+    /// <summary>
+    /// Status send to client to know phase and this status
+    /// </summary>
+    public class GameFlowPhaseStatus
+    {
+        //public Int64 IdGame { get; set; }
+        public string? Phase { get; set; }
+        public string? Status { get; set; }
+        public string? Date { get; set; }
+    }
+
+    /// <summary>
+    /// List of url for local LCU riot api
+    /// </summary>
     public class UrlRequest
     {
         public static readonly string riotclientappname = "/riotclient/app-name"; //Application name without file extension
@@ -114,12 +136,17 @@ namespace OSL_Client.RiotApp.API.LCU
         //lol-champ-select
         public static readonly string lolchampselectv1gridchampions = "/lol-champ-select/v1/grid-champions/"; //
         public static readonly string lolchampselectv1session = "/lol-champ-select/v1/session"; //
+        public static readonly string lolsummonerv1summonersid = "/lol-summoner/v1/summoners/"; //
         public static readonly string lolchampselectv1bannablechampionids = "/lol-champ-select/v1/bannable-champion-ids"; //All champ possible to ban
         public static readonly string lolchampselectv1currentchampion = "/lol-champ-select/v1/current-champion"; //No info
 
         //lol-champ-select-legacy
         public static readonly string lolchampselectlegacyv1session = "/lol-champ-select-legacy/v1/session";
     }
+
+    /// <summary>
+    /// List of phase of LCU API
+    /// </summary>
     public class GameFlowPhase
     {
         public static readonly string None = "\"None\"";

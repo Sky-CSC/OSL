@@ -2,6 +2,9 @@
 
 namespace OSL_Server.DataLoader.CDragon
 {
+    /// <summary>
+    /// Perks Manager
+    /// </summary>
     public class PerksManager
     {
         private static OSLLogger _logger = new OSLLogger("PerksManager");
@@ -23,7 +26,8 @@ namespace OSL_Server.DataLoader.CDragon
             int indexPatch = CDragon.dataCDragon.Patch.FindIndex(x => x.Name == numPatch);
             int indexRegion = CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(x => x.Name == region);
 
-            string perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+            //string perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+            string perksDirectory = DirectoryManagerLocal.perksDirectory;
             DownloadPerksComposent(numPatch, region, perksDirectory, indexPatch, indexRegion);
             DownloadPerksStyle(numPatch, region, perksDirectory, indexPatch, indexRegion);
         }
@@ -49,7 +53,7 @@ namespace OSL_Server.DataLoader.CDragon
                     OSL_Server.Download.Download.errorDownloadAllFile = 0;
                     foreach (dynamic perk in jsonPerks)
                     {
-                        perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+                        perksDirectory = DirectoryManagerLocal.perksDirectory;
                         int perkId = perk.id;
                         //string perkName = perk.name;
                         string iconPath = perk.iconPath;
@@ -84,12 +88,14 @@ namespace OSL_Server.DataLoader.CDragon
                         //perkFullName = perkFullName.ToLower();
                         PerksAsyncDownload(indexPatch, indexRegion, numPatch, perk, perksDirectory, perkId, perkFullName);
                     }
-                    while (OSL_Server.Download.Download.downloadAllFile != 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0)
+                    int infini = 0;
+                    while (OSL_Server.Download.Download.downloadAllFile > 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0 && infini != 200)
                     {
-                        _logger.log(LoggingLevel.INFO, "DownloadPerks()", $"Waiting end DownloadFileAsync()");
+                        _logger.log(LoggingLevel.INFO, "PerksAsyncDownload()", $"Waiting end DownloadFileAsync() download : {Download.Download.downloadAllFile} error : {Download.Download.errorDownloadAllFile}");
+                        infini++;
                         Thread.Sleep(100);
                     }
-                    _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
+                    _logger.log(LoggingLevel.INFO, "PerksAsyncDownload()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
 
                 }
                 catch
@@ -120,7 +126,7 @@ namespace OSL_Server.DataLoader.CDragon
                     OSL_Server.Download.Download.errorDownloadAllFile = 0;
                     foreach (dynamic perk in jsonPerks.styles)
                     {
-                        perksDirectory = "./" + numPatch + "/" + region + "/" + "Perks" + "/";
+                        perksDirectory = DirectoryManagerLocal.perksDirectory;
                         int perkId = perk.id;
                         string iconPath = perk.iconPath;
                         string[] parseIconPath = iconPath.Split('/');
@@ -128,9 +134,11 @@ namespace OSL_Server.DataLoader.CDragon
                         perkFullName = perkFullName.ToLower();
                         PerksAsyncDownload(indexPatch, indexRegion, numPatch, perk, perksDirectory, perkId, perkFullName);
                     }
-                    while (OSL_Server.Download.Download.downloadAllFile != 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0)
+                    int infini = 0;
+                    while (OSL_Server.Download.Download.downloadAllFile > 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0 && infini != 200)
                     {
-                        _logger.log(LoggingLevel.INFO, "DownloadPerks()", $"Waiting end DownloadFileAsync()");
+                        _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"Waiting end DownloadFileAsync() download : {Download.Download.downloadAllFile} error : {Download.Download.errorDownloadAllFile}");
+                        infini++;
                         Thread.Sleep(100);
                     }
                     _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");

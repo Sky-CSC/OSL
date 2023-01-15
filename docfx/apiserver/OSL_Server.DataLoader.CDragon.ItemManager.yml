@@ -18,14 +18,16 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/ItemManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ItemManager
     path: ../OSL-Server/DataLoader/CDragon/ItemManager.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nItem Manager\n"
+  example: []
   syntax:
     content: public class ItemManager
     content.vb: Public Class ItemManager
@@ -59,11 +61,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/ItemManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadItems
     path: ../OSL-Server/DataLoader/CDragon/ItemManager.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -100,11 +102,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/ItemManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ItemsAsyncDownload
     path: ../OSL-Server/DataLoader/CDragon/ItemManager.cs
-    startLine: 64
+    startLine: 70
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -156,11 +158,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/ItemManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonItems
     path: ../OSL-Server/DataLoader/CDragon/ItemManager.cs
-    startLine: 79
+    startLine: 85
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon

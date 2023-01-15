@@ -16,14 +16,16 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: LcuApi
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
+  summary: "\nRiot LCU API\n"
+  example: []
   syntax:
     content: public class LcuApi
     content.vb: Public Class LcuApi
@@ -57,19 +59,22 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameFlowPhaseCheck
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 14
+    startLine: 21
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
+  summary: "\nRedirect to right phase\n"
+  example: []
   syntax:
     content: public static void GameFlowPhaseCheck(string gameFlowPhase)
     parameters:
     - id: gameFlowPhase
       type: System.String
+      description: String of game flow phase
     content.vb: Public Shared Sub GameFlowPhaseCheck(gameFlowPhase As String)
   overload: OSL_Client.RiotApp.API.LCU.LcuApi.GameFlowPhaseCheck*
   modifiers.csharp:

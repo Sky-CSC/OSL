@@ -2,6 +2,9 @@
 
 namespace OSL_Server.DataLoader.CDragon
 {
+    /// <summary>
+    /// Summoner Spell Manager
+    /// </summary>
     public class SummonerSpellManager
     {
         private static OSLLogger _logger = new OSLLogger("SummonerSpellManager");
@@ -19,7 +22,8 @@ namespace OSL_Server.DataLoader.CDragon
             int indexPatch = CDragon.dataCDragon.Patch.FindIndex(x => x.Name == numPatch);
             int indexRegion = CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(x => x.Name == region);
 
-            string summonersSpellDirectory = "./" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
+            //string summonersSpellDirectory = "./" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
+            string summonersSpellDirectory = DirectoryManagerLocal.summonerSpellsDirectory;
             Uri urlSummonersSpell = new($"https://raw.communitydragon.org/{numPatch}/plugins/rcp-be-lol-game-data/global/{region}/v1/{CDragon.summonerSpells}.json");
             string summonersSpellData = OSL_Server.Download.Download.DownloadStringAsync(urlSummonersSpell).Result;
             if (summonersSpellData != null)
@@ -39,12 +43,14 @@ namespace OSL_Server.DataLoader.CDragon
                         summonersSpellFullName = summonersSpellFullName.ToLower();
                         SummonersSpellAsyncDownload(indexPatch, indexRegion, numPatch, summonersSpell, summonersSpellDirectory, summonersSpellId, summonersSpellFullName);
                     }
-                    while (OSL_Server.Download.Download.downloadAllFile != 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0)
+                    int infini = 0;
+                    while (OSL_Server.Download.Download.downloadAllFile > 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0 && infini != 200)
                     {
-                        _logger.log(LoggingLevel.INFO, "ItemsAsyncDownload()", $"Waiting end DownloadSummonersSpell()");
+                        _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"Waiting end DownloadFileAsync() download : {Download.Download.downloadAllFile} error : {Download.Download.errorDownloadAllFile}");
+                        infini++;
                         Thread.Sleep(100);
                     }
-                    _logger.log(LoggingLevel.INFO, "ItemsAsyncDownload()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
+                    _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
                 }
                 catch (Exception e)
                 {

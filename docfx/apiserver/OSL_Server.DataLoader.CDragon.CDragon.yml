@@ -8,6 +8,9 @@ items:
   - OSL_Server.DataLoader.CDragon.CDragon.championSummary
   - OSL_Server.DataLoader.CDragon.CDragon.dataCDragon
   - OSL_Server.DataLoader.CDragon.CDragon.dataCDragonPath
+  - OSL_Server.DataLoader.CDragon.CDragon.date
+  - OSL_Server.DataLoader.CDragon.CDragon.defaultNumPatch
+  - OSL_Server.DataLoader.CDragon.CDragon.defaultRegionPatch
   - OSL_Server.DataLoader.CDragon.CDragon.items
   - OSL_Server.DataLoader.CDragon.CDragon.patch
   - OSL_Server.DataLoader.CDragon.CDragon.perks
@@ -24,14 +27,16 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: CDragon
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nCDragon\n"
+  example: []
   syntax:
     content: public class CDragon
     content.vb: Public Class CDragon
@@ -65,11 +70,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: dataCDragon
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -98,11 +103,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: patch
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -111,6 +116,39 @@ items:
     return:
       type: System.String
     content.vb: Public Shared patch As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.date
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.date
+  id: date
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: date
+  nameWithType: CDragon.date
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.date
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: date
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string date
+    return:
+      type: System.String
+    content.vb: Public Shared date As String
   modifiers.csharp:
   - public
   - static
@@ -131,11 +169,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: region
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -164,11 +202,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: championSummary
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -197,11 +235,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: items
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -230,11 +268,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: summonerSpells
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -263,11 +301,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: perks
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -296,11 +334,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: perkstyles
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 18
+    startLine: 21
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -309,6 +347,72 @@ items:
     return:
       type: System.String
     content.vb: Public Shared perkstyles As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.defaultNumPatch
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.defaultNumPatch
+  id: defaultNumPatch
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: defaultNumPatch
+  nameWithType: CDragon.defaultNumPatch
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.defaultNumPatch
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: defaultNumPatch
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 23
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string defaultNumPatch
+    return:
+      type: System.String
+    content.vb: Public Shared defaultNumPatch As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.CDragon.CDragon.defaultRegionPatch
+  commentId: F:OSL_Server.DataLoader.CDragon.CDragon.defaultRegionPatch
+  id: defaultRegionPatch
+  parent: OSL_Server.DataLoader.CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: defaultRegionPatch
+  nameWithType: CDragon.defaultRegionPatch
+  fullName: OSL_Server.DataLoader.CDragon.CDragon.defaultRegionPatch
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataLoader/CDragon/CDragon.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: defaultRegionPatch
+    path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
+    startLine: 24
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.CDragon
+  syntax:
+    content: public static string defaultRegionPatch
+    return:
+      type: System.String
+    content.vb: Public Shared defaultRegionPatch As String
   modifiers.csharp:
   - public
   - static
@@ -329,11 +433,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: dataCDragonPath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
-    startLine: 20
+    startLine: 26
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon

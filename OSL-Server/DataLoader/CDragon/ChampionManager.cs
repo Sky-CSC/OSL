@@ -2,6 +2,9 @@
 
 namespace OSL_Server.DataLoader.CDragon
 {
+    /// <summary>
+    /// Champion Manager
+    /// </summary>
     public class ChampionManager
     {
         private static OSLLogger _logger = new OSLLogger("ChampionManager");   
@@ -15,7 +18,8 @@ namespace OSL_Server.DataLoader.CDragon
             int indexPatch = CDragon.dataCDragon.Patch.FindIndex(x => x.Name == numPatch);
             int indexRegion = CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(x => x.Name == region);
 
-            string championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
+            //string championDirectory = "./" + numPatch + "/" + region + "/" + "Champions" + "/";
+            string championDirectory = DirectoryManagerLocal.championDirectory;
             Uri urlChampion = new($"https://raw.communitydragon.org/{numPatch}/plugins/rcp-be-lol-game-data/global/{region}/v1/{CDragon.championSummary}.json");
             string champion = OSL_Server.Download.Download.DownloadStringAsync(urlChampion).Result;
             if (champion != null)
@@ -34,12 +38,14 @@ namespace OSL_Server.DataLoader.CDragon
                         DirectoryManagerLocal.CreateDirectory(championDirectory + champId + "/" + "Abilitys");
                         ChampionAsyncDownload(indexPatch, indexRegion, numPatch, region, championDirectory, champId);
                     }
-                    while (OSL_Server.Download.Download.downloadAllFile != 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0)
+                    int infini = 0;
+                    while (OSL_Server.Download.Download.downloadAllFile > 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0 && infini != 200)
                     {
-                        _logger.log(LoggingLevel.INFO, "ChampionAsyncDownload()", $"Waiting end DownloadFileAsync()");
+                        _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"Waiting end DownloadFileAsync() download : {Download.Download.downloadAllFile} error : {Download.Download.errorDownloadAllFile}");
+                        infini++;
                         Thread.Sleep(100);
                     }
-                    _logger.log(LoggingLevel.INFO, "ChampionAsyncDownload()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
+                    _logger.log(LoggingLevel.INFO, "DownloadFileAsync()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
                 }
                 catch (Exception e)
                 {

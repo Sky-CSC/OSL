@@ -8,12 +8,16 @@ using System.Threading.Tasks;
 
 namespace OSL_Client.Configuration
 {
+    /// <summary>
+    /// Class for configure client application
+    /// </summary>
     public class Config
     {
         private static OSLLogger _logger = new OSLLogger("Config");
 
-        public static string ip = "localhost";
-        public static int port = 456789;
+        //public static string serverIPSocket = "localhost";
+        public static string serverIPSocketOSLServer = "127.0.0.1";
+        public static int serverPortSocketOSLServer = 45678;
         public static string leagueClientProcess = "LeagueClient";
         public static string leagueClientFullFilePath = "";
         public static string leagueClientPath = "";
@@ -31,24 +35,36 @@ namespace OSL_Client.Configuration
         public static int LiveEventsAPIPort = 34243;
 
         /// <summary>
+        /// Load configuration
+        /// </summary>
+        public static void LoadConfig()
+        {
+            LoadConfigServerSocket();
+        }
+
+        /// <summary>
         /// Loads the config from the config file.
         /// </summary>
-        public static void LoadConfigHost()
+        public static void LoadConfigServerSocket()
         {
-            string filePath = "./" + "Config" + "/" + "configHost.json";
+            string filePath = "./" + "Configuration" + "/" + "configServerSocketOSLServer.json";
             dynamic configHost = JsonConvert.DeserializeObject(FileManagerLocal.ReadInFile(filePath));
             try
             {
-                ip = configHost.ip;
-                port = configHost.port;
-                _logger.log(LoggingLevel.INFO, "LoadConfigHost()", "Config host load");
+                serverIPSocketOSLServer = configHost.ipOSLServer;
+                serverPortSocketOSLServer = configHost.portOSLServer;
+                _logger.log(LoggingLevel.INFO, "LoadConfigServerSocket()", $"Config host load Ip : {serverIPSocketOSLServer} Port : {serverPortSocketOSLServer}");
             }
             catch (Exception e)
             {
-                _logger.log(LoggingLevel.ERROR, "LoadConfigHost()", e.Message);
+                _logger.log(LoggingLevel.ERROR, "LoadConfigServerSocket()", e.Message);
             }
         }
 
+        /// <summary>
+        /// Game client api host and password
+        /// </summary>
+        /// <returns></returns>
         public static bool SetHostPassGameClientApi()
         {
             try

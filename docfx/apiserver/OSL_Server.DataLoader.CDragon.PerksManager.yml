@@ -20,14 +20,16 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: PerksManager
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
+  summary: "\nPerks Manager\n"
+  example: []
   syntax:
     content: public class PerksManager
     content.vb: Public Class PerksManager
@@ -61,11 +63,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerks
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -102,11 +104,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerksComposent
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
-    startLine: 38
+    startLine: 42
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -152,11 +154,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerksStyle
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
-    startLine: 109
+    startLine: 115
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -202,11 +204,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: PerksAsyncDownload
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
-    startLine: 154
+    startLine: 162
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -258,11 +260,11 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonPerks
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
-    startLine: 166
+    startLine: 174
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon

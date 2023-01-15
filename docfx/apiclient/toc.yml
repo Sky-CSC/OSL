@@ -6,6 +6,13 @@
     name: LoggingLevel
   - uid: OSL_Client.OSLLogger
     name: OSLLogger
+- uid: OSL_Client.Communication.OSLServer
+  name: OSL_Client.Communication.OSLServer
+  items:
+  - uid: OSL_Client.Communication.OSLServer.AsyncClient
+    name: AsyncClient
+  - uid: OSL_Client.Communication.OSLServer.StateObject
+    name: StateObject
 - uid: OSL_Client.Configuration
   name: OSL_Client.Configuration
   items:
@@ -16,10 +23,6 @@
   items:
   - uid: OSL_Client.FileManager.FileManagerLocal
     name: FileManagerLocal
-  - uid: OSL_Client.FileManager.JsonManagerLocal
-    name: JsonManagerLocal
-  - uid: OSL_Client.FileManager.JsonType
-    name: JsonType
 - uid: OSL_Client.RiotApp
   name: OSL_Client.RiotApp
   items:
@@ -32,6 +35,8 @@
   items:
   - uid: OSL_Client.RiotApp.API.LCU.GameFlowPhase
     name: GameFlowPhase
+  - uid: OSL_Client.RiotApp.API.LCU.GameFlowPhaseStatus
+    name: GameFlowPhaseStatus
   - uid: OSL_Client.RiotApp.API.LCU.LcuApi
     name: LcuApi
   - uid: OSL_Client.RiotApp.API.LCU.UrlRequest

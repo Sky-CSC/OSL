@@ -7,6 +7,9 @@ using System.Diagnostics;
 
 namespace OSL_Client.RiotApp
 {
+    /// <summary>
+    /// Information of computer process
+    /// </summary>
     public class ProcessInfo
     {
         private static OSLLogger _logger = new OSLLogger("ProcessInfo");

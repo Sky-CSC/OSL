@@ -5,8 +5,6 @@ items:
   id: OSL_Client.FileManager
   children:
   - OSL_Client.FileManager.FileManagerLocal
-  - OSL_Client.FileManager.JsonManagerLocal
-  - OSL_Client.FileManager.JsonType
   langs:
   - csharp
   - vb
@@ -22,13 +20,3 @@ references:
   name: FileManagerLocal
   nameWithType: FileManagerLocal
   fullName: OSL_Client.FileManager.FileManagerLocal
-- uid: OSL_Client.FileManager.JsonManagerLocal
-  commentId: T:OSL_Client.FileManager.JsonManagerLocal
-  name: JsonManagerLocal
-  nameWithType: JsonManagerLocal
-  fullName: OSL_Client.FileManager.JsonManagerLocal
-- uid: OSL_Client.FileManager.JsonType
-  commentId: T:OSL_Client.FileManager.JsonType
-  name: JsonType
-  nameWithType: JsonType
-  fullName: OSL_Client.FileManager.JsonType

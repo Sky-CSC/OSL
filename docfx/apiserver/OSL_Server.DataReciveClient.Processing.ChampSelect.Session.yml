@@ -1,0 +1,739 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  id: Session
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect
+  children:
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Session.#ctor
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Actions
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Bans
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Session.MyTeam
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Session.TheirTeam
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Timer
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: Session
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Session
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 189
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nSession json\n"
+  example: []
+  syntax:
+    content: public class Session
+    content.vb: Public Class Session
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Actions
+  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Actions
+  id: Actions
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: Actions
+  nameWithType: Session.Actions
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Actions
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Actions
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 191
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public List<List<Actions>> Actions { get; set; }
+    parameters: []
+    return:
+      type: List{List{OSL_Server.DataReciveClient.Processing.ChampSelect.Actions}}
+    content.vb: Public Property Actions As List(Of List(Of Actions))
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Actions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Bans
+  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Bans
+  id: Bans
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: Bans
+  nameWithType: Session.Bans
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Bans
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Bans
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 192
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public Bans Bans { get; set; }
+    parameters: []
+    return:
+      type: OSL_Server.DataReciveClient.Processing.ChampSelect.Bans
+    content.vb: Public Property Bans As Bans
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Bans*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.MyTeam
+  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.MyTeam
+  id: MyTeam
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: MyTeam
+  nameWithType: Session.MyTeam
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.MyTeam
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: MyTeam
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 193
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public List<Team> MyTeam { get; set; }
+    parameters: []
+    return:
+      type: List{OSL_Server.DataReciveClient.Processing.ChampSelect.Team}
+    content.vb: Public Property MyTeam As List(Of Team)
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.MyTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.TheirTeam
+  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.TheirTeam
+  id: TheirTeam
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: TheirTeam
+  nameWithType: Session.TheirTeam
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.TheirTeam
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TheirTeam
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 194
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public List<Team> TheirTeam { get; set; }
+    parameters: []
+    return:
+      type: List{OSL_Server.DataReciveClient.Processing.ChampSelect.Team}
+    content.vb: Public Property TheirTeam As List(Of Team)
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.TheirTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Timer
+  commentId: P:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Timer
+  id: Timer
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: Timer
+  nameWithType: Session.Timer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Timer
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Timer
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 195
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public Timer Timer { get; set; }
+    parameters: []
+    return:
+      type: OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
+    content.vb: Public Property Timer As Timer
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Timer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.#ctor
+  commentId: M:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.#ctor
+  id: '#ctor'
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: Session()
+  nameWithType: Session.Session()
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Session()
+  type: Constructor
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: .ctor
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
+    startLine: 196
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public Session()
+    content.vb: Public Sub New
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect
+  commentId: N:OSL_Server.DataReciveClient.Processing.ChampSelect
+  name: OSL_Server.DataReciveClient.Processing.ChampSelect
+  nameWithType: OSL_Server.DataReciveClient.Processing.ChampSelect
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Actions*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Actions
+  name: Actions
+  nameWithType: Session.Actions
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Actions
+- uid: List{List{OSL_Server.DataReciveClient.Processing.ChampSelect.Actions}}
+  commentId: '!:List{List{OSL_Server.DataReciveClient.Processing.ChampSelect.Actions}}'
+  definition: List`1
+  name: List<List<Actions>>
+  nameWithType: List<List<Actions>>
+  fullName: List<List<OSL_Server.DataReciveClient.Processing.ChampSelect.Actions>>
+  nameWithType.vb: List(Of List(Of Actions))
+  fullName.vb: List(Of List(Of OSL_Server.DataReciveClient.Processing.ChampSelect.Actions))
+  name.vb: List(Of List(Of Actions))
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+    name: Actions
+    nameWithType: Actions
+    fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+    name: Actions
+    nameWithType: Actions
+    fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Bans*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Bans
+  name: Bans
+  nameWithType: Session.Bans
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Bans
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Bans
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.Bans
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect
+  name: Bans
+  nameWithType: Bans
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Bans
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.MyTeam*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.MyTeam
+  name: MyTeam
+  nameWithType: Session.MyTeam
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.MyTeam
+- uid: List{OSL_Server.DataReciveClient.Processing.ChampSelect.Team}
+  commentId: '!:List{OSL_Server.DataReciveClient.Processing.ChampSelect.Team}'
+  definition: List`1
+  name: List<Team>
+  nameWithType: List<Team>
+  fullName: List<OSL_Server.DataReciveClient.Processing.ChampSelect.Team>
+  nameWithType.vb: List(Of Team)
+  fullName.vb: List(Of OSL_Server.DataReciveClient.Processing.ChampSelect.Team)
+  name.vb: List(Of Team)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Team
+    name: Team
+    nameWithType: Team
+    fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Team
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Team
+    name: Team
+    nameWithType: Team
+    fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Team
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.TheirTeam*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.TheirTeam
+  name: TheirTeam
+  nameWithType: Session.TheirTeam
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.TheirTeam
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Timer*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Timer
+  name: Timer
+  nameWithType: Session.Timer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Timer
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect
+  name: Timer
+  nameWithType: Timer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.#ctor*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.Session.#ctor
+  name: Session
+  nameWithType: Session.Session
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session.Session

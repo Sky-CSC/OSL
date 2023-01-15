@@ -1,0 +1,920 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Communication.ServerHub
+  commentId: T:OSL_Server.Communication.ServerHub
+  id: ServerHub
+  parent: OSL_Server.Communication
+  children:
+  - OSL_Server.Communication.ServerHub.IsPortBusy(System.Int32)
+  - OSL_Server.Communication.ServerHub.IsServerRunning
+  - OSL_Server.Communication.ServerHub.OnConnectedAsync
+  - OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
+  - OSL_Server.Communication.ServerHub.SendPort(System.Int32)
+  - OSL_Server.Communication.ServerHub.TurnOff
+  - OSL_Server.Communication.ServerHub.TurnOn
+  - OSL_Server.Communication.ServerHub.UpdateStatus
+  langs:
+  - csharp
+  - vb
+  name: ServerHub
+  nameWithType: ServerHub
+  fullName: OSL_Server.Communication.ServerHub
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ServerHub
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 10
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nServer Hub\n"
+  example: []
+  syntax:
+    content: 'public class ServerHub : Hub, IDisposable'
+    content.vb: >-
+      Public Class ServerHub
+          Inherits Hub
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  - Microsoft.AspNetCore.SignalR.Hub
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  - Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+  - Microsoft.AspNetCore.SignalR.Hub.Dispose
+  - Microsoft.AspNetCore.SignalR.Hub.Clients
+  - Microsoft.AspNetCore.SignalR.Hub.Context
+  - Microsoft.AspNetCore.SignalR.Hub.Groups
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Communication.ServerHub.IsServerRunning
+  commentId: P:OSL_Server.Communication.ServerHub.IsServerRunning
+  id: IsServerRunning
+  parent: OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: IsServerRunning
+  nameWithType: ServerHub.IsServerRunning
+  fullName: OSL_Server.Communication.ServerHub.IsServerRunning
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: IsServerRunning
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  syntax:
+    content: public static bool IsServerRunning { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Property IsServerRunning As Boolean
+  overload: OSL_Server.Communication.ServerHub.IsServerRunning*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Communication.ServerHub.UpdateStatus
+  commentId: M:OSL_Server.Communication.ServerHub.UpdateStatus
+  id: UpdateStatus
+  parent: OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: UpdateStatus()
+  nameWithType: ServerHub.UpdateStatus()
+  fullName: OSL_Server.Communication.ServerHub.UpdateStatus()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: UpdateStatus
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 21
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nUpdate status of the server\n"
+  example: []
+  syntax:
+    content: public async Task UpdateStatus()
+    return:
+      type: Task
+      description: ''
+    content.vb: Public Function UpdateStatus As Task
+  overload: OSL_Server.Communication.ServerHub.UpdateStatus*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Communication.ServerHub.SendPort(System.Int32)
+  commentId: M:OSL_Server.Communication.ServerHub.SendPort(System.Int32)
+  id: SendPort(System.Int32)
+  parent: OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: SendPort(Int32)
+  nameWithType: ServerHub.SendPort(Int32)
+  fullName: OSL_Server.Communication.ServerHub.SendPort(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SendPort
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 41
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nSend the list of all BoatTypes to the client\n"
+  example: []
+  syntax:
+    content: public async Task SendPort(int port)
+    parameters:
+    - id: port
+      type: System.Int32
+      description: port
+    return:
+      type: Task
+      description: ''
+    content.vb: Public Function SendPort(port As Integer) As Task
+  overload: OSL_Server.Communication.ServerHub.SendPort*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Communication.ServerHub.TurnOn
+  commentId: M:OSL_Server.Communication.ServerHub.TurnOn
+  id: TurnOn
+  parent: OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: TurnOn()
+  nameWithType: ServerHub.TurnOn()
+  fullName: OSL_Server.Communication.ServerHub.TurnOn()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TurnOn
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 55
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nAsk the server to start the socket\n"
+  example: []
+  syntax:
+    content: public async Task TurnOn()
+    return:
+      type: Task
+      description: ''
+    content.vb: Public Function TurnOn As Task
+  overload: OSL_Server.Communication.ServerHub.TurnOn*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Communication.ServerHub.TurnOff
+  commentId: M:OSL_Server.Communication.ServerHub.TurnOff
+  id: TurnOff
+  parent: OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: TurnOff()
+  nameWithType: ServerHub.TurnOff()
+  fullName: OSL_Server.Communication.ServerHub.TurnOff()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TurnOff
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 65
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nAsk the server to turn off the socket\n"
+  example: []
+  syntax:
+    content: public async Task TurnOff()
+    return:
+      type: Task
+      description: ''
+    content.vb: Public Function TurnOff As Task
+  overload: OSL_Server.Communication.ServerHub.TurnOff*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Communication.ServerHub.OnConnectedAsync
+  commentId: M:OSL_Server.Communication.ServerHub.OnConnectedAsync
+  id: OnConnectedAsync
+  parent: OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: OnConnectedAsync()
+  nameWithType: ServerHub.OnConnectedAsync()
+  fullName: OSL_Server.Communication.ServerHub.OnConnectedAsync()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: OnConnectedAsync
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 75
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nCalled when a new connection is established with the hub.\n"
+  example: []
+  syntax:
+    content: public override Task OnConnectedAsync()
+    return:
+      type: Task
+      description: ''
+    content.vb: Public Overrides Function OnConnectedAsync As Task
+  overridden: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+  overload: OSL_Server.Communication.ServerHub.OnConnectedAsync*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
+  commentId: M:OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
+  id: OnDisconnectedAsync(Exception)
+  parent: OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: OnDisconnectedAsync(Exception)
+  nameWithType: ServerHub.OnDisconnectedAsync(Exception)
+  fullName: OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: OnDisconnectedAsync
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 85
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nCalled when a connection with the hub is terminated.\n"
+  example: []
+  syntax:
+    content: public override async Task OnDisconnectedAsync(Exception e)
+    parameters:
+    - id: e
+      type: Exception
+      description: exeption type
+    return:
+      type: Task
+      description: ''
+    content.vb: Public Overrides Function OnDisconnectedAsync(e As Exception) As Task
+  overload: OSL_Server.Communication.ServerHub.OnDisconnectedAsync*
+  modifiers.csharp:
+  - public
+  - override
+  - async
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: OSL_Server.Communication.ServerHub.IsPortBusy(System.Int32)
+  commentId: M:OSL_Server.Communication.ServerHub.IsPortBusy(System.Int32)
+  id: IsPortBusy(System.Int32)
+  parent: OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: IsPortBusy(Int32)
+  nameWithType: ServerHub.IsPortBusy(Int32)
+  fullName: OSL_Server.Communication.ServerHub.IsPortBusy(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: IsPortBusy
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 96
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  summary: "\nCheck the status of the port\n"
+  example: []
+  syntax:
+    content: public static bool IsPortBusy(int port)
+    parameters:
+    - id: port
+      type: System.Int32
+      description: ''
+    return:
+      type: System.Boolean
+      description: True if is busy
+    content.vb: Public Shared Function IsPortBusy(port As Integer) As Boolean
+  overload: OSL_Server.Communication.ServerHub.IsPortBusy*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Communication
+  commentId: N:OSL_Server.Communication
+  name: OSL_Server.Communication
+  nameWithType: OSL_Server.Communication
+  fullName: OSL_Server.Communication
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Microsoft.AspNetCore.SignalR.Hub
+  commentId: T:Microsoft.AspNetCore.SignalR.Hub
+  parent: Microsoft.AspNetCore.SignalR
+  isExternal: true
+  name: Hub
+  nameWithType: Hub
+  fullName: Microsoft.AspNetCore.SignalR.Hub
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  commentId: M:Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: OnDisconnectedAsync(Exception)
+  nameWithType: Hub.OnDisconnectedAsync(Exception)
+  fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+    name: OnDisconnectedAsync
+    nameWithType: Hub.OnDisconnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync(System.Exception)
+    name: OnDisconnectedAsync
+    nameWithType: Hub.OnDisconnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnDisconnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: System.Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+  commentId: M:Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Dispose(Boolean)
+  nameWithType: Hub.Dispose(Boolean)
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: Hub.Dispose
+    fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: Hub.Dispose
+    fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.SignalR.Hub.Dispose
+  commentId: M:Microsoft.AspNetCore.SignalR.Hub.Dispose
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Dispose()
+  nameWithType: Hub.Dispose()
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    name: Dispose
+    nameWithType: Hub.Dispose
+    fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    name: Dispose
+    nameWithType: Hub.Dispose
+    fullName: Microsoft.AspNetCore.SignalR.Hub.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.AspNetCore.SignalR.Hub.Clients
+  commentId: P:Microsoft.AspNetCore.SignalR.Hub.Clients
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Clients
+  nameWithType: Hub.Clients
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Clients
+- uid: Microsoft.AspNetCore.SignalR.Hub.Context
+  commentId: P:Microsoft.AspNetCore.SignalR.Hub.Context
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Context
+  nameWithType: Hub.Context
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Context
+- uid: Microsoft.AspNetCore.SignalR.Hub.Groups
+  commentId: P:Microsoft.AspNetCore.SignalR.Hub.Groups
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: Groups
+  nameWithType: Hub.Groups
+  fullName: Microsoft.AspNetCore.SignalR.Hub.Groups
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.AspNetCore.SignalR
+  commentId: N:Microsoft.AspNetCore.SignalR
+  isExternal: true
+  name: Microsoft.AspNetCore.SignalR
+  nameWithType: Microsoft.AspNetCore.SignalR
+  fullName: Microsoft.AspNetCore.SignalR
+- uid: OSL_Server.Communication.ServerHub.IsServerRunning*
+  commentId: Overload:OSL_Server.Communication.ServerHub.IsServerRunning
+  name: IsServerRunning
+  nameWithType: ServerHub.IsServerRunning
+  fullName: OSL_Server.Communication.ServerHub.IsServerRunning
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Server.Communication.ServerHub.UpdateStatus*
+  commentId: Overload:OSL_Server.Communication.ServerHub.UpdateStatus
+  name: UpdateStatus
+  nameWithType: ServerHub.UpdateStatus
+  fullName: OSL_Server.Communication.ServerHub.UpdateStatus
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: OSL_Server.Communication.ServerHub.SendPort*
+  commentId: Overload:OSL_Server.Communication.ServerHub.SendPort
+  name: SendPort
+  nameWithType: ServerHub.SendPort
+  fullName: OSL_Server.Communication.ServerHub.SendPort
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.Communication.ServerHub.TurnOn*
+  commentId: Overload:OSL_Server.Communication.ServerHub.TurnOn
+  name: TurnOn
+  nameWithType: ServerHub.TurnOn
+  fullName: OSL_Server.Communication.ServerHub.TurnOn
+- uid: OSL_Server.Communication.ServerHub.TurnOff*
+  commentId: Overload:OSL_Server.Communication.ServerHub.TurnOff
+  name: TurnOff
+  nameWithType: ServerHub.TurnOff
+  fullName: OSL_Server.Communication.ServerHub.TurnOff
+- uid: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+  commentId: M:Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+  parent: Microsoft.AspNetCore.SignalR.Hub
+  isExternal: true
+  name: OnConnectedAsync()
+  nameWithType: Hub.OnConnectedAsync()
+  fullName: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync()
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+    name: OnConnectedAsync
+    nameWithType: Hub.OnConnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+    name: OnConnectedAsync
+    nameWithType: Hub.OnConnectedAsync
+    fullName: Microsoft.AspNetCore.SignalR.Hub.OnConnectedAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Server.Communication.ServerHub.OnConnectedAsync*
+  commentId: Overload:OSL_Server.Communication.ServerHub.OnConnectedAsync
+  name: OnConnectedAsync
+  nameWithType: ServerHub.OnConnectedAsync
+  fullName: OSL_Server.Communication.ServerHub.OnConnectedAsync
+- uid: OSL_Server.Communication.ServerHub.OnDisconnectedAsync*
+  commentId: Overload:OSL_Server.Communication.ServerHub.OnDisconnectedAsync
+  name: OnDisconnectedAsync
+  nameWithType: ServerHub.OnDisconnectedAsync
+  fullName: OSL_Server.Communication.ServerHub.OnDisconnectedAsync
+- uid: Exception
+  commentId: '!:Exception'
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception
+- uid: OSL_Server.Communication.ServerHub.IsPortBusy*
+  commentId: Overload:OSL_Server.Communication.ServerHub.IsPortBusy
+  name: IsPortBusy
+  nameWithType: ServerHub.IsPortBusy
+  fullName: OSL_Server.Communication.ServerHub.IsPortBusy

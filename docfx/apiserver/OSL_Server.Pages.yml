@@ -4,7 +4,21 @@ items:
   commentId: N:OSL_Server.Pages
   id: OSL_Server.Pages
   children:
+  - OSL_Server.Pages.CDragonPage
+  - OSL_Server.Pages.ChampSelectPage
+  - OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText
+  - OSL_Server.Pages.ChampSelectView1Page
+  - OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  - OSL_Server.Pages.ChampSelectView2Page
+  - OSL_Server.Pages.ChampSelectView2Page.ChampSelect
+  - OSL_Server.Pages.ChampSelectView3Page
+  - OSL_Server.Pages.ConfigPage
+  - OSL_Server.Pages.EndGamePage
   - OSL_Server.Pages.ErrorModel
+  - OSL_Server.Pages.InGamePage
+  - OSL_Server.Pages.RecapLinkPage
+  - OSL_Server.Pages.WaitingGamePage
+  - OSL_Server.Pages.WaitingGameStartPage
   langs:
   - csharp
   - vb
@@ -15,8 +29,78 @@ items:
   assemblies:
   - OSL-Server
 references:
+- uid: OSL_Server.Pages.CDragonPage
+  commentId: T:OSL_Server.Pages.CDragonPage
+  name: CDragonPage
+  nameWithType: CDragonPage
+  fullName: OSL_Server.Pages.CDragonPage
+- uid: OSL_Server.Pages.ChampSelectPage
+  commentId: T:OSL_Server.Pages.ChampSelectPage
+  name: ChampSelectPage
+  nameWithType: ChampSelectPage
+  fullName: OSL_Server.Pages.ChampSelectPage
+- uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText
+  commentId: T:OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText
+  name: ChampSelectPage.ChampSelectOverlayText
+  nameWithType: ChampSelectPage.ChampSelectOverlayText
+  fullName: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText
+- uid: OSL_Server.Pages.ChampSelectView1Page
+  commentId: T:OSL_Server.Pages.ChampSelectView1Page
+  name: ChampSelectView1Page
+  nameWithType: ChampSelectView1Page
+  fullName: OSL_Server.Pages.ChampSelectView1Page
+- uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  commentId: T:OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+  name: ChampSelectView1Page.ChampSelect
+  nameWithType: ChampSelectView1Page.ChampSelect
+  fullName: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
+- uid: OSL_Server.Pages.ChampSelectView2Page
+  commentId: T:OSL_Server.Pages.ChampSelectView2Page
+  name: ChampSelectView2Page
+  nameWithType: ChampSelectView2Page
+  fullName: OSL_Server.Pages.ChampSelectView2Page
+- uid: OSL_Server.Pages.ChampSelectView2Page.ChampSelect
+  commentId: T:OSL_Server.Pages.ChampSelectView2Page.ChampSelect
+  name: ChampSelectView2Page.ChampSelect
+  nameWithType: ChampSelectView2Page.ChampSelect
+  fullName: OSL_Server.Pages.ChampSelectView2Page.ChampSelect
+- uid: OSL_Server.Pages.ChampSelectView3Page
+  commentId: T:OSL_Server.Pages.ChampSelectView3Page
+  name: ChampSelectView3Page
+  nameWithType: ChampSelectView3Page
+  fullName: OSL_Server.Pages.ChampSelectView3Page
+- uid: OSL_Server.Pages.ConfigPage
+  commentId: T:OSL_Server.Pages.ConfigPage
+  name: ConfigPage
+  nameWithType: ConfigPage
+  fullName: OSL_Server.Pages.ConfigPage
+- uid: OSL_Server.Pages.EndGamePage
+  commentId: T:OSL_Server.Pages.EndGamePage
+  name: EndGamePage
+  nameWithType: EndGamePage
+  fullName: OSL_Server.Pages.EndGamePage
 - uid: OSL_Server.Pages.ErrorModel
   commentId: T:OSL_Server.Pages.ErrorModel
   name: ErrorModel
   nameWithType: ErrorModel
   fullName: OSL_Server.Pages.ErrorModel
+- uid: OSL_Server.Pages.InGamePage
+  commentId: T:OSL_Server.Pages.InGamePage
+  name: InGamePage
+  nameWithType: InGamePage
+  fullName: OSL_Server.Pages.InGamePage
+- uid: OSL_Server.Pages.RecapLinkPage
+  commentId: T:OSL_Server.Pages.RecapLinkPage
+  name: RecapLinkPage
+  nameWithType: RecapLinkPage
+  fullName: OSL_Server.Pages.RecapLinkPage
+- uid: OSL_Server.Pages.WaitingGamePage
+  commentId: T:OSL_Server.Pages.WaitingGamePage
+  name: WaitingGamePage
+  nameWithType: WaitingGamePage
+  fullName: OSL_Server.Pages.WaitingGamePage
+- uid: OSL_Server.Pages.WaitingGameStartPage
+  commentId: T:OSL_Server.Pages.WaitingGameStartPage
+  name: WaitingGameStartPage
+  nameWithType: WaitingGameStartPage
+  fullName: OSL_Server.Pages.WaitingGameStartPage

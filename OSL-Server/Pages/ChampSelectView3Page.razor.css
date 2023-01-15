@@ -1,0 +1,479 @@
+/*##########################################################*/
+/*######################## General #########################*/
+/*##########################################################*/
+
+
+@font-face {
+    font-family: MyFont;
+    src: url(../css/font/fonts/fontLoL.ttf);
+}
+
+div {
+    font-family: MyFont;
+    font-weight: bold;
+}
+
+.display-champ-select {
+    /*background: url(../assets/champselect/ChampSelectView2.png);*/
+    height: 1080px;
+    width: 1920px;
+    position: absolute;
+    /* border: 5px solid yellow;*/
+}
+
+/*##########################################################*/
+/*####################### Not Active #######################*/
+/*##########################################################*/
+
+.alert {
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    top: 20px;
+    width: 800px;
+    left: 20px;
+}
+
+/*##########################################################*/
+/*########################## Pick ##########################*/
+/*##########################################################*/
+
+
+#blueSide .pick-blink {
+    animation-duration: 2.5s;
+    animation-name: condemed_blink_effect;
+    animation-iteration-count: infinite;
+    transition: none;
+    height: 245px;
+    width: 160px;
+    position: absolute;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #0b849e);
+}
+
+
+#redSide .pick-blink {
+    animation-duration: 2.5s;
+    animation-name: condemed_blink_effect;
+    animation-iteration-count: infinite;
+    transition: none;
+    height: 245px;
+    width: 160px;
+    position: absolute;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #be1e37);
+}
+
+@keyframes condemed_blink_effect {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#blueSide .lane {
+    width: 158px;
+    height: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+}
+
+#redSide .lane {
+    width: 158px;
+    height: 195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+}
+
+.lane-picture {
+    height: 50px;
+    width: 50px;
+}
+
+.side {
+    position: absolute;
+    bottom: 0px;
+    width: 790px;
+    height: 245px;
+    display: flex;
+}
+
+    .side .champ-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin-bottom: 0px;
+    }
+
+        .side .champ-wrapper:nth-child(3) {
+            margin-bottom: 0px;
+        }
+
+        .side .champ-wrapper .base-color-background {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            -webkit-filter: saturate(0.6);
+        }
+
+        .side .champ-wrapper .gradient-background-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% );
+        }
+
+
+        .side .champ-wrapper:first-child .gradient-background-overlay {
+            background-image: radial-gradient( ellipse 82% 128% at 50% 90%, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.91) 100% );
+        }
+
+
+        .side .champ-wrapper:last-child .gradient-background-overlay {
+            background-image: radial-gradient( ellipse 82% 128% at 50% 10%, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.91) 100% );
+        }
+
+.summoner-object-component .summoner-object-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: 300;
+    color: white;
+    text-shadow: 1px 1px 2px #000, 0px 1px 2px #000, 0px 0px 3px #000, 0px 0px 3px #000, 1px 1px 4px #000;
+}
+
+    .summoner-object-component .summoner-object-wrapper .summoner-name {
+        position: absolute;
+        bottom: 0px;
+        transition: left 0.2s, right 0.2s;
+    }
+
+    .summoner-object-component .summoner-object-wrapper .champ-picture {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background-size: 282%;
+        background-position: 50% 0%;
+        opacity: 1;
+    }
+
+#blueSide .champ-picture {
+    border-right: 1px solid white;
+}
+
+#redSide .champ-picture {
+    border-left: 1px solid white;
+}
+
+#blueSide {
+    left: 0px;
+}
+
+    #blueSide .champ-wrapper .base-color-background {
+        background: #0b849e;
+        /*border: 5px solid yellow;*/
+    }
+
+    #blueSide .summoner-object-component .summoner-object-wrapper .summoner-name {
+        position: absolute;
+        background: none;
+        width: 158px;
+        height: 50px;
+        text-align: center;
+        border-right: 1px solid white;
+    }
+
+        #blueSide .summoner-object-component .summoner-object-wrapper .summoner-name .summoner-name-text {
+            display: table-cell;
+            width: 158px;
+            height: 50px;
+            vertical-align: middle;
+            line-height: normal;
+        }
+
+#redSide {
+    right: 0px;
+    /*flex-direction: row-reverse;*/
+}
+
+    #redSide .summoner-object-component .summoner-object-wrapper .summoner-name {
+        position: absolute;
+        background: none;
+        width: 158px;
+        height: 50px;
+        text-align: center;
+        border-left: 1px solid white;
+    }
+
+        #redSide .summoner-object-component .summoner-object-wrapper .summoner-name .summoner-name-text {
+            display: table-cell;
+            width: 158px;
+            height: 50px;
+            vertical-align: middle;
+            line-height: normal;
+        }
+
+    #redSide .champ-wrapper .base-color-background {
+        background: #be1e37;
+    }
+
+/*#########################################################*/
+/*########################## Ban ##########################*/
+/*#########################################################*/
+.ban-blink {
+    animation-duration: 1.5s;
+    animation-name: banBlink;
+    animation-iteration-count: infinite;
+    transition: none;
+}
+
+@keyframes banBlink {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.ban-veil {
+    filter: grayscale(0.5);
+    -webkit-filter: grayscale(0.5);
+}
+
+.ban-background {
+    background-color: #010a13;
+    width: 90px;
+    height: 90px;
+}
+
+.bans {
+    width: 435px;
+    position: absolute;
+    height: 90px;
+    bottom: 255px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.ban-wrapper {
+    width: 90px;
+    height: 90px;
+    position: relative;
+}
+
+.ban-icon {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    top: -90px;
+    left: 0px;
+}
+
+#blueBans {
+    left: 0px;
+}
+
+    #blueBans .ban-wrapper {
+        margin-right: 0px;
+    }
+
+        #blueBans .ban-wrapper:nth-child(3) {
+            margin-right: 34px;
+        }
+
+#redBans {
+    right: 0px;
+    flex-direction: row-reverse;
+}
+
+    #redBans .ban-wrapper {
+        margin-left: 0px;
+    }
+
+        #redBans .ban-wrapper:nth-child(3) {
+            margin-left: 34px;
+        }
+
+    #redBans .ban-blink {
+        bottom: 90px;
+        position: relative;
+    }
+
+    #redBans .ban-icon {
+        left: 0px;
+    }
+
+/*###########################################################*/
+/*########################## Pick Keystone ##########################*/
+/*###########################################################*/
+
+.champ-select-footer-pick-keystone {
+    bottom: 0px;
+    width: 350px;
+    height: 245px;
+    left: 790px;
+    position: absolute;
+    /*    border-left: 10px solid yellow;
+    border-right: 10px solid yellow;*/
+    /*background: linear-gradient(150deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%);*/
+    -webkit-filter: saturate(0.6);
+}
+
+    .champ-select-footer-pick-keystone .gradient-background-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% );
+    }
+
+/*###########################################################*/
+/*########################## Patch ##########################*/
+/*###########################################################*/
+.champ-select-footer-ban-keystone {
+    bottom: 255px;
+    width: 162px;
+    height: 80px;
+    left: 879px;
+    background: #010a13;
+    opacity: 0.8;
+    /*background: linear-gradient(90deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%);*/
+    position: absolute;
+    /*border: 1px solid yellow;*/
+}
+
+    .champ-select-footer-ban-keystone
+    .patch-text {
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        top: 5px;
+        position: relative
+    }
+
+    .champ-select-footer-ban-keystone
+    .patch-name {
+        font-size: 35px;
+        color: white;
+        text-align: center;
+        bottom: 5px;
+        position: relative
+    }
+
+/*###########################################################*/
+/*######################## Team Text ########################*/
+/*###########################################################*/
+.champ-select-footer-blue-info {
+    bottom: 30px;
+    width: 175px;
+    height: 80px;
+    left: 790px;
+    position: absolute;
+    text-align: center;
+}
+
+    .champ-select-footer-blue-info
+    .blue-text {
+        display: table-cell;
+        vertical-align: middle;
+        width: 350px;
+        height: 80px;
+        line-height: normal;
+        color: white;
+        font-size: 20px;
+    }
+
+.champ-select-footer-red-info {
+    bottom: 30px;
+    width: 175px;
+    height: 80px;
+    right: 790px;
+    position: absolute;
+    text-align: center;
+}
+
+    .champ-select-footer-red-info
+    .red-text {
+        display: table-cell;
+        vertical-align: middle;
+        width: 350px;
+        height: 80px;
+        line-height: normal;
+        color: white;
+        font-size: 20px;
+    }
+
+/*###########################################################*/
+/*########################## Timer ##########################*/
+/*###########################################################*/
+.champ-select-footer-timer {
+    bottom: 245px;
+    width: 1920px;
+    height: 10px;
+    left: 0px;
+    background: #010a13;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.champ-select-footer-timer-blue {
+    width: 1920px;
+    height: 10px;
+    background: #0b849e;
+    position: relative;
+    -webkit-filter: saturate(0.6);
+}
+
+.champ-select-footer-timer-red {
+    width: 1920px;
+    height: 10px;
+    background: #be1e37;
+    position: relative;
+    -webkit-filter: saturate(0.6);
+}
+
+.champ-select-footer-timer-end {
+    width: 1920px;
+    height: 10px;
+    position: relative;
+    background: linear-gradient(90deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%);
+    -webkit-filter: saturate(0.6);
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green;
+    width: 125px;
+    height: 108px;
+}

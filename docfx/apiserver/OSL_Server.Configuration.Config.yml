@@ -7,6 +7,11 @@ items:
   children:
   - OSL_Server.Configuration.Config.LoadConfig
   - OSL_Server.Configuration.Config.LoadConfigCDragon
+  - OSL_Server.Configuration.Config.LoadConfigChampSelectView1
+  - OSL_Server.Configuration.Config.LoadConfigChampSelectView2
+  - OSL_Server.Configuration.Config.LoadConfigChampSelectView3
+  - OSL_Server.Configuration.Config.LoadConfigServerSocket
+  - OSL_Server.Configuration.Config.LoadConfigTimer
   langs:
   - csharp
   - vb
@@ -17,7 +22,7 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Server/Configuration/Config.cs
@@ -25,6 +30,8 @@ items:
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nClass for configure client application\n"
+  example: []
   syntax:
     content: public class Config
     content.vb: Public Class Config
@@ -58,18 +65,54 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfig
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration\n"
+  example: []
   syntax:
     content: public static void LoadConfig()
     content.vb: Public Shared Sub LoadConfig
   overload: OSL_Server.Configuration.Config.LoadConfig*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigServerSocket
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigServerSocket
+  id: LoadConfigServerSocket
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigServerSocket()
+  nameWithType: Config.LoadConfigServerSocket()
+  fullName: OSL_Server.Configuration.Config.LoadConfigServerSocket()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigServerSocket
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 32
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nConfiguration of server socker port\n"
+  example: []
+  syntax:
+    content: public static void LoadConfigServerSocket()
+    content.vb: Public Shared Sub LoadConfigServerSocket
+  overload: OSL_Server.Configuration.Config.LoadConfigServerSocket*
   modifiers.csharp:
   - public
   - static
@@ -90,18 +133,154 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigCDragon
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 21
+    startLine: 50
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration of CDragon\n"
+  example: []
   syntax:
     content: public static void LoadConfigCDragon()
     content.vb: Public Shared Sub LoadConfigCDragon
   overload: OSL_Server.Configuration.Config.LoadConfigCDragon*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigTimer
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigTimer
+  id: LoadConfigTimer
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigTimer()
+  nameWithType: Config.LoadConfigTimer()
+  fullName: OSL_Server.Configuration.Config.LoadConfigTimer()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigTimer
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 87
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigTimer()
+    content.vb: Public Shared Sub LoadConfigTimer
+  overload: OSL_Server.Configuration.Config.LoadConfigTimer*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView1
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigChampSelectView1
+  id: LoadConfigChampSelectView1
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigChampSelectView1()
+  nameWithType: Config.LoadConfigChampSelectView1()
+  fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView1()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigChampSelectView1
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 187
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration Champ Select View1\n"
+  example: []
+  syntax:
+    content: public static void LoadConfigChampSelectView1()
+    content.vb: Public Shared Sub LoadConfigChampSelectView1
+  overload: OSL_Server.Configuration.Config.LoadConfigChampSelectView1*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView2
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigChampSelectView2
+  id: LoadConfigChampSelectView2
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigChampSelectView2()
+  nameWithType: Config.LoadConfigChampSelectView2()
+  fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView2()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigChampSelectView2
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 206
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration Champ Select View2\n"
+  example: []
+  syntax:
+    content: public static void LoadConfigChampSelectView2()
+    content.vb: Public Shared Sub LoadConfigChampSelectView2
+  overload: OSL_Server.Configuration.Config.LoadConfigChampSelectView2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView3
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigChampSelectView3
+  id: LoadConfigChampSelectView3
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigChampSelectView3()
+  nameWithType: Config.LoadConfigChampSelectView3()
+  fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView3()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigChampSelectView3
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 228
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration Champ Select View3\n"
+  example: []
+  syntax:
+    content: public static void LoadConfigChampSelectView3()
+    content.vb: Public Shared Sub LoadConfigChampSelectView3
+  overload: OSL_Server.Configuration.Config.LoadConfigChampSelectView3*
   modifiers.csharp:
   - public
   - static
@@ -411,8 +590,33 @@ references:
   name: LoadConfig
   nameWithType: Config.LoadConfig
   fullName: OSL_Server.Configuration.Config.LoadConfig
+- uid: OSL_Server.Configuration.Config.LoadConfigServerSocket*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigServerSocket
+  name: LoadConfigServerSocket
+  nameWithType: Config.LoadConfigServerSocket
+  fullName: OSL_Server.Configuration.Config.LoadConfigServerSocket
 - uid: OSL_Server.Configuration.Config.LoadConfigCDragon*
   commentId: Overload:OSL_Server.Configuration.Config.LoadConfigCDragon
   name: LoadConfigCDragon
   nameWithType: Config.LoadConfigCDragon
   fullName: OSL_Server.Configuration.Config.LoadConfigCDragon
+- uid: OSL_Server.Configuration.Config.LoadConfigTimer*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigTimer
+  name: LoadConfigTimer
+  nameWithType: Config.LoadConfigTimer
+  fullName: OSL_Server.Configuration.Config.LoadConfigTimer
+- uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView1*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigChampSelectView1
+  name: LoadConfigChampSelectView1
+  nameWithType: Config.LoadConfigChampSelectView1
+  fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView1
+- uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView2*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigChampSelectView2
+  name: LoadConfigChampSelectView2
+  nameWithType: Config.LoadConfigChampSelectView2
+  fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView2
+- uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView3*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigChampSelectView3
+  name: LoadConfigChampSelectView3
+  nameWithType: Config.LoadConfigChampSelectView3
+  fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView3

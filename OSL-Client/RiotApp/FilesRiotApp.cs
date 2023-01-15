@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace OSL_Client.RiotApp
 {
+    /// <summary>
+    /// Files Riot App
+    /// </summary>
     internal class FilesRiotApp
     {
         private static OSLLogger _logger = new OSLLogger("FilesRiotApp");

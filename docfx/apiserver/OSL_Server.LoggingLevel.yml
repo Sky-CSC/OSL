@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoggingLevel
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: OFF
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: ERROR
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: WARN
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: INFO
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: main
+      branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
     id: DEBUG
     path: ../OSL-Server/Logging/OSLLogger.cs

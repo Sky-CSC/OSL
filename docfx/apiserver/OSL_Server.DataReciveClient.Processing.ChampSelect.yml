@@ -1,0 +1,66 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect
+  commentId: N:OSL_Server.DataReciveClient.Processing.ChampSelect
+  id: OSL_Server.DataReciveClient.Processing.ChampSelect
+  children:
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Bans
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Team
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
+  langs:
+  - csharp
+  - vb
+  name: OSL_Server.DataReciveClient.Processing.ChampSelect
+  nameWithType: OSL_Server.DataReciveClient.Processing.ChampSelect
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect
+  type: Namespace
+  assemblies:
+  - OSL-Server
+references:
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo
+  name: ChampSelectInfo
+  nameWithType: ChampSelectInfo
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectInfo
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect
+  name: Session
+  nameWithType: Session
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Session
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+  name: Actions
+  nameWithType: Actions
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Actions
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Bans
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.Bans
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect
+  name: Bans
+  nameWithType: Bans
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Bans
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Team
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.Team
+  name: Team
+  nameWithType: Team
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Team
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect
+  name: Timer
+  nameWithType: Timer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  commentId: T:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  name: ChampSelectTimer
+  nameWithType: ChampSelectTimer
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect
+  commentId: N:OSL_Server.DataReciveClient.Processing.ChampSelect
+  name: OSL_Server.DataReciveClient.Processing.ChampSelect
+  nameWithType: OSL_Server.DataReciveClient.Processing.ChampSelect
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect

@@ -1,0 +1,90 @@
+.champSelect {
+    /*background-color: none;*/
+    /*    height: 1080px;
+    width: 1920px;*/
+}
+
+@font-face {
+    font-family: MyFont;
+    src: url(../css/font/fonts/fontLoL.ttf);
+}
+
+html, body {
+    background-color: black;
+    color: white;
+}
+
+.title {
+    font-family: MyFont;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.button-color{
+    height: 30px;
+    width: 30px;
+}
+.champ-select-overlay-1 {
+    margin: auto;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*border: 5px solid black;*/
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+.champ-select-overlay-2 {
+    margin: auto;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*border: 5px solid black;*/
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+.champ-select-overlay-3 {
+    margin: auto;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*border: 5px solid black;*/
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+.color-picker {
+    /*height: 450px;
+    width: 400px;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    position: absolute;
+    /*bottom: 540px;*/
+    /*position: fixed;*/
+    /*top: 0%;*/
+    /*bottom: 50%;*/
+    left: 650px;
+    top: 330px;
+    border: 5px solid black;
+    /*transform: translate(-500px,-150px);*/
+}
+
+.color-picker-position {
+    /*position: sticky;*/
+    /*display: flex;*/
+    /*justify-content: center;
+    align-items: center;*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;
+    transform: translate(-50%, -50%);*/
+    /*position: absolute;*/
+    /*bottom: 540px;*/
+    /*position: fixed;*/
+    /*margin-top: 100px;*/
+    /*bottom: 50%;*/
+    /*margin-left: 10px;*/
+    /*transform: translate(-50%,-50%);*/
+}

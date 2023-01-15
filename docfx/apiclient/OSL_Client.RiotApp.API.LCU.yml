@@ -5,6 +5,7 @@ items:
   id: OSL_Client.RiotApp.API.LCU
   children:
   - OSL_Client.RiotApp.API.LCU.GameFlowPhase
+  - OSL_Client.RiotApp.API.LCU.GameFlowPhaseStatus
   - OSL_Client.RiotApp.API.LCU.LcuApi
   - OSL_Client.RiotApp.API.LCU.UrlRequest
   langs:
@@ -22,6 +23,11 @@ references:
   name: LcuApi
   nameWithType: LcuApi
   fullName: OSL_Client.RiotApp.API.LCU.LcuApi
+- uid: OSL_Client.RiotApp.API.LCU.GameFlowPhaseStatus
+  commentId: T:OSL_Client.RiotApp.API.LCU.GameFlowPhaseStatus
+  name: GameFlowPhaseStatus
+  nameWithType: GameFlowPhaseStatus
+  fullName: OSL_Client.RiotApp.API.LCU.GameFlowPhaseStatus
 - uid: OSL_Client.RiotApp.API.LCU.UrlRequest
   commentId: T:OSL_Client.RiotApp.API.LCU.UrlRequest
   name: UrlRequest
