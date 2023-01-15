@@ -1,14 +1,73 @@
 ﻿@page "/config"
+@using OSL_Server.Communication
+@using static OSL_Server.Pages.ConfigPage.ConfigOverlayText
+@using Microsoft.AspNetCore.SignalR.Client
 
 <PageTitle>Config</PageTitle>
 <div class="parent">
     <div class="Configuration">
         <div class="content">
-            <h2>Configuration</h2>
+            <h1 class="title">Configuration :</h1>
+            <div>
+                <h2><u>Server Configuration :</u></h2>
+                <br />
+                <EditForm Model="@OverlayText" OnValidSubmit="@PortServerSubmit">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <label style="font-weight: bold">Port (@AsyncServer.portSocketOSLServer) : </label>
+                    <InputNumber id="name" @bind-Value="OverlayText.Port" placeholder="45678" />
+                    <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                </EditForm>
+                <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ResetPortServerSubmit">Reset Port</button>
+            </div>
+            <br />
+            <div>
+                <h2><u>Configuration View 1 :</u></h2>
+                <br />
+                Load configuration file
+                <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileView1">Submit</button>
+                <br />
+                <br />
+                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@GenerateConfigFileView1">Generate a configuration file</button>
+            </div>
+            <br />
+            <div>
+                <h2><u>Configuration View 2 :</u></h2>
+                <br />
+                Load configuration file
+                <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileView2">Submit</button>
+                <br />
+                <br />
+                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@GenerateConfigFileView2">Generate a configuration file</button>
+            </div>
+            <br />
+            <div>
+                <h2><u>Configuration View 3 :</u></h2>
+                <br />
+                Load configuration file
+                <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileView3">Submit</button>
+                <br />
+                <br />
+                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@GenerateConfigFileView3">Generate a configuration file</button>
+            </div>
         </div>
     </div>
 </div>
 
 @code {
+    public static ConfigOverlayText OverlayText = new();
+    private HubConnection? hubConnection;
 
+    private void PortServerSubmit()
+    {
+        AsyncServer.portSocketOSLServer = OverlayText.Port;
+        ServerHub.SendPort();
+    }
+
+    private void ResetPortServerSubmit()
+    {
+        OverlayText.Port = 45678;
+        AsyncServer.portSocketOSLServer = 45678;
+        ServerHub.SendPort();
+    }    
 }
