@@ -21,7 +21,7 @@ Console.WriteLine("# No forget to check if server is running #");
 Console.WriteLine("###########################################\n");
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("###########################");
-Console.WriteLine("##### Version 0.1.0.0 #####");
+Console.WriteLine("##### Version 0.1.0 #####");
 Console.WriteLine("###########################\n");
 Console.ResetColor();
 

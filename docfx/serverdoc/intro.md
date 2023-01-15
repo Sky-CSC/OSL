@@ -9,6 +9,38 @@
 
 ---
 
+Download last release : [First Release v0.1.0-alpha](https://github.com/Sky-CSC/OSL/releases/tag/v0.1.0-alpha)
+
+Not forget run ```OSL-Server.exe```, before run ```OSL-Client.exe```
+
+Open in a browser [https://< ip >:4242](https://ip:4242) (change ip by your computer ip)
+
+Home : Link to documentation
+
+CDragon : Data download from CDragon (When you run it he download data)
+
+Config : Not implemented
+
+Champ Select : Customization of overlay. When you run a game, information to OSL-Client is send to OSL-Server. 3 Overlay are usable
+
+```Configuration/configCDragon.json``` : Configuration CDragon for download
+
+```Configuration/configServerSocket.json``` : Port of server 
+- Default port : 45678
+
+```wwwroot/``` : 
+- ```wwwroot/_content``` : Blazor operation
+- ```wwwroot/assets``` : 
+  - ```wwwroot/assets/xx.x``` : CDragon pictures downloads
+  - ```wwwroot/assets/champselect``` : picture used for champion selection
+  - ```wwwroot/assets/ingame``` : picture used for in game
+  - ```wwwroot/assets/lolsprites``` : lol sprites
+- ```wwwroot/css``` : css of web application
+- ```wwwroot/favicon.ico``` : icon of web application
+- ```wwwroot/OSL-Server.styles.css``` : css of web application
+
+---
+
 This document explains how to use and connect to the server to receive the different overlay.
 The information you can receive from the game is listed, and separated into 5 categories. It is possible to disable or enable all options.
 
