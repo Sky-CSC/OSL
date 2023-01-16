@@ -32,6 +32,8 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
                 ChampSelectTimer.DecreasingTimerChapSelect(180);
                 ChampSelectTimer.phaseTimerFast.Stop();
                 ChampSelectTimer.DecreasingTimerChapSelectFast(1750, 96);
+                ChampSelectTimer.phaseTimerView3.Stop();
+                ChampSelectTimer.DecreasingTimerChapSelectView3(1920, 96);
             }
             else
             {
@@ -63,6 +65,8 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
                                         ChampSelectTimer.DecreasingTimerChapSelect(27);
                                         ChampSelectTimer.phaseTimerFast.Stop();
                                         ChampSelectTimer.DecreasingTimerChapSelectFast(1750, 1);
+                                        ChampSelectTimer.phaseTimerView3.Stop();
+                                        ChampSelectTimer.DecreasingTimerChapSelectView3(1920, 1);
                                     }
                                 }
                                 else
@@ -71,6 +75,8 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
                                     ChampSelectTimer.DecreasingTimerChapSelect(27);
                                     ChampSelectTimer.phaseTimerFast.Stop();
                                     ChampSelectTimer.DecreasingTimerChapSelectFast(1750, 1);
+                                    ChampSelectTimer.phaseTimerView3.Stop();
+                                    ChampSelectTimer.DecreasingTimerChapSelectView3(1920, 1);
                                 }
                             }
                         }
@@ -83,6 +89,8 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
                     ChampSelectTimer.DecreasingTimerChapSelect(59);
                     ChampSelectTimer.phaseTimerFast.Stop();
                     ChampSelectTimer.DecreasingTimerChapSelectFast(1750, 32);
+                    ChampSelectTimer.phaseTimerView3.Stop();
+                    ChampSelectTimer.DecreasingTimerChapSelectView3(1920, 32);
                     alreadyLastPhase = true;
                 }
             }

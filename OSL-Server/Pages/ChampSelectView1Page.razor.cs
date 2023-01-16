@@ -81,34 +81,34 @@ namespace OSL_Server.Pages
 
         public class ChampSelect
         {
-            public string BlueTeamName { get; set; }
-            public string BlueTeamSubtext { get; set; }
-            public string BlueTeamNameColor { get; set; }
-            public string BlueTeamSubtextColor { get; set; }
-            public string BlueLogo { get; set; }
-            public string DefaultPatch { get; set; }
-            public string DefaultRegion { get; set; }
-            public string BlueSideTexteColor { get; set; }
-            public string BlueSideBackgroudColor { get; set; }
-            public string BlueSideBorderColor { get; set; }
-            public string BlueSideTimerBackgroudColor { get; set; }
-            public string ColorBlueSideTimerBorder { get; set; }
-            public string ColorBlueSideTimerTexte { get; set; }
-            public string RedTeamName { get; set; }
-            public string RedTeamSubtext { get; set; }
-            public string ColorRedTeamName { get; set; }
-            public string ColorRedTeamSubtext { get; set; }
-            public string RedLogo { get; set; }
-            public string ColorRedSideTexte { get; set; }
-            public string ColorRedSideBackgroud { get; set; }
-            public string ColorRedSideBorder { get; set; }
-            public string ColorRedSideTimerBackgroud { get; set; }
-            public string ColorRedSideTimerBorder { get; set; }
-            public string ColorRedSideTimerTexte { get; set; }
-            public string BanBackgroundPicture { get; set; }
-            public string BanOverlayPicture { get; set; }
-            public string BanBackgroundColor { get; set; }
-            public string OverlayBackground { get; set; }
+            public string DefaultPatch {get;set;}
+            public string DefaultRegion {get;set;}
+            public string BlueSideTeamName {get;set;}
+            public string BlueTeamSubtext {get;set;}
+            public string BlueTeamNameColor {get;set;}
+            public string BlueTeamSubtextColor {get;set;}
+            public string BlueLogo {get;set;}
+            public string BlueSideTexteColor {get;set;}
+            public string BlueSideBackgroudColor {get;set;}
+            public string BlueSideBorderColor {get;set;}
+            public string BlueSideTimerBackgroudColor {get;set;}
+            public string BlueSideTimerBorderColor {get;set;}
+            public string BlueSideTimerTexteColor {get;set;}
+            public string RedSideTeamName {get;set;}
+            public string RedTeamSubtext {get;set;}
+            public string RedTeamNameColor {get;set;}
+            public string RedTeamSubtextColor {get;set;}
+            public string RedLogo {get;set;}
+            public string RedSideTexteColor {get;set;}
+            public string RedSideBackgroudColor {get;set;}
+            public string RedSideBorderColor {get;set;}
+            public string RedSideTimerBackgroudColor {get;set;}
+            public string RedSideTimerBorderColor {get;set;}
+            public string RedSideTimerTexteColor {get;set;}
+            public string BanBackgroundPicture {get;set;}
+            public string BanOverlayPicture {get;set;}
+            public string BanBackgroundColor {get;set;}
+            public string OverlayBackground {get;set;}
         }
 
         public static void ResetColor()

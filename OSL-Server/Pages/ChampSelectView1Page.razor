@@ -61,12 +61,26 @@
                             }
                             else
                             {
-                                <div class="timer timer-blue">
-                                    <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
-                                        <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                if (ChampSelectTimer.phaseTime <= 60)
+                                {
+                                    <div class="timer timer-blue">
+                                        <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
+                                            <div class="gradient-background-overlay"></div>
+                                            <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        </div>
                                     </div>
-                                </div>
+                                }
+                                else
+                                {
+                                    TimeSpan time = TimeSpan.FromSeconds(ChampSelectTimer.phaseTime);
+                                    string timerMin = time.ToString(@"m\:ss");
+                                    <div class="timer timer-blue">
+                                        <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
+                                            <div class="gradient-background-overlay"></div>
+                                            <div class="timer-inner" id="timer-blue" style="left: 10px; font-size: 65px; color: @BlueSideTimerTexteColor">@timerMin</div>
+                                        </div>
+                                    </div>
+                                }
                             }
                         }
                     }
@@ -126,12 +140,26 @@
                             }
                             else
                             {
-                                <div class="timer timer-red">
-                                    <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
-                                        <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                if (ChampSelectTimer.phaseTime <= 60)
+                                {
+                                    <div class="timer timer-red">
+                                        <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
+                                            <div class="gradient-background-overlay"></div>
+                                            <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        </div>
                                     </div>
-                                </div>
+                                }
+                                else
+                                {
+                                    TimeSpan time = TimeSpan.FromSeconds(ChampSelectTimer.phaseTime);
+                                    string timerMin = time.ToString(@"m\:ss");
+                                    <div class="timer timer-red">
+                                        <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
+                                            <div class="gradient-background-overlay"></div>
+                                            <div class="timer-inner" id="timer-red" style="left: 10px; font-size: 65px; color: @RedSideTimerTexteColor">@timerMin</div>
+                                        </div>
+                                    </div>
+                                }
                             }
                         }
                     }

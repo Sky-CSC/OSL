@@ -10,8 +10,10 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         public static int gobalTimer = 0;
         public static int phaseTime = 5;
         public static int phaseTimeFast = 1750;
+        public static int phaseTimeView3 = 1920;
         public static System.Timers.Timer phaseTimer;
         public static System.Timers.Timer phaseTimerFast;
+        public static System.Timers.Timer phaseTimerView3;
         /// <summary>
         /// Update timer (second display)
         /// </summary>
@@ -43,6 +45,21 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
         }
 
         /// <summary>
+        /// Update timer (pixel display)
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="e"></param>
+        private static void OnTimedEventView3(object source, ElapsedEventArgs e)
+        {
+            phaseTimeView3--;
+            if (phaseTimeView3 <= 0)
+            {
+                phaseTimeView3 = 0;
+                phaseTimerView3.Stop();
+            }
+        }
+
+        /// <summary>
         /// Decreasing timer function (second display)
         /// </summary>
         /// <param name="time"></param>
@@ -67,6 +84,20 @@ namespace OSL_Server.DataReciveClient.Processing.ChampSelect
             phaseTimerFast.Elapsed += new ElapsedEventHandler(OnTimedEventFast);
             phaseTimerFast.Interval = interval;
             phaseTimerFast.Enabled = true;
+        }
+
+        /// <summary>
+        /// Decreasing timer function (pixel display)
+        /// </summary>
+        /// <param name="time"></param>
+        /// <param name="interval"></param>
+        public static void DecreasingTimerChapSelectView3(int time, int interval)
+        {
+            phaseTimeView3 = time;
+            phaseTimerView3 = new System.Timers.Timer();
+            phaseTimerView3.Elapsed += new ElapsedEventHandler(OnTimedEventView3);
+            phaseTimerView3.Interval = interval;
+            phaseTimerView3.Enabled = true;
         }
     }
 }

@@ -25,15 +25,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="Configuration\configChampSelectView3.json">
-		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-		<None Include="Configuration\configChampSelectView2.json">
-		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-		<None Include="Configuration\configChampSelectView1.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
 		<None Include="Configuration\configCDragon.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>

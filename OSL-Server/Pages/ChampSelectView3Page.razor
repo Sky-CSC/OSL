@@ -67,17 +67,17 @@
                         {
 
                             @*<div class="champ-select-footer-timer-blue" style="width: @phaseTimer; background: @TimerBlue;">*@
-                            <div class="champ-select-footer-timer-blue" style="width: @(ChampSelectTimer.phaseTimeFast.ToString() + "px"); background: @TimerBlue;">
+                            <div class="champ-select-footer-timer-blue" style="width: @(ChampSelectTimer.phaseTimeView3.ToString() + "px"); background: @TimerBlue;">
                             </div>
                         }
                         else if (SideInProgress() == 2)
                         {
-                            <div class="champ-select-footer-timer-red" style="width: @(ChampSelectTimer.phaseTimeFast.ToString() + "px"); background: @TimerRed;">
+                            <div class="champ-select-footer-timer-red" style="width: @(ChampSelectTimer.phaseTimeView3.ToString() + "px"); background: @TimerRed;">
                             </div>
                         }
                         else
                         {
-                            <div class="champ-select-footer-timer-end" style="width: @(ChampSelectTimer.phaseTimeFast.ToString() + "px"); background: @TimerEnd;">
+                            <div class="champ-select-footer-timer-end" style="width: @(ChampSelectTimer.phaseTimeView3.ToString() + "px"); background: @TimerEnd;">
                             </div>
                         }
                     }

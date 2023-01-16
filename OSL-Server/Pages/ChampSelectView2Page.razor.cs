@@ -100,6 +100,12 @@ namespace OSL_Server.Pages
             public string BlueSideTeamName { get; set; }
             public string BlueSideTeamNameColor { get; set; }
             public string BlueSideTeamNameSize { get; set; }
+            public string KeystonePickColor { get; set; }
+            public string KeystonePickColorDeg { get; set; }
+            public string KeystonePickColor1 { get; set; }
+            public string KeystonePickColorPercent1 { get; set; }
+            public string KeystonePickColor2 { get; set; }
+            public string KeystonePickColorPercent2 { get; set; }
             public string RedSideBackgroud { get; set; }
             public string RedSideSummoner { get; set; }
             public string RedSideBackgroudSummonerPick { get; set; }
@@ -111,7 +117,6 @@ namespace OSL_Server.Pages
             public string BanBackgroundPicture { get; set; }
             public string BanOverlayPicture { get; set; }
             public string BanBackgroundColor { get; set; }
-            public string OverlayBackground { get; set; }
         }
 
         public static void ResetColor()

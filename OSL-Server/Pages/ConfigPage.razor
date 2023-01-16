@@ -3,6 +3,7 @@
 @using static OSL_Server.Pages.ConfigPage.ConfigOverlayText
 @using Microsoft.AspNetCore.SignalR.Client
 
+
 <PageTitle>Config</PageTitle>
 <div class="parent">
     <div class="Configuration">
@@ -28,7 +29,18 @@
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileView1">Submit</button>
                 <br />
                 <br />
-                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@GenerateConfigFileView1">Generate a configuration file</button>
+                @*<button type="submit" asp-page-handler="DownloadFile" style="width:75px"
+                class="cancel">
+                Download
+                </button>
+                <a href="/assets/champselect/backgroud-view-1.png" download>
+                <img src="/assets/champselect/backgroud-view-1.png" alt="W3Schools">
+                </a>*@
+                @*<a download href="@ConfigPage("config", "DownloadFileFromDatabase")">Download From Database</a>*@
+                @*<a href="/assets/champselect/backgroud-view-1-1.png" download><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@GenerateConfigFileView1">Generate a configuration file</button></a>*@
+                <a class="btn btn-primary button-form" style="background-color: darkgreen" href="@GenerateConfigFileView1()" download>
+                    Generate a configuration file
+                </a>
             </div>
             <br />
             <div>
@@ -38,7 +50,9 @@
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileView2">Submit</button>
                 <br />
                 <br />
-                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@GenerateConfigFileView2">Generate a configuration file</button>
+                <a class="btn btn-primary button-form" style="background-color: darkgreen" href="@GenerateConfigFileView2()" download>
+                    Generate a configuration file
+                </a>
             </div>
             <br />
             <div>
@@ -48,7 +62,10 @@
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileView3">Submit</button>
                 <br />
                 <br />
-                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@GenerateConfigFileView3">Generate a configuration file</button>
+                @*<button class="btn btn-primary button-form" style="background-color: darkgreen" onclick="@GenerateConfigFileView3()">Submit</button>*@
+                <a class="btn btn-primary button-form" style="background-color: darkgreen" href="@GenerateConfigFileView3()" download>
+                    Generate a configuration file
+                </a>
             </div>
         </div>
     </div>
@@ -69,5 +86,5 @@
         OverlayText.Port = 45678;
         AsyncServer.portSocketOSLServer = 45678;
         ServerHub.SendPort();
-    }    
+    }
 }

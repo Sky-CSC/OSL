@@ -81,6 +81,40 @@ namespace OSL_Server.Pages
         public static string BanBackgroundColor = "#010a13";
         public static string BanBackgroundColorSave = "#010a13";
 
+        public class ChampSelect
+        {
+            public string DefaultPatch { get; set; }
+            public string DefaultRegion { get; set; }
+            public string TimerBackground { get; set; }
+            public string TimerBlue { get; set; }
+            public string TimerRed { get; set; }
+            public string TimerEnd { get; set; }
+            public string BlueSideBackgroud { get; set; }
+            public string BlueSideSummoner { get; set; }
+            public string BlueSideBackgroudSummonerPick { get; set; }
+            public string BlueSideBlink { get; set; }
+            public string BlueSideBackgroudSummonerPickEnd { get; set; }
+            public string BlueSideTeamName { get; set; }
+            public string BlueSideTeamNameColor { get; set; }
+            public string BlueSideTeamNameSize { get; set; }
+            public string KeystonePickColor { get; set; }
+            public string KeystonePickColorDeg { get; set; }
+            public string KeystonePickColor1 { get; set; }
+            public string KeystonePickColorPercent1 { get; set; }
+            public string KeystonePickColor2 { get; set; }
+            public string KeystonePickColorPercent2 { get; set; }
+            public string RedSideBackgroud { get; set; }
+            public string RedSideSummoner { get; set; }
+            public string RedSideBackgroudSummonerPick { get; set; }
+            public string RedSideBlink { get; set; }
+            public string RedSideBackgroudSummonerPickEnd { get; set; }
+            public string RedSideTeamName { get; set; }
+            public string RedSideTeamNameColor { get; set; }
+            public string RedSideTeamNameSize { get; set; }
+            public string BanBackgroundPicture { get; set; }
+            public string BanOverlayPicture { get; set; }
+            public string BanBackgroundColor { get; set; }
+        }
         public static void ResetColor()
         {
             TimerBackground = TimerBackgroundSaved;

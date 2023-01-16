@@ -22,6 +22,7 @@ namespace OSL_Server.Configuration
             LoadConfigServerSocket();
             LoadConfigCDragon();
             LoadConfigTimer();
+            LoadDefaultSession();
             LoadConfigChampSelectView1();
             LoadConfigChampSelectView2();
             LoadConfigChampSelectView3();
@@ -90,6 +91,7 @@ namespace OSL_Server.Configuration
             //Creation of timer for display him in champ select
             ChampSelectTimer.DecreasingTimerChapSelect(100);
             ChampSelectTimer.DecreasingTimerChapSelectFast(100, 50);
+            ChampSelectTimer.DecreasingTimerChapSelectView3(100, 50);
         }
 
         //public static void LoadConfigChampSelectView1()
@@ -242,6 +244,12 @@ namespace OSL_Server.Configuration
             _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView3", $"{ChampSelectView3Page.DefaultRegion}");
 
             //ChampSelectView3Page.DefaultPatch = "12.12";
+        }
+
+        public static void LoadDefaultSession()
+        {
+            string dataDefaultSession = FileManagerLocal.ReadInFile("./wwwroot/assets/champselect/defaultSession.json");
+            ChampSelectInfo.InChampSelect(dataDefaultSession);
         }
     }
 }
