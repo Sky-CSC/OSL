@@ -26,6 +26,7 @@ namespace OSL_Server.Pages
         public static string ColorPickerOverlay1 = "hidden";
         public static string ColorPickerOverlay2 = "hidden";
         public static string ColorPickerOverlay3 = "hidden";
+        public static string ColorPickerOverlay4 = "hidden";
         public static string colorValue = "#0000";
 
         public class ChampSelectOverlayText
@@ -37,6 +38,8 @@ namespace OSL_Server.Pages
             public string? BlueSideTeamName2 { get; set; }
             [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
             public string? BlueSideTeamName3 { get; set; }
+            [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
+            public string? BlueSideTeamName4 { get; set; }
 
 
             [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
@@ -45,12 +48,18 @@ namespace OSL_Server.Pages
             public string? RedSideTeamName2 { get; set; }
             [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
             public string? RedSideTeamName3 { get; set; }
+            [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
+            public string? RedSideTeamName4 { get; set; }
 
 
             [StringLength(30, ErrorMessage = "Name is too long (30 character limit).")]
             public string? BlueTeamSubtext { get; set; }
             [StringLength(30, ErrorMessage = "Name is too long (30 character limit).")]
             public string? RedTeamSubtext { get; set; }
+            [StringLength(15, ErrorMessage = "Name is too long (15 character limit).")]
+            public string? BlueSideTeamNameSubtext { get; set; }
+            [StringLength(15, ErrorMessage = "Name is too long (15 character limit).")]
+            public string? RedSideTeamNameSubtext { get; set; }
 
             [Required]
             [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
@@ -87,6 +96,37 @@ namespace OSL_Server.Pages
             [Range(0, 100, ErrorMessage = "Accommodation invalid (0-100).")]
             public int KeystonePickColorPercent23 { get; set; } = 100;
 
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int BorderBottomPixel { get; set; } = 5;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int BorderTop { get; set; } = 5;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int BlueSideBorderColorBan { get; set; } = 2;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int RedSideBorderColorBan { get; set; } = 2;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int BlueSideBorderColorPick { get; set; } = 2;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int RedSideBorderColorPick { get; set; } = 2;
+
+            [Required]
+            [Range(-360, 360, ErrorMessage = "Accommodation invalid (-360-360).")]
+            public int BackgroudGradientDeg { get; set; } = 150;
+
+            [Required]
+            [Range(0, 100, ErrorMessage = "Accommodation invalid (0-100).")]
+            public int BackgroudGradientPercent1 { get; set; } = 0;
+
+            [Required]
+            [Range(0, 100, ErrorMessage = "Accommodation invalid (0-100).")]
+            public int BackgroudGradientPercent2 { get; set; } = 100;
+
             public bool OverlayBackground { get; set; } = true;
             public bool DisplaySummonerSpell { get; set; } = false;
             public bool EnableTimerView2 { get; set; } = true;
@@ -114,6 +154,33 @@ namespace OSL_Server.Pages
         private string TempsRedSideTimerBorderColor()
         {
             string[] tempsBorderColor = ChampSelectView1Page.RedSideTimerBorderColor.Split(" ");
+            return tempsBorderColor[2];
+        }
+
+        private string TempsBorderTop()
+        {
+            string[] tempsBorderColor = ChampSelectView4Page.BorderTop.Split(" ");
+            return tempsBorderColor[2];
+        }
+
+        private string TempsBlueSideBorderColorBan()
+        {
+            string[] tempsBorderColor = ChampSelectView4Page.BlueSideBorderColorBan.Split(" ");
+            return tempsBorderColor[2];
+        }
+        private string TempsRedSideBorderColorBan()
+        {
+            string[] tempsBorderColor = ChampSelectView4Page.RedSideBorderColorBan.Split(" ");
+            return tempsBorderColor[2];
+        }
+        private string TempsBlueSideBorderColorPick()
+        {
+            string[] tempsBorderColor = ChampSelectView4Page.BlueSideBorderColorPick.Split(" ");
+            return tempsBorderColor[2];
+        } 
+        private string TempsRedSideBorderColorPick()
+        {
+            string[] tempsBorderColor = ChampSelectView4Page.RedSideBorderColorPick.Split(" ");
             return tempsBorderColor[2];
         }
 
@@ -155,6 +222,8 @@ namespace OSL_Server.Pages
         private string view2EnableColor = "";
         private string view3Enable = "";
         private string view3EnableColor = "";
+        private string view4Enable = "";
+        private string view4EnableColor = "";
         private void TexteOverlayView1()
         {
             if (ChampSelectView1Page.overlayLoaded == true)
@@ -233,7 +302,31 @@ namespace OSL_Server.Pages
             {
                 ChampSelectView3Page.overlayLoaded = false;
             }
-            //StateHasChanged();
+        }
+        private void TexteOverlayView4()
+        {
+            if (ChampSelectView4Page.overlayLoaded == true)
+            {
+                view4Enable = "Disable";
+                view4EnableColor = "#be1e37";
+            }
+            else
+            {
+                view4Enable = "Enable";
+                view4EnableColor = "#0b849e";
+            }
+        }
+
+        private void EnableOverlayView4()
+        {
+            if (ChampSelectView4Page.overlayLoaded == false)
+            {
+                ChampSelectView4Page.overlayLoaded = true;
+            }
+            else
+            {
+                ChampSelectView4Page.overlayLoaded = false;
+            }
         }
     }
 }

@@ -264,7 +264,6 @@
                         {
                             foreach (var inaction in action)
                             {
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 1 || inaction.PickTurn == 3 || inaction.PickTurn == 5 || inaction.PickTurn == 8 || inaction.PickTurn == 10))
                                 if (inaction.Completed == false)
                                 {
                                     if (inaction.Type.Equals("ban"))
@@ -286,13 +285,6 @@
                                         }
                                     }
                                 }
-                                //else if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4) && (ChampSelectInfo.session.Bans.MyTeamBans.Count() >= 3))
-                                //{
-                                //    <div class="ban-wrapper ban-background" style="background-color: @BanBackgroundColor">
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    i++;
-                                //}
                             }
                         }
 
@@ -318,7 +310,6 @@
                         for (k = 0; k < ChampSelectInfo.session.Bans.TheirTeamBans.Count(); k++)
                         {
                             <div class="ban-wrapper">
-                                @*<img class="ban-wrapper ban-veil" src="../assets/12.12/fr_fr/Champions/@ChampSelectInfo.session.Bans.TheirTeamBans[k]/Skins/@champDefaultSkinNumber(k)/@champDefaultSkinNumber(k)_Tile.jpg" />*@
                                 <img class="ban-wrapper ban-veil" src="@DefaultSquare(k, 2)" />
                                 <img class="ban-icon" src="@BanOverlayPicture">
                             </div>
@@ -351,40 +342,6 @@
                                         }
                                     }
                                 }
-                                //if (inaction.Completed == false)
-                                //{
-                                //    if (inaction.Type.Equals("ban"))
-                                //    {
-                                //        int teamTheirTeam = ChampSelectInfo.session.TheirTeam[0].TeamName;
-                                //        int cellIdTheirTeam = ChampSelectInfo.session.TheirTeam[0].CellId;
-                                //        //int teamtheirTeam = ChampSelectInfo.session.TheirTeam[0].TeamName;
-                                //        if (inaction.ActorCellId == cellIdTheirTeam && teamTheirTeam == 2)
-                                //        {
-                                //            <div class="ban-wrapper">
-                                //                <div class="ban-background" style="margin-left: 4px; background-color: @BanBackgroundColor"></div>
-                                //                <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //            </div>
-                                //            k++;
-                                //        }
-                                //    }
-                                //}
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4 || inaction.PickTurn == 6 || inaction.PickTurn == 7 || inaction.PickTurn == 9))
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4 || inaction.PickTurn == 6) && (ChampSelectInfo.session.Bans.TheirTeamBans.Count() <= 2))
-                                //{
-                                //    <div class="ban-wrapper">
-                                //        <div class="ban-background" style="margin-left: 4px; background-color: @BanBackgroundColor"></div>
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    k++;
-                                //}
-                                //else if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 1 || inaction.PickTurn == 3) && (ChampSelectInfo.session.Bans.TheirTeamBans.Count() >= 3))
-                                //{
-                                //    <div class="ban-wrapper">
-                                //        <div class="ban-background" style="margin-left: 4px; background-color: @BanBackgroundColor"></div>
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    k++;
-                                //}
                             }
                         }
 
@@ -411,8 +368,6 @@ else
 
 
 @code {
-    private int currentCount = 0;
-    private static int timePhase = 0;
     private System.Timers.Timer timer = new(31);
 
     protected override void OnInitialized()
@@ -425,7 +380,6 @@ else
     {
         _ = InvokeAsync(() =>
         {
-            currentCount++;
             StateHasChanged();
         });
     }

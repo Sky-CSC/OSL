@@ -388,18 +388,6 @@ namespace OSL_Server.Pages
                 return "../assets/champselect/position_support.png";
             }
         }
-
-        //private string SizeTimer(double multiCurentCount)
-        //{
-        //    int size = 1750 - ((int)(currentCount * multiCurentCount) + timePhase);
-        //    //Console.WriteLine("size : " + size);
-        //    if (size <= 0)
-        //    {
-        //        size = 0;
-        //    }
-        //    return size.ToString() + "px";
-        //}
-
         private string PictureExist(string picture)
         {
             if (File.Exists(picture))
@@ -438,12 +426,10 @@ namespace OSL_Server.Pages
         {
             if (team == 1)
             {
-                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
                 return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
             }
             else
             {
-                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
                 return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
             }
         }
@@ -533,10 +519,8 @@ namespace OSL_Server.Pages
             }
             if (spellId > 100 || spellId == 0)
             {
-                //return "../assets/12.12/fr_fr/SummonerSpells/54.png";
                 return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/54.png";
             }
-            //return $"../assets/12.12/fr_fr/SummonerSpells/{spellId}.png";
             return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/{spellId}.png";
         }
 
@@ -573,7 +557,6 @@ namespace OSL_Server.Pages
                     }
                 }
             }
-            //return $"../assets/12.12/fr_fr/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
             return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
         }
     }

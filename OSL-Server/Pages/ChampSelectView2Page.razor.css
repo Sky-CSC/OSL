@@ -13,11 +13,9 @@ div {
 }
 
 .display-champ-select {
-    /*background: url(../assets/champselect/backgroud-view-1.png);*/
     height: 1080px;
     width: 1920px;
     position: absolute;
-    /* border: 5px solid yellow;*/
 }
 
 /*##########################################################*/
@@ -46,7 +44,6 @@ div {
     height: 245px;
     width: 160px;
     position: absolute;
-    /*background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #0b849e);*/
 }
 
 
@@ -58,7 +55,6 @@ div {
     height: 245px;
     width: 160px;
     position: absolute;
-    /*background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, #be1e37);*/
 }
 
 @keyframes condemed_blink_effect {
@@ -210,7 +206,6 @@ div {
 
 #redSide {
     right: 90px;
-    /*flex-direction: row-reverse;*/
 }
 
     #redSide .summoner-object-component .summoner-object-wrapper .summoner-name {
@@ -336,20 +331,17 @@ div {
     height: 245px;
     left: 880px;
     position: absolute;
-    /*    border-left: 10px solid yellow;
-    border-right: 10px solid yellow;*/
-    /*background: linear-gradient(150deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%);*/
     -webkit-filter: saturate(0.6);
 }
 
-.champ-select-footer-pick-keystone .gradient-background-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% );
-}
+    .champ-select-footer-pick-keystone .gradient-background-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% );
+    }
 
 /*###########################################################*/
 /*########################## Patch ##########################*/
@@ -361,7 +353,6 @@ div {
     left: 879px;
     background: #010a13;
     opacity: 0.8;
-    /*background: linear-gradient(90deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%);*/
     position: absolute;
 }
 

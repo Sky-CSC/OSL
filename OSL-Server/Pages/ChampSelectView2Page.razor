@@ -10,74 +10,14 @@
 <PageTitle>Champ Select Overlay 2</PageTitle>
 @if (overlayLoaded)
 {
-    @*<div class="bar">
-        <div class="percentage has-tip" style="width: 50%" data-perc="50%">
-        </div>
-    </div>*@
-
-    @*string phaseTimerTest = ChampSelectTimer.phaseTimeFast.ToString() + "px";*@
-    @*<progress value="@ChampSelectTimer.phaseTimeFast" max="1750">70 %</progress>*@
-
-    @*<div class="col-md-4 p-3">
-        <RadzenCard>
-            <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">ProgressBar in indeterminate mode</RadzenText>
-            <RadzenProgressBar Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
-        </RadzenCard>
-    </div>*@
-
     <div class="display-champ-select">
-        @*<div class="display-champ-select" style="background: url(../assets/champselect/ChampSelectView2-2.png);">*@
 
         <div class="overlay-type-2">
             <div class="champ-select-footer-timer" style="background: @TimerBackground">
-                @*@if (SideInProgress() == 1)
-            {
-            timerBlue = true;
-            double multiCurentCount = 3.4;
-            if (timerRed == true)
-            {
-            currentCount = 0;
-            timerRed = false;
-            timerBlueRed = false;
 
-            }
-            <div class="champ-select-footer-timer-blue" style="width: @SizeTimer(multiCurentCount); background: @TimerBlue;">
-            </div>
-            }
-            else if (SideInProgress() == 2)
-            {
-            timerRed = true;
-            double multiCurentCount = 3.4;
-            if (timerBlue == true)
-            {
-            currentCount = 0;
-            timerBlue = false;
-            timerBlueRed = false;
-            }
-            <div class="champ-select-footer-timer-red" style="width: @SizeTimer(multiCurentCount); background: @TimerRed;">
-            </div>
-            }
-            else
-            {
-            timerBlueRed = true;
-            double multiCurentCount = 1.5;
-            if (timerBlue == true || timerRed == true)
-            {
-            currentCount = 0;
-            timerBlue = false;
-            timerRed = false;
-            }
-            <div class="champ-select-footer-timer-end" style="width: @SizeTimer(multiCurentCount); background: @TimerEnd;">
-            </div>
-            }*@
                 @{
                     if (@ChampSelectPage.OverlayText.EnableTimerView2 == true)
                     {
-                        @*@{
-            string phaseTimer = ChampSelectTimer.phaseTimeFast.ToString() + "px";
-            //Console.WriteLine($"Test  {ChampSelectTimer.phaseTimeFast}");
-            //Console.WriteLine($"Test  {phaseTimer}");
-            }*@
                         if (SideInProgress() == 1)
                         {
 
@@ -305,13 +245,6 @@
                         {
                             foreach (var inaction in action)
                             {
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 1 || inaction.PickTurn == 3 || inaction.PickTurn == 5 || inaction.PickTurn == 8 || inaction.PickTurn == 10))
-                                //{
-                                //    <div class="ban-wrapper ban-background" style="background-color: @BanBackgroundColor">
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    i++;
-                                //}
                                 if (inaction.Completed == false)
                                 {
                                     if (inaction.Type.Equals("ban"))
@@ -366,7 +299,6 @@
                         for (k = 0; k < ChampSelectInfo.session.Bans.TheirTeamBans.Count(); k++)
                         {
                             <div class="ban-wrapper">
-                                @*<img class="ban-wrapper ban-veil" src="../assets/12.12/fr_fr/Champions/@ChampSelectInfo.session.Bans.TheirTeamBans[k]/Skins/@champDefaultSkinNumber(k)/@champDefaultSkinNumber(k)_Tile.jpg" />*@
                                 <img class="ban-wrapper ban-veil" src="@DefaultSquare(k, 2)" />
                                 <img class="ban-icon" src="@BanOverlayPicture">
                             </div>
@@ -377,14 +309,6 @@
                         {
                             foreach (var inaction in action)
                             {
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4 || inaction.PickTurn == 6 || inaction.PickTurn == 7 || inaction.PickTurn == 9))
-                                //{
-                                //    <div class="ban-wrapper">
-                                //        <div class="ban-background" style="margin-left: 0px; background-color: @BanBackgroundColor"></div>
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    k++;
-                                //}
                                 if (inaction.Completed == false)
                                 {
                                     if (inaction.Type.Equals("ban"))
@@ -432,8 +356,6 @@ else
     <div class="alert">
         <h1><strong>Info!</strong> Champ Select view 2 is disabled</h1>
     </div>
-    @* <progress value="@progressValue" max="1750" style="width: 100%">@(progressValue.ToString() + " px")</progress>
-    <button @onclick="@startProgress">Start</button>*@
 }
 
 
@@ -450,41 +372,9 @@ else
     {
         _ = InvokeAsync(() =>
         {
-            //progressValue++;
-            //startProgress();
             StateHasChanged();
         });
     }
 
     public void Dispose() => timer.Dispose();
-
-
-
-
-
-
-
-
-
-
-
-    //public int progressValue { get; set; } = 1750;
-
-    //private void startProgress()
-    //{
-    //    //while (progressValue != 0)
-    //    //{
-    //        progressValue--;
-    //        //Thread.Sleep(100);
-    //    //}
-    //    //StateHasChanged();
-    //    //for (int i = 0; i < 100; i++)
-    //    //{
-    //    //    this.progressValue = i;
-    //    //    StateHasChanged();
-    //    //    Thread.Sleep(100);
-    //    //}
-    //}
-
-
 }

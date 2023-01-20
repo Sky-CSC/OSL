@@ -8,65 +8,13 @@
 @if (overlayLoaded)
 {
     <div class="display-champ-select">
-        @*<div class="display-champ-select" style="background: url(../assets/champselect/ChampSelectView2-2.png);">*@
-
         <div class="overlay-type-3">
             <div class="champ-select-footer-timer" style="background: @TimerBackground">
-                @*@if (SideInProgress() == 1)
-            {
-            timerBlue = true;
-            double multiCurentCount = 3.4;
-            if (timerRed == true)
-            {
-            currentCount = 0;
-            timerRed = false;
-            timerBlueRed = false;
-
-            }*@
-                @*Console.WriteLine("multiCurentCount");*@
-                @*<div class="champ-select-footer-timer-blue" style="width: @SizeTimer(multiCurentCount); background: @TimerBlue;">
-            </div>
-            }
-            else if (SideInProgress() == 2)
-            {
-            timerRed = true;
-            double multiCurentCount = 3.4;
-            if (timerBlue == true)
-            {
-            currentCount = 0;
-            timerBlue = false;
-            timerBlueRed = false;
-            }*@
-                @*Console.WriteLine("multiCurentCount");*@
-                @*<div class="champ-select-footer-timer-red" style="width: @SizeTimer(multiCurentCount); background: @TimerRed;">
-            </div>
-            }
-            else
-            {
-            timerBlueRed = true;
-            double multiCurentCount = 1.5;
-            if (timerBlue == true || timerRed == true)
-            {
-            currentCount = 0;
-            timerBlue = false;
-            timerRed = false;
-            }*@
-                @*Console.WriteLine("multiCurentCount");*@
-                @*<div class="champ-select-footer-timer-end" style="width: @SizeTimer(multiCurentCount); background: @TimerEnd;">
-            </div>
-            }*@
-                @{
-                    //string phaseTimer = ChampSelectTimer.phaseTimeFast.ToString() + "px";
-                    //Console.WriteLine($"Test  {ChampSelectTimer.phaseTimeFast}");
-                    //Console.WriteLine($"Test  {phaseTimer}");
-                }
                 @{
                     if (@ChampSelectPage.OverlayText.EnableTimerView3 == true)
                     {
                         if (SideInProgress() == 1)
                         {
-
-                            @*<div class="champ-select-footer-timer-blue" style="width: @phaseTimer; background: @TimerBlue;">*@
                             <div class="champ-select-footer-timer-blue" style="width: @(ChampSelectTimer.phaseTimeView3.ToString() + "px"); background: @TimerBlue;">
                             </div>
                         }
@@ -82,7 +30,6 @@
                         }
                     }
                 }
-
             </div>
 
             <div class="champ-select-footer-pick">
@@ -292,13 +239,6 @@
                         {
                             foreach (var inaction in action)
                             {
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 1 || inaction.PickTurn == 3 || inaction.PickTurn == 5 || inaction.PickTurn == 8 || inaction.PickTurn == 10))
-                                //{
-                                //    <div class="ban-wrapper ban-background" style="background-color: @BanBackgroundColor">
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    i++;
-                                //}
                                 if (inaction.Completed == false)
                                 {
                                     if (inaction.Type.Equals("ban"))
@@ -353,7 +293,6 @@
                         for (k = 0; k < ChampSelectInfo.session.Bans.TheirTeamBans.Count(); k++)
                         {
                             <div class="ban-wrapper">
-                                @*<img class="ban-wrapper ban-veil" src="../assets/12.12/fr_fr/Champions/@ChampSelectInfo.session.Bans.TheirTeamBans[k]/Skins/@champDefaultSkinNumber(k)/@champDefaultSkinNumber(k)_Tile.jpg" />*@
                                 <img class="ban-wrapper ban-veil" src="@DefaultSquare(k, 2)" />
                                 <img class="ban-icon" src="@BanOverlayPicture">
                             </div>
@@ -364,14 +303,6 @@
                         {
                             foreach (var inaction in action)
                             {
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4 || inaction.PickTurn == 6 || inaction.PickTurn == 7 || inaction.PickTurn == 9))
-                                //{
-                                //    <div class="ban-wrapper">
-                                //        <div class="ban-background" style="margin-left: 0px; background-color: @BanBackgroundColor"></div>
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    k++;
-                                //}
                                 if (inaction.Completed == false)
                                 {
                                     if (inaction.Type.Equals("ban"))
@@ -423,11 +354,6 @@ else
 
 
 @code {
-    //private bool timerBlue = false;
-    //private bool timerRed = false;
-    //private bool timerBlueRed = false;
-    //private int currentCount = 0;
-    //private static int timePhase = 0;
     private System.Timers.Timer timer = new(50);
 
     protected override void OnInitialized()
@@ -440,8 +366,6 @@ else
     {
         _ = InvokeAsync(() =>
         {
-            //currentCount++;
-            //Console.WriteLine("Yolo");
             StateHasChanged();
         });
     }

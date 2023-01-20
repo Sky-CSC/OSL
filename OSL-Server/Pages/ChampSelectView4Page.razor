@@ -1,0 +1,143 @@
+﻿@page "/champselect/view4"
+@using OSL_Server.DataReciveClient.Processing.ChampSelect;
+@layout EmptyLayout
+
+<PageTitle>Champ Select Overlay 4</PageTitle>
+@if (overlayLoaded)
+{
+    @if (ChampSelectInfo.session.Timer.Phase.Equals("GAME_STARTING"))
+    {
+        <div class="display-champ-select" style="border-bottom:@BorderBottomPixel">
+            <div class="overlay-type-4">
+                <div class="champ-select-footer" style="border-top:@BorderTop; background:@BackgroudGradient">
+                    @*Footer Ban*@
+                    <div class="champ-select-footer-ban" style="background-image: @OverlayColorBackgroudGradient">
+                        <div class="blue-text" style="color: @BlueSideColorText">
+                            @BlueSideTeamName
+                        </div>
+                        <div class="blue-sub-text"style="color: @BlueSideColorSubText">
+                            @BlueSideTeamNameSubtext
+                        </div>
+                        <div class="text-ban-blue" style="color: @BlueSideColorTextBan">
+                            @BlueSideBanText
+                        </div>
+                        @*Footer ban blue side*@
+                        <div class="bans" id="blueBans">
+                            @{
+                                @*Ban already completed*@
+                                foreach (var bans in ChampSelectInfo.session.Bans.MyTeamBans)
+                                {
+                                    <div class="ban-wrapper">
+                                        <img style="border: @BlueSideBorderColorBan" class="ban-wrapper ban-veil" src="@DefaultSquare(bans)" />
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                        <div class="red-text" style="color: @RedSideColorText">
+                            @RedSideTeamName
+                        </div>
+                        <div class="red-sub-text" style="color: @RedSideColorSubText">
+                            @RedSideTeamNameSubtext
+                        </div>
+                        <div class="text-ban-red" style="color: @RedSideColorTextBan">
+                            @RedSideBanText
+                        </div>
+                        @*Footer ban red side*@
+                        <div class="bans" id="redBans">
+                            @*Ban already completed*@
+                            @{
+                                foreach (var bans in ChampSelectInfo.session.Bans.TheirTeamBans)
+                                {
+                                    <div class="ban-wrapper">
+                                        <img style="border: @RedSideBorderColorBan" class="ban-wrapper ban-veil" src="@DefaultSquare(bans)" />
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+
+                    @*Blue side display informations*@
+                    <div class="champ-select-footer-pick">
+                        <div class="text-pick-blue" style="color: @BlueSideColorTextPick">
+                            @BlueSidePickText
+                        </div>
+                        <div class="side" id="blueSide">
+                            @{
+                                foreach (var pick in ChampSelectInfo.session.MyTeam)
+                                {
+                                    <div class="champ-wrapper">
+                                        @*Champion picture*@
+                                        <img style="border: @BlueSideBorderColorPick" class="champ-wrapper" src="@DefaultSquare(pick.ChampionId)">
+                                    </div>
+                                }
+                            }
+                        </div>
+                        @*Keystone*@
+                        @*<div class="champ-select-footer-pick-keystone" style="background: @KeystonePickColor">
+                <div class="gradient-background-overlay"></div>
+                </div>*@
+                        @*Red side display informations*@
+                        <div class="text-pick-red" style="color: @RedSideColorTextPick">
+                            @RedSidePickText
+                        </div>
+                        <div class="side" id="redSide">
+                            @{
+                                foreach (var pick in ChampSelectInfo.session.MyTeam)
+                                {
+                                    <div class="champ-wrapper">
+                                        @*Champion picture*@
+                                        <img style="border: @RedSideBorderColorPick" class="champ-wrapper" src="@DefaultSquare(pick.ChampionId)">
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    @*Footer Patch keystone*@
+                    <div class="champ-select-footer-patch-keystone">
+                        <div class="patch-text">
+                            PATCH
+                            @*@Patch*@
+                        </div>
+                        <div class="patch-name">
+                            @DefaultPatch
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="">
+            Champ select phase is not in "GAME_STARTING"
+        </div>
+    }
+}
+else
+{
+    <div class="alert">
+        <h1><strong>Info!</strong> Champ Select view 4 is disabled</h1>
+    </div>
+}
+
+
+@code {
+    private System.Timers.Timer timer = new(100);
+
+    protected override void OnInitialized()
+    {
+        timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        timer.Start();
+    }
+
+    private void OnTimerCallback()
+    {
+        _ = InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => timer.Dispose();
+}

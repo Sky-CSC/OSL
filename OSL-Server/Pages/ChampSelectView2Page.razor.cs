@@ -162,7 +162,6 @@ namespace OSL_Server.Pages
                 ChampSelectPage.ColorPickerOverlay2 = "hidden";
                 TimerBackground = ChampSelectPage.colorValue;
             }
-            //StateHasChanged();
         }
 
         public static void SetTimerBlue()
@@ -179,7 +178,6 @@ namespace OSL_Server.Pages
                 TimerEnd = "linear-gradient(90deg, " + TimerBlue + " 0%, " + TimerRed + " 100%)";
 
             }
-            //StateHasChanged();
         }
 
         public static void SetTimerRed()
@@ -195,7 +193,6 @@ namespace OSL_Server.Pages
                 TimerRed = ChampSelectPage.colorValue;
                 TimerEnd = "linear-gradient(90deg, " + TimerBlue + " 0%, " + TimerRed + " 100%)";
             }
-            //StateHasChanged();
         }
 
         public static void SetBlueSideBackgroud()
@@ -210,7 +207,6 @@ namespace OSL_Server.Pages
                 ChampSelectPage.ColorPickerOverlay2 = "hidden";
                 BlueSideBackgroud = ChampSelectPage.colorValue;
                 BlueSideBlink = "radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, " + BlueSideBackgroud + ")";
-                //KeystonePickColor = "linear-gradient(150deg, "+BlueSideBackgroud+ " 0%, "+RedSideBackgroud+" 100%)";
             }
         }
         public static void SetBlueSideSummoner()
@@ -377,14 +373,6 @@ namespace OSL_Server.Pages
                 BanBackgroundColor = ChampSelectPage.colorValue;
             }
         }
-
-        //public static void UpdateTimer(int timer, int reset)
-        //{
-        //    //DateTime date1 = DateTime.Now;
-        //    //Console.WriteLine("seconde : " + date1.ToString("m:ss"));
-        //    timePhase = timer;
-        //}
-
         private string GetLaneId(int laneId)
         {
             if (laneId == 0)
@@ -408,17 +396,6 @@ namespace OSL_Server.Pages
                 return "../assets/champselect/position_support.png";
             }
         }
-
-        //private string SizeTimer(double multiCurentCount)
-        //{
-        //    int size = 1750 - ((int)(currentCount * multiCurentCount) + timePhase);
-        //    //Console.WriteLine("size : " + size);
-        //    if (size <= 0)
-        //    {
-        //        size = 0;
-        //    }
-        //    return size.ToString() + "px";
-        //}
 
         private string PictureExist(string picture)
         {
@@ -458,12 +435,10 @@ namespace OSL_Server.Pages
         {
             if (team == 1)
             {
-                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
                 return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
             }
             else
             {
-                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
                 return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
             }
         }
@@ -553,10 +528,8 @@ namespace OSL_Server.Pages
             }
             if (spellId > 100 || spellId == 0)
             {
-                //return "../assets/12.12/fr_fr/SummonerSpells/54.png";
                 return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/54.png";
             }
-            //return $"../assets/12.12/fr_fr/SummonerSpells/{spellId}.png";
             return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/{spellId}.png";
         }
 
@@ -593,7 +566,6 @@ namespace OSL_Server.Pages
                     }
                 }
             }
-            //return $"../assets/12.12/fr_fr/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
             return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
         }
     }

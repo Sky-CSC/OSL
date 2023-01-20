@@ -81,34 +81,34 @@ namespace OSL_Server.Pages
 
         public class ChampSelect
         {
-            public string DefaultPatch {get;set;}
-            public string DefaultRegion {get;set;}
-            public string BlueSideTeamName {get;set;}
-            public string BlueTeamSubtext {get;set;}
-            public string BlueTeamNameColor {get;set;}
-            public string BlueTeamSubtextColor {get;set;}
-            public string BlueLogo {get;set;}
-            public string BlueSideTexteColor {get;set;}
-            public string BlueSideBackgroudColor {get;set;}
-            public string BlueSideBorderColor {get;set;}
-            public string BlueSideTimerBackgroudColor {get;set;}
-            public string BlueSideTimerBorderColor {get;set;}
-            public string BlueSideTimerTexteColor {get;set;}
-            public string RedSideTeamName {get;set;}
-            public string RedTeamSubtext {get;set;}
-            public string RedTeamNameColor {get;set;}
-            public string RedTeamSubtextColor {get;set;}
-            public string RedLogo {get;set;}
-            public string RedSideTexteColor {get;set;}
-            public string RedSideBackgroudColor {get;set;}
-            public string RedSideBorderColor {get;set;}
-            public string RedSideTimerBackgroudColor {get;set;}
-            public string RedSideTimerBorderColor {get;set;}
-            public string RedSideTimerTexteColor {get;set;}
-            public string BanBackgroundPicture {get;set;}
-            public string BanOverlayPicture {get;set;}
-            public string BanBackgroundColor {get;set;}
-            public string OverlayBackground {get;set;}
+            public string DefaultPatch { get; set; }
+            public string DefaultRegion { get; set; }
+            public string BlueSideTeamName { get; set; }
+            public string BlueTeamSubtext { get; set; }
+            public string BlueTeamNameColor { get; set; }
+            public string BlueTeamSubtextColor { get; set; }
+            public string BlueLogo { get; set; }
+            public string BlueSideTexteColor { get; set; }
+            public string BlueSideBackgroudColor { get; set; }
+            public string BlueSideBorderColor { get; set; }
+            public string BlueSideTimerBackgroudColor { get; set; }
+            public string BlueSideTimerBorderColor { get; set; }
+            public string BlueSideTimerTexteColor { get; set; }
+            public string RedSideTeamName { get; set; }
+            public string RedTeamSubtext { get; set; }
+            public string RedTeamNameColor { get; set; }
+            public string RedTeamSubtextColor { get; set; }
+            public string RedLogo { get; set; }
+            public string RedSideTexteColor { get; set; }
+            public string RedSideBackgroudColor { get; set; }
+            public string RedSideBorderColor { get; set; }
+            public string RedSideTimerBackgroudColor { get; set; }
+            public string RedSideTimerBorderColor { get; set; }
+            public string RedSideTimerTexteColor { get; set; }
+            public string BanBackgroundPicture { get; set; }
+            public string BanOverlayPicture { get; set; }
+            public string BanBackgroundColor { get; set; }
+            public string OverlayBackground { get; set; }
         }
 
         public static void ResetColor()
@@ -404,13 +404,6 @@ namespace OSL_Server.Pages
             //StateHasChanged();
         }
 
-        public static void UpdateTimer(int timer, int reset)
-        {
-            //DateTime date1 = DateTime.Now;
-            //Console.WriteLine("seconde : " + date1.ToString("m:ss"));
-            timePhase = timer;
-        }
-
         private string PictureExist(string picture)
         {
             if (File.Exists(picture))
@@ -423,27 +416,6 @@ namespace OSL_Server.Pages
             }
         }
 
-        //private int SideInProgress()
-        //{
-        //    foreach (var action in ChampSelectInfo.session.Actions)
-        //    {
-        //        foreach (var inaction in action)
-        //        {
-        //            if (inaction.IsInProgress == true)
-        //            {
-        //                if (inaction.ActorCellId == 0 || inaction.ActorCellId == 1 || inaction.ActorCellId == 2 || inaction.ActorCellId == 3 || inaction.ActorCellId == 4)
-        //                {
-        //                    return 1;
-        //                }
-        //                else
-        //                {
-        //                    return 2;
-        //                }
-        //            }
-        //        }
-        //    }
-        //    return 0;
-        //}
         private int SideInProgress()
         {
             foreach (var action in ChampSelectInfo.session.Actions)
@@ -470,12 +442,10 @@ namespace OSL_Server.Pages
         {
             if (team == 1)
             {
-                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
                 return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.MyTeamBans[index]}/default-square.png";
             }
             else
             {
-                //return $"../assets/12.12/fr_fr/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
                 return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{ChampSelectInfo.session.Bans.TheirTeamBans[index]}/default-square.png";
             }
         }
@@ -495,7 +465,6 @@ namespace OSL_Server.Pages
         private string getCurentAction(int index, int team)
         {
             string curentAction = "";
-            //Console.WriteLine("getCurentAction");
             int cellId;
             if (team == 1)
             {
@@ -516,12 +485,10 @@ namespace OSL_Server.Pages
                             if (inaction.Type.Equals("pick"))
                             {
                                 curentAction = "Picking";
-                                //return "Picking";
                             }
                             else if (inaction.Type.Equals("ban"))
                             {
                                 curentAction = "Banning";
-                                //return "Banning";
                             }
                         }
                     }
@@ -569,10 +536,8 @@ namespace OSL_Server.Pages
             }
             if (spellId > 100 || spellId == 0)
             {
-                //return $"../assets/12.12/fr_fr/SummonerSpells/54.png";
                 return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/54.png";
             }
-            //return $"../assets/12.12/fr_fr/SummonerSpells/{spellId}.png";
             return $"../assets/{DefaultPatch}/{DefaultRegion}/SummonerSpells/{spellId}.png";
         }
 
@@ -609,7 +574,6 @@ namespace OSL_Server.Pages
                     }
                 }
             }
-            //return $"../assets/12.12/fr_fr/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
             return $"../assets/{DefaultPatch}/{DefaultRegion}/Champions/{champId}/Skins/{champId * 1000}/{champId * 1000}_Splashe.jpg";
         }
     }
