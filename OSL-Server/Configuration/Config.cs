@@ -26,6 +26,7 @@ namespace OSL_Server.Configuration
             LoadConfigChampSelectView1();
             LoadConfigChampSelectView2();
             LoadConfigChampSelectView3();
+            LoadConfigChampSelectView4();
         }
 
         /// <summary>
@@ -242,6 +243,24 @@ namespace OSL_Server.Configuration
             ChampSelectView3Page.DefaultRegion = "fr_fr";
             _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView3", $"{ChampSelectView3Page.DefaultPatch}");
             _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView3", $"{ChampSelectView3Page.DefaultRegion}");
+
+            //ChampSelectView3Page.DefaultPatch = "12.12";
+        }
+
+        public static void LoadConfigChampSelectView4()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                ChampSelectView4Page.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                ChampSelectView4Page.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            ChampSelectView4Page.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{ChampSelectView4Page.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{ChampSelectView4Page.DefaultRegion}");
 
             //ChampSelectView3Page.DefaultPatch = "12.12";
         }
