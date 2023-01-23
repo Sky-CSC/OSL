@@ -11,8 +11,18 @@
             <div class="overlay-type-4">
                 <div class="champ-select-footer" style="border-top:@BorderTop; background:@BackgroudGradient">
                     @*Footer Ban*@
+
+                    @{
+                        if (ChampSelectPage.OverlayText.EnableForegroundBackground == false)
+                        {
+                            OverlayColorBackgroudGradient = "";
+                        }
+                        else {
+                            OverlayColorBackgroudGradient = OverlayColorBackgroudGradientSave;
+                        }
+                    }
                     <div class="champ-select-footer-ban" style="background-image: @OverlayColorBackgroudGradient">
-                        <div class="blue-text" style="color: @BlueSideColorText">
+                    <div class="blue-text" style="color: @BlueSideColorText">
                             @BlueSideTeamName
                         </div>
                         <div class="blue-sub-text"style="color: @BlueSideColorSubText">

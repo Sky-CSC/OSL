@@ -141,11 +141,11 @@ namespace OSL_Server.Pages
                     ChampSelectView2Page.BanBackgroundColor = jsonContent.BanBackgroundColor;
                     fileSelected = null;
                     StateHasChanged();
-                    _logger.log(LoggingLevel.INFO, "LoadFileView1()", "Configuration View1 Loaded");
+                    _logger.log(LoggingLevel.INFO, "LoadFileView2()", "Configuration View1 Loaded");
                 }
                 catch (Exception e)
                 {
-                    _logger.log(LoggingLevel.ERROR, "LoadFileView1()", "Load view 2 error : " + e.Message);
+                    _logger.log(LoggingLevel.ERROR, "LoadFileView2()", "Load view 2 error : " + e.Message);
                 }
             }
         }
@@ -192,11 +192,65 @@ namespace OSL_Server.Pages
                     ChampSelectView3Page.BanBackgroundColor = jsonContent.BanBackgroundColor;
                     fileSelected = null;
                     StateHasChanged();
-                    _logger.log(LoggingLevel.INFO, "LoadFileView1()", "Configuration View1 Loaded");
+                    _logger.log(LoggingLevel.INFO, "LoadFileView3()", "Configuration View1 Loaded");
                 }
                 catch (Exception e)
                 {
-                    _logger.log(LoggingLevel.ERROR, "LoadFileView1()", "Load view 3 error : " + e.Message);
+                    _logger.log(LoggingLevel.ERROR, "LoadFileView3()", "Load view 3 error : " + e.Message);
+                }
+            }
+        }
+
+        private async Task LoadFileView4()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //ChampSelectView4Page.DefaultPatch = jsonContent.DefaultPatch;
+                    //ChampSelectView4Page.DefaultRegion = jsonContent.DefaultRegion;
+                    ChampSelectView4Page.BorderBottomPixel = jsonContent.BorderBottomPixel;
+                    ChampSelectView4Page.BorderTop = jsonContent.BorderTop;
+                    ChampSelectView4Page.BackgroudGradient = jsonContent.BackgroudGradient;
+                    ChampSelectView4Page.BackgroudGradientDeg = jsonContent.BackgroudGradientDeg;
+                    ChampSelectView4Page.BackgroudGradientColor1 = jsonContent.BackgroudGradientColor1;
+                    ChampSelectView4Page.BackgroudGradientPercent1 = jsonContent.BackgroudGradientPercent1;
+                    ChampSelectView4Page.BackgroudGradientColor2 = jsonContent.BackgroudGradientColor2;
+                    ChampSelectView4Page.BackgroudGradientPercent2 = jsonContent.BackgroudGradientPercent2;
+                    ChampSelectView4Page.BackgroudGradientDegSave = jsonContent.BackgroudGradientDegSave;
+                    ChampSelectView4Page.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+                    ChampSelectView4Page.BlueSideBorderColorPick = jsonContent.BlueSideBorderColorPick;
+                    ChampSelectView4Page.BlueSideBorderColorBan = jsonContent.BlueSideBorderColorBan;
+                    ChampSelectView4Page.BlueSideTeamName = jsonContent.BlueSideTeamName;
+                    ChampSelectView4Page.BlueSideTeamNameSubtext = jsonContent.BlueSideTeamNameSubtext;
+                    ChampSelectView4Page.BlueSideBanText = jsonContent.BlueSideBanText;
+                    ChampSelectView4Page.BlueSidePickText = jsonContent.BlueSidePickText;
+                    ChampSelectView4Page.BlueSideColorText = jsonContent.BlueSideColorText;
+                    ChampSelectView4Page.BlueSideColorSubText = jsonContent.BlueSideColorSubText;
+                    ChampSelectView4Page.BlueSideColorTextBan = jsonContent.BlueSideColorTextBan;
+                    ChampSelectView4Page.BlueSideColorTextPick = jsonContent.BlueSideColorTextPick;
+                    ChampSelectView4Page.RedSideBorderColorPick = jsonContent.RedSideBorderColorPick;
+                    ChampSelectView4Page.RedSideBorderColorBan = jsonContent.RedSideBorderColorBan;
+                    ChampSelectView4Page.RedSideTeamName = jsonContent.RedSideTeamName;
+                    ChampSelectView4Page.RedSideTeamNameSubtext = jsonContent.RedSideTeamNameSubtext;
+                    ChampSelectView4Page.RedSideBanText = jsonContent.RedSideBanText;
+                    ChampSelectView4Page.RedSidePickText = jsonContent.RedSidePickText;
+                    ChampSelectView4Page.RedSideColorText = jsonContent.RedSideColorText;
+                    ChampSelectView4Page.RedSideColorSubText = jsonContent.RedSideColorSubText;
+                    ChampSelectView4Page.RedSideColorTextBan = jsonContent.RedSideColorTextBan;
+                    ChampSelectView4Page.RedSideColorTextPick = jsonContent.RedSideColorTextPick;
+
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileView4()", "Configuration View4 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileView4()", "Load view 4 error : " + e.Message);
                 }
             }
         }
@@ -242,7 +296,7 @@ namespace OSL_Server.Pages
                 _logger.log(LoggingLevel.INFO, "GenerateConfigFileView1()", "Generation ok");
                 return "/assets/champselect/configChampSelectView1.json";
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 _logger.log(LoggingLevel.ERROR, "GenerateConfigFileView1()", "Error generation old version recive : " + e.Message);
                 return "/assets/champselect/configChampSelectView1.json";
@@ -293,7 +347,7 @@ namespace OSL_Server.Pages
             }
             catch (Exception e)
             {
-                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileView1()", "Error generation old version recive : " + e.Message);
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileView2()", "Error generation old version recive : " + e.Message);
                 return "/assets/champselect/configChampSelectView2.json";
             }
         }
@@ -342,8 +396,52 @@ namespace OSL_Server.Pages
             }
             catch (Exception e)
             {
-                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileView1()", "Error generation old version recive : " + e.Message);
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileView3()", "Error generation old version recive : " + e.Message);
                 return "/assets/champselect/configChampSelectView3.json";
+            }
+        }
+        private string GenerateConfigFileView4()
+        {
+            try
+            {
+                var data = new ChampSelectView4Page.ChampSelect
+                {
+                    DefaultPatch = ChampSelectView4Page.DefaultPatch,
+                    DefaultRegion = ChampSelectView4Page.DefaultRegion,
+                    BorderBottomPixel = ChampSelectView4Page.BorderBottomPixel,
+                    BorderTop = ChampSelectView4Page.BorderTop,
+                    BackgroudGradient = ChampSelectView4Page.BackgroudGradient,
+                    OverlayColorBackgroudGradient = ChampSelectView4Page.OverlayColorBackgroudGradient,
+                    BlueSideBorderColorPick = ChampSelectView4Page.BlueSideBorderColorPick,
+                    BlueSideBorderColorBan = ChampSelectView4Page.BlueSideBorderColorBan,
+                    BlueSideTeamName = ChampSelectView4Page.BlueSideTeamName,
+                    BlueSideTeamNameSubtext = ChampSelectView4Page.BlueSideTeamNameSubtext,
+                    BlueSideBanText = ChampSelectView4Page.BlueSideBanText,
+                    BlueSidePickText = ChampSelectView4Page.BlueSidePickText,
+                    BlueSideColorText = ChampSelectView4Page.BlueSideColorText,
+                    BlueSideColorSubText = ChampSelectView4Page.BlueSideColorSubText,
+                    BlueSideColorTextBan = ChampSelectView4Page.BlueSideColorTextBan,
+                    BlueSideColorTextPick = ChampSelectView4Page.BlueSideColorTextPick,
+                    RedSideBorderColorPick = ChampSelectView4Page.RedSideBorderColorPick,
+                    RedSideBorderColorBan = ChampSelectView4Page.RedSideBorderColorBan,
+                    RedSideTeamName = ChampSelectView4Page.RedSideTeamName,
+                    RedSideTeamNameSubtext = ChampSelectView4Page.RedSideTeamNameSubtext,
+                    RedSideBanText = ChampSelectView4Page.RedSideBanText,
+                    RedSidePickText = ChampSelectView4Page.RedSidePickText,
+                    RedSideColorText = ChampSelectView4Page.RedSideColorText,
+                    RedSideColorSubText = ChampSelectView4Page.RedSideColorSubText,
+                    RedSideColorTextBan = ChampSelectView4Page.RedSideColorTextBan,
+                    RedSideColorTextPick = ChampSelectView4Page.RedSideColorTextPick,
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/champselect/configChampSelectView4.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileView4()", "Generation ok");
+                return "/assets/champselect/configChampSelectView4.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileView4()", "Error generation old version recive : " + e.Message);
+                return "/assets/champselect/configChampSelectView4.json";
             }
         }
     }

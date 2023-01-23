@@ -84,6 +84,8 @@ namespace OSL_Server.Pages
 
         public class ChampSelect
         {
+            public string DefaultPatch { get; set; }
+            public string DefaultRegion { get; set; }
             public string BorderBottomPixel { get; set; }
             public string BorderTop { get; set; }
             public string BackgroudGradient { get; set; }
@@ -181,7 +183,7 @@ namespace OSL_Server.Pages
                 BlueSideColorTextBan = ChampSelectPage.colorValue;
             }
         }
-        
+
         public static void SetBlueSideColorTextPick()
         {
             if (ChampSelectPage.ColorPickerOverlay4.Equals("hidden"))
@@ -213,12 +215,12 @@ namespace OSL_Server.Pages
             if (ChampSelectPage.ColorPickerOverlay4.Equals("hidden"))
             {
                 ChampSelectPage.ColorPickerOverlay4 = "visible";
-                ChampSelectPage.colorValue =RedSideColorSubText;
+                ChampSelectPage.colorValue = RedSideColorSubText;
             }
             else
             {
                 ChampSelectPage.ColorPickerOverlay4 = "hidden";
-               RedSideColorSubText = ChampSelectPage.colorValue;
+                RedSideColorSubText = ChampSelectPage.colorValue;
             }
         }
         public static void SetRedSideColorTextBan()
@@ -226,12 +228,12 @@ namespace OSL_Server.Pages
             if (ChampSelectPage.ColorPickerOverlay4.Equals("hidden"))
             {
                 ChampSelectPage.ColorPickerOverlay4 = "visible";
-                ChampSelectPage.colorValue =RedSideColorTextBan;
+                ChampSelectPage.colorValue = RedSideColorTextBan;
             }
             else
             {
                 ChampSelectPage.ColorPickerOverlay4 = "hidden";
-               RedSideColorTextBan = ChampSelectPage.colorValue;
+                RedSideColorTextBan = ChampSelectPage.colorValue;
             }
         }
 
@@ -240,12 +242,12 @@ namespace OSL_Server.Pages
             if (ChampSelectPage.ColorPickerOverlay4.Equals("hidden"))
             {
                 ChampSelectPage.ColorPickerOverlay4 = "visible";
-                ChampSelectPage.colorValue =RedSideColorTextPick;
+                ChampSelectPage.colorValue = RedSideColorTextPick;
             }
             else
             {
                 ChampSelectPage.ColorPickerOverlay4 = "hidden";
-               RedSideColorTextPick = ChampSelectPage.colorValue;
+                RedSideColorTextPick = ChampSelectPage.colorValue;
             }
         }
         public static string BorderTopNotSet = BorderTop.Split(" ")[2];

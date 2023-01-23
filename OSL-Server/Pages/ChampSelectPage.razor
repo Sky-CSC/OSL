@@ -360,6 +360,10 @@
                     %
                     <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                 </EditForm>
+                <EditForm Model="@OverlayText" OnValidSubmit="@OverlayBackgroundSubmit">
+                    <label style="font-weight: bold">Enable foreground background: </label>
+                    <InputCheckbox id="name" @bind-Value="OverlayText.EnableForegroundBackground" />
+                </EditForm>
                 <br />
                 <br /><spam style="font-weight: bold">Blue Side Color Text  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.BlueSideColorText" @onclick="@ChampSelectView4Page.SetBlueSideColorText"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.BlueSideColorText"> @ChampSelectView4Page.BlueSideColorText</spam>
                 <br /><spam style="font-weight: bold">Blue Side Color Sub Text  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.BlueSideColorSubText" @onclick="@ChampSelectView4Page.SetBlueSideColorSubText"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.BlueSideColorSubText"> @ChampSelectView4Page.BlueSideColorSubText</spam>
@@ -666,7 +670,7 @@
 
     private void OverlayBackgroundSubmit()
     {
-        Console.WriteLine("Test");
+        //Console.WriteLine("Test");
     }
 
     public bool DisableToolbar { get; set; } = true;
