@@ -7,29 +7,31 @@
 {
     @if (ChampSelectInfo.session.Timer.Phase.Equals("GAME_STARTING"))
     {
-        <div class="display-champ-select" style="border-bottom:@BorderBottomPixel">
+        <div class="display-champ-select" style="border-bottom:@formatingData.BorderBottomPixel">
             <div class="overlay-type-4">
-                <div class="champ-select-footer" style="border-top:@BorderTop; background:@BackgroudGradient">
+                <div class="champ-select-footer" style="border-top:@formatingData.BorderTop; background:@formatingData.BackgroudGradient">
                     @*Footer Ban*@
 
                     @{
-                        if (ChampSelectPage.OverlayText.EnableForegroundBackground == false)
+                        string overlayColorBackgroudGradient;
+                        if (ChampSelectPage.textValueOverlayView4.EnableForegroundBackground == false)
                         {
-                            OverlayColorBackgroudGradient = "";
+                            overlayColorBackgroudGradient = "";
                         }
-                        else {
-                            OverlayColorBackgroudGradient = OverlayColorBackgroudGradientSave;
+                        else
+                        {
+                            overlayColorBackgroudGradient = formatingData.OverlayColorBackgroudGradient;
                         }
                     }
-                    <div class="champ-select-footer-ban" style="background-image: @OverlayColorBackgroudGradient">
-                    <div class="blue-text" style="color: @BlueSideColorText">
-                            @BlueSideTeamName
+                    <div class="champ-select-footer-ban" style="background-image: @overlayColorBackgroudGradient">
+                        <div class="blue-text" style="color: @formatingData.BlueSideColorText">
+                            @formatingData.BlueSideTeamName
                         </div>
-                        <div class="blue-sub-text"style="color: @BlueSideColorSubText">
-                            @BlueSideTeamNameSubtext
+                        <div class="blue-sub-text" style="color: @formatingData.BlueSideColorSubText">
+                            @formatingData.BlueSideTeamNameSubtext
                         </div>
-                        <div class="text-ban-blue" style="color: @BlueSideColorTextBan">
-                            @BlueSideBanText
+                        <div class="text-ban-blue" style="color: @formatingData.BlueSideColorTextBan">
+                            @formatingData.BlueSideBanText
                         </div>
                         @*Footer ban blue side*@
                         <div class="bans" id="blueBans">
@@ -38,20 +40,20 @@
                                 foreach (var bans in ChampSelectInfo.session.Bans.MyTeamBans)
                                 {
                                     <div class="ban-wrapper">
-                                        <img style="border: @BlueSideBorderColorBan" class="ban-wrapper ban-veil" src="@DefaultSquare(bans)" />
+                                        <img style="border: @formatingData.BlueSideBorderColorBan" class="ban-wrapper ban-veil" src="@DefaultSquare(bans)" />
                                     </div>
                                 }
                             }
 
                         </div>
-                        <div class="red-text" style="color: @RedSideColorText">
-                            @RedSideTeamName
+                        <div class="red-text" style="color: @formatingData.RedSideColorText">
+                            @formatingData.RedSideTeamName
                         </div>
-                        <div class="red-sub-text" style="color: @RedSideColorSubText">
-                            @RedSideTeamNameSubtext
+                        <div class="red-sub-text" style="color: @formatingData.RedSideColorSubText">
+                            @formatingData.RedSideTeamNameSubtext
                         </div>
-                        <div class="text-ban-red" style="color: @RedSideColorTextBan">
-                            @RedSideBanText
+                        <div class="text-ban-red" style="color: @formatingData.RedSideColorTextBan">
+                            @formatingData.RedSideBanText
                         </div>
                         @*Footer ban red side*@
                         <div class="bans" id="redBans">
@@ -60,7 +62,7 @@
                                 foreach (var bans in ChampSelectInfo.session.Bans.TheirTeamBans)
                                 {
                                     <div class="ban-wrapper">
-                                        <img style="border: @RedSideBorderColorBan" class="ban-wrapper ban-veil" src="@DefaultSquare(bans)" />
+                                        <img style="border: @formatingData.RedSideBorderColorBan" class="ban-wrapper ban-veil" src="@DefaultSquare(bans)" />
                                     </div>
                                 }
                             }
@@ -69,8 +71,8 @@
 
                     @*Blue side display informations*@
                     <div class="champ-select-footer-pick">
-                        <div class="text-pick-blue" style="color: @BlueSideColorTextPick">
-                            @BlueSidePickText
+                        <div class="text-pick-blue" style="color: @formatingData.BlueSideColorTextPick">
+                            @formatingData.BlueSidePickText
                         </div>
                         <div class="side" id="blueSide">
                             @{
@@ -78,7 +80,7 @@
                                 {
                                     <div class="champ-wrapper">
                                         @*Champion picture*@
-                                        <img style="border: @BlueSideBorderColorPick" class="champ-wrapper" src="@DefaultSquare(pick.ChampionId)">
+                                        <img style="border: @formatingData.BlueSideBorderColorPick" class="champ-wrapper" src="@DefaultSquare(pick.ChampionId)">
                                     </div>
                                 }
                             }
@@ -88,8 +90,8 @@
                 <div class="gradient-background-overlay"></div>
                 </div>*@
                         @*Red side display informations*@
-                        <div class="text-pick-red" style="color: @RedSideColorTextPick">
-                            @RedSidePickText
+                        <div class="text-pick-red" style="color: @formatingData.RedSideColorTextPick">
+                            @formatingData.RedSidePickText
                         </div>
                         <div class="side" id="redSide">
                             @{
@@ -97,7 +99,7 @@
                                 {
                                     <div class="champ-wrapper">
                                         @*Champion picture*@
-                                        <img style="border: @RedSideBorderColorPick" class="champ-wrapper" src="@DefaultSquare(pick.ChampionId)">
+                                        <img style="border: @formatingData.RedSideBorderColorPick" class="champ-wrapper" src="@DefaultSquare(pick.ChampionId)">
                                     </div>
                                 }
                             }
@@ -110,7 +112,7 @@
                             @*@Patch*@
                         </div>
                         <div class="patch-name">
-                            @DefaultPatch
+                            @formatingData.DefaultPatch
                         </div>
                     </div>
                 </div>
