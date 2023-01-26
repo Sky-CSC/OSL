@@ -24,7 +24,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectPage
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 13
+    startLine: 9
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -67,7 +67,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay1
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 18
+    startLine: 14
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay2
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 19
+    startLine: 15
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -133,7 +133,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay3
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 20
+    startLine: 16
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -166,7 +166,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay4
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 21
+    startLine: 17
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -199,7 +199,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorValue
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 22
+    startLine: 18
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages

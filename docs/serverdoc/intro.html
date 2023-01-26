@@ -99,12 +99,12 @@
 <p><strong>These features are under development, they are not available</strong></p>
 </div>
 <hr>
-<p>Download last release : <a href="https://github.com/Sky-CSC/OSL/releases/tag/v0.1.0-alpha">First Release v0.1.0-alpha</a></p>
+<p>Download last release : <a href="https://github.com/Sky-CSC/OSL/releases/tag/v0.2.0-alpha">First Release v0.2.0-alpha</a></p>
 <p>Not forget run <code>OSL-Server.exe</code>, before run <code>OSL-Client.exe</code></p>
 <p>Open in a browser <a href="https://ip:4242">https://&lt; ip &gt;:4242</a> (change ip by your computer ip)</p>
 <p>Home : Link to documentation</p>
 <p>CDragon : Data download from CDragon (When you run it he download data)</p>
-<p>Config : Not implemented</p>
+<p>Config : Change port of OSL-Client, load or save champ select view config</p>
 <p>Champ Select : Customization of overlay. When you run a game, information to OSL-Client is send to OSL-Server. 3 Overlay are usable</p>
 <p><code>Configuration/configCDragon.json</code> : Configuration CDragon for download</p>
 <p><code>Configuration/configServerSocket.json</code> : Port of server</p>
@@ -136,92 +136,122 @@ The information you can receive from the game is listed, and separated into 5 ca
 <p><strong>End Game</strong> : This overlay display information when the game is over.</p>
 <hr>
 <h2 id="obs-configuration-"><strong>OBS</strong> configuration :</h2>
-<p>Add to your différents scènes the différents URL, you can found this URL on your personal area, in games, game-xxxxxxxxxx, in <strong>Waiting a Game</strong>, <strong>Champ Select</strong>, <strong>Waiting Game Start</strong>, <strong>In Game</strong> and <strong>End Game</strong>.</p>
-<p>The URL is like <a href="https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsdd">https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsdd</a> he is generate randomly</p>
+<p>Add to your différents scènes the différents URL</p>
+<ul>
+<li>Champ Select :
+<ul>
+<li>http://ip:4141/champselect/view1</li>
+<li>http://ip:4141/champselect/view2</li>
+<li>http://ip:4141/champselect/view3</li>
+<li>http://ip:4141/champselect/view4</li>
+</ul>
+</li>
+</ul>
+<!-- Add to your différents scènes the différents URL, you can found this URL on your personal area, in games, game-xxxxxxxxxx, in **Waiting a Game**, **Champ Select**, **Waiting Game Start**, **In Game** and **End Game**.
+
+The URL is like https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsdd he is generate randomly -->
 <hr>
 <h2 id="information-display-on-overlay">Information display on overlay</h2>
 <p><span style="color:yellow">information</span> : Display information if the default riot overlay is disabled</p>
 <p><span style="color:green">information</span> : Only if reading from memory is enabled. If memory reading is enabled, the default riot overlay can be disabled.</p>
 <p><span style="color:darkred">information</span> : Data not found at this time</p>
-<h3 id="information-display-with-overlay-waiting-a-game"><ins>Information display with overlay <strong>Waiting a Game</strong></ins></h3>
+<p><del>feature</del> : Feature not implemented, but in progress</p>
+<h3 id="information-display-with-overlay-waiting-a-game"><ins><del>Information display with overlay <strong>Waiting a Game</strong></del></ins></h3>
 <ul>
-<li>Number of lose and vircory in ranked solo/duo and flex</li>
+<li><del>Number of lose and vircory in ranked solo/duo and flex</del></li>
 </ul>
-<p>Video example Waiting a Game</p>
+<!-- Video example Waiting a Game -->
 <!-- https://youtu.be/46wy47H3D6o?list=PLk9GhrqI8Se0fgkxp_Ceb3V5A89m0kk4T -->
-<p><a href="https://www.youtube.com/watch?v=46wy47H3D6o"><img src="https://img.youtube.com/vi/46wy47H3D6o/0.jpg" alt="Video example Waiting a Game"></a></p>
+<!-- 
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
 <!-- [![Video example Waiting a Game](https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg)](https://www.youtube.com/watch?v=y-jzB9q54Ng) -->
 <!-- <a href="http://www.youtube.com/watch?feature=player_embedded&v=y-jzB9q54Ng?
 " target="_blank"><img src="http://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" 
 alt="Video example Waiting a Game" width="240" height="180" border="0" /></a> -->
+<br>
 <h3 id="information-display-with-overlay-in-champ-select"><ins>Information display with overlay in <strong>Champ Select</strong></ins></h3>
-<p>Linked att game :</p>
+<p>Link to LoL client :</p>
 <ul>
 <li>Champion Ban</li>
 <li>Champion Pick</li>
 <li>Summoners Name</li>
-<li>Summoners Spell</li>
-<li>Skins</li>
+<li>Summoners Spell (view 1)</li>
+<li><del>Skins</del></li>
 <li>Timer (ban/select/waiting)</li>
 </ul>
-<p>Take off game :</p>
+<p>Personal information added :</p>
 <ul>
-<li>Name Toornament</li>
+<li><del>Name Toornament</del></li>
 <li>Win/Lose Team</li>
-<li>Logo Team</li>
+<li><del>Logo Team</del></li>
 <li>Name Team</li>
-<li>Name Summoners</li>
-<li>Name Coach</li>
-<li>Stats Champ Ban</li>
-<li>Stats Champ Pick</li>
-<li>Stats Champ Winrate</li>
+<li><del>Name Summoners</del></li>
+<li><del>Name Coach</del></li>
+<li><del>Stats Champ Ban</del></li>
+<li><del>Stats Champ Pick</del></li>
+<li><del>Stats Champ Winrate</del></li>
 </ul>
-<p>Video example Champ Select</p>
-<p><a href="https://www.youtube.com/watch?v=46wy47H3D6o"><img src="https://img.youtube.com/vi/46wy47H3D6o/0.jpg" alt="Video example Waiting a Game"></a></p>
-<h3 id="information-display-with-overlay-waiting-game-start"><ins>Information display with overlay <strong>Waiting Game Start</strong></ins></h3>
+<p><strong>View 1 :</strong>
+<img src="../picture/view1.png" alt="view1">
+<strong>View 2 :</strong>
+<img src="../picture/view2.png" alt="view2">
+<strong>View 3 :</strong>
+<img src="../picture/view3.png" alt="view3">
+<strong>View 4 :</strong>
+<img src="../picture/view4.png" alt="view4"></p>
+<!-- Video example Champ Select
+
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
+<br>
+<h3 id="information-display-with-overlay-waiting-game-start"><ins><del>Information display with overlay <strong>Waiting Game Start</strong></del></ins></h3>
 <ul>
-<li>Stats of players in the champ pick</li>
-<li>Stats Summoners on champ</li>
+<li><del>Stats of players in the champ pick</del></li>
+<li><del>Stats Summoners on champ</del></li>
 </ul>
-<p>Video example Waiting Game Start</p>
-<p><a href="https://www.youtube.com/watch?v=46wy47H3D6o"><img src="https://img.youtube.com/vi/46wy47H3D6o/0.jpg" alt="Video example Waiting a Game"></a></p>
-<h3 id="information-display-with-overlay-in-game"><ins>Information display with overlay <strong>In Game</strong></ins></h3>
-<p>Inter of game :</p>
+<!-- Video example Waiting Game Start
+
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
+<br>
+<h3 id="information-display-with-overlay-in-game"><ins><del>Information display with overlay <strong>In Game</strong></del></ins></h3>
+<p><del>Inter of game :</del></p>
 <ul>
-<li>LevelUp</li>
-<li>Itemps buy</li>
-<li>Dragon (Kill, <span style="color:darkred">next</span>, soul)</li>
-<li>Elder Dragon (Timer, buff, all champ kill, <span style="color:green">gold diff</span>, <span style="color:green">damege diff</span>, next helder drake)</li>
-<li>Baron (buff, timer, all champ dead, <span style="color:green">gold diff</span>, <span style="color:green">damage diff</span>, next nash)</li>
-<li>Herald (buff, timer, launch or not, take or not)</li>
-<li><span style="color:yellow">Kill</span></li>
-<li><span style="color:yellow">Tower</span></li>
-<li><span style="color:yellow">Timer</span></li>
-<li><span style="color:green">Gold</span></li>
-<li><span style="color:green">Gold win during fight</span></li>
-<li><span style="color:green">XP + Level</span></li>
-<li><span style="color:darkred">Damage dead</span></li>
-<li><span style="color:darkred">Damage dead during fight</span></li>
+<li><del>LevelUp</del></li>
+<li><del>Itemps buy</del></li>
+<li><del>Dragon (Kill, <span style="color:darkred">next</span>, soul)</del></li>
+<li><del>Elder Dragon (Timer, buff, all champ kill, <span style="color:green">gold diff</span>, <span style="color:green">damege diff</span>, next helder drake)</del></li>
+<li><del>Baron (buff, timer, all champ dead, <span style="color:green">gold diff</span>, <span style="color:green">damage diff</span>, next nash)</del></li>
+<li><del>Herald (buff, timer, launch or not, take or not)</del></li>
+<li><del><span style="color:yellow">Kill</span></del></li>
+<li><del><span style="color:yellow">Tower</span></del></li>
+<li><del><span style="color:yellow">Timer</span></del></li>
+<li><del><span style="color:green">Gold</span></del></li>
+<li><del><span style="color:green">Gold win during fight</span></del></li>
+<li><del><span style="color:green">XP + Level</span></del></li>
+<li><del><span style="color:darkred">Damage dead</span></del></li>
+<li><del><span style="color:darkred">Damage dead during fight</span></del></li>
 </ul>
-<p>Exter of game :</p>
+<p><del>Exter of game :</del></p>
 <ul>
-<li>Ban/Pick</li>
-<li>Runes</li>
-<li>Logo/Name Team</li>
-<li>Lose/Win</li>
-<li>Video</li>
+<li><del>Ban/Pick</del></li>
+<li><del>Runes</del></li>
+<li><del>Logo/Name Team</del></li>
+<li><del>Lose/Win</del></li>
+<li><del>Video</del></li>
 </ul>
-<p>Video example In Game</p>
-<p><a href="https://www.youtube.com/watch?v=46wy47H3D6o"><img src="https://img.youtube.com/vi/46wy47H3D6o/0.jpg" alt="Video example Waiting a Game"></a></p>
-<h3 id="information-display-with-overlay-in-end-game"><ins>Information display with overlay in <strong>End Game</strong></ins></h3>
+<!-- Video example In Game
+
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
+<br>
+<h3 id="information-display-with-overlay-in-end-game"><ins><del>Information display with overlay in <strong>End Game</strong></del></ins></h3>
 <ul>
-<li>Dega</li>
-<li>Gold</li>
-<li>Objectif</li>
-<li>Size</li>
+<li><del>Dega</del></li>
+<li><del>Gold</del></li>
+<li><del>Objectif</del></li>
+<li><del>Size</del></li>
 </ul>
-<p>Video example End Game</p>
-<p><a href="https://www.youtube.com/watch?v=46wy47H3D6o"><img src="https://img.youtube.com/vi/46wy47H3D6o/0.jpg" alt="Video example Waiting a Game"></a></p>
+<!-- Video example End Game
+
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
 </article>
                 </div>
 

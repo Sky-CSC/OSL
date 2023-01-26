@@ -23,7 +23,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectView2Page
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 13
+    startLine: 8
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -66,7 +66,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: overlayLoaded
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 17
+    startLine: 12
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -99,7 +99,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: formatingData
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 20
+    startLine: 15
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -132,7 +132,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: EnableOrDisableOverlayView
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 62
+    startLine: 57
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -166,7 +166,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ResetColor
     path: ../OSL-Server/Pages/ChampSelectView2Page.razor.cs
-    startLine: 77
+    startLine: 72
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages

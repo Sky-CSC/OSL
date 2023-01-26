@@ -9,7 +9,7 @@
 
 ---
 
-Download last release : [First Release v0.1.0-alpha](https://github.com/Sky-CSC/OSL/releases/tag/v0.1.0-alpha)
+Download last release : [First Release v0.2.0-alpha](https://github.com/Sky-CSC/OSL/releases/tag/v0.2.0-alpha)
 
 Not forget run ```OSL-Server.exe```, before run ```OSL-Client.exe```
 
@@ -19,7 +19,7 @@ Home : Link to documentation
 
 CDragon : Data download from CDragon (When you run it he download data)
 
-Config : Not implemented
+Config : Change port of OSL-Client, load or save champ select view config
 
 Champ Select : Customization of overlay. When you run a game, information to OSL-Client is send to OSL-Server. 3 Overlay are usable
 
@@ -57,10 +57,16 @@ The information you can receive from the game is listed, and separated into 5 ca
 ---
 
 ## **OBS** configuration :
+Add to your différents scènes the différents URL
+- Champ Select :
+  - http://ip:4141/champselect/view1
+  - http://ip:4141/champselect/view2
+  - http://ip:4141/champselect/view3
+  - http://ip:4141/champselect/view4
 
-Add to your différents scènes the différents URL, you can found this URL on your personal area, in games, game-xxxxxxxxxx, in **Waiting a Game**, **Champ Select**, **Waiting Game Start**, **In Game** and **End Game**.
+<!-- Add to your différents scènes the différents URL, you can found this URL on your personal area, in games, game-xxxxxxxxxx, in **Waiting a Game**, **Champ Select**, **Waiting Game Start**, **In Game** and **End Game**.
 
-The URL is like https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsdd he is generate randomly
+The URL is like https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsdd he is generate randomly -->
 
 ---
 
@@ -72,87 +78,104 @@ The URL is like https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsd
 
 <span style="color:darkred">information</span> : Data not found at this time
 
-### <ins>Information display with overlay **Waiting a Game**
-- Number of lose and vircory in ranked solo/duo and flex
+~~feature~~ : Feature not implemented, but in progress
 
-Video example Waiting a Game
+### <ins>~~Information display with overlay **Waiting a Game**~~
+- ~~Number of lose and vircory in ranked solo/duo and flex~~
+
+<!-- Video example Waiting a Game -->
 
 <!-- https://youtu.be/46wy47H3D6o?list=PLk9GhrqI8Se0fgkxp_Ceb3V5A89m0kk4T -->
-
-[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
+<!-- 
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
 
 <!-- [![Video example Waiting a Game](https://img.youtube.com/vi/y-jzB9q54Ng/0.jpg)](https://www.youtube.com/watch?v=y-jzB9q54Ng) -->
 
 <!-- <a href="http://www.youtube.com/watch?feature=player_embedded&v=y-jzB9q54Ng?
 " target="_blank"><img src="http://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" 
 alt="Video example Waiting a Game" width="240" height="180" border="0" /></a> -->
+<br>
 
 ### <ins>Information display with overlay in **Champ Select**
-Linked att game : 
+Link to LoL client : 
 - Champion Ban
 - Champion Pick
 - Summoners Name
-- Summoners Spell
-- Skins
+- Summoners Spell (view 1)
+- ~~Skins~~
 - Timer (ban/select/waiting)
  	
-Take off game :
-- Name Toornament
+Personal information added :
+- ~~Name Toornament~~
 - Win/Lose Team
-- Logo Team
+- ~~Logo Team~~
 - Name Team
-- Name Summoners
-- Name Coach
-- Stats Champ Ban
-- Stats Champ Pick
-- Stats Champ Winrate
+- ~~Name Summoners~~
+- ~~Name Coach~~  
+- ~~Stats Champ Ban~~
+- ~~Stats Champ Pick~~
+- ~~Stats Champ Winrate~~
 
-Video example Champ Select
+**View 1 :**
+![view1](../picture/view1.png)
+**View 2 :**
+![view2](../picture/view2.png)
+**View 3 :**
+![view3](../picture/view3.png)
+**View 4 :**
+![view4](../picture/view4.png)
+<!-- Video example Champ Select
 
-[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
 
-### <ins>Information display with overlay **Waiting Game Start**
-- Stats of players in the champ pick
-- Stats Summoners on champ
+<br>
 
-Video example Waiting Game Start
+### <ins>~~Information display with overlay **Waiting Game Start**~~
+- ~~Stats of players in the champ pick~~
+- ~~Stats Summoners on champ~~
 
-[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
+<!-- Video example Waiting Game Start
+
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
  
-### <ins>Information display with overlay **In Game**
-Inter of game :
-- LevelUp
-- Itemps buy
-- Dragon (Kill, <span style="color:darkred">next</span>, soul)
-- Elder Dragon (Timer, buff, all champ kill, <span style="color:green">gold diff</span>, <span style="color:green">damege diff</span>, next helder drake)
-- Baron (buff, timer, all champ dead, <span style="color:green">gold diff</span>, <span style="color:green">damage diff</span>, next nash)
-- Herald (buff, timer, launch or not, take or not)
-- <span style="color:yellow">Kill</span>
-- <span style="color:yellow">Tower</span>
-- <span style="color:yellow">Timer</span>
-- <span style="color:green">Gold</span>
-- <span style="color:green">Gold win during fight</span>
-- <span style="color:green">XP + Level</span>
-- <span style="color:darkred">Damage dead</span>
-- <span style="color:darkred">Damage dead during fight</span>
+<br>
 
-Exter of game :
-- Ban/Pick
-- Runes
-- Logo/Name Team
-- Lose/Win
-- Video
+### <ins>~~Information display with overlay **In Game**~~
+~~Inter of game :~~
+- ~~LevelUp~~
+- ~~Itemps buy~~
+- ~~Dragon (Kill, <span style="color:darkred">next</span>, soul)~~
+- ~~Elder Dragon (Timer, buff, all champ kill, <span style="color:green">gold diff</span>, <span style="color:green">damege diff</span>, next helder drake)~~
+- ~~Baron (buff, timer, all champ dead, <span style="color:green">gold diff</span>, <span style="color:green">damage diff</span>, next nash)~~
+- ~~Herald (buff, timer, launch or not, take or not)~~
+- ~~<span style="color:yellow">Kill</span>~~
+- ~~<span style="color:yellow">Tower</span>~~
+- ~~<span style="color:yellow">Timer</span>~~
+- ~~<span style="color:green">Gold</span>~~
+- ~~<span style="color:green">Gold win during fight</span>~~
+- ~~<span style="color:green">XP + Level</span>~~
+- ~~<span style="color:darkred">Damage dead</span>~~
+- ~~<span style="color:darkred">Damage dead during fight</span>~~
 
-Video example In Game
+~~Exter of game :~~
+- ~~Ban/Pick~~
+- ~~Runes~~
+- ~~Logo/Name Team~~
+- ~~Lose/Win~~
+- ~~Video~~
 
-[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
+<!-- Video example In Game
 
-### <ins>Information display with overlay in **End Game**
-- Dega
-- Gold
-- Objectif
-- Size
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
 
-Video example End Game
+<br>
 
-[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o)
+### <ins>~~Information display with overlay in **End Game**~~
+- ~~Dega~~
+- ~~Gold~~
+- ~~Objectif~~
+- ~~Size~~
+
+<!-- Video example End Game
+
+[![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->

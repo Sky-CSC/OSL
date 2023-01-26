@@ -20,7 +20,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConfigPage
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
-    startLine: 20
+    startLine: 10
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -63,7 +63,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GenerateConfigFileView1
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
-    startLine: 258
+    startLine: 248
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
