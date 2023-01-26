@@ -7,11 +7,14 @@ items:
   children:
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelect(System.Int32)
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectView3(System.Int32,System.Int32)
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.gobalTimer
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTime
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeFast
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
   - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerFast
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerView3
+  - OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeView3
   langs:
   - csharp
   - vb
@@ -150,6 +153,39 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeView3
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeView3
+  id: phaseTimeView3
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: phaseTimeView3
+  nameWithType: ChampSelectTimer.phaseTimeView3
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimeView3
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimeView3
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 12
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static int phaseTimeView3
+    return:
+      type: System.Int32
+    content.vb: Public Shared phaseTimeView3 As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
   commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimer
   id: phaseTimer
@@ -168,7 +204,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -201,7 +237,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimerFast
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -210,6 +246,39 @@ items:
     return:
       type: System.Timers.Timer
     content.vb: Public Shared phaseTimerFast As Timer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerView3
+  commentId: F:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerView3
+  id: phaseTimerView3
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: phaseTimerView3
+  nameWithType: ChampSelectTimer.phaseTimerView3
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.phaseTimerView3
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimerView3
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  syntax:
+    content: public static Timer phaseTimerView3
+    return:
+      type: System.Timers.Timer
+    content.vb: Public Shared phaseTimerView3 As Timer
   modifiers.csharp:
   - public
   - static
@@ -234,7 +303,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelect
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 48
+    startLine: 65
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -272,7 +341,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelectFast
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-    startLine: 62
+    startLine: 79
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -289,6 +358,47 @@ items:
       description: ''
     content.vb: Public Shared Sub DecreasingTimerChapSelectFast(time As Integer, interval As Integer)
   overload: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectView3(System.Int32,System.Int32)
+  commentId: M:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectView3(System.Int32,System.Int32)
+  id: DecreasingTimerChapSelectView3(System.Int32,System.Int32)
+  parent: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer
+  langs:
+  - csharp
+  - vb
+  name: DecreasingTimerChapSelectView3(Int32, Int32)
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelectView3(Int32, Int32)
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectView3(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DecreasingTimerChapSelectView3
+    path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
+    startLine: 93
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
+  summary: "\nDecreasing timer function (pixel display)\n"
+  example: []
+  syntax:
+    content: public static void DecreasingTimerChapSelectView3(int time, int interval)
+    parameters:
+    - id: time
+      type: System.Int32
+      description: ''
+    - id: interval
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Sub DecreasingTimerChapSelectView3(time As Integer, interval As Integer)
+  overload: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectView3*
   modifiers.csharp:
   - public
   - static
@@ -623,3 +733,8 @@ references:
   name: DecreasingTimerChapSelectFast
   nameWithType: ChampSelectTimer.DecreasingTimerChapSelectFast
   fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectFast
+- uid: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectView3*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectView3
+  name: DecreasingTimerChapSelectView3
+  nameWithType: ChampSelectTimer.DecreasingTimerChapSelectView3
+  fullName: OSL_Server.DataReciveClient.Processing.ChampSelect.ChampSelectTimer.DecreasingTimerChapSelectView3

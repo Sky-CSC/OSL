@@ -1,38 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: OSL_Server.Pages.ChampSelectPage
-  commentId: T:OSL_Server.Pages.ChampSelectPage
-  id: ChampSelectPage
+- uid: OSL_Server.Pages.ConfigPage.ConfigOverlayText
+  commentId: T:OSL_Server.Pages.ConfigPage.ConfigOverlayText
+  id: ConfigPage.ConfigOverlayText
   parent: OSL_Server.Pages
   children:
-  - OSL_Server.Pages.ChampSelectPage.colorPickerOverlay1
-  - OSL_Server.Pages.ChampSelectPage.colorPickerOverlay2
-  - OSL_Server.Pages.ChampSelectPage.colorPickerOverlay3
-  - OSL_Server.Pages.ChampSelectPage.colorPickerOverlay4
-  - OSL_Server.Pages.ChampSelectPage.colorValue
+  - OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port
   langs:
   - csharp
   - vb
-  name: ChampSelectPage
-  nameWithType: ChampSelectPage
-  fullName: OSL_Server.Pages.ChampSelectPage
+  name: ConfigPage.ConfigOverlayText
+  nameWithType: ConfigPage.ConfigOverlayText
+  fullName: OSL_Server.Pages.ConfigPage.ConfigOverlayText
   type: Class
   source:
     remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
+      path: OSL-Server/Pages/ConfigPage.razor.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: ChampSelectPage
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 13
+    id: ConfigOverlayText
+    path: ../OSL-Server/Pages/ConfigPage.razor.cs
+    startLine: 25
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
-  summary: "\nChamp Select Page\n"
-  example: []
   syntax:
-    content: public class ChampSelectPage
-    content.vb: Public Class ChampSelectPage
+    content: public class ConfigOverlayText
+    content.vb: Public Class ConfigOverlayText
   inheritance:
   - System.Object
   inheritedMembers:
@@ -49,171 +43,66 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay1
-  commentId: F:OSL_Server.Pages.ChampSelectPage.colorPickerOverlay1
-  id: colorPickerOverlay1
-  parent: OSL_Server.Pages.ChampSelectPage
+- uid: OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port
+  commentId: P:OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port
+  id: Port
+  parent: OSL_Server.Pages.ConfigPage.ConfigOverlayText
   langs:
   - csharp
   - vb
-  name: colorPickerOverlay1
-  nameWithType: ChampSelectPage.colorPickerOverlay1
-  fullName: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay1
-  type: Field
+  name: Port
+  nameWithType: ConfigPage.ConfigOverlayText.Port
+  fullName: OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port
+  type: Property
   source:
     remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
+      path: OSL-Server/Pages/ConfigPage.razor.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: colorPickerOverlay1
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 18
+    id: Port
+    path: ../OSL-Server/Pages/ConfigPage.razor.cs
+    startLine: 27
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
   syntax:
-    content: public static string colorPickerOverlay1
+    content: >-
+      [Required]
+
+      [Range(0, 65535, ErrorMessage = "Accommodation invalid (1-65535).")]
+
+      public int Port { get; set; }
+    parameters: []
     return:
+      type: System.Int32
+    content.vb: >-
+      <Required>
+
+      <Range(0, 65535, ErrorMessage:="Accommodation invalid (1-65535).")>
+
+      Public Property Port As Integer
+  overload: OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 65535
+    namedArguments:
+    - name: ErrorMessage
       type: System.String
-    content.vb: Public Shared colorPickerOverlay1 As String
+      value: Accommodation invalid (1-65535).
   modifiers.csharp:
   - public
-  - static
+  - get
+  - set
   modifiers.vb:
   - Public
-  - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay2
-  commentId: F:OSL_Server.Pages.ChampSelectPage.colorPickerOverlay2
-  id: colorPickerOverlay2
-  parent: OSL_Server.Pages.ChampSelectPage
-  langs:
-  - csharp
-  - vb
-  name: colorPickerOverlay2
-  nameWithType: ChampSelectPage.colorPickerOverlay2
-  fullName: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay2
-  type: Field
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: colorPickerOverlay2
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 19
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static string colorPickerOverlay2
-    return:
-      type: System.String
-    content.vb: Public Shared colorPickerOverlay2 As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay3
-  commentId: F:OSL_Server.Pages.ChampSelectPage.colorPickerOverlay3
-  id: colorPickerOverlay3
-  parent: OSL_Server.Pages.ChampSelectPage
-  langs:
-  - csharp
-  - vb
-  name: colorPickerOverlay3
-  nameWithType: ChampSelectPage.colorPickerOverlay3
-  fullName: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay3
-  type: Field
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: colorPickerOverlay3
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 20
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static string colorPickerOverlay3
-    return:
-      type: System.String
-    content.vb: Public Shared colorPickerOverlay3 As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay4
-  commentId: F:OSL_Server.Pages.ChampSelectPage.colorPickerOverlay4
-  id: colorPickerOverlay4
-  parent: OSL_Server.Pages.ChampSelectPage
-  langs:
-  - csharp
-  - vb
-  name: colorPickerOverlay4
-  nameWithType: ChampSelectPage.colorPickerOverlay4
-  fullName: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay4
-  type: Field
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: colorPickerOverlay4
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 21
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static string colorPickerOverlay4
-    return:
-      type: System.String
-    content.vb: Public Shared colorPickerOverlay4 As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.colorValue
-  commentId: F:OSL_Server.Pages.ChampSelectPage.colorValue
-  id: colorValue
-  parent: OSL_Server.Pages.ChampSelectPage
-  langs:
-  - csharp
-  - vb
-  name: colorValue
-  nameWithType: ChampSelectPage.colorValue
-  fullName: OSL_Server.Pages.ChampSelectPage.colorValue
-  type: Field
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: colorValue
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 22
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static string colorValue
-    return:
-      type: System.String
-    content.vb: Public Shared colorValue As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 references:
 - uid: OSL_Server.Pages
   commentId: N:OSL_Server.Pages
@@ -512,10 +401,15 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.String
-  commentId: T:System.String
+- uid: OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port*
+  commentId: Overload:OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port
+  name: Port
+  nameWithType: ConfigPage.ConfigOverlayText.Port
+  fullName: OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port
+- uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

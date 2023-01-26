@@ -103,20 +103,34 @@
     name: CDragonPage
   - uid: OSL_Server.Pages.ChampSelectPage
     name: ChampSelectPage
-  - uid: OSL_Server.Pages.ChampSelectPage.ChampSelectOverlayText
-    name: ChampSelectPage.ChampSelectOverlayText
+  - uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView1
+    name: ChampSelectPage.TextValueOverlayView1
+  - uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView2
+    name: ChampSelectPage.TextValueOverlayView2
+  - uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView3
+    name: ChampSelectPage.TextValueOverlayView3
+  - uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView4
+    name: ChampSelectPage.TextValueOverlayView4
   - uid: OSL_Server.Pages.ChampSelectView1Page
     name: ChampSelectView1Page
-  - uid: OSL_Server.Pages.ChampSelectView1Page.ChampSelect
-    name: ChampSelectView1Page.ChampSelect
+  - uid: OSL_Server.Pages.ChampSelectView1Page.FormatingData
+    name: ChampSelectView1Page.FormatingData
   - uid: OSL_Server.Pages.ChampSelectView2Page
     name: ChampSelectView2Page
-  - uid: OSL_Server.Pages.ChampSelectView2Page.ChampSelect
-    name: ChampSelectView2Page.ChampSelect
+  - uid: OSL_Server.Pages.ChampSelectView2Page.FormatingData
+    name: ChampSelectView2Page.FormatingData
   - uid: OSL_Server.Pages.ChampSelectView3Page
     name: ChampSelectView3Page
+  - uid: OSL_Server.Pages.ChampSelectView3Page.FormatingData
+    name: ChampSelectView3Page.FormatingData
+  - uid: OSL_Server.Pages.ChampSelectView4Page
+    name: ChampSelectView4Page
+  - uid: OSL_Server.Pages.ChampSelectView4Page.FormatingData
+    name: ChampSelectView4Page.FormatingData
   - uid: OSL_Server.Pages.ConfigPage
     name: ConfigPage
+  - uid: OSL_Server.Pages.ConfigPage.ConfigOverlayText
+    name: ConfigPage.ConfigOverlayText
   - uid: OSL_Server.Pages.EndGamePage
     name: EndGamePage
   - uid: OSL_Server.Pages.ErrorModel
