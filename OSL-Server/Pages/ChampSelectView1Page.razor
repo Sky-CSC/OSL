@@ -1,29 +1,30 @@
 ﻿@page "/champselect/view1"
 @using OSL_Server.DataReciveClient.Processing.ChampSelect;
 @using System.Timers
-@using static OSL_Server.Pages.ChampSelectView1Page.ChampSelect
 @layout EmptyLayout
 
 <PageTitle>Champ Select Overlay 1</PageTitle>
 @if (overlayLoaded)
 {
-    if (ChampSelectPage.OverlayText.OverlayBackground == false)
+    string overlayBackground;
+    if (ChampSelectPage.textValueOverlayView1.OverlayBackground == false)
     {
-        OverlayBackground = "none";
-    }
+        overlayBackground = "none";
+        @*formatingData.OverlayBackground = "none";*@
+}
     else
     {
-        OverlayBackground = OverlayBackgroundSave;
+        overlayBackground = formatingData.OverlayBackground;
     }
-    <div class="display-champ-select" style="background: url(@OverlayBackground)">
+    <div class="display-champ-select" style="background: url(@overlayBackground)">
         <div class="overlay-type-1">
             <div class="champ-select-header">
                 <div class="chamSelect-header-blue-info">
-                    <h1 style="color: @BlueTeamNameColor">@BlueSideTeamName</h1>
-                    <h5 style="color: @BlueTeamSubtextColor">@BlueTeamSubtext</h5>
+                    <h1 style="color: @formatingData.BlueTeamNameColor">@formatingData.BlueSideTeamName</h1>
+                    <h5 style="color: @formatingData.BlueTeamSubtextColor">@formatingData.BlueTeamSubtext</h5>
                 </div>
-                <div class="chamSelect-header-blue-logo" style="visibility: @PictureExist(BlueLogo)">
-                    <img class="chamSelect-header-blue-logo" src="@BlueLogo" />
+                <div class="chamSelect-header-blue-logo" style="visibility: @PictureExist(formatingData.BlueLogo)">
+                    <img class="chamSelect-header-blue-logo" src="@formatingData.BlueLogo" />
                 </div>
                 <div class="chamSelect-header-blue-timer">
                     @{
@@ -32,18 +33,18 @@
                             if (ChampSelectTimer.phaseTime <= 9)
                             {
                                 <div class="timer timer-blue">
-                                    <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
+                                    <div class="timer-bg" style="background: @formatingData.BlueSideTimerBackgroudColor; border: @formatingData.BlueSideTimerBorderColor">
                                         <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @formatingData.BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
                             else
                             {
                                 <div class="timer timer-blue">
-                                    <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
+                                    <div class="timer-bg" style="background: @formatingData.BlueSideTimerBackgroudColor; border: @formatingData.BlueSideTimerBorderColor">
                                         <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        <div class="timer-inner" id="timer-blue" style="color: @formatingData.BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
@@ -53,20 +54,34 @@
                             if (ChampSelectTimer.phaseTime <= 9)
                             {
                                 <div class="timer timer-blue">
-                                    <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
+                                    <div class="timer-bg" style="background: @formatingData.BlueSideTimerBackgroudColor; border: @formatingData.BlueSideTimerBorderColor">
                                         <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        <div class="timer-inner" id="timer-blue" style="left: 50px; color: @formatingData.BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
                             else
                             {
-                                <div class="timer timer-blue">
-                                    <div class="timer-bg" style="background: @BlueSideTimerBackgroudColor; border: @BlueSideTimerBorderColor">
-                                        <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-blue" style="color: @BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                if (ChampSelectTimer.phaseTime <= 60)
+                                {
+                                    <div class="timer timer-blue">
+                                        <div class="timer-bg" style="background: @formatingData.BlueSideTimerBackgroudColor; border: @formatingData.BlueSideTimerBorderColor">
+                                            <div class="gradient-background-overlay"></div>
+                                            <div class="timer-inner" id="timer-blue" style="color: @formatingData.BlueSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        </div>
                                     </div>
-                                </div>
+                                }
+                                else
+                                {
+                                    TimeSpan time = TimeSpan.FromSeconds(ChampSelectTimer.phaseTime);
+                                    string timerMin = time.ToString(@"m\:ss");
+                                    <div class="timer timer-blue">
+                                        <div class="timer-bg" style="background: @formatingData.BlueSideTimerBackgroudColor; border: @formatingData.BlueSideTimerBorderColor">
+                                            <div class="gradient-background-overlay"></div>
+                                            <div class="timer-inner" id="timer-blue" style="left: 10px; font-size: 65px; color: @formatingData.BlueSideTimerTexteColor">@timerMin</div>
+                                        </div>
+                                    </div>
+                                }
                             }
                         }
                     }
@@ -97,18 +112,18 @@
                             if (ChampSelectTimer.phaseTime <= 9)
                             {
                                 <div class="timer timer-red">
-                                    <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
+                                    <div class="timer-bg" style="background: @formatingData.RedSideTimerBackgroudColor; border: @formatingData.RedSideTimerBorderColor">
                                         <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @formatingData.RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
                             else
                             {
                                 <div class="timer timer-red">
-                                    <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
+                                    <div class="timer-bg" style="background: @formatingData.RedSideTimerBackgroudColor; border: @formatingData.RedSideTimerBorderColor">
                                         <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        <div class="timer-inner" id="timer-red" style="color: @formatingData.RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
@@ -118,30 +133,44 @@
                             if (ChampSelectTimer.phaseTime <= 9)
                             {
                                 <div class="timer timer-red">
-                                    <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
+                                    <div class="timer-bg" style="background: @formatingData.RedSideTimerBackgroudColor; border: @formatingData.RedSideTimerBorderColor">
                                         <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        <div class="timer-inner" id="timer-red" style="left: 50px; color: @formatingData.RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
                                     </div>
                                 </div>
                             }
                             else
                             {
-                                <div class="timer timer-red">
-                                    <div class="timer-bg" style="background: @RedSideTimerBackgroudColor; border: @RedSideTimerBorderColor">
-                                        <div class="gradient-background-overlay"></div>
-                                        <div class="timer-inner" id="timer-red" style="color: @RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                if (ChampSelectTimer.phaseTime <= 60)
+                                {
+                                    <div class="timer timer-red">
+                                        <div class="timer-bg" style="background: @formatingData.RedSideTimerBackgroudColor; border: @formatingData.RedSideTimerBorderColor">
+                                            <div class="gradient-background-overlay"></div>
+                                            <div class="timer-inner" id="timer-red" style="color: @formatingData.RedSideTimerTexteColor">@ChampSelectTimer.phaseTime</div>
+                                        </div>
                                     </div>
-                                </div>
+                                }
+                                else
+                                {
+                                    TimeSpan time = TimeSpan.FromSeconds(ChampSelectTimer.phaseTime);
+                                    string timerMin = time.ToString(@"m\:ss");
+                                    <div class="timer timer-red">
+                                        <div class="timer-bg" style="background: @formatingData.RedSideTimerBackgroudColor; border: @formatingData.RedSideTimerBorderColor">
+                                            <div class="gradient-background-overlay"></div>
+                                            <div class="timer-inner" id="timer-red" style="left: 10px; font-size: 65px; color: @formatingData.RedSideTimerTexteColor">@timerMin</div>
+                                        </div>
+                                    </div>
+                                }
                             }
                         }
                     }
                 </div>
-                <div class="chamSelect-header-red-logo" style="visibility: @PictureExist(RedLogo)">
-                    <img class="chamSelect-header-red-logo" src="@RedLogo" />
+                <div class="chamSelect-header-red-logo" style="visibility: @PictureExist(formatingData.RedLogo)">
+                    <img class="chamSelect-header-red-logo" src="@formatingData.RedLogo" />
                 </div>
                 <div class="chamSelect-header-red-info">
-                    <h1 style="color: @RedTeamNameColor">@RedSideTeamName</h1>
-                    <h5 style="color: @RedTeamSubtextColor">@RedTeamSubtext</h5>
+                    <h1 style="color: @formatingData.RedTeamNameColor">@formatingData.RedSideTeamName</h1>
+                    <h5 style="color: @formatingData.RedTeamSubtextColor">@formatingData.RedTeamSubtext</h5>
                 </div>
             </div>
 
@@ -153,23 +182,23 @@
                         for (int indexChamp = 0; indexChamp < @ChampSelectInfo.session.MyTeam.Count(); indexChamp++)
                         {
                             <div class="champ-wrapper">
-                                <div class="base-color-background" style="background: @BlueSideBackgroudColor; border: @BlueSideBorderColor"></div>
+                                <div class="base-color-background" style="background: @formatingData.BlueSideBackgroudColor; border: @formatingData.BlueSideBorderColor"></div>
                                 <div class="gradient-background-overlay"></div>
                                 <div class="summoner-object-component">
-                                    <div class="summoner-object-wrapper" style="color: @BlueSideTexteColor;">
+                                    <div class="summoner-object-wrapper" style="color: @formatingData.BlueSideTexteColor;">
                                         @*Champion picture*@
-                                        <div class="champ-picture" style="background-image: url(@getChampId(indexChamp, 1)); top: 5px; bottom: 5px; left: 5px; right: 5px;"></div>
+                                        <div class="champ-picture" style="background-image: url(@GetChampId(indexChamp, 1)); top: 5px; bottom: 5px; left: 5px; right: 5px;"></div>
                                         @*Curent action*@
-                                        <div class="action-text">@getCurentAction(indexChamp, 1)</div>
+                                        <div class="action-text">@GetCurentAction(indexChamp, 1)</div>
                                         @*SummonerName*@
-                                        <div class="summoner-name">@getSummonerName(indexChamp, 1)</div>
+                                        <div class="summoner-name">@GetSummonerName(indexChamp, 1)</div>
                                         <div class="summoner-spells">
                                             @*Summoners Spells*@
                                             @{
-                                                if (SideInProgress() == 0 && @ChampSelectPage.OverlayText.DisplaySummonerSpell == true)
+                                                if (SideInProgress() == 0 && @ChampSelectPage.textValueOverlayView1.DisplaySummonerSpell == true)
                                                 {
-                                                    <img class="spell" src="@getSpell(indexChamp, 1, 1)">
-                                                    <img class="spell" src="@getSpell(indexChamp, 1, 2)">
+                                                    <img class="spell" src="@GetSpell(indexChamp, 1, 1)">
+                                                    <img class="spell" src="@GetSpell(indexChamp, 1, 2)">
                                                 }
                                             }
                                         </div>
@@ -188,23 +217,23 @@
                         for (int indexChamp = 0; indexChamp < @ChampSelectInfo.session.TheirTeam.Count(); indexChamp++)
                         {
                             <div class="champ-wrapper">
-                                <div class="base-color-background" style="background: @RedSideBackgroudColor; border: @RedSideBorderColor"></div>
+                                <div class="base-color-background" style="background: @formatingData.RedSideBackgroudColor; border: @formatingData.RedSideBorderColor"></div>
                                 <div class="gradient-background-overlay"></div>
                                 <div class="summoner-object-component">
-                                    <div class="summoner-object-wrapper" style="color: @RedSideTexteColor">
+                                    <div class="summoner-object-wrapper" style="color: @formatingData.RedSideTexteColor">
                                         @*Champion picture*@
-                                        <div class="champ-picture" style="background-image: url(@getChampId(indexChamp, 2)); top: 5px; bottom: 5px; left: 5px; right: 5px;"></div>
+                                        <div class="champ-picture" style="background-image: url(@GetChampId(indexChamp, 2)); top: 5px; bottom: 5px; left: 5px; right: 5px;"></div>
                                         @*Curent action*@
-                                        <div class="action-text">@getCurentAction(indexChamp, 2)</div>
+                                        <div class="action-text">@GetCurentAction(indexChamp, 2)</div>
                                         @*SummonerName*@
-                                        <div class="summoner-name">@getSummonerName(indexChamp, 2)</div>
+                                        <div class="summoner-name">@GetSummonerName(indexChamp, 2)</div>
                                         <div class="summoner-spells">
                                             @*Summoners Spells*@
                                             @{
-                                                if (SideInProgress() == 0 && @ChampSelectPage.OverlayText.DisplaySummonerSpell == true)
+                                                if (SideInProgress() == 0 && @ChampSelectPage.textValueOverlayView1.DisplaySummonerSpell == true)
                                                 {
-                                                    <img class="spell" src="@getSpell(indexChamp, 2, 1)">
-                                                    <img class="spell" src="@getSpell(indexChamp, 2, 2)">
+                                                    <img class="spell" src="@GetSpell(indexChamp, 2, 1)">
+                                                    <img class="spell" src="@GetSpell(indexChamp, 2, 2)">
                                                 }
                                             }
                                         </div>
@@ -227,7 +256,7 @@
                         {
                             <div class="ban-wrapper">
                                 <img class="ban-wrapper ban-veil" src="@DefaultSquare(i, 1)" />
-                                <img class="ban-icon" src="@BanOverlayPicture">
+                                <img class="ban-icon" src="@formatingData.BanOverlayPicture">
                             </div>
                         }
 
@@ -236,7 +265,6 @@
                         {
                             foreach (var inaction in action)
                             {
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 1 || inaction.PickTurn == 3 || inaction.PickTurn == 5 || inaction.PickTurn == 8 || inaction.PickTurn == 10))
                                 if (inaction.Completed == false)
                                 {
                                     if (inaction.Type.Equals("ban"))
@@ -251,20 +279,13 @@
                                         }
                                         if (teamNumMyTeam == 1)
                                         {
-                                            <div class="ban-wrapper ban-background" style="background-color: @BanBackgroundColor">
-                                                <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
+                                            <div class="ban-wrapper ban-background" style="background-color: @formatingData.BanBackgroundColor">
+                                                <img class="ban-wrapper ban-blink" src="@formatingData.BanBackgroundPicture" />
                                             </div>
                                             i++;
                                         }
                                     }
                                 }
-                                //else if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4) && (ChampSelectInfo.session.Bans.MyTeamBans.Count() >= 3))
-                                //{
-                                //    <div class="ban-wrapper ban-background" style="background-color: @BanBackgroundColor">
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    i++;
-                                //}
                             }
                         }
 
@@ -272,7 +293,7 @@
                         for (int j = i; j < 5; j++)
                         {
                             <div class="ban-wrapper">
-                                <img class="ban-wrapper" src="@BanBackgroundPicture" />
+                                <img class="ban-wrapper" src="@formatingData.BanBackgroundPicture" />
                             </div>
                         }
                     }
@@ -290,9 +311,8 @@
                         for (k = 0; k < ChampSelectInfo.session.Bans.TheirTeamBans.Count(); k++)
                         {
                             <div class="ban-wrapper">
-                                @*<img class="ban-wrapper ban-veil" src="../assets/12.12/fr_fr/Champions/@ChampSelectInfo.session.Bans.TheirTeamBans[k]/Skins/@champDefaultSkinNumber(k)/@champDefaultSkinNumber(k)_Tile.jpg" />*@
                                 <img class="ban-wrapper ban-veil" src="@DefaultSquare(k, 2)" />
-                                <img class="ban-icon" src="@BanOverlayPicture">
+                                <img class="ban-icon" src="@formatingData.BanOverlayPicture">
                             </div>
                         }
 
@@ -316,47 +336,13 @@
                                         if (teamNumTheirTeam == 2)
                                         {
                                             <div class="ban-wrapper">
-                                                <div class="ban-background" style="margin-left: 4px; background-color: @BanBackgroundColor"></div>
-                                                <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
+                                                <div class="ban-background" style="margin-left: 4px; background-color: @formatingData.BanBackgroundColor"></div>
+                                                <img class="ban-wrapper ban-blink" src="@formatingData.BanBackgroundPicture" />
                                             </div>
                                             k++;
                                         }
                                     }
                                 }
-                                //if (inaction.Completed == false)
-                                //{
-                                //    if (inaction.Type.Equals("ban"))
-                                //    {
-                                //        int teamTheirTeam = ChampSelectInfo.session.TheirTeam[0].TeamName;
-                                //        int cellIdTheirTeam = ChampSelectInfo.session.TheirTeam[0].CellId;
-                                //        //int teamtheirTeam = ChampSelectInfo.session.TheirTeam[0].TeamName;
-                                //        if (inaction.ActorCellId == cellIdTheirTeam && teamTheirTeam == 2)
-                                //        {
-                                //            <div class="ban-wrapper">
-                                //                <div class="ban-background" style="margin-left: 4px; background-color: @BanBackgroundColor"></div>
-                                //                <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //            </div>
-                                //            k++;
-                                //        }
-                                //    }
-                                //}
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4 || inaction.PickTurn == 6 || inaction.PickTurn == 7 || inaction.PickTurn == 9))
-                                //if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 2 || inaction.PickTurn == 4 || inaction.PickTurn == 6) && (ChampSelectInfo.session.Bans.TheirTeamBans.Count() <= 2))
-                                //{
-                                //    <div class="ban-wrapper">
-                                //        <div class="ban-background" style="margin-left: 4px; background-color: @BanBackgroundColor"></div>
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    k++;
-                                //}
-                                //else if (inaction.Completed == false && inaction.Type.Equals("ban") && (inaction.PickTurn == 1 || inaction.PickTurn == 3) && (ChampSelectInfo.session.Bans.TheirTeamBans.Count() >= 3))
-                                //{
-                                //    <div class="ban-wrapper">
-                                //        <div class="ban-background" style="margin-left: 4px; background-color: @BanBackgroundColor"></div>
-                                //        <img class="ban-wrapper ban-blink" src="@BanBackgroundPicture" />
-                                //    </div>
-                                //    k++;
-                                //}
                             }
                         }
 
@@ -364,7 +350,7 @@
                         for (int j = k; j < 5; j++)
                         {
                             <div class="ban-wrapper">
-                                <img class="ban-wrapper" src="@BanBackgroundPicture" />
+                                <img class="ban-wrapper" src="@formatingData.BanBackgroundPicture" />
                             </div>
                         }
                     }
@@ -383,8 +369,6 @@ else
 
 
 @code {
-    private int currentCount = 0;
-    private static int timePhase = 0;
     private System.Timers.Timer timer = new(31);
 
     protected override void OnInitialized()
@@ -397,7 +381,6 @@ else
     {
         _ = InvokeAsync(() =>
         {
-            currentCount++;
             StateHasChanged();
         });
     }

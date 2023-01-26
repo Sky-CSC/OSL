@@ -205,7 +205,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectProcessingDataRecive
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 96
+    startLine: 104
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect
@@ -246,7 +246,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-    startLine: 172
+    startLine: 180
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataReciveClient.Processing.ChampSelect

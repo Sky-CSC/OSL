@@ -9,6 +9,7 @@ items:
   - OSL_Server.Communication.ServerHub.IsServerRunning
   - OSL_Server.Communication.ServerHub.OnConnectedAsync
   - OSL_Server.Communication.ServerHub.OnDisconnectedAsync(Exception)
+  - OSL_Server.Communication.ServerHub.SendPort
   - OSL_Server.Communication.ServerHub.SendPort(System.Int32)
   - OSL_Server.Communication.ServerHub.TurnOff
   - OSL_Server.Communication.ServerHub.TurnOn
@@ -177,6 +178,41 @@ items:
   - async
   modifiers.vb:
   - Public
+- uid: OSL_Server.Communication.ServerHub.SendPort
+  commentId: M:OSL_Server.Communication.ServerHub.SendPort
+  id: SendPort
+  parent: OSL_Server.Communication.ServerHub
+  langs:
+  - csharp
+  - vb
+  name: SendPort()
+  nameWithType: ServerHub.SendPort()
+  fullName: OSL_Server.Communication.ServerHub.SendPort()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Communication/ServerHub.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SendPort
+    path: ../OSL-Server/Communication/ServerHub.cs
+    startLine: 49
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Communication
+  syntax:
+    content: public static async Task SendPort()
+    return:
+      type: Task
+    content.vb: Public Shared Function SendPort As Task
+  overload: OSL_Server.Communication.ServerHub.SendPort*
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: OSL_Server.Communication.ServerHub.TurnOn
   commentId: M:OSL_Server.Communication.ServerHub.TurnOn
   id: TurnOn
@@ -195,7 +231,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TurnOn
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 55
+    startLine: 62
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -231,7 +267,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TurnOff
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 65
+    startLine: 72
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -267,7 +303,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: OnConnectedAsync
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 75
+    startLine: 82
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -305,7 +341,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: OnDisconnectedAsync
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 85
+    startLine: 92
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication
@@ -347,7 +383,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsPortBusy
     path: ../OSL-Server/Communication/ServerHub.cs
-    startLine: 96
+    startLine: 103
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Communication

@@ -14,11 +14,9 @@ div {
 }
 
 .display-champ-select {
-    /*background: url(../assets/champselect/ChampSelectView2.png);*/
     height: 1080px;
     width: 1920px;
     position: absolute;
-    /* border: 5px solid yellow;*/
 }
 
 /*##########################################################*/
@@ -338,9 +336,6 @@ div {
     height: 245px;
     left: 790px;
     position: absolute;
-    /*    border-left: 10px solid yellow;
-    border-right: 10px solid yellow;*/
-    /*background: linear-gradient(150deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%);*/
     -webkit-filter: saturate(0.6);
 }
 
@@ -363,9 +358,7 @@ div {
     left: 879px;
     background: #010a13;
     opacity: 0.8;
-    /*background: linear-gradient(90deg, rgba(11,132,158,1) 0%, rgba(190,30,55,1) 100%);*/
     position: absolute;
-    /*border: 1px solid yellow;*/
 }
 
     .champ-select-footer-ban-keystone

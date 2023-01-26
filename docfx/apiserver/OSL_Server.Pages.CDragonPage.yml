@@ -5,8 +5,6 @@ items:
   id: CDragonPage
   parent: OSL_Server.Pages
   children:
-  - OSL_Server.Pages.CDragonPage.Message
-  - OSL_Server.Pages.CDragonPage.OnGet
   - OSL_Server.Pages.CDragonPage.UpdateManual
   langs:
   - csharp
@@ -22,7 +20,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: CDragonPage
     path: ../OSL-Server/Pages/CDragonPage.razor.cs
-    startLine: 10
+    startLine: 7
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -47,71 +45,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.Pages.CDragonPage.Message
-  commentId: P:OSL_Server.Pages.CDragonPage.Message
-  id: Message
-  parent: OSL_Server.Pages.CDragonPage
-  langs:
-  - csharp
-  - vb
-  name: Message
-  nameWithType: CDragonPage.Message
-  fullName: OSL_Server.Pages.CDragonPage.Message
-  type: Property
-  source:
-    remote:
-      path: OSL-Server/Pages/CDragonPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: Message
-    path: ../OSL-Server/Pages/CDragonPage.razor.cs
-    startLine: 14
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public string Message { get; }
-    parameters: []
-    return:
-      type: System.String
-    content.vb: Public ReadOnly Property Message As String
-  overload: OSL_Server.Pages.CDragonPage.Message*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: OSL_Server.Pages.CDragonPage.OnGet
-  commentId: M:OSL_Server.Pages.CDragonPage.OnGet
-  id: OnGet
-  parent: OSL_Server.Pages.CDragonPage
-  langs:
-  - csharp
-  - vb
-  name: OnGet()
-  nameWithType: CDragonPage.OnGet()
-  fullName: OSL_Server.Pages.CDragonPage.OnGet()
-  type: Method
-  source:
-    remote:
-      path: OSL-Server/Pages/CDragonPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: OnGet
-    path: ../OSL-Server/Pages/CDragonPage.razor.cs
-    startLine: 16
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public void OnGet()
-    content.vb: Public Sub OnGet
-  overload: OSL_Server.Pages.CDragonPage.OnGet*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: OSL_Server.Pages.CDragonPage.UpdateManual
   commentId: M:OSL_Server.Pages.CDragonPage.UpdateManual
   id: UpdateManual
@@ -130,10 +63,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateManual
     path: ../OSL-Server/Pages/CDragonPage.razor.cs
-    startLine: 22
+    startLine: 14
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
+  summary: "\nLaunch on thread download of last version of league of legends data\n"
+  example: []
   syntax:
     content: public static void UpdateManual()
     content.vb: Public Shared Sub UpdateManual
@@ -442,23 +377,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Server.Pages.CDragonPage.Message*
-  commentId: Overload:OSL_Server.Pages.CDragonPage.Message
-  name: Message
-  nameWithType: CDragonPage.Message
-  fullName: OSL_Server.Pages.CDragonPage.Message
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: OSL_Server.Pages.CDragonPage.OnGet*
-  commentId: Overload:OSL_Server.Pages.CDragonPage.OnGet
-  name: OnGet
-  nameWithType: CDragonPage.OnGet
-  fullName: OSL_Server.Pages.CDragonPage.OnGet
 - uid: OSL_Server.Pages.CDragonPage.UpdateManual*
   commentId: Overload:OSL_Server.Pages.CDragonPage.UpdateManual
   name: UpdateManual

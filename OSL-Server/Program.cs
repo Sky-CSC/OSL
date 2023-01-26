@@ -1,9 +1,7 @@
 using OSL_Server.Configuration;
 using OSL_Server.Data;
-using OSL_Server.DataReciveClient.Processing.ChampSelect;
 using MudBlazor.Services;
 using OSL_Server.Communication;
-using OSL_Server.DataLoader.CDragon;
 using OSL_Server.Pages;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,7 +24,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
@@ -52,4 +50,3 @@ CDragonPage.UpdateManual();//Download file fr
 
 AsyncServer.Run(); //Run Socket server
 app.Run(); //Run Application
-

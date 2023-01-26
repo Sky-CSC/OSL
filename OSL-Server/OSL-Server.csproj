@@ -8,14 +8,16 @@
 		<ApplicationIcon>Icone_Eau.ico</ApplicationIcon>
 		<Copyright>Sky-csc</Copyright>
 		<PackageProjectUrl>https://github.com/Sky-CSC/OSL</PackageProjectUrl>
-		<AssemblyVersion>0.1.0</AssemblyVersion>
-		<FileVersion>0.1.0</FileVersion>
-		<Version>0.1.0-alpha</Version>
+		<AssemblyVersion>0.2.0</AssemblyVersion>
+		<FileVersion>0.2.0</FileVersion>
+		<Version>0.2.0-alpha</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<Content Remove="Configuration\configCDragon.json" />
 		<Content Remove="Configuration\configChampSelectView1.json" />
+		<Content Remove="Configuration\configChampSelectView2.json" />
+		<Content Remove="Configuration\configChampSelectView3.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -23,9 +25,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="Configuration\configChampSelectView1.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
 		<None Include="Configuration\configCDragon.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>

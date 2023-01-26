@@ -19,7 +19,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: EndGamePage
     path: ../OSL-Server/Pages/EndGamePage.razor.cs
-    startLine: 7
+    startLine: 2
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages

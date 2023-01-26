@@ -54,6 +54,16 @@ html, body {
     /*justify-content: center;*/
 }
 
+.champ-select-overlay-4 {
+    margin: auto;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*border: 5px solid black;*/
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
 .color-picker {
     /*height: 450px;
     width: 400px;*/

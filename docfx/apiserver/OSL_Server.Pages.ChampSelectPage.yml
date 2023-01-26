@@ -5,14 +5,11 @@ items:
   id: ChampSelectPage
   parent: OSL_Server.Pages
   children:
-  - OSL_Server.Pages.ChampSelectPage.champ
-  - OSL_Server.Pages.ChampSelectPage.champBan1
-  - OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay1
-  - OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay2
-  - OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay3
+  - OSL_Server.Pages.ChampSelectPage.colorPickerOverlay1
+  - OSL_Server.Pages.ChampSelectPage.colorPickerOverlay2
+  - OSL_Server.Pages.ChampSelectPage.colorPickerOverlay3
+  - OSL_Server.Pages.ChampSelectPage.colorPickerOverlay4
   - OSL_Server.Pages.ChampSelectPage.colorValue
-  - OSL_Server.Pages.ChampSelectPage.DisplayInfo
-  - OSL_Server.Pages.ChampSelectPage.linkOverlayChampSelect
   langs:
   - csharp
   - vb
@@ -27,7 +24,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectPage
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 13
+    startLine: 9
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -52,198 +49,132 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.Pages.ChampSelectPage.linkOverlayChampSelect
-  commentId: F:OSL_Server.Pages.ChampSelectPage.linkOverlayChampSelect
-  id: linkOverlayChampSelect
+- uid: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay1
+  commentId: F:OSL_Server.Pages.ChampSelectPage.colorPickerOverlay1
+  id: colorPickerOverlay1
   parent: OSL_Server.Pages.ChampSelectPage
   langs:
   - csharp
   - vb
-  name: linkOverlayChampSelect
-  nameWithType: ChampSelectPage.linkOverlayChampSelect
-  fullName: OSL_Server.Pages.ChampSelectPage.linkOverlayChampSelect
+  name: colorPickerOverlay1
+  nameWithType: ChampSelectPage.colorPickerOverlay1
+  fullName: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay1
   type: Field
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectPage.razor.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: linkOverlayChampSelect
+    id: colorPickerOverlay1
+    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
+    startLine: 14
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public static string colorPickerOverlay1
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay1 As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay2
+  commentId: F:OSL_Server.Pages.ChampSelectPage.colorPickerOverlay2
+  id: colorPickerOverlay2
+  parent: OSL_Server.Pages.ChampSelectPage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay2
+  nameWithType: ChampSelectPage.colorPickerOverlay2
+  fullName: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay2
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectPage.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay2
+    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public static string colorPickerOverlay2
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay2 As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay3
+  commentId: F:OSL_Server.Pages.ChampSelectPage.colorPickerOverlay3
+  id: colorPickerOverlay3
+  parent: OSL_Server.Pages.ChampSelectPage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay3
+  nameWithType: ChampSelectPage.colorPickerOverlay3
+  fullName: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay3
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelectPage.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay3
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
     startLine: 16
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
   syntax:
-    content: public static string linkOverlayChampSelect
+    content: public static string colorPickerOverlay3
     return:
       type: System.String
-    content.vb: Public Shared linkOverlayChampSelect As String
+    content.vb: Public Shared colorPickerOverlay3 As String
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.champ
-  commentId: F:OSL_Server.Pages.ChampSelectPage.champ
-  id: champ
+- uid: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay4
+  commentId: F:OSL_Server.Pages.ChampSelectPage.colorPickerOverlay4
+  id: colorPickerOverlay4
   parent: OSL_Server.Pages.ChampSelectPage
   langs:
   - csharp
   - vb
-  name: champ
-  nameWithType: ChampSelectPage.champ
-  fullName: OSL_Server.Pages.ChampSelectPage.champ
+  name: colorPickerOverlay4
+  nameWithType: ChampSelectPage.colorPickerOverlay4
+  fullName: OSL_Server.Pages.ChampSelectPage.colorPickerOverlay4
   type: Field
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectPage.razor.cs
       branch: ChampSelect
       repo: https://github.com/Sky-CSC/OSL.git
-    id: champ
+    id: colorPickerOverlay4
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
     startLine: 17
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
   syntax:
-    content: public static string champ
+    content: public static string colorPickerOverlay4
     return:
       type: System.String
-    content.vb: Public Shared champ As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.champBan1
-  commentId: F:OSL_Server.Pages.ChampSelectPage.champBan1
-  id: champBan1
-  parent: OSL_Server.Pages.ChampSelectPage
-  langs:
-  - csharp
-  - vb
-  name: champBan1
-  nameWithType: ChampSelectPage.champBan1
-  fullName: OSL_Server.Pages.ChampSelectPage.champBan1
-  type: Field
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: champBan1
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 18
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static string champBan1
-    return:
-      type: System.String
-    content.vb: Public Shared champBan1 As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay1
-  commentId: F:OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay1
-  id: ColorPickerOverlay1
-  parent: OSL_Server.Pages.ChampSelectPage
-  langs:
-  - csharp
-  - vb
-  name: ColorPickerOverlay1
-  nameWithType: ChampSelectPage.ColorPickerOverlay1
-  fullName: OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay1
-  type: Field
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: ColorPickerOverlay1
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 25
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static string ColorPickerOverlay1
-    return:
-      type: System.String
-    content.vb: Public Shared ColorPickerOverlay1 As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay2
-  commentId: F:OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay2
-  id: ColorPickerOverlay2
-  parent: OSL_Server.Pages.ChampSelectPage
-  langs:
-  - csharp
-  - vb
-  name: ColorPickerOverlay2
-  nameWithType: ChampSelectPage.ColorPickerOverlay2
-  fullName: OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay2
-  type: Field
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: ColorPickerOverlay2
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 26
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static string ColorPickerOverlay2
-    return:
-      type: System.String
-    content.vb: Public Shared ColorPickerOverlay2 As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay3
-  commentId: F:OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay3
-  id: ColorPickerOverlay3
-  parent: OSL_Server.Pages.ChampSelectPage
-  langs:
-  - csharp
-  - vb
-  name: ColorPickerOverlay3
-  nameWithType: ChampSelectPage.ColorPickerOverlay3
-  fullName: OSL_Server.Pages.ChampSelectPage.ColorPickerOverlay3
-  type: Field
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: ColorPickerOverlay3
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 27
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static string ColorPickerOverlay3
-    return:
-      type: System.String
-    content.vb: Public Shared ColorPickerOverlay3 As String
+    content.vb: Public Shared colorPickerOverlay4 As String
   modifiers.csharp:
   - public
   - static
@@ -268,7 +199,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorValue
     path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 28
+    startLine: 18
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -277,38 +208,6 @@ items:
     return:
       type: System.String
     content.vb: Public Shared colorValue As String
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-- uid: OSL_Server.Pages.ChampSelectPage.DisplayInfo
-  commentId: M:OSL_Server.Pages.ChampSelectPage.DisplayInfo
-  id: DisplayInfo
-  parent: OSL_Server.Pages.ChampSelectPage
-  langs:
-  - csharp
-  - vb
-  name: DisplayInfo()
-  nameWithType: ChampSelectPage.DisplayInfo()
-  fullName: OSL_Server.Pages.ChampSelectPage.DisplayInfo()
-  type: Method
-  source:
-    remote:
-      path: OSL-Server/Pages/ChampSelectPage.razor.cs
-      branch: ChampSelect
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: DisplayInfo
-    path: ../OSL-Server/Pages/ChampSelectPage.razor.cs
-    startLine: 125
-  assemblies:
-  - OSL-Server
-  namespace: OSL_Server.Pages
-  syntax:
-    content: public static void DisplayInfo()
-    content.vb: Public Shared Sub DisplayInfo
-  overload: OSL_Server.Pages.ChampSelectPage.DisplayInfo*
   modifiers.csharp:
   - public
   - static
@@ -620,8 +519,3 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: OSL_Server.Pages.ChampSelectPage.DisplayInfo*
-  commentId: Overload:OSL_Server.Pages.ChampSelectPage.DisplayInfo
-  name: DisplayInfo
-  nameWithType: ChampSelectPage.DisplayInfo
-  fullName: OSL_Server.Pages.ChampSelectPage.DisplayInfo

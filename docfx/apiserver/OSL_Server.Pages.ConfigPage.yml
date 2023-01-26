@@ -4,7 +4,8 @@ items:
   commentId: T:OSL_Server.Pages.ConfigPage
   id: ConfigPage
   parent: OSL_Server.Pages
-  children: []
+  children:
+  - OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
   langs:
   - csharp
   - vb
@@ -44,6 +45,38 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
+  commentId: M:OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
+  id: GenerateConfigFileView1
+  parent: OSL_Server.Pages.ConfigPage
+  langs:
+  - csharp
+  - vb
+  name: GenerateConfigFileView1()
+  nameWithType: ConfigPage.GenerateConfigFileView1()
+  fullName: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/ConfigPage.razor.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GenerateConfigFileView1
+    path: ../OSL-Server/Pages/ConfigPage.razor.cs
+    startLine: 248
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public string GenerateConfigFileView1()
+    return:
+      type: System.String
+    content.vb: Public Function GenerateConfigFileView1 As String
+  overload: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: OSL_Server.Pages
   commentId: N:OSL_Server.Pages
@@ -342,3 +375,15 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1*
+  commentId: Overload:OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
+  name: GenerateConfigFileView1
+  nameWithType: ConfigPage.GenerateConfigFileView1
+  fullName: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

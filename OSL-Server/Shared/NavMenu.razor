@@ -60,20 +60,8 @@
 @code {
     private bool collapseNavMenu = true;
 
-    //private bool expandSubNavSettings;
-    //private string baseMenuClass = "navbar-collapse d-sm-inline-flex flex-sm-row-reverse";
-    //private string? NavMenuCssClass => baseMenuClass + (collapseNavMenu ? " collapse" : "");
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    //private void ToggleNavMenu()
-    //{
-    //    if (!expandSubNavSettings)
-    //    {
-    //        collapseNavMenu = !collapseNavMenu;
-    //    }
-
-
-    //}
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;

@@ -10,8 +10,14 @@ items:
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView1
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView2
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView3
+  - OSL_Server.Configuration.Config.LoadConfigChampSelectView4
   - OSL_Server.Configuration.Config.LoadConfigServerSocket
   - OSL_Server.Configuration.Config.LoadConfigTimer
+  - OSL_Server.Configuration.Config.LoadDefaultSession
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView1
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4
   langs:
   - csharp
   - vb
@@ -103,7 +109,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigServerSocket
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 32
+    startLine: 38
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -137,7 +143,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigCDragon
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 50
+    startLine: 56
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -171,10 +177,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigTimer
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 87
+    startLine: 96
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nLoad timer for champ select view\n"
+  example: []
   syntax:
     content: public static void LoadConfigTimer()
     content.vb: Public Shared Sub LoadConfigTimer
@@ -203,7 +211,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView1
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 187
+    startLine: 107
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -213,6 +221,40 @@ items:
     content: public static void LoadConfigChampSelectView1()
     content.vb: Public Shared Sub LoadConfigChampSelectView1
   overload: OSL_Server.Configuration.Config.LoadConfigChampSelectView1*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView1
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView1
+  id: LoadFormatingDataConfigChampSelectView1
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigChampSelectView1()
+  nameWithType: Config.LoadFormatingDataConfigChampSelectView1()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView1()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigChampSelectView1
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 127
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad default json file for overlay view 1\n"
+  example: []
+  syntax:
+    content: public static void LoadFormatingDataConfigChampSelectView1()
+    content.vb: Public Shared Sub LoadFormatingDataConfigChampSelectView1
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView1*
   modifiers.csharp:
   - public
   - static
@@ -237,7 +279,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView2
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 206
+    startLine: 163
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -247,6 +289,40 @@ items:
     content: public static void LoadConfigChampSelectView2()
     content.vb: Public Shared Sub LoadConfigChampSelectView2
   overload: OSL_Server.Configuration.Config.LoadConfigChampSelectView2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2
+  id: LoadFormatingDataConfigChampSelectView2
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigChampSelectView2()
+  nameWithType: Config.LoadFormatingDataConfigChampSelectView2()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigChampSelectView2
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 184
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad default json file for overlay view 2\n"
+  example: []
+  syntax:
+    content: public static void LoadFormatingDataConfigChampSelectView2()
+    content.vb: Public Shared Sub LoadFormatingDataConfigChampSelectView2
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2*
   modifiers.csharp:
   - public
   - static
@@ -271,7 +347,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView3
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 228
+    startLine: 225
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -281,6 +357,142 @@ items:
     content: public static void LoadConfigChampSelectView3()
     content.vb: Public Shared Sub LoadConfigChampSelectView3
   overload: OSL_Server.Configuration.Config.LoadConfigChampSelectView3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3
+  id: LoadFormatingDataConfigChampSelectView3
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigChampSelectView3()
+  nameWithType: Config.LoadFormatingDataConfigChampSelectView3()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigChampSelectView3
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 246
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad default json file for overlay view 3\n"
+  example: []
+  syntax:
+    content: public static void LoadFormatingDataConfigChampSelectView3()
+    content.vb: Public Shared Sub LoadFormatingDataConfigChampSelectView3
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView4
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigChampSelectView4
+  id: LoadConfigChampSelectView4
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigChampSelectView4()
+  nameWithType: Config.LoadConfigChampSelectView4()
+  fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView4()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigChampSelectView4
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 288
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad configuration Champ Select View4\n"
+  example: []
+  syntax:
+    content: public static void LoadConfigChampSelectView4()
+    content.vb: Public Shared Sub LoadConfigChampSelectView4
+  overload: OSL_Server.Configuration.Config.LoadConfigChampSelectView4*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4
+  id: LoadFormatingDataConfigChampSelectView4
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigChampSelectView4()
+  nameWithType: Config.LoadFormatingDataConfigChampSelectView4()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigChampSelectView4
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 309
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad default json file for overlay view 4\n"
+  example: []
+  syntax:
+    content: public static void LoadFormatingDataConfigChampSelectView4()
+    content.vb: Public Shared Sub LoadFormatingDataConfigChampSelectView4
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadDefaultSession
+  commentId: M:OSL_Server.Configuration.Config.LoadDefaultSession
+  id: LoadDefaultSession
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadDefaultSession()
+  nameWithType: Config.LoadDefaultSession()
+  fullName: OSL_Server.Configuration.Config.LoadDefaultSession()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: ChampSelect
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadDefaultSession
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 350
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad Default Session for display att start information on champ select views\n"
+  example: []
+  syntax:
+    content: public static void LoadDefaultSession()
+    content.vb: Public Shared Sub LoadDefaultSession
+  overload: OSL_Server.Configuration.Config.LoadDefaultSession*
   modifiers.csharp:
   - public
   - static
@@ -610,13 +822,43 @@ references:
   name: LoadConfigChampSelectView1
   nameWithType: Config.LoadConfigChampSelectView1
   fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView1
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView1*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView1
+  name: LoadFormatingDataConfigChampSelectView1
+  nameWithType: Config.LoadFormatingDataConfigChampSelectView1
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView1
 - uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView2*
   commentId: Overload:OSL_Server.Configuration.Config.LoadConfigChampSelectView2
   name: LoadConfigChampSelectView2
   nameWithType: Config.LoadConfigChampSelectView2
   fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView2
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2
+  name: LoadFormatingDataConfigChampSelectView2
+  nameWithType: Config.LoadFormatingDataConfigChampSelectView2
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2
 - uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView3*
   commentId: Overload:OSL_Server.Configuration.Config.LoadConfigChampSelectView3
   name: LoadConfigChampSelectView3
   nameWithType: Config.LoadConfigChampSelectView3
   fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView3
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3
+  name: LoadFormatingDataConfigChampSelectView3
+  nameWithType: Config.LoadFormatingDataConfigChampSelectView3
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3
+- uid: OSL_Server.Configuration.Config.LoadConfigChampSelectView4*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigChampSelectView4
+  name: LoadConfigChampSelectView4
+  nameWithType: Config.LoadConfigChampSelectView4
+  fullName: OSL_Server.Configuration.Config.LoadConfigChampSelectView4
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4
+  name: LoadFormatingDataConfigChampSelectView4
+  nameWithType: Config.LoadFormatingDataConfigChampSelectView4
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4
+- uid: OSL_Server.Configuration.Config.LoadDefaultSession*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadDefaultSession
+  name: LoadDefaultSession
+  nameWithType: Config.LoadDefaultSession
+  fullName: OSL_Server.Configuration.Config.LoadDefaultSession
