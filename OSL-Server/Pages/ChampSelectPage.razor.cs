@@ -23,7 +23,7 @@ namespace OSL_Server.Pages
         public static string colorValue = "#0000";
 
         /// <summary>
-        /// Text value for register data on 
+        /// Text and value for display color, information on champ select view 1
         /// </summary>
         public class TextValueOverlayView1
         {
@@ -342,7 +342,6 @@ namespace OSL_Server.Pages
                 {
                     colorPickerOverlay1 = "hidden";
                     BlueSideBorderColorNotSet = colorValue;
-                    //BlueSideBorderColor = ChampSelectPage.colorValue;
                 }
             }
 
@@ -359,7 +358,6 @@ namespace OSL_Server.Pages
                 {
                     colorPickerOverlay1 = "hidden";
                     RedSideBorderColorNotSet = colorValue;
-                    //BlueSideBorderColor = ChampSelectPage.colorValue;
                 }
             }
 
@@ -376,7 +374,6 @@ namespace OSL_Server.Pages
                 {
                     colorPickerOverlay1 = "hidden";
                     BlueSideTimerBorderColorNotSet = colorValue;
-                    //BlueSideBorderColor = ChampSelectPage.colorValue;
                 }
             }
 
@@ -393,11 +390,13 @@ namespace OSL_Server.Pages
                 {
                     colorPickerOverlay1 = "hidden";
                     RedSideTimerBorderColorNotSet = colorValue;
-                    //BlueSideBorderColor = ChampSelectPage.colorValue;
                 }
             }
         }
 
+        /// <summary>
+        /// Text and value for display color, information on champ select view 2
+        /// </summary>
         public class TextValueOverlayView2
         {
             [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
@@ -610,7 +609,6 @@ namespace OSL_Server.Pages
                     colorPickerOverlay2 = "hidden";
                     ChampSelectView2Page.formatingData.RedSideBackgroud = colorValue;
                     ChampSelectView2Page.formatingData.RedSideBlink = "radial-gradient(ellipse, rgba(0, 0, 0, 0) 25%, " + ChampSelectView2Page.formatingData.RedSideBackgroud + ")";
-                    //KeystonePickColor = "linear-gradient(150deg, " + BlueSideBackgroud + " 0%, " + RedSideBackgroud + " 100%)";
                 }
             }
             public static void SetRedSideSummoner()
@@ -681,6 +679,9 @@ namespace OSL_Server.Pages
             }
         }
 
+        /// <summary>
+        /// Text and value for display color, information on champ select view 3
+        /// </summary>
         public class TextValueOverlayView3
         {
             [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]
@@ -959,6 +960,9 @@ namespace OSL_Server.Pages
             }
         }
 
+        /// <summary>
+        /// Text and value for display color, information on champ select view 4
+        /// </summary>
         public class TextValueOverlayView4
         {
             [StringLength(11, ErrorMessage = "Name is too long (11 character limit).")]

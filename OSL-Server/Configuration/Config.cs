@@ -91,6 +91,9 @@ namespace OSL_Server.Configuration
             }
         }
 
+        /// <summary>
+        /// Load timer for champ select view
+        /// </summary>
         public static void LoadConfigTimer()
         {
             //Creation of timer for display him in champ select
@@ -176,6 +179,9 @@ namespace OSL_Server.Configuration
             //ChampSelectView2Page.DefaultPatch = "12.12";
         }
 
+        /// <summary>
+        /// Load default json file for overlay view 2
+        /// </summary>
         public static void LoadFormatingDataConfigChampSelectView2()
         {
             string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/ChampSelect/View2/default.json");
@@ -235,6 +241,9 @@ namespace OSL_Server.Configuration
             //ChampSelectView3Page.DefaultPatch = "12.12";
         }
 
+        /// <summary>
+        /// Load default json file for overlay view 3
+        /// </summary>
         public static void LoadFormatingDataConfigChampSelectView3()
         {
             string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/ChampSelect/View3/default.json");
@@ -274,6 +283,9 @@ namespace OSL_Server.Configuration
             ChampSelectView3Page.formatingData.BanBackgroundColorSave = jsonContent.BanBackgroundColorSav;
         }
 
+        /// <summary>
+        /// Load configuration Champ Select View4
+        /// </summary>
         public static void LoadConfigChampSelectView4()
         {
             try
@@ -292,6 +304,9 @@ namespace OSL_Server.Configuration
             //ChampSelectView3Page.DefaultPatch = "12.12";
         }
 
+        /// <summary>
+        /// Load default json file for overlay view 4
+        /// </summary>
         public static void LoadFormatingDataConfigChampSelectView4()
         {
             string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/ChampSelect/View4/default.json");
@@ -330,6 +345,9 @@ namespace OSL_Server.Configuration
 
         }
 
+        /// <summary>
+        /// Load Default Session for display att start information on champ select views
+        /// </summary>
         public static void LoadDefaultSession()
         {
             string dataDefaultSession = FileManagerLocal.ReadInFile("./wwwroot/assets/champselect/defaultSession.json");
