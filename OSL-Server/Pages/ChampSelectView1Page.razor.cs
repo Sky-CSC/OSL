@@ -1,9 +1,4 @@
-﻿using Newtonsoft.Json;
-using Microsoft.AspNetCore.Components.Forms;
-using OSL_Server.DataLoader.CDragon;
-using OSL_Server.Download;
-using OSL_Server.DataReciveClient.Processing.ChampSelect;
-using System.ComponentModel.DataAnnotations;
+﻿using OSL_Server.DataReciveClient.Processing.ChampSelect;
 using OSL_Server.Configuration;
 
 namespace OSL_Server.Pages

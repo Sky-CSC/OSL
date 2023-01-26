@@ -1,17 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Microsoft.AspNetCore.Components.Forms;
-using OSL_Server.DataLoader.CDragon;
-using OSL_Server.Download;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Hosting;
-
-using System.IO;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Xml.Linq;
 using OSL_Server.FileManager;
-using System.Net.Http.Json;
 
 namespace OSL_Server.Pages
 {
