@@ -23,9 +23,13 @@ namespace OSL_Server.Configuration
             LoadConfigCDragon();
             LoadConfigTimer();
             LoadDefaultSession();
+            LoadFormatingDataConfigChampSelectView1();
             LoadConfigChampSelectView1();
+            LoadFormatingDataConfigChampSelectView2();
             LoadConfigChampSelectView2();
+            LoadFormatingDataConfigChampSelectView3();
             LoadConfigChampSelectView3();
+            LoadFormatingDataConfigChampSelectView4();
             LoadConfigChampSelectView4();
         }
 
@@ -95,96 +99,6 @@ namespace OSL_Server.Configuration
             ChampSelectTimer.DecreasingTimerChapSelectView3(100, 50);
         }
 
-        //public static void LoadConfigChampSelectView1()
-        //{
-        //    string filePath = "./" + "Configuration" + "/" + "configChampSelectView1.json";
-        //    try
-        //    {
-        //        dynamic configChampSelect = JsonConvert.DeserializeObject<ChampSelectView1Page.ChampSelect>(FileManagerLocal.ReadInFile(filePath));
-        //        ChampSelectView1Page.DefaultPatch = configChampSelect.DefaultPatch;
-        //        ChampSelectView1Page.DefaultRegion = configChampSelect.DefaultRegion;
-
-        //        ChampSelectView1Page.BlueTeamName = configChampSelect.BlueTeamName;
-        //        ChampSelectView1Page.BlueTeamSubtext = configChampSelect.BlueTeamSubtext;
-        //        ChampSelectView1Page.BlueTeamNameColor = configChampSelect.BlueTeamNameColor;
-        //        ChampSelectView1Page.BlueTeamSubtextColor = configChampSelect.BlueTeamSubtextColor;
-        //        ChampSelectView1Page.BlueLogo = configChampSelect.BlueLogo;
-        //        ChampSelectView1Page.BlueSideTexteColor = configChampSelect.BlueSideTexteColor;
-        //        ChampSelectView1Page.BlueSideBackgroudColor = configChampSelect.BlueSideBackgroudColor;
-        //        ChampSelectView1Page.BlueSideBorderColor = configChampSelect.BlueSideBorderColor;
-        //        ChampSelectView1Page.BlueSideTimerBackgroudColor = configChampSelect.BlueSideTimerBackgroudColor;
-        //        ChampSelectView1Page.ColorBlueSideTimerBorder = configChampSelect.ColorBlueSideTimerBorder;
-        //        ChampSelectView1Page.ColorBlueSideTimerTexte = configChampSelect.ColorBlueSideTimerTexte;
-
-        //        ChampSelectView1Page.RedTeamName = configChampSelect.RedTeamName;
-        //        ChampSelectView1Page.RedTeamSubtext = configChampSelect.RedTeamSubtext;
-        //        ChampSelectView1Page.ColorRedTeamName = configChampSelect.ColorRedTeamName;
-        //        ChampSelectView1Page.ColorRedTeamSubtext = configChampSelect.ColorRedTeamSubtext;
-        //        ChampSelectView1Page.RedLogo = configChampSelect.RedLogo;
-        //        ChampSelectView1Page.ColorRedSideTexte = configChampSelect.ColorRedSideTexte;
-        //        ChampSelectView1Page.ColorRedSideBackgroud = configChampSelect.ColorRedSideBackgroud;
-        //        ChampSelectView1Page.ColorRedSideBorder = configChampSelect.ColorRedSideBorder;
-        //        ChampSelectView1Page.ColorRedSideTimerBackgroud = configChampSelect.ColorRedSideTimerBackgroud;
-        //        ChampSelectView1Page.ColorRedSideTimerBorder = configChampSelect.ColorRedSideTimerBorder;
-        //        ChampSelectView1Page.ColorRedSideTimerTexte = configChampSelect.ColorRedSideTimerTexte;
-
-        //        ChampSelectView1Page.BanBackgroundPicture = configChampSelect.BanBackgroundPicture;
-        //        ChampSelectView1Page.BanOverlayPicture = configChampSelect.BanOverlayPicture;
-        //        ChampSelectView1Page.BanBackgroundColor = configChampSelect.BanBackgroundColor;
-
-        //        ChampSelectView1Page.OverlayBackground = configChampSelect.OverlayBackground;
-        //        _logger.log(LoggingLevel.INFO, "LoadConfigChampSelect()", $"Config ChampSelect loaded to {filePath}");
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        _logger.log(LoggingLevel.ERROR, "LoadConfigChampSelect()", $"Config loadeding error {filePath} {e.Message}");
-        //        var champSelectInformation = new ChampSelectView1Page.ChampSelect
-        //        {
-        //            DefaultPatch = "latest",
-        //            DefaultRegion = "fr_fr",
-
-        //            BlueTeamName = "",
-        //            BlueTeamSubtext = "",
-        //            BlueTeamNameColor = "white",
-        //            BlueTeamSubtextColor = "white",
-        //            BlueLogo = "",
-        //            BlueSideTexteColor = "white",
-        //            BlueSideBackgroudColor = "#0b849e",
-        //            BlueSideBorderColor = "5px solid yellow",
-        //            BlueSideTimerBackgroudColor = "#0b849e",
-        //            ColorBlueSideTimerBorder = "5px solid blue",
-        //            ColorBlueSideTimerTexte = "white",
-
-        //            RedTeamName = "",
-        //            RedTeamSubtext = "",
-        //            ColorRedTeamName = "white",
-        //            ColorRedTeamSubtext = "white",
-        //            RedLogo = "",
-        //            ColorRedSideTexte = "white",
-        //            ColorRedSideBackgroud = "#be1e37",
-        //            ColorRedSideBorder = "5px solid yellow",
-        //            ColorRedSideTimerBackgroud = "#be1e37",
-        //            ColorRedSideTimerBorder = "5px solid red",
-        //            ColorRedSideTimerTexte = "white",
-
-        //            BanBackgroundPicture = "../assets/champselect/banning-1.png",
-        //            BanOverlayPicture = "../assets/champselect/ban-completed-2.png",
-        //            BanBackgroundColor = "#010a13",
-
-        //            OverlayBackground = "../assets/champselect/backgroud-view-1.png"
-        //        };
-        //        string configChampSelect = JsonConvert.SerializeObject(champSelectInformation);
-        //        FileManagerLocal.RewrittenFile(filePath, configChampSelect);
-        //        _logger.log(LoggingLevel.WARN, "LoadConfigChampSelect()", $"Default Config created {filePath}");
-        //    }
-        //    if (ChampSelectView1Page.DefaultPatch.Equals("latest"))
-        //    {
-        //        //string[] temps = CDragon.patch.Split(".");
-        //        //DefaultPatch = temps[0] + "." + temps[1];
-        //        ChampSelectView1Page.DefaultPatch = "12.12";
-        //    }
-        //}
-
         /// <summary>
         /// Load configuration Champ Select View1
         /// </summary>
@@ -193,16 +107,53 @@ namespace OSL_Server.Configuration
             try
             {
                 string[] temps = CDragon.patch.Split(".");
-                ChampSelectView1Page.DefaultPatch = temps[0] + "." + temps[1];
+                ChampSelectView1Page.formatingData.DefaultPatch = temps[0] + "." + temps[1];
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                ChampSelectView1Page.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+                ChampSelectView1Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
-            ChampSelectView1Page.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView1", $"{ChampSelectView1Page.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView1", $"{ChampSelectView1Page.DefaultRegion}");
+            ChampSelectView1Page.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView1", $"{ChampSelectView1Page.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView1", $"{ChampSelectView1Page.formatingData.DefaultRegion}");
             //ChampSelectView1Page.DefaultPatch = "12.12";
+        }
+
+        /// <summary>
+        /// Load default json file for overlay view 1
+        /// </summary>
+        public static void LoadFormatingDataConfigChampSelectView1()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/ChampSelect/View1/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //ChampSelectView1Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //ChampSelectView1Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            ChampSelectView1Page.formatingData.BlueSideTeamName = jsonContent.BlueSideTeamName;
+            ChampSelectView1Page.formatingData.BlueTeamSubtext = jsonContent.BlueTeamSubtext;
+            ChampSelectView1Page.formatingData.BlueTeamNameColor = jsonContent.BlueTeamNameColor;
+            ChampSelectView1Page.formatingData.BlueTeamSubtextColor = jsonContent.BlueTeamSubtextColor;
+            ChampSelectView1Page.formatingData.BlueLogo = jsonContent.BlueLogo;
+            ChampSelectView1Page.formatingData.BlueSideTexteColor = jsonContent.BlueSideTexteColor;
+            ChampSelectView1Page.formatingData.BlueSideBackgroudColor = jsonContent.BlueSideBackgroudColor;
+            ChampSelectView1Page.formatingData.BlueSideBorderColor = jsonContent.BlueSideBorderColor;
+            ChampSelectView1Page.formatingData.BlueSideTimerBackgroudColor = jsonContent.BlueSideTimerBackgroudColor;
+            ChampSelectView1Page.formatingData.BlueSideTimerBorderColor = jsonContent.BlueSideTimerBorderColor;
+            ChampSelectView1Page.formatingData.BlueSideTimerTexteColor = jsonContent.BlueSideTimerTexteColor;
+            ChampSelectView1Page.formatingData.RedSideTeamName = jsonContent.RedSideTeamName;
+            ChampSelectView1Page.formatingData.RedTeamSubtext = jsonContent.RedTeamSubtext;
+            ChampSelectView1Page.formatingData.RedTeamNameColor = jsonContent.RedTeamNameColor;
+            ChampSelectView1Page.formatingData.RedTeamSubtextColor = jsonContent.RedTeamSubtextColor;
+            ChampSelectView1Page.formatingData.RedLogo = jsonContent.RedLogo;
+            ChampSelectView1Page.formatingData.RedSideTexteColor = jsonContent.RedSideTexteColor;
+            ChampSelectView1Page.formatingData.RedSideBackgroudColor = jsonContent.RedSideBackgroudColor;
+            ChampSelectView1Page.formatingData.RedSideBorderColor = jsonContent.RedSideBorderColor;
+            ChampSelectView1Page.formatingData.RedSideTimerBackgroudColor = jsonContent.RedSideTimerBackgroudColor;
+            ChampSelectView1Page.formatingData.RedSideTimerBorderColor = jsonContent.RedSideTimerBorderColor;
+            ChampSelectView1Page.formatingData.RedSideTimerTexteColor = jsonContent.RedSideTimerTexteColor;
+            ChampSelectView1Page.formatingData.BanBackgroundPicture = jsonContent.BanBackgroundPicture;
+            ChampSelectView1Page.formatingData.BanOverlayPicture = jsonContent.BanOverlayPicture;
+            ChampSelectView1Page.formatingData.BanBackgroundColor = jsonContent.BanBackgroundColor;
+            ChampSelectView1Page.formatingData.OverlayBackground = jsonContent.OverlayBackground;
         }
         /// <summary>
         /// Load configuration Champ Select View2
@@ -212,18 +163,55 @@ namespace OSL_Server.Configuration
             try
             {
                 string[] temps = CDragon.patch.Split(".");
-                ChampSelectView2Page.DefaultPatch = temps[0] + "." + temps[1];
+                ChampSelectView2Page.formatingData.DefaultPatch = temps[0] + "." + temps[1];
             }
             catch (Exception e)
             {
-                ChampSelectView2Page.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+                ChampSelectView2Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
-            ChampSelectView2Page.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView2", $"{ChampSelectView2Page.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView2", $"{ChampSelectView2Page.DefaultRegion}");
+            ChampSelectView2Page.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView2", $"{ChampSelectView2Page.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView2", $"{ChampSelectView2Page.formatingData.DefaultRegion}");
 
             //ChampSelectView2Page.DefaultPatch = "12.12";
+        }
 
+        public static void LoadFormatingDataConfigChampSelectView2()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/ChampSelect/View2/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //ChampSelectView2Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //ChampSelectView2Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            ChampSelectView2Page.formatingData.TimerBackground = jsonContent.TimerBackground;
+            ChampSelectView2Page.formatingData.TimerBlue = jsonContent.TimerBlue;
+            ChampSelectView2Page.formatingData.TimerRed = jsonContent.TimerRed;
+            ChampSelectView2Page.formatingData.TimerEnd = jsonContent.TimerEnd;
+            ChampSelectView2Page.formatingData.BlueSideBackgroud = jsonContent.BlueSideBackgroud;
+            ChampSelectView2Page.formatingData.BlueSideSummoner = jsonContent.BlueSideSummoner;
+            ChampSelectView2Page.formatingData.BlueSideBackgroudSummonerPick = jsonContent.BlueSideBackgroudSummonerPick;
+            ChampSelectView2Page.formatingData.BlueSideBlink = jsonContent.BlueSideBlink;
+            ChampSelectView2Page.formatingData.BlueSideBackgroudSummonerPickEnd = jsonContent.BlueSideBackgroudSummonerPickEnd;
+            ChampSelectView2Page.formatingData.BlueSideTeamName = jsonContent.BlueSideTeamName;
+            ChampSelectView2Page.formatingData.BlueSideTeamNameColor = jsonContent.BlueSideTeamNameColor;
+            ChampSelectView2Page.formatingData.BlueSideTeamNameSize = jsonContent.BlueSideTeamNameSize;
+            ChampSelectView2Page.formatingData.KeystonePickColor = jsonContent.KeystonePickColor;
+            ChampSelectView2Page.formatingData.KeystonePickColorDeg = jsonContent.KeystonePickColorDeg;
+            ChampSelectView2Page.formatingData.KeystonePickColor1 = jsonContent.KeystonePickColor1;
+            ChampSelectView2Page.formatingData.KeystonePickColorPercent1 = jsonContent.KeystonePickColorPercent1;
+            ChampSelectView2Page.formatingData.KeystonePickColor2 = jsonContent.KeystonePickColor2;
+            ChampSelectView2Page.formatingData.KeystonePickColorPercent2 = jsonContent.KeystonePickColorPercent2;
+            ChampSelectView2Page.formatingData.RedSideBackgroud = jsonContent.RedSideBackgroud;
+            ChampSelectView2Page.formatingData.RedSideSummoner = jsonContent.RedSideSummoner;
+            ChampSelectView2Page.formatingData.RedSideBackgroudSummonerPick = jsonContent.RedSideBackgroudSummonerPick;
+            ChampSelectView2Page.formatingData.RedSideBlink = jsonContent.RedSideBlink;
+            ChampSelectView2Page.formatingData.RedSideBackgroudSummonerPickEnd = jsonContent.RedSideBackgroudSummonerPickEnd;
+            ChampSelectView2Page.formatingData.RedSideTeamName = jsonContent.RedSideTeamName;
+            ChampSelectView2Page.formatingData.RedSideTeamNameColor = jsonContent.RedSideTeamNameColor;
+            ChampSelectView2Page.formatingData.RedSideTeamNameSize = jsonContent.RedSideTeamNameSize;
+            ChampSelectView2Page.formatingData.BanBackgroundPicture = jsonContent.BanBackgroundPicture;
+            ChampSelectView2Page.formatingData.BanOverlayPicture = jsonContent.BanOverlayPicture;
+            ChampSelectView2Page.formatingData.BanBackgroundColor = jsonContent.BanBackgroundColor;
+            ChampSelectView2Page.formatingData.BanBackgroundColorSave = jsonContent.BanBackgroundColorSav;
         }
 
         /// <summary>
@@ -234,17 +222,56 @@ namespace OSL_Server.Configuration
             try
             {
                 string[] temps = CDragon.patch.Split(".");
-                ChampSelectView3Page.DefaultPatch = temps[0] + "." + temps[1];
+                ChampSelectView3Page.formatingData.DefaultPatch = temps[0] + "." + temps[1];
             }
             catch (Exception e)
             {
-                ChampSelectView3Page.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+                ChampSelectView3Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
-            ChampSelectView3Page.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView3", $"{ChampSelectView3Page.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView3", $"{ChampSelectView3Page.DefaultRegion}");
+            ChampSelectView3Page.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView3", $"{ChampSelectView3Page.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView3", $"{ChampSelectView3Page.formatingData.DefaultRegion}");
 
             //ChampSelectView3Page.DefaultPatch = "12.12";
+        }
+
+        public static void LoadFormatingDataConfigChampSelectView3()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/ChampSelect/View3/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+
+            //ChampSelectView3Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //ChampSelectView3Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            ChampSelectView3Page.formatingData.TimerBackground = jsonContent.TimerBackground;
+            ChampSelectView3Page.formatingData.TimerBlue = jsonContent.TimerBlue;
+            ChampSelectView3Page.formatingData.TimerRed = jsonContent.TimerRed;
+            ChampSelectView3Page.formatingData.TimerEnd = jsonContent.TimerEnd;
+            ChampSelectView3Page.formatingData.BlueSideBackgroud = jsonContent.BlueSideBackgroud;
+            ChampSelectView3Page.formatingData.BlueSideSummoner = jsonContent.BlueSideSummoner;
+            ChampSelectView3Page.formatingData.BlueSideBackgroudSummonerPick = jsonContent.BlueSideBackgroudSummonerPick;
+            ChampSelectView3Page.formatingData.BlueSideBlink = jsonContent.BlueSideBlink;
+            ChampSelectView3Page.formatingData.BlueSideBackgroudSummonerPickEnd = jsonContent.BlueSideBackgroudSummonerPickEnd;
+            ChampSelectView3Page.formatingData.BlueSideTeamName = jsonContent.BlueSideTeamName;
+            ChampSelectView3Page.formatingData.BlueSideTeamNameColor = jsonContent.BlueSideTeamNameColor;
+            ChampSelectView3Page.formatingData.BlueSideTeamNameSize = jsonContent.BlueSideTeamNameSize;
+            ChampSelectView3Page.formatingData.KeystonePickColor = jsonContent.KeystonePickColor;
+            ChampSelectView3Page.formatingData.KeystonePickColorDeg = jsonContent.KeystonePickColorDeg;
+            ChampSelectView3Page.formatingData.KeystonePickColor1 = jsonContent.KeystonePickColor1;
+            ChampSelectView3Page.formatingData.KeystonePickColorPercent1 = jsonContent.KeystonePickColorPercent1;
+            ChampSelectView3Page.formatingData.KeystonePickColor2 = jsonContent.KeystonePickColor2;
+            ChampSelectView3Page.formatingData.KeystonePickColorPercent2 = jsonContent.KeystonePickColorPercent2;
+            ChampSelectView3Page.formatingData.RedSideBackgroud = jsonContent.RedSideBackgroud;
+            ChampSelectView3Page.formatingData.RedSideSummoner = jsonContent.RedSideSummoner;
+            ChampSelectView3Page.formatingData.RedSideBackgroudSummonerPick = jsonContent.RedSideBackgroudSummonerPick;
+            ChampSelectView3Page.formatingData.RedSideBlink = jsonContent.RedSideBlink;
+            ChampSelectView3Page.formatingData.RedSideBackgroudSummonerPickEnd = jsonContent.RedSideBackgroudSummonerPickEnd;
+            ChampSelectView3Page.formatingData.RedSideTeamName = jsonContent.RedSideTeamName;
+            ChampSelectView3Page.formatingData.RedSideTeamNameColor = jsonContent.RedSideTeamNameColor;
+            ChampSelectView3Page.formatingData.RedSideTeamNameSize = jsonContent.RedSideTeamNameSize;
+            ChampSelectView3Page.formatingData.BanBackgroundPicture = jsonContent.BanBackgroundPicture;
+            ChampSelectView3Page.formatingData.BanOverlayPicture = jsonContent.BanOverlayPicture;
+            ChampSelectView3Page.formatingData.BanBackgroundColor = jsonContent.BanBackgroundColor;
+            ChampSelectView3Page.formatingData.BanBackgroundColorSave = jsonContent.BanBackgroundColorSav;
         }
 
         public static void LoadConfigChampSelectView4()
@@ -252,17 +279,55 @@ namespace OSL_Server.Configuration
             try
             {
                 string[] temps = CDragon.patch.Split(".");
-                ChampSelectView4Page.DefaultPatch = temps[0] + "." + temps[1];
+                ChampSelectView4Page.formatingData.DefaultPatch = temps[0] + "." + temps[1];
             }
             catch (Exception e)
             {
-                ChampSelectView4Page.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+                ChampSelectView4Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
-            ChampSelectView4Page.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{ChampSelectView4Page.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{ChampSelectView4Page.DefaultRegion}");
+            ChampSelectView4Page.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{ChampSelectView4Page.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{ChampSelectView4Page.formatingData.DefaultRegion}");
 
             //ChampSelectView3Page.DefaultPatch = "12.12";
+        }
+
+        public static void LoadFormatingDataConfigChampSelectView4()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/ChampSelect/View4/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //ChampSelectView4Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //ChampSelectView4Page.formatingData.DefaultRegion = jsonContent.DefaultRegion ;
+            ChampSelectView4Page.formatingData.BorderBottomPixel = jsonContent.BorderBottomPixel;
+            ChampSelectView4Page.formatingData.BorderTop = jsonContent.BorderTop;
+            ChampSelectView4Page.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+            ChampSelectView4Page.formatingData.BackgroudGradientDeg = jsonContent.BackgroudGradientDeg;
+            ChampSelectView4Page.formatingData.BackgroudGradientColor1 = jsonContent.BackgroudGradientColor1;
+            ChampSelectView4Page.formatingData.BackgroudGradientPercent1 = jsonContent.BackgroudGradientPercent1;
+            ChampSelectView4Page.formatingData.BackgroudGradientColor2 = jsonContent.BackgroudGradientColor2;
+            ChampSelectView4Page.formatingData.BackgroudGradientPercent2 = jsonContent.BackgroudGradientPercent2;
+            ChampSelectView4Page.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+            ChampSelectView4Page.formatingData.BlueSideBorderColorPick = jsonContent.BlueSideBorderColorPick;
+            ChampSelectView4Page.formatingData.BlueSideBorderColorBan = jsonContent.BlueSideBorderColorBan;
+            ChampSelectView4Page.formatingData.BlueSideTeamName = jsonContent.BlueSideTeamName;
+            ChampSelectView4Page.formatingData.BlueSideTeamNameSubtext = jsonContent.BlueSideTeamNameSubtext;
+            ChampSelectView4Page.formatingData.BlueSideBanText = jsonContent.BlueSideBanText;
+            ChampSelectView4Page.formatingData.BlueSidePickText = jsonContent.BlueSidePickText;
+            ChampSelectView4Page.formatingData.BlueSideColorText = jsonContent.BlueSideColorText;
+            ChampSelectView4Page.formatingData.BlueSideColorSubText = jsonContent.BlueSideColorSubText;
+            ChampSelectView4Page.formatingData.BlueSideColorTextBan = jsonContent.BlueSideColorTextBan;
+            ChampSelectView4Page.formatingData.BlueSideColorTextPick = jsonContent.BlueSideColorTextPick;
+            ChampSelectView4Page.formatingData.RedSideBorderColorPick = jsonContent.RedSideBorderColorPick;
+            ChampSelectView4Page.formatingData.RedSideBorderColorBan = jsonContent.RedSideBorderColorBan;
+            ChampSelectView4Page.formatingData.RedSideTeamName = jsonContent.RedSideTeamName;
+            ChampSelectView4Page.formatingData.RedSideTeamNameSubtext = jsonContent.RedSideTeamNameSubtext;
+            ChampSelectView4Page.formatingData.RedSideBanText = jsonContent.RedSideBanText;
+            ChampSelectView4Page.formatingData.RedSidePickText = jsonContent.RedSidePickText;
+            ChampSelectView4Page.formatingData.RedSideColorText = jsonContent.RedSideColorText;
+            ChampSelectView4Page.formatingData.RedSideColorSubText = jsonContent.RedSideColorSubText;
+            ChampSelectView4Page.formatingData.RedSideColorTextBan = jsonContent.RedSideColorTextBan;
+            ChampSelectView4Page.formatingData.RedSideColorTextPick = jsonContent.RedSideColorTextPick;
+
         }
 
         public static void LoadDefaultSession()
