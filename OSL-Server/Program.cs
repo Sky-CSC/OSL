@@ -40,7 +40,7 @@ Console.WriteLine("###### Just let this run, do nothing ######");
 Console.WriteLine("###########################################\n");
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("###########################");
-Console.WriteLine("##### Version 0.1.0 #####");
+Console.WriteLine("##### Version 0.2.0 #####");
 Console.WriteLine("###########################\n");
 Console.ResetColor();
 

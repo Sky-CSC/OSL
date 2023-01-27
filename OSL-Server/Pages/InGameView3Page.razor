@@ -1,0 +1,31 @@
+﻿@page "/ingame/view3"
+@layout EmptyLayout
+
+<PageTitle>In Game Overlay 3</PageTitle>
+
+<div class="display-in-game" style="background: url(@formatingData.OverlayBackground)">
+
+
+</div>
+
+@code {
+    private System.Timers.Timer timer = new(1000);
+
+    protected override void OnInitialized()
+    {
+        timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        timer.Start();
+
+        DefaultLoadTempsForTest();
+    }
+
+    private void OnTimerCallback()
+    {
+        _ = InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => timer.Dispose();
+}

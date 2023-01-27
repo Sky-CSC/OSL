@@ -1,0 +1,19 @@
+/*##########################################################*/
+/*######################## General #########################*/
+/*##########################################################*/
+
+@font-face {
+    font-family: MyFont;
+    src: url(../css/font/fonts/fontLoL.ttf);
+}
+
+div {
+    font-family: MyFont;
+    font-weight: bold;
+}
+
+.display-in-game {
+    height: 1080px;
+    width: 1920px;
+    position: absolute;
+}

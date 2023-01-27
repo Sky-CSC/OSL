@@ -1,0 +1,54 @@
+.inGame {
+    /*background-color: none;*/
+    /*    height: 1080px;
+    width: 1920px;*/
+}
+
+@font-face {
+    font-family: MyFont;
+    src: url(../css/font/fonts/fontLoL.ttf);
+}
+
+html, body {
+    background-color: black;
+    color: white;
+}
+
+.title {
+    font-family: MyFont;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.in-game-overlay-1 {
+    margin: auto;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*border: 5px solid black;*/
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+
+.in-game-overlay-2 {
+    margin: auto;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*border: 5px solid black;*/
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+
+.in-game-overlay-3 {
+    margin: auto;
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*border: 5px solid black;*/
+    position: relative;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
