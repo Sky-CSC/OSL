@@ -1,4 +1,6 @@
-﻿namespace OSL_Server.Pages
+﻿using OSL_Server.Configuration;
+
+namespace OSL_Server.Pages
 {
     public partial class InGameView3Page
     {
@@ -12,12 +14,23 @@
         public class FormatingData
         {
             public string DefaultPatch { get; set; }
-            public string OverlayBackground { get; set; }
+            public string DefaultRegion { get; set; }
+            public string ReplayInfoFrame { get; set; }
+            public string BluePlayerFrame { get; set; }
+            public string RedPlayerFrame { get; set; }
+            public string ReplayInfoText { get; set; }
+            public string ColorReplayInfoText { get; set; }
+            public bool DisplayReplayInfoFrame { get; set; }
+            public bool DisplayBluePlayerFrame { get; set; }
+            public bool DisplayRedPlayerFrame { get; set; }
         }
 
-        private static void DefaultLoadTempsForTest()
+        /// <summary>
+        /// Load default data in game
+        /// </summary>
+        public static void ResetColor()
         {
-            formatingData.OverlayBackground = "../assets/ingame/frame/Replay.png";
+            Config.LoadFormatingDataConfigInGameView3();
         }
     }
 }

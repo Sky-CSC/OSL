@@ -3,9 +3,48 @@
 
 <PageTitle>In Game Overlay 3</PageTitle>
 
-<div class="display-in-game" style="background: url(@formatingData.OverlayBackground)">
+<div class="display-in-game">
+    @{
+        if (formatingData.DisplayReplayInfoFrame)
+        {
+            <div class="replay-info">
+                <img class="replay-info-frame" src="@formatingData.ReplayInfoFrame">
+                <div class="replay-info-text">
+                    <div class="replay-info-text-position" style="color: @formatingData.ColorReplayInfoText">
+                        @formatingData.ReplayInfoText
+                    </div>
+                </div>
+            </div>
+        }
 
+        if (formatingData.DisplayBluePlayerFrame)
+        {
+            <div class="blue-player">
+                @{
+                    for (int i = 0; i < 5; i++)
+                    {
+                        <div class="blue-player-frame">
+                            <img class="frame" src="@formatingData.BluePlayerFrame">
+                        </div>
+                    }
+                }
+            </div>
+        }
+        if (formatingData.DisplayRedPlayerFrame)
+        {
+            <div class="red-player">
+                @{
+                    for (int i = 0; i < 5; i++)
+                    {
+                        <div class="red-player-frame">
+                            <img class="frame" src="@formatingData.RedPlayerFrame">
+                        </div>
+                    }
+                }
 
+            </div>
+        }
+    }
 </div>
 
 @code {
@@ -15,8 +54,6 @@
     {
         timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
         timer.Start();
-
-        DefaultLoadTempsForTest();
     }
 
     private void OnTimerCallback()

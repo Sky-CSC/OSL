@@ -20,6 +20,10 @@ html, body {
     text-decoration: underline;
 }
 
+.button-color {
+    height: 30px;
+    width: 30px;
+}
 
 .in-game-overlay-1 {
     margin: auto;
@@ -51,4 +55,21 @@ html, body {
     position: relative;
     /*display: flex;*/
     /*justify-content: center;*/
+}
+
+.color-picker {
+    /*height: 450px;
+    width: 400px;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    position: absolute;
+    /*bottom: 540px;*/
+    /*position: fixed;*/
+    /*top: 0%;*/
+    /*bottom: 50%;*/
+    left: 650px;
+    top: 330px;
+    border: 5px solid black;
+    /*transform: translate(-500px,-150px);*/
 }
