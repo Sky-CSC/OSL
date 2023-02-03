@@ -16,13 +16,13 @@
 
             @if (ChampSelectInfo.session is null)
             {
-                <div class="alert-warning" style="width: 500px">
+                <div class="alert-warning" style="width: 500px; border-radius: 10px;">
                     <h3><strong>Warning!</strong> No Champ Select in progress</h3>
                 </div>
             }
             else
             {
-                <div class="alert-info" style="width: 500px">
+                <div class="alert-info" style="width: 500px; border-radius: 10px;">
                     <h3><strong>Info!</strong> Champ Select is in progress</h3>
                 </div>
             }
@@ -30,8 +30,8 @@
             <br />
             @*View1*@
             <br /><div class="champ-select-overlay-1">
-                <h3>Champ Select Overlay 1 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView1Page.ResetColor">Reset color and text</button></h3>
-                <a class="btn btn-primary button-form" href="champselect/view1">Link Overlay 1</a>
+                <h3 class="title">Champ Select Overlay 1 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView1Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="champselect/view1" target="_blank">Link Overlay 1</a>
                 <button class="btn btn-primary button-form" style="background-color: @overlayView1Button.color" @onclick="@ChampSelectView1Page.EnableOrDisableOverlayView" disabled="@(ChampSelectInfo.session is null)">
                     Clic to @overlayView1Button.text
                 </button>
@@ -143,8 +143,8 @@
             <br />
             @*View2*@
             <div class="champ-select-overlay-2">
-                <h3>Champ Select Overlay 2 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView2Page.ResetColor">Reset color and text</button></h3>
-                <a class="btn btn-primary button-form" href="champselect/view2">Link Overlay 2</a>
+                <h3 class="title">Champ Select Overlay 2 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView2Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="champselect/view2" target="_blank">Link Overlay 2</a>
                 <button class="btn btn-primary button-form" style="background-color: @overlayView2Button.color" @onclick="@ChampSelectView2Page.EnableOrDisableOverlayView" disabled="@(ChampSelectInfo.session is null)">Clic to @overlayView2Button.text </button>
                 <p>
                     <br />
@@ -216,8 +216,8 @@
             <br />
             @*View3*@
             <div class="champ-select-overlay-3">
-                <h3>Champ Select Overlay 3 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView3Page.ResetColor">Reset color and text</button></h3>
-                <a class="btn btn-primary button-form" href="champselect/view3">Link Overlay 3</a>
+                <h3 class="title">Champ Select Overlay 3 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView3Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="champselect/view3" target="_blank">Link Overlay 3</a>
 
                 <button class="btn btn-primary button-form" style="background-color: @overlayView3Button.color" @onclick="@ChampSelectView3Page.EnableOrDisableOverlayView" disabled="@(ChampSelectInfo.session is null)">Clic to @overlayView3Button.text </button>
                 <p>
@@ -287,8 +287,8 @@
 
             @*View4*@
             <div class="champ-select-overlay-4">
-                <h3>Champ Select Overlay 4 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView4Page.ResetColor">Reset color and text</button></h3>
-                <a class="btn btn-primary button-form" href="champselect/view4">Link Overlay 4</a>
+                <h3 class="title">Champ Select Overlay 4 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView4Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="champselect/view4" target="_blank">Link Overlay 4</a>
 
                 <button class="btn btn-primary button-form" style="background-color: @overlayView4Button.color" @onclick="@ChampSelectView4Page.EnableOrDisableOverlayView" disabled="@(ChampSelectInfo.session is null)">Clic to @overlayView4Button.text </button>
                 <br />

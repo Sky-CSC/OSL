@@ -1,11 +1,12 @@
 ﻿@page "/cdragon"
 @using OSL_Server.DataLoader.CDragon;
+@using MudBlazor
 
 <PageTitle>CDragon</PageTitle>
 <div class="parent">
     <div class="InformationDataCDragon">
         <div class="content">
-            <h2>Information data CDragon</h2>
+            <h1 class="title">Information data CDragon</h1>
             <br /><h4>What is update :</h4>
             - <b>Champion :</b> square, sound, splashe, splashe uncentered, loading screen, data information
             <br />- <b>Items :</b> icon, data information
@@ -33,6 +34,10 @@
         </div>
     </div>
 </div>
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
 @code {
 
