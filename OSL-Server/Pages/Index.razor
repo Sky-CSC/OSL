@@ -1,10 +1,57 @@
 ﻿@page "/"
+@using MudBlazor
+
 <PageTitle>OSL</PageTitle>
 
-<h1>Welcome to OSL!</h1>
+<h1 class="title">Welcome to OSL!</h1>
 
 <b>For more information for how to use this application see <a href="https://sky-csc.github.io/OSL/" target="_blank">documentation</a></b>
+<br />
+<br />
 
-<p style="position:absolute;bottom: 1%">
-    Authors : Sky-csc
-</p>
+<div class="">
+
+
+    <h2 class="title">CDragon :</h2>
+    Data download from CDragon (picture, perks, spell ... of League of Legends)
+    <br /><br />
+    <h2 class="title">Config :</h2>
+    Change port for OSL-Client exchange,
+    <br />Load or save champ select view or in game view
+    <br /><br />
+    <h2 class="title">Champ Select :</h2>
+    Customization of champion selection overlay
+    <br /><br />
+    <h2 class="title">In Game :</h2>
+    Customization of in game overlay
+    <br /><br />
+    <h2 class="title">OBS configuration :</h2>
+
+    Add to your différents scènes the différents URL
+    <br />ip : your local or distant ip
+    <br />port : your local or distant port (default http port 4141)
+    <br />
+    <br />
+        <div class="alert-warning">
+                <strong>Warning!</strong>
+                <br>https does not work with OBS for the moment
+        </div>
+    <br />
+    <h4 class="title">Champion selection :</h4>
+    http://ip:port/champselect/view1
+    <br />http://ip:port/champselect/view2
+    <br />http://ip:port/champselect/view3
+    <br />http://ip:port/champselect/view4
+    <br />
+    <br />
+    <h4 class="title">In game :</h4>
+    http://ip:port/ingame/view1
+    <br />http://ip:port/ingame/view2
+    <br />http://ip:port/ingame/view3
+
+</div>
+
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />

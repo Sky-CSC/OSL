@@ -16,8 +16,8 @@
             </p>
             @*View1*@
             <br /><div class="in-game-overlay-1">
-                <h3>In Game Overlay 1 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@InGameView1Page.ResetColor">Reset color and text</button></h3>
-                <a class="btn btn-primary button-form" href="ingame/view1">Link Overlay 1</a>
+                <h3 class ="title">In Game Overlay 1 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@InGameView1Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="ingame/view1" target="_blank">Link Overlay 1</a>
 
                 <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BlueTeamTextSubmit">
                     <DataAnnotationsValidator />
@@ -122,8 +122,8 @@
 
             @*View2*@
             <br /><div class="in-game-overlay-2">
-                <h3>In Game Overlay 2 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@InGameView2Page.ResetColor">Reset color and text</button></h3>
-                <a class="btn btn-primary button-form" href="ingame/view2">Link Overlay 2</a>
+                <h3 class="title">In Game Overlay 2 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@InGameView2Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="ingame/view2" target="_blank">Link Overlay 2</a>
 
                 <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.BlueTeamTextSubmit">
                     <DataAnnotationsValidator />
@@ -224,8 +224,8 @@
 
             @*View3*@
             <br /><div class="in-game-overlay-3">
-                <h3>In Game Overlay 3 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@InGameView3Page.ResetColor">Reset color and text</button></h3>
-                <a class="btn btn-primary button-form" href="ingame/view3">Link Overlay 3</a>
+                <h3 class="title">In Game Overlay 3 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@InGameView3Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="ingame/view3" target="_blank">Link Overlay 3</a>
                 <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.ReplayInfoTextSubmit">
                     <DataAnnotationsValidator />
                     <ValidationSummary />

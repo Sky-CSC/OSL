@@ -41,15 +41,16 @@
         line-height: 3rem;
     }
 
-.nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
+        .nav-item ::deep a.active {
+            background-color: rgba(255,255,255,0.25);
+            /*background-color: rgba(0,0,0,0.5);*/
+            color: #be1e37;
+        }
 
-.nav-item ::deep a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
+        .nav-item ::deep a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: #0b849e;
+        }
 
 @media (min-width: 641px) {
     .navbar-toggler {
@@ -60,4 +61,18 @@
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+}
+
+.footer-nav {
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin: 0 10px 10px 10px;
+    border-radius: 8px;
+    bottom: 0px;
+}
+
+.nav-bar-author {
+    color: white;
 }

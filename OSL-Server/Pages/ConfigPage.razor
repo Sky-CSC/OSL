@@ -2,15 +2,16 @@
 @using OSL_Server.Communication
 @using static OSL_Server.Pages.ConfigPage.ConfigOverlayText
 @using Microsoft.AspNetCore.SignalR.Client
-
+@using MudBlazor
 
 <PageTitle>Config</PageTitle>
 <div class="parent">
     <div class="Configuration">
         <div class="content">
             <h1 class="title">Configuration :</h1>
+            <br />
             <div>
-                <h2><u>Server Configuration :</u></h2>
+                <h2 class ="title">Server Configuration :</h2>
                 <br />
                 <EditForm Model="@OverlayText" OnValidSubmit="@PortServerSubmit">
                     <DataAnnotationsValidator />
@@ -23,7 +24,7 @@
             </div>
             <br />
             <div>
-                <h2><u>Configuration champ select View 1 :</u></h2>
+                <h2 class="title">Configuration champ select View 1 :</h2>
                 <br />
                 Load configuration file
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileChampSelectView1">Submit</button>
@@ -35,7 +36,7 @@
             </div>
             <br />
             <div>
-                <h2><u>Configuration champ select View 2 :</u></h2>
+                <h2 class="title">Configuration champ select View 2 :</h2>
                 <br />
                 Load configuration file
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileChampSelectView2">Submit</button>
@@ -47,7 +48,7 @@
             </div>
             <br />
             <div>
-                <h2><u>Configuration champ select View 3 :</u></h2>
+                <h2 class="title">Configuration champ select View 3 :</h2>
                 <br />
                 Load configuration file
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileChampSelectView3">Submit</button>
@@ -59,7 +60,7 @@
             </div>
             <br />
             <div>
-                <h2><u>Configuration champ select View 4 :</u></h2>
+                <h2 class="title">Configuration champ select View 4 :</h2>
                 <br />
                 Load configuration file
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileChampSelectView4">Submit</button>
@@ -71,7 +72,7 @@
             </div>
             <br />
             <div>
-                <h2><u>Configuration in game View 1 :</u></h2>
+                <h2 class ="title"><u>Configuration in game View 1 :</u></h2>
                 <br />
                 Load configuration file
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileInGameView1">Submit</button>
@@ -83,7 +84,7 @@
             </div>
             <br />
             <div>
-                <h2><u>Configuration in game View 2 :</u></h2>
+                <h2 class ="title">Configuration in game View 2 :</h2>
                 <br />
                 Load configuration file
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileInGameView2">Submit</button>
@@ -95,7 +96,7 @@
             </div>
             <br />
             <div>
-                <h2><u>Configuration in game View 3 :</u></h2>
+                <h2 class ="title">Configuration in game View 3 :</h2>
                 <br />
                 Load configuration file
                 <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileInGameView3">Submit</button>
@@ -110,6 +111,10 @@
         </div>
     </div>
 </div>
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
 @code {
     public static ConfigOverlayText OverlayText = new();

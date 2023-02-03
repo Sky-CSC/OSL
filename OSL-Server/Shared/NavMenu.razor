@@ -1,4 +1,6 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿@using MudBlazor
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">OSL-Server</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -14,7 +16,7 @@
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </div>
-        <div class="nav-item px-3" >
+        <div class="nav-item px-3">
             <NavLink class="nav-link" href="cdragon">
                 <span class="oi oi-data-transfer-download" aria-hidden="true"></span> @*@Locales.CDragon*@ CDragon
             </NavLink>
@@ -25,14 +27,14 @@
             </NavLink>
         </div>
         @*<div class="nav-item px-3">
-            <NavLink class="nav-link" href="recaplinkoverlay">
-                <span class="oi oi-link-intact" aria-hidden="true"></span> Recap Link Overlay
-            </NavLink>
+        <NavLink class="nav-link" href="recaplinkoverlay">
+        <span class="oi oi-link-intact" aria-hidden="true"></span> Recap Link Overlay
+        </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="waitinggame">
-                <span class="oi oi-timer" aria-hidden="true"></span> Waiting a Game
-            </NavLink>
+        <NavLink class="nav-link" href="waitinggame">
+        <span class="oi oi-timer" aria-hidden="true"></span> Waiting a Game
+        </NavLink>
         </div>*@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="champselect">
@@ -40,9 +42,9 @@
             </NavLink>
         </div>
         @*<div class="nav-item px-3">
-            <NavLink class="nav-link" href="waitinggamestart">
-                <span class="oi oi-ellipses" aria-hidden="true"></span> Waiting Game Start
-            </NavLink>
+        <NavLink class="nav-link" href="waitinggamestart">
+        <span class="oi oi-ellipses" aria-hidden="true"></span> Waiting Game Start
+        </NavLink>
         </div>*@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="ingame">
@@ -50,12 +52,23 @@
             </NavLink>
         </div>
         @*<div class="nav-item px-3">
-            <NavLink class="nav-link" href="endgame">
-                <span class="oi oi-bar-chart" aria-hidden="true"></span> End Game
-            </NavLink>
+        <NavLink class="nav-link" href="endgame">
+        <span class="oi oi-bar-chart" aria-hidden="true"></span> End Game
+        </NavLink>
         </div>*@
     </nav>
+    <div class="footer-nav">
+        <strong>
+            <a class="nav-bar-author" href="https://github.com/Sky-CSC/OSL" target="_blank">
+                Sky csc
+            </a>
+        </strong>
+    </div>
 </div>
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
 @code {
     private bool collapseNavMenu = true;
