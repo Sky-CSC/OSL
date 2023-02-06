@@ -3,6 +3,12 @@ using OSL_Server.Data;
 using MudBlazor.Services;
 using OSL_Server.Communication;
 using OSL_Server.Pages;
+using Microsoft.AspNetCore.Hosting.Server.Features;
+using Microsoft.AspNetCore.Hosting.Server;
+using System;
+using System.Diagnostics;
+using System.Net.Sockets;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,7 +52,15 @@ Console.ResetColor();
 
 Config.LoadConfig(); //Load configs
 
-//CDragonPage.UpdateManual();//Download file fr
+CDragonPage.UpdateManual();//Download file fr
 
 AsyncServer.Run(); //Run Socket server
+
+///Open in default browser application
+Process.Start(new ProcessStartInfo
+{
+    FileName = $"https://{Config.oslServerHostName}:{Config.oslServerHttpsPort}",
+    UseShellExecute = true
+});
+
 app.Run(); //Run Application

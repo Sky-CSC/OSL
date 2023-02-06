@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using MudBlazor
+@using OSL_Server.Configuration;
 
 <PageTitle>OSL</PageTitle>
 
@@ -38,16 +39,19 @@
         </div>
     <br />
     <h4 class="title">Champion selection :</h4>
-    http://ip:port/champselect/view1
-    <br />http://ip:port/champselect/view2
-    <br />http://ip:port/champselect/view3
-    <br />http://ip:port/champselect/view4
+    http://@Config.oslServerHostName:@Config.oslServerHttpPort/champselect/view1
+    <br />http://@Config.oslServerHostName:@Config.oslServerHttpPort/champselect/view2
+    <br />http://@Config.oslServerHostName:@Config.oslServerHttpPort/champselect/view3
+    <br />http://@Config.oslServerHostName:@Config.oslServerHttpPort/champselect/view4
     <br />
     <br />
     <h4 class="title">In game :</h4>
-    http://ip:port/ingame/view1
-    <br />http://ip:port/ingame/view2
-    <br />http://ip:port/ingame/view3
+    http://@Config.oslServerHostName:@Config.oslServerHttpPort/ingame/view1
+    <br />http://@Config.oslServerHostName:@Config.oslServerHttpPort/ingame/view2
+    <br />http://@Config.oslServerHostName:@Config.oslServerHttpPort/ingame/view3
+    <br />
+    <br />
+    <br />
 
 </div>
 

@@ -4,6 +4,7 @@ using OSL_Server.DataLoader.CDragon;
 using OSL_Server.Pages;
 using OSL_Server.Communication;
 using OSL_Server.DataReciveClient.Processing.ChampSelect;
+using System.Net;
 
 namespace OSL_Server.Configuration
 {
@@ -14,11 +15,18 @@ namespace OSL_Server.Configuration
     {
         private static OSLLogger _logger = new OSLLogger("Config");
 
+        public static IPHostEntry oslServerHost;
+        public static string oslServerHostName;
+        public static int oslServerHttpPort;
+        public static int oslServerHttpsPort;
+
         /// <summary>
         /// Load configuration
         /// </summary>
         public static void LoadConfig()
         {
+            LoadConfigOslServerHost();
+
             LoadConfigServerSocket();
 
             LoadConfigCDragon();
@@ -42,6 +50,17 @@ namespace OSL_Server.Configuration
             LoadConfigInGameView2();
             LoadFormatingDataConfigInGameView3();
             LoadConfigInGameView3();
+        }
+
+        /// <summary>
+        /// Load Config Osl Server Host for urls
+        /// </summary>
+        public static void LoadConfigOslServerHost()
+        {
+            oslServerHost = Dns.Resolve("0.0.0.0");
+            oslServerHostName = oslServerHost.HostName;
+            oslServerHttpPort = 4141;
+            oslServerHttpsPort = 4242;
         }
 
         /// <summary>
