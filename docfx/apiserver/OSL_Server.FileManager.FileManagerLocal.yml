@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: FileManagerLocal
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: CreateFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DeleteFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RewrittenFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: WriteInFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadInFile
     path: ../OSL-Server/FileManager/FileManagerLocal.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: OSL-Server/FileManager/FileManagerLocal.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadFilePath
     path: ../OSL-Server/FileManager/FileManagerLocal.cs

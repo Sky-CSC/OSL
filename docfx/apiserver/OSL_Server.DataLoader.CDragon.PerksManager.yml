@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: PerksManager
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerks
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerksComposent
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerksStyle
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: PerksAsyncDownload
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
@@ -260,7 +260,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/PerksManager.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonPerks
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs

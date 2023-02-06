@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Server/Data/WeatherForecastService.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: WeatherForecastService
     path: ../OSL-Server/Data/WeatherForecastService.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: OSL-Server/Data/WeatherForecastService.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetForecastAsync
     path: ../OSL-Server/Data/WeatherForecastService.cs

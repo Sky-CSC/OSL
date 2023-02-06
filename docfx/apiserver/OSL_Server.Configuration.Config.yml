@@ -11,6 +11,10 @@ items:
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView2
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView3
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView4
+  - OSL_Server.Configuration.Config.LoadConfigInGameView1
+  - OSL_Server.Configuration.Config.LoadConfigInGameView2
+  - OSL_Server.Configuration.Config.LoadConfigInGameView3
+  - OSL_Server.Configuration.Config.LoadConfigOslServerHost
   - OSL_Server.Configuration.Config.LoadConfigServerSocket
   - OSL_Server.Configuration.Config.LoadConfigTimer
   - OSL_Server.Configuration.Config.LoadDefaultSession
@@ -18,6 +22,13 @@ items:
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView1
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView2
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3
+  - OSL_Server.Configuration.Config.oslServerHost
+  - OSL_Server.Configuration.Config.oslServerHostName
+  - OSL_Server.Configuration.Config.oslServerHttpPort
+  - OSL_Server.Configuration.Config.oslServerHttpsPort
   langs:
   - csharp
   - vb
@@ -28,11 +39,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -57,6 +68,138 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: OSL_Server.Configuration.Config.oslServerHost
+  commentId: F:OSL_Server.Configuration.Config.oslServerHost
+  id: oslServerHost
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: oslServerHost
+  nameWithType: Config.oslServerHost
+  fullName: OSL_Server.Configuration.Config.oslServerHost
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: oslServerHost
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 17
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static IPHostEntry oslServerHost
+    return:
+      type: System.Net.IPHostEntry
+    content.vb: Public Shared oslServerHost As IPHostEntry
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.oslServerHostName
+  commentId: F:OSL_Server.Configuration.Config.oslServerHostName
+  id: oslServerHostName
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: oslServerHostName
+  nameWithType: Config.oslServerHostName
+  fullName: OSL_Server.Configuration.Config.oslServerHostName
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: oslServerHostName
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 18
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static string oslServerHostName
+    return:
+      type: System.String
+    content.vb: Public Shared oslServerHostName As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.oslServerHttpPort
+  commentId: F:OSL_Server.Configuration.Config.oslServerHttpPort
+  id: oslServerHttpPort
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: oslServerHttpPort
+  nameWithType: Config.oslServerHttpPort
+  fullName: OSL_Server.Configuration.Config.oslServerHttpPort
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: oslServerHttpPort
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 19
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static int oslServerHttpPort
+    return:
+      type: System.Int32
+    content.vb: Public Shared oslServerHttpPort As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.oslServerHttpsPort
+  commentId: F:OSL_Server.Configuration.Config.oslServerHttpsPort
+  id: oslServerHttpsPort
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: oslServerHttpsPort
+  nameWithType: Config.oslServerHttpsPort
+  fullName: OSL_Server.Configuration.Config.oslServerHttpsPort
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: oslServerHttpsPort
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 20
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static int oslServerHttpsPort
+    return:
+      type: System.Int32
+    content.vb: Public Shared oslServerHttpsPort As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: OSL_Server.Configuration.Config.LoadConfig
   commentId: M:OSL_Server.Configuration.Config.LoadConfig
   id: LoadConfig
@@ -71,11 +214,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfig
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 19
+    startLine: 25
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -85,6 +228,38 @@ items:
     content: public static void LoadConfig()
     content.vb: Public Shared Sub LoadConfig
   overload: OSL_Server.Configuration.Config.LoadConfig*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigOslServerHost
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigOslServerHost
+  id: LoadConfigOslServerHost
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigOslServerHost()
+  nameWithType: Config.LoadConfigOslServerHost()
+  fullName: OSL_Server.Configuration.Config.LoadConfigOslServerHost()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigOslServerHost
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 54
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigOslServerHost()
+    content.vb: Public Shared Sub LoadConfigOslServerHost
+  overload: OSL_Server.Configuration.Config.LoadConfigOslServerHost*
   modifiers.csharp:
   - public
   - static
@@ -105,11 +280,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigServerSocket
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 38
+    startLine: 65
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -139,11 +314,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigCDragon
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 56
+    startLine: 83
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -173,11 +348,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigTimer
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 96
+    startLine: 123
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -207,11 +382,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView1
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 107
+    startLine: 134
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -241,11 +416,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigChampSelectView1
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 127
+    startLine: 154
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -275,11 +450,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView2
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 163
+    startLine: 190
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -309,11 +484,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigChampSelectView2
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 184
+    startLine: 211
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -343,11 +518,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView3
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 225
+    startLine: 252
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -377,11 +552,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigChampSelectView3
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 246
+    startLine: 273
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -411,11 +586,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView4
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 288
+    startLine: 315
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -445,11 +620,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigChampSelectView4
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 309
+    startLine: 336
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -479,11 +654,11 @@ items:
   source:
     remote:
       path: OSL-Server/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadDefaultSession
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 350
+    startLine: 377
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -493,6 +668,198 @@ items:
     content: public static void LoadDefaultSession()
     content.vb: Public Shared Sub LoadDefaultSession
   overload: OSL_Server.Configuration.Config.LoadDefaultSession*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigInGameView1
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigInGameView1
+  id: LoadConfigInGameView1
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigInGameView1()
+  nameWithType: Config.LoadConfigInGameView1()
+  fullName: OSL_Server.Configuration.Config.LoadConfigInGameView1()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigInGameView1
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 383
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigInGameView1()
+    content.vb: Public Shared Sub LoadConfigInGameView1
+  overload: OSL_Server.Configuration.Config.LoadConfigInGameView1*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView1
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView1
+  id: LoadFormatingDataConfigInGameView1
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigInGameView1()
+  nameWithType: Config.LoadFormatingDataConfigInGameView1()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView1()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigInGameView1
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 399
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigInGameView1()
+    content.vb: Public Shared Sub LoadFormatingDataConfigInGameView1
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView1*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigInGameView2
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigInGameView2
+  id: LoadConfigInGameView2
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigInGameView2()
+  nameWithType: Config.LoadConfigInGameView2()
+  fullName: OSL_Server.Configuration.Config.LoadConfigInGameView2()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigInGameView2
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 435
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigInGameView2()
+    content.vb: Public Shared Sub LoadConfigInGameView2
+  overload: OSL_Server.Configuration.Config.LoadConfigInGameView2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView2
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView2
+  id: LoadFormatingDataConfigInGameView2
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigInGameView2()
+  nameWithType: Config.LoadFormatingDataConfigInGameView2()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView2()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigInGameView2
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 451
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigInGameView2()
+    content.vb: Public Shared Sub LoadFormatingDataConfigInGameView2
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigInGameView3
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigInGameView3
+  id: LoadConfigInGameView3
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigInGameView3()
+  nameWithType: Config.LoadConfigInGameView3()
+  fullName: OSL_Server.Configuration.Config.LoadConfigInGameView3()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigInGameView3
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 485
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigInGameView3()
+    content.vb: Public Shared Sub LoadConfigInGameView3
+  overload: OSL_Server.Configuration.Config.LoadConfigInGameView3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3
+  id: LoadFormatingDataConfigInGameView3
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigInGameView3()
+  nameWithType: Config.LoadFormatingDataConfigInGameView3()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigInGameView3
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 501
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigInGameView3()
+    content.vb: Public Shared Sub LoadFormatingDataConfigInGameView3
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3*
   modifiers.csharp:
   - public
   - static
@@ -797,11 +1164,43 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Net.IPHostEntry
+  commentId: T:System.Net.IPHostEntry
+  parent: System.Net
+  isExternal: true
+  name: IPHostEntry
+  nameWithType: IPHostEntry
+  fullName: System.Net.IPHostEntry
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: OSL_Server.Configuration.Config.LoadConfig*
   commentId: Overload:OSL_Server.Configuration.Config.LoadConfig
   name: LoadConfig
   nameWithType: Config.LoadConfig
   fullName: OSL_Server.Configuration.Config.LoadConfig
+- uid: OSL_Server.Configuration.Config.LoadConfigOslServerHost*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigOslServerHost
+  name: LoadConfigOslServerHost
+  nameWithType: Config.LoadConfigOslServerHost
+  fullName: OSL_Server.Configuration.Config.LoadConfigOslServerHost
 - uid: OSL_Server.Configuration.Config.LoadConfigServerSocket*
   commentId: Overload:OSL_Server.Configuration.Config.LoadConfigServerSocket
   name: LoadConfigServerSocket
@@ -862,3 +1261,33 @@ references:
   name: LoadDefaultSession
   nameWithType: Config.LoadDefaultSession
   fullName: OSL_Server.Configuration.Config.LoadDefaultSession
+- uid: OSL_Server.Configuration.Config.LoadConfigInGameView1*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigInGameView1
+  name: LoadConfigInGameView1
+  nameWithType: Config.LoadConfigInGameView1
+  fullName: OSL_Server.Configuration.Config.LoadConfigInGameView1
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView1*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView1
+  name: LoadFormatingDataConfigInGameView1
+  nameWithType: Config.LoadFormatingDataConfigInGameView1
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView1
+- uid: OSL_Server.Configuration.Config.LoadConfigInGameView2*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigInGameView2
+  name: LoadConfigInGameView2
+  nameWithType: Config.LoadConfigInGameView2
+  fullName: OSL_Server.Configuration.Config.LoadConfigInGameView2
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView2*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView2
+  name: LoadFormatingDataConfigInGameView2
+  nameWithType: Config.LoadFormatingDataConfigInGameView2
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView2
+- uid: OSL_Server.Configuration.Config.LoadConfigInGameView3*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigInGameView3
+  name: LoadConfigInGameView3
+  nameWithType: Config.LoadConfigInGameView3
+  fullName: OSL_Server.Configuration.Config.LoadConfigInGameView3
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3
+  name: LoadFormatingDataConfigInGameView3
+  nameWithType: Config.LoadFormatingDataConfigInGameView3
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3

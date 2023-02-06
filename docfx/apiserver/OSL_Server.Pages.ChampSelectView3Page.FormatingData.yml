@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: FormatingData
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultPatch
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultRegion
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimerBackground
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimerBlue
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimerRed
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimerEnd
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -300,7 +300,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBackgroud
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -335,7 +335,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideSummoner
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -370,7 +370,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBackgroudSummonerPick
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -405,7 +405,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBlink
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -440,7 +440,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBackgroudSummonerPickEnd
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -475,7 +475,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamName
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -510,7 +510,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamNameColor
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -545,7 +545,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamNameSize
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -580,7 +580,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: KeystonePickColor
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -615,7 +615,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: KeystonePickColorDeg
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -650,7 +650,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: KeystonePickColor1
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -685,7 +685,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: KeystonePickColorPercent1
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -720,7 +720,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: KeystonePickColor2
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -755,7 +755,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: KeystonePickColorPercent2
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -790,7 +790,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBackgroud
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -825,7 +825,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideSummoner
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -860,7 +860,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBackgroudSummonerPick
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -895,7 +895,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBlink
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -930,7 +930,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBackgroudSummonerPickEnd
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -965,7 +965,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamName
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -1000,7 +1000,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamNameColor
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -1035,7 +1035,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamNameSize
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -1070,7 +1070,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanBackgroundPicture
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -1105,7 +1105,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanOverlayPicture
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -1140,7 +1140,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanBackgroundColor
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs
@@ -1175,7 +1175,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ChampSelectView3Page.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanBackgroundColorSave
     path: ../OSL-Server/Pages/ChampSelectView3Page.razor.cs

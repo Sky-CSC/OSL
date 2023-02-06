@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Actions
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ActorCellId
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionId
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Completed
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Id
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsInProgress
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: PickTurn
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Type
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs

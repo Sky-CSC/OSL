@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Skins
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Id
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsBase
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: SplashePath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: SplasheUncenteredPath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: TilePath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs
@@ -239,7 +239,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataLoader/CDragon/CDragon.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadScreenPath
     path: ../OSL-Server/DataLoader/CDragon/CDragon.cs

@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ServerHub
     path: ../OSL-Server/Communication/ServerHub.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsServerRunning
     path: ../OSL-Server/Communication/ServerHub.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateStatus
     path: ../OSL-Server/Communication/ServerHub.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: SendPort
     path: ../OSL-Server/Communication/ServerHub.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: SendPort
     path: ../OSL-Server/Communication/ServerHub.cs
@@ -227,7 +227,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: TurnOn
     path: ../OSL-Server/Communication/ServerHub.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: TurnOff
     path: ../OSL-Server/Communication/ServerHub.cs
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: OnConnectedAsync
     path: ../OSL-Server/Communication/ServerHub.cs
@@ -337,7 +337,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: OnDisconnectedAsync
     path: ../OSL-Server/Communication/ServerHub.cs
@@ -379,7 +379,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/ServerHub.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsPortBusy
     path: ../OSL-Server/Communication/ServerHub.cs

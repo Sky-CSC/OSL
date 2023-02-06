@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/WaitingGamePage.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: WaitingGamePage
     path: ../OSL-Server/Pages/WaitingGamePage.razor.cs

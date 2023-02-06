@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/LaunchChecker.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LaunchChecker
     path: ../OSL-Client/RiotApp/LaunchChecker.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/LaunchChecker.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoLLauncherCheck
     path: ../OSL-Client/RiotApp/LaunchChecker.cs

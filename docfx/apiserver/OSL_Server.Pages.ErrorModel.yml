@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/Error.cshtml.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ErrorModel
     path: ../OSL-Server/Pages/Error.cshtml.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/Error.cshtml.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RequestId
     path: ../OSL-Server/Pages/Error.cshtml.cs
@@ -246,7 +246,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/Error.cshtml.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ShowRequestId
     path: ../OSL-Server/Pages/Error.cshtml.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/Error.cshtml.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Server/Pages/Error.cshtml.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/Error.cshtml.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: OnGet
     path: ../OSL-Server/Pages/Error.cshtml.cs

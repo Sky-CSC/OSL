@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Memory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_Process
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_pProcessHandle
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_iNumberOfBytesRead
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_iNumberOfBytesWritten
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_baseAddress
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsConnected
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -273,7 +273,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Initialize
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetModuleAddress
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -347,7 +347,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -391,7 +391,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadMatrix
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -476,7 +476,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: WriteMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -518,7 +518,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: WriteMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -560,7 +560,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertToFloatArray
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
@@ -600,7 +600,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetChampionObjectSize
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs

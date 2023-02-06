@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/AsyncServer/Send.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: AsyncServer
     path: ../OSL-Server/Communication/AsyncServer/Send.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: portSocketOSLServer
     path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
@@ -100,7 +100,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: allDone
     path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
@@ -133,7 +133,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsRunning
     path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Run
     path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: OSL-Server/Communication/AsyncServer/AsyncServer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Stop
     path: ../OSL-Server/Communication/AsyncServer/AsyncServer.cs

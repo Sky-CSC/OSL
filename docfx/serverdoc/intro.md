@@ -9,7 +9,7 @@
 
 ---
 
-Download last release : [First Release v0.2.0-alpha](https://github.com/Sky-CSC/OSL/releases/tag/v0.2.0-alpha)
+Download last release : [Release v0.3.0-alpha](https://github.com/Sky-CSC/OSL/releases/tag/v0.3.0-alpha)
 
 Not forget run ```OSL-Server.exe```, before run ```OSL-Client.exe```
 
@@ -57,12 +57,47 @@ The information you can receive from the game is listed, and separated into 5 ca
 ---
 
 ## **OBS** configuration :
-Add to your différents scènes the différents URL
-- Champ Select :
-  - http://ip:4141/champselect/view1
-  - http://ip:4141/champselect/view2
-  - http://ip:4141/champselect/view3
-  - http://ip:4141/champselect/view4
+Add to your différents scènes the différents URL (change ip by your local ip)
+
+Champ Select :
+
+```sh
+http://ip:4141/champselect/view1
+http://ip:4141/champselect/view2
+http://ip:4141/champselect/view3
+http://ip:4141/champselect/view4
+```
+<!-- 
+<li> Champ Select :
+<ul>
+
+<li style="list-style-type: circle;">
+
+```sh
+http://ip:4141/champselect/view1
+```
+
+<li style="list-style-type: circle;">http://ip:4141/champselect/view2</li>
+<li style="list-style-type: circle;">http://ip:4141/champselect/view3</li>
+<li style="list-style-type: circle;">http://ip:4141/champselect/view4</li>
+</ul>
+</li> -->
+
+In Game :
+
+```sh
+http://ip:4141/ingame/view1
+http://ip:4141/ingame/view2
+http://ip:4141/ingame/view3
+```
+
+<!-- <li> In Game :
+<ul>
+<li style="list-style-type: circle;">http://ip:4141/ingame/view1
+<li style="list-style-type: circle;">http://ip:4141/ingame/view2
+<li style="list-style-type: circle;">http://ip:4141/ingame/view3
+</ul>
+</li> -->
 
 <!-- Add to your différents scènes the différents URL, you can found this URL on your personal area, in games, game-xxxxxxxxxx, in **Waiting a Game**, **Champ Select**, **Waiting Game Start**, **In Game** and **End Game**.
 
@@ -78,10 +113,14 @@ The URL is like https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsd
 
 <span style="color:darkred">information</span> : Data not found at this time
 
-~~feature~~ : Feature not implemented, but in progress
+<input type="checkbox" disabled checked> : Feature implemented
 
-### <ins>~~Information display with overlay **Waiting a Game**~~
-- ~~Number of lose and vircory in ranked solo/duo and flex~~
+<input type="checkbox" disabled> : Feature not implemented, but in progress
+
+<br>
+
+### <ins>Information display with overlay **Waiting a Game**
+<input type="checkbox" disabled>Number of lose and vircory in ranked solo/duo and flex
 
 <!-- Video example Waiting a Game -->
 
@@ -94,45 +133,55 @@ The URL is like https://osl.sky-csc.fr/ezvozhebvized_jcbzekbcize_zebcjk54654_qsd
 <!-- <a href="http://www.youtube.com/watch?feature=player_embedded&v=y-jzB9q54Ng?
 " target="_blank"><img src="http://img.youtube.com/vi/y-jzB9q54Ng/0.jpg" 
 alt="Video example Waiting a Game" width="240" height="180" border="0" /></a> -->
-<br>
 
 ### <ins>Information display with overlay in **Champ Select**
 Link to LoL client : 
-- Champion Ban
-- Champion Pick
-- Summoners Name
-- Summoners Spell (view 1)
-- ~~Skins~~
-- Timer (ban/select/waiting)
+<br><input type="checkbox" disabled checked>Champion Ban
+<br><input type="checkbox" disabled checked>Champion Pick
+<br><input type="checkbox" disabled checked>Summoners Name
+<br><input type="checkbox" disabled checked>Summoners Spell (view 1)
+<br><input type="checkbox" disabled>Skins
+<br><input type="checkbox" disabled checked>Timer (ban/select/waiting)
  	
 Personal information added :
-- ~~Name Toornament~~
-- Win/Lose Team
-- ~~Logo Team~~
-- Name Team
-- ~~Name Summoners~~
-- ~~Name Coach~~  
-- ~~Stats Champ Ban~~
-- ~~Stats Champ Pick~~
-- ~~Stats Champ Winrate~~
+<br><input type="checkbox" disabled>Name Toornament
+<br><input type="checkbox" disabled checked>Win/Lose Team
+<br><input type="checkbox" disabled>Logo Team
+<br><input type="checkbox" disabled checked>Name Team
+<br><input type="checkbox" disabled>Name Summoners
+<br><input type="checkbox" disabled>Name Coach
+<br><input type="checkbox" disabled>Stats Champ Ban
+<br><input type="checkbox" disabled>Stats Champ Pick
+<br><input type="checkbox" disabled>Stats Champ Winrate
 
 **View 1 :**
-![view1](../picture/view1.png)
+
+<img src="../picture/ChampSelectView1.png" width=50%>
+<!-- ![view1](../picture/view1.png | width=50) -->
+
 **View 2 :**
-![view2](../picture/view2.png)
+
+<img src="../picture/ChampSelectView2.png" width=50%>
+<!-- ![view2](../picture/view2.png) -->
+
 **View 3 :**
-![view3](../picture/view3.png)
+
+<img src="../picture/ChampSelectView3.png" width=50%>
+<!-- ![view3](../picture/view3.png) -->
+
 **View 4 :**
-![view4](../picture/view4.png)
+
+<img src="../picture/ChampSelectView4.png" width=50%>
+<!-- ![view4](../picture/view4.png) -->
 <!-- Video example Champ Select
 
 [![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
 
 <br>
 
-### <ins>~~Information display with overlay **Waiting Game Start**~~
-- ~~Stats of players in the champ pick~~
-- ~~Stats Summoners on champ~~
+### <ins>Information display with overlay **Waiting Game Start**
+<br><input type="checkbox" disabled>Stats of players in the champ pick
+<br><input type="checkbox" disabled>Stats Summoners on champ
 
 <!-- Video example Waiting Game Start
 
@@ -140,29 +189,56 @@ Personal information added :
  
 <br>
 
-### <ins>~~Information display with overlay **In Game**~~
-~~Inter of game :~~
-- ~~LevelUp~~
-- ~~Itemps buy~~
-- ~~Dragon (Kill, <span style="color:darkred">next</span>, soul)~~
-- ~~Elder Dragon (Timer, buff, all champ kill, <span style="color:green">gold diff</span>, <span style="color:green">damege diff</span>, next helder drake)~~
-- ~~Baron (buff, timer, all champ dead, <span style="color:green">gold diff</span>, <span style="color:green">damage diff</span>, next nash)~~
-- ~~Herald (buff, timer, launch or not, take or not)~~
-- ~~<span style="color:yellow">Kill</span>~~
-- ~~<span style="color:yellow">Tower</span>~~
-- ~~<span style="color:yellow">Timer</span>~~
-- ~~<span style="color:green">Gold</span>~~
-- ~~<span style="color:green">Gold win during fight</span>~~
-- ~~<span style="color:green">XP + Level</span>~~
-- ~~<span style="color:darkred">Damage dead</span>~~
-- ~~<span style="color:darkred">Damage dead during fight</span>~~
+### <ins>Information display with overlay **In Game**
 
-~~Exter of game :~~
-- ~~Ban/Pick~~
-- ~~Runes~~
-- ~~Logo/Name Team~~
-- ~~Lose/Win~~
-- ~~Video~~
+#### With riot overlay :
+
+<br><input type="checkbox" disabled checked>Team frame
+<br><input type="checkbox" disabled checked>Dragon frame
+<br><input type="checkbox" disabled checked>Baron frame
+<br><input type="checkbox" disabled checked>Name teams 
+<br><input type="checkbox" disabled checked>Number of teams victory/lose
+<br><input type="checkbox" disabled checked>Frame for video/logo/... 
+
+**View 1 :**
+
+<img src="../picture/InGameView1.png" width=50%>
+
+**View 2 :**
+
+<img src="../picture/InGameView2.png" width=50%>
+
+**View 3 :**
+
+<img src="../picture/InGameView3.png" width=50%>
+
+<br>
+
+#### Without riot overlay :
+
+Inter of game :
+<br><input type="checkbox" disabled>LevelUp
+<br><input type="checkbox" disabled>Itemps buy
+<br><input type="checkbox" disabled>Dragon (Kill, <span style="color:darkred">next</span>, soul)
+<br><input type="checkbox" disabled>Elder Dragon (Timer, buff, all champ kill, <span style="color:green">gold diff</span>, <span style="color:green">damege diff</span>, next helder drake)
+<br><input type="checkbox" disabled>Baron (buff, timer, all champ dead, <span style="color:green">gold diff</span>, <span style="color:green">damage diff</span>, next nash)
+<br><input type="checkbox" disabled>Herald (buff, timer, launch or not, take or not)
+<br><input type="checkbox" disabled><span style="color:yellow">Kill</span>
+<br><input type="checkbox" disabled><span style="color:yellow">Tower</span>
+<br><input type="checkbox" disabled><span style="color:yellow">Timer</span>
+<br><input type="checkbox" disabled><span style="color:green">Gold</span>
+<br><input type="checkbox" disabled><span style="color:green">Gold win during fight</span>
+<br><input type="checkbox" disabled><span style="color:green">XP + Level</span>
+<br><input type="checkbox" disabled><span style="color:darkred">Damage dead</span>
+<br><input type="checkbox" disabled><span style="color:darkred">Damage dead during fight</span>
+
+Exter of game :
+<br><input type="checkbox" disabled>Ban/Pick
+<br><input type="checkbox" disabled>Runes
+<br><input type="checkbox" disabled>Logo team
+<br><input type="checkbox" disabled>Team name
+<br><input type="checkbox" disabled>Lose/Win
+<br><input type="checkbox" disabled>Video
 
 <!-- Video example In Game
 
@@ -170,11 +246,20 @@ Personal information added :
 
 <br>
 
-### <ins>~~Information display with overlay in **End Game**~~
-- ~~Dega~~
-- ~~Gold~~
-- ~~Objectif~~
-- ~~Size~~
+### <ins>Information display with overlay in **End Game**
+<br><input type="checkbox" disabled>Timer game
+<br><input type="checkbox" disabled>Teams name
+<br><input type="checkbox" disabled>Logo teams
+<br><input type="checkbox" disabled>Champ dega
+<br><input type="checkbox" disabled>KDA
+<br><input type="checkbox" disabled>Total golds
+<br><input type="checkbox" disabled>Tower
+<br><input type="checkbox" disabled>Drake
+<br><input type="checkbox" disabled>Elder dragon
+<br><input type="checkbox" disabled>Herald
+<br><input type="checkbox" disabled>Baron
+<br><input type="checkbox" disabled>Ban
+<br><input type="checkbox" disabled>Gold difference over time
 
 <!-- Video example End Game
 

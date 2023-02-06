@@ -4,7 +4,11 @@ items:
   commentId: T:OSL_Server.Pages.InGamePage
   id: InGamePage
   parent: OSL_Server.Pages
-  children: []
+  children:
+  - OSL_Server.Pages.InGamePage.colorPickerOverlay1
+  - OSL_Server.Pages.InGamePage.colorPickerOverlay2
+  - OSL_Server.Pages.InGamePage.colorPickerOverlay3
+  - OSL_Server.Pages.InGamePage.colorValue
   langs:
   - csharp
   - vb
@@ -15,11 +19,11 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/InGamePage.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: InGamePage
     path: ../OSL-Server/Pages/InGamePage.razor.cs
-    startLine: 2
+    startLine: 4
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -42,6 +46,138 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: OSL_Server.Pages.InGamePage.colorPickerOverlay1
+  commentId: F:OSL_Server.Pages.InGamePage.colorPickerOverlay1
+  id: colorPickerOverlay1
+  parent: OSL_Server.Pages.InGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay1
+  nameWithType: InGamePage.colorPickerOverlay1
+  fullName: OSL_Server.Pages.InGamePage.colorPickerOverlay1
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay1
+    path: ../OSL-Server/Pages/InGamePage.razor.cs
+    startLine: 8
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public static string colorPickerOverlay1
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay1 As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGamePage.colorPickerOverlay2
+  commentId: F:OSL_Server.Pages.InGamePage.colorPickerOverlay2
+  id: colorPickerOverlay2
+  parent: OSL_Server.Pages.InGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay2
+  nameWithType: InGamePage.colorPickerOverlay2
+  fullName: OSL_Server.Pages.InGamePage.colorPickerOverlay2
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay2
+    path: ../OSL-Server/Pages/InGamePage.razor.cs
+    startLine: 9
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public static string colorPickerOverlay2
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay2 As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGamePage.colorPickerOverlay3
+  commentId: F:OSL_Server.Pages.InGamePage.colorPickerOverlay3
+  id: colorPickerOverlay3
+  parent: OSL_Server.Pages.InGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay3
+  nameWithType: InGamePage.colorPickerOverlay3
+  fullName: OSL_Server.Pages.InGamePage.colorPickerOverlay3
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay3
+    path: ../OSL-Server/Pages/InGamePage.razor.cs
+    startLine: 10
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public static string colorPickerOverlay3
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay3 As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGamePage.colorValue
+  commentId: F:OSL_Server.Pages.InGamePage.colorValue
+  id: colorValue
+  parent: OSL_Server.Pages.InGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorValue
+  nameWithType: InGamePage.colorValue
+  fullName: OSL_Server.Pages.InGamePage.colorValue
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorValue
+    path: ../OSL-Server/Pages/InGamePage.razor.cs
+    startLine: 11
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public static string colorValue
+    return:
+      type: System.String
+    content.vb: Public Shared colorValue As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: OSL_Server.Pages
   commentId: N:OSL_Server.Pages
@@ -340,3 +476,10 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionLevel
     path: ../OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Levels
     path: ../OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: EXPToLevel
     path: ../OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: exp
     path: ../OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: level
     path: ../OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: CompareTo
     path: ../OSL-Client/RiotApp/MemoryProcessing/ChampionLevel.cs

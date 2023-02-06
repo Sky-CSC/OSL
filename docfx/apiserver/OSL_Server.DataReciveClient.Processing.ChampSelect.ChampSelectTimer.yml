@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: gobalTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTime
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimeFast
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimeView3
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimerFast
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -266,7 +266,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimerView3
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelect
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -337,7 +337,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelectFast
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelectView3
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectTimer.cs
