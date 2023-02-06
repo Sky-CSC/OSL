@@ -34,7 +34,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Client/Configuration/Config.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: serverIPSocketOSLServer
     path: ../OSL-Client/Configuration/Config.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: serverPortSocketOSLServer
     path: ../OSL-Client/Configuration/Config.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: leagueClientProcess
     path: ../OSL-Client/Configuration/Config.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: leagueClientFullFilePath
     path: ../OSL-Client/Configuration/Config.cs
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: leagueClientPath
     path: ../OSL-Client/Configuration/Config.cs
@@ -242,7 +242,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFilePath
     path: ../OSL-Client/Configuration/Config.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFileProcessId
     path: ../OSL-Client/Configuration/Config.cs
@@ -308,7 +308,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFilePort
     path: ../OSL-Client/Configuration/Config.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lockFilePassword
     path: ../OSL-Client/Configuration/Config.cs
@@ -374,7 +374,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: localIpHttps
     path: ../OSL-Client/Configuration/Config.cs
@@ -407,7 +407,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: localIpHttp
     path: ../OSL-Client/Configuration/Config.cs
@@ -440,7 +440,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: loginRiot
     path: ../OSL-Client/Configuration/Config.cs
@@ -473,7 +473,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: portRiot
     path: ../OSL-Client/Configuration/Config.cs
@@ -506,7 +506,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameClientApiLocalHost
     path: ../OSL-Client/Configuration/Config.cs
@@ -539,7 +539,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameClientApiPassword
     path: ../OSL-Client/Configuration/Config.cs
@@ -572,7 +572,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LiveEventsAPIPort
     path: ../OSL-Client/Configuration/Config.cs
@@ -605,7 +605,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfig
     path: ../OSL-Client/Configuration/Config.cs
@@ -639,7 +639,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigServerSocket
     path: ../OSL-Client/Configuration/Config.cs
@@ -673,7 +673,7 @@ items:
   source:
     remote:
       path: OSL-Client/Configuration/Config.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetHostPassGameClientApi
     path: ../OSL-Client/Configuration/Config.cs

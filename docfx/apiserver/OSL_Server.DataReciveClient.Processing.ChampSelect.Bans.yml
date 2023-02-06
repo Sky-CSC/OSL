@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Bans
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: MyTeamBans
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: TheirTeamBans
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs

@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: FarsightController
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Champions
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameOffsets
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ObjectOffsets
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -165,7 +165,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ShouldRun
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -198,7 +198,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlacklistedObjectNames
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlacklistedObjects
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -264,7 +264,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Connect
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -327,7 +327,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: CreateSnapshot
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
@@ -364,7 +364,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadObjects
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ConfigPage.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConfigOverlayText
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ConfigPage.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Port
     path: ../OSL-Server/Pages/ConfigPage.razor.cs

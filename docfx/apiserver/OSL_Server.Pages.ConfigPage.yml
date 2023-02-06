@@ -5,7 +5,7 @@ items:
   id: ConfigPage
   parent: OSL_Server.Pages
   children:
-  - OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
+  - OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Server/Pages/ConfigPage.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConfigPage
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
@@ -45,34 +45,34 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
-  commentId: M:OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
-  id: GenerateConfigFileView1
+- uid: OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1
+  commentId: M:OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1
+  id: GenerateConfigFileChampSelectView1
   parent: OSL_Server.Pages.ConfigPage
   langs:
   - csharp
   - vb
-  name: GenerateConfigFileView1()
-  nameWithType: ConfigPage.GenerateConfigFileView1()
-  fullName: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1()
+  name: GenerateConfigFileChampSelectView1()
+  nameWithType: ConfigPage.GenerateConfigFileChampSelectView1()
+  fullName: OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1()
   type: Method
   source:
     remote:
       path: OSL-Server/Pages/ConfigPage.razor.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
-    id: GenerateConfigFileView1
+    id: GenerateConfigFileChampSelectView1
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
-    startLine: 248
+    startLine: 383
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
   syntax:
-    content: public string GenerateConfigFileView1()
+    content: public string GenerateConfigFileChampSelectView1()
     return:
       type: System.String
-    content.vb: Public Function GenerateConfigFileView1 As String
-  overload: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1*
+    content.vb: Public Function GenerateConfigFileChampSelectView1 As String
+  overload: OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -375,11 +375,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1*
-  commentId: Overload:OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
-  name: GenerateConfigFileView1
-  nameWithType: ConfigPage.GenerateConfigFileView1
-  fullName: OSL_Server.Pages.ConfigPage.GenerateConfigFileView1
+- uid: OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1*
+  commentId: Overload:OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1
+  name: GenerateConfigFileChampSelectView1
+  nameWithType: ConfigPage.GenerateConfigFileChampSelectView1
+  fullName: OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1
 - uid: System.String
   commentId: T:System.String
   parent: System

@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectInfo
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: session
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: previousSession
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: alreadyLastPhase
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: InChampSelect
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -201,7 +201,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectProcessingDataRecive
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
@@ -242,7 +242,7 @@ items:
   source:
     remote:
       path: OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertTimer
     path: ../OSL-Server/DataReciveClient/Processing/ChampSelect/ChampSelectInfo.cs

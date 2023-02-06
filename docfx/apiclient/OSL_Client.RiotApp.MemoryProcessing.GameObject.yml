@@ -32,7 +32,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameObject
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: buffDeepSize
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ID
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: NetworkID
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -168,7 +168,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Team
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -199,7 +199,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Position
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -230,7 +230,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Name
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -261,7 +261,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Mana
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -292,7 +292,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: MaxMana
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -323,7 +323,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Health
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -354,7 +354,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: MaxHealth
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -385,7 +385,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: CurrentGold
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -416,7 +416,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldTotal
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -447,7 +447,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: EXP
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -478,7 +478,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Level
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -509,7 +509,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFromMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -546,7 +546,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadChampFromMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
@@ -586,7 +586,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/GameObject.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsChampion
     path: ../OSL-Client/RiotApp/MemoryProcessing/GameObject.cs

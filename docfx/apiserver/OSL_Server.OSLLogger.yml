@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: OSLLogger
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: LogLevel
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: contextPrefix
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultLoggingLevel
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -158,7 +158,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Server/Logging/OSLLogger.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: OSL-Server/Logging/OSLLogger.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: log
     path: ../OSL-Server/Logging/OSLLogger.cs

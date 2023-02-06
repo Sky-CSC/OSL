@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameFlowPhase
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: None
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Lobby
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Matchmaking
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: CheckedIntoTournament
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadyCheck
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelect
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameStart
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: FailedToLaunch
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -352,7 +352,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: InProgress
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -387,7 +387,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Reconnect
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -422,7 +422,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: WaitingForStats
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -457,7 +457,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: PreEndOfGame
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -492,7 +492,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: EndOfGame
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -527,7 +527,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: TerminatedInError
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs

@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: UrlRequest
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: riotclientappname
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolgameflowv1session
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolgameflowv1gameflowphase
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolsummonerv1summoners
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1gridchampions
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1session
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -278,7 +278,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolsummonerv1summonersid
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -313,7 +313,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1bannablechampionids
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -348,7 +348,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1currentchampion
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
@@ -383,7 +383,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/API/LCU/LcuApi.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectlegacyv1session
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs

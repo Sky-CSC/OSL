@@ -41,7 +41,7 @@ namespace OSL_Server.Pages
             }
         }
 
-        private async Task LoadFileView1()
+        private async Task LoadFileChampSelectView1()
         {
             if (fileSelected is not null)
             {
@@ -89,7 +89,7 @@ namespace OSL_Server.Pages
                 }
             }
         }
-        private async Task LoadFileView2()
+        private async Task LoadFileChampSelectView2()
         {
             if (fileSelected is not null)
             {
@@ -140,7 +140,7 @@ namespace OSL_Server.Pages
                 }
             }
         }
-        private async Task LoadFileView3()
+        private async Task LoadFileChampSelectView3()
         {
             if (fileSelected is not null)
             {
@@ -192,7 +192,7 @@ namespace OSL_Server.Pages
             }
         }
 
-        private async Task LoadFileView4()
+        private async Task LoadFileChampSelectView4()
         {
             if (fileSelected is not null)
             {
@@ -245,8 +245,143 @@ namespace OSL_Server.Pages
             }
         }
 
+        private async Task LoadFileInGameView1()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //InGameView1Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+                    //InGameView1Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+                    InGameView1Page.formatingData.BluePlayerFrame = jsonContent.BluePlayerFrame;
+                    InGameView1Page.formatingData.RedPlayerFrame = jsonContent.RedPlayerFrame;
+                    InGameView1Page.formatingData.DragonTimerFrame = jsonContent.DragonTimerFrame;
+                    InGameView1Page.formatingData.HeraldBaronTimerFrame = jsonContent.HeraldBaronTimerFrame;
+                    InGameView1Page.formatingData.LeftInfoFrame = jsonContent.LeftInfoFrame;
+                    InGameView1Page.formatingData.RightInfoFrame = jsonContent.RightInfoFrame;
+                    InGameView1Page.formatingData.DisplayDragonTimer = jsonContent.DisplayDragonTimer;
+                    InGameView1Page.formatingData.DisplayHeraldBaronTimer = jsonContent.DisplayHeraldBaronTimer;
+                    InGameView1Page.formatingData.DisplayBluePlayerFrame = jsonContent.DisplayBluePlayerFrame;
+                    InGameView1Page.formatingData.DisplayRedPlayerFrame = jsonContent.DisplayRedPlayerFrame;
+                    InGameView1Page.formatingData.DisplayLeftInfo = jsonContent.DisplayLeftInfo;
+                    InGameView1Page.formatingData.DisplayRightInfo = jsonContent.DisplayRightInfo;
+                    InGameView1Page.formatingData.TeamBanner = jsonContent.TeamBanner;
+                    InGameView1Page.formatingData.TeamScoreBanner = jsonContent.TeamScoreBanner;
+                    InGameView1Page.formatingData.BlueTeamText = jsonContent.BlueTeamText;
+                    InGameView1Page.formatingData.BlueTeamScoreText = jsonContent.BlueTeamScoreText;
+                    InGameView1Page.formatingData.RedTeamText = jsonContent.RedTeamText;
+                    InGameView1Page.formatingData.RedTeamScoreText = jsonContent.RedTeamScoreText;
+                    InGameView1Page.formatingData.DisplayBlueTeam = jsonContent.DisplayBlueTeam;
+                    InGameView1Page.formatingData.DisplayBlueTeamScore = jsonContent.DisplayBlueTeamScore;
+                    InGameView1Page.formatingData.DisplayBlueTeamText = jsonContent.DisplayBlueTeamText;
+                    InGameView1Page.formatingData.DisplayRedTeam = jsonContent.DisplayRedTeam;
+                    InGameView1Page.formatingData.DisplayRedTeamScore = jsonContent.DisplayRedTeamScore;
+                    InGameView1Page.formatingData.DisplayRedTeamText = jsonContent.DisplayRedTeamText;
+                    InGameView1Page.formatingData.ColorBlueTeamScoreText = jsonContent.ColorBlueTeamScoreText;
+                    InGameView1Page.formatingData.ColorBlueTeamText = jsonContent.ColorBlueTeamText;
+                    InGameView1Page.formatingData.ColorRedTeamScoreText = jsonContent.ColorRedTeamScoreText;
+                    InGameView1Page.formatingData.ColorRedTeamText = jsonContent.ColorRedTeamText;
 
-        public string GenerateConfigFileView1()
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileInGameView1()", "Configuration View1 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileInGameView1()", "Load view 1 error : " + e.Message);
+                }
+            }
+        }
+
+        private async Task LoadFileInGameView2()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //InGameView2Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+                    //InGameView2Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+                    InGameView2Page.formatingData.BluePlayerFrame = jsonContent.BluePlayerFrame;
+                    InGameView2Page.formatingData.RedPlayerFrame = jsonContent.RedPlayerFrame;
+                    InGameView2Page.formatingData.DragonTimerFrame = jsonContent.DragonTimerFrame;
+                    InGameView2Page.formatingData.HeraldBaronTimerFrame = jsonContent.HeraldBaronTimerFrame;
+                    InGameView2Page.formatingData.LeftInfoFrame = jsonContent.LeftInfoFrame;
+                    InGameView2Page.formatingData.DisplayDragonTimer = jsonContent.DisplayDragonTimer;
+                    InGameView2Page.formatingData.DisplayHeraldBaronTimer = jsonContent.DisplayHeraldBaronTimer;
+                    InGameView2Page.formatingData.DisplayBluePlayerFrame = jsonContent.DisplayBluePlayerFrame;
+                    InGameView2Page.formatingData.DisplayRedPlayerFrame = jsonContent.DisplayRedPlayerFrame;
+                    InGameView2Page.formatingData.DisplayLeftInfo = jsonContent.DisplayLeftInfo;
+                    InGameView2Page.formatingData.TeamBanner = jsonContent.TeamBanner;
+                    InGameView2Page.formatingData.TeamScoreBanner = jsonContent.TeamScoreBanner;
+                    InGameView2Page.formatingData.BlueTeamText = jsonContent.BlueTeamText;
+                    InGameView2Page.formatingData.BlueTeamScoreText = jsonContent.BlueTeamScoreText;
+                    InGameView2Page.formatingData.RedTeamText = jsonContent.RedTeamText;
+                    InGameView2Page.formatingData.RedTeamScoreText = jsonContent.RedTeamScoreText;
+                    InGameView2Page.formatingData.DisplayBlueTeam = jsonContent.DisplayBlueTeam;
+                    InGameView2Page.formatingData.DisplayBlueTeamScore = jsonContent.DisplayBlueTeamScore;
+                    InGameView2Page.formatingData.DisplayBlueTeamText = jsonContent.DisplayBlueTeamText;
+                    InGameView2Page.formatingData.DisplayRedTeam = jsonContent.DisplayRedTeam;
+                    InGameView2Page.formatingData.DisplayRedTeamScore = jsonContent.DisplayRedTeamScore;
+                    InGameView2Page.formatingData.DisplayRedTeamText = jsonContent.DisplayRedTeamText;
+                    InGameView2Page.formatingData.ColorBlueTeamScoreText = jsonContent.ColorBlueTeamScoreText;
+                    InGameView2Page.formatingData.ColorBlueTeamText = jsonContent.ColorBlueTeamText;
+                    InGameView2Page.formatingData.ColorRedTeamScoreText = jsonContent.ColorRedTeamScoreText;
+                    InGameView2Page.formatingData.ColorRedTeamText = jsonContent.ColorRedTeamText;
+
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileInGameView2()", "Configuration View2 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileInGameView2()", "Load view 1 error : " + e.Message);
+                }
+            }
+        }
+
+        private async Task LoadFileInGameView3()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //InGameView3Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+                    //InGameView3Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+                    InGameView3Page.formatingData.ReplayInfoFrame = jsonContent.ReplayInfoFrame;
+                    InGameView3Page.formatingData.BluePlayerFrame = jsonContent.BluePlayerFrame;
+                    InGameView3Page.formatingData.RedPlayerFrame = jsonContent.RedPlayerFrame;
+                    InGameView3Page.formatingData.ReplayInfoText = jsonContent.ReplayInfoText;
+                    InGameView3Page.formatingData.ColorReplayInfoText = jsonContent.ColorReplayInfoText;
+                    InGameView3Page.formatingData.DisplayReplayInfoFrame = jsonContent.DisplayReplayInfoFrame;
+                    InGameView3Page.formatingData.DisplayBluePlayerFrame = jsonContent.DisplayBluePlayerFrame;
+                    InGameView3Page.formatingData.DisplayRedPlayerFrame = jsonContent.DisplayRedPlayerFrame;
+
+
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileInGameView3()", "Configuration View3 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileInGameView3()", "Load view 1 error : " + e.Message);
+                }
+            }
+        }
+
+
+        public string GenerateConfigFileChampSelectView1()
         {
             try
             {
@@ -292,7 +427,7 @@ namespace OSL_Server.Pages
                 return "/assets/champselect/configChampSelectView1.json";
             }
         }
-        private string GenerateConfigFileView2()
+        private string GenerateConfigFileChampSelectView2()
         {
             try
             {
@@ -341,7 +476,7 @@ namespace OSL_Server.Pages
                 return "/assets/champselect/configChampSelectView2.json";
             }
         }
-        private string GenerateConfigFileView3()
+        private string GenerateConfigFileChampSelectView3()
         {
             try
             {
@@ -390,7 +525,7 @@ namespace OSL_Server.Pages
                 return "/assets/champselect/configChampSelectView3.json";
             }
         }
-        private string GenerateConfigFileView4()
+        private string GenerateConfigFileChampSelectView4()
         {
             try
             {
@@ -437,6 +572,131 @@ namespace OSL_Server.Pages
             {
                 _logger.log(LoggingLevel.ERROR, "GenerateConfigFileView4()", "Error generation old version recive : " + e.Message);
                 return "/assets/champselect/configChampSelectView4.json";
+            }
+        }
+
+        private string GenerateConfigFileInGameView1()
+        {
+            try
+            {
+                var data = new InGameView1Page.FormatingData
+                {
+                    DefaultPatch = InGameView1Page.formatingData.DefaultPatch,
+                    DefaultRegion = InGameView1Page.formatingData.DefaultRegion,
+                    BluePlayerFrame = InGameView1Page.formatingData.BluePlayerFrame,
+                    RedPlayerFrame = InGameView1Page.formatingData.RedPlayerFrame,
+                    DragonTimerFrame = InGameView1Page.formatingData.DragonTimerFrame,
+                    HeraldBaronTimerFrame = InGameView1Page.formatingData.HeraldBaronTimerFrame,
+                    LeftInfoFrame = InGameView1Page.formatingData.LeftInfoFrame,
+                    RightInfoFrame = InGameView1Page.formatingData.RightInfoFrame,
+                    DisplayDragonTimer = InGameView1Page.formatingData.DisplayDragonTimer,
+                    DisplayHeraldBaronTimer = InGameView1Page.formatingData.DisplayHeraldBaronTimer,
+                    DisplayBluePlayerFrame = InGameView1Page.formatingData.DisplayBluePlayerFrame,
+                    DisplayRedPlayerFrame = InGameView1Page.formatingData.DisplayRedPlayerFrame,
+                    DisplayLeftInfo = InGameView1Page.formatingData.DisplayLeftInfo,
+                    DisplayRightInfo = InGameView1Page.formatingData.DisplayRightInfo,
+                    TeamBanner = InGameView1Page.formatingData.TeamBanner,
+                    TeamScoreBanner = InGameView1Page.formatingData.TeamScoreBanner,
+                    BlueTeamText = InGameView1Page.formatingData.BlueTeamText,
+                    BlueTeamScoreText = InGameView1Page.formatingData.BlueTeamScoreText,
+                    RedTeamText = InGameView1Page.formatingData.RedTeamText,
+                    RedTeamScoreText = InGameView1Page.formatingData.RedTeamScoreText,
+                    DisplayBlueTeam = InGameView1Page.formatingData.DisplayBlueTeam,
+                    DisplayBlueTeamScore = InGameView1Page.formatingData.DisplayBlueTeamScore,
+                    DisplayBlueTeamText = InGameView1Page.formatingData.DisplayBlueTeamText,
+                    DisplayRedTeam = InGameView1Page.formatingData.DisplayRedTeam,
+                    DisplayRedTeamScore = InGameView1Page.formatingData.DisplayRedTeamScore,
+                    DisplayRedTeamText = InGameView1Page.formatingData.DisplayRedTeamText,
+                    ColorBlueTeamScoreText = InGameView1Page.formatingData.ColorBlueTeamScoreText,
+                    ColorBlueTeamText = InGameView1Page.formatingData.ColorBlueTeamText,
+                    ColorRedTeamScoreText = InGameView1Page.formatingData.ColorRedTeamScoreText,
+                    ColorRedTeamText = InGameView1Page.formatingData.ColorRedTeamText,
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/ingame/configInGameView1.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileInGameView1()", "Generation ok");
+                return "/assets/ingame/configInGameView1.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileInGameView1()", "Error generation old version recive : " + e.Message);
+                return "/assets/ingame/configInGameView1.json";
+            }
+        }
+
+        private string GenerateConfigFileInGameView2()
+        {
+            try
+            {
+                var data = new InGameView2Page.FormatingData
+                {
+                    DefaultPatch = InGameView2Page.formatingData.DefaultPatch,
+                    DefaultRegion = InGameView2Page.formatingData.DefaultRegion,
+                    BluePlayerFrame = InGameView2Page.formatingData.BluePlayerFrame,
+                    RedPlayerFrame = InGameView2Page.formatingData.RedPlayerFrame,
+                    DragonTimerFrame = InGameView2Page.formatingData.DragonTimerFrame,
+                    HeraldBaronTimerFrame = InGameView2Page.formatingData.HeraldBaronTimerFrame,
+                    LeftInfoFrame = InGameView2Page.formatingData.LeftInfoFrame,
+                    DisplayDragonTimer = InGameView2Page.formatingData.DisplayDragonTimer,
+                    DisplayHeraldBaronTimer = InGameView2Page.formatingData.DisplayHeraldBaronTimer,
+                    DisplayBluePlayerFrame = InGameView2Page.formatingData.DisplayBluePlayerFrame,
+                    DisplayRedPlayerFrame = InGameView2Page.formatingData.DisplayRedPlayerFrame,
+                    DisplayLeftInfo = InGameView2Page.formatingData.DisplayLeftInfo,
+                    TeamBanner = InGameView2Page.formatingData.TeamBanner,
+                    TeamScoreBanner = InGameView2Page.formatingData.TeamScoreBanner,
+                    BlueTeamText = InGameView2Page.formatingData.BlueTeamText,
+                    BlueTeamScoreText = InGameView2Page.formatingData.BlueTeamScoreText,
+                    RedTeamText = InGameView2Page.formatingData.RedTeamText,
+                    RedTeamScoreText = InGameView2Page.formatingData.RedTeamScoreText,
+                    DisplayBlueTeam = InGameView2Page.formatingData.DisplayBlueTeam,
+                    DisplayBlueTeamScore = InGameView2Page.formatingData.DisplayBlueTeamScore,
+                    DisplayBlueTeamText = InGameView2Page.formatingData.DisplayBlueTeamText,
+                    DisplayRedTeam = InGameView2Page.formatingData.DisplayRedTeam,
+                    DisplayRedTeamScore = InGameView2Page.formatingData.DisplayRedTeamScore,
+                    DisplayRedTeamText = InGameView2Page.formatingData.DisplayRedTeamText,
+                    ColorBlueTeamScoreText = InGameView2Page.formatingData.ColorBlueTeamScoreText,
+                    ColorBlueTeamText = InGameView2Page.formatingData.ColorBlueTeamText,
+                    ColorRedTeamScoreText = InGameView2Page.formatingData.ColorRedTeamScoreText,
+                    ColorRedTeamText = InGameView2Page.formatingData.ColorRedTeamText,
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/ingame/configInGameView2.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileInGameView2()", "Generation ok");
+                return "/assets/ingame/configInGameView2.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileInGameView2()", "Error generation old version recive : " + e.Message);
+                return "/assets/ingame/configInGameView2.json";
+            }
+        }
+
+        private string GenerateConfigFileInGameView3()
+        {
+            try
+            {
+                var data = new InGameView3Page.FormatingData
+                {
+                    DefaultPatch = InGameView2Page.formatingData.DefaultPatch,
+                    DefaultRegion = InGameView2Page.formatingData.DefaultRegion,
+                    ReplayInfoFrame = InGameView3Page.formatingData.ReplayInfoFrame,
+                    BluePlayerFrame = InGameView3Page.formatingData.BluePlayerFrame,
+                    RedPlayerFrame = InGameView3Page.formatingData.RedPlayerFrame,
+                    ReplayInfoText = InGameView3Page.formatingData.ReplayInfoText,
+                    ColorReplayInfoText = InGameView3Page.formatingData.ColorReplayInfoText,
+                    DisplayReplayInfoFrame = InGameView3Page.formatingData.DisplayReplayInfoFrame,
+                    DisplayBluePlayerFrame = InGameView3Page.formatingData.DisplayBluePlayerFrame,
+                    DisplayRedPlayerFrame = InGameView3Page.formatingData.DisplayRedPlayerFrame,
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/ingame/configInGameView3.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileInGameView3()", "Generation ok");
+                return "/assets/ingame/configInGameView3.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileInGameView3()", "Error generation old version recive : " + e.Message);
+                return "/assets/ingame/configInGameView3.json";
             }
         }
     }

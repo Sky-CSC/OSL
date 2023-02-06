@@ -22,7 +22,17 @@ items:
   - OSL_Server.Pages.ConfigPage.ConfigOverlayText
   - OSL_Server.Pages.EndGamePage
   - OSL_Server.Pages.ErrorModel
+  - OSL_Server.Pages.Index
   - OSL_Server.Pages.InGamePage
+  - OSL_Server.Pages.InGamePage.TextValueOverlayView1
+  - OSL_Server.Pages.InGamePage.TextValueOverlayView2
+  - OSL_Server.Pages.InGamePage.TextValueOverlayView3
+  - OSL_Server.Pages.InGameView1Page
+  - OSL_Server.Pages.InGameView1Page.FormatingData
+  - OSL_Server.Pages.InGameView2Page
+  - OSL_Server.Pages.InGameView2Page.FormatingData
+  - OSL_Server.Pages.InGameView3Page
+  - OSL_Server.Pages.InGameView3Page.FormatingData
   - OSL_Server.Pages.RecapLinkPage
   - OSL_Server.Pages.WaitingGamePage
   - OSL_Server.Pages.WaitingGameStartPage
@@ -130,11 +140,64 @@ references:
   name: ErrorModel
   nameWithType: ErrorModel
   fullName: OSL_Server.Pages.ErrorModel
+- uid: OSL_Server.Pages.Index
+  commentId: T:OSL_Server.Pages.Index
+  name: Index
+  nameWithType: Index
+  fullName: OSL_Server.Pages.Index
 - uid: OSL_Server.Pages.InGamePage
   commentId: T:OSL_Server.Pages.InGamePage
   name: InGamePage
   nameWithType: InGamePage
   fullName: OSL_Server.Pages.InGamePage
+- uid: OSL_Server.Pages.InGamePage.TextValueOverlayView1
+  commentId: T:OSL_Server.Pages.InGamePage.TextValueOverlayView1
+  name: InGamePage.TextValueOverlayView1
+  nameWithType: InGamePage.TextValueOverlayView1
+  fullName: OSL_Server.Pages.InGamePage.TextValueOverlayView1
+- uid: OSL_Server.Pages.InGamePage.TextValueOverlayView2
+  commentId: T:OSL_Server.Pages.InGamePage.TextValueOverlayView2
+  name: InGamePage.TextValueOverlayView2
+  nameWithType: InGamePage.TextValueOverlayView2
+  fullName: OSL_Server.Pages.InGamePage.TextValueOverlayView2
+- uid: OSL_Server.Pages.InGamePage.TextValueOverlayView3
+  commentId: T:OSL_Server.Pages.InGamePage.TextValueOverlayView3
+  name: InGamePage.TextValueOverlayView3
+  nameWithType: InGamePage.TextValueOverlayView3
+  fullName: OSL_Server.Pages.InGamePage.TextValueOverlayView3
+- uid: OSL_Server.Pages.InGameView1Page
+  commentId: T:OSL_Server.Pages.InGameView1Page
+  name: InGameView1Page
+  nameWithType: InGameView1Page
+  fullName: OSL_Server.Pages.InGameView1Page
+- uid: OSL_Server.Pages.InGameView1Page.FormatingData
+  commentId: T:OSL_Server.Pages.InGameView1Page.FormatingData
+  parent: OSL_Server.Pages
+  name: InGameView1Page.FormatingData
+  nameWithType: InGameView1Page.FormatingData
+  fullName: OSL_Server.Pages.InGameView1Page.FormatingData
+- uid: OSL_Server.Pages.InGameView2Page
+  commentId: T:OSL_Server.Pages.InGameView2Page
+  name: InGameView2Page
+  nameWithType: InGameView2Page
+  fullName: OSL_Server.Pages.InGameView2Page
+- uid: OSL_Server.Pages.InGameView2Page.FormatingData
+  commentId: T:OSL_Server.Pages.InGameView2Page.FormatingData
+  parent: OSL_Server.Pages
+  name: InGameView2Page.FormatingData
+  nameWithType: InGameView2Page.FormatingData
+  fullName: OSL_Server.Pages.InGameView2Page.FormatingData
+- uid: OSL_Server.Pages.InGameView3Page
+  commentId: T:OSL_Server.Pages.InGameView3Page
+  name: InGameView3Page
+  nameWithType: InGameView3Page
+  fullName: OSL_Server.Pages.InGameView3Page
+- uid: OSL_Server.Pages.InGameView3Page.FormatingData
+  commentId: T:OSL_Server.Pages.InGameView3Page.FormatingData
+  parent: OSL_Server.Pages
+  name: InGameView3Page.FormatingData
+  nameWithType: InGameView3Page.FormatingData
+  fullName: OSL_Server.Pages.InGameView3Page.FormatingData
 - uid: OSL_Server.Pages.RecapLinkPage
   commentId: T:OSL_Server.Pages.RecapLinkPage
   name: RecapLinkPage

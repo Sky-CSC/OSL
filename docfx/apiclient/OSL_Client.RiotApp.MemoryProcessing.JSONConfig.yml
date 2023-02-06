@@ -29,7 +29,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: JSONConfig
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConfigUpdate
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Name
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: _fileVersion
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -191,7 +191,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: FileVersion
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -228,7 +228,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: CurrentVersion
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GETJson
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -309,7 +309,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateValues
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -344,7 +344,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GETDefaultString
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: RevertToDefault
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -410,7 +410,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: GETCurrentVersion
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -444,7 +444,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateConfigVersion
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -483,7 +483,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: SerializeIndented
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -518,7 +518,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateFile
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
@@ -548,7 +548,7 @@ items:
   source:
     remote:
       path: OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs
-      branch: ChampSelect
+      branch: InGame
       repo: https://github.com/Sky-CSC/OSL.git
     id: Reload
     path: ../OSL-Client/RiotApp/MemoryProcessing/JSONConfig.cs

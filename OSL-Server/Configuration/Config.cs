@@ -4,6 +4,7 @@ using OSL_Server.DataLoader.CDragon;
 using OSL_Server.Pages;
 using OSL_Server.Communication;
 using OSL_Server.DataReciveClient.Processing.ChampSelect;
+using System.Net;
 
 namespace OSL_Server.Configuration
 {
@@ -14,15 +15,26 @@ namespace OSL_Server.Configuration
     {
         private static OSLLogger _logger = new OSLLogger("Config");
 
+        public static IPHostEntry oslServerHost;
+        public static string oslServerHostName;
+        public static int oslServerHttpPort;
+        public static int oslServerHttpsPort;
+
         /// <summary>
         /// Load configuration
         /// </summary>
         public static void LoadConfig()
         {
+            LoadConfigOslServerHost();
+
             LoadConfigServerSocket();
+
             LoadConfigCDragon();
+
             LoadConfigTimer();
+
             LoadDefaultSession();
+
             LoadFormatingDataConfigChampSelectView1();
             LoadConfigChampSelectView1();
             LoadFormatingDataConfigChampSelectView2();
@@ -31,6 +43,24 @@ namespace OSL_Server.Configuration
             LoadConfigChampSelectView3();
             LoadFormatingDataConfigChampSelectView4();
             LoadConfigChampSelectView4();
+
+            LoadFormatingDataConfigInGameView1();
+            LoadConfigInGameView1();
+            LoadFormatingDataConfigInGameView2();
+            LoadConfigInGameView2();
+            LoadFormatingDataConfigInGameView3();
+            LoadConfigInGameView3();
+        }
+
+        /// <summary>
+        /// Load Config Osl Server Host for urls
+        /// </summary>
+        public static void LoadConfigOslServerHost()
+        {
+            oslServerHost = Dns.Resolve("0.0.0.0");
+            oslServerHostName = oslServerHost.HostName;
+            oslServerHttpPort = 4141;
+            oslServerHttpsPort = 4242;
         }
 
         /// <summary>
@@ -353,5 +383,142 @@ namespace OSL_Server.Configuration
             string dataDefaultSession = FileManagerLocal.ReadInFile("./wwwroot/assets/champselect/defaultSession.json");
             ChampSelectInfo.InChampSelect(dataDefaultSession);
         }
+
+        public static void LoadConfigInGameView1()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                InGameView1Page.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                InGameView1Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            InGameView1Page.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView1Page.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView1Page.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigInGameView1()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/InGame/View1/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //InGameView1Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //InGameView1Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            InGameView1Page.formatingData.BluePlayerFrame = jsonContent.BluePlayerFrame;
+            InGameView1Page.formatingData.DisplayBluePlayerFrame = jsonContent.DisplayBluePlayerFrame;
+            InGameView1Page.formatingData.RedPlayerFrame = jsonContent.RedPlayerFrame;
+            InGameView1Page.formatingData.DisplayRedPlayerFrame = jsonContent.DisplayRedPlayerFrame;
+            InGameView1Page.formatingData.DragonTimerFrame = jsonContent.DragonTimerFrame;
+            InGameView1Page.formatingData.DisplayDragonTimer = jsonContent.DisplayDragonTimer;
+            InGameView1Page.formatingData.HeraldBaronTimerFrame = jsonContent.HeraldBaronTimerFrame;
+            InGameView1Page.formatingData.DisplayHeraldBaronTimer = jsonContent.DisplayHeraldBaronTimer;
+            InGameView1Page.formatingData.LeftInfoFrame = jsonContent.LeftInfoFrame;
+            InGameView1Page.formatingData.DisplayLeftInfo = jsonContent.DisplayLeftInfo;
+            InGameView1Page.formatingData.RightInfoFrame = jsonContent.RightInfoFrame;
+            InGameView1Page.formatingData.DisplayRightInfo = jsonContent.DisplayRightInfo;
+            InGameView1Page.formatingData.TeamBanner = jsonContent.TeamBanner;
+            InGameView1Page.formatingData.TeamScoreBanner = jsonContent.TeamScoreBanner;
+            InGameView1Page.formatingData.BlueTeamText = jsonContent.BlueTeamText;
+            InGameView1Page.formatingData.BlueTeamScoreText = jsonContent.BlueTeamScoreText;
+            InGameView1Page.formatingData.RedTeamText = jsonContent.RedTeamText;
+            InGameView1Page.formatingData.RedTeamScoreText = jsonContent.RedTeamScoreText;
+            InGameView1Page.formatingData.DisplayBlueTeam = jsonContent.DisplayBlueTeam;
+            InGameView1Page.formatingData.DisplayBlueTeamScore = jsonContent.DisplayBlueTeamScore;
+            InGameView1Page.formatingData.DisplayBlueTeamText = jsonContent.DisplayBlueTeamText;
+            InGameView1Page.formatingData.DisplayRedTeam = jsonContent.DisplayRedTeam;
+            InGameView1Page.formatingData.DisplayRedTeamScore = jsonContent.DisplayRedTeamScore;
+            InGameView1Page.formatingData.DisplayRedTeamText = jsonContent.DisplayRedTeamText;
+            InGameView1Page.formatingData.ColorBlueTeamScoreText = jsonContent.ColorBlueTeamScoreText;
+            InGameView1Page.formatingData.ColorBlueTeamText = jsonContent.ColorBlueTeamText;
+            InGameView1Page.formatingData.ColorRedTeamScoreText = jsonContent.ColorRedTeamScoreText;
+            InGameView1Page.formatingData.ColorRedTeamText = jsonContent.ColorRedTeamText;
+        }
+
+        public static void LoadConfigInGameView2()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                InGameView2Page.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                InGameView2Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            InGameView2Page.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView2Page.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView2Page.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigInGameView2()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/InGame/View2/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //InGameView2Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //InGameView2Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            InGameView2Page.formatingData.BluePlayerFrame = jsonContent.BluePlayerFrame;
+            InGameView2Page.formatingData.DisplayBluePlayerFrame = jsonContent.DisplayBluePlayerFrame;
+            InGameView2Page.formatingData.RedPlayerFrame = jsonContent.RedPlayerFrame;
+            InGameView2Page.formatingData.DisplayRedPlayerFrame = jsonContent.DisplayRedPlayerFrame;
+            InGameView2Page.formatingData.DragonTimerFrame = jsonContent.DragonTimerFrame;
+            InGameView2Page.formatingData.DisplayDragonTimer = jsonContent.DisplayDragonTimer;
+            InGameView2Page.formatingData.HeraldBaronTimerFrame = jsonContent.HeraldBaronTimerFrame;
+            InGameView2Page.formatingData.DisplayHeraldBaronTimer = jsonContent.DisplayHeraldBaronTimer;
+            InGameView2Page.formatingData.LeftInfoFrame = jsonContent.LeftInfoFrame;
+            InGameView2Page.formatingData.DisplayLeftInfo = jsonContent.DisplayLeftInfo;
+            InGameView2Page.formatingData.TeamBanner = jsonContent.TeamBanner;
+            InGameView2Page.formatingData.TeamScoreBanner = jsonContent.TeamScoreBanner;
+            InGameView2Page.formatingData.BlueTeamText = jsonContent.BlueTeamText;
+            InGameView2Page.formatingData.BlueTeamScoreText = jsonContent.BlueTeamScoreText;
+            InGameView2Page.formatingData.RedTeamText = jsonContent.RedTeamText;
+            InGameView2Page.formatingData.RedTeamScoreText = jsonContent.RedTeamScoreText;
+            InGameView2Page.formatingData.DisplayBlueTeam = jsonContent.DisplayBlueTeam;
+            InGameView2Page.formatingData.DisplayBlueTeamScore = jsonContent.DisplayBlueTeamScore;
+            InGameView2Page.formatingData.DisplayBlueTeamText = jsonContent.DisplayBlueTeamText;
+            InGameView2Page.formatingData.DisplayRedTeam = jsonContent.DisplayRedTeam;
+            InGameView2Page.formatingData.DisplayRedTeamScore = jsonContent.DisplayRedTeamScore;
+            InGameView2Page.formatingData.DisplayRedTeamText = jsonContent.DisplayRedTeamText;
+            InGameView2Page.formatingData.ColorBlueTeamScoreText = jsonContent.ColorBlueTeamScoreText;
+            InGameView2Page.formatingData.ColorBlueTeamText = jsonContent.ColorBlueTeamText;
+            InGameView2Page.formatingData.ColorRedTeamScoreText = jsonContent.ColorRedTeamScoreText;
+            InGameView2Page.formatingData.ColorRedTeamText = jsonContent.ColorRedTeamText;
+        }
+
+        public static void LoadConfigInGameView3()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                InGameView3Page.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                InGameView3Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            InGameView3Page.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView3Page.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView3Page.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigInGameView3()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/InGame/View3/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //InGameView3Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //InGameView3Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            InGameView3Page.formatingData.ReplayInfoFrame = jsonContent.ReplayInfoFrame;
+            InGameView3Page.formatingData.BluePlayerFrame = jsonContent.BluePlayerFrame;
+            InGameView3Page.formatingData.RedPlayerFrame = jsonContent.RedPlayerFrame;
+            InGameView3Page.formatingData.ReplayInfoText = jsonContent.ReplayInfoText;
+            InGameView3Page.formatingData.ColorReplayInfoText = jsonContent.ColorReplayInfoText;
+            InGameView3Page.formatingData.DisplayReplayInfoFrame = jsonContent.DisplayReplayInfoFrame;
+            InGameView3Page.formatingData.DisplayBluePlayerFrame = jsonContent.DisplayBluePlayerFrame;
+            InGameView3Page.formatingData.DisplayRedPlayerFrame = jsonContent.DisplayRedPlayerFrame;
+        }
+
+
+
     }
 }
