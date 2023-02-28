@@ -55,14 +55,14 @@ http://ip:4141/champselect/view3 and/or http://ip:4141/champselect/view4 as a br
 # **Roadmap**
 
 **Champ Select :**
-- Improved customization <h3>**(In progress)**</h3>
+- Improved customization **(In progress !!)**
 
 **In Game**
 - Get action/information give by League of Legends api
 - Read in memory
 
 **Runes**
-- Display of players' runes, lane by lane (blue champion midlane vs red champion midlane, blue champion adc and supp vs red champion adc and supp, ...) <h3>**(In progress)**</h3>
+- Display of players' runes, lane by lane (blue champion midlane vs red champion midlane, blue champion adc and supp vs red champion adc and supp, ...) **(In progress !!)**
 
 **End Game**
 - Recap of the game
