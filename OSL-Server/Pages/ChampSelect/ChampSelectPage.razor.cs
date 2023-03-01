@@ -2,7 +2,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace OSL_Server.Pages
+namespace OSL_Server.Pages.ChampSelect
 {
     /// <summary>
     /// Champ Select Page
@@ -1345,12 +1345,23 @@ namespace OSL_Server.Pages
                 color = "";
             }
 
+            public OverlayViewEnableOrDisable(string text, string color)
+            {
+                this.text = text;
+                this.color = color;
+            }
+
         }
 
         private OverlayViewEnableOrDisable overlayView1Button = new OverlayViewEnableOrDisable();
         private OverlayViewEnableOrDisable overlayView2Button = new OverlayViewEnableOrDisable();
         private OverlayViewEnableOrDisable overlayView3Button = new OverlayViewEnableOrDisable();
         private OverlayViewEnableOrDisable overlayView4Button = new OverlayViewEnableOrDisable();
+
+        private OverlayViewEnableOrDisable displayContentView1Button = new("display", "#008000");
+        private OverlayViewEnableOrDisable displayContentView2Button = new("display", "#008000");
+        private OverlayViewEnableOrDisable displayContentView3Button = new("display", "#008000");
+        private OverlayViewEnableOrDisable displayContentView4Button = new("display", "#008000");
 
         /// <summary>
         /// Load text and color enable or disable overlays
@@ -1426,6 +1437,73 @@ namespace OSL_Server.Pages
             {
                 overlayView4Button.text = "Enable";
                 overlayView4Button.color = "#0b849e";
+            }
+        }
+
+        private string displayContentView1 = "none";
+        private void HideOrDisplayContentView1()
+        {
+            if (displayContentView1.Equals("none"))
+            {
+                displayContentView1Button.text = "hide";
+                displayContentView1Button.color = "#be1e37";
+                displayContentView1 = "content";
+            }
+            else
+            {
+                displayContentView1Button.text = "display";
+                displayContentView1Button.color = "#008000";
+                displayContentView1 = "none";
+            }
+        }
+
+        private string displayContentView2 = "none";
+        private void HideOrDisplayContentView2()
+        {
+            if (displayContentView2.Equals("none"))
+            {
+                displayContentView2Button.text = "hide";
+                displayContentView2Button.color = "#be1e37";
+                displayContentView2 = "content";
+            }
+            else
+            {
+                displayContentView2Button.text = "display";
+                displayContentView2Button.color = "#008000";
+                displayContentView2 = "none";
+            }
+        }
+        private string displayContentView3 = "none";
+        private void HideOrDisplayContentView3()
+        {
+            if (displayContentView3.Equals("none"))
+            {
+                displayContentView3Button.text = "hide";
+                displayContentView3Button.color = "#be1e37";
+                displayContentView3 = "content";
+            }
+            else
+            {
+                displayContentView3Button.text = "display";
+                displayContentView3Button.color = "#008000";
+                displayContentView3 = "none";
+            }
+        }
+        
+        private string displayContentView4 = "none";
+        private void HideOrDisplayContentView4()
+        {
+            if (displayContentView4.Equals("none"))
+            {
+                displayContentView4Button.text = "hide";
+                displayContentView4Button.color = "#be1e37";
+                displayContentView4 = "content";
+            }
+            else
+            {
+                displayContentView4Button.text = "display";
+                displayContentView4Button.color = "#008000";
+                displayContentView4 = "none";
             }
         }
     }

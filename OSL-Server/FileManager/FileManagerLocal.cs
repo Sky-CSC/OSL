@@ -217,6 +217,7 @@ public class DirectoryManagerLocal
     public static string itemsDirectory;
     public static string summonerSpellsDirectory;
     public static string perksDirectory;
+    public static string perksDirectoryWebPath;
 
     /// <summary>
     /// Directory Init Data CDragon for save locally
@@ -229,6 +230,7 @@ public class DirectoryManagerLocal
         itemsDirectory = "./wwwroot/assets/" + numPatch + "/" + region + "/" + "Items" + "/";
         summonerSpellsDirectory = "./wwwroot/assets/" + numPatch + "/" + region + "/" + "SummonerSpells" + "/";
         perksDirectory = "./wwwroot/assets/" + numPatch + "/" + region + "/" + "Perks" + "/";
+        perksDirectoryWebPath = "./assets/" + numPatch + "/" + region + "/" + "Perks" + "/";
         CreateDirectory(championDirectory);
         CreateDirectory(itemsDirectory);
         CreateDirectory(summonerSpellsDirectory);

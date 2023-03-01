@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Components.Forms;
 using System.ComponentModel.DataAnnotations;
 using OSL_Server.FileManager;
+using OSL_Server.Pages.ChampSelect;
+using OSL_Server.Pages.InGame;
 
 namespace OSL_Server.Pages
 {

@@ -1,7 +1,7 @@
 ﻿using OSL_Server.DataReciveClient.Processing.ChampSelect;
 using OSL_Server.Configuration;
 
-namespace OSL_Server.Pages
+namespace OSL_Server.Pages.ChampSelect
 {
     /// <summary>
     /// Champ Select View1 Page

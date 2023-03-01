@@ -1,0 +1,45 @@
+@font-face {
+    font-family: MyFont;
+    src: url(../css/font/fonts/fontLoL.ttf);
+}
+
+html, body {
+    background-color: black;
+    color: white;
+}
+
+.title {
+    font-family: MyFont;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.summoner-lane {
+    justify-content: center;
+}
+
+.summoner-lane-info {
+    display: flex;
+    position: relative;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.summoner-lane-info-summoner-name {
+    font-size: 22px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.summoner-lane-info-picture-champ {
+}
+
+.summoner-lane-info-picture-champ-img {
+    height: 50px;
+    margin: 5px;
+    /*border: 5px solid red;*/
+}
+
+.summoner-lane-info-select {
+    margin: 5px;
+}

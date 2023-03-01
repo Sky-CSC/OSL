@@ -1,0 +1,71 @@
+﻿@page "/runes/view1"
+@using OSL_Server.DataReciveClient.Processing.ChampSelect;
+@using OSL_Server.DataLoader.CDragon;
+@using Newtonsoft.Json;
+@layout EmptyLayout
+<PageTitle>Runes Overlay 1</PageTitle>
+
+
+@if (ChampSelectInfo.session.Timer.Phase.Equals("GAME_STARTING"))
+{
+
+    @*foreach (var nameChamp in ChampSelectInfo.session.MyTeam)
+    {
+        @nameChamp.SummonerName
+        @Yolo(nameChamp.SummonerName)
+        <br />
+    }
+    foreach (var nameChamp in ChampSelectInfo.session.TheirTeam)
+    {
+        @nameChamp.SummonerName
+        <br />
+    }*@
+    @*@Yolo(ChampSelectInfo.session.MyTeam[0].SummonerName)*@
+    @*@Yolo("Ozhymandias")*@
+    @*@Yolo("I Was Virgin")*@
+}
+
+<div class="perks">
+    @{
+        foreach (var participants in RunesPage.summonerPerksList)
+        {
+            if (participants.Lane.CompareTo(RunesPage.Lanes.Top) == 0)
+            {
+                <div class="perks-list">
+                    foreach (int perks in participants.Perks.perkIds)
+                    {
+                    int indexPerks = CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks.FindIndex(obj => obj.Id == perks);
+                    <div class="perks-wrapper">
+                        <img class="perks-img" src="@CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks[indexPerks].IconPath" />
+                    </div>
+                    }
+                </div>
+                //int indexPerksStyle = CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks.FindIndex(obj => obj.Id == participants.Perks.perkStyle);
+                //<img src="@CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks[indexPerksStyle].IconPath" />
+                //int indexPerksSubStyle = CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks.FindIndex(obj => obj.Id == participants.Perks.perkSubStyle);
+                //<img src="@CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks[indexPerksSubStyle].IconPath" />
+            }
+        }
+    }
+</div>
+
+
+@code {
+    //private System.Timers.Timer timer = new(100);
+
+    //protected override void OnInitialized()
+    //{
+    //    timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+    //    timer.Start();
+    //}
+
+    //private void OnTimerCallback()
+    //{
+    //    _ = InvokeAsync(() =>
+    //    {
+    //        StateHasChanged();
+    //    });
+    //}
+
+    //public void Dispose() => timer.Dispose();
+}

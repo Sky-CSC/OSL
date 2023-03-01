@@ -1,6 +1,6 @@
 ﻿using OSL_Server.Configuration;
 
-namespace OSL_Server.Pages
+namespace OSL_Server.Pages.InGame
 {
     public partial class InGameView2Page
     {

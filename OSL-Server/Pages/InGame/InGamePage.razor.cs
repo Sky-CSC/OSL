@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace OSL_Server.Pages
+namespace OSL_Server.Pages.InGame
 {
     public partial class InGamePage
     {
@@ -261,6 +261,79 @@ namespace OSL_Server.Pages
             public static void InputCheckboxSubmit()
             {
 
+            }
+        }
+
+        private struct OverlayViewEnableOrDisable
+        {
+            public string text { get; set; }
+            public string color { get; set; }
+
+            public OverlayViewEnableOrDisable()
+            {
+                text = "";
+                color = "";
+            }
+
+            public OverlayViewEnableOrDisable(string text, string color)
+            {
+                this.text = text;
+                this.color = color;
+            }
+
+        }
+
+        private OverlayViewEnableOrDisable displayContentView1Button = new("display", "#008000");
+        private OverlayViewEnableOrDisable displayContentView2Button = new("display", "#008000");
+        private OverlayViewEnableOrDisable displayContentView3Button = new("display", "#008000");
+
+        private string displayContentView1 = "none";
+        private void HideOrDisplayContentView1()
+        {
+            if (displayContentView1.Equals("none"))
+            {
+                displayContentView1Button.text = "hide";
+                displayContentView1Button.color = "#be1e37";
+                displayContentView1 = "content";
+            }
+            else
+            {
+                displayContentView1Button.text = "display";
+                displayContentView1Button.color = "#008000";
+                displayContentView1 = "none";
+            }
+        }
+
+        private string displayContentView2 = "none";
+        private void HideOrDisplayContentView2()
+        {
+            if (displayContentView2.Equals("none"))
+            {
+                displayContentView2Button.text = "hide";
+                displayContentView2Button.color = "#be1e37";
+                displayContentView2 = "content";
+            }
+            else
+            {
+                displayContentView2Button.text = "display";
+                displayContentView2Button.color = "#008000";
+                displayContentView2 = "none";
+            }
+        }
+        private string displayContentView3 = "none";
+        private void HideOrDisplayContentView3()
+        {
+            if (displayContentView3.Equals("none"))
+            {
+                displayContentView3Button.text = "hide";
+                displayContentView3Button.color = "#be1e37";
+                displayContentView3 = "content";
+            }
+            else
+            {
+                displayContentView3Button.text = "display";
+                displayContentView3Button.color = "#008000";
+                displayContentView3 = "none";
             }
         }
     }

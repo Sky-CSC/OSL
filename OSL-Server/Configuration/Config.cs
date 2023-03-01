@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using OSL_Server.FileManager;
 using OSL_Server.DataLoader.CDragon;
-using OSL_Server.Pages;
 using OSL_Server.Communication;
 using OSL_Server.DataReciveClient.Processing.ChampSelect;
 using System.Net;
+using OSL_Server.Pages;
+using OSL_Server.Pages.ChampSelect;
+using OSL_Server.Pages.InGame;
 
 namespace OSL_Server.Configuration
 {

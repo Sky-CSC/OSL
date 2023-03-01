@@ -40,10 +40,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="DataLoader\WebApiRiot\" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Compile Update="Properties\Resources.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>

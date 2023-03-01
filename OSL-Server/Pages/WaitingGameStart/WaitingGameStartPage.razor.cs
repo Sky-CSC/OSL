@@ -1,4 +1,4 @@
-﻿namespace OSL_Server.Pages
+﻿namespace OSL_Server.Pages.WaitingGameStart
 {
     public partial class WaitingGameStartPage
     {
