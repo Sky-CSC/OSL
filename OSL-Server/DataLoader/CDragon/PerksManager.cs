@@ -53,40 +53,48 @@ namespace OSL_Server.DataLoader.CDragon
                     OSL_Server.Download.Download.errorDownloadAllFile = 0;
                     foreach (dynamic perk in jsonPerks)
                     {
-                        perksDirectory = DirectoryManagerLocal.perksDirectory;
-                        int perkId = perk.id;
-                        //string perkName = perk.name;
-                        string iconPath = perk.iconPath;
-                        string[] parseIconPath = iconPath.Split('/');
-                        string perkFullName = "";
-                        if (iconPath.Contains("StatMods/"))
+                        try
                         {
-                            perkFullName = parseIconPath[parseIconPath.Length - 2] + "/" + parseIconPath[parseIconPath.Length - 1];
-                            perkFullName = perkFullName.ToLower();
-                            perksDirectory += "StatMods/";
-                            DirectoryManagerLocal.CreateDirectory(perksDirectory);
-                        }
-                        else if (iconPath.Contains("Styles/"))
-                        {
-                            for (int i = 5; i < parseIconPath.Length; i++)
+                            perksDirectory = DirectoryManagerLocal.perksDirectory;
+                            int perkId = perk.id;
+                            //string perkName = perk.name;
+                            string iconPath = perk.iconPath;
+                            string[] parseIconPath = iconPath.Split('/');
+                            string perkFullName = "";
+                            if (iconPath.Contains("StatMods/"))
                             {
-                                perkFullName += parseIconPath[i];
-                                if (i != parseIconPath.Length - 1)
+                                perkFullName = parseIconPath[parseIconPath.Length - 2] + "/" + parseIconPath[parseIconPath.Length - 1];
+                                perkFullName = perkFullName.ToLower();
+                                perksDirectory += "StatMods/";
+                                DirectoryManagerLocal.CreateDirectory(perksDirectory);
+                            }
+                            else if (iconPath.Contains("Styles/"))
+                            {
+                                for (int i = 5; i < parseIconPath.Length; i++)
                                 {
-                                    perkFullName += "/";
+                                    perkFullName += parseIconPath[i];
+                                    if (i != parseIconPath.Length - 1)
+                                    {
+                                        perkFullName += "/";
+                                    }
                                 }
+                                perkFullName = perkFullName.ToLower();
+                                perksDirectory += "Styles/";
+                                if (parseIconPath.Length > 5)
+                                {
+                                    perksDirectory += parseIconPath[6] + "/";
+                                }
+                                DirectoryManagerLocal.CreateDirectory(perksDirectory);
                             }
-                            perkFullName = perkFullName.ToLower();
-                            perksDirectory += "Styles/";
-                            if (parseIconPath.Length > 5)
-                            {
-                                perksDirectory += parseIconPath[6] + "/";
-                            }
-                            DirectoryManagerLocal.CreateDirectory(perksDirectory);
+                            //string perkFullName = parseIconPath[parseIconPath.Length - 1];
+                            //perkFullName = perkFullName.ToLower();
+                            _logger.log(LoggingLevel.INFO, "PerksAsyncDownload()", $"Run PerksAsyncDownload");
+                            PerksAsyncDownload(indexPatch, indexRegion, numPatch, perk, perksDirectory, perkId, perkFullName);
                         }
-                        //string perkFullName = parseIconPath[parseIconPath.Length - 1];
-                        //perkFullName = perkFullName.ToLower();
-                        PerksAsyncDownload(indexPatch, indexRegion, numPatch, perk, perksDirectory, perkId, perkFullName);
+                        catch (Exception e)
+                        {
+                            _logger.log(LoggingLevel.ERROR, "PerksAsyncDownload()", $"Errot, PerksAsyncDownload not run : {e.Message}");
+                        }
                     }
                     int infini = 0;
                     while (OSL_Server.Download.Download.downloadAllFile > 0 && OSL_Server.Download.Download.errorDownloadAllFile == 0 && infini != 200)
@@ -98,9 +106,9 @@ namespace OSL_Server.DataLoader.CDragon
                     _logger.log(LoggingLevel.INFO, "PerksAsyncDownload()", $"{OSL_Server.Download.Download.errorDownloadAllFile} error of download");
 
                 }
-                catch
+                catch (Exception e)
                 {
-                    _logger.log(LoggingLevel.ERROR, "DownloadPerksComposent()", $"Error json perks component");
+                    _logger.log(LoggingLevel.ERROR, "DownloadPerksComposent()", $"Error json perks component : {e.Message}");
                 }
             }
         }
@@ -177,7 +185,9 @@ namespace OSL_Server.DataLoader.CDragon
             Perks perksData = new Perks();
             perksData.Id = perk.id;
             perksData.Name = perk.name;
-            perksData.IconPath = perkIcone;
+            String[] splitPerkIcone = perkIcone.Split("/wwwroot");
+            //perksData.IconPath = perkIcone.Remove(1, 7);
+            perksData.IconPath = splitPerkIcone[0] + splitPerkIcone[1];
             //itemData.From = new();
 
             int perksId = perk.id;
