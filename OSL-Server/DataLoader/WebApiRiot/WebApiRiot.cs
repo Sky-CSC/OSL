@@ -12,7 +12,7 @@ namespace OSL_Server.DataLoader.WebApiRiot
     public class WebApiRiot
     {
         private static OSLLogger _logger = new OSLLogger("WebApiRiot");
-        private static string apiKey = "RGAPI-a7e5e402-934e-4440-a2f2-b78280a35a49";
+        public static string apiKey;
 
         public static void GetResponseWebApiRiot()
         {

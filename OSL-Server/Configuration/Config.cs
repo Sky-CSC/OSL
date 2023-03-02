@@ -7,6 +7,8 @@ using System.Net;
 using OSL_Server.Pages;
 using OSL_Server.Pages.ChampSelect;
 using OSL_Server.Pages.InGame;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using OSL_Server.DataLoader.WebApiRiot;
 
 namespace OSL_Server.Configuration
 {
@@ -520,7 +522,12 @@ namespace OSL_Server.Configuration
             InGameView3Page.formatingData.DisplayRedPlayerFrame = jsonContent.DisplayRedPlayerFrame;
         }
 
-
+        public static void LoadWebRiotApiKey()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/webApiRiot.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            WebApiRiot.apiKey = jsonContent.apiKey;
+        }
 
     }
 }
