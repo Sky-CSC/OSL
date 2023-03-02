@@ -9,6 +9,7 @@ using OSL_Server.Pages.ChampSelect;
 using OSL_Server.Pages.InGame;
 using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using OSL_Server.DataLoader.WebApiRiot;
+using OSL_Server.Pages.Runes;
 
 namespace OSL_Server.Configuration
 {
@@ -54,6 +55,8 @@ namespace OSL_Server.Configuration
             LoadConfigInGameView2();
             LoadFormatingDataConfigInGameView3();
             LoadConfigInGameView3();
+
+            LoadConfigRunesTopPage();
         }
 
         /// <summary>
@@ -527,6 +530,23 @@ namespace OSL_Server.Configuration
             string content = FileManagerLocal.ReadInFile("./Configuration/webApiRiot.json");
             dynamic jsonContent = JsonConvert.DeserializeObject(content);
             WebApiRiot.apiKey = jsonContent.apiKey;
+        }
+
+        public static void LoadConfigRunesTopPage()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                RunesTopPage.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                RunesTopPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            RunesTopPage.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesTopPage()", $"{RunesTopPage.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesTopPage()", $"{RunesTopPage.formatingData.DefaultRegion}");
         }
 
     }

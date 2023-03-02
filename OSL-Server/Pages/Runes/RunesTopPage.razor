@@ -1,4 +1,4 @@
-﻿@page "/runes/view1"
+﻿@page "/runes/top"
 @using OSL_Server.DataReciveClient.Processing.ChampSelect;
 @using OSL_Server.DataLoader.CDragon;
 @using Newtonsoft.Json;
@@ -26,27 +26,38 @@
 }
 
 <div class="perks">
-    @{
-        foreach (var participants in RunesPage.summonerPerksList)
+    <div class="lane-picture">
+        <img class="lane-picture-img" src="./assets/runes/position_top.png" />
+    </div>
+    @foreach (var participants in RunesPage.summonerPerksList)
+    {
+        @if (participants.Lane.CompareTo(RunesPage.Lanes.Top) == 0)
         {
-            if (participants.Lane.CompareTo(RunesPage.Lanes.Top) == 0)
-            {
-                <div class="perks-list">
-                    foreach (int perks in participants.Perks.perkIds)
-                    {
-                    int indexPerks = CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks.FindIndex(obj => obj.Id == perks);
+            <div class="summoner-name">
+                @participants.SummonerName
+            </div>
+
+            <div class="champ-picture">
+                <img class="champ-picture-img" src="@GetChampionPicturePath(participants.ChampionId)" />
+            </div>
+            <div class="perks-list">
+                @foreach (int perks in participants.Perks.perkIds)
+                {
                     <div class="perks-wrapper">
-                        <img class="perks-img" src="@CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks[indexPerks].IconPath" />
+                        <img class="perks-img" src="@GetPerksIconPath(perks)" />
                     </div>
-                    }
-                </div>
-                //int indexPerksStyle = CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks.FindIndex(obj => obj.Id == participants.Perks.perkStyle);
-                //<img src="@CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks[indexPerksStyle].IconPath" />
-                //int indexPerksSubStyle = CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks.FindIndex(obj => obj.Id == participants.Perks.perkSubStyle);
-                //<img src="@CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks[indexPerksSubStyle].IconPath" />
-            }
+                }
+            </div>
+            <div class="separation-bar">
+
+            </div>
+            //int indexPerksStyle = CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks.FindIndex(obj => obj.Id == participants.Perks.perkStyle);
+            //<img src="@CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks[indexPerksStyle].IconPath" />
+            //int indexPerksSubStyle = CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks.FindIndex(obj => obj.Id == participants.Perks.perkSubStyle);
+            //<img src="@CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks[indexPerksSubStyle].IconPath" />
         }
     }
+
 </div>
 
 

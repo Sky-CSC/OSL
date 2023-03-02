@@ -1,23 +1,291 @@
 @font-face {
-    font-family: MyFont;
-    src: url(../css/font/fonts/fontLoL.ttf);
+    font-family: LolFont;
+    src: url(./css/font/fontLoL.ttf);
+}
+
+@font-face {
+    font-family: EurostileCondensedBold;
+    src: url("css/font/EurostileCondensedBold.otf") format("opentype");
 }
 
 html, body {
+    font-family: EurostileCondensedBold;
     background-color: black;
     color: white;
 }
 
-.title {
-    font-family: MyFont;
-    font-weight: bold;
-    text-decoration: underline;
+.separation-bar:nth-child(5) {
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    background-color: #c99d53;
+    top: 980px;
+    left: 637px;
 }
 
-.perks-wrapper{
-
+.separation-bar:nth-child(9) {
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    background-color: #c99d53;
+    top: 980px;
+    left: 1097px;
 }
 
-.perks-img{
-    /*height: 100px;*/
+.lane-picture {
+    position: absolute;
 }
+
+    .lane-picture .lane-picture-img {
+        position: absolute;
+        top: 860px;
+        left: 940px;
+        height: 50px;
+    }
+
+
+.perks {
+    background: url(./assets/runes/background.png);
+    /*    background-size: 1920px;*/
+    height: 1080px;
+    width: 1920px;
+}
+
+.summoner-name {
+    position: absolute;
+}
+
+    .summoner-name:nth-child(2) {
+        font-family: EurostileCondensedBold;
+        font-size: 40px;
+        top: 850px;
+        right: 1000px;
+        position: absolute;
+        letter-spacing: -2px;
+        color: #0b849e;
+        /*display: none*/
+    }
+
+    .summoner-name:nth-child(6) {
+        font-family: EurostileCondensedBold;
+        font-size: 40px;
+        top: 850px;
+        left: 1010px;
+        position: absolute;
+        letter-spacing: -2px;
+        color: #be1e37;
+    }
+
+.champ-picture {
+    position: absolute;
+}
+
+    .champ-picture:nth-child(3) .champ-picture-img {
+        height: 105px;
+        top: 930px;
+        left: 853px;
+        position: absolute;
+        border: 2px solid #c99d53;
+    }
+
+    .champ-picture:nth-child(7) .champ-picture-img {
+        height: 105px;
+        top: 930px;
+        left: 977px;
+        position: absolute;
+        border: 2px solid #c99d53;
+    }
+
+
+.perks-list {
+    position: absolute;
+    display: flex;
+}
+
+    .perks-list:nth-child(4) {
+        /*top: 100px;*/
+    }
+
+        .perks-list:nth-child(4) .perks-wrapper:nth-child(1) {
+            top: 905px;
+            left: 775px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(4) .perks-wrapper:nth-child(1) .perks-img {
+                height: 80px;
+            }
+
+        .perks-list:nth-child(4) .perks-wrapper:nth-child(2) {
+            top: 930px;
+            left: 737.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(4) .perks-wrapper:nth-child(2) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(4) .perks-wrapper:nth-child(3) {
+            top: 930px;
+            left: 697.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(4) .perks-wrapper:nth-child(3) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(4) .perks-wrapper:nth-child(4) {
+            top: 930px;
+            left: 657.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(4) .perks-wrapper:nth-child(4) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(4) .perks-wrapper:nth-child(5) {
+            top: 990px;
+            left: 801.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(4) .perks-wrapper:nth-child(5) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(4) .perks-wrapper:nth-child(6) {
+            top: 990px;
+            left: 761.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(4) .perks-wrapper:nth-child(6) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(4) .perks-wrapper:nth-child(7) {
+            top: 995px;
+            left: 681.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(4) .perks-wrapper:nth-child(7) .perks-img {
+                /*height: 40.5px;*/
+            }
+
+        .perks-list:nth-child(4) .perks-wrapper:nth-child(8) {
+            top: 995px;
+            left: 651.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(4) .perks-wrapper:nth-child(8) .perks-img {
+                /*height: 40.5px;*/
+            }
+
+        .perks-list:nth-child(4) .perks-wrapper:nth-child(9) {
+            top: 995px;
+            left: 621.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(4) .perks-wrapper:nth-child(9) .perks-img {
+                /*height: 40.5px;*/
+            }
+
+    .perks-list:nth-child(8) {
+        /*top: 100px;*/
+    }
+
+        .perks-list:nth-child(8) .perks-wrapper:nth-child(1) {
+            top: 905px;
+            left: 1085px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(8) .perks-wrapper:nth-child(1) .perks-img {
+                height: 80px;
+            }
+
+        .perks-list:nth-child(8) .perks-wrapper:nth-child(2) {
+            top: 930px;
+            left: 1156.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(8) .perks-wrapper:nth-child(2) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(8) .perks-wrapper:nth-child(3) {
+            top: 930px;
+            left: 1196.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(8) .perks-wrapper:nth-child(3) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(8) .perks-wrapper:nth-child(4) {
+            top: 930px;
+            left: 1236.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(8) .perks-wrapper:nth-child(4) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(8) .perks-wrapper:nth-child(5) {
+            top: 990px;
+            left: 1092.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(8) .perks-wrapper:nth-child(5) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(8) .perks-wrapper:nth-child(6) {
+            top: 990px;
+            left: 1132.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(8) .perks-wrapper:nth-child(6) .perks-img {
+                height: 40.5px;
+            }
+
+        .perks-list:nth-child(8) .perks-wrapper:nth-child(7) {
+            top: 995px;
+            left: 1222.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(8) .perks-wrapper:nth-child(7) .perks-img {
+                /*height: 40.5px;*/
+            }
+
+        .perks-list:nth-child(8) .perks-wrapper:nth-child(8) {
+            top: 995px;
+            left: 1252.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(8) .perks-wrapper:nth-child(8) .perks-img {
+                /*height: 40.5px;*/
+            }
+
+        .perks-list:nth-child(8) .perks-wrapper:nth-child(9) {
+            top: 995px;
+            left: 1282.5px;
+            position: absolute;
+        }
+
+            .perks-list:nth-child(8) .perks-wrapper:nth-child(9) .perks-img {
+                /*height: 40.5px;*/
+            }
