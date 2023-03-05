@@ -1,9 +1,9 @@
-﻿@page "/runes/top"
+﻿@page "/runes/mid"
 @using OSL_Server.DataReciveClient.Processing.ChampSelect;
 @using OSL_Server.DataLoader.CDragon;
 @using Newtonsoft.Json;
 @layout EmptyLayout
-<PageTitle>Runes Overlay Top</PageTitle>
+<PageTitle>Runes Overlay Mid</PageTitle>
 
 <div class="perks">
     @**@
@@ -23,7 +23,7 @@
     </div>
     @foreach (var participants in RunesPage.summonerPerksList)
     {
-        @if (participants.Lane.CompareTo(RunesPage.Lanes.Top) == 0)
+        @if (participants.Lane.CompareTo(RunesPage.Lanes.Mid) == 0)
         {
             if (participants.TeamId == 100)
             {

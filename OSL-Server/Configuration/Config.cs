@@ -56,7 +56,20 @@ namespace OSL_Server.Configuration
             LoadFormatingDataConfigInGameView3();
             LoadConfigInGameView3();
 
+
+            LoadConfigRunesPage();
+            LoadFormatingDataConfigRunesTopPage();
             LoadConfigRunesTopPage();
+            LoadFormatingDataConfigRunesMidPage();
+            LoadConfigRunesMidPage();
+            LoadFormatingDataConfigRunesJunglePage();
+            LoadConfigRunesJunglePage();
+            LoadFormatingDataConfigRunesAdcPage();
+            LoadConfigRunesAdcPage();
+            LoadFormatingDataConfigRunesSuppPage();
+            LoadConfigRunesSuppPage();
+            LoadFormatingDataConfigRunesAdcSuppPage();
+            LoadConfigRunesAdcSuppPage();
         }
 
         /// <summary>
@@ -532,6 +545,24 @@ namespace OSL_Server.Configuration
             WebApiRiot.apiKey = jsonContent.apiKey;
         }
 
+
+        public static void LoadConfigRunesPage()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                RunesPage.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                RunesPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            RunesPage.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesPage()", $"{RunesPage.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesPage()", $"{RunesPage.formatingData.DefaultRegion}");
+        }
+
         public static void LoadConfigRunesTopPage()
         {
             try
@@ -549,5 +580,198 @@ namespace OSL_Server.Configuration
             _logger.log(LoggingLevel.INFO, "LoadConfigRunesTopPage()", $"{RunesTopPage.formatingData.DefaultRegion}");
         }
 
+        public static void LoadFormatingDataConfigRunesTopPage()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/Runes/Top/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //RunesTopPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //RunesTopPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            RunesTopPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+            RunesTopPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+            RunesTopPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+            RunesTopPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+            RunesTopPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+            RunesTopPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+            RunesTopPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+            RunesTopPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+            RunesTopPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+            RunesTopPage.formatingData.LanePicture = jsonContent.LanePicture;
+        }
+
+        public static void LoadConfigRunesMidPage()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                RunesMidPage.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                RunesMidPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            RunesMidPage.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesMidPage()", $"{RunesMidPage.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesMidPage()", $"{RunesMidPage.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigRunesMidPage()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/Runes/Mid/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //RunesMidPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //RunesMidPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            RunesMidPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+            RunesMidPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+            RunesMidPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+            RunesMidPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+            RunesMidPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+            RunesMidPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+            RunesMidPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+            RunesMidPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+            RunesMidPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+            RunesMidPage.formatingData.LanePicture = jsonContent.LanePicture;
+        }
+
+        public static void LoadConfigRunesJunglePage()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                RunesJunglePage.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                RunesJunglePage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            RunesJunglePage.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesJunglePage()", $"{RunesJunglePage.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesJunglePage()", $"{RunesJunglePage.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigRunesJunglePage()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/Runes/Jungle/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //RunesJunglePage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //RunesJunglePage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            RunesJunglePage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+            RunesJunglePage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+            RunesJunglePage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+            RunesJunglePage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+            RunesJunglePage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+            RunesJunglePage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+            RunesJunglePage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+            RunesJunglePage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+            RunesJunglePage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+            RunesJunglePage.formatingData.LanePicture = jsonContent.LanePicture;
+        }
+
+        public static void LoadConfigRunesAdcPage()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                RunesAdcPage.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                RunesAdcPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            RunesAdcPage.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesAdcPage()", $"{RunesAdcPage.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesAdcPage()", $"{RunesAdcPage.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigRunesAdcPage()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/Runes/Adc/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //RunesAdcPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //RunesAdcPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            RunesAdcPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+            RunesAdcPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+            RunesAdcPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+            RunesAdcPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+            RunesAdcPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+            RunesAdcPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+            RunesAdcPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+            RunesAdcPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+            RunesAdcPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+            RunesAdcPage.formatingData.LanePicture = jsonContent.LanePicture;
+        }
+
+        public static void LoadConfigRunesSuppPage()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                RunesSuppPage.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                RunesSuppPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            RunesSuppPage.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesSuppPage()", $"{RunesSuppPage.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesSuppPage()", $"{RunesSuppPage.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigRunesSuppPage()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/Runes/Support/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //RunesSuppPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //RunesSuppPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            RunesSuppPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+            RunesSuppPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+            RunesSuppPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+            RunesSuppPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+            RunesSuppPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+            RunesSuppPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+            RunesSuppPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+            RunesSuppPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+            RunesSuppPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+            RunesSuppPage.formatingData.LanePicture = jsonContent.LanePicture;
+        }
+
+        public static void LoadConfigRunesAdcSuppPage()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                RunesAdcSuppPage.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                RunesAdcSuppPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            RunesAdcSuppPage.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesAdcSuppPage()", $"{RunesAdcSuppPage.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesAdcSuppPage()", $"{RunesAdcSuppPage.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigRunesAdcSuppPage()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/Runes/AdcSupp/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //RunesAdcSuppPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //RunesAdcSuppPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            RunesAdcSuppPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+            RunesAdcSuppPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+            RunesAdcSuppPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+            RunesAdcSuppPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+            RunesAdcSuppPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+            RunesAdcSuppPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+            RunesAdcSuppPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+            RunesAdcSuppPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+            RunesAdcSuppPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+            RunesAdcSuppPage.formatingData.LanePictureAdc = jsonContent.LanePictureAdc;
+            RunesAdcSuppPage.formatingData.LanePictureSupp = jsonContent.LanePictureSupp;
+        }
     }
 }

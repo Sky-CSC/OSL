@@ -13,7 +13,13 @@ namespace OSL_Server.Pages.Runes
 
         public static List<InfoForPerks> summonerPerksList = new();
 
+        public static FormatingData formatingData = new();
 
+        public class FormatingData
+        {
+            public string DefaultPatch { get; set; }
+            public string DefaultRegion { get; set; }
+        }
 
         public static void CreateSummonerPerksList(string summonerName)
         {
@@ -64,12 +70,32 @@ namespace OSL_Server.Pages.Runes
             }
         }
 
-        private void ChangeLane()
+        public static void ResetLanes()
         {
-            int index = summonerPerksList.FindIndex(obj => obj.SummonerName.Equals("Lamirol"));
-            Console.WriteLine(index);
-            summonerPerksList[index].Lane = Lanes.Mid;
-            Console.WriteLine(summonerPerksList[index].Lane);
+            foreach (var info in summonerPerksList)
+            {
+                info.Lane = Lanes.None;
+            }
+            laneSelectionSummoner1.lanes = Lanes.None;
+            laneSelectionSummoner2.lanes = Lanes.None;
+            laneSelectionSummoner3.lanes = Lanes.None;
+            laneSelectionSummoner4.lanes = Lanes.None;
+            laneSelectionSummoner5.lanes = Lanes.None;
+            laneSelectionSummoner6.lanes = Lanes.None;
+            laneSelectionSummoner7.lanes = Lanes.None;
+            laneSelectionSummoner8.lanes = Lanes.None;
+            laneSelectionSummoner9.lanes = Lanes.None;
+            laneSelectionSummoner10.lanes = Lanes.None;
+        }
+
+        /// <summary>
+        /// Return champion picture path
+        /// </summary>
+        /// <param name="champId"></param>
+        /// <returns></returns>
+        public static string GetChampionPicturePath(int champId)
+        {
+            return $"./assets/{formatingData.DefaultPatch}/{formatingData.DefaultRegion}/Champions/{champId}/default-square.png";
         }
 
         public class InfoForPerks

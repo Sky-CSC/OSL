@@ -4,9 +4,9 @@ using OSL_Server.DataLoader.WebApiRiot;
 
 namespace OSL_Server.Pages.Runes
 {
-    public partial class RunesTopPage
+    public partial class RunesSuppPage
     {
-        private static OSLLogger _logger = new OSLLogger("RunesTopPage");
+        private static OSLLogger _logger = new OSLLogger("RunesSuppPage");
 
         //Data for display color, texte, picture on web page
         public static FormatingData formatingData = new();

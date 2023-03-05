@@ -14,9 +14,31 @@ html, body {
     text-decoration: underline;
 }
 
-.summoner-lane {
+/*.summoner-lane {
     justify-content: center;
+}*/
+
+.summoner-lane {
+    display: flex;
+    /*clear: both;*/
+    /*height: 300px;*/
+    /*width: 1000px;*/
 }
+
+.blue-side {
+    flex: 1;
+    padding: 1em;
+    border: solid;
+    /*width: 500px;*/
+}
+
+.red-side {
+    flex: 1;
+    padding: 1em;
+    border: solid;
+    /*width: 500px;*/
+}
+
 
 .summoner-lane-info {
     display: flex;
