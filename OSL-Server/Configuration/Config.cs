@@ -692,6 +692,11 @@ namespace OSL_Server.Configuration
             //RunesAdcPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
             //RunesAdcPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
             RunesAdcPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+            RunesAdcPage.formatingData.BackgroudGradientDeg = jsonContent.BackgroudGradientDeg;
+            RunesAdcPage.formatingData.BackgroudGradientColor1 = jsonContent.BackgroudGradientColor1;
+            RunesAdcPage.formatingData.BackgroudGradientPercent1 = jsonContent.BackgroudGradientPercent1;
+            RunesAdcPage.formatingData.BackgroudGradientColor2 = jsonContent.BackgroudGradientColor2;
+            RunesAdcPage.formatingData.BackgroudGradientPercent2 = jsonContent.BackgroudGradientPercent2;
             RunesAdcPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
             RunesAdcPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
             RunesAdcPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
