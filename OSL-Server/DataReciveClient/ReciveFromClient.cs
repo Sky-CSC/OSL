@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using OSL_Server.DataReciveClient.Processing.ChampSelect;
+using OSL_Server.DataReciveClient.Processing.InGame;
 
 namespace OSL_Server.DataReciveClient
 {
@@ -12,6 +13,7 @@ namespace OSL_Server.DataReciveClient
 
         private static bool gameFlowPhaseStatus = false;
         private static bool champSelectStatus = false;
+        private static bool inGameStatus = false;
         /// <summary>
         /// Read data for set right status
         /// </summary>
@@ -41,7 +43,16 @@ namespace OSL_Server.DataReciveClient
                     }
                     else if (dataJsonRecive.Phase.Equals("InGame"))
                     {
-                        returnData = "in game Server running";
+                        if (dataJsonRecive.Status.Equals("Running"))
+                        {
+                            inGameStatus = true;
+                            InGameInfo.firstCall = true;
+                            returnData = "in game Server running";
+                        }
+                        else
+                        {
+                            inGameStatus = false;
+                        }
                     }
                 }
                 else
@@ -66,6 +77,11 @@ namespace OSL_Server.DataReciveClient
                     {
                         ChampSelectInfo.InChampSelect(content);
                         returnData = "champ select Server running";
+                    }
+                    if (inGameStatus)
+                    {
+                        InGameInfo.InGame(content);
+                        returnData = "in game Server running";
                     }
                 }
                 catch (Exception e)
