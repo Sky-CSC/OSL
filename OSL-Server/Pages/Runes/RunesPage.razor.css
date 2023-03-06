@@ -65,3 +65,15 @@ html, body {
 .summoner-lane-info-select {
     margin: 5px;
 }
+
+.color-picker {
+    position: absolute;
+    left: 650px;
+    top: 330px;
+    border: 5px solid black;
+}
+
+.button-color {
+    height: 30px;
+    width: 30px;
+}

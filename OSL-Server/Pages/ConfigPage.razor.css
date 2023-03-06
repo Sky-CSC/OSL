@@ -17,3 +17,21 @@ html, body {
     font-weight: bold;
     text-decoration: underline;
 }
+
+.configuration-champ-select-content {
+    position: relative;
+    left: 50px;
+    max-width: 770px;
+}
+
+.configuration-in-game-content {
+    position: relative;
+    left: 50px;
+    max-width: 770px;
+}
+
+.configuration-runes-content {
+    position: relative;
+    left: 50px;
+    max-width: 770px;
+}

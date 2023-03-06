@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using OSL_Server.Configuration;
 using OSL_Server.DataLoader.CDragon;
 using OSL_Server.DataLoader.WebApiRiot;
 
@@ -50,5 +51,12 @@ namespace OSL_Server.Pages.Runes
             return $"./assets/{formatingData.DefaultPatch}/{formatingData.DefaultRegion}/Champions/{champId}/default-square.png";
         }
 
+        /// <summary>
+        /// Load default datat champ select
+        /// </summary>
+        public static void ResetColor()
+        {
+            Config.LoadFormatingDataConfigRunesTopPage();
+        }
     }
 }

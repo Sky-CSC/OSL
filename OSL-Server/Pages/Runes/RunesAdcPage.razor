@@ -7,15 +7,36 @@
 
 <div class="perks">
     @**@
+    @{
+        string backgroundPicture;
+        if (RunesPage.overlay.BackgroundPicture == false)
+        {
+            backgroundPicture = "";
+        }
+        else
+        {
+            backgroundPicture = formatingData.BakgroundPicture;
+        }
+
+        string colorForegroundBackground;
+        if (RunesPage.overlay.ForegroundBackground == false)
+        {
+            colorForegroundBackground = "";
+        }
+        else
+        {
+            colorForegroundBackground = formatingData.OverlayColorBackgroudGradient;
+        }
+    }
     <div class="perks-background">
         @*Bakground color*@
         <div class="perks-background-gradiant" style="background-image: @formatingData.BackgroudGradient">
             @*Black veil*@
-            <div class="perks-background-color" style="background-image: @formatingData.OverlayColorBackgroudGradient">
+            <div class="perks-background-color" style="background-image: @colorForegroundBackground">
             </div>
         </div>
         @*Bakground picture*@
-        <img class="perks-background-img" src="@formatingData.BakgroundPicture" />
+        <img class="perks-background-img" src="@backgroundPicture" />
     </div>
     @*Lane picture*@
     <div class="lane-picture">

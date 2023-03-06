@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using OSL_Server.FileManager;
 using OSL_Server.Pages.ChampSelect;
 using OSL_Server.Pages.InGame;
+using OSL_Server.Pages.Runes;
 
 namespace OSL_Server.Pages
 {
@@ -381,6 +382,209 @@ namespace OSL_Server.Pages
                 }
             }
         }
+        
+        private async Task LoadFileRunesAdc()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //RunesAdcPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+                    //RunesAdcPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+                    RunesAdcPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+                    RunesAdcPage.formatingData.BackgroudGradientDeg = jsonContent.BackgroudGradientDeg;
+                    RunesAdcPage.formatingData.BackgroudGradientColor1 = jsonContent.BackgroudGradientColor1;
+                    RunesAdcPage.formatingData.BackgroudGradientPercent1 = jsonContent.BackgroudGradientPercent1;
+                    RunesAdcPage.formatingData.BackgroudGradientColor2 = jsonContent.BackgroudGradientColor2;
+                    RunesAdcPage.formatingData.BackgroudGradientPercent2 = jsonContent.BackgroudGradientPercent2;
+                    RunesAdcPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+                    RunesAdcPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+                    RunesAdcPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+                    RunesAdcPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+                    RunesAdcPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+                    RunesAdcPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+                    RunesAdcPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+                    RunesAdcPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+                    RunesAdcPage.formatingData.LanePicture = jsonContent.LanePicture;
+
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileRunesAdc()", "Configuration View3 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileRunesAdc()", "Load view 1 error : " + e.Message);
+                }
+            }
+        }
+        private async Task LoadFileRunesAdcSupp()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //RunesAdcSuppPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+                    //RunesAdcSuppPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+                    RunesAdcSuppPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+                    RunesAdcSuppPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+                    RunesAdcSuppPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+                    RunesAdcSuppPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+                    RunesAdcSuppPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+                    RunesAdcSuppPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+                    RunesAdcSuppPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+                    RunesAdcSuppPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+                    RunesAdcSuppPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+                    RunesAdcSuppPage.formatingData.LanePictureAdc = jsonContent.LanePictureAdc;
+                    RunesAdcSuppPage.formatingData.LanePictureSupp = jsonContent.LanePictureSupp;
+
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileRunesAdcSupp()", "Configuration View3 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileRunesAdcSupp()", "Load view 1 error : " + e.Message);
+                }
+            }
+        }
+        private async Task LoadFileRunesJungle()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //RunesJunglePage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+                    //RunesJunglePage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+                    RunesJunglePage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+                    RunesJunglePage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+                    RunesJunglePage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+                    RunesJunglePage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+                    RunesJunglePage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+                    RunesJunglePage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+                    RunesJunglePage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+                    RunesJunglePage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+                    RunesJunglePage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+                    RunesJunglePage.formatingData.LanePicture = jsonContent.LanePicture;
+
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileRunesJungle()", "Configuration View3 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileRunesJungle()", "Load view 1 error : " + e.Message);
+                }
+            }
+        }
+        private async Task LoadFileRunesMid()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //RunesMidPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+                    //RunesMidPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+                    RunesMidPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+                    RunesMidPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+                    RunesMidPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+                    RunesMidPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+                    RunesMidPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+                    RunesMidPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+                    RunesMidPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+                    RunesMidPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+                    RunesMidPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+                    RunesMidPage.formatingData.LanePicture = jsonContent.LanePicture;
+
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileRunesMid()", "Configuration View3 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileRunesMid()", "Load view 1 error : " + e.Message);
+                }
+            }
+        }
+        private async Task LoadFileRunesSupp()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //RunesSuppPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+                    //RunesSuppPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+                    RunesSuppPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+                    RunesSuppPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+                    RunesSuppPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+                    RunesSuppPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+                    RunesSuppPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+                    RunesSuppPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+                    RunesSuppPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+                    RunesSuppPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+                    RunesSuppPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+                    RunesSuppPage.formatingData.LanePicture = jsonContent.LanePicture;
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileRunesSupp()", "Configuration View3 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileRunesSupp()", "Load view 1 error : " + e.Message);
+                }
+            }
+        }
+        private async Task LoadFileRunesTop()
+        {
+            if (fileSelected is not null)
+            {
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    await fileSelected.OpenReadStream().CopyToAsync(ms);
+                    string content = System.Text.Encoding.UTF8.GetString(ms.ToArray());
+                    dynamic jsonContent = JsonConvert.DeserializeObject(content);
+                    //RunesTopPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+                    //RunesTopPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+                    RunesTopPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+                    RunesTopPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+                    RunesTopPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+                    RunesTopPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+                    RunesTopPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+                    RunesTopPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+                    RunesTopPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+                    RunesTopPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+                    RunesTopPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+                    RunesTopPage.formatingData.LanePicture = jsonContent.LanePicture;
+                    fileSelected = null;
+                    StateHasChanged();
+                    _logger.log(LoggingLevel.INFO, "LoadFileRunesTop()", "Configuration View3 Loaded");
+                }
+                catch (Exception e)
+                {
+                    _logger.log(LoggingLevel.ERROR, "LoadFileRunesTop()", "Load view 1 error : " + e.Message);
+                }
+            }
+        }
 
 
         public string GenerateConfigFileChampSelectView1()
@@ -679,8 +883,8 @@ namespace OSL_Server.Pages
             {
                 var data = new InGameView3Page.FormatingData
                 {
-                    DefaultPatch = InGameView2Page.formatingData.DefaultPatch,
-                    DefaultRegion = InGameView2Page.formatingData.DefaultRegion,
+                    DefaultPatch = InGameView3Page.formatingData.DefaultPatch,
+                    DefaultRegion = InGameView3Page.formatingData.DefaultRegion,
                     ReplayInfoFrame = InGameView3Page.formatingData.ReplayInfoFrame,
                     BluePlayerFrame = InGameView3Page.formatingData.BluePlayerFrame,
                     RedPlayerFrame = InGameView3Page.formatingData.RedPlayerFrame,
@@ -699,6 +903,204 @@ namespace OSL_Server.Pages
             {
                 _logger.log(LoggingLevel.ERROR, "GenerateConfigFileInGameView3()", "Error generation old version recive : " + e.Message);
                 return "/assets/ingame/configInGameView3.json";
+            }
+        }
+
+        private string GenerateConfigFileRuneAdc()
+        {
+            try
+            {
+                var data = new RunesAdcPage.FormatingData
+                {
+                    DefaultPatch = RunesAdcPage.formatingData.DefaultPatch,
+                    DefaultRegion = RunesAdcPage.formatingData.DefaultRegion,
+                    BackgroudGradient = RunesAdcPage.formatingData.BackgroudGradient,
+                    BackgroudGradientDeg = RunesAdcPage.formatingData.BackgroudGradientDeg,
+                    BackgroudGradientColor1 = RunesAdcPage.formatingData.BackgroudGradientColor1,
+                    BackgroudGradientPercent1 = RunesAdcPage.formatingData.BackgroudGradientPercent1,
+                    BackgroudGradientColor2 = RunesAdcPage.formatingData.BackgroudGradientColor2,
+                    BackgroudGradientPercent2 = RunesAdcPage.formatingData.BackgroudGradientPercent2,
+                    OverlayColorBackgroudGradient = RunesAdcPage.formatingData.OverlayColorBackgroudGradient,
+                    BlueSideColorTextSummoner = RunesAdcPage.formatingData.BlueSideColorTextSummoner,
+                    RedSideColorTextSummoner = RunesAdcPage.formatingData.RedSideColorTextSummoner,
+                    BlueSideColorBorderChampion = RunesAdcPage.formatingData.BlueSideColorBorderChampion,
+                    RedSideColorBorderChampion = RunesAdcPage.formatingData.RedSideColorBorderChampion,
+                    BlueSideColorSeparationBar = RunesAdcPage.formatingData.BlueSideColorSeparationBar,
+                    RedSideColorSeparationBar = RunesAdcPage.formatingData.RedSideColorSeparationBar,
+                    BakgroundPicture = RunesAdcPage.formatingData.BakgroundPicture,
+                    LanePicture = RunesAdcPage.formatingData.LanePicture,
+
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/runes/configRunesAdc.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileRuneAdc()", "Generation ok");
+                return "/assets/runes/configRunesAdc.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileRuneAdc()", "Error generation old version recive : " + e.Message);
+                return "/assets/runes/configRunesAdc.json";
+            }
+        }
+
+        private string GenerateConfigFileRuneAdcSupp()
+        {
+            try
+            {
+                var data = new RunesAdcSuppPage.FormatingData
+                {
+                    DefaultPatch = RunesAdcSuppPage.formatingData.DefaultPatch,
+                    DefaultRegion = RunesAdcSuppPage.formatingData.DefaultRegion,
+                    BackgroudGradient = RunesAdcSuppPage.formatingData.BackgroudGradient,
+                    OverlayColorBackgroudGradient = RunesAdcSuppPage.formatingData.OverlayColorBackgroudGradient,
+                    BlueSideColorTextSummoner = RunesAdcSuppPage.formatingData.BlueSideColorTextSummoner,
+                    RedSideColorTextSummoner = RunesAdcSuppPage.formatingData.RedSideColorTextSummoner,
+                    BlueSideColorBorderChampion = RunesAdcSuppPage.formatingData.BlueSideColorBorderChampion,
+                    RedSideColorBorderChampion = RunesAdcSuppPage.formatingData.RedSideColorBorderChampion,
+                    BlueSideColorSeparationBar = RunesAdcSuppPage.formatingData.BlueSideColorSeparationBar,
+                    RedSideColorSeparationBar = RunesAdcSuppPage.formatingData.RedSideColorSeparationBar,
+                    BakgroundPicture = RunesAdcSuppPage.formatingData.BakgroundPicture,
+                    LanePictureAdc = RunesAdcSuppPage.formatingData.LanePictureAdc,
+                    LanePictureSupp = RunesAdcSuppPage.formatingData.LanePictureSupp,
+
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/runes/configRunesAdcSupp.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileRuneAdcSupp()", "Generation ok");
+                return "/assets/runes/configRunesAdcSupp.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileRuneAdcSupp()", "Error generation old version recive : " + e.Message);
+                return "/assets/runes/configRunesAdcSupp.json";
+            }
+        }
+
+        private string GenerateConfigFileRuneJungle()
+        {
+            try
+            {
+                var data = new RunesJunglePage.FormatingData
+                {
+                    DefaultPatch = RunesJunglePage.formatingData.DefaultPatch,
+                    DefaultRegion = RunesJunglePage.formatingData.DefaultRegion,
+                    BackgroudGradient = RunesJunglePage.formatingData.BackgroudGradient,
+                    OverlayColorBackgroudGradient = RunesJunglePage.formatingData.OverlayColorBackgroudGradient,
+                    BlueSideColorTextSummoner = RunesJunglePage.formatingData.BlueSideColorTextSummoner,
+                    RedSideColorTextSummoner = RunesJunglePage.formatingData.RedSideColorTextSummoner,
+                    BlueSideColorBorderChampion = RunesJunglePage.formatingData.BlueSideColorBorderChampion,
+                    RedSideColorBorderChampion = RunesJunglePage.formatingData.RedSideColorBorderChampion,
+                    BlueSideColorSeparationBar = RunesJunglePage.formatingData.BlueSideColorSeparationBar,
+                    RedSideColorSeparationBar = RunesJunglePage.formatingData.RedSideColorSeparationBar,
+                    BakgroundPicture = RunesJunglePage.formatingData.BakgroundPicture,
+                    LanePicture = RunesJunglePage.formatingData.LanePicture,
+
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/runes/configRunesJungle.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileRuneJungle()", "Generation ok");
+                return "/assets/runes/configRunesJungle.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileRuneJungle()", "Error generation old version recive : " + e.Message);
+                return "/assets/runes/configRunesJungle.json";
+            }
+        }
+
+        private string GenerateConfigFileRuneMid()
+        {
+            try
+            {
+                var data = new RunesMidPage.FormatingData
+                {
+                    DefaultPatch = RunesMidPage.formatingData.DefaultPatch,
+                    DefaultRegion = RunesMidPage.formatingData.DefaultRegion,
+                    BackgroudGradient = RunesMidPage.formatingData.BackgroudGradient,
+                    OverlayColorBackgroudGradient = RunesMidPage.formatingData.OverlayColorBackgroudGradient,
+                    BlueSideColorTextSummoner = RunesMidPage.formatingData.BlueSideColorTextSummoner,
+                    RedSideColorTextSummoner = RunesMidPage.formatingData.RedSideColorTextSummoner,
+                    BlueSideColorBorderChampion = RunesMidPage.formatingData.BlueSideColorBorderChampion,
+                    RedSideColorBorderChampion = RunesMidPage.formatingData.RedSideColorBorderChampion,
+                    BlueSideColorSeparationBar = RunesMidPage.formatingData.BlueSideColorSeparationBar,
+                    RedSideColorSeparationBar = RunesMidPage.formatingData.RedSideColorSeparationBar,
+                    BakgroundPicture = RunesMidPage.formatingData.BakgroundPicture,
+                    LanePicture = RunesMidPage.formatingData.LanePicture,
+
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/runes/configRunesMid.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileRuneMid()", "Generation ok");
+                return "/assets/runes/configRunesMid.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileRuneMid()", "Error generation old version recive : " + e.Message);
+                return "/assets/runes/configRunesMid.json";
+            }
+        }
+
+        private string GenerateConfigFileRuneSupp()
+        {
+            try
+            {
+                var data = new RunesSuppPage.FormatingData
+                {
+                    DefaultPatch = RunesSuppPage.formatingData.DefaultPatch,
+                    DefaultRegion = RunesSuppPage.formatingData.DefaultRegion,
+                    BackgroudGradient = RunesSuppPage.formatingData.BackgroudGradient,
+                    OverlayColorBackgroudGradient = RunesSuppPage.formatingData.OverlayColorBackgroudGradient,
+                    BlueSideColorTextSummoner = RunesSuppPage.formatingData.BlueSideColorTextSummoner,
+                    RedSideColorTextSummoner = RunesSuppPage.formatingData.RedSideColorTextSummoner,
+                    BlueSideColorBorderChampion = RunesSuppPage.formatingData.BlueSideColorBorderChampion,
+                    RedSideColorBorderChampion = RunesSuppPage.formatingData.RedSideColorBorderChampion,
+                    BlueSideColorSeparationBar = RunesSuppPage.formatingData.BlueSideColorSeparationBar,
+                    RedSideColorSeparationBar = RunesSuppPage.formatingData.RedSideColorSeparationBar,
+                    BakgroundPicture = RunesSuppPage.formatingData.BakgroundPicture,
+                    LanePicture = RunesSuppPage.formatingData.LanePicture,
+
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/runes/configRunesSupp.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileRuneSupp()", "Generation ok");
+                return "/assets/runes/configRunesSupp.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileRuneSupp()", "Error generation old version recive : " + e.Message);
+                return "/assets/runes/configRunesSupp.json";
+            }
+        }
+
+        private string GenerateConfigFileRuneTop()
+        {
+            try
+            {
+                var data = new RunesTopPage.FormatingData
+                {
+                    DefaultPatch = RunesTopPage.formatingData.DefaultPatch,
+                    DefaultRegion = RunesTopPage.formatingData.DefaultRegion,
+                    BackgroudGradient = RunesTopPage.formatingData.BackgroudGradient,
+                    OverlayColorBackgroudGradient = RunesTopPage.formatingData.OverlayColorBackgroudGradient,
+                    BlueSideColorTextSummoner = RunesTopPage.formatingData.BlueSideColorTextSummoner,
+                    RedSideColorTextSummoner = RunesTopPage.formatingData.RedSideColorTextSummoner,
+                    BlueSideColorBorderChampion = RunesTopPage.formatingData.BlueSideColorBorderChampion,
+                    RedSideColorBorderChampion = RunesTopPage.formatingData.RedSideColorBorderChampion,
+                    BlueSideColorSeparationBar = RunesTopPage.formatingData.BlueSideColorSeparationBar,
+                    RedSideColorSeparationBar = RunesTopPage.formatingData.RedSideColorSeparationBar,
+                    BakgroundPicture = RunesTopPage.formatingData.BakgroundPicture,
+                    LanePicture = RunesTopPage.formatingData.LanePicture,
+
+                };
+                string jsonString = JsonConvert.SerializeObject(data);
+                FileManagerLocal.WriteInFile("./wwwroot/assets/runes/configRunesTop.json", jsonString);
+                _logger.log(LoggingLevel.INFO, "GenerateConfigFileRuneTop()", "Generation ok");
+                return "/assets/runes/configRunesTop.json";
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "GenerateConfigFileRuneTop()", "Error generation old version recive : " + e.Message);
+                return "/assets/runes/configRunesTop.json";
             }
         }
     }
