@@ -37,36 +37,38 @@ namespace OSL_Client.RiotApp.DataProcessing
 
 
             ConnectLiveEventsAPI();
-            string playerList = ApiRequest.RequestGameClientReplayAPI("/liveclientdata/playerlist");
-            AsyncClient.StartClient(playerList);
+            //string playerList = ApiRequest.RequestGameClientReplayAPI("/liveclientdata/playerlist");
+            string sessionInfo = ApiRequest.RequestGameClientAPI("/lol-gameflow/v1/session");
+            AsyncClient.StartClient(sessionInfo);
             //Send information from game to serveur
             string gameFlowPhase;
             gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase);
-            while (gameFlowPhase != null && gameFlowPhase.Equals(GameFlowPhase.InProgress))
-            {
-                Thread.Sleep(5000);
-                //if (ConnectLiveEventsAPI())
-                //{
+            //while (gameFlowPhase != null && gameFlowPhase.Equals(GameFlowPhase.InProgress))
+            //{
+            //    Thread.Sleep(5000);
+            //    //if (ConnectLiveEventsAPI())
+            //    //{
 
-                //time stamp
-                //string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                //Console.WriteLine();
-                //string content = GetLiveEventsAPI();
-                //if (content != null) {
-                //    //write in file
-                //    //FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date);
-                //    FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date + "\n" + content);
-                //}
-                //DisconnectLiveEventsAPI();
-                //}
+            //    //time stamp
+            //    //string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //    //Console.WriteLine();
+            //    //string content = GetLiveEventsAPI();
+            //    //if (content != null) {
+            //    //    //write in file
+            //    //    //FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date);
+            //    //    FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date + "\n" + content);
+            //    //}
+            //    //DisconnectLiveEventsAPI();
+            //    //}
 
-                //if (content != null)
-                //{
+            //    //if (content != null)
+            //    //{
 
-                //}
+            //    //}
 
-                gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase);
-            }
+            //    gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase);
+            //}
+            Thread.Sleep(5000);
 
             var inGameEnd = new GameFlowPhaseStatus
             {
