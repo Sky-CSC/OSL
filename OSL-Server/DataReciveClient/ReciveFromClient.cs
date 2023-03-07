@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using OSL_Server.DataReciveClient.Processing.ChampSelect;
+using OSL_Server.DataReciveClient.Processing.EndGame;
 using OSL_Server.DataReciveClient.Processing.InGame;
 
 namespace OSL_Server.DataReciveClient
@@ -14,6 +15,7 @@ namespace OSL_Server.DataReciveClient
         private static bool gameFlowPhaseStatus = false;
         private static bool champSelectStatus = false;
         private static bool inGameStatus = false;
+        private static bool endGameStatus = false;
         /// <summary>
         /// Read data for set right status
         /// </summary>
@@ -25,8 +27,8 @@ namespace OSL_Server.DataReciveClient
             try
             {
                 GameFlowPhaseStatus dataJsonRecive = JsonConvert.DeserializeObject<GameFlowPhaseStatus>(content);
-                _logger.log(LoggingLevel.INFO, "ReadData()", $"DeserializeObject {content}");
-                if (dataJsonRecive.Phase != null)
+                //_logger.log(LoggingLevel.INFO, "ReadData()", $"DeserializeObject {content}");
+                if (dataJsonRecive.Phase != null && dataJsonRecive.Status != null && dataJsonRecive.Date != null)
                 {
                     gameFlowPhaseStatus = true;
                     if (dataJsonRecive.Phase.Equals("ChampSelect"))
@@ -54,7 +56,19 @@ namespace OSL_Server.DataReciveClient
                             inGameStatus = false;
                         }
                     }
-                }
+                    else if (dataJsonRecive.Phase.Equals("EndGame"))
+                    {
+                        if (dataJsonRecive.Status.Equals("Running"))
+                        {
+                            endGameStatus = true;
+                            returnData = "end game Server running";
+                        }
+                        else
+                        {
+                            endGameStatus = false;
+                        }
+                    }
+                    }
                 else
                 {
                     gameFlowPhaseStatus = false;
@@ -68,20 +82,30 @@ namespace OSL_Server.DataReciveClient
                 _logger.log(LoggingLevel.ERROR, "ReadData()", $"Error Read Json GameFlowPhaseStatus {e.Message}");
                 returnData = "game flow phase Server OFF";
             }
+            _logger.log(LoggingLevel.INFO, "ReadData()", $"gameFlowPhaseStatus : {gameFlowPhaseStatus}");
             if (!gameFlowPhaseStatus)
             {
                 try
                 {
                     //dynamic dataJsonRecive = JsonConvert.DeserializeObject(content);
+                    _logger.log(LoggingLevel.INFO, "ReadData()", $"in gameFlowPhaseStatus inGameStatus : {inGameStatus}");
                     if (champSelectStatus)
                     {
+                        _logger.log(LoggingLevel.INFO, "ReadData()", $" ChampSelectInfo.InChampSelect(content)");
                         ChampSelectInfo.InChampSelect(content);
                         returnData = "champ select Server running";
                     }
                     if (inGameStatus)
                     {
+                        _logger.log(LoggingLevel.INFO, "ReadData()", $"InGameInfo.InGame(content)");
                         InGameInfo.InGame(content);
                         returnData = "in game Server running";
+                    }
+                    if (endGameStatus)
+                    {
+                        _logger.log(LoggingLevel.INFO, "ReadData()", $"EndGameInfo.EndGame(content)");
+                        EndGameInfo.EndGame(content);
+                        returnData = "end game Server running";
                     }
                 }
                 catch (Exception e)
