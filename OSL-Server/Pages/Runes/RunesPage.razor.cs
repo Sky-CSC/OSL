@@ -26,6 +26,82 @@ namespace OSL_Server.Pages.Runes
             public string DefaultRegion { get; set; }
         }
 
+        public static void CreateSummonerPerksListV2(string content)
+        {
+            try
+            {
+                summonerPerksList = new();
+                dynamic jsonSessionInfo = JsonConvert.DeserializeObject(content);
+                Console.WriteLine(jsonSessionInfo.gameData.teamOne[0].gameCustomization.perks);
+                string temps = jsonSessionInfo.gameData.teamOne[0].gameCustomization.perks;
+                dynamic temps2 = JsonConvert.DeserializeObject<Perks>(temps);
+                Console.WriteLine(temps2.perkIds[0]);
+
+                foreach (var player in jsonSessionInfo.gameData.teamOne)
+                {
+                    summonerPerksList.Add(new InfoForPerks()
+                    {
+                        TeamId = 100,
+                        Lane = GetLane(Convert.ToString(player.selectedPosition)),
+                        ChampionId = player.championId,
+                        SummonerName = player.summonerName,
+                        //Perks = JsonConvert.DeserializeObject<Perks>(JsonConvert.SerializeObject(player.gameCustomization.perks)),
+                        Perks = JsonConvert.DeserializeObject<Perks>(Convert.ToString(player.gameCustomization.perks)),
+                    });
+                }
+                foreach (var player in jsonSessionInfo.gameData.teamTwo)
+                {
+                    summonerPerksList.Add(new InfoForPerks()
+                    {
+                        TeamId = 200,
+                        Lane = GetLane(Convert.ToString(player.selectedPosition)),
+                        ChampionId = player.championId,
+                        SummonerName = player.summonerName,
+                        //Perks = JsonConvert.DeserializeObject<Perks>(JsonConvert.SerializeObject(player.gameCustomization.perks)),
+                        Perks = JsonConvert.DeserializeObject<Perks>(Convert.ToString(player.gameCustomization.perks)),
+                    });
+                }
+
+                foreach (var info in summonerPerksList)
+                {
+                    Console.WriteLine(info.Lane);
+                }
+                _logger.log(LoggingLevel.INFO, "CreateSummonerPerksListV2()", $"summonerPerksList created and completed");
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "CreateSummonerPerksListV2()", $"summonerPerksList Error {e.Message}");
+            }
+        }
+
+        private static Lanes GetLane(string lane)
+        {
+            //Console.WriteLine(lane);
+            if (lane.Equals("TOP"))
+            {
+                return Lanes.Top;
+            }
+            else if (lane.Equals("BOTTOM"))
+            {
+                return Lanes.ADC;
+            }
+            else if (lane.Equals("MIDDLE"))
+            {
+                return Lanes.Mid;
+            }
+            else if (lane.Equals("UTILITY"))
+            {
+                return Lanes.Support;
+            }
+            else if (lane.Equals("JUNGLE")){
+                return Lanes.Jungle;
+            }
+            else
+            {
+                return Lanes.None;
+            }
+        }
+
         public static void CreateSummonerPerksList(string summonerName)
         {
             try
@@ -155,7 +231,7 @@ namespace OSL_Server.Pages.Runes
             }
         }
 
-        private OverlayViewDisokayOrHide overlayButton = new ("display", "#008000");
+        private OverlayViewDisokayOrHide overlayButton = new("display", "#008000");
 
         private string displayContent = "none";
         private void HideOrDisplayContent()

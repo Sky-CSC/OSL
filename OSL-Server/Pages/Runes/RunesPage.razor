@@ -9,7 +9,8 @@
     <div class="runes">
         <div class="content">
             <h1 class="title">Runes</h1>
-            Choose champion lanes for display runes lane vs lane <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@RunesPage.ResetLanes">Reset champion lane</button>
+            Champions are automatically placed on the lanes
+            <br />Choose champion lanes for display runes lane vs lane <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@RunesPage.ResetLanes">Reset champion lane</button>
             <br />
             <br />
             <a class="btn btn-primary button-form" href="runes/top" target="_blank">Link Runes Top</a>
@@ -20,261 +21,360 @@
             <a class="btn btn-primary button-form" href="runes/adcsupp" target="_blank">Link Runes Adc and Support</a>
             <br />
             <br />
-            <div class="summoner-lane">
-                <div class="blue-side">
-                    @if (summonerPerksList.Count() >= 1)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[0].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[0].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner1">
-                                    <InputSelect @bind-Value="laneSelectionSummoner1.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-                        summonerPerksList[0].Lane = laneSelectionSummoner1.lanes;
-                    }
 
-                    @if (summonerPerksList.Count() >= 2)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[1].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[1].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner2">
-                                    <InputSelect @bind-Value="laneSelectionSummoner2.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-
-                        summonerPerksList[1].Lane = laneSelectionSummoner2.lanes;
-
-                    }
-
-                    @if (summonerPerksList.Count() >= 3)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[2].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[2].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner3">
-                                    <InputSelect @bind-Value="laneSelectionSummoner3.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-
-                        summonerPerksList[2].Lane = laneSelectionSummoner3.lanes;
-
-                    }
-
-                    @if (summonerPerksList.Count() >= 4)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[3].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[3].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner4">
-                                    <InputSelect @bind-Value="laneSelectionSummoner4.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-
-                        summonerPerksList[3].Lane = laneSelectionSummoner4.lanes;
-
-                    }
-
-                    @if (summonerPerksList.Count() >= 5)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[4].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[4].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner5">
-                                    <InputSelect @bind-Value="laneSelectionSummoner5.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-
-                        summonerPerksList[4].Lane = laneSelectionSummoner5.lanes;
-
-                    }
-
+            @if (summonerPerksList.Count() != 0)
+            {
+                <div class="alert-primary" style="border-radius: 10px;">
+                    <h3 style="padding: 5px;"><strong>Info!</strong> Rune information avalable</h3>
                 </div>
-                <div class="red-side">
+                <br />
+                <div class="summoner-lane">
+                    <div class="blue-side">
+                        @foreach (var summoner in summonerPerksList.Select((info, index) => (info, index)))
+                        {
+                            @if (summoner.info.TeamId == 100)
+                            {
+                                <div class="summoner-lane-info">
+                                    <div class="summoner-lane-info-summoner-name">
+                                        @summonerPerksList[summoner.index].SummonerName
+                                    </div>
+                                    <div class="summoner-lane-info-picture-champ">
+                                        <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[summoner.index].ChampionId)" />
+                                    </div>
+                                    <div class="summoner-lane-info-select">
+                                        <EditForm Model="laneSelectionSummoner1">
+                                            <InputSelect @bind-Value="summonerPerksList[summoner.index].Lane">
+                                                @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
+                                                {
+                                                    <option>@lane</option>
+                                                }
+                                            </InputSelect>
+                                        </EditForm>
+                                    </div>
+                                </div>
+                                summonerPerksList[summoner.index].Lane = summonerPerksList[summoner.index].Lane;
+                            }
+                        }
+                    </div>
 
-                    @if (summonerPerksList.Count() >= 6)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[5].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[5].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner6">
-                                    <InputSelect @bind-Value="laneSelectionSummoner6.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-
-                        summonerPerksList[5].Lane = laneSelectionSummoner6.lanes;
-
-                    }
-
-
-                    @if (summonerPerksList.Count() >= 7)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[6].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[6].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner7">
-                                    <InputSelect @bind-Value="laneSelectionSummoner7.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-
-                        summonerPerksList[6].Lane = laneSelectionSummoner7.lanes;
-
-                    }
-
-                    @if (summonerPerksList.Count() >= 8)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[7].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[7].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner8">
-                                    <InputSelect @bind-Value="laneSelectionSummoner8.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-
-                        summonerPerksList[7].Lane = laneSelectionSummoner8.lanes;
-
-                    }
-
-                    @if (summonerPerksList.Count() >= 9)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[8].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[8].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner9">
-                                    <InputSelect @bind-Value="laneSelectionSummoner9.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-
-                        summonerPerksList[8].Lane = laneSelectionSummoner9.lanes;
-
-                    }
-
-                    @if (summonerPerksList.Count() >= 10)
-                    {
-                        <div class="summoner-lane-info">
-                            <div class="summoner-lane-info-summoner-name">
-                                @summonerPerksList[9].SummonerName
-                            </div>
-                            <div class="summoner-lane-info-picture-champ">
-                                <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[9].ChampionId)" />
-                            </div>
-                            <div class="summoner-lane-info-select">
-                                <EditForm Model="laneSelectionSummoner10">
-                                    <InputSelect @bind-Value="laneSelectionSummoner10.lanes">
-                                        @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
-                                        {
-                                            <option>@lane</option>
-                                        }
-                                    </InputSelect>
-                                </EditForm>
-                            </div>
-                        </div>
-
-                        summonerPerksList[9].Lane = laneSelectionSummoner10.lanes;
-
-                    }
+                    <div class="red-side">
+                        @foreach (var summoner in summonerPerksList.Select((info, index) => (info, index)))
+                        {
+                            @if (summoner.info.TeamId == 200)
+                            {
+                                <div class="summoner-lane-info">
+                                    <div class="summoner-lane-info-summoner-name">
+                                        @summonerPerksList[summoner.index].SummonerName
+                                    </div>
+                                    <div class="summoner-lane-info-picture-champ">
+                                        <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[summoner.index].ChampionId)" />
+                                    </div>
+                                    <div class="summoner-lane-info-select">
+                                        <EditForm Model="laneSelectionSummoner1">
+                                            <InputSelect @bind-Value="summonerPerksList[summoner.index].Lane">
+                                                @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
+                                                {
+                                                    <option>@lane</option>
+                                                }
+                                            </InputSelect>
+                                        </EditForm>
+                                    </div>
+                                </div>
+                                summonerPerksList[summoner.index].Lane = summonerPerksList[summoner.index].Lane;
+                            }
+                        }
+                    </div>
                 </div>
-            </div>
+            }
+            else
+            {
+                <div class="alert-danger" style="border-radius: 10px;">
+                    <h3 style="padding: 5px;"><strong>Info!</strong> Not rune information found</h3>
+                </div>
+            }
+            @*<div class="red-side">*@
+            @*@foreach (var summoner in summonerPerksList.Select((info, index) => (info, index)))*@
+            @*{*@
+            @*@if (summoner.info.TeamId.Equals("200"))*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[summoner.index].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[summoner.index].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner1">*@
+            @*<InputSelect @bind-Value="summonerPerksList[summoner.index].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+            @*summonerPerksList[0].Lane = laneSelectionSummoner1.lanes;*@
+            @*summonerPerksList[summoner.index].Lane = summonerPerksList[summoner.index].Lane;*@
+            @*}*@
+            @*}*@
+            @*</div>*@
+            @*<div class="blue-side">*@
+            @*@if (summonerPerksList.Count() >= 1)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[0].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[0].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner1">*@
+            @*<InputSelect @bind-Value="summonerPerksList[0].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+            @*summonerPerksList[0].Lane = laneSelectionSummoner1.lanes;*@
+            @*summonerPerksList[0].Lane = summonerPerksList[0].Lane;*@
+            @*}*@
+
+            @*@if (summonerPerksList.Count() >= 2)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[1].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[1].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner2">*@
+            @*<InputSelect @bind-Value="summonerPerksList[1].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+
+            @*summonerPerksList[1].Lane = summonerPerksList[1].Lane;*@
+
+            @*}*@
+
+            @*@if (summonerPerksList.Count() >= 3)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[2].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[2].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner3">*@
+            @*<InputSelect @bind-Value="summonerPerksList[2].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+
+            @*summonerPerksList[2].Lane = summonerPerksList[2].Lane;*@
+
+            @*}*@
+
+            @*@if (summonerPerksList.Count() >= 4)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[3].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[3].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner4">*@
+            @*<InputSelect @bind-Value="summonerPerksList[3].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+
+            @*summonerPerksList[3].Lane = summonerPerksList[3].Lane;*@
+
+            @*}*@
+
+            @*@if (summonerPerksList.Count() >= 5)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[4].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[4].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner5">*@
+            @*<InputSelect @bind-Value="summonerPerksList[4].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+
+            @*summonerPerksList[4].Lane = summonerPerksList[4].Lane;*@
+
+            @*}*@
+
+            @*</div>*@
+            @*<div class="red-side">*@
+
+            @*@if (summonerPerksList.Count() >= 6)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[5].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[5].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner6">*@
+            @*<InputSelect @bind-Value="summonerPerksList[5].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+
+            @*summonerPerksList[5].Lane = summonerPerksList[5].Lane;*@
+
+            @*}*@
+
+
+            @*@if (summonerPerksList.Count() >= 7)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[6].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[6].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner7">*@
+            @*<InputSelect @bind-Value="summonerPerksList[6].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+
+            @*summonerPerksList[6].Lane = summonerPerksList[6].Lane;*@
+
+            @*}*@
+
+            @*@if (summonerPerksList.Count() >= 8)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[7].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[7].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner8">*@
+            @*<InputSelect @bind-Value="summonerPerksList[7].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+
+            @*summonerPerksList[7].Lane = summonerPerksList[7].Lane;*@
+
+            @*}*@
+
+            @*@if (summonerPerksList.Count() >= 9)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[8].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[8].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner9">*@
+            @*<InputSelect @bind-Value="summonerPerksList[8].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+
+            @*summonerPerksList[8].Lane = summonerPerksList[8].Lane;*@
+
+            @*}*@
+
+            @*@if (summonerPerksList.Count() >= 10)*@
+            @*{*@
+            @*<div class="summoner-lane-info">*@
+            @*<div class="summoner-lane-info-summoner-name">*@
+            @*@summonerPerksList[9].SummonerName*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-picture-champ">*@
+            @*<img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[9].ChampionId)" />*@
+            @*</div>*@
+            @*<div class="summoner-lane-info-select">*@
+            @*<EditForm Model="laneSelectionSummoner10">*@
+            @*<InputSelect @bind-Value="summonerPerksList[9].Lane">*@
+            @*@foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))*@
+            @*{*@
+            @*<option>@lane</option>*@
+            @*}*@
+            @*</InputSelect>*@
+            @*</EditForm>*@
+            @*</div>*@
+            @*</div>*@
+
+            @*summonerPerksList[9].Lane = summonerPerksList[9].Lane;*@
+
+            @*}*@
+            @*</div>*@
+            @*</div>*@
             <br />
             @{
                 //HideOrDisplayContent();
@@ -365,4 +465,22 @@
     public static LaneInfo laneSelectionSummoner10 = new();
 
     public static Overlay overlay = new();
+
+    private System.Timers.Timer timer = new(5000);
+
+    protected override void OnInitialized()
+    {
+        timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        timer.Start();
+    }
+
+    private void OnTimerCallback()
+    {
+        _ = InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => timer.Dispose();
 }
