@@ -1,4 +1,4 @@
-﻿namespace OSL_Server.Pages
+﻿namespace OSL_Server.Pages.EndGame
 {
     public partial class EndGamePage
     {
