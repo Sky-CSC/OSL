@@ -40,6 +40,8 @@ namespace OSL_Server.Configuration
 
             LoadDefaultSession();
 
+            LoadWebRiotApiKey();
+
             LoadFormatingDataConfigChampSelectView1();
             LoadConfigChampSelectView1();
             LoadFormatingDataConfigChampSelectView2();
@@ -543,6 +545,7 @@ namespace OSL_Server.Configuration
             string content = FileManagerLocal.ReadInFile("./Configuration/webApiRiot.json");
             dynamic jsonContent = JsonConvert.DeserializeObject(content);
             WebApiRiot.apiKey = jsonContent.apiKey;
+            _logger.log(LoggingLevel.INFO, "LoadWebRiotApiKey()", $"Api key loaded");
         }
 
 

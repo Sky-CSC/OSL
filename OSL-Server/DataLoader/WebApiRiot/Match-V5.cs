@@ -43,5 +43,11 @@ namespace OSL_Server.DataLoader.WebApiRiot
         {
             return $"{httpsUrl}{region}{pathUrlApiRiot}/lol/match/v5/matches/{matchId}";
         }
+
+        public static string Timeline(Int64 matchId)
+        {
+            //return $"{httpsUrl}{region}{pathUrlApiRiot}/lol/match/v5/matches/EUW1_{matchId}/timeline";
+            return $"{httpsUrl}{region}{pathUrlApiRiot}/lol/match/v5/matches/EUW1_{matchId}/timeline";
+        }
     }
 }
