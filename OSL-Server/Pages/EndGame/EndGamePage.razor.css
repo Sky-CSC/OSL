@@ -17,3 +17,20 @@ html, body {
     font-weight: bold;
     text-decoration: underline;
 }
+
+.button-color {
+    height: 30px;
+    width: 30px;
+}
+
+.champ-select-overlay-1 {
+    margin: auto;
+    position: relative;
+}
+
+.color-picker {
+    position: absolute;
+    left: 900px;
+    top: 1000px;
+    border: 5px solid black;
+}

@@ -1,17 +1,35 @@
 ﻿using Newtonsoft.Json;
+using OSL_Server.DataLoader.CDragon;
 using OSL_Server.DataLoader.WebApiRiot;
+//using OSL_Server.DataReciveClient.Processing.ChampSelect;
 using System.Linq;
+using System.Reflection.Emit;
 using static MudBlazor.CategoryTypes;
+using static OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo;
 
 namespace OSL_Server.DataReciveClient.Processing.EndGame
 {
     public class EndGameInfo
     {
         private static OSLLogger _logger = new OSLLogger("EndGameInfo");
+        public static InfoEndGame infoEndGame = new();
+        public static dynamic jsonContentEndOfMatch = null;
+        public static dynamic jsonContentMatch = null;
+        public static dynamic jsonContentTimeline = null;
         public static void EndGame(string content)
         {
+            infoEndGame = new();
             //Console.WriteLine(content);
-            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            jsonContentEndOfMatch = JsonConvert.DeserializeObject(content);
+            Int64 gameId = jsonContentEndOfMatch.gameId;
+            string urlMatch = Match_V5.Matches(gameId);
+            string dataMatch = WebApiRiot.RequestWebApiRiot(urlMatch);
+            jsonContentMatch = JsonConvert.DeserializeObject(dataMatch);
+            string urlTimeline = Match_V5.Timeline(gameId);
+            string dataTimeline = WebApiRiot.RequestWebApiRiot(urlTimeline);
+            jsonContentTimeline = JsonConvert.DeserializeObject(dataTimeline);
+
+
             //Console.WriteLine(jsonContent.teams);
             //foreach (var teams in jsonContent.teams)
             //{
@@ -31,97 +49,132 @@ namespace OSL_Server.DataReciveClient.Processing.EndGame
             //    }
             //}
             //Console.WriteLine(jsonContent.gameId);
-            Int64 gameId = jsonContent.gameId;
-            string url = Match_V5.Timeline(gameId);
-            string data = WebApiRiot.RequestWebApiRiot(url);
-            dynamic jsonContentTimeline = JsonConvert.DeserializeObject(data);
-            Console.WriteLine(jsonContentTimeline.metadata.matchId);
-            int nbDragonKill = 0;
-            int HEXTECH_DRAGON = 0;
-            int WATER_DRAGON = 0;
-            int FIRE_DRAGON = 0;
-            int CLOUD_DRAGON = 0;
-            int CHEMTECH_DRAGON = 0;
-            int MONTAIN_DRAGON = 0;
+            //foreach (var teams in jsonContentEndOfMatch.teams)
+            //{
+            //    foreach (var player in teams.players)
+            //    {
+            //        Stats stats = new();
+            //        stats.kill = ;
+            //        stats.deaths = ;
+            //        stats.assist = ;
+            //        stats.gold = ;
+            //        stats.level = ;
+            //        stats.farm = ;
+            //        stats.damageDeal = ;
+            //        stats.damageDealToBuildings = ;
+            //        stats.damageDealToChampions = ;
+            //        stats.damageDealToObjectives = ;
+            //        stats.damageDealToTurrets = ;
+            //        stats.trueDamageDealToChampion = ;
+            //        stats.physicalDamageDealToChampion = ;
+            //        stats.magicDamageDealToChampion = ;
+            //        stats.damageSelftMitigated = ;
+            //        stats.heal = ;
+            //        stats.damageTaken = ;
+            //        stats.visionScore = ;
+            //        infoEndGame.summonerInfos.Add(new SummonerInfo()
+            //        {
+            //            teamId = jsonContentEndOfMatch.teamId,
+            //            championName = jsonContentEndOfMatch.championName,
+            //            summonerName = jsonContentEndOfMatch.summonerName,
+            //            championSquarePortraitPath = jsonContentEndOfMatch.championSquarePortraitPath,
+            //            items = JsonConvert.DeserializeObject(JsonConvert.SerializeObject(jsonContentEndOfMatch.items)),
+            //            stats = stats,
+            //        });
+            //    }
+            //}
 
-            int ELDER_DRAGON = 0;
-            int RIFTHERALD = 0;
-            int BARON_NASHOR = 0;
+
+
+
+            //Console.WriteLine(jsonContentTimeline.metadata.matchId);
+
+            //int nbDragonKill = 0;
+            //int HEXTECH_DRAGON = 0;
+            //int WATER_DRAGON = 0;
+            //int FIRE_DRAGON = 0;
+            //int CLOUD_DRAGON = 0;
+            //int CHEMTECH_DRAGON = 0;
+            //int MONTAIN_DRAGON = 0;
+
+            //int ELDER_DRAGON = 0;
+            //int RIFTHERALD = 0;
+            //int BARON_NASHOR = 0;
             //Console.WriteLine(jsonContentTimeline.info.frames[8].events[2].monsterSubType);
             //Console.WriteLine(jsonContentTimeline.info.frames[8].events[2].monsterType);
             //Console.WriteLine(jsonContentTimeline.info.frames[8].events[0]);
-            Console.WriteLine(jsonContentTimeline.info.frames[13].events[3]);
-            foreach (var frames in jsonContentTimeline.info.frames)
-            {
-                foreach (var events in frames.events)
-                {
-                    //Console.WriteLine(events);
-                    try
-                    {
-                        string monsterSubType = events.monsterSubType;
-                        string monsterType = events.monsterType;
-                        //string monsterType = events.monsterType;
-                        if (monsterSubType != null && monsterSubType.Equals("HEXTECH_DRAGON"))
-                        {
-                            HEXTECH_DRAGON++;
-                            Console.WriteLine(monsterSubType);
-                        }
-                        if (monsterSubType != null && monsterSubType.Equals("WATER_DRAGON"))
-                        {
-                            WATER_DRAGON++;
-                            Console.WriteLine(monsterSubType);
-                        }
-                        if (monsterSubType != null && monsterSubType.Equals("FIRE_DRAGON"))
-                        {
-                            FIRE_DRAGON++;
-                            Console.WriteLine(monsterSubType);
-                        }
-                        if (monsterSubType != null && monsterSubType.Equals("CLOUD_DRAGON"))
-                        {
-                            CLOUD_DRAGON++;
-                            Console.WriteLine(monsterSubType);
-                        }
-                        if (monsterSubType != null && monsterSubType.Equals("CHEMTECH_DRAGON"))
-                        {
-                            CHEMTECH_DRAGON++;
-                            Console.WriteLine(monsterSubType);
-                        }
-                        if (monsterSubType != null && monsterSubType.Equals("MONTAIN_DRAGON"))
-                        {
-                            MONTAIN_DRAGON++;
-                            Console.WriteLine(monsterSubType);
-                        }
-                        if (monsterSubType != null && monsterSubType.Equals("ELDER_DRAGON"))
-                        {
-                            ELDER_DRAGON++;
-                            Console.WriteLine(monsterSubType);
-                        }
-                        if (monsterType != null && monsterType.Equals("RIFTHERALD"))
-                        {
-                            RIFTHERALD++;
-                            Console.WriteLine(monsterType);
-                        }
-                        if (monsterType != null && monsterType.Equals("BARON_NASHOR"))
-                        {
-                            BARON_NASHOR++;
-                            Console.WriteLine(monsterType);
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        //_logger.log(LoggingLevel.ERROR, "EndGame()", $"{e.Message}");
-                    }
-                }
-            }
-            Console.WriteLine("HEXTECH_DRAGON : " + HEXTECH_DRAGON);
-            Console.WriteLine("WATER_DRAGON : " + WATER_DRAGON);
-            Console.WriteLine("FIRE_DRAGON : " + FIRE_DRAGON);
-            Console.WriteLine("CLOUD_DRAGON : " + CLOUD_DRAGON);
-            Console.WriteLine("CHEMTECH_DRAGON : " + CHEMTECH_DRAGON);
-            Console.WriteLine("MONTAIN_DRAGON : " + MONTAIN_DRAGON);
-            Console.WriteLine("ELDER_DRAGON : " + ELDER_DRAGON);
-            Console.WriteLine("RIFTHERALD : " + RIFTHERALD);
-            Console.WriteLine("BARON_NASHOR : " + BARON_NASHOR);
+            //Console.WriteLine(jsonContentTimeline.info.frames[13].events[3]);
+            //foreach (var frames in jsonContentTimeline.info.frames)
+            //{
+            //    foreach (var events in frames.events)
+            //    {
+            //        //Console.WriteLine(events);
+            //        try
+            //        {
+            //            string monsterSubType = events.monsterSubType;
+            //            string monsterType = events.monsterType;
+            //            //string monsterType = events.monsterType;
+            //            if (monsterSubType != null && monsterSubType.Equals("HEXTECH_DRAGON"))
+            //            {
+            //                HEXTECH_DRAGON++;
+            //                Console.WriteLine(monsterSubType);
+            //            }
+            //            if (monsterSubType != null && monsterSubType.Equals("WATER_DRAGON"))
+            //            {
+            //                WATER_DRAGON++;
+            //                Console.WriteLine(monsterSubType);
+            //            }
+            //            if (monsterSubType != null && monsterSubType.Equals("FIRE_DRAGON"))
+            //            {
+            //                FIRE_DRAGON++;
+            //                Console.WriteLine(monsterSubType);
+            //            }
+            //            if (monsterSubType != null && monsterSubType.Equals("CLOUD_DRAGON"))
+            //            {
+            //                CLOUD_DRAGON++;
+            //                Console.WriteLine(monsterSubType);
+            //            }
+            //            if (monsterSubType != null && monsterSubType.Equals("CHEMTECH_DRAGON"))
+            //            {
+            //                CHEMTECH_DRAGON++;
+            //                Console.WriteLine(monsterSubType);
+            //            }
+            //            if (monsterSubType != null && monsterSubType.Equals("MONTAIN_DRAGON"))
+            //            {
+            //                MONTAIN_DRAGON++;
+            //                Console.WriteLine(monsterSubType);
+            //            }
+            //            if (monsterSubType != null && monsterSubType.Equals("ELDER_DRAGON"))
+            //            {
+            //                ELDER_DRAGON++;
+            //                Console.WriteLine(monsterSubType);
+            //            }
+            //            if (monsterType != null && monsterType.Equals("RIFTHERALD"))
+            //            {
+            //                RIFTHERALD++;
+            //                Console.WriteLine(monsterType);
+            //            }
+            //            if (monsterType != null && monsterType.Equals("BARON_NASHOR"))
+            //            {
+            //                BARON_NASHOR++;
+            //                Console.WriteLine(monsterType);
+            //            }
+            //        }
+            //        catch (Exception e)
+            //        {
+            //            //_logger.log(LoggingLevel.ERROR, "EndGame()", $"{e.Message}");
+            //        }
+            //    }
+            //}
+            //Console.WriteLine("HEXTECH_DRAGON : " + HEXTECH_DRAGON);
+            //Console.WriteLine("WATER_DRAGON : " + WATER_DRAGON);
+            //Console.WriteLine("FIRE_DRAGON : " + FIRE_DRAGON);
+            //Console.WriteLine("CLOUD_DRAGON : " + CLOUD_DRAGON);
+            //Console.WriteLine("CHEMTECH_DRAGON : " + CHEMTECH_DRAGON);
+            //Console.WriteLine("MONTAIN_DRAGON : " + MONTAIN_DRAGON);
+            //Console.WriteLine("ELDER_DRAGON : " + ELDER_DRAGON);
+            //Console.WriteLine("RIFTHERALD : " + RIFTHERALD);
+            //Console.WriteLine("BARON_NASHOR : " + BARON_NASHOR);
 
             //Console.WriteLine(jsonContentTimeline.info.frames[0]);
             //Console.WriteLine(JsonConvert.SerializeObject(jsonContentTimeline.info.frames[0]));
@@ -147,13 +200,15 @@ namespace OSL_Server.DataReciveClient.Processing.EndGame
             //        }
             //    }
             //}
-            Console.WriteLine(nbDragonKill);
+            //Console.WriteLine(nbDragonKill);
         }
 
         public class InfoEndGame
         {
             public List<SummonerInfo> summonerInfos { get; set; }
-            public List<Objectifs> objectifs { get; set; }
+            public List<Events> events { get; set; }
+            public List<Bans> bans { get; set; }
+            public string gameLength { get; set; }
         }
 
         public class SummonerInfo
@@ -188,18 +243,18 @@ namespace OSL_Server.DataReciveClient.Processing.EndGame
             public int visionScore { get; set; }
         }
 
-        public class Objectifs //A revoir
+        public class Events
         {
-            public int teamId { get; set; }
-            public int hextechDragon { get; set; }
-            public int waterDragon { get; set; }
-            public int fireDragon { get; set; }
-            public int cloudDragon { get; set; }
-            public int chemtechDragon { get; set; }
-            public int montain_dragon { get; set; }
-            public int elderDragon { get; set; }
-            public int riftHerald { get; set; }
-            public int baronNashor { get; set; }
+            public int killerTeamId { get; set; }
+            public string monsterSubType { get; set; }
+            public string monsterType { get; set; }
+
+        }
+
+        public class Bans
+        {
+            public int championId { get; set; }
+            public int pickTurn { get; set; }
         }
     }
 }
