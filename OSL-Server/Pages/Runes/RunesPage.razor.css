@@ -14,6 +14,10 @@ html, body {
     text-decoration: underline;
 }
 
+.parent {
+    overflow: hidden
+}
+
 /*.summoner-lane {
     justify-content: center;
 }*/

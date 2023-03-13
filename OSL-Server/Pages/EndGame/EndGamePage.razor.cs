@@ -10,6 +10,11 @@ namespace OSL_Server.Pages.EndGame
         private static OSLLogger _logger = new OSLLogger("CDragonPage");
 
         public static string colorPickerOverlay1 = "hidden";
+        public static string colorPickerOverlay1TimerBar = "hidden";
+        public static string colorPickerOverlay1ChampInfo = "hidden";
+        public static string colorPickerOverlay1Bans = "hidden";
+        public static string colorPickerOverlay1GlobalStats = "hidden";
+        public static string colorPickerOverlay1GoldDiff = "hidden";
         public static string colorValue = "#0000";
 
         public class TextValueOverlayView1
@@ -147,28 +152,28 @@ namespace OSL_Server.Pages.EndGame
 
             public static void SetTopBarBackgroundColorColor1()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1TimerBar.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1TimerBar = "visible";
                     colorValue = EndGameView1Page.formatingData.TopBarBackgroundColorColor1;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1TimerBar = "hidden";
                     EndGameView1Page.formatingData.TopBarBackgroundColorColor1 = colorValue;
                     EndGameView1Page.formatingData.TopBarBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.TopBarBackgroundColorDeg}deg, {EndGameView1Page.formatingData.TopBarBackgroundColorColor1} {EndGameView1Page.formatingData.TopBarBackgroundColorPercent1}%, {EndGameView1Page.formatingData.TopBarBackgroundColorColor2} {EndGameView1Page.formatingData.TopBarBackgroundColorPercent2}%)";
                 }
             }
             public static void SetTopBarBackgroundColorColor2()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1TimerBar.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1TimerBar = "visible";
                     colorValue = EndGameView1Page.formatingData.TopBarBackgroundColorColor2;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1TimerBar = "hidden";
                     EndGameView1Page.formatingData.TopBarBackgroundColorColor2 = colorValue;
                     EndGameView1Page.formatingData.TopBarBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.TopBarBackgroundColorDeg}deg, {EndGameView1Page.formatingData.TopBarBackgroundColorColor1} {EndGameView1Page.formatingData.TopBarBackgroundColorPercent1}%, {EndGameView1Page.formatingData.TopBarBackgroundColorColor2} {EndGameView1Page.formatingData.TopBarBackgroundColorPercent2}%)";
                 }
@@ -186,68 +191,68 @@ namespace OSL_Server.Pages.EndGame
             public static string TopBarBorderColorNotSet = EndGameView1Page.formatingData.TopBarBorderColor.Split(" ")[2];
             public static void SetTopBarBorderColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1TimerBar.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1TimerBar = "visible";
                     string[] tempsBorderColor = EndGameView1Page.formatingData.TopBarBorderColor.Split(" ");
                     colorValue = tempsBorderColor[2];
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1TimerBar = "hidden";
                     TopBarBorderColorNotSet = colorValue;
                 }
             }
 
             public static void SetTopBarBlueTeamNameColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1TimerBar.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1TimerBar = "visible";
                     colorValue = EndGameView1Page.formatingData.TopBarBlueTeamNameColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1TimerBar = "hidden";
                     EndGameView1Page.formatingData.TopBarBlueTeamNameColor = colorValue;
                 }
             }
             public static void SetTopBarRedTeamNameColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1TimerBar.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1TimerBar = "visible";
                     colorValue = EndGameView1Page.formatingData.TopBarRedTeamNameColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1TimerBar = "hidden";
                     EndGameView1Page.formatingData.TopBarRedTeamNameColor = colorValue;
                 }
             }
             public static void SetTopBarTimerTextColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1TimerBar.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1TimerBar = "visible";
                     colorValue = EndGameView1Page.formatingData.TopBarTimerTextColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1TimerBar = "hidden";
                     EndGameView1Page.formatingData.TopBarTimerTextColor = colorValue;
                 }
             }
             public static void SetTopBarTimerColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1TimerBar.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1TimerBar = "visible";
                     colorValue = EndGameView1Page.formatingData.TopBarTimerColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1TimerBar = "hidden";
                     EndGameView1Page.formatingData.TopBarTimerColor = colorValue;
                 }
             }
@@ -273,28 +278,28 @@ namespace OSL_Server.Pages.EndGame
 
             public static void SetChampionInfoBackgroundColorColor1()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1ChampInfo.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1ChampInfo = "visible";
                     colorValue = EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor1;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1ChampInfo = "hidden";
                     EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor1 = colorValue;
                     EndGameView1Page.formatingData.ChampionInfoBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.ChampionInfoBackgroundColorDeg}deg, {EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor1} {EndGameView1Page.formatingData.ChampionInfoBackgroundColorPercent1}%, {EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor2} {EndGameView1Page.formatingData.ChampionInfoBackgroundColorPercent2}%)";
                 }
             }
             public static void SetChampionInfoBackgroundColorColor2()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1ChampInfo.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1ChampInfo = "visible";
                     colorValue = EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor2;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1ChampInfo = "hidden";
                     EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor2 = colorValue;
                     EndGameView1Page.formatingData.ChampionInfoBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.ChampionInfoBackgroundColorDeg}deg, {EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor1} {EndGameView1Page.formatingData.ChampionInfoBackgroundColorPercent1}%, {EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor2} {EndGameView1Page.formatingData.ChampionInfoBackgroundColorPercent2}%)";
                 }
@@ -311,80 +316,80 @@ namespace OSL_Server.Pages.EndGame
             public static string ChampionInfoBorderColorNotSet = EndGameView1Page.formatingData.ChampionInfoBorderColor.Split(" ")[2];
             public static void SetChampionInfoBorderColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1ChampInfo.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1ChampInfo = "visible";
                     string[] tempsBorderColor = EndGameView1Page.formatingData.ChampionInfoBorderColor.Split(" ");
                     colorValue = tempsBorderColor[2];
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1ChampInfo = "hidden";
                     ChampionInfoBorderColorNotSet = colorValue;
                 }
             }
             public static void SetChampionInfoTextColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1ChampInfo.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1ChampInfo = "visible";
                     colorValue = EndGameView1Page.formatingData.ChampionInfoTextColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1ChampInfo = "hidden";
                     EndGameView1Page.formatingData.ChampionInfoTextColor = colorValue;
                 }
             }
             public static void SetChampionInfoBlueBarColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1ChampInfo.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1ChampInfo = "visible";
                     colorValue = EndGameView1Page.formatingData.ChampionInfoBlueBarColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1ChampInfo = "hidden";
                     EndGameView1Page.formatingData.ChampionInfoBlueBarColor = colorValue;
                 }
             }
             public static void SetChampionInfoBlueDegaTextColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1ChampInfo.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1ChampInfo = "visible";
                     colorValue = EndGameView1Page.formatingData.ChampionInfoBlueDegaTextColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1ChampInfo = "hidden";
                     EndGameView1Page.formatingData.ChampionInfoBlueDegaTextColor = colorValue;
                 }
             }
             public static void SetChampionInfoRedBarColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1ChampInfo.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1ChampInfo = "visible";
                     colorValue = EndGameView1Page.formatingData.ChampionInfoRedBarColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1ChampInfo = "hidden";
                     EndGameView1Page.formatingData.ChampionInfoRedBarColor = colorValue;
                 }
             }
             public static void SetChampionInfoRedDegaTextColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1ChampInfo.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1ChampInfo = "visible";
                     colorValue = EndGameView1Page.formatingData.ChampionInfoRedDegaTextColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1ChampInfo = "hidden";
                     EndGameView1Page.formatingData.ChampionInfoRedDegaTextColor = colorValue;
                 }
             }
@@ -408,28 +413,28 @@ namespace OSL_Server.Pages.EndGame
 
             public static void SetBansBackgroundColorColor1()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1Bans.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1Bans = "visible";
                     colorValue = EndGameView1Page.formatingData.BansBackgroundColorColor1;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1Bans = "hidden";
                     EndGameView1Page.formatingData.BansBackgroundColorColor1 = colorValue;
                     EndGameView1Page.formatingData.BansBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.BansBackgroundColorDeg}deg, {EndGameView1Page.formatingData.BansBackgroundColorColor1} {EndGameView1Page.formatingData.BansBackgroundColorPercent1}%, {EndGameView1Page.formatingData.BansBackgroundColorColor2} {EndGameView1Page.formatingData.BansBackgroundColorPercent2}%)";
                 }
             }
             public static void SetBansBackgroundColorColor2()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1Bans.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1Bans = "visible";
                     colorValue = EndGameView1Page.formatingData.BansBackgroundColorColor2;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1Bans = "hidden";
                     EndGameView1Page.formatingData.BansBackgroundColorColor2 = colorValue;
                     EndGameView1Page.formatingData.BansBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.BansBackgroundColorDeg}deg, {EndGameView1Page.formatingData.BansBackgroundColorColor1} {EndGameView1Page.formatingData.BansBackgroundColorPercent1}%, {EndGameView1Page.formatingData.BansBackgroundColorColor2} {EndGameView1Page.formatingData.BansBackgroundColorPercent2}%)";
                 }
@@ -446,29 +451,29 @@ namespace OSL_Server.Pages.EndGame
             public static string BansBorderColorNotSet = EndGameView1Page.formatingData.BansBorderColor.Split(" ")[2];
             public static void SetBansBorderColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1Bans.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1Bans = "visible";
                     string[] tempsBorderColor = EndGameView1Page.formatingData.BansBorderColor.Split(" ");
                     colorValue = tempsBorderColor[2];
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1Bans = "hidden";
                     BansBorderColorNotSet = colorValue;
                 }
             }
 
             public static void SetBansTextColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1Bans.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1Bans = "visible";
                     colorValue = EndGameView1Page.formatingData.BansTextColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1Bans = "hidden";
                     EndGameView1Page.formatingData.BansTextColor = colorValue;
                 }
             }
@@ -498,28 +503,28 @@ namespace OSL_Server.Pages.EndGame
 
             public static void SetGlobalStatsBackgroundColorColor1()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GlobalStats.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GlobalStats = "visible";
                     colorValue = EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor1;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GlobalStats = "hidden";
                     EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor1 = colorValue;
                     EndGameView1Page.formatingData.GlobalStatsBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.GlobalStatsBackgroundColorDeg}deg, {EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor1} {EndGameView1Page.formatingData.GlobalStatsBackgroundColorPercent1}%, {EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor2} {EndGameView1Page.formatingData.GlobalStatsBackgroundColorPercent2}%)";
                 }
             }
             public static void SetGlobalStatsBackgroundColorColor2()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GlobalStats.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GlobalStats = "visible";
                     colorValue = EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor2;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GlobalStats = "hidden";
                     EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor2 = colorValue;
                     EndGameView1Page.formatingData.GlobalStatsBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.BansBackgroundColorDeg}deg, {EndGameView1Page.formatingData.BansBackgroundColorColor1} {EndGameView1Page.formatingData.GlobalStatsBackgroundColorPercent1}%, {EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor2} {EndGameView1Page.formatingData.GlobalStatsBackgroundColorPercent2}%)";
                 }
@@ -536,56 +541,56 @@ namespace OSL_Server.Pages.EndGame
             public static string GlobalStatsBorderColorNotSet = EndGameView1Page.formatingData.GlobalStatsBorderColor.Split(" ")[2];
             public static void SetGlobalStatsBorderColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GlobalStats.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GlobalStats = "visible";
                     string[] tempsBorderColor = EndGameView1Page.formatingData.GlobalStatsBorderColor.Split(" ");
                     colorValue = tempsBorderColor[2];
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GlobalStats = "hidden";
                     GlobalStatsBorderColorNotSet = colorValue;
                 }
             }
             public static void SetGlobalStatsTextColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GlobalStats.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GlobalStats = "visible";
                     colorValue = EndGameView1Page.formatingData.GlobalStatsTextColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GlobalStats = "hidden";
                     EndGameView1Page.formatingData.GlobalStatsTextColor = colorValue;
                 }
             }
 
             public static void SetGlobalStatsBlueTextColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GlobalStats.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GlobalStats = "visible";
                     colorValue = EndGameView1Page.formatingData.GlobalStatsBlueTextColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GlobalStats = "hidden";
                     EndGameView1Page.formatingData.GlobalStatsBlueTextColor = colorValue;
                 }
             }
 
             public static void SetGlobalStatsRedTextColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GlobalStats.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GlobalStats = "visible";
                     colorValue = EndGameView1Page.formatingData.GlobalStatsRedTextColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GlobalStats = "hidden";
                     EndGameView1Page.formatingData.GlobalStatsRedTextColor = colorValue;
                 }
             }
@@ -606,28 +611,28 @@ namespace OSL_Server.Pages.EndGame
 
             public static void SetGoldDiffBackgroundColorColor1()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GoldDiff = "visible";
                     colorValue = EndGameView1Page.formatingData.GoldDiffBackgroundColorColor1;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GoldDiff = "hidden";
                     EndGameView1Page.formatingData.GoldDiffBackgroundColorColor1 = colorValue;
                     EndGameView1Page.formatingData.GoldDiffBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.GoldDiffBackgroundColorDeg}deg, {EndGameView1Page.formatingData.GoldDiffBackgroundColorColor1} {EndGameView1Page.formatingData.GoldDiffBackgroundColorPercent1}%, {EndGameView1Page.formatingData.GoldDiffBackgroundColorColor2} {EndGameView1Page.formatingData.GoldDiffBackgroundColorPercent2}%)";
                 }
             }
             public static void SetGoldDiffBackgroundColorColor2()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GoldDiff = "visible";
                     colorValue = EndGameView1Page.formatingData.GoldDiffBackgroundColorColor2;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GoldDiff = "hidden";
                     EndGameView1Page.formatingData.GoldDiffBackgroundColorColor2 = colorValue;
                     EndGameView1Page.formatingData.GoldDiffBackgroundColor = $"linear-gradient({EndGameView1Page.formatingData.GoldDiffBackgroundColorDeg}deg, {EndGameView1Page.formatingData.GoldDiffBackgroundColorColor1} {EndGameView1Page.formatingData.GoldDiffBackgroundColorPercent1}%, {EndGameView1Page.formatingData.GoldDiffBackgroundColorColor2} {EndGameView1Page.formatingData.GoldDiffBackgroundColorPercent2}%)";
                 }
@@ -644,28 +649,28 @@ namespace OSL_Server.Pages.EndGame
             public static string GoldDiffBorderColorNotSet = EndGameView1Page.formatingData.GoldDiffBorderColor.Split(" ")[2];
             public static void SetGoldDiffBorderColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GoldDiff = "visible";
                     string[] tempsBorderColor = EndGameView1Page.formatingData.GoldDiffBorderColor.Split(" ");
                     colorValue = tempsBorderColor[2];
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GoldDiff = "hidden";
                     GoldDiffBorderColorNotSet = colorValue;
                 }
             }
             public static void SetGoldDiffTextColor()
             {
-                if (colorPickerOverlay1.Equals("hidden"))
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
                 {
-                    colorPickerOverlay1 = "visible";
+                    colorPickerOverlay1GoldDiff = "visible";
                     colorValue = EndGameView1Page.formatingData.GoldDiffTextColor;
                 }
                 else
                 {
-                    colorPickerOverlay1 = "hidden";
+                    colorPickerOverlay1GoldDiff = "hidden";
                     EndGameView1Page.formatingData.GoldDiffTextColor = colorValue;
                 }
             }

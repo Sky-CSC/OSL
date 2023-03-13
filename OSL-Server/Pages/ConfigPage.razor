@@ -91,6 +91,21 @@
             </div>
             <br />
             <br />
+            <div class="configuration-end-game">
+                <h2 class="title">Configuration end game :</h2>
+                <div class="configuration-end-game-content">
+                    <div>
+                        <h3 class="title"><u>View 1 :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileEndGameView1">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileEndGameView1()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
             <div class="configuration-runes">
                 <h2 class="title">Configuration runes :</h2>
                 <div class="configuration-runes-content">

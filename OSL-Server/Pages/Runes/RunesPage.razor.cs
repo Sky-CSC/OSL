@@ -157,16 +157,6 @@ namespace OSL_Server.Pages.Runes
             {
                 info.Lane = Lanes.None;
             }
-            laneSelectionSummoner1.lanes = Lanes.None;
-            laneSelectionSummoner2.lanes = Lanes.None;
-            laneSelectionSummoner3.lanes = Lanes.None;
-            laneSelectionSummoner4.lanes = Lanes.None;
-            laneSelectionSummoner5.lanes = Lanes.None;
-            laneSelectionSummoner6.lanes = Lanes.None;
-            laneSelectionSummoner7.lanes = Lanes.None;
-            laneSelectionSummoner8.lanes = Lanes.None;
-            laneSelectionSummoner9.lanes = Lanes.None;
-            laneSelectionSummoner10.lanes = Lanes.None;
         }
 
         /// <summary>
