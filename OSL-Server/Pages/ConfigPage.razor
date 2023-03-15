@@ -102,6 +102,22 @@
                             Generate a configuration file
                         </a>
                     </div>
+                    <div>
+                        <h3 class="title"><u>View 2 :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileEndGameView2">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileEndGameView2()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>View 3 :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileEndGameView3">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileEndGameView3()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
                 </div>
             </div>
             <br />
@@ -154,6 +170,14 @@
                         Load configuration file
                         <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileRunesTop">Submit</button>
                         <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileRuneTop()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>All :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileRunesAll">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileRuneAll()" download>
                             Generate a configuration file
                         </a>
                     </div>
