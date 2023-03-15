@@ -41,8 +41,10 @@ namespace OSL_Server.Configuration
 
             LoadDefaultSession();
 
+            //Load configurations web api key
             LoadWebRiotApiKey();
 
+            //Load configurations champ select
             LoadFormatingDataConfigChampSelectView1();
             LoadConfigChampSelectView1();
             LoadFormatingDataConfigChampSelectView2();
@@ -52,6 +54,7 @@ namespace OSL_Server.Configuration
             LoadFormatingDataConfigChampSelectView4();
             LoadConfigChampSelectView4();
 
+            //Load configurations in game
             LoadFormatingDataConfigInGameView1();
             LoadConfigInGameView1();
             LoadFormatingDataConfigInGameView2();
@@ -59,7 +62,7 @@ namespace OSL_Server.Configuration
             LoadFormatingDataConfigInGameView3();
             LoadConfigInGameView3();
 
-
+            //Load configurations runes
             LoadConfigRunesPage();
             LoadFormatingDataConfigRunesTopPage();
             LoadConfigRunesTopPage();
@@ -73,9 +76,16 @@ namespace OSL_Server.Configuration
             LoadConfigRunesSuppPage();
             LoadFormatingDataConfigRunesAdcSuppPage();
             LoadConfigRunesAdcSuppPage();
+            LoadFormatingDataConfigRunesAllPage();
+            LoadConfigRunesAllPage();
 
+            //Load configurations end game
             LoadFormatingDataConfigEndGameView1();
             LoadConfigEndGameView1Page();
+            LoadFormatingDataConfigEndGameView2();
+            LoadConfigEndGameView2Page();
+            LoadFormatingDataConfigEndGameView3();
+            LoadConfigEndGameView3Page();
         }
 
         /// <summary>
@@ -786,6 +796,45 @@ namespace OSL_Server.Configuration
             RunesAdcSuppPage.formatingData.LanePictureSupp = jsonContent.LanePictureSupp;
         }
 
+        public static void LoadConfigRunesAllPage()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                RunesAllPage.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                RunesAllPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            RunesAllPage.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesAllPage()", $"{RunesAllPage.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigRunesAllPage()", $"{RunesAllPage.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigRunesAllPage()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/Runes/All/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //RunesAllPage.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //RunesAllPage.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            RunesAllPage.formatingData.BackgroudGradient = jsonContent.BackgroudGradient;
+            RunesAllPage.formatingData.OverlayColorBackgroudGradient = jsonContent.OverlayColorBackgroudGradient;
+            RunesAllPage.formatingData.BlueSideColorTextSummoner = jsonContent.BlueSideColorTextSummoner;
+            RunesAllPage.formatingData.RedSideColorTextSummoner = jsonContent.RedSideColorTextSummoner;
+            RunesAllPage.formatingData.BlueSideColorBorderChampion = jsonContent.BlueSideColorBorderChampion;
+            RunesAllPage.formatingData.RedSideColorBorderChampion = jsonContent.RedSideColorBorderChampion;
+            RunesAllPage.formatingData.BlueSideColorSeparationBar = jsonContent.BlueSideColorSeparationBar;
+            RunesAllPage.formatingData.RedSideColorSeparationBar = jsonContent.RedSideColorSeparationBar;
+            RunesAllPage.formatingData.BakgroundPicture = jsonContent.BakgroundPicture;
+            RunesAllPage.formatingData.LanePictureAdc = jsonContent.LanePictureAdc;
+            RunesAllPage.formatingData.LanePictureSupp = jsonContent.LanePictureSupp;
+            RunesAllPage.formatingData.LanePictureTop = jsonContent.LanePictureTop;
+            RunesAllPage.formatingData.LanePictureMid = jsonContent.LanePictureMid;
+            RunesAllPage.formatingData.LanePictureJungle = jsonContent.LanePictureJungle;
+        }
+
         public static void LoadConfigEndGameView1Page()
         {
             try
@@ -827,9 +876,15 @@ namespace OSL_Server.Configuration
             EndGameView1Page.formatingData.TopBarTimerTextColor = jsonContent.TopBarTimerTextColor;
             EndGameView1Page.formatingData.TopBarTimerColor = jsonContent.TopBarTimerColor;
             EndGameView1Page.formatingData.TopBarBlueTeamName = jsonContent.TopBarBlueTeamName;
+            EndGameView1Page.formatingData.TopBarBlueTeamScore = jsonContent.TopBarBlueTeamScore;
             EndGameView1Page.formatingData.TopBarBlueTeamNameColor = jsonContent.TopBarBlueTeamNameColor;
+            EndGameView1Page.formatingData.TopBarBlueTeamScoreColor = jsonContent.TopBarBlueTeamScoreColor;
+            EndGameView1Page.formatingData.TopBarBlueTeamWinLossColor = jsonContent.TopBarBlueTeamWinLossColor;
             EndGameView1Page.formatingData.TopBarRedTeamName = jsonContent.TopBarRedTeamName;
+            EndGameView1Page.formatingData.TopBarRedTeamScore = jsonContent.TopBarRedTeamScore;
             EndGameView1Page.formatingData.TopBarRedTeamNameColor = jsonContent.TopBarRedTeamNameColor;
+            EndGameView1Page.formatingData.TopBarRedTeamScoreColor = jsonContent.TopBarRedTeamScoreColor;
+            EndGameView1Page.formatingData.TopBarRedTeamWinLossColor = jsonContent.TopBarRedTeamWinLossColor;
             EndGameView1Page.formatingData.ChampionInfoBackgroundColor = jsonContent.ChampionInfoBackgroundColor;
             EndGameView1Page.formatingData.ChampionInfoBackgroundColorDeg = jsonContent.ChampionInfoBackgroundColorDeg;
             EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor1 = jsonContent.ChampionInfoBackgroundColorColor1;
@@ -874,6 +929,197 @@ namespace OSL_Server.Configuration
             EndGameView1Page.formatingData.GoldDiffBorderColor = jsonContent.GoldDiffBorderColor;
             EndGameView1Page.formatingData.GoldDiffText = jsonContent.GoldDiffText;
             EndGameView1Page.formatingData.GoldDiffTextColor = jsonContent.GoldDiffTextColor;
+        }
+
+        public static void LoadConfigEndGameView2Page()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                EndGameView2Page.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                EndGameView2Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            EndGameView2Page.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigEndGameView2Page()", $"{EndGameView2Page.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigEndGameView2Page()", $"{EndGameView2Page.formatingData.DefaultRegion}");
+        }
+
+        public static void LoadFormatingDataConfigEndGameView2()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/EndGame/View2/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //EndGameView2Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //EndGameView2Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            EndGameView2Page.formatingData.BackgroundColor = jsonContent.BackgroundColor;
+            EndGameView2Page.formatingData.BackgroundColorDeg = jsonContent.BackgroundColorDeg;
+            EndGameView2Page.formatingData.BackgroundColorColor1 = jsonContent.BackgroundColorColor1;
+            EndGameView2Page.formatingData.BackgroundColorPercent1 = jsonContent.BackgroundColorPercent1;
+            EndGameView2Page.formatingData.BackgroundColorColor2 = jsonContent.BackgroundColorColor2;
+            EndGameView2Page.formatingData.BackgroundColorPercent2 = jsonContent.BackgroundColorPercent2;
+            EndGameView2Page.formatingData.TopBarBackgroundColor = jsonContent.TopBarBackgroundColor;
+            EndGameView2Page.formatingData.TopBarBackgroundColorDeg = jsonContent.TopBarBackgroundColorDeg;
+            EndGameView2Page.formatingData.TopBarBackgroundColorColor1 = jsonContent.TopBarBackgroundColorColor1;
+            EndGameView2Page.formatingData.TopBarBackgroundColorPercent1 = jsonContent.TopBarBackgroundColorPercent1;
+            EndGameView2Page.formatingData.TopBarBackgroundColorColor2 = jsonContent.TopBarBackgroundColorColor2;
+            EndGameView2Page.formatingData.TopBarBackgroundColorPercent2 = jsonContent.TopBarBackgroundColorPercent2;
+            EndGameView2Page.formatingData.TopBarGradiant = jsonContent.TopBarGradiant;
+            EndGameView2Page.formatingData.TopBarBorderColor = jsonContent.TopBarBorderColor;
+            EndGameView2Page.formatingData.TopBarTimerText = jsonContent.TopBarTimerText;
+            EndGameView2Page.formatingData.TopBarTimerTextColor = jsonContent.TopBarTimerTextColor;
+            EndGameView2Page.formatingData.TopBarTimerColor = jsonContent.TopBarTimerColor;
+            EndGameView2Page.formatingData.TopBarBlueTeamName = jsonContent.TopBarBlueTeamName;
+            EndGameView2Page.formatingData.TopBarBlueTeamScore = jsonContent.TopBarBlueTeamScore;
+            EndGameView2Page.formatingData.TopBarBlueTeamNameColor = jsonContent.TopBarBlueTeamNameColor;
+            EndGameView2Page.formatingData.TopBarBlueTeamScoreColor = jsonContent.TopBarBlueTeamScoreColor;
+            EndGameView2Page.formatingData.TopBarBlueTeamWinLossColor = jsonContent.TopBarBlueTeamWinLossColor;
+            EndGameView2Page.formatingData.TopBarRedTeamName = jsonContent.TopBarRedTeamName;
+            EndGameView2Page.formatingData.TopBarRedTeamScore = jsonContent.TopBarRedTeamScore;
+            EndGameView2Page.formatingData.TopBarRedTeamNameColor = jsonContent.TopBarRedTeamNameColor;
+            EndGameView2Page.formatingData.TopBarRedTeamScoreColor = jsonContent.TopBarRedTeamScoreColor;
+            EndGameView2Page.formatingData.TopBarRedTeamWinLossColor = jsonContent.TopBarRedTeamWinLossColor;
+            EndGameView2Page.formatingData.ChampionInfoBackgroundColor = jsonContent.ChampionInfoBackgroundColor;
+            EndGameView2Page.formatingData.ChampionInfoBackgroundColorDeg = jsonContent.ChampionInfoBackgroundColorDeg;
+            EndGameView2Page.formatingData.ChampionInfoBackgroundColorColor1 = jsonContent.ChampionInfoBackgroundColorColor1;
+            EndGameView2Page.formatingData.ChampionInfoBackgroundColorPercent1 = jsonContent.ChampionInfoBackgroundColorPercent1;
+            EndGameView2Page.formatingData.ChampionInfoBackgroundColorColor2 = jsonContent.ChampionInfoBackgroundColorColor2;
+            EndGameView2Page.formatingData.ChampionInfoBackgroundColorPercent2 = jsonContent.ChampionInfoBackgroundColorPercent2;
+            EndGameView2Page.formatingData.ChampionInfoGradiant = jsonContent.ChampionInfoGradiant;
+            EndGameView2Page.formatingData.ChampionInfoBorderColor = jsonContent.ChampionInfoBorderColor;
+            EndGameView2Page.formatingData.ChampionInfoText = jsonContent.ChampionInfoText;
+            EndGameView2Page.formatingData.ChampionInfoTextColor = jsonContent.ChampionInfoTextColor;
+            EndGameView2Page.formatingData.ChampionInfoBlueBarColor = jsonContent.ChampionInfoBlueBarColor;
+            EndGameView2Page.formatingData.ChampionInfoRedBarColor = jsonContent.ChampionInfoRedBarColor;
+            EndGameView2Page.formatingData.ChampionInfoBlueDegaTextColor = jsonContent.ChampionInfoBlueDegaTextColor;
+            EndGameView2Page.formatingData.ChampionInfoRedDegaTextColor = jsonContent.ChampionInfoRedDegaTextColor;
+            EndGameView2Page.formatingData.BansBackgroundColor = jsonContent.BansBackgroundColor;
+            EndGameView2Page.formatingData.BansBackgroundColorDeg = jsonContent.BansBackgroundColorDeg;
+            EndGameView2Page.formatingData.BansBackgroundColorColor1 = jsonContent.BansBackgroundColorColor1;
+            EndGameView2Page.formatingData.BansBackgroundColorPercent1 = jsonContent.BansBackgroundColorPercent1;
+            EndGameView2Page.formatingData.BansBackgroundColorColor2 = jsonContent.BansBackgroundColorColor2;
+            EndGameView2Page.formatingData.BansBackgroundColorPercent2 = jsonContent.BansBackgroundColorPercent2;
+            EndGameView2Page.formatingData.BansGradiant = jsonContent.BansGradiant;
+            EndGameView2Page.formatingData.BansBorderColor = jsonContent.BansBorderColor;
+            EndGameView2Page.formatingData.BansTextColor = jsonContent.BansTextColor;
+            EndGameView2Page.formatingData.GlobalStatsBackgroundColor = jsonContent.GlobalStatsBackgroundColor;
+            EndGameView2Page.formatingData.GlobalStatsBackgroundColorDeg = jsonContent.GlobalStatsBackgroundColorDeg;
+            EndGameView2Page.formatingData.GlobalStatsBackgroundColorColor1 = jsonContent.GlobalStatsBackgroundColorColor1;
+            EndGameView2Page.formatingData.GlobalStatsBackgroundColorPercent1 = jsonContent.GlobalStatsBackgroundColorPercent1;
+            EndGameView2Page.formatingData.GlobalStatsBackgroundColorColor2 = jsonContent.GlobalStatsBackgroundColorColor2;
+            EndGameView2Page.formatingData.GlobalStatsBackgroundColorPercent2 = jsonContent.GlobalStatsBackgroundColorPercent2;
+            EndGameView2Page.formatingData.GlobalStatsGradiant = jsonContent.GlobalStatsGradiant;
+            EndGameView2Page.formatingData.GlobalStatsBorderColor = jsonContent.GlobalStatsBorderColor;
+            EndGameView2Page.formatingData.GlobalStatsTextColor = jsonContent.GlobalStatsTextColor;
+            EndGameView2Page.formatingData.GlobalStatsBlueTextColor = jsonContent.GlobalStatsBlueTextColor;
+            EndGameView2Page.formatingData.GlobalStatsRedTextColor = jsonContent.GlobalStatsRedTextColor;
+            EndGameView2Page.formatingData.GoldDiffBackgroundColor = jsonContent.GoldDiffBackgroundColor;
+            EndGameView2Page.formatingData.GoldDiffBackgroundColorDeg = jsonContent.GoldDiffBackgroundColorDeg;
+            EndGameView2Page.formatingData.GoldDiffBackgroundColorColor1 = jsonContent.GoldDiffBackgroundColorColor1;
+            EndGameView2Page.formatingData.GoldDiffBackgroundColorPercent1 = jsonContent.GoldDiffBackgroundColorPercent1;
+            EndGameView2Page.formatingData.GoldDiffBackgroundColorColor2 = jsonContent.GoldDiffBackgroundColorColor2;
+            EndGameView2Page.formatingData.GoldDiffBackgroundColorPercent2 = jsonContent.GoldDiffBackgroundColorPercent2;
+            EndGameView2Page.formatingData.GoldDiffGradiant = jsonContent.GoldDiffGradiant;
+            EndGameView2Page.formatingData.GoldDiffBorderColor = jsonContent.GoldDiffBorderColor;
+            EndGameView2Page.formatingData.GoldDiffText = jsonContent.GoldDiffText;
+            EndGameView2Page.formatingData.GoldDiffTextColor = jsonContent.GoldDiffTextColor;
+        }
+        public static void LoadConfigEndGameView3Page()
+        {
+            try
+            {
+                string[] temps = CDragon.patch.Split(".");
+                Console.WriteLine(temps[0] + temps[1]);
+                EndGameView3Page.formatingData.DefaultPatch = temps[0] + "." + temps[1];
+            }
+            catch (Exception e)
+            {
+                EndGameView3Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
+            }
+            EndGameView3Page.formatingData.DefaultRegion = "fr_fr";
+            _logger.log(LoggingLevel.INFO, "LoadConfigEndGameView3Page()", $"{EndGameView3Page.formatingData.DefaultPatch}");
+            _logger.log(LoggingLevel.INFO, "LoadConfigEndGameView3Page()", $"{EndGameView3Page.formatingData.DefaultRegion}");
+        }
+        public static void LoadFormatingDataConfigEndGameView3()
+        {
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/EndGame/View3/default.json");
+            dynamic jsonContent = JsonConvert.DeserializeObject(content);
+            //EndGameView3Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
+            //EndGameView3Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
+            EndGameView3Page.formatingData.BackgroundColor = jsonContent.BackgroundColor;
+            EndGameView3Page.formatingData.BackgroundColorDeg = jsonContent.BackgroundColorDeg;
+            EndGameView3Page.formatingData.BackgroundColorColor1 = jsonContent.BackgroundColorColor1;
+            EndGameView3Page.formatingData.BackgroundColorPercent1 = jsonContent.BackgroundColorPercent1;
+            EndGameView3Page.formatingData.BackgroundColorColor2 = jsonContent.BackgroundColorColor2;
+            EndGameView3Page.formatingData.BackgroundColorPercent2 = jsonContent.BackgroundColorPercent2;
+            EndGameView3Page.formatingData.TopBarBackgroundColor = jsonContent.TopBarBackgroundColor;
+            EndGameView3Page.formatingData.TopBarBackgroundColorDeg = jsonContent.TopBarBackgroundColorDeg;
+            EndGameView3Page.formatingData.TopBarBackgroundColorColor1 = jsonContent.TopBarBackgroundColorColor1;
+            EndGameView3Page.formatingData.TopBarBackgroundColorPercent1 = jsonContent.TopBarBackgroundColorPercent1;
+            EndGameView3Page.formatingData.TopBarBackgroundColorColor2 = jsonContent.TopBarBackgroundColorColor2;
+            EndGameView3Page.formatingData.TopBarBackgroundColorPercent2 = jsonContent.TopBarBackgroundColorPercent2;
+            EndGameView3Page.formatingData.TopBarGradiant = jsonContent.TopBarGradiant;
+            EndGameView3Page.formatingData.TopBarBorderColor = jsonContent.TopBarBorderColor;
+            EndGameView3Page.formatingData.TopBarTimerText = jsonContent.TopBarTimerText;
+            EndGameView3Page.formatingData.TopBarTimerTextColor = jsonContent.TopBarTimerTextColor;
+            EndGameView3Page.formatingData.TopBarTimerColor = jsonContent.TopBarTimerColor;
+            EndGameView3Page.formatingData.TopBarBlueTeamName = jsonContent.TopBarBlueTeamName;
+            EndGameView3Page.formatingData.TopBarBlueTeamScore = jsonContent.TopBarBlueTeamScore;
+            EndGameView3Page.formatingData.TopBarBlueTeamNameColor = jsonContent.TopBarBlueTeamNameColor;
+            EndGameView3Page.formatingData.TopBarBlueTeamScoreColor = jsonContent.TopBarBlueTeamScoreColor;
+            EndGameView3Page.formatingData.TopBarBlueTeamWinLossColor = jsonContent.TopBarBlueTeamWinLossColor;
+            EndGameView3Page.formatingData.TopBarRedTeamName = jsonContent.TopBarRedTeamName;
+            EndGameView3Page.formatingData.TopBarRedTeamScore = jsonContent.TopBarRedTeamScore;
+            EndGameView3Page.formatingData.TopBarRedTeamNameColor = jsonContent.TopBarRedTeamNameColor;
+            EndGameView3Page.formatingData.TopBarRedTeamScoreColor = jsonContent.TopBarRedTeamScoreColor;
+            EndGameView3Page.formatingData.TopBarRedTeamWinLossColor = jsonContent.TopBarRedTeamWinLossColor;
+            EndGameView3Page.formatingData.ChampionInfoBackgroundColor = jsonContent.ChampionInfoBackgroundColor;
+            EndGameView3Page.formatingData.ChampionInfoBackgroundColorDeg = jsonContent.ChampionInfoBackgroundColorDeg;
+            EndGameView3Page.formatingData.ChampionInfoBackgroundColorColor1 = jsonContent.ChampionInfoBackgroundColorColor1;
+            EndGameView3Page.formatingData.ChampionInfoBackgroundColorPercent1 = jsonContent.ChampionInfoBackgroundColorPercent1;
+            EndGameView3Page.formatingData.ChampionInfoBackgroundColorColor2 = jsonContent.ChampionInfoBackgroundColorColor2;
+            EndGameView3Page.formatingData.ChampionInfoBackgroundColorPercent2 = jsonContent.ChampionInfoBackgroundColorPercent2;
+            EndGameView3Page.formatingData.ChampionInfoGradiant = jsonContent.ChampionInfoGradiant;
+            EndGameView3Page.formatingData.ChampionInfoBorderColor = jsonContent.ChampionInfoBorderColor;
+            EndGameView3Page.formatingData.ChampionInfoText = jsonContent.ChampionInfoText;
+            EndGameView3Page.formatingData.ChampionInfoTextColor = jsonContent.ChampionInfoTextColor;
+            EndGameView3Page.formatingData.ChampionInfoBlueBarColor = jsonContent.ChampionInfoBlueBarColor;
+            EndGameView3Page.formatingData.ChampionInfoRedBarColor = jsonContent.ChampionInfoRedBarColor;
+            EndGameView3Page.formatingData.ChampionInfoBlueDegaTextColor = jsonContent.ChampionInfoBlueDegaTextColor;
+            EndGameView3Page.formatingData.ChampionInfoRedDegaTextColor = jsonContent.ChampionInfoRedDegaTextColor;
+            EndGameView3Page.formatingData.BansBackgroundColor = jsonContent.BansBackgroundColor;
+            EndGameView3Page.formatingData.BansBackgroundColorDeg = jsonContent.BansBackgroundColorDeg;
+            EndGameView3Page.formatingData.BansBackgroundColorColor1 = jsonContent.BansBackgroundColorColor1;
+            EndGameView3Page.formatingData.BansBackgroundColorPercent1 = jsonContent.BansBackgroundColorPercent1;
+            EndGameView3Page.formatingData.BansBackgroundColorColor2 = jsonContent.BansBackgroundColorColor2;
+            EndGameView3Page.formatingData.BansBackgroundColorPercent2 = jsonContent.BansBackgroundColorPercent2;
+            EndGameView3Page.formatingData.BansGradiant = jsonContent.BansGradiant;
+            EndGameView3Page.formatingData.BansBorderColor = jsonContent.BansBorderColor;
+            EndGameView3Page.formatingData.BansTextColor = jsonContent.BansTextColor;
+            EndGameView3Page.formatingData.GlobalStatsBackgroundColor = jsonContent.GlobalStatsBackgroundColor;
+            EndGameView3Page.formatingData.GlobalStatsBackgroundColorDeg = jsonContent.GlobalStatsBackgroundColorDeg;
+            EndGameView3Page.formatingData.GlobalStatsBackgroundColorColor1 = jsonContent.GlobalStatsBackgroundColorColor1;
+            EndGameView3Page.formatingData.GlobalStatsBackgroundColorPercent1 = jsonContent.GlobalStatsBackgroundColorPercent1;
+            EndGameView3Page.formatingData.GlobalStatsBackgroundColorColor2 = jsonContent.GlobalStatsBackgroundColorColor2;
+            EndGameView3Page.formatingData.GlobalStatsBackgroundColorPercent2 = jsonContent.GlobalStatsBackgroundColorPercent2;
+            EndGameView3Page.formatingData.GlobalStatsGradiant = jsonContent.GlobalStatsGradiant;
+            EndGameView3Page.formatingData.GlobalStatsBorderColor = jsonContent.GlobalStatsBorderColor;
+            EndGameView3Page.formatingData.GlobalStatsSeparationColor = jsonContent.GlobalStatsSeparationColor;
+            EndGameView3Page.formatingData.GlobalStatsTextColor = jsonContent.GlobalStatsTextColor;
+            EndGameView3Page.formatingData.GlobalStatsBlueTextColor = jsonContent.GlobalStatsBlueTextColor;
+            EndGameView3Page.formatingData.GlobalStatsRedTextColor = jsonContent.GlobalStatsRedTextColor;
+            EndGameView3Page.formatingData.GoldDiffBackgroundColor = jsonContent.GoldDiffBackgroundColor;
+            EndGameView3Page.formatingData.GoldDiffBackgroundColorDeg = jsonContent.GoldDiffBackgroundColorDeg;
+            EndGameView3Page.formatingData.GoldDiffBackgroundColorColor1 = jsonContent.GoldDiffBackgroundColorColor1;
+            EndGameView3Page.formatingData.GoldDiffBackgroundColorPercent1 = jsonContent.GoldDiffBackgroundColorPercent1;
+            EndGameView3Page.formatingData.GoldDiffBackgroundColorColor2 = jsonContent.GoldDiffBackgroundColorColor2;
+            EndGameView3Page.formatingData.GoldDiffBackgroundColorPercent2 = jsonContent.GoldDiffBackgroundColorPercent2;
+            EndGameView3Page.formatingData.GoldDiffGradiant = jsonContent.GoldDiffGradiant;
+            EndGameView3Page.formatingData.GoldDiffBorderColor = jsonContent.GoldDiffBorderColor;
+            EndGameView3Page.formatingData.GoldDiffText = jsonContent.GoldDiffText;
+            EndGameView3Page.formatingData.GoldDiffTextColor = jsonContent.GoldDiffTextColor;
         }
     }
 }
