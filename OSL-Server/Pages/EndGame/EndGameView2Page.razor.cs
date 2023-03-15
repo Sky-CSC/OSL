@@ -4,9 +4,9 @@ using static OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo;
 
 namespace OSL_Server.Pages.EndGame
 {
-    public partial class EndGameView1Page
+    public partial class EndGameView2Page
     {
-        private static OSLLogger _logger = new OSLLogger("EndGameView1Page");
+        private static OSLLogger _logger = new OSLLogger("EndGameView2Page");
 
         //Data for display color, texte, picture on web page
         public static FormatingData formatingData = new();
@@ -35,15 +35,15 @@ namespace OSL_Server.Pages.EndGame
             public string TopBarTimerTextColor { get; set; }
             public string TopBarTimerColor { get; set; }
             public string TopBarBlueTeamName { get; set; }
-            public string TopBarBlueTeamScore { get; set; }// NEW
+            public string TopBarBlueTeamScore { get; set; }
             public string TopBarBlueTeamNameColor { get; set; }
-            public string TopBarBlueTeamScoreColor { get; set; }// NEW
-            public string TopBarBlueTeamWinLossColor { get; set; }// NEW
+            public string TopBarBlueTeamScoreColor { get; set; }
+            public string TopBarBlueTeamWinLossColor { get; set; }
             public string TopBarRedTeamName { get; set; }
-            public string TopBarRedTeamScore { get; set; }// NEW
+            public string TopBarRedTeamScore { get; set; }
             public string TopBarRedTeamNameColor { get; set; }
-            public string TopBarRedTeamScoreColor { get; set; }// NEW
-            public string TopBarRedTeamWinLossColor { get; set; }// NEW
+            public string TopBarRedTeamScoreColor { get; set; }
+            public string TopBarRedTeamWinLossColor { get; set; }
 
             public string ChampionInfoBackgroundColor { get; set; }
             public string ChampionInfoBackgroundColorDeg { get; set; }
@@ -150,7 +150,7 @@ namespace OSL_Server.Pages.EndGame
                     }
                 }
             }
-            double calculPourcent2 = (total * 220) / max;
+            double calculPourcent2 = (total * 320) / max;
             return $"{calculPourcent2}px";
         }
 
@@ -424,43 +424,43 @@ namespace OSL_Server.Pages.EndGame
 
         public static void ResetColor()
         {
-            Config.LoadFormatingDataConfigEndGameView1();
-            EndGamePage.textValueOverlayView1.TopBarBlueTeamName = "";
-            EndGamePage.textValueOverlayView1.TopBarRedTeamName = "";
-            EndGamePage.textValueOverlayView1.TopBarBlueTeamScore = "";
-            EndGamePage.textValueOverlayView1.TopBarRedTeamScore = "";
-            EndGamePage.textValueOverlayView1.TopBarTimerText = "";
-            EndGamePage.textValueOverlayView1.ChampionInfoText = "";
-            EndGamePage.textValueOverlayView1.GoldDiffText = "";
-            EndGamePage.textValueOverlayView1.BackgroundColor = true;
-            EndGamePage.textValueOverlayView1.TopBarGradiant = true;
-            EndGamePage.textValueOverlayView1.ChampionInfoGradiant = true;
-            EndGamePage.textValueOverlayView1.BansGradiant = true;
-            EndGamePage.textValueOverlayView1.GlobalStatsGradiant = true;
-            EndGamePage.textValueOverlayView1.GoldDiffGradiant = true;
-            EndGamePage.textValueOverlayView1.BackgroundColorDeg = 90;
-            EndGamePage.textValueOverlayView1.BackgroundColorPercent1 = 0;
-            EndGamePage.textValueOverlayView1.BackgroundColorPercent2 = 100;
-            EndGamePage.textValueOverlayView1.TopBarBackgroundColorDeg = 90;
-            EndGamePage.textValueOverlayView1.TopBarBackgroundColorPercent1 = 0;
-            EndGamePage.textValueOverlayView1.TopBarBackgroundColorPercent2 = 100;
-            EndGamePage.textValueOverlayView1.ChampionInfoBackgroundColorDeg = 90;
-            EndGamePage.textValueOverlayView1.ChampionInfoBackgroundColorPercent1 = 0;
-            EndGamePage.textValueOverlayView1.ChampionInfoBackgroundColorPercent2 = 100;
-            EndGamePage.textValueOverlayView1.BansBackgroundColorDeg = 90;
-            EndGamePage.textValueOverlayView1.BansBackgroundColorPercent1 = 0;
-            EndGamePage.textValueOverlayView1.BansBackgroundColorPercent2 = 100;
-            EndGamePage.textValueOverlayView1.GlobalStatsBackgroundColorDeg = 90;
-            EndGamePage.textValueOverlayView1.GlobalStatsBackgroundColorPercent1 = 0;
-            EndGamePage.textValueOverlayView1.GlobalStatsBackgroundColorPercent2 = 100;
-            EndGamePage.textValueOverlayView1.GoldDiffBackgroundColorDeg = 90;
-            EndGamePage.textValueOverlayView1.GoldDiffBackgroundColorPercent1 = 0;
-            EndGamePage.textValueOverlayView1.GoldDiffBackgroundColorPercent2 = 100;
-            EndGamePage.textValueOverlayView1.TopBarBorderColor = 5;
-            EndGamePage.textValueOverlayView1.ChampionInfoBorderColor = 5;
-            EndGamePage.textValueOverlayView1.BansBorderColor = 5;
-            EndGamePage.textValueOverlayView1.GlobalStatsBorderColor = 5;
-            EndGamePage.textValueOverlayView1.GoldDiffBorderColor = 5;
+            Config.LoadFormatingDataConfigEndGameView2();
+            EndGamePage.textValueOverlayView2.TopBarBlueTeamName = "";
+            EndGamePage.textValueOverlayView2.TopBarRedTeamName = "";
+            EndGamePage.textValueOverlayView2.TopBarBlueTeamScore = "";
+            EndGamePage.textValueOverlayView2.TopBarRedTeamScore = "";
+            EndGamePage.textValueOverlayView2.TopBarTimerText = "";
+            EndGamePage.textValueOverlayView2.ChampionInfoText = "";
+            EndGamePage.textValueOverlayView2.GoldDiffText = "";
+            EndGamePage.textValueOverlayView2.BackgroundColor = true;
+            EndGamePage.textValueOverlayView2.TopBarGradiant = true;
+            EndGamePage.textValueOverlayView2.ChampionInfoGradiant = true;
+            EndGamePage.textValueOverlayView2.BansGradiant = true;
+            EndGamePage.textValueOverlayView2.GlobalStatsGradiant = true;
+            EndGamePage.textValueOverlayView2.GoldDiffGradiant = true;
+            EndGamePage.textValueOverlayView2.BackgroundColorDeg = 90;
+            EndGamePage.textValueOverlayView2.BackgroundColorPercent1 = 0;
+            EndGamePage.textValueOverlayView2.BackgroundColorPercent2 = 100;
+            EndGamePage.textValueOverlayView2.TopBarBackgroundColorDeg = 90;
+            EndGamePage.textValueOverlayView2.TopBarBackgroundColorPercent1 = 0;
+            EndGamePage.textValueOverlayView2.TopBarBackgroundColorPercent2 = 100;
+            EndGamePage.textValueOverlayView2.ChampionInfoBackgroundColorDeg = 90;
+            EndGamePage.textValueOverlayView2.ChampionInfoBackgroundColorPercent1 = 0;
+            EndGamePage.textValueOverlayView2.ChampionInfoBackgroundColorPercent2 = 100;
+            EndGamePage.textValueOverlayView2.BansBackgroundColorDeg = 90;
+            EndGamePage.textValueOverlayView2.BansBackgroundColorPercent1 = 0;
+            EndGamePage.textValueOverlayView2.BansBackgroundColorPercent2 = 100;
+            EndGamePage.textValueOverlayView2.GlobalStatsBackgroundColorDeg = 90;
+            EndGamePage.textValueOverlayView2.GlobalStatsBackgroundColorPercent1 = 0;
+            EndGamePage.textValueOverlayView2.GlobalStatsBackgroundColorPercent2 = 100;
+            EndGamePage.textValueOverlayView2.GoldDiffBackgroundColorDeg = 90;
+            EndGamePage.textValueOverlayView2.GoldDiffBackgroundColorPercent1 = 0;
+            EndGamePage.textValueOverlayView2.GoldDiffBackgroundColorPercent2 = 100;
+            EndGamePage.textValueOverlayView2.TopBarBorderColor = 5;
+            EndGamePage.textValueOverlayView2.ChampionInfoBorderColor = 5;
+            EndGamePage.textValueOverlayView2.BansBorderColor = 5;
+            EndGamePage.textValueOverlayView2.GlobalStatsBorderColor = 5;
+            EndGamePage.textValueOverlayView2.GoldDiffBorderColor = 5;
 
         }
     }

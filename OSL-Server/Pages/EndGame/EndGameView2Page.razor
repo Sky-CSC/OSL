@@ -1,14 +1,15 @@
-﻿@page "/endgame/view1"
+﻿@page "/endgame/view2"
 @using OSL_Server.DataReciveClient.Processing.EndGame;
 @layout EmptyLayout
 
-<PageTitle>End Game View 1</PageTitle>
+<PageTitle>End Game View 2</PageTitle>
 
 @{
     string tempsBackgroundColor;
-    @if (EndGamePage.textValueOverlayView1.BackgroundColor)
+    @if (EndGamePage.textValueOverlayView2.BackgroundColor)
     {
         tempsBackgroundColor = formatingData.BackgroundColor;
+        //tempsBackgroundColor = "";
     }
     else
     {
@@ -16,7 +17,7 @@
     }
 }
 
-<div class="endGameView1" style="background-image: @tempsBackgroundColor">
+<div class="endGameView2" style="background-image: @tempsBackgroundColor">
 
     <div class="content">
         @if (EndGameInfo.jsonContentEndOfMatch != null && EndGameInfo.jsonContentMatch != null && EndGameInfo.jsonContentTimeline != null)
@@ -27,7 +28,7 @@
             string tempsGlobalStatsGradiant;
             string tempsGoldDiffGradiant;
 
-            @if (EndGamePage.textValueOverlayView1.TopBarGradiant)
+            @if (EndGamePage.textValueOverlayView2.TopBarGradiant)
             {
                 tempsTopBarGradiant = formatingData.TopBarGradiant;
             }
@@ -35,7 +36,7 @@
             {
                 tempsTopBarGradiant = "";
             }
-            @if (EndGamePage.textValueOverlayView1.ChampionInfoGradiant)
+            @if (EndGamePage.textValueOverlayView2.ChampionInfoGradiant)
             {
                 tempsChampionInfoGradiant = formatingData.ChampionInfoGradiant;
             }
@@ -43,7 +44,7 @@
             {
                 tempsChampionInfoGradiant = "";
             }
-            @if (EndGamePage.textValueOverlayView1.BansGradiant)
+            @if (EndGamePage.textValueOverlayView2.BansGradiant)
             {
                 tempsBansGradiant = formatingData.BansGradiant;
             }
@@ -51,7 +52,7 @@
             {
                 tempsBansGradiant = "";
             }
-            @if (EndGamePage.textValueOverlayView1.GlobalStatsGradiant)
+            @if (EndGamePage.textValueOverlayView2.GlobalStatsGradiant)
             {
                 tempsGlobalStatsGradiant = formatingData.GlobalStatsGradiant;
             }
@@ -59,7 +60,7 @@
             {
                 tempsGlobalStatsGradiant = "";
             }
-            @if (EndGamePage.textValueOverlayView1.GoldDiffGradiant)
+            @if (EndGamePage.textValueOverlayView2.GoldDiffGradiant)
             {
                 tempsGoldDiffGradiant = formatingData.GoldDiffGradiant;
             }

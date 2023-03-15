@@ -32,10 +32,29 @@ html, body {
     position: relative;
 }
 
+.general {
+    margin: auto;
+    position: relative;
+}
+
+    .general .color-picker {
+        position: absolute;
+        left: 600px;
+        top: 0px;
+        border: 5px solid black;
+    }
+
 .timer-bar {
     margin: auto;
     position: relative;
 }
+
+    .timer-bar .color-picker {
+        position: absolute;
+        left: 600px;
+        top: 0px;
+        border: 5px solid black;
+    }
 
 .champion-info {
     margin: auto;
@@ -59,7 +78,7 @@ html, body {
 
 .color-picker {
     position: absolute;
-    left: 800px;
+    left: 600px;
     top: -100px;
     border: 5px solid black;
 }

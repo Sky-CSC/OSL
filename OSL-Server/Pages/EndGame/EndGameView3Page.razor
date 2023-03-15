@@ -1,14 +1,15 @@
-﻿@page "/endgame/view1"
+﻿@page "/endgame/view3"
 @using OSL_Server.DataReciveClient.Processing.EndGame;
 @layout EmptyLayout
 
-<PageTitle>End Game View 1</PageTitle>
+<PageTitle>End Game View 3</PageTitle>
 
 @{
     string tempsBackgroundColor;
-    @if (EndGamePage.textValueOverlayView1.BackgroundColor)
+    @if (EndGamePage.textValueOverlayView3.BackgroundColor)
     {
         tempsBackgroundColor = formatingData.BackgroundColor;
+        //tempsBackgroundColor = "";
     }
     else
     {
@@ -16,9 +17,9 @@
     }
 }
 
-<div class="endGameView1" style="background-image: @tempsBackgroundColor">
+<div class="endGameView3" style="background-image: @tempsBackgroundColor">
 
-    <div class="content">
+    <div class="content" style="background-image:linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.72) 50%, rgba(0,0,0,0.72) 100%)">
         @if (EndGameInfo.jsonContentEndOfMatch != null && EndGameInfo.jsonContentMatch != null && EndGameInfo.jsonContentTimeline != null)
         {
             string tempsTopBarGradiant;
@@ -27,7 +28,7 @@
             string tempsGlobalStatsGradiant;
             string tempsGoldDiffGradiant;
 
-            @if (EndGamePage.textValueOverlayView1.TopBarGradiant)
+            @if (EndGamePage.textValueOverlayView3.TopBarGradiant)
             {
                 tempsTopBarGradiant = formatingData.TopBarGradiant;
             }
@@ -35,7 +36,7 @@
             {
                 tempsTopBarGradiant = "";
             }
-            @if (EndGamePage.textValueOverlayView1.ChampionInfoGradiant)
+            @if (EndGamePage.textValueOverlayView3.ChampionInfoGradiant)
             {
                 tempsChampionInfoGradiant = formatingData.ChampionInfoGradiant;
             }
@@ -43,7 +44,7 @@
             {
                 tempsChampionInfoGradiant = "";
             }
-            @if (EndGamePage.textValueOverlayView1.BansGradiant)
+            @if (EndGamePage.textValueOverlayView3.BansGradiant)
             {
                 tempsBansGradiant = formatingData.BansGradiant;
             }
@@ -51,7 +52,7 @@
             {
                 tempsBansGradiant = "";
             }
-            @if (EndGamePage.textValueOverlayView1.GlobalStatsGradiant)
+            @if (EndGamePage.textValueOverlayView3.GlobalStatsGradiant)
             {
                 tempsGlobalStatsGradiant = formatingData.GlobalStatsGradiant;
             }
@@ -59,7 +60,7 @@
             {
                 tempsGlobalStatsGradiant = "";
             }
-            @if (EndGamePage.textValueOverlayView1.GoldDiffGradiant)
+            @if (EndGamePage.textValueOverlayView3.GoldDiffGradiant)
             {
                 tempsGoldDiffGradiant = formatingData.GoldDiffGradiant;
             }
@@ -68,19 +69,86 @@
                 tempsGoldDiffGradiant = "";
             }
 
+            string tempsTopBarBackground;
+            string tempsChampionInfoBackground;
+            string tempsBansBackground;
+            string tempsGlobalStatsBackground;
+            string tempsGoldDiffBackground;
 
-            <div class="top-bar" style="background-image: @formatingData.TopBarBackgroundColor">
+            @if (EndGamePage.textValueOverlayView3.TopBarBackground)
+            {
+                tempsTopBarBackground = formatingData.TopBarBackgroundColor;
+            }
+            else
+            {
+                tempsTopBarBackground = "";
+            }
+            @if (EndGamePage.textValueOverlayView3.ChampionInfoBackground)
+            {
+                tempsChampionInfoBackground = formatingData.ChampionInfoBackgroundColor;
+            }
+            else
+            {
+                tempsChampionInfoBackground = "";
+            }
+            @if (EndGamePage.textValueOverlayView3.BansBackground)
+            {
+                tempsBansBackground = formatingData.BansBackgroundColor;
+            }
+            else
+            {
+                tempsBansBackground = "";
+            }
+            @if (EndGamePage.textValueOverlayView3.GlobalStatsBackground)
+            {
+                tempsGlobalStatsBackground = formatingData.GlobalStatsBackgroundColor;
+            }
+            else
+            {
+                tempsGlobalStatsBackground = "";
+            }
+            @if (EndGamePage.textValueOverlayView3.GoldDiffBackground)
+            {
+                tempsGoldDiffBackground = formatingData.GoldDiffBackgroundColor;
+            }
+            else
+            {
+                tempsGoldDiffBackground = "";
+            }
+
+
+            <div class="top-bar" style="background-image: @tempsTopBarBackground">
                 <div class="top-bar-gradiant" style="background-image: @tempsTopBarGradiant"></div>
                 <div class="top-bar-border" style="border: @formatingData.TopBarBorderColor"></div>
-                <div class="top-bar-blue-team">
-                    <div class="top-bar-blue-team-name" style="color: @formatingData.TopBarBlueTeamNameColor">
-                        @formatingData.TopBarBlueTeamName
+                <div class="top-bar-team">
+                    <div class="top-bar-blue-team">
+                        <div class="top-bar-blue-team-name" style="color: @formatingData.TopBarBlueTeamNameColor">
+                            @formatingData.TopBarBlueTeamName
+                        </div>
+                        <div class="top-bar-blue-team-winloss" style="color: @formatingData.TopBarBlueTeamWinLossColor">
+                            @GetWinLossBlue()
+                        </div>
+                        
                     </div>
-                    <div class="top-bar-blue-team-winloss" style="color: @formatingData.TopBarBlueTeamWinLossColor">
-                        @GetWinLossBlue()
+                    <div class="top-bar-team-score">
+                        <div class="top-bar-blue-team-score" style="color: @formatingData.TopBarBlueTeamScoreColor">
+                            @formatingData.TopBarBlueTeamScore
+                        </div>
+
+                        <div class="top-bar-separation-team-score" style="color: @formatingData.TopBarBlueTeamScoreColor">
+                            -
+                        </div>
+                        <div class="top-bar-red-team-score" style="color: @formatingData.TopBarRedTeamScoreColor">
+                            @formatingData.TopBarRedTeamScore
+                        </div>
                     </div>
-                    <div class="top-bar-blue-team-score" style="color: @formatingData.TopBarBlueTeamScoreColor">
-                        @formatingData.TopBarBlueTeamScore
+                    <div class="top-bar-red-team">
+                        <div class="top-bar-red-team-name" style="color: @formatingData.TopBarRedTeamNameColor">
+                            @formatingData.TopBarRedTeamName
+                        </div>
+                        <div class="top-bar-red-team-winloss" style="color: @formatingData.TopBarRedTeamWinLossColor">
+                            @GetWinLossRed()
+                        </div>
                     </div>
                 </div>
                 <div class="top-bar-timer">
@@ -91,19 +159,8 @@
                         @GetTimer()
                     </div>
                 </div>
-                <div class="top-bar-red-team">
-                    <div class="top-bar-red-team-name" style="color: @formatingData.TopBarRedTeamNameColor">
-                        @formatingData.TopBarRedTeamName
-                    </div>
-                    <div class="top-bar-red-team-winloss" style="color: @formatingData.TopBarRedTeamWinLossColor">
-                        @GetWinLossRed()
-                    </div>
-                    <div class="top-bar-red-team-score" style="color: @formatingData.TopBarRedTeamScoreColor">
-                        @formatingData.TopBarRedTeamScore
-                    </div>
-                </div>
             </div>
-            <div class="champion-info" style="background-image: @formatingData.ChampionInfoBackgroundColor">
+            <div class="champion-info" style="background-image: @tempsChampionInfoBackground">
                 <div class="champion-info-gradiant" style="background-image: @tempsChampionInfoGradiant"></div>
                 <div class="champion-info-border" style="border: @formatingData.ChampionInfoBorderColor"></div>
                 <div class="champion-info-stats">
@@ -148,8 +205,8 @@
                     </div>
                 </div>
             </div>
-            <div class="bans" style="background-image: @formatingData.BansBackgroundColor">
-                <div class="bans-gradiant" style="background-image: @tempsBansGradiant"></div>
+            <div class="bans" style="background-image: @tempsBansBackground">
+                <div class="bans-gradiant" style="background-image: @tempsBansGradiant; border-bottom: @formatingData.GlobalStatsSeparationColor"></div>
                 <div class="bans-border" style="border: @formatingData.BansBorderColor"></div>
                 <div class="bans-info">
                     <div class="bans-info-blue">
@@ -173,20 +230,20 @@
                     </div>
                 </div>
             </div>
-            <div class="global-stats" style="background-image: @formatingData.GlobalStatsBackgroundColor">
+            <div class="global-stats" style="background-image: @tempsGlobalStatsBackground">
                 <div class="global-stats-gradiant" style="background-image: @tempsGlobalStatsGradiant"></div>
                 <div class="global-stats-border" style="border: @formatingData.GlobalStatsBorderColor"></div>
                 <div class="global-stats-blue" style="color: @formatingData.GlobalStatsBlueTextColor">
-                    <div class="global-stats-blue-info">
+                    <div class="global-stats-blue-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetKDABlue()
                     </div>
-                    <div class="global-stats-blue-info">
+                    <div class="global-stats-blue-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetGoldBlue()
                     </div>
-                    <div class="global-stats-blue-info">
+                    <div class="global-stats-blue-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetTowerKillBlue()
                     </div>
-                    <div class="global-stats-blue-info dragon-info">
+                    <div class="global-stats-blue-info dragon-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         <div class="dragon-wrapper">
                             @foreach (var frames in EndGameInfo.jsonContentTimeline.info.frames)
                             {
@@ -207,51 +264,51 @@
                             }
                         </div>
                     </div>
-                    <div class="global-stats-blue-info">
+                    <div class="global-stats-blue-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetElderKillBlue()
                     </div>
-                    <div class="global-stats-blue-info">
+                    <div class="global-stats-blue-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetHeraldKillBlue()
                     </div>
-                    <div class="global-stats-blue-info">
+                    <div class="global-stats-blue-info" style="border-top: @formatingData.GlobalStatsSeparationColor; border-bottom: @formatingData.GlobalStatsSeparationColor;">
                         @GetBaronKillBlue()
                     </div>
                 </div>
                 <div class="global-stats-center" style="color: @formatingData.GlobalStatsTextColor">
-                    <div class="global-stats-center-info">
+                    <div class="global-stats-center-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         K/D/A
                     </div>
-                    <div class="global-stats-center-info">
+                    <div class="global-stats-center-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         Gold
                     </div>
-                    <div class="global-stats-center-info">
+                    <div class="global-stats-center-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         Towers
                     </div>
-                    <div class="global-stats-center-info">
+                    <div class="global-stats-center-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         Dragons
                     </div>
-                    <div class="global-stats-center-info">
+                    <div class="global-stats-center-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         Elder dragons
                     </div>
-                    <div class="global-stats-center-info">
+                    <div class="global-stats-center-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         Heralds
                     </div>
-                    <div class="global-stats-center-info">
+                    <div class="global-stats-center-info" style="border-top: @formatingData.GlobalStatsSeparationColor; border-bottom: @formatingData.GlobalStatsSeparationColor;">
                         Barons
                     </div>
                 </div>
                 <div class="global-stats-red" style="color: @formatingData.GlobalStatsRedTextColor">
-                    <div class="global-stats-red-info">
+                    <div class="global-stats-red-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetKDARed()
                     </div>
-                    <div class="global-stats-red-info">
+                    <div class="global-stats-red-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetGoldRed()
                     </div>
-                    <div class="global-stats-red-info">
+                    <div class="global-stats-red-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetTowerKillRed()
                     </div>
-                    <div class="global-stats-red-info">
-                        <div class="dragon-wrapper">
+                    <div class="global-stats-red-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
+                        <div class="dragon-wrapper-info">
                             @foreach (var frames in EndGameInfo.jsonContentTimeline.info.frames)
                             {
                                 @foreach (var events in frames.events)
@@ -271,18 +328,18 @@
                             }
                         </div>
                     </div>
-                    <div class="global-stats-red-info">
+                    <div class="global-stats-red-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetElderKillRed()
                     </div>
-                    <div class="global-stats-red-info">
+                    <div class="global-stats-red-info" style="border-top: @formatingData.GlobalStatsSeparationColor">
                         @GetHeraldKillRed()
                     </div>
-                    <div class="global-stats-red-info">
+                    <div class="global-stats-red-info" style="border-top: @formatingData.GlobalStatsSeparationColor; border-bottom: @formatingData.GlobalStatsSeparationColor;">
                         @GetBaronKillRed()
                     </div>
                 </div>
             </div>
-            <div class="gold-diff" style="background-image: @formatingData.GoldDiffBackgroundColor">
+            <div class="gold-diff" style="background-image: @tempsGoldDiffBackground">
                 <div class="gold-diff-gradiant" style="background-image: @tempsGoldDiffGradiant"></div>
                 <div class="gold-diff-border" style="border: @formatingData.GoldDiffBorderColor"></div>
                 <div class="gold-diff-text" style="color: @formatingData.GoldDiffTextColor">
