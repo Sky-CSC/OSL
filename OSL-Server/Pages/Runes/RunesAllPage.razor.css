@@ -1,0 +1,186 @@
+@font-face {
+    font-family: LolFont;
+    src: url(./css/font/fontLoL.ttf);
+}
+
+@font-face {
+    font-family: EurostileCondensedBold;
+    src: url("css/font/EurostileCondensedBold.otf") format("opentype");
+}
+
+html, body {
+    font-family: EurostileCondensedBold;
+    background-color: black;
+    color: white;
+}
+
+.perks-background {
+    width: 1920px;
+    height: 1080px;
+    position: absolute;
+}
+
+    .perks-background .perks-background-img {
+        position: absolute;
+        left: 292px;
+        top: 845px;
+        height: 235px;
+    }
+
+    .perks-background .perks-background-gradiant {
+        top: 854px;
+        left: 309px;
+        width: 1335px;
+        height: 220px;
+        position: absolute;
+    }
+
+    .perks-background .perks-background-color {
+        width: 1335px;
+        height: 220px;
+    }
+
+.perks {
+    /*background: url(./assets/runes/background.png);*/
+    height: 1080px;
+    width: 1920px;
+}
+
+.separation-bar {
+    position: absolute;
+    height: 200px;
+    width: 2px;
+    background-color: #c99d53;
+    top: 865px;
+    left: 980px;
+}
+
+.lane-picture-img {
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.champ-picture-img {
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.perks-img {
+    margin-bottom: 5px;
+    height: 60px;
+}
+
+.perks-sub-img {
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+.perks-blue-top {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 370px;
+}
+
+.perks-blue-jungle {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 490px;
+}
+
+.perks-blue-mid {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 610px;
+}
+
+.perks-blue-adc {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 730px;
+}
+
+.perks-blue-supp {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 860px;
+}
+
+.perks-red-top {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 1525px;
+}
+
+.perks-red-jungle {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 1405px;
+}
+
+.perks-red-mid {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 1285px;
+}
+
+.perks-red-adc {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 1165px;
+}
+
+.perks-red-supp {
+    position: absolute;
+    display: inline-block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 865px;
+    left: 1045px;
+}

@@ -32,10 +32,10 @@ namespace OSL_Server.Pages.Runes
             {
                 summonerPerksList = new();
                 dynamic jsonSessionInfo = JsonConvert.DeserializeObject(content);
-                Console.WriteLine(jsonSessionInfo.gameData.teamOne[0].gameCustomization.perks);
-                string temps = jsonSessionInfo.gameData.teamOne[0].gameCustomization.perks;
-                dynamic temps2 = JsonConvert.DeserializeObject<Perks>(temps);
-                Console.WriteLine(temps2.perkIds[0]);
+                //Console.WriteLine(jsonSessionInfo.gameData.teamOne[0].gameCustomization.perks);
+                //string temps = jsonSessionInfo.gameData.teamOne[0].gameCustomization.perks;
+                //dynamic temps2 = JsonConvert.DeserializeObject<Perks>(temps);
+                //Console.WriteLine(temps2.perkIds[0]);
 
                 foreach (var player in jsonSessionInfo.gameData.teamOne)
                 {
@@ -77,26 +77,34 @@ namespace OSL_Server.Pages.Runes
         private static Lanes GetLane(string lane)
         {
             //Console.WriteLine(lane);
-            if (lane.Equals("TOP"))
+            try
             {
-                return Lanes.Top;
+                if (lane != null)
+                {
+                    if (lane.Equals("TOP"))
+                    {
+                        return Lanes.Top;
+                    }
+                    else if (lane.Equals("BOTTOM"))
+                    {
+                        return Lanes.ADC;
+                    }
+                    else if (lane.Equals("MIDDLE"))
+                    {
+                        return Lanes.Mid;
+                    }
+                    else if (lane.Equals("UTILITY"))
+                    {
+                        return Lanes.Support;
+                    }
+                    else if (lane.Equals("JUNGLE"))
+                    {
+                        return Lanes.Jungle;
+                    }
+                }
+                return Lanes.None;
             }
-            else if (lane.Equals("BOTTOM"))
-            {
-                return Lanes.ADC;
-            }
-            else if (lane.Equals("MIDDLE"))
-            {
-                return Lanes.Mid;
-            }
-            else if (lane.Equals("UTILITY"))
-            {
-                return Lanes.Support;
-            }
-            else if (lane.Equals("JUNGLE")){
-                return Lanes.Jungle;
-            }
-            else
+            catch (Exception e)
             {
                 return Lanes.None;
             }
@@ -248,6 +256,7 @@ namespace OSL_Server.Pages.Runes
             RunesMidPage.ResetColor();
             RunesTopPage.ResetColor();
             RunesSuppPage.ResetColor();
+            RunesAllPage.ResetColor();
         }
 
         public class Overlay
@@ -280,6 +289,7 @@ namespace OSL_Server.Pages.Runes
                 RunesMidPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
                 RunesSuppPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
                 RunesTopPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
+                RunesAllPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
             }
 
             public static void SetBackgroudGradientColor1()
@@ -299,6 +309,7 @@ namespace OSL_Server.Pages.Runes
                     RunesMidPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
                     RunesSuppPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
                     RunesTopPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
+                    RunesAllPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
                 }
             }
 
@@ -319,6 +330,7 @@ namespace OSL_Server.Pages.Runes
                     RunesMidPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
                     RunesSuppPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
                     RunesTopPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
+                    RunesAllPage.formatingData.BackgroudGradient = $"linear-gradient({RunesAdcPage.formatingData.BackgroudGradientDeg}deg, {RunesAdcPage.formatingData.BackgroudGradientColor1} {RunesAdcPage.formatingData.BackgroudGradientPercent1}%, {RunesAdcPage.formatingData.BackgroudGradientColor2} {RunesAdcPage.formatingData.BackgroudGradientPercent2}%)";
                 }
             }
 
@@ -345,6 +357,7 @@ namespace OSL_Server.Pages.Runes
                     RunesMidPage.formatingData.BlueSideColorTextSummoner = colorValue;
                     RunesSuppPage.formatingData.BlueSideColorTextSummoner = colorValue;
                     RunesTopPage.formatingData.BlueSideColorTextSummoner = colorValue;
+                    RunesAllPage.formatingData.BlueSideColorTextSummoner = colorValue;
                 }
             }
 
@@ -364,6 +377,7 @@ namespace OSL_Server.Pages.Runes
                     RunesMidPage.formatingData.RedSideColorTextSummoner = colorValue;
                     RunesSuppPage.formatingData.RedSideColorTextSummoner = colorValue;
                     RunesTopPage.formatingData.RedSideColorTextSummoner = colorValue;
+                    RunesAllPage.formatingData.RedSideColorTextSummoner = colorValue;
                 }
             }
 
@@ -383,6 +397,7 @@ namespace OSL_Server.Pages.Runes
                     RunesMidPage.formatingData.BlueSideColorSeparationBar = colorValue;
                     RunesSuppPage.formatingData.BlueSideColorSeparationBar = colorValue;
                     RunesTopPage.formatingData.BlueSideColorSeparationBar = colorValue;
+                    RunesAllPage.formatingData.BlueSideColorSeparationBar = colorValue;
                 }
             }
 
@@ -402,6 +417,7 @@ namespace OSL_Server.Pages.Runes
                     RunesMidPage.formatingData.RedSideColorSeparationBar = colorValue;
                     RunesSuppPage.formatingData.RedSideColorSeparationBar = colorValue;
                     RunesTopPage.formatingData.RedSideColorSeparationBar = colorValue;
+                    RunesAllPage.formatingData.RedSideColorSeparationBar = colorValue;
                 }
             }
 
@@ -418,6 +434,7 @@ namespace OSL_Server.Pages.Runes
                 RunesMidPage.formatingData.BlueSideColorBorderChampion = overlay.BlueSideColorBorderChampion.ToString() + "px solid " + BlueSideColorBorderChampionNotSet;
                 RunesSuppPage.formatingData.BlueSideColorBorderChampion = overlay.BlueSideColorBorderChampion.ToString() + "px solid " + BlueSideColorBorderChampionNotSet;
                 RunesTopPage.formatingData.BlueSideColorBorderChampion = overlay.BlueSideColorBorderChampion.ToString() + "px solid " + BlueSideColorBorderChampionNotSet;
+                RunesAllPage.formatingData.BlueSideColorBorderChampion = overlay.BlueSideColorBorderChampion.ToString() + "px solid " + BlueSideColorBorderChampionNotSet;
             }
 
             public static string TempsBlueSideColorBorderChampion()
@@ -453,6 +470,7 @@ namespace OSL_Server.Pages.Runes
                 RunesMidPage.formatingData.RedSideColorBorderChampion = overlay.RedSideColorBorderChampion.ToString() + "px solid " + RedSideColorBorderChampionNotSet;
                 RunesSuppPage.formatingData.RedSideColorBorderChampion = overlay.RedSideColorBorderChampion.ToString() + "px solid " + RedSideColorBorderChampionNotSet;
                 RunesTopPage.formatingData.RedSideColorBorderChampion = overlay.RedSideColorBorderChampion.ToString() + "px solid " + RedSideColorBorderChampionNotSet;
+                RunesAllPage.formatingData.RedSideColorBorderChampion = overlay.RedSideColorBorderChampion.ToString() + "px solid " + RedSideColorBorderChampionNotSet;
             }
 
             public static string TempsRedSideColorBorderChampion()
