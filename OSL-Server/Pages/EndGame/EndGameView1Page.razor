@@ -288,6 +288,85 @@
                 <div class="gold-diff-text" style="color: @formatingData.GoldDiffTextColor">
                     @formatingData.GoldDiffText
                 </div>
+                <div class="gold-graph">
+                    <figure class="css-chart">
+                        <ul class="line-chart">
+                            @{
+                                CreateTabGold();
+                                int x = 0;
+                            }
+                            @for (int i = 0; i < goldDiff.Count - 1; i++)
+                            {
+                                int y = (goldDiff[i] * 100) / MaxGold();
+                                x += 1250 / goldDiff.Count();
+                                double nexty = (goldDiff[i + 1] * 100) / MaxGold();
+                                int nextx = x + 1250 / goldDiff.Count();
+                                if (i == 0)
+                                {
+                                    <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                        <div class="data-point" data-value="@goldDiff[i]" style="background-color: #ffffff"></div>
+                                        <div class="line-segment" style="--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                    </li>
+                                }
+                                else
+                                {
+                                    if (goldDiff[i] > 0)
+                                    {
+                                        <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                            <div class="data-point" data-value="@goldDiff[i]" style="background-color: #0b849e"></div>
+                                            <div class="line-segment" style="--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                        </li>
+                                    }
+                                    else if (goldDiff[i] == 0)
+                                    {
+                                        <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                            <div class="data-point" data-value="@goldDiff[i]" style="background-color: #ffffff"></div>
+                                            <div class="line-segment" style="--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                            <div class="data-point" data-value="@goldDiff[i]" style="background-color: #be1e37"></div>
+                                            <div class="line-segment" style="--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                        </li>
+                                    }
+                                }
+                                if (i == goldDiff.Count - 2)
+                                {
+                                    <li style="--x: @ConvertToString(x+1250/goldDiff.Count()); --y: @ConvertToString((goldDiff[i+1] * 100) / MaxGold());">
+                                        <div class="data-point" data-value="" style="background-color: #ffffff"></div>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </figure>
+                    <div class="gold-graph-orizon-bar" style="width: @ConvertToString(x);"></div>
+                    <div class="gold-graph-orizon-bar-max" style="width: @ConvertToString(x);"></div>
+                    <div class="gold-graph-orizon-bar-maxmoy" style="width: @ConvertToString(x);"></div>
+                    <div class="gold-graph-orizon-bar-minmoy" style="width: @ConvertToString(x);"></div>
+                    <div class="gold-graph-orizon-bar-min" style="width: @ConvertToString(x);"></div>
+                    <div class="gold-graph-vertical-bar-left" style="height: @ConvertToString(200);"></div>
+                    <div class="gold-graph-vertical-bar-mid" style="height: @ConvertToString(200);"></div>
+                    <div class="gold-graph-vertical-bar-mid-left" style="height: @ConvertToString(200);"></div>
+                    <div class="gold-graph-vertical-bar-mid-right" style="height: @ConvertToString(200);"></div>
+                    <div class="gold-graph-vertical-bar-right" style="height: @ConvertToString(200);"></div>
+                    <div class="gold-graph-zero" style="color: #ffffff">
+                        0
+                    </div>
+                    <div class="gold-graph-max" style="color: #0b849e">
+                        @ConvertToK(MaxGold())
+                    </div>
+                    <div class="gold-graph-maxmoy" style="color: #0b849e">
+                        @ConvertToK(MaxGold()/2)
+                    </div>
+                    <div class="gold-graph-minmoy" style="color: #be1e37">
+                        @ConvertToK(MaxGold()/2)
+                    </div>
+                    <div class="gold-graph-min" style="color: #be1e37">
+                        @ConvertToK(MaxGold())
+                    </div>
+                </div>
             </div>
         }
         else

@@ -398,11 +398,11 @@ namespace OSL_Server.Pages.EndGame
                     bool win = participants.win;
                     if (win)
                     {
-                        return $"WIN";
+                        return $"VICTOIRE";
                     }
                 }
             }
-            return $"LOSS";
+            return $"DÉFAITE";
         }
 
         public string GetWinLossRed()
@@ -415,11 +415,11 @@ namespace OSL_Server.Pages.EndGame
                     bool win = participants.win;
                     if (win)
                     {
-                        return $"WIN";
+                        return $"VICTOIRE";
                     }
                 }
             }
-            return $"LOSS";
+            return $"DÉFAITE";
         }
 
         public static void ResetColor()

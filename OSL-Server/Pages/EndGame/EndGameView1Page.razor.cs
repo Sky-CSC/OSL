@@ -11,6 +11,9 @@ namespace OSL_Server.Pages.EndGame
         //Data for display color, texte, picture on web page
         public static FormatingData formatingData = new();
 
+        //Tab of difference of team golds
+        public static List<int> goldDiff = new();
+
         public class FormatingData
         {
             public string DefaultPatch { get; set; }
@@ -398,11 +401,11 @@ namespace OSL_Server.Pages.EndGame
                     bool win = participants.win;
                     if (win)
                     {
-                        return $"WIN";
+                        return $"VICTOIRE";
                     }
                 }
             }
-            return $"LOSS";
+            return $"DÉFAITE";
         }
 
         public string GetWinLossRed()
@@ -415,11 +418,11 @@ namespace OSL_Server.Pages.EndGame
                     bool win = participants.win;
                     if (win)
                     {
-                        return $"WIN";
+                        return $"VICTOIRE";
                     }
                 }
             }
-            return $"LOSS";
+            return $"DÉFAITE";
         }
 
         public static void ResetColor()
@@ -463,5 +466,84 @@ namespace OSL_Server.Pages.EndGame
             EndGamePage.textValueOverlayView1.GoldDiffBorderColor = 5;
 
         }
+
+
+
+        public static void CreateTabGold()
+        {
+            goldDiff = new();
+            foreach (var frames in EndGameInfo.jsonContentTimeline.info.frames)
+            {
+                int totalGoldBlue = 0;
+                int totalGoldRed = 0;
+                int i = 0;
+                foreach (var participantFrames in frames.participantFrames)
+                {
+                    i++;
+                    if (i < 6)
+                    {
+                        foreach (var intVar in participantFrames)
+                        {
+                            totalGoldBlue += Convert.ToInt32(intVar.totalGold);
+                        }
+                    }
+                    else
+                    {
+                        foreach (var intVar in participantFrames)
+                        {
+                            totalGoldRed += Convert.ToInt32(intVar.totalGold);
+                        }
+                    }
+                }
+                int diffGold = totalGoldBlue - totalGoldRed;
+                goldDiff.Add(diffGold);
+            }
+        }
+        public static int MaxGold()
+        {
+            int max = goldDiff.Max();
+            int min = goldDiff.Min();
+            if (max > Math.Abs(min))
+            {
+                return max;
+            }
+            else
+            {
+                return Math.Abs(min);
+            }
+        }
+
+
+        public static string ConvertToString(int x)
+        {
+            return $"{x}px";
+        }
+
+        public static string ConvertToString(double x)
+        {
+            return $"{x}px";
+        }
+
+        public static string ConvertToHyp(int x, double y, int prex, double prey)
+        {
+            double newY = y - prey;
+            double newX = x - prex;
+            double sqrt = Math.Sqrt(newX * newX + newY * newY);
+            string machin = sqrt.ToString();
+            return machin.Replace(",", ".");
+        }
+
+        public static string ConvertToAngle(int x, double y, int prex, double prey)
+        {
+            double newY = y - prey;
+            double newX = x - prex;
+            double sqrt = Math.Sqrt(newX * newX + newY * newY);
+            double sin = newY / sqrt;
+            double test = Math.Asin(sin) * (180 / Math.PI);
+            string machin = test.ToString();
+            return machin.Replace(",", ".");
+        }
+
+
     }
 }

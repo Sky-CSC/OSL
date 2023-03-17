@@ -418,3 +418,170 @@ html, body {
     /*width: 1300px;*/
     color: #c99d53;
 }
+
+.gold-graph {
+    position: absolute;
+    top: 170px;
+    left: 35px;
+}
+
+.css-chart {
+    /*border-bottom: 1px solid;*/
+    /*border-left: 1px solid;*/
+    display: inline-block;
+    /*height: var(--widget-size);*/
+    /*margin: 5em 15em 1em 5em;*/
+    padding: 0;
+    position: relative;
+    /*width: var(--widget-size);*/
+}
+
+.line-chart {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.data-point {
+    background-color: white;
+    /*border: 2px solid lightblue;*/
+    border-radius: 50%;
+    bottom: calc(var(--y) - 7px);
+    height: 15px;
+    left: calc(var(--x) - 7px);
+    position: absolute;
+    width: 15px;
+    z-index: 1;
+}
+
+.line-segment {
+    background-color: #c99d53;
+    bottom: var(--y);
+    height: 2px;
+    left: var(--x);
+    position: absolute;
+    transform: rotate(calc(var(--angle) * 1deg));
+    transform-origin: left bottom;
+    width: calc(var(--hypotenuse) * 1px);
+}
+
+.gold-graph-orizon-bar {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: 0px;
+    left: 50px;
+    position: absolute;
+}
+
+.gold-graph-vertical-bar-left {
+    border: 1px dashed #ffffff;
+    position: absolute;
+    top: -100px;
+    left: 47px;
+}
+
+.gold-graph-vertical-bar-right {
+    border: 1px dashed #ffffff;
+    position: absolute;
+    top: -100px;
+    left: 1250px;
+}
+
+.gold-graph-vertical-bar-mid {
+    border: 1px dashed #ffffff;
+    position: absolute;
+    top: -100px;
+    left: 645px;
+}
+
+.gold-graph-vertical-bar-mid-left {
+    border: 1px dashed #ffffff;
+    position: absolute;
+    top: -100px;
+    left: 345px;
+}
+
+.gold-graph-vertical-bar-mid-right {
+    border: 1px dashed #ffffff;
+    position: absolute;
+    top: -100px;
+    left: 945px;
+}
+
+.gold-graph-orizon-bar-maxmoy {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: -50px;
+    left: 50px;
+    position: absolute;
+}
+
+.gold-graph-orizon-bar-max {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: -100px;
+    left: 50px;
+    position: absolute;
+}
+
+.gold-graph-orizon-bar-min {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: 100px;
+    left: 50px;
+    position: absolute;
+}
+
+.gold-graph-orizon-bar-minmoy {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: 50px;
+    left: 50px;
+    position: absolute;
+}
+
+.gold-graph-zero {
+    font-family: MyFont;
+    font-size: 22px;
+    position: absolute;
+    left: 15px;
+    top: -15px;
+}
+
+.gold-graph-max {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: -9px;
+    top: -120px;
+}
+
+.gold-graph-maxmoy {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: -9px;
+    top: -60px;
+}
+
+.gold-graph-min {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: -9px;
+    top: 80px;
+}
+
+.gold-graph-minmoy {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: -9px;
+    top: 40px;
+}
+
