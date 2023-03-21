@@ -72,5 +72,14 @@
   "GoldDiffGradiant": "linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.72) 50%, rgba(0,0,0,0.72) 100%)",
   "GoldDiffBorderColor": "0px solid #c99d53",
   "GoldDiffText": "Différence de gold",
-  "GoldDiffTextColor": "#c99d53"
+  "GoldDiffTextColor": "#c99d53",
+  "GoldDiffBlueTextGoldColor": "#0b849e",
+  "GoldDiffRedTextGoldColor": "#be1e37",
+  "GoldDiffZeroTextGoldColor": "#ffffff",
+  "GoldDiffBluePointGoldColor": "#0b849e",
+  "GoldDiffRedPointGoldColor": "#be1e37",
+  "GoldDiffZeroPointGoldColor": "#ffffff",
+  "GoldDiffStartEndPointGoldColor": "#ffffff",
+  "GoldDiffLinkPointGoldColor": "#c99d53",
+  "GoldDiffBarColor": "1px dashed #ffffff"
 }

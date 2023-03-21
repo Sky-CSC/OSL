@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using OSL_Server.DataLoader.WebApiRiot;
 using OSL_Server.Pages.Runes;
 using OSL_Server.Pages.EndGame;
+using OSL_Server.DataReciveClient.Processing.EndGame;
 
 namespace OSL_Server.Configuration
 {
@@ -40,6 +41,8 @@ namespace OSL_Server.Configuration
             LoadConfigTimer();
 
             LoadDefaultSession();
+
+            LoadDefaultSessionEndGame();
 
             //Load configurations web api key
             LoadWebRiotApiKey();
@@ -418,6 +421,19 @@ namespace OSL_Server.Configuration
         {
             string dataDefaultSession = FileManagerLocal.ReadInFile("./wwwroot/assets/champselect/defaultSession.json");
             ChampSelectInfo.InChampSelect(dataDefaultSession);
+        }
+
+        /// <summary>
+        /// Load Default Session for display att start information on end game views
+        /// </summary>
+        public static void LoadDefaultSessionEndGame()
+        {
+            string dataDefaultSessionLocal = FileManagerLocal.ReadInFile("./wwwroot/assets/endgame/loadDefaultData/local-api-eog-stats-block.json");
+            string dataDefaultSessionWeb = FileManagerLocal.ReadInFile("./wwwroot/assets/endgame/loadDefaultData/web-api-match-v5.json");
+            string dataDefaultSessionWebTimeline = FileManagerLocal.ReadInFile("./wwwroot/assets/endgame/loadDefaultData/web-api-match-v5-timeline.json");
+            EndGameInfo.jsonContentEndOfMatch = JsonConvert.DeserializeObject(dataDefaultSessionLocal);
+            EndGameInfo.jsonContentMatch = JsonConvert.DeserializeObject(dataDefaultSessionWeb);
+            EndGameInfo.jsonContentTimeline = JsonConvert.DeserializeObject(dataDefaultSessionWebTimeline);
         }
 
         public static void LoadConfigInGameView1()
@@ -929,6 +945,15 @@ namespace OSL_Server.Configuration
             EndGameView1Page.formatingData.GoldDiffBorderColor = jsonContent.GoldDiffBorderColor;
             EndGameView1Page.formatingData.GoldDiffText = jsonContent.GoldDiffText;
             EndGameView1Page.formatingData.GoldDiffTextColor = jsonContent.GoldDiffTextColor;
+            EndGameView1Page.formatingData.GoldDiffBlueTextGoldColor = jsonContent.GoldDiffBlueTextGoldColor;
+            EndGameView1Page.formatingData.GoldDiffRedTextGoldColor = jsonContent.GoldDiffRedTextGoldColor;
+            EndGameView1Page.formatingData.GoldDiffZeroTextGoldColor = jsonContent.GoldDiffZeroTextGoldColor;
+            EndGameView1Page.formatingData.GoldDiffBluePointGoldColor = jsonContent.GoldDiffBluePointGoldColor;
+            EndGameView1Page.formatingData.GoldDiffRedPointGoldColor = jsonContent.GoldDiffRedPointGoldColor;
+            EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor = jsonContent.GoldDiffZeroPointGoldColor;
+            EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor = jsonContent.GoldDiffStartEndPointGoldColor;
+            EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor = jsonContent.GoldDiffLinkPointGoldColor;
+            EndGameView1Page.formatingData.GoldDiffBarColor = jsonContent.GoldDiffBarColor;
         }
 
         public static void LoadConfigEndGameView2Page()
@@ -1025,6 +1050,15 @@ namespace OSL_Server.Configuration
             EndGameView2Page.formatingData.GoldDiffBorderColor = jsonContent.GoldDiffBorderColor;
             EndGameView2Page.formatingData.GoldDiffText = jsonContent.GoldDiffText;
             EndGameView2Page.formatingData.GoldDiffTextColor = jsonContent.GoldDiffTextColor;
+            EndGameView2Page.formatingData.GoldDiffBlueTextGoldColor = jsonContent.GoldDiffBlueTextGoldColor;
+            EndGameView2Page.formatingData.GoldDiffRedTextGoldColor = jsonContent.GoldDiffRedTextGoldColor;
+            EndGameView2Page.formatingData.GoldDiffZeroTextGoldColor = jsonContent.GoldDiffZeroTextGoldColor;
+            EndGameView2Page.formatingData.GoldDiffBluePointGoldColor = jsonContent.GoldDiffBluePointGoldColor;
+            EndGameView2Page.formatingData.GoldDiffRedPointGoldColor = jsonContent.GoldDiffRedPointGoldColor;
+            EndGameView2Page.formatingData.GoldDiffZeroPointGoldColor = jsonContent.GoldDiffZeroPointGoldColor;
+            EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor = jsonContent.GoldDiffStartEndPointGoldColor;
+            EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor = jsonContent.GoldDiffLinkPointGoldColor;
+            EndGameView2Page.formatingData.GoldDiffBarColor = jsonContent.GoldDiffBarColor;
         }
         public static void LoadConfigEndGameView3Page()
         {
@@ -1120,6 +1154,15 @@ namespace OSL_Server.Configuration
             EndGameView3Page.formatingData.GoldDiffBorderColor = jsonContent.GoldDiffBorderColor;
             EndGameView3Page.formatingData.GoldDiffText = jsonContent.GoldDiffText;
             EndGameView3Page.formatingData.GoldDiffTextColor = jsonContent.GoldDiffTextColor;
+            EndGameView3Page.formatingData.GoldDiffBlueTextGoldColor = jsonContent.GoldDiffBlueTextGoldColor;
+            EndGameView3Page.formatingData.GoldDiffRedTextGoldColor = jsonContent.GoldDiffRedTextGoldColor;
+            EndGameView3Page.formatingData.GoldDiffZeroTextGoldColor = jsonContent.GoldDiffZeroTextGoldColor;
+            EndGameView3Page.formatingData.GoldDiffBluePointGoldColor = jsonContent.GoldDiffBluePointGoldColor;
+            EndGameView3Page.formatingData.GoldDiffRedPointGoldColor = jsonContent.GoldDiffRedPointGoldColor;
+            EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor = jsonContent.GoldDiffZeroPointGoldColor;
+            EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor = jsonContent.GoldDiffStartEndPointGoldColor;
+            EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor = jsonContent.GoldDiffLinkPointGoldColor;
+            EndGameView3Page.formatingData.GoldDiffBarColor = jsonContent.GoldDiffBarColor;
         }
     }
 }

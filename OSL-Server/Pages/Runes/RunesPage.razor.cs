@@ -62,10 +62,10 @@ namespace OSL_Server.Pages.Runes
                     });
                 }
 
-                foreach (var info in summonerPerksList)
-                {
-                    Console.WriteLine(info.Lane);
-                }
+                //foreach (var info in summonerPerksList)
+                //{
+                //    Console.WriteLine(info.Lane);
+                //}
                 _logger.log(LoggingLevel.INFO, "CreateSummonerPerksListV2()", $"summonerPerksList created and completed");
             }
             catch (Exception e)

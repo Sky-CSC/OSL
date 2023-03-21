@@ -421,18 +421,25 @@ html, body {
 
 .gold-graph {
     position: absolute;
-    top: 170px;
+    top: 165px;
     left: 35px;
+}
+
+.gold-graph-content {
+    position: absolute;
+    left: 48px;
+    top: 2px;
 }
 
 .css-chart {
     /*border-bottom: 1px solid;*/
     /*border-left: 1px solid;*/
-    display: inline-block;
+    /*display: inline-block;*/
     /*height: var(--widget-size);*/
     /*margin: 5em 15em 1em 5em;*/
-    padding: 0;
-    position: relative;
+    /*padding: 0;*/
+    position: absolute;
+    /*left: 20px;*/
     /*width: var(--widget-size);*/
 }
 
@@ -440,6 +447,7 @@ html, body {
     list-style: none;
     margin: 0;
     padding: 0;
+    position: absolute;
 }
 
 .data-point {
@@ -455,7 +463,7 @@ html, body {
 }
 
 .line-segment {
-    background-color: #c99d53;
+    /*background-color: #c99d53;*/
     bottom: var(--y);
     height: 2px;
     left: var(--x);
@@ -472,41 +480,62 @@ html, body {
     top: 0px;
     left: 50px;
     position: absolute;
+    width: 1185px;
 }
 
-.gold-graph-vertical-bar-left {
-    border: 1px dashed #ffffff;
+.gold-graph-vertical-bar {
+    /*border: 1px dashed #ffffff;*/
     position: absolute;
     top: -100px;
     left: 47px;
+    height: 200px;
+}
+
+.gold-graph-vertical-bar-timer {
+    position: absolute;
+    top: 105px;
+    font-family: MyFont;
+    font-size: 18px;
+}
+
+.gold-graph-vertical-bar-left {
+    /*border: 1px dashed #ffffff;*/
+    position: absolute;
+    top: -100px;
+    left: 47px;
+    height: 200px;
 }
 
 .gold-graph-vertical-bar-right {
-    border: 1px dashed #ffffff;
+    /*border: 1px dashed #ffffff;*/
     position: absolute;
     top: -100px;
-    left: 1250px;
+    left: 1239px;
+    height: 200px;
 }
 
 .gold-graph-vertical-bar-mid {
-    border: 1px dashed #ffffff;
+    /*border: 1px dashed #ffffff;*/
     position: absolute;
     top: -100px;
     left: 645px;
+    height: 200px;
 }
 
 .gold-graph-vertical-bar-mid-left {
-    border: 1px dashed #ffffff;
+    /*border: 1px dashed #ffffff;*/
     position: absolute;
     top: -100px;
     left: 345px;
+    height: 200px;
 }
 
 .gold-graph-vertical-bar-mid-right {
-    border: 1px dashed #ffffff;
+    /*border: 1px dashed #ffffff;*/
     position: absolute;
     top: -100px;
     left: 945px;
+    height: 200px;
 }
 
 .gold-graph-orizon-bar-maxmoy {
@@ -516,6 +545,7 @@ html, body {
     top: -50px;
     left: 50px;
     position: absolute;
+    width: 1185px;
 }
 
 .gold-graph-orizon-bar-max {
@@ -525,6 +555,7 @@ html, body {
     top: -100px;
     left: 50px;
     position: absolute;
+    width: 1185px;
 }
 
 .gold-graph-orizon-bar-min {
@@ -534,6 +565,7 @@ html, body {
     top: 100px;
     left: 50px;
     position: absolute;
+    width: 1185px;
 }
 
 .gold-graph-orizon-bar-minmoy {
@@ -543,6 +575,7 @@ html, body {
     top: 50px;
     left: 50px;
     position: absolute;
+    width: 1185px;
 }
 
 .gold-graph-zero {
@@ -585,3 +618,38 @@ html, body {
     top: 40px;
 }
 
+.gold-graph-time-1 {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: 25px;
+    top: 105px;
+}
+.gold-graph-time-2 {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: 325px;
+    top: 105px;
+}
+.gold-graph-time-3 {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: 625px;
+    top: 105px;
+}
+.gold-graph-time-4 {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: 925px;
+    top: 105px;
+}
+.gold-graph-time-5 {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: 1215px;
+    top: 105px;
+}

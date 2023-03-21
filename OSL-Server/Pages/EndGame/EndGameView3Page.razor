@@ -128,7 +128,7 @@
                         <div class="top-bar-blue-team-winloss" style="color: @formatingData.TopBarBlueTeamWinLossColor">
                             @GetWinLossBlue()
                         </div>
-                        
+
                     </div>
                     <div class="top-bar-team-score">
                         <div class="top-bar-blue-team-score" style="color: @formatingData.TopBarBlueTeamScoreColor">
@@ -250,7 +250,7 @@
                                 @foreach (var events in frames.events)
                                 {
                                     string monsterSubType = events.monsterSubType;
-                                    if (monsterSubType != null)
+                                    if (monsterSubType != null && !monsterSubType.Equals("ELDER_DRAGON"))
                                     {
                                         int killerTeamId = events.killerTeamId;
                                         if (killerTeamId == 100)
@@ -314,7 +314,7 @@
                                 @foreach (var events in frames.events)
                                 {
                                     string monsterSubType = events.monsterSubType;
-                                    if (monsterSubType != null)
+                                    if (monsterSubType != null && !monsterSubType.Equals("ELDER_DRAGON"))
                                     {
                                         int killerTeamId = events.killerTeamId;
                                         if (killerTeamId == 200)
@@ -344,6 +344,103 @@
                 <div class="gold-diff-border" style="border: @formatingData.GoldDiffBorderColor"></div>
                 <div class="gold-diff-text" style="color: @formatingData.GoldDiffTextColor">
                     @formatingData.GoldDiffText
+                </div>
+                <div class="gold-graph">
+                    <div class="gold-graph-content">
+                        <figure class="css-chart">
+                            <ul class="line-chart">
+                                @{
+                                    CreateTabGold();
+                                    double x = 0;
+                                }
+                                @for (int i = 0; i < goldDiff.Count - 1; i++)
+                                {
+                                    double y = (goldDiff[i] * 125) / MaxGold();
+                                    double nexty = (goldDiff[i + 1] * 125) / MaxGold();
+                                    double nextx = x + 845 / goldDiff.Count();
+                                    if (i == 0)
+                                    {
+                                        <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                            <div class="data-point" data-value="@goldDiff[i]" style="background-color: @formatingData.GoldDiffStartEndPointGoldColor"></div>
+                                            <div class="line-segment" style="background-color: @formatingData.GoldDiffLinkPointGoldColor ;--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        if (goldDiff[i] > 0)
+                                        {
+                                            <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                                <div class="data-point" data-value="@goldDiff[i]" style="background-color: @formatingData.GoldDiffBluePointGoldColor"></div>
+                                                <div class="line-segment" style="background-color: @formatingData.GoldDiffLinkPointGoldColor ;--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                            </li>
+                                        }
+                                        else if (goldDiff[i] == 0)
+                                        {
+                                            <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                                <div class="data-point" data-value="@goldDiff[i]" style="background-color: @formatingData.GoldDiffZeroPointGoldColor"></div>
+                                                <div class="line-segment" style="background-color: @formatingData.GoldDiffLinkPointGoldColor ;--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                                <div class="data-point" data-value="@goldDiff[i]" style="background-color: @formatingData.GoldDiffRedPointGoldColor"></div>
+                                                <div class="line-segment" style="background-color: @formatingData.GoldDiffLinkPointGoldColor ;--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                            </li>
+                                        }
+                                    }
+                                    if (i == goldDiff.Count - 2)
+                                    {
+                                        <li style="--x: @ConvertToString(x+845/goldDiff.Count()); --y: @ConvertToString((goldDiff[i+1] * 125) / MaxGold());">
+                                            <div class="data-point" data-value="" style="background-color: @formatingData.GoldDiffStartEndPointGoldColor"></div>
+                                        </li>
+                                    }
+                                    x += 845 / goldDiff.Count();
+                                }
+                            </ul>
+                        </figure>
+                    </div>
+                    <div class="gold-graph-orizon-bar" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-orizon-bar-max" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-orizon-bar-maxmoy" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-orizon-bar-minmoy" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-orizon-bar-min" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-vertical-bar-left" style="border: @formatingData.GoldDiffBarColor"></div>
+
+                    @{
+                        int decalageX = 807 / (GetTimerInt() / 5);
+                        int leftDistance = 47;
+                        TimeSpan timerFive = new TimeSpan(0, 0, 0);
+                    }
+                    @for (int i = 0; i < (GetTimerInt() / 5) - 1; i++)
+                    {
+                        leftDistance = leftDistance + decalageX;
+                        timerFive = timerFive.Add(new TimeSpan(0, 5, 0));
+                        <div class="gold-graph-vertical-bar-left" style="left: @ConvertToString(leftDistance);  border: @formatingData.GoldDiffBarColor"></div>
+                        <div class="gold-graph-vertical-bar-timer" style="left: @ConvertToString(leftDistance-20); color: @formatingData.GoldDiffZeroTextGoldColor">@timerFive.ToString("mm':'ss")</div>
+                    }
+                    <div class="gold-graph-vertical-bar-right" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-zero" style="color: @formatingData.GoldDiffZeroTextGoldColor">
+                        0
+                    </div>
+                    <div class="gold-graph-time-5" style="color: @formatingData.GoldDiffZeroTextGoldColor">
+                        @GetTimer()
+                    </div>
+                    <div class="gold-graph-time-1" style="color: @formatingData.GoldDiffZeroTextGoldColor">
+                        00:00
+                    </div>
+                    <div class="gold-graph-max" style="color: @formatingData.GoldDiffBlueTextGoldColor">
+                        @ConvertToK(MaxGold())
+                    </div>
+                    <div class="gold-graph-maxmoy" style="color: @formatingData.GoldDiffBlueTextGoldColor">
+                        @ConvertToK(MaxGold()/2)
+                    </div>
+                    <div class="gold-graph-minmoy" style="color:  @formatingData.GoldDiffRedTextGoldColor">
+                        @ConvertToK(MaxGold()/2)
+                    </div>
+                    <div class="gold-graph-min" style="color:  @formatingData.GoldDiffRedTextGoldColor">
+                        @ConvertToK(MaxGold())
+                    </div>
                 </div>
             </div>
         }

@@ -124,6 +124,9 @@ namespace OSL_Server.Pages.EndGame
             [Required]
             [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
             public int GoldDiffBorderColor { get; set; } = 5;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int GoldDiffBarColor { get; set; } = 1;
 
             public static void TopBarBlueTeamNameSubmit()
             {
@@ -218,7 +221,7 @@ namespace OSL_Server.Pages.EndGame
 
             public static void BackgroundColorEnableDisableSubmit()
             {
-                
+
             }
 
 
@@ -801,6 +804,30 @@ namespace OSL_Server.Pages.EndGame
                     colorPickerOverlay1GoldDiff = "hidden";
                     GoldDiffBorderColorNotSet = colorValue;
                 }
+            } 
+            public static void GoldDiffBarColorSubmit()
+            {
+                EndGameView1Page.formatingData.GoldDiffBarColor = textValueOverlayView1.GoldDiffBarColor.ToString() + "px dashed " + GoldDiffBarColorNotSet;
+            }
+            public static string TempsGoldDiffBarColor()
+            {
+                string[] tempsColor = EndGameView1Page.formatingData.GoldDiffBarColor.Split(" ");
+                return tempsColor[2];
+            }
+            public static string GoldDiffBarColorNotSet = EndGameView1Page.formatingData.GoldDiffBarColor.Split(" ")[2];
+            public static void SetGoldDiffBarColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    string[] tempsBorderColor = EndGameView1Page.formatingData.GoldDiffBarColor.Split(" ");
+                    colorValue = tempsBorderColor[2];
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    GoldDiffBarColorNotSet = colorValue;
+                }
             }
             public static void SetGoldDiffTextColor()
             {
@@ -813,6 +840,110 @@ namespace OSL_Server.Pages.EndGame
                 {
                     colorPickerOverlay1GoldDiff = "hidden";
                     EndGameView1Page.formatingData.GoldDiffTextColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffBlueTextGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView1Page.formatingData.GoldDiffBlueTextGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView1Page.formatingData.GoldDiffBlueTextGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffRedTextGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView1Page.formatingData.GoldDiffRedTextGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView1Page.formatingData.GoldDiffRedTextGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffZeroTextGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView1Page.formatingData.GoldDiffZeroTextGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView1Page.formatingData.GoldDiffZeroTextGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffBluePointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView1Page.formatingData.GoldDiffBluePointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView1Page.formatingData.GoldDiffBluePointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffRedPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView1Page.formatingData.GoldDiffRedPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView1Page.formatingData.GoldDiffRedPointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffZeroPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffStartEndPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffLinkPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor = colorValue;
                 }
             }
         }
@@ -925,6 +1056,9 @@ namespace OSL_Server.Pages.EndGame
             [Required]
             [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
             public int GoldDiffBorderColor { get; set; } = 5;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int GoldDiffBarColor { get; set; } = 1;
 
             public static void TopBarBlueTeamNameSubmit()
             {
@@ -1603,6 +1737,30 @@ namespace OSL_Server.Pages.EndGame
                     GoldDiffBorderColorNotSet = colorValue;
                 }
             }
+            public static void GoldDiffBarColorSubmit()
+            {
+                EndGameView2Page.formatingData.GoldDiffBarColor = textValueOverlayView2.GoldDiffBarColor.ToString() + "px dashed " + GoldDiffBarColorNotSet;
+            }
+            public static string TempsGoldDiffBarColor()
+            {
+                string[] tempsColor = EndGameView2Page.formatingData.GoldDiffBarColor.Split(" ");
+                return tempsColor[2];
+            }
+            public static string GoldDiffBarColorNotSet = EndGameView2Page.formatingData.GoldDiffBarColor.Split(" ")[2];
+            public static void SetGoldDiffBarColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    string[] tempsBorderColor = EndGameView2Page.formatingData.GoldDiffBarColor.Split(" ");
+                    colorValue = tempsBorderColor[2];
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    GoldDiffBarColorNotSet = colorValue;
+                }
+            }
             public static void SetGoldDiffTextColor()
             {
                 if (colorPickerOverlay1GoldDiff.Equals("hidden"))
@@ -1614,6 +1772,111 @@ namespace OSL_Server.Pages.EndGame
                 {
                     colorPickerOverlay1GoldDiff = "hidden";
                     EndGameView2Page.formatingData.GoldDiffTextColor = colorValue;
+                }
+            }
+
+            public static void SetGoldDiffBlueTextGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView2Page.formatingData.GoldDiffBlueTextGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView2Page.formatingData.GoldDiffBlueTextGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffRedTextGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView2Page.formatingData.GoldDiffRedTextGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView2Page.formatingData.GoldDiffRedTextGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffZeroTextGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView2Page.formatingData.GoldDiffZeroTextGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView2Page.formatingData.GoldDiffZeroTextGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffBluePointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView2Page.formatingData.GoldDiffBluePointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView2Page.formatingData.GoldDiffBluePointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffRedPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView2Page.formatingData.GoldDiffRedPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView2Page.formatingData.GoldDiffRedPointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffZeroPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView2Page.formatingData.GoldDiffZeroPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView2Page.formatingData.GoldDiffZeroPointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffStartEndPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffLinkPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor = colorValue;
                 }
             }
         }
@@ -1734,6 +1997,9 @@ namespace OSL_Server.Pages.EndGame
             [Required]
             [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
             public int GoldDiffBorderColor { get; set; } = 5;
+            [Required]
+            [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+            public int GoldDiffBarColor { get; set; } = 1;
 
 
             public static void TopBarBlueTeamNameSubmit()
@@ -2464,6 +2730,134 @@ namespace OSL_Server.Pages.EndGame
                 {
                     colorPickerOverlay1GoldDiff = "hidden";
                     EndGameView3Page.formatingData.GoldDiffTextColor = colorValue;
+                }
+            }
+            public static void GoldDiffBarColorSubmit()
+            {
+                EndGameView3Page.formatingData.GoldDiffBarColor = textValueOverlayView3.GoldDiffBarColor.ToString() + "px dashed " + GoldDiffBarColorNotSet;
+            }
+            public static string TempsGoldDiffBarColor()
+            {
+                string[] tempsColor = EndGameView3Page.formatingData.GoldDiffBarColor.Split(" ");
+                return tempsColor[2];
+            }
+            public static string GoldDiffBarColorNotSet = EndGameView3Page.formatingData.GoldDiffBarColor.Split(" ")[2];
+            public static void SetGoldDiffBarColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    string[] tempsBorderColor = EndGameView3Page.formatingData.GoldDiffBarColor.Split(" ");
+                    colorValue = tempsBorderColor[2];
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    GoldDiffBarColorNotSet = colorValue;
+                }
+            }
+            public static void SetGoldDiffBlueTextGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView3Page.formatingData.GoldDiffBlueTextGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView3Page.formatingData.GoldDiffBlueTextGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffRedTextGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView3Page.formatingData.GoldDiffRedTextGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView3Page.formatingData.GoldDiffRedTextGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffZeroTextGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView3Page.formatingData.GoldDiffZeroTextGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView3Page.formatingData.GoldDiffZeroTextGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffBluePointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView3Page.formatingData.GoldDiffBluePointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView3Page.formatingData.GoldDiffBluePointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffRedPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView3Page.formatingData.GoldDiffRedPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView3Page.formatingData.GoldDiffRedPointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffZeroPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffStartEndPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor = colorValue;
+                }
+            }
+            public static void SetGoldDiffLinkPointGoldColor()
+            {
+                if (colorPickerOverlay1GoldDiff.Equals("hidden"))
+                {
+                    colorPickerOverlay1GoldDiff = "visible";
+                    colorValue = EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor;
+                }
+                else
+                {
+                    colorPickerOverlay1GoldDiff = "hidden";
+                    EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor = colorValue;
                 }
             }
         }

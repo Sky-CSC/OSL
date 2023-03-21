@@ -38,15 +38,15 @@ namespace OSL_Server.Pages.EndGame
             public string TopBarTimerTextColor { get; set; }
             public string TopBarTimerColor { get; set; }
             public string TopBarBlueTeamName { get; set; }
-            public string TopBarBlueTeamScore { get; set; }// NEW
+            public string TopBarBlueTeamScore { get; set; }
             public string TopBarBlueTeamNameColor { get; set; }
-            public string TopBarBlueTeamScoreColor { get; set; }// NEW
-            public string TopBarBlueTeamWinLossColor { get; set; }// NEW
+            public string TopBarBlueTeamScoreColor { get; set; }
+            public string TopBarBlueTeamWinLossColor { get; set; }
             public string TopBarRedTeamName { get; set; }
-            public string TopBarRedTeamScore { get; set; }// NEW
+            public string TopBarRedTeamScore { get; set; }
             public string TopBarRedTeamNameColor { get; set; }
-            public string TopBarRedTeamScoreColor { get; set; }// NEW
-            public string TopBarRedTeamWinLossColor { get; set; }// NEW
+            public string TopBarRedTeamScoreColor { get; set; }
+            public string TopBarRedTeamWinLossColor { get; set; }
 
             public string ChampionInfoBackgroundColor { get; set; }
             public string ChampionInfoBackgroundColorDeg { get; set; }
@@ -95,6 +95,15 @@ namespace OSL_Server.Pages.EndGame
             public string GoldDiffBorderColor { get; set; }
             public string GoldDiffText { get; set; }
             public string GoldDiffTextColor { get; set; }
+            public string GoldDiffBlueTextGoldColor { get; set; }
+            public string GoldDiffRedTextGoldColor { get; set; }
+            public string GoldDiffZeroTextGoldColor { get; set; }
+            public string GoldDiffBluePointGoldColor { get; set; }
+            public string GoldDiffRedPointGoldColor { get; set; }
+            public string GoldDiffZeroPointGoldColor { get; set; }
+            public string GoldDiffStartEndPointGoldColor { get; set; }
+            public string GoldDiffLinkPointGoldColor { get; set; }
+            public string GoldDiffBarColor { get; set; }
 
         }
 
@@ -103,6 +112,36 @@ namespace OSL_Server.Pages.EndGame
             try
             {
                 int gameLength = EndGameInfo.jsonContentMatch.info.gameDuration;
+                TimeSpan time = TimeSpan.FromSeconds(gameLength);
+                return time.ToString("mm':'ss");
+            }
+            catch
+            {
+                return "00:00";
+            }
+        }
+
+        public int GetTimerInt()
+        {
+            try
+            {
+                int gameLength = EndGameInfo.jsonContentMatch.info.gameDuration;
+                TimeSpan time = TimeSpan.FromSeconds(gameLength);
+                int timeLength = int.Parse(time.ToString("mm"));
+                return timeLength;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public string GetTimerDiv(double div)
+        {
+            try
+            {
+                double gameLength = EndGameInfo.jsonContentMatch.info.gameDuration;
+                gameLength = gameLength / div;
                 TimeSpan time = TimeSpan.FromSeconds(gameLength);
                 return time.ToString("mm':'ss");
             }
@@ -239,7 +278,7 @@ namespace OSL_Server.Pages.EndGame
             {
                 return $"./assets/endgame/dragon/chemtech_dragon_icon.png";
             }
-            if (monsterSubType != null && monsterSubType.Equals("MONTAIN_DRAGON"))
+            if (monsterSubType != null && monsterSubType.Equals("EARTH_DRAGON"))
             {
                 return $"./assets/endgame/dragon/mountain_dragon_icon.png";
             }

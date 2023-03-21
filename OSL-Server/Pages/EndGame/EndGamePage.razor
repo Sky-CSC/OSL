@@ -310,6 +310,22 @@
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                             </EditForm>
                             <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffTextColor" @onclick="@TextValueOverlayView1.SetGoldDiffTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffTextColor"> @EndGameView1Page.formatingData.GoldDiffTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffBlueTextGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffBlueTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffBlueTextGoldColor"> @EndGameView1Page.formatingData.GoldDiffBlueTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffRedTextGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffRedTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffRedTextGoldColor"> @EndGameView1Page.formatingData.GoldDiffRedTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffZeroTextGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffZeroTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffZeroTextGoldColor"> @EndGameView1Page.formatingData.GoldDiffZeroTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffBluePointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffBluePointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffBluePointGoldColor"> @EndGameView1Page.formatingData.GoldDiffBluePointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffRedPointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffRedPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffRedPointGoldColor"> @EndGameView1Page.formatingData.GoldDiffRedPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffZeroPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor"> @EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Start and End Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffStartEndPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor"> @EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Link Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffLinkPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor"> @EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor</spam>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.GoldDiffBarColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Bar Color ("@EndGameView1Page.formatingData.GoldDiffBarColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.GoldDiffBarColor" placeholder="1" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsGoldDiffBarColor()" @onclick="@TextValueOverlayView1.SetGoldDiffBarColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
                         </div>
                         <div class="color-picker" style="visibility: @colorPickerOverlay1GoldDiff">
                             <div class="color-picker-position">
@@ -624,6 +640,22 @@
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                             </EditForm>
                             <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffTextColor" @onclick="@TextValueOverlayView2.SetGoldDiffTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffTextColor"> @EndGameView2Page.formatingData.GoldDiffTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffBlueTextGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffBlueTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffBlueTextGoldColor"> @EndGameView2Page.formatingData.GoldDiffBlueTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffRedTextGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffRedTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffRedTextGoldColor"> @EndGameView2Page.formatingData.GoldDiffRedTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffZeroTextGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffZeroTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffZeroTextGoldColor"> @EndGameView2Page.formatingData.GoldDiffZeroTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffBluePointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffBluePointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffBluePointGoldColor"> @EndGameView2Page.formatingData.GoldDiffBluePointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffRedPointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffRedPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffRedPointGoldColor"> @EndGameView2Page.formatingData.GoldDiffRedPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffZeroPointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffZeroPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffZeroPointGoldColor"> @EndGameView2Page.formatingData.GoldDiffZeroPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Start and End Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffStartEndPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor"> @EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Link Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffLinkPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor"> @EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor</spam>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.GoldDiffBarColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Bar Color ("@EndGameView2Page.formatingData.GoldDiffBarColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView2.GoldDiffBarColor" placeholder="1" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView2.TempsGoldDiffBarColor()" @onclick="@TextValueOverlayView2.SetGoldDiffBarColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
                         </div>
                         <div class="color-picker" style="visibility: @colorPickerOverlay1GoldDiff">
                             <div class="color-picker-position">
@@ -699,7 +731,7 @@
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
                                 <label style="font-weight: bold">Backgroud Color ("@EndGameView3Page.formatingData.BackgroundColor") : </label>
-                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.BackgroundColorDeg" placeholder="90" />
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.BackgroundColorDeg" placeholder="45" />
                                 deg
                                 <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.BackgroundColorColor1" @onclick="@TextValueOverlayView3.SetBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.BackgroundColorColor1"> @EndGameView3Page.formatingData.BackgroundColorColor1</spam>
                                 <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.BackgroundColorPercent1" placeholder="0" />
@@ -718,7 +750,7 @@
                                 Disable all
                                 <br>gradiant
                             </button>
-                            
+
                             <button class="btn btn-primary button-form" style="background-color: darkgreen" @onclick="@EnableAllBackgroundView3">
                                 Enable all
                                 <br>background
@@ -766,7 +798,7 @@
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
                                 <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.TopBarBorderColor") : </label>
-                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.TopBarBorderColor" placeholder="5" />
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.TopBarBorderColor" placeholder="0" />
                                 <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsTopBarBorderColor()" @onclick="@TextValueOverlayView3.SetTopBarBorderColor"></button>
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                             </EditForm>
@@ -818,7 +850,7 @@
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
                                 <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.ChampionInfoBorderColor") : </label>
-                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.ChampionInfoBorderColor" placeholder="5" />
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.ChampionInfoBorderColor" placeholder="0" />
                                 <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsChampionInfoBorderColor()" @onclick="@TextValueOverlayView3.SetChampionInfoBorderColor"></button>
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                             </EditForm>
@@ -867,7 +899,7 @@
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
                                 <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.BansBorderColor") : </label>
-                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.BansBorderColor" placeholder="5" />
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.BansBorderColor" placeholder="0" />
                                 <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsBansBorderColor()" @onclick="@TextValueOverlayView3.SetBansBorderColor"></button>
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                             </EditForm>
@@ -913,11 +945,11 @@
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
                                 <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.GlobalStatsBorderColor") : </label>
-                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.GlobalStatsBorderColor" placeholder="5" />
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.GlobalStatsBorderColor" placeholder="0" />
                                 <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsGlobalStatsBorderColor()" @onclick="@TextValueOverlayView3.SetGlobalStatsBorderColor"></button>
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                             </EditForm>
-                             <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GlobalStatsSeparationColorSubmit">
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GlobalStatsSeparationColorSubmit">
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
                                 <label style="font-weight: bold">Separation Color ("@EndGameView3Page.formatingData.GlobalStatsSeparationColor") : </label>
@@ -969,11 +1001,27 @@
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
                                 <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.GoldDiffBorderColor") : </label>
-                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.GoldDiffBorderColor" placeholder="5" />
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.GoldDiffBorderColor" placeholder="0" />
                                 <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsGoldDiffBorderColor()" @onclick="@TextValueOverlayView3.SetGoldDiffBorderColor"></button>
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                             </EditForm>
                             <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffTextColor" @onclick="@TextValueOverlayView3.SetGoldDiffTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffTextColor"> @EndGameView3Page.formatingData.GoldDiffTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffBlueTextGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffBlueTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffBlueTextGoldColor"> @EndGameView3Page.formatingData.GoldDiffBlueTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffRedTextGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffRedTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffRedTextGoldColor"> @EndGameView3Page.formatingData.GoldDiffRedTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffZeroTextGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffZeroTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffZeroTextGoldColor"> @EndGameView3Page.formatingData.GoldDiffZeroTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffBluePointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffBluePointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffBluePointGoldColor"> @EndGameView3Page.formatingData.GoldDiffBluePointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffRedPointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffRedPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffRedPointGoldColor"> @EndGameView3Page.formatingData.GoldDiffRedPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffZeroPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor"> @EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Start and End Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffStartEndPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor"> @EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Link Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffLinkPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor"> @EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor</spam>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GoldDiffBarColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Bar Color ("@EndGameView3Page.formatingData.GoldDiffBarColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.GoldDiffBarColor" placeholder="1" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsGoldDiffBarColor()" @onclick="@TextValueOverlayView3.SetGoldDiffBarColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
                         </div>
                         <div class="color-picker" style="visibility: @colorPickerOverlay1GoldDiff">
                             <div class="color-picker-position">

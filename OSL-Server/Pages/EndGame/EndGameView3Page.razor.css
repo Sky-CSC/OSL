@@ -89,7 +89,7 @@ html, body {
     top: 50px;
 }
 
-.top-bar-separation-team-score{
+.top-bar-separation-team-score {
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -114,7 +114,8 @@ html, body {
     align-items: center;
     position: relative;
 }
-.timer-text{
+
+.timer-text {
     padding-right: 10px;
 }
 /*##########################################################*/
@@ -229,7 +230,7 @@ html, body {
     position: absolute;
 }
 
-.pick-wrapper{
+.pick-wrapper {
     padding-bottom: 10px;
 }
 
@@ -297,9 +298,9 @@ html, body {
     box-sizing: border-box;
 }
 
-.bans-info-red .bans-wrapper {
-    padding-right: 10px;
-}
+    .bans-info-red .bans-wrapper {
+        padding-right: 10px;
+    }
 
 .bans-picture {
     height: 61px;
@@ -354,13 +355,14 @@ html, body {
     font-family: MyFont;
     font-size: 30px;
     padding: 20px;
+    max-height: 87px;
     /*color: #c99d53;*/
     /*border-top: 2px solid #ffffff;*/
 }
 
-.global-stats-center-info:nth-child(7) {
-    /*border-bottom: 2px solid #ffffff;*/
-}
+    .global-stats-center-info:nth-child(7) {
+        /*border-bottom: 2px solid #ffffff;*/
+    }
 
 .global-stats-blue {
     font-family: MyFont;
@@ -390,8 +392,10 @@ html, body {
 
 .global-stats-blue-info {
     padding: 12.5px;
+    max-height: 87px;
     /*border-top: 2px solid #ffffff;*/
 }
+
     .global-stats-blue-info:nth-child(7) {
         /*border-bottom: 2px solid #ffffff;*/
     }
@@ -417,6 +421,7 @@ html, body {
 .global-stats-red-info {
     padding: 12.5px;
     /*border-top: 2px solid #ffffff;*/
+    max-height: 87px;
 }
 
     .global-stats-red-info:nth-child(7) {
@@ -464,4 +469,220 @@ html, body {
     position: absolute;
     /*width: 1300px;*/
     color: #c99d53;
+}
+
+.gold-graph {
+    position: absolute;
+    top: 180px;
+    left: 15px;
+}
+
+.gold-graph-content {
+    position: absolute;
+    left: 48px;
+    top: 27px;
+}
+
+.css-chart {
+    /*border-bottom: 1px solid;*/
+    /*border-left: 1px solid;*/
+    /*display: inline-block;*/
+    /*height: var(--widget-size);*/
+    /*margin: 5em 15em 1em 5em;*/
+    /*padding: 0;*/
+    position: absolute;
+    /*left: 25px;*/
+    /*top: 25px;*/
+    /*width: var(--widget-size);*/
+}
+
+.line-chart {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.data-point {
+    background-color: white;
+    /*border: 2px solid lightblue;*/
+    border-radius: 50%;
+    bottom: calc(var(--y) - 7px);
+    height: 15px;
+    left: calc(var(--x) - 7px);
+    position: absolute;
+    width: 15px;
+    z-index: 1;
+}
+
+.line-segment {
+    /*background-color: #c99d53;*/
+    bottom: var(--y);
+    height: 2px;
+    left: var(--x);
+    position: absolute;
+    transform: rotate(calc(var(--angle) * 1deg));
+    transform-origin: left bottom;
+    width: calc(var(--hypotenuse) * 1px);
+}
+
+.gold-graph-orizon-bar {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: 25px;
+    left: 50px;
+    position: absolute;
+    width: 800px;
+}
+
+.gold-graph-vertical-bar {
+    /*border: 1px dashed #ffffff;*/
+    position: absolute;
+    top: -100px;
+    left: 47px;
+    height: 250px;
+}
+
+.gold-graph-vertical-bar-timer {
+    position: absolute;
+    top: 170px;
+    font-family: MyFont;
+    font-size: 18px;
+}
+
+.gold-graph-vertical-bar-left {
+    /*border: 1px dashed #ffffff;*/
+    position: absolute;
+    top: -100px;
+    left: 47px;
+    height: 250px;
+}
+
+.gold-graph-vertical-bar-right {
+    /*border: 1px dashed #ffffff;*/
+    position: absolute;
+    top: -100px;
+    left: 854px;
+    height: 250px;
+}
+
+.gold-graph-vertical-bar-mid {
+    /*border: 1px dashed #ffffff;*/
+    position: absolute;
+    top: -100px;
+    left: 645px;
+    height: 200px;
+}
+
+.gold-graph-vertical-bar-mid-left {
+    /*border: 1px dashed #ffffff;*/
+    position: absolute;
+    top: -100px;
+    left: 345px;
+    height: 200px;
+}
+
+.gold-graph-vertical-bar-mid-right {
+    /*border: 1px dashed #ffffff;*/
+    position: absolute;
+    top: -100px;
+    left: 945px;
+    height: 200px;
+}
+
+.gold-graph-orizon-bar-maxmoy {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: -38px;
+    left: 50px;
+    position: absolute;
+    width: 800px;
+}
+
+.gold-graph-orizon-bar-max {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: -100px;
+    left: 50px;
+    position: absolute;
+    width: 800px;
+}
+
+.gold-graph-orizon-bar-min {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: 150px;
+    left: 50px;
+    position: absolute;
+    width: 800px;
+}
+
+.gold-graph-orizon-bar-minmoy {
+    /*height: 2px;*/
+    border: 1px dashed #ffffff;
+    /*background-color: #000000;*/
+    top: 88px;
+    left: 50px;
+    position: absolute;
+    width: 800px;
+}
+
+.gold-graph-zero {
+    font-family: MyFont;
+    font-size: 22px;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+
+.gold-graph-max {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: -9px;
+    top: -120px;
+}
+
+.gold-graph-maxmoy {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: -9px;
+    top: -50px;
+}
+
+.gold-graph-min {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: -9px;
+    top: 135px;
+}
+
+.gold-graph-minmoy {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: -9px;
+    top: 75px;
+}
+
+.gold-graph-time-1 {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: 25px;
+    top: 170px;
+}
+
+.gold-graph-time-5 {
+    font-family: MyFont;
+    font-size: 18px;
+    position: absolute;
+    left: 820px;
+    top: 170px;
 }
