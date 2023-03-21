@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  id: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  children:
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.CDragonChampion
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  name: Champion
+  nameWithType: Champion
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.CDragonChampion
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.CDragonChampion
+  name: CDragonChampion
+  nameWithType: CDragonChampion
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.CDragonChampion

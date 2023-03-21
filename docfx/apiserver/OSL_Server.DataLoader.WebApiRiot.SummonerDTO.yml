@@ -1,0 +1,650 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  commentId: T:OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  id: SummonerDTO
+  parent: OSL_Server.DataLoader.WebApiRiot
+  children:
+  - OSL_Server.DataLoader.WebApiRiot.SummonerDTO.AccountId
+  - OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Id
+  - OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Name
+  - OSL_Server.DataLoader.WebApiRiot.SummonerDTO.ProfileIconId
+  - OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Puuid
+  - OSL_Server.DataLoader.WebApiRiot.SummonerDTO.RevisionDate
+  - OSL_Server.DataLoader.WebApiRiot.SummonerDTO.SummonerLevel
+  langs:
+  - csharp
+  - vb
+  name: SummonerDTO
+  nameWithType: SummonerDTO
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SummonerDTO
+    path: ../OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+    startLine: 26
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public class SummonerDTO
+    content.vb: Public Class SummonerDTO
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.AccountId
+  commentId: P:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.AccountId
+  id: AccountId
+  parent: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  langs:
+  - csharp
+  - vb
+  name: AccountId
+  nameWithType: SummonerDTO.AccountId
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.AccountId
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: AccountId
+    path: ../OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+    startLine: 28
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public string AccountId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AccountId As String
+  overload: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.AccountId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.ProfileIconId
+  commentId: P:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.ProfileIconId
+  id: ProfileIconId
+  parent: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  langs:
+  - csharp
+  - vb
+  name: ProfileIconId
+  nameWithType: SummonerDTO.ProfileIconId
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.ProfileIconId
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ProfileIconId
+    path: ../OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+    startLine: 29
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public int ProfileIconId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ProfileIconId As Integer
+  overload: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.ProfileIconId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.RevisionDate
+  commentId: P:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.RevisionDate
+  id: RevisionDate
+  parent: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  langs:
+  - csharp
+  - vb
+  name: RevisionDate
+  nameWithType: SummonerDTO.RevisionDate
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.RevisionDate
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RevisionDate
+    path: ../OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+    startLine: 30
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public long RevisionDate { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property RevisionDate As Long
+  overload: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.RevisionDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Name
+  commentId: P:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Name
+  id: Name
+  parent: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: SummonerDTO.Name
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Name
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Name
+    path: ../OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+    startLine: 31
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Id
+  commentId: P:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Id
+  id: Id
+  parent: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: SummonerDTO.Id
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Id
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Id
+    path: ../OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+    startLine: 32
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Puuid
+  commentId: P:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Puuid
+  id: Puuid
+  parent: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  langs:
+  - csharp
+  - vb
+  name: Puuid
+  nameWithType: SummonerDTO.Puuid
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Puuid
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Puuid
+    path: ../OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+    startLine: 33
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public string Puuid { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Puuid As String
+  overload: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Puuid*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.SummonerLevel
+  commentId: P:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.SummonerLevel
+  id: SummonerLevel
+  parent: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  langs:
+  - csharp
+  - vb
+  name: SummonerLevel
+  nameWithType: SummonerDTO.SummonerLevel
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.SummonerLevel
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SummonerLevel
+    path: ../OSL-Server/DataLoader/WebApiRiot/Summoner-V4.cs
+    startLine: 34
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public long SummonerLevel { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property SummonerLevel As Long
+  overload: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.SummonerLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Server.DataLoader.WebApiRiot
+  commentId: N:OSL_Server.DataLoader.WebApiRiot
+  name: OSL_Server.DataLoader.WebApiRiot
+  nameWithType: OSL_Server.DataLoader.WebApiRiot
+  fullName: OSL_Server.DataLoader.WebApiRiot
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.AccountId*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.AccountId
+  name: AccountId
+  nameWithType: SummonerDTO.AccountId
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.AccountId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.ProfileIconId*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.ProfileIconId
+  name: ProfileIconId
+  nameWithType: SummonerDTO.ProfileIconId
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.ProfileIconId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.RevisionDate*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.RevisionDate
+  name: RevisionDate
+  nameWithType: SummonerDTO.RevisionDate
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.RevisionDate
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Name*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Name
+  name: Name
+  nameWithType: SummonerDTO.Name
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Name
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Id*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Id
+  name: Id
+  nameWithType: SummonerDTO.Id
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Id
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Puuid*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Puuid
+  name: Puuid
+  nameWithType: SummonerDTO.Puuid
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.Puuid
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.SummonerLevel*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.SummonerDTO.SummonerLevel
+  name: SummonerLevel
+  nameWithType: SummonerDTO.SummonerLevel
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO.SummonerLevel

@@ -1,0 +1,433 @@
+﻿@page "/endgame/view1"
+@using OSL_Server.DataReciveClient.Processing.EndGame;
+@layout EmptyLayout
+
+<PageTitle>End Game View 1</PageTitle>
+
+@{
+    string tempsBackgroundColor;
+    @if (EndGamePage.textValueOverlayView1.BackgroundColor)
+    {
+        tempsBackgroundColor = formatingData.BackgroundColor;
+    }
+    else
+    {
+        tempsBackgroundColor = "";
+    }
+}
+
+<div class="endGameView1" style="background-image: @tempsBackgroundColor">
+
+    <div class="content">
+        @if (EndGameInfo.jsonContentEndOfMatch != null && EndGameInfo.jsonContentMatch != null && EndGameInfo.jsonContentTimeline != null)
+        {
+            string tempsTopBarGradiant;
+            string tempsChampionInfoGradiant;
+            string tempsBansGradiant;
+            string tempsGlobalStatsGradiant;
+            string tempsGoldDiffGradiant;
+
+            @if (EndGamePage.textValueOverlayView1.TopBarGradiant)
+            {
+                tempsTopBarGradiant = formatingData.TopBarGradiant;
+            }
+            else
+            {
+                tempsTopBarGradiant = "";
+            }
+            @if (EndGamePage.textValueOverlayView1.ChampionInfoGradiant)
+            {
+                tempsChampionInfoGradiant = formatingData.ChampionInfoGradiant;
+            }
+            else
+            {
+                tempsChampionInfoGradiant = "";
+            }
+            @if (EndGamePage.textValueOverlayView1.BansGradiant)
+            {
+                tempsBansGradiant = formatingData.BansGradiant;
+            }
+            else
+            {
+                tempsBansGradiant = "";
+            }
+            @if (EndGamePage.textValueOverlayView1.GlobalStatsGradiant)
+            {
+                tempsGlobalStatsGradiant = formatingData.GlobalStatsGradiant;
+            }
+            else
+            {
+                tempsGlobalStatsGradiant = "";
+            }
+            @if (EndGamePage.textValueOverlayView1.GoldDiffGradiant)
+            {
+                tempsGoldDiffGradiant = formatingData.GoldDiffGradiant;
+            }
+            else
+            {
+                tempsGoldDiffGradiant = "";
+            }
+
+
+            <div class="top-bar" style="background-image: @formatingData.TopBarBackgroundColor">
+                <div class="top-bar-gradiant" style="background-image: @tempsTopBarGradiant"></div>
+                <div class="top-bar-border" style="border: @formatingData.TopBarBorderColor"></div>
+                <div class="top-bar-blue-team">
+                    <div class="top-bar-blue-team-name" style="color: @formatingData.TopBarBlueTeamNameColor">
+                        @formatingData.TopBarBlueTeamName
+                    </div>
+                    <div class="top-bar-blue-team-winloss" style="color: @formatingData.TopBarBlueTeamWinLossColor">
+                        @GetWinLossBlue()
+                    </div>
+                    <div class="top-bar-blue-team-score" style="color: @formatingData.TopBarBlueTeamScoreColor">
+                        @formatingData.TopBarBlueTeamScore
+                    </div>
+                </div>
+                <div class="top-bar-timer">
+                    <div class="timer-text" style="color: @formatingData.TopBarTimerTextColor">
+                        @formatingData.TopBarTimerText
+                    </div>
+                    <div class="top-bar-timer-timer" style="color: @formatingData.TopBarTimerColor">
+                        @GetTimer()
+                    </div>
+                </div>
+                <div class="top-bar-red-team">
+                    <div class="top-bar-red-team-name" style="color: @formatingData.TopBarRedTeamNameColor">
+                        @formatingData.TopBarRedTeamName
+                    </div>
+                    <div class="top-bar-red-team-winloss" style="color: @formatingData.TopBarRedTeamWinLossColor">
+                        @GetWinLossRed()
+                    </div>
+                    <div class="top-bar-red-team-score" style="color: @formatingData.TopBarRedTeamScoreColor">
+                        @formatingData.TopBarRedTeamScore
+                    </div>
+                </div>
+            </div>
+            <div class="champion-info" style="background-image: @formatingData.ChampionInfoBackgroundColor">
+                <div class="champion-info-gradiant" style="background-image: @tempsChampionInfoGradiant"></div>
+                <div class="champion-info-border" style="border: @formatingData.ChampionInfoBorderColor"></div>
+                <div class="champion-info-stats">
+                    <div class="champion-info-stats-text" style="color: @formatingData.ChampionInfoTextColor">
+                        @formatingData.ChampionInfoText
+                    </div>
+                    <div class="champion-info-stats-blue">
+
+                        @foreach (var players in EndGameInfo.jsonContentEndOfMatch.teams[0].players)
+                        {
+                            <div class="champion-info-stats-blue-group">
+                                <div class="pick-wrapper">
+                                    <img class="pick-picture" src="@GetChampionPathByPath(Convert.ToString(players.championSquarePortraitPath))" />
+                                </div>
+                                <div class="champion-info-stats-blue-group-info">
+                                    <div class="champion-info-stats-blue-group-text" style="color: @formatingData.ChampionInfoBlueDegaTextColor">
+                                        @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS))
+                                    </div>
+                                    <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="champion-info-stats-red">
+                        @foreach (var players in EndGameInfo.jsonContentEndOfMatch.teams[1].players)
+                        {
+                            <div class="champion-info-stats-red-group">
+                                <div class="pick-wrapper">
+                                    <img class="pick-picture" src="@GetChampionPathByPath(Convert.ToString(players.championSquarePortraitPath))" />
+                                </div>
+                                <div class="champion-info-stats-red-group-info">
+                                    <div class="champion-info-stats-red-group-text" style="color: @formatingData.ChampionInfoRedDegaTextColor">
+                                        @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS))
+                                    </div>
+                                    <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="bans" style="background-image: @formatingData.BansBackgroundColor">
+                <div class="bans-gradiant" style="background-image: @tempsBansGradiant"></div>
+                <div class="bans-border" style="border: @formatingData.BansBorderColor"></div>
+                <div class="bans-info">
+                    <div class="bans-info-blue">
+                        @foreach (var blueBans in EndGameInfo.jsonContentMatch.info.teams[0].bans)
+                        {
+                            <div class="bans-wrapper">
+                                <img class="bans-picture" src="@GetChampionPath(Convert.ToString(blueBans.championId))" />
+                            </div>
+                        }
+                    </div>
+                    <div class="bans-info-text" style="color: @formatingData.BansTextColor">
+                        BANS
+                    </div>
+                    <div class="bans-info-red">
+                        @foreach (var blueBans in EndGameInfo.jsonContentMatch.info.teams[1].bans)
+                        {
+                            <div class="bans-wrapper">
+                                <img class="bans-picture" src="@GetChampionPath(Convert.ToString(blueBans.championId))" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="global-stats" style="background-image: @formatingData.GlobalStatsBackgroundColor">
+                <div class="global-stats-gradiant" style="background-image: @tempsGlobalStatsGradiant"></div>
+                <div class="global-stats-border" style="border: @formatingData.GlobalStatsBorderColor"></div>
+                <div class="global-stats-blue" style="color: @formatingData.GlobalStatsBlueTextColor">
+                    <div class="global-stats-blue-info">
+                        @GetKDABlue()
+                    </div>
+                    <div class="global-stats-blue-info">
+                        @GetGoldBlue()
+                    </div>
+                    <div class="global-stats-blue-info">
+                        @GetTowerKillBlue()
+                    </div>
+                    <div class="global-stats-blue-info dragon-info">
+                        <div class="dragon-wrapper">
+                            @foreach (var frames in EndGameInfo.jsonContentTimeline.info.frames)
+                            {
+                                @foreach (var events in frames.events)
+                                {
+                                    string monsterSubType = events.monsterSubType;
+                                    if (monsterSubType != null && !monsterSubType.Equals("ELDER_DRAGON"))
+                                    {
+                                        int killerTeamId = events.killerTeamId;
+                                        if (killerTeamId == 100)
+                                        {
+                                            <div class="dragon-wrapper">
+                                                <img class="dragon-picture" src="@GetDragonsKill(monsterSubType)" />
+                                            </div>
+                                        }
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="global-stats-blue-info">
+                        @GetElderKillBlue()
+                    </div>
+                    <div class="global-stats-blue-info">
+                        @GetHeraldKillBlue()
+                    </div>
+                    <div class="global-stats-blue-info">
+                        @GetBaronKillBlue()
+                    </div>
+                </div>
+                <div class="global-stats-center" style="color: @formatingData.GlobalStatsTextColor">
+                    <div class="global-stats-center-info">
+                        K/D/A
+                    </div>
+                    <div class="global-stats-center-info">
+                        Gold
+                    </div>
+                    <div class="global-stats-center-info">
+                        Towers
+                    </div>
+                    <div class="global-stats-center-info">
+                        Dragons
+                    </div>
+                    <div class="global-stats-center-info">
+                        Elder dragons
+                    </div>
+                    <div class="global-stats-center-info">
+                        Heralds
+                    </div>
+                    <div class="global-stats-center-info">
+                        Barons
+                    </div>
+                </div>
+                <div class="global-stats-red" style="color: @formatingData.GlobalStatsRedTextColor">
+                    <div class="global-stats-red-info">
+                        @GetKDARed()
+                    </div>
+                    <div class="global-stats-red-info">
+                        @GetGoldRed()
+                    </div>
+                    <div class="global-stats-red-info">
+                        @GetTowerKillRed()
+                    </div>
+                    <div class="global-stats-red-info dragon-info">
+                        <div class="dragon-wrapper">
+                            @foreach (var frames in EndGameInfo.jsonContentTimeline.info.frames)
+                            {
+                                @foreach (var events in frames.events)
+                                {
+                                    string monsterSubType = events.monsterSubType;
+                                    if (monsterSubType != null && !monsterSubType.Equals("ELDER_DRAGON"))
+                                    {
+                                        int killerTeamId = events.killerTeamId;
+                                        if (killerTeamId == 200)
+                                        {
+                                            <div class="dragon-wrapper">
+                                                <img class="dragon-picture" src="@GetDragonsKill(monsterSubType)" />
+                                            </div>
+                                        }
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="global-stats-red-info">
+                        @GetElderKillRed()
+                    </div>
+                    <div class="global-stats-red-info">
+                        @GetHeraldKillRed()
+                    </div>
+                    <div class="global-stats-red-info">
+                        @GetBaronKillRed()
+                    </div>
+                </div>
+            </div>
+            <div class="gold-diff" style="background-image: @formatingData.GoldDiffBackgroundColor">
+                <div class="gold-diff-gradiant" style="background-image: @tempsGoldDiffGradiant"></div>
+                <div class="gold-diff-border" style="border: @formatingData.GoldDiffBorderColor"></div>
+                <div class="gold-diff-text" style="color: @formatingData.GoldDiffTextColor">
+                    @formatingData.GoldDiffText
+                </div>
+                <div class="gold-graph">
+                    <div class="gold-graph-content">
+                        <figure class="css-chart">
+                            <ul class="line-chart">
+                                @{
+                                    CreateTabGold();
+                                    int x = 0;
+                                }
+                                @for (int i = 0; i < goldDiff.Count - 1; i++)
+                                {
+                                    int y = (goldDiff[i] * 100) / MaxGold();
+                                    
+                                    double nexty = (goldDiff[i + 1] * 100) / MaxGold();
+                                    int nextx = x + 1250 / goldDiff.Count();
+                                    if (i == 0)
+                                    {
+                                        <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                            <div class="data-point" data-value="@goldDiff[i]" style="background-color: @formatingData.GoldDiffStartEndPointGoldColor"></div>
+                                            <div class="line-segment" style="background-color: @formatingData.GoldDiffLinkPointGoldColor ;--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        if (goldDiff[i] > 0)
+                                        {
+                                            <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                                <div class="data-point" data-value="@goldDiff[i]" style="background-color: @formatingData.GoldDiffBluePointGoldColor"></div>
+                                                <div class="line-segment" style="background-color: @formatingData.GoldDiffLinkPointGoldColor ;--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                            </li>
+                                        }
+                                        else if (goldDiff[i] == 0)
+                                        {
+                                            <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                                <div class="data-point" data-value="@goldDiff[i]" style="background-color: @formatingData.GoldDiffZeroPointGoldColor"></div>
+                                                <div class="line-segment" style="background-color: @formatingData.GoldDiffLinkPointGoldColor ;--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li style="--x: @ConvertToString(x); --y: @ConvertToString(y);">
+                                                <div class="data-point" data-value="@goldDiff[i]" style="background-color: @formatingData.GoldDiffRedPointGoldColor"></div>
+                                                <div class="line-segment" style="background-color: @formatingData.GoldDiffLinkPointGoldColor ;--hypotenuse: @ConvertToHyp(x, y, nextx, nexty); --angle: @ConvertToAngle(x, y, nextx, nexty)"></div>
+                                            </li>
+                                        }
+                                    }
+                                    if (i == goldDiff.Count - 2)
+                                    {
+                                        <li style="--x: @ConvertToString(x+1250/goldDiff.Count()); --y: @ConvertToString((goldDiff[i+1] * 100) / MaxGold());">
+                                            <div class="data-point" data-value="" style="background-color: @formatingData.GoldDiffStartEndPointGoldColor"></div>
+                                        </li>
+                                    }
+                                    x += 1250 / goldDiff.Count();
+                                }
+                            </ul>
+                        </figure>
+                    </div>
+                    <div class="gold-graph-orizon-bar" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-orizon-bar-max" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-orizon-bar-maxmoy" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-orizon-bar-minmoy" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-orizon-bar-min" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-vertical-bar-left" style="border: @formatingData.GoldDiffBarColor"></div>
+
+                    @{
+                        int decalageX = 1192 / (GetTimerInt() / 5);
+                        int leftDistance = 47;
+                        TimeSpan timerFive = new TimeSpan(0, 0, 0);
+                    }
+                    @for (int i = 0; i < (GetTimerInt() / 5) - 1; i++)
+                    {
+                        leftDistance = leftDistance + decalageX;
+                        timerFive = timerFive.Add(new TimeSpan(0, 5, 0));
+                        <div class="gold-graph-vertical-bar-left" style="left: @ConvertToString(leftDistance);  border: @formatingData.GoldDiffBarColor"></div>
+                        <div class="gold-graph-vertical-bar-timer" style="left: @ConvertToString(leftDistance-20); color: @formatingData.GoldDiffZeroTextGoldColor">@timerFive.ToString("mm':'ss")</div>
+                    }
+
+                    @*<div class="gold-graph-vertical-bar-mid" style="border: @formatingData.GoldDiffBarColor"></div>*@
+                    @*<div class="gold-graph-vertical-bar-mid-left" style="border: @formatingData.GoldDiffBarColor"></div>*@
+                    @*<div class="gold-graph-vertical-bar-mid-right" style="border: @formatingData.GoldDiffBarColor"></div>*@
+                    <div class="gold-graph-vertical-bar-right" style="border: @formatingData.GoldDiffBarColor"></div>
+                    <div class="gold-graph-zero" style="color: @formatingData.GoldDiffZeroTextGoldColor">
+                        0
+                    </div>
+                    <div class="gold-graph-time-5" style="color: @formatingData.GoldDiffZeroTextGoldColor">
+                        @GetTimer()
+                    </div>
+                    @* <div class="gold-graph-time-4" style="color: @formatingData.GoldDiffZeroTextGoldColor">
+                @GetTimerDiv(1.5)
+                </div>
+                <div class="gold-graph-time-3" style="color: @formatingData.GoldDiffZeroTextGoldColor">
+                @GetTimerDiv(2)
+                </div>
+                <div class="gold-graph-time-2" style="color: @formatingData.GoldDiffZeroTextGoldColor">
+                @GetTimerDiv(4)
+                </div>*@
+                    <div class="gold-graph-time-1" style="color: @formatingData.GoldDiffZeroTextGoldColor">
+                        00:00
+                    </div>
+                    <div class="gold-graph-max" style="color: @formatingData.GoldDiffBlueTextGoldColor">
+                        @ConvertToK(MaxGold())
+                    </div>
+                    <div class="gold-graph-maxmoy" style="color: @formatingData.GoldDiffBlueTextGoldColor">
+                        @ConvertToK(MaxGold()/2)
+                    </div>
+                    <div class="gold-graph-minmoy" style="color:  @formatingData.GoldDiffRedTextGoldColor">
+                        @ConvertToK(MaxGold()/2)
+                    </div>
+                    <div class="gold-graph-min" style="color:  @formatingData.GoldDiffRedTextGoldColor">
+                        @ConvertToK(MaxGold())
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="alert-danger" style="border-radius: 10px;">
+                <h3 style="padding: 5px;"><strong>Info!</strong> Not end game information found</h3>
+            </div>
+        }
+    </div>
+
+</div>
+
+
+@code {
+    private System.Timers.Timer timer = new(5000);
+
+    protected override void OnInitialized()
+    {
+        timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        timer.Start();
+    }
+
+    private void OnTimerCallback()
+    {
+        _ = InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => timer.Dispose();
+    }

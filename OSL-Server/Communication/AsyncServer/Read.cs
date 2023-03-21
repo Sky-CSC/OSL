@@ -40,7 +40,7 @@ namespace OSL_Server.Communication
 
                 string returnContent = ReciveFromClient.ReadData(content);
 
-                Send(handler, returnContent);
+                //Send(handler, returnContent);
             }
         }
     }

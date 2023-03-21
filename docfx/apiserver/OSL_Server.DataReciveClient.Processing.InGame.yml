@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataReciveClient.Processing.InGame
+  commentId: N:OSL_Server.DataReciveClient.Processing.InGame
+  id: OSL_Server.DataReciveClient.Processing.InGame
+  children:
+  - OSL_Server.DataReciveClient.Processing.InGame.InGameInfo
+  langs:
+  - csharp
+  - vb
+  name: OSL_Server.DataReciveClient.Processing.InGame
+  nameWithType: OSL_Server.DataReciveClient.Processing.InGame
+  fullName: OSL_Server.DataReciveClient.Processing.InGame
+  type: Namespace
+  assemblies:
+  - OSL-Server
+references:
+- uid: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo
+  commentId: T:OSL_Server.DataReciveClient.Processing.InGame.InGameInfo
+  name: InGameInfo
+  nameWithType: InGameInfo
+  fullName: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo

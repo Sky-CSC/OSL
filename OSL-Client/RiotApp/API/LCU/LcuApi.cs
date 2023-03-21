@@ -36,7 +36,7 @@ namespace OSL_Client.RiotApp.API.LCU
                 {
                     _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", "Game found");
                     //If the game is finish and we want to watch it, no champ select display but, champ pick and ban display
-                    //InGameProcess.InGame();
+                    InGameProcess.InGame();
                 }
                 else
                 {
@@ -81,7 +81,7 @@ namespace OSL_Client.RiotApp.API.LCU
             else if (gameFlowPhase.Equals(InProgress))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {InProgress}");
-                //InGameProcess.InGame();
+                InGameProcess.InGame();
             }
 
             else if (gameFlowPhase.Equals(Reconnect))
@@ -99,6 +99,7 @@ namespace OSL_Client.RiotApp.API.LCU
             else if (gameFlowPhase.Equals(EndOfGame))
             {
                 _logger.log(LoggingLevel.INFO, "GameFlowPhaseCheck()", $"GameFlowPhase is {EndOfGame}");
+                EndGameProcess.InEndGame();
             }
             else if (gameFlowPhase.Equals(TerminatedInError))
             {
@@ -131,7 +132,6 @@ namespace OSL_Client.RiotApp.API.LCU
         public static readonly string lolgameflowv1session = "/lol-gameflow/v1/session"; //
         public static readonly string lolgameflowv1gameflowphase = "/lol-gameflow/v1/gameflow-phase"; //
         public static readonly string lolsummonerv1summoners = "/lol-summoner/v1/summoners/"; // 
-
 
         //lol-champ-select
         public static readonly string lolchampselectv1gridchampions = "/lol-champ-select/v1/grid-champions/"; //

@@ -18,13 +18,6 @@
   items:
   - uid: OSL_Server.Configuration.Config
     name: Config
-- uid: OSL_Server.Data
-  name: OSL_Server.Data
-  items:
-  - uid: OSL_Server.Data.WeatherForecast
-    name: WeatherForecast
-  - uid: OSL_Server.Data.WeatherForecastService
-    name: WeatherForecastService
 - uid: OSL_Server.DataLoader.CDragon
   name: OSL_Server.DataLoader.CDragon
   items:
@@ -62,6 +55,21 @@
     name: SummonerSpellManager
   - uid: OSL_Server.DataLoader.CDragon.SummonerSpells
     name: SummonerSpells
+- uid: OSL_Server.DataLoader.WebApiRiot
+  name: OSL_Server.DataLoader.WebApiRiot
+  items:
+  - uid: OSL_Server.DataLoader.WebApiRiot.Match_V5
+    name: Match_V5
+  - uid: OSL_Server.DataLoader.WebApiRiot.Spectator_V4
+    name: Spectator_V4
+  - uid: OSL_Server.DataLoader.WebApiRiot.Summoner_V4
+    name: Summoner_V4
+  - uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+    name: SummonerDTO
+  - uid: OSL_Server.DataLoader.WebApiRiot.UrlRequest
+    name: UrlRequest
+  - uid: OSL_Server.DataLoader.WebApiRiot.WebApiRiot
+    name: WebApiRiot
 - uid: OSL_Server.DataReciveClient
   name: OSL_Server.DataReciveClient
   items:
@@ -86,6 +94,26 @@
     name: Team
   - uid: OSL_Server.DataReciveClient.Processing.ChampSelect.Timer
     name: Timer
+- uid: OSL_Server.DataReciveClient.Processing.EndGame
+  name: OSL_Server.DataReciveClient.Processing.EndGame
+  items:
+  - uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+    name: EndGameInfo
+  - uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Bans
+    name: EndGameInfo.Bans
+  - uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Events
+    name: EndGameInfo.Events
+  - uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.InfoEndGame
+    name: EndGameInfo.InfoEndGame
+  - uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+    name: EndGameInfo.Stats
+  - uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.SummonerInfo
+    name: EndGameInfo.SummonerInfo
+- uid: OSL_Server.DataReciveClient.Processing.InGame
+  name: OSL_Server.DataReciveClient.Processing.InGame
+  items:
+  - uid: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo
+    name: InGameInfo
 - uid: OSL_Server.Download
   name: OSL_Server.Download
   items:
@@ -101,70 +129,142 @@
   items:
   - uid: OSL_Server.Pages.CDragonPage
     name: CDragonPage
-  - uid: OSL_Server.Pages.ChampSelectPage
-    name: ChampSelectPage
-  - uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView1
-    name: ChampSelectPage.TextValueOverlayView1
-  - uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView2
-    name: ChampSelectPage.TextValueOverlayView2
-  - uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView3
-    name: ChampSelectPage.TextValueOverlayView3
-  - uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView4
-    name: ChampSelectPage.TextValueOverlayView4
-  - uid: OSL_Server.Pages.ChampSelectView1Page
-    name: ChampSelectView1Page
-  - uid: OSL_Server.Pages.ChampSelectView1Page.FormatingData
-    name: ChampSelectView1Page.FormatingData
-  - uid: OSL_Server.Pages.ChampSelectView2Page
-    name: ChampSelectView2Page
-  - uid: OSL_Server.Pages.ChampSelectView2Page.FormatingData
-    name: ChampSelectView2Page.FormatingData
-  - uid: OSL_Server.Pages.ChampSelectView3Page
-    name: ChampSelectView3Page
-  - uid: OSL_Server.Pages.ChampSelectView3Page.FormatingData
-    name: ChampSelectView3Page.FormatingData
-  - uid: OSL_Server.Pages.ChampSelectView4Page
-    name: ChampSelectView4Page
-  - uid: OSL_Server.Pages.ChampSelectView4Page.FormatingData
-    name: ChampSelectView4Page.FormatingData
   - uid: OSL_Server.Pages.ConfigPage
     name: ConfigPage
   - uid: OSL_Server.Pages.ConfigPage.ConfigOverlayText
     name: ConfigPage.ConfigOverlayText
-  - uid: OSL_Server.Pages.EndGamePage
-    name: EndGamePage
+  - uid: OSL_Server.Pages.EndGameTestPage
+    name: EndGameTestPage
   - uid: OSL_Server.Pages.ErrorModel
     name: ErrorModel
   - uid: OSL_Server.Pages.Index
     name: Index
-  - uid: OSL_Server.Pages.InGamePage
-    name: InGamePage
-  - uid: OSL_Server.Pages.InGamePage.TextValueOverlayView1
-    name: InGamePage.TextValueOverlayView1
-  - uid: OSL_Server.Pages.InGamePage.TextValueOverlayView2
-    name: InGamePage.TextValueOverlayView2
-  - uid: OSL_Server.Pages.InGamePage.TextValueOverlayView3
-    name: InGamePage.TextValueOverlayView3
-  - uid: OSL_Server.Pages.InGameView1Page
-    name: InGameView1Page
-  - uid: OSL_Server.Pages.InGameView1Page.FormatingData
-    name: InGameView1Page.FormatingData
-  - uid: OSL_Server.Pages.InGameView2Page
-    name: InGameView2Page
-  - uid: OSL_Server.Pages.InGameView2Page.FormatingData
-    name: InGameView2Page.FormatingData
-  - uid: OSL_Server.Pages.InGameView3Page
-    name: InGameView3Page
-  - uid: OSL_Server.Pages.InGameView3Page.FormatingData
-    name: InGameView3Page.FormatingData
   - uid: OSL_Server.Pages.RecapLinkPage
     name: RecapLinkPage
   - uid: OSL_Server.Pages.WaitingGamePage
     name: WaitingGamePage
-  - uid: OSL_Server.Pages.WaitingGameStartPage
-    name: WaitingGameStartPage
-- uid: OSL_Server.PagesManager
-  name: OSL_Server.PagesManager
+- uid: OSL_Server.Pages.ChampSelect
+  name: OSL_Server.Pages.ChampSelect
   items:
-  - uid: OSL_Server.PagesManager.Pages
-    name: Pages
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectPage
+    name: ChampSelectPage
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectPage.TextValueOverlayView1
+    name: ChampSelectPage.TextValueOverlayView1
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectPage.TextValueOverlayView2
+    name: ChampSelectPage.TextValueOverlayView2
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectPage.TextValueOverlayView3
+    name: ChampSelectPage.TextValueOverlayView3
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectPage.TextValueOverlayView4
+    name: ChampSelectPage.TextValueOverlayView4
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page
+    name: ChampSelectView1Page
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.FormatingData
+    name: ChampSelectView1Page.FormatingData
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectView2Page
+    name: ChampSelectView2Page
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectView2Page.FormatingData
+    name: ChampSelectView2Page.FormatingData
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectView3Page
+    name: ChampSelectView3Page
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectView3Page.FormatingData
+    name: ChampSelectView3Page.FormatingData
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectView4Page
+    name: ChampSelectView4Page
+  - uid: OSL_Server.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+    name: ChampSelectView4Page.FormatingData
+- uid: OSL_Server.Pages.EndGame
+  name: OSL_Server.Pages.EndGame
+  items:
+  - uid: OSL_Server.Pages.EndGame.EndGamePage
+    name: EndGamePage
+  - uid: OSL_Server.Pages.EndGame.EndGamePage.TextValueOverlayView1
+    name: EndGamePage.TextValueOverlayView1
+  - uid: OSL_Server.Pages.EndGame.EndGamePage.TextValueOverlayView2
+    name: EndGamePage.TextValueOverlayView2
+  - uid: OSL_Server.Pages.EndGame.EndGamePage.TextValueOverlayView3
+    name: EndGamePage.TextValueOverlayView3
+  - uid: OSL_Server.Pages.EndGame.EndGameView1Page
+    name: EndGameView1Page
+  - uid: OSL_Server.Pages.EndGame.EndGameView1Page.FormatingData
+    name: EndGameView1Page.FormatingData
+  - uid: OSL_Server.Pages.EndGame.EndGameView2Page
+    name: EndGameView2Page
+  - uid: OSL_Server.Pages.EndGame.EndGameView2Page.FormatingData
+    name: EndGameView2Page.FormatingData
+  - uid: OSL_Server.Pages.EndGame.EndGameView3Page
+    name: EndGameView3Page
+  - uid: OSL_Server.Pages.EndGame.EndGameView3Page.FormatingData
+    name: EndGameView3Page.FormatingData
+- uid: OSL_Server.Pages.InGame
+  name: OSL_Server.Pages.InGame
+  items:
+  - uid: OSL_Server.Pages.InGame.InGamePage
+    name: InGamePage
+  - uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+    name: InGamePage.TextValueOverlayView1
+  - uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView2
+    name: InGamePage.TextValueOverlayView2
+  - uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView3
+    name: InGamePage.TextValueOverlayView3
+  - uid: OSL_Server.Pages.InGame.InGameView1Page
+    name: InGameView1Page
+  - uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+    name: InGameView1Page.FormatingData
+  - uid: OSL_Server.Pages.InGame.InGameView2Page
+    name: InGameView2Page
+  - uid: OSL_Server.Pages.InGame.InGameView2Page.FormatingData
+    name: InGameView2Page.FormatingData
+  - uid: OSL_Server.Pages.InGame.InGameView3Page
+    name: InGameView3Page
+  - uid: OSL_Server.Pages.InGame.InGameView3Page.FormatingData
+    name: InGameView3Page.FormatingData
+- uid: OSL_Server.Pages.Runes
+  name: OSL_Server.Pages.Runes
+  items:
+  - uid: OSL_Server.Pages.Runes.RunesAdcPage
+    name: RunesAdcPage
+  - uid: OSL_Server.Pages.Runes.RunesAdcPage.FormatingData
+    name: RunesAdcPage.FormatingData
+  - uid: OSL_Server.Pages.Runes.RunesAdcSuppPage
+    name: RunesAdcSuppPage
+  - uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+    name: RunesAdcSuppPage.FormatingData
+  - uid: OSL_Server.Pages.Runes.RunesAllPage
+    name: RunesAllPage
+  - uid: OSL_Server.Pages.Runes.RunesAllPage.FormatingData
+    name: RunesAllPage.FormatingData
+  - uid: OSL_Server.Pages.Runes.RunesJunglePage
+    name: RunesJunglePage
+  - uid: OSL_Server.Pages.Runes.RunesJunglePage.FormatingData
+    name: RunesJunglePage.FormatingData
+  - uid: OSL_Server.Pages.Runes.RunesMidPage
+    name: RunesMidPage
+  - uid: OSL_Server.Pages.Runes.RunesMidPage.FormatingData
+    name: RunesMidPage.FormatingData
+  - uid: OSL_Server.Pages.Runes.RunesPage
+    name: RunesPage
+  - uid: OSL_Server.Pages.Runes.RunesPage.FormatingData
+    name: RunesPage.FormatingData
+  - uid: OSL_Server.Pages.Runes.RunesPage.InfoForPerks
+    name: RunesPage.InfoForPerks
+  - uid: OSL_Server.Pages.Runes.RunesPage.LaneInfo
+    name: RunesPage.LaneInfo
+  - uid: OSL_Server.Pages.Runes.RunesPage.Lanes
+    name: RunesPage.Lanes
+  - uid: OSL_Server.Pages.Runes.RunesPage.Overlay
+    name: RunesPage.Overlay
+  - uid: OSL_Server.Pages.Runes.RunesPage.Perks
+    name: RunesPage.Perks
+  - uid: OSL_Server.Pages.Runes.RunesSuppPage
+    name: RunesSuppPage
+  - uid: OSL_Server.Pages.Runes.RunesSuppPage.FormatingData
+    name: RunesSuppPage.FormatingData
+  - uid: OSL_Server.Pages.Runes.RunesTopPage
+    name: RunesTopPage
+  - uid: OSL_Server.Pages.Runes.RunesTopPage.FormatingData
+    name: RunesTopPage.FormatingData
+- uid: OSL_Server.Pages.WaitingGameStart
+  name: OSL_Server.Pages.WaitingGameStart
+  items:
+  - uid: OSL_Server.Pages.WaitingGameStart.WaitingGameStartPage
+    name: WaitingGameStartPage

@@ -17,7 +17,7 @@ namespace OSL_Client.RiotApp.DataProcessing
     /// </summary>
     internal class ChampSelectProcess
     {
-        private static OSLLogger _logger = new OSLLogger("ChampionSelect");
+        private static OSLLogger _logger = new OSLLogger("ChampSelectProcess");
         /// <summary>
         /// Recovery of information on the champion selection dans send it to the API
         /// </summary>
@@ -38,14 +38,16 @@ namespace OSL_Client.RiotApp.DataProcessing
                 Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
             };
             string InChampSelectStartSend = JsonConvert.SerializeObject(champSelectStart); //send to server information
-            AsyncClient.StartClient(InChampSelectStartSend);
+            //AsyncClient.StartClient(InChampSelectStartSend);
+            AsyncClient.Send(InChampSelectStartSend);
 
             //All information necessary for display pick and ban overlay
             string champSelectContentPrevious = "";
             string champSelectContent;
             int i = 0;
-            while ((champSelectContent = ApiRequest.RequestGameClientAPI(UrlRequest.lolchampselectv1session)) != null)
+            while ((champSelectContent = ApiRequest.RequestGameClientAPI(UrlRequest.lolchampselectv1session)) != null && ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase).Equals(GameFlowPhase.ChampSelect))
             {
+                _logger.log(LoggingLevel.INFO, "InChampSelect()", $"In champ select");
                 //_logger.log(LoggingLevel.INFO, "ManageChampionSelect()", $"ChampSelectContent is {champSelectContent}");
                 if (!champSelectContent.Equals(champSelectContentPrevious))
                 {
@@ -102,17 +104,18 @@ namespace OSL_Client.RiotApp.DataProcessing
                     }
 
                     FileManagerLocal.RewrittenFile($"E:/Overlay-found-riot/ChampSelectAll/champSelectAll{i}.json", champSelectContent);
-                    _logger.log(LoggingLevel.INFO, "ManageChampionSelect()", "Send ChampSelectContent");
+                    _logger.log(LoggingLevel.INFO, "InChampSelect()", "Send ChampSelectContent");
                     i++;
 
                     //Send to Server ChampSelectContent
-                    AsyncClient.StartClient(champSelectContent);
+                    //AsyncClient.StartClient(champSelectContent);
+                    AsyncClient.Send(champSelectContent);
 
 
                 }
                 else
                 {
-                    _logger.log(LoggingLevel.WARN, "ManageChampionSelect()", "No modification of ChampSelectContent");
+                    _logger.log(LoggingLevel.WARN, "InChampSelect()", "No modification of ChampSelectContent");
                 }
                 Thread.Sleep(1000);
             }
@@ -125,8 +128,9 @@ namespace OSL_Client.RiotApp.DataProcessing
                 Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
             };
             string InChampSelectEndSend = JsonConvert.SerializeObject(champSelectEnd); //send to server information
-            AsyncClient.StartClient(InChampSelectEndSend);
-            _logger.log(LoggingLevel.WARN, "ManageChampionSelect()", "End of ChampSelect");
+            //AsyncClient.StartClient(InChampSelectEndSend);
+            AsyncClient.Send(InChampSelectEndSend);
+            _logger.log(LoggingLevel.WARN, "InChampSelect()", "End of ChampSelect");
         }
 
         /// <summary>

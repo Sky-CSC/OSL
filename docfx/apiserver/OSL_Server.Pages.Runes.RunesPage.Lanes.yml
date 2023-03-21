@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.Runes.RunesPage.Lanes
+  commentId: T:OSL_Server.Pages.Runes.RunesPage.Lanes
+  id: RunesPage.Lanes
+  parent: OSL_Server.Pages.Runes
+  children:
+  - OSL_Server.Pages.Runes.RunesPage.Lanes.ADC
+  - OSL_Server.Pages.Runes.RunesPage.Lanes.Jungle
+  - OSL_Server.Pages.Runes.RunesPage.Lanes.Mid
+  - OSL_Server.Pages.Runes.RunesPage.Lanes.None
+  - OSL_Server.Pages.Runes.RunesPage.Lanes.Support
+  - OSL_Server.Pages.Runes.RunesPage.Lanes.Top
+  langs:
+  - csharp
+  - vb
+  name: RunesPage.Lanes
+  nameWithType: RunesPage.Lanes
+  fullName: OSL_Server.Pages.Runes.RunesPage.Lanes
+  type: Enum
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Lanes
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 195
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public enum Lanes
+    content.vb: Public Enum Lanes
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: OSL_Server.Pages.Runes.RunesPage.Lanes.None
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.Lanes.None
+  id: None
+  parent: OSL_Server.Pages.Runes.RunesPage.Lanes
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: RunesPage.Lanes.None
+  fullName: OSL_Server.Pages.Runes.RunesPage.Lanes.None
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: None
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 197
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: None = 0
+    return:
+      type: OSL_Server.Pages.Runes.RunesPage.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Server.Pages.Runes.RunesPage.Lanes.Top
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.Lanes.Top
+  id: Top
+  parent: OSL_Server.Pages.Runes.RunesPage.Lanes
+  langs:
+  - csharp
+  - vb
+  name: Top
+  nameWithType: RunesPage.Lanes.Top
+  fullName: OSL_Server.Pages.Runes.RunesPage.Lanes.Top
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Top
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 198
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: Top = 1
+    return:
+      type: OSL_Server.Pages.Runes.RunesPage.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Server.Pages.Runes.RunesPage.Lanes.Mid
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.Lanes.Mid
+  id: Mid
+  parent: OSL_Server.Pages.Runes.RunesPage.Lanes
+  langs:
+  - csharp
+  - vb
+  name: Mid
+  nameWithType: RunesPage.Lanes.Mid
+  fullName: OSL_Server.Pages.Runes.RunesPage.Lanes.Mid
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Mid
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 199
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: Mid = 2
+    return:
+      type: OSL_Server.Pages.Runes.RunesPage.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Server.Pages.Runes.RunesPage.Lanes.Jungle
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.Lanes.Jungle
+  id: Jungle
+  parent: OSL_Server.Pages.Runes.RunesPage.Lanes
+  langs:
+  - csharp
+  - vb
+  name: Jungle
+  nameWithType: RunesPage.Lanes.Jungle
+  fullName: OSL_Server.Pages.Runes.RunesPage.Lanes.Jungle
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Jungle
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 200
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: Jungle = 3
+    return:
+      type: OSL_Server.Pages.Runes.RunesPage.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Server.Pages.Runes.RunesPage.Lanes.ADC
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.Lanes.ADC
+  id: ADC
+  parent: OSL_Server.Pages.Runes.RunesPage.Lanes
+  langs:
+  - csharp
+  - vb
+  name: ADC
+  nameWithType: RunesPage.Lanes.ADC
+  fullName: OSL_Server.Pages.Runes.RunesPage.Lanes.ADC
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ADC
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 201
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: ADC = 4
+    return:
+      type: OSL_Server.Pages.Runes.RunesPage.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Server.Pages.Runes.RunesPage.Lanes.Support
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.Lanes.Support
+  id: Support
+  parent: OSL_Server.Pages.Runes.RunesPage.Lanes
+  langs:
+  - csharp
+  - vb
+  name: Support
+  nameWithType: RunesPage.Lanes.Support
+  fullName: OSL_Server.Pages.Runes.RunesPage.Lanes.Support
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Support
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 202
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: Support = 5
+    return:
+      type: OSL_Server.Pages.Runes.RunesPage.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: OSL_Server.Pages.Runes
+  commentId: N:OSL_Server.Pages.Runes
+  name: OSL_Server.Pages.Runes
+  nameWithType: OSL_Server.Pages.Runes
+  fullName: OSL_Server.Pages.Runes
+- uid: OSL_Server.Pages.Runes.RunesPage.Lanes
+  commentId: T:OSL_Server.Pages.Runes.RunesPage.Lanes
+  parent: OSL_Server.Pages.Runes
+  name: RunesPage.Lanes
+  nameWithType: RunesPage.Lanes
+  fullName: OSL_Server.Pages.Runes.RunesPage.Lanes

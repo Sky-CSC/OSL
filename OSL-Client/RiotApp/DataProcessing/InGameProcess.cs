@@ -6,6 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using OSL_Client.Configuration;
 using OSL_Client.FileManager;
+using OSL_Client.RiotApp.API.LCU;
+using OSL_Client.RiotApp.API;
+using OSL_Client.Communication.OSLServer;
+using Newtonsoft.Json;
 
 namespace OSL_Client.RiotApp.DataProcessing
 {
@@ -21,25 +25,77 @@ namespace OSL_Client.RiotApp.DataProcessing
         /// </summary>
         public static void InGame()
         {
-            ConnectLiveEventsAPI();
-            while (true)
+            var inGameStart = new GameFlowPhaseStatus
             {
-                //if (ConnectLiveEventsAPI())
-                //{
+                //IdGame = NewGameProcess.IdGame,
+                Phase = "InGame",
+                Status = "Running",
+                Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+            };
+            string inGameStartSend = JsonConvert.SerializeObject(inGameStart); //send to server information
+            //AsyncClient.StartClient(inGameStartSend);
+            AsyncClient.Send(inGameStartSend);
 
-                //time stamp
-                string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                //Console.WriteLine();
-                string content = GetLiveEventsAPI();
-                if (content != null) {
-                    //write in file
-                    //FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date);
-                    FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date + "\n" + content);
-                }
-                //DisconnectLiveEventsAPI();
-                //}
+            ConnectLiveEventsAPI();
+
+            //string playerList = ApiRequest.RequestGameClientReplayAPI("/liveclientdata/playerlist");
+            string sessionInfo = ApiRequest.RequestGameClientAPI("/lol-gameflow/v1/session");
+            //AsyncClient.StartClient(sessionInfo);
+            AsyncClient.Send(sessionInfo);
+            //if (sessionInfo != null)
+            //{
+            //    AsyncClient.StartClient(sessionInfo);
+            //}
+            //else
+            //{
+            //    string sessionInfo = ApiRequest.RequestGameClientAPI("/lol-gameflow/v1/session");
+            //}
+            //Send information from game to serveur
+            string gameFlowPhase;
+            gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase);
+
+            while (gameFlowPhase != null && ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase).Equals(GameFlowPhase.InProgress))
+            {
+                _logger.log(LoggingLevel.INFO, "InGame()", "In game");
+                Thread.Sleep(5000);
             }
+            //while (gameFlowPhase != null && gameFlowPhase.Equals(GameFlowPhase.InProgress))
+            //{
+            //    Thread.Sleep(5000);
+            //    //if (ConnectLiveEventsAPI())
+            //    //{
 
+            //    //time stamp
+            //    //string date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            //    //Console.WriteLine();
+            //    //string content = GetLiveEventsAPI();
+            //    //if (content != null) {
+            //    //    //write in file
+            //    //    //FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date);
+            //    //    FileManagerLocal.WriteInFile(@"E:\Overlay-found-riot\info.json", date + "\n" + content);
+            //    //}
+            //    //DisconnectLiveEventsAPI();
+            //    //}
+
+            //    //if (content != null)
+            //    //{
+
+            //    //}
+
+            //    gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase);
+            //}
+            //Thread.Sleep(5000);
+
+            var inGameEnd = new GameFlowPhaseStatus
+            {
+                //IdGame = NewGameProcess.IdGame,
+                Phase = "InGame",
+                Status = "End",
+                Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+            };
+            string inGameEndSend = JsonConvert.SerializeObject(inGameEnd); //send to server information
+            //AsyncClient.StartClient(inGameEndSend);
+            AsyncClient.Send(inGameEndSend);
 
             //Init all fonction of this game
 
@@ -121,18 +177,18 @@ namespace OSL_Client.RiotApp.DataProcessing
                     {
                         socketLiveEventsAPI.Receive(bytes, 0, size, SocketFlags.None);
                         string content = Encoding.UTF8.GetString(bytes);
-                        _logger.log(LoggingLevel.INFO, "GetLiveEventsAPI()", "Receive from LiveEventsAPI successfull : "/* + content*/);
+                        _logger.log(LoggingLevel.INFO, "GetLiveEventsAPI()", "Receive from LiveEventsAPI successfull : " + content);
                         return content;
                     }
                     else
                     {
-                        _logger.log(LoggingLevel.WARN, "GetLiveEventsAPI()", "Receive from LiveEventsAPI null");
+                        //_logger.log(LoggingLevel.WARN, "GetLiveEventsAPI()", "Receive from LiveEventsAPI null");
                         return null;
                     }
                 }
                 else
                 {
-                    _logger.log(LoggingLevel.ERROR, "GetLiveEventsAPI()", "Receive from LiveEventsAPI not Available");
+                    //_logger.log(LoggingLevel.ERROR, "GetLiveEventsAPI()", "Receive from LiveEventsAPI not Available");
                     //DisconnectLiveEventsAPI();
                     return null;
                 }
@@ -140,7 +196,7 @@ namespace OSL_Client.RiotApp.DataProcessing
             catch (Exception e)
             {
                 //DisconnectLiveEventsAPI();
-                _logger.log(LoggingLevel.ERROR, "GetLiveEventsAPI()", "GetLiveEventsAPI failed : " + e.Message);
+                //_logger.log(LoggingLevel.ERROR, "GetLiveEventsAPI()", "GetLiveEventsAPI failed : " + e.Message);
                 return null;
             }
         }

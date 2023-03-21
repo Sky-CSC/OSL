@@ -17,7 +17,7 @@ namespace OSL_Client.Communication.OSLServer
         /// </summary>
         /// <param name="client">Socket client</param>
         /// <param name="data">data to send</param>
-        private static void Send(Socket client, String data)
+        public static void Send(Socket client, String data)
         {
             // Convert the string data to byte data using ASCII encoding.  
             byte[] byteData = Encoding.UTF8.GetBytes(data);
@@ -25,6 +25,16 @@ namespace OSL_Client.Communication.OSLServer
             // Begin sending the data to the remote device.  
             client.BeginSend(byteData, 0, byteData.Length, 0,
                 new AsyncCallback(SendCallback), client);
+        }
+
+        public static void Send(String data)
+        {
+            // Convert the string data to byte data using ASCII encoding.  
+            byte[] byteData = Encoding.UTF8.GetBytes(data);
+
+            // Begin sending the data to the remote device.  
+            oslServerSocket.BeginSend(byteData, 0, byteData.Length, 0,
+                new AsyncCallback(SendCallback), oslServerSocket);
         }
 
         /// <summary>

@@ -1,0 +1,882 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  commentId: T:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  id: RunesAdcSuppPage.FormatingData
+  parent: OSL_Server.Pages.Runes
+  children:
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BackgroudGradient
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BakgroundPicture
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultPatch
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultRegion
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureAdc
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureSupp
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner
+  langs:
+  - csharp
+  - vb
+  name: RunesAdcSuppPage.FormatingData
+  nameWithType: RunesAdcSuppPage.FormatingData
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: FormatingData
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 14
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public class FormatingData
+    content.vb: Public Class FormatingData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultPatch
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultPatch
+  id: DefaultPatch
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultPatch
+  nameWithType: RunesAdcSuppPage.FormatingData.DefaultPatch
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultPatch
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultPatch
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 16
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string DefaultPatch { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultPatch As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultPatch*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultRegion
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultRegion
+  id: DefaultRegion
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultRegion
+  nameWithType: RunesAdcSuppPage.FormatingData.DefaultRegion
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultRegion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultRegion
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 17
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string DefaultRegion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultRegion As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultRegion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BackgroudGradient
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BackgroudGradient
+  id: BackgroudGradient
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradient
+  nameWithType: RunesAdcSuppPage.FormatingData.BackgroudGradient
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BackgroudGradient
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradient
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 18
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string BackgroudGradient { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroudGradient As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BackgroudGradient*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient
+  id: OverlayColorBackgroudGradient
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: OverlayColorBackgroudGradient
+  nameWithType: RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: OverlayColorBackgroudGradient
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 19
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string OverlayColorBackgroudGradient { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OverlayColorBackgroudGradient As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner
+  id: BlueSideColorTextSummoner
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorTextSummoner
+  nameWithType: RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorTextSummoner
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 20
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string BlueSideColorTextSummoner { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideColorTextSummoner As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner
+  id: RedSideColorTextSummoner
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorTextSummoner
+  nameWithType: RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorTextSummoner
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 21
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string RedSideColorTextSummoner { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideColorTextSummoner As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion
+  id: BlueSideColorBorderChampion
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorBorderChampion
+  nameWithType: RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorBorderChampion
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 22
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string BlueSideColorBorderChampion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideColorBorderChampion As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion
+  id: RedSideColorBorderChampion
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorBorderChampion
+  nameWithType: RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorBorderChampion
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 23
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string RedSideColorBorderChampion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideColorBorderChampion As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar
+  id: BlueSideColorSeparationBar
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorSeparationBar
+  nameWithType: RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorSeparationBar
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 24
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string BlueSideColorSeparationBar { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideColorSeparationBar As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar
+  id: RedSideColorSeparationBar
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorSeparationBar
+  nameWithType: RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorSeparationBar
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 25
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string RedSideColorSeparationBar { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideColorSeparationBar As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BakgroundPicture
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BakgroundPicture
+  id: BakgroundPicture
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BakgroundPicture
+  nameWithType: RunesAdcSuppPage.FormatingData.BakgroundPicture
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BakgroundPicture
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BakgroundPicture
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 26
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string BakgroundPicture { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BakgroundPicture As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BakgroundPicture*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureAdc
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureAdc
+  id: LanePictureAdc
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: LanePictureAdc
+  nameWithType: RunesAdcSuppPage.FormatingData.LanePictureAdc
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureAdc
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LanePictureAdc
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 27
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string LanePictureAdc { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LanePictureAdc As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureAdc*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureSupp
+  commentId: P:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureSupp
+  id: LanePictureSupp
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: LanePictureSupp
+  nameWithType: RunesAdcSuppPage.FormatingData.LanePictureSupp
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureSupp
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LanePictureSupp
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 28
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public string LanePictureSupp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LanePictureSupp As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureSupp*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Server.Pages.Runes
+  commentId: N:OSL_Server.Pages.Runes
+  name: OSL_Server.Pages.Runes
+  nameWithType: OSL_Server.Pages.Runes
+  fullName: OSL_Server.Pages.Runes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultPatch*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultPatch
+  name: DefaultPatch
+  nameWithType: RunesAdcSuppPage.FormatingData.DefaultPatch
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultPatch
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultRegion*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultRegion
+  name: DefaultRegion
+  nameWithType: RunesAdcSuppPage.FormatingData.DefaultRegion
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.DefaultRegion
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BackgroudGradient*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BackgroudGradient
+  name: BackgroudGradient
+  nameWithType: RunesAdcSuppPage.FormatingData.BackgroudGradient
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BackgroudGradient
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient
+  name: OverlayColorBackgroudGradient
+  nameWithType: RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.OverlayColorBackgroudGradient
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner
+  name: BlueSideColorTextSummoner
+  nameWithType: RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorTextSummoner
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner
+  name: RedSideColorTextSummoner
+  nameWithType: RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorTextSummoner
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion
+  name: BlueSideColorBorderChampion
+  nameWithType: RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorBorderChampion
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion
+  name: RedSideColorBorderChampion
+  nameWithType: RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorBorderChampion
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar
+  name: BlueSideColorSeparationBar
+  nameWithType: RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BlueSideColorSeparationBar
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar
+  name: RedSideColorSeparationBar
+  nameWithType: RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.RedSideColorSeparationBar
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BakgroundPicture*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BakgroundPicture
+  name: BakgroundPicture
+  nameWithType: RunesAdcSuppPage.FormatingData.BakgroundPicture
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.BakgroundPicture
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureAdc*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureAdc
+  name: LanePictureAdc
+  nameWithType: RunesAdcSuppPage.FormatingData.LanePictureAdc
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureAdc
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureSupp*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureSupp
+  name: LanePictureSupp
+  nameWithType: RunesAdcSuppPage.FormatingData.LanePictureSupp
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData.LanePictureSupp

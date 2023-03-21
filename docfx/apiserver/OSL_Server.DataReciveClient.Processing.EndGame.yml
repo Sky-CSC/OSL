@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataReciveClient.Processing.EndGame
+  commentId: N:OSL_Server.DataReciveClient.Processing.EndGame
+  id: OSL_Server.DataReciveClient.Processing.EndGame
+  children:
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Bans
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Events
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.InfoEndGame
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.SummonerInfo
+  langs:
+  - csharp
+  - vb
+  name: OSL_Server.DataReciveClient.Processing.EndGame
+  nameWithType: OSL_Server.DataReciveClient.Processing.EndGame
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame
+  type: Namespace
+  assemblies:
+  - OSL-Server
+references:
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  commentId: T:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  name: EndGameInfo
+  nameWithType: EndGameInfo
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.InfoEndGame
+  commentId: T:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.InfoEndGame
+  parent: OSL_Server.DataReciveClient.Processing.EndGame
+  name: EndGameInfo.InfoEndGame
+  nameWithType: EndGameInfo.InfoEndGame
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.InfoEndGame
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.SummonerInfo
+  commentId: T:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.SummonerInfo
+  name: EndGameInfo.SummonerInfo
+  nameWithType: EndGameInfo.SummonerInfo
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.SummonerInfo
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  commentId: T:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  parent: OSL_Server.DataReciveClient.Processing.EndGame
+  name: EndGameInfo.Stats
+  nameWithType: EndGameInfo.Stats
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Events
+  commentId: T:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Events
+  name: EndGameInfo.Events
+  nameWithType: EndGameInfo.Events
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Events
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Bans
+  commentId: T:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Bans
+  name: EndGameInfo.Bans
+  nameWithType: EndGameInfo.Bans
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Bans
+- uid: OSL_Server.DataReciveClient.Processing.EndGame
+  commentId: N:OSL_Server.DataReciveClient.Processing.EndGame
+  name: OSL_Server.DataReciveClient.Processing.EndGame
+  nameWithType: OSL_Server.DataReciveClient.Processing.EndGame
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame

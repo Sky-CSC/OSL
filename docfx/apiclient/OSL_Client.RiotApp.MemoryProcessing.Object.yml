@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Object
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing.Object
+  id: OSL_Client.RiotApp.MemoryProcessing.Object
+  children:
+  - OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
+  - OSL_Client.RiotApp.MemoryProcessing.Object.GameObject.Offsets
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.RiotApp.MemoryProcessing.Object
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing.Object
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Object
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
+  parent: OSL_Client.RiotApp.MemoryProcessing.Object
+  name: GameObject
+  nameWithType: GameObject
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
+- uid: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject.Offsets
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Object.GameObject.Offsets
+  parent: OSL_Client.RiotApp.MemoryProcessing.Object
+  name: GameObject.Offsets
+  nameWithType: GameObject.Offsets
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject.Offsets
+- uid: OSL_Client.RiotApp.MemoryProcessing.Object
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing.Object
+  name: OSL_Client.RiotApp.MemoryProcessing.Object
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing.Object
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Object

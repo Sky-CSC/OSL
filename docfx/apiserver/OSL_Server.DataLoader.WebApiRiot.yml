@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataLoader.WebApiRiot
+  commentId: N:OSL_Server.DataLoader.WebApiRiot
+  id: OSL_Server.DataLoader.WebApiRiot
+  children:
+  - OSL_Server.DataLoader.WebApiRiot.Match_V5
+  - OSL_Server.DataLoader.WebApiRiot.Spectator_V4
+  - OSL_Server.DataLoader.WebApiRiot.Summoner_V4
+  - OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  - OSL_Server.DataLoader.WebApiRiot.UrlRequest
+  - OSL_Server.DataLoader.WebApiRiot.WebApiRiot
+  langs:
+  - csharp
+  - vb
+  name: OSL_Server.DataLoader.WebApiRiot
+  nameWithType: OSL_Server.DataLoader.WebApiRiot
+  fullName: OSL_Server.DataLoader.WebApiRiot
+  type: Namespace
+  assemblies:
+  - OSL-Server
+references:
+- uid: OSL_Server.DataLoader.WebApiRiot.Match_V5
+  commentId: T:OSL_Server.DataLoader.WebApiRiot.Match_V5
+  name: Match_V5
+  nameWithType: Match_V5
+  fullName: OSL_Server.DataLoader.WebApiRiot.Match_V5
+- uid: OSL_Server.DataLoader.WebApiRiot.Spectator_V4
+  commentId: T:OSL_Server.DataLoader.WebApiRiot.Spectator_V4
+  name: Spectator_V4
+  nameWithType: Spectator_V4
+  fullName: OSL_Server.DataLoader.WebApiRiot.Spectator_V4
+- uid: OSL_Server.DataLoader.WebApiRiot.Summoner_V4
+  commentId: T:OSL_Server.DataLoader.WebApiRiot.Summoner_V4
+  name: Summoner_V4
+  nameWithType: Summoner_V4
+  fullName: OSL_Server.DataLoader.WebApiRiot.Summoner_V4
+- uid: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  commentId: T:OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+  name: SummonerDTO
+  nameWithType: SummonerDTO
+  fullName: OSL_Server.DataLoader.WebApiRiot.SummonerDTO
+- uid: OSL_Server.DataLoader.WebApiRiot.WebApiRiot
+  commentId: T:OSL_Server.DataLoader.WebApiRiot.WebApiRiot
+  name: WebApiRiot
+  nameWithType: WebApiRiot
+  fullName: OSL_Server.DataLoader.WebApiRiot.WebApiRiot
+- uid: OSL_Server.DataLoader.WebApiRiot.UrlRequest
+  commentId: T:OSL_Server.DataLoader.WebApiRiot.UrlRequest
+  name: UrlRequest
+  nameWithType: UrlRequest
+  fullName: OSL_Server.DataLoader.WebApiRiot.UrlRequest

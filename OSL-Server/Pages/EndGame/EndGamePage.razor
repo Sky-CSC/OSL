@@ -1,0 +1,1058 @@
+﻿@page "/endgame"
+@using OSL_Server.DataReciveClient.Processing.EndGame;
+@using MudBlazor
+
+<PageTitle>End Game</PageTitle>
+<div class="parent">
+    <div class="endGame">
+        <div class="content">
+            <h1 class="title">End Game :</h1>
+            <p>
+                Display end game information :
+                <br />- Time game
+                <br />- Win, loss team
+                <br />- Damages to champions
+                <br />- Damages ... (In progress to add other damages information (tower, magic, physic, ...))
+                <br />- Bans informations
+                <br />- KDA / Total gold / Tower, Dagon, Elder, Herald, Baron kill
+            </p>
+
+            @*View1*@
+            <br />
+            <div class="end-game-overlay-1">
+                <h3 class="title">End Game Overlay 1 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@EndGameView1Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="endgame/view1" target="_blank">Link Overlay 1</a>
+                <button class="btn btn-primary button-form" style="background-color: @displayContentView1Button.color" @onclick="@HideOrDisplayContentView1">
+                    Clic to @displayContentView1Button.text customization
+                </button>
+                <div style="display: @displayContentView1">
+                    <div class="general">
+                        <div>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TopBarBlueTeamNameSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Name ("@EndGameView1Page.formatingData.TopBarBlueTeamName") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TopBarBlueTeamName" placeholder="Skynet" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TopBarRedTeamNameSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Name ("@EndGameView1Page.formatingData.TopBarRedTeamName") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TopBarRedTeamName" placeholder="CSC" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TopBarBlueTeamScoreSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Score ("@EndGameView1Page.formatingData.TopBarBlueTeamScore") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TopBarBlueTeamScore" placeholder="1" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TopBarRedTeamScoreSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Score ("@EndGameView1Page.formatingData.TopBarRedTeamScore") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TopBarRedTeamScore" placeholder="0" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.SwitchSideRedBlue">
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                            </EditForm>
+                            <br />
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BackgroundColorEnableDisableSubmit">
+                                <label style="font-weight: bold">Display Backgroud Color : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView1.BackgroundColor" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView1Page.formatingData.BackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.BackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.BackgroundColorColor1" @onclick="@TextValueOverlayView1.SetBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.BackgroundColorColor1"> @EndGameView1Page.formatingData.BackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.BackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.BackgroundColorColor2" @onclick="@TextValueOverlayView1.SetBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.BackgroundColorColor2"> @EndGameView1Page.formatingData.BackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.BackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <br />
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" @onclick="@EnableAllGradiantView1">
+                                Enable all
+                                <br>gradiant
+                            </button>
+                            <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@DisableAllGradiantView1">
+                                Disable all
+                                <br>gradiant
+                            </button>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <h4><b>Timer Bar</b></h4>
+                    <div class="timer-bar">
+                        <div>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TopBarBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView1Page.formatingData.TopBarBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.TopBarBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarBackgroundColorColor1" @onclick="@TextValueOverlayView1.SetTopBarBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.TopBarBackgroundColorColor1"> @EndGameView1Page.formatingData.TopBarBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.TopBarBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarBackgroundColorColor2" @onclick="@TextValueOverlayView1.SetTopBarBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.TopBarBackgroundColorColor2"> @EndGameView1Page.formatingData.TopBarBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.TopBarBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TopBarGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView1.TopBarGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TopBarBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView1Page.formatingData.TopBarBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.TopBarBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsTopBarBorderColor()" @onclick="@TextValueOverlayView1.SetTopBarBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Blue Team Name Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarBlueTeamNameColor" @onclick="@TextValueOverlayView1.SetTopBarBlueTeamNameColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.TopBarBlueTeamNameColor"> @EndGameView1Page.formatingData.TopBarBlueTeamNameColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Team WinLoss Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarBlueTeamWinLossColor" @onclick="@TextValueOverlayView1.SetTopBarBlueTeamWinLossColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.TopBarBlueTeamWinLossColor"> @EndGameView1Page.formatingData.TopBarBlueTeamWinLossColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Team Score Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarBlueTeamScoreColor" @onclick="@TextValueOverlayView1.SetTopBarBlueTeamScoreColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.TopBarBlueTeamScoreColor"> @EndGameView1Page.formatingData.TopBarBlueTeamScoreColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Team Name Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarRedTeamNameColor" @onclick="@TextValueOverlayView1.SetTopBarRedTeamNameColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.TopBarRedTeamNameColor"> @EndGameView1Page.formatingData.TopBarRedTeamNameColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Team WinLoss Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarRedTeamWinLossColor" @onclick="@TextValueOverlayView1.SetTopBarRedTeamWinLossColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.TopBarRedTeamWinLossColor"> @EndGameView1Page.formatingData.TopBarRedTeamWinLossColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Team Score Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarRedTeamScoreColor" @onclick="@TextValueOverlayView1.SetTopBarRedTeamScoreColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.TopBarRedTeamScoreColor"> @EndGameView1Page.formatingData.TopBarRedTeamScoreColor</spam>
+                            <br /><spam style="font-weight: bold"> Timer Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarTimerTextColor" @onclick="@TextValueOverlayView1.SetTopBarTimerTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.TopBarTimerTextColor"> @EndGameView1Page.formatingData.TopBarTimerTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Timer Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.TopBarTimerColor" @onclick="@TextValueOverlayView1.SetTopBarTimerColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.TopBarTimerColor"> @EndGameView1Page.formatingData.TopBarTimerColor</spam>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1TimerBar">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4><b>Champion Info</b></h4>
+                    <div class="champion-info">
+                        <div>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.ChampionInfoBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView1Page.formatingData.ChampionInfoBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.ChampionInfoBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor1" @onclick="@TextValueOverlayView1.SetChampionInfoBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor1"> @EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.ChampionInfoBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor2" @onclick="@TextValueOverlayView1.SetChampionInfoBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor2"> @EndGameView1Page.formatingData.ChampionInfoBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.ChampionInfoBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.ChampionInfoGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView1.ChampionInfoGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.ChampionInfoBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView1Page.formatingData.ChampionInfoBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.ChampionInfoBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsChampionInfoBorderColor()" @onclick="@TextValueOverlayView1.SetChampionInfoBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.ChampionInfoTextColor" @onclick="@TextValueOverlayView1.SetChampionInfoTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.ChampionInfoTextColor"> @EndGameView1Page.formatingData.ChampionInfoTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Bar Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.ChampionInfoBlueBarColor" @onclick="@TextValueOverlayView1.SetChampionInfoBlueBarColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.ChampionInfoBlueBarColor"> @EndGameView1Page.formatingData.ChampionInfoBlueBarColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Dega text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.ChampionInfoBlueDegaTextColor" @onclick="@TextValueOverlayView1.SetChampionInfoBlueDegaTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.ChampionInfoBlueDegaTextColor"> @EndGameView1Page.formatingData.ChampionInfoBlueDegaTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Bar Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.ChampionInfoRedBarColor" @onclick="@TextValueOverlayView1.SetChampionInfoRedBarColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.ChampionInfoRedBarColor"> @EndGameView1Page.formatingData.ChampionInfoRedBarColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Dega text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.ChampionInfoRedDegaTextColor" @onclick="@TextValueOverlayView1.SetChampionInfoRedDegaTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.ChampionInfoRedDegaTextColor"> @EndGameView1Page.formatingData.ChampionInfoRedDegaTextColor</spam>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1ChampInfo">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4><b>Bans</b></h4>
+                    <div class="bans">
+                        <div>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BansBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView1Page.formatingData.BansBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.BansBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.BansBackgroundColorColor1" @onclick="@TextValueOverlayView1.SetBansBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.BansBackgroundColorColor1"> @EndGameView1Page.formatingData.BansBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.BansBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.BansBackgroundColorColor2" @onclick="@TextValueOverlayView1.SetBansBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.BansBackgroundColorColor2"> @EndGameView1Page.formatingData.BansBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.BansBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BansGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView1.BansGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BansBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView1Page.formatingData.BansBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.BansBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsBansBorderColor()" @onclick="@TextValueOverlayView1.SetBansBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.BansTextColor" @onclick="@TextValueOverlayView1.SetBansTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.BansTextColor"> @EndGameView1Page.formatingData.BansTextColor</spam>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1Bans">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+                    <h4><b>Global Stats</b></h4>
+                    <div class="global-stats">
+                        <div>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.GlobalStatsBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView1Page.formatingData.GlobalStatsBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.GlobalStatsBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor1" @onclick="@TextValueOverlayView1.SetGlobalStatsBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor1"> @EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.GlobalStatsBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor2" @onclick="@TextValueOverlayView1.SetGlobalStatsBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor2"> @EndGameView1Page.formatingData.GlobalStatsBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.GlobalStatsBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.GlobalStatsGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView1.GlobalStatsGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.GlobalStatsBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView1Page.formatingData.GlobalStatsBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.GlobalStatsBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsGlobalStatsBorderColor()" @onclick="@TextValueOverlayView1.SetGlobalStatsBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GlobalStatsTextColor" @onclick="@TextValueOverlayView1.SetGlobalStatsTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GlobalStatsTextColor"> @EndGameView1Page.formatingData.GlobalStatsTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GlobalStatsBlueTextColor" @onclick="@TextValueOverlayView1.SetGlobalStatsBlueTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GlobalStatsBlueTextColor"> @EndGameView1Page.formatingData.GlobalStatsBlueTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GlobalStatsRedTextColor" @onclick="@TextValueOverlayView1.SetGlobalStatsRedTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GlobalStatsRedTextColor"> @EndGameView1Page.formatingData.GlobalStatsRedTextColor</spam>
+
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1GlobalStats">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4><b>Gold diff</b></h4>
+                    <div class="gold-diff">
+                        <div>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.GoldDiffBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView1Page.formatingData.GoldDiffBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.GoldDiffBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffBackgroundColorColor1" @onclick="@TextValueOverlayView1.SetGoldDiffBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.GoldDiffBackgroundColorColor1"> @EndGameView1Page.formatingData.GoldDiffBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.GoldDiffBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffBackgroundColorColor2" @onclick="@TextValueOverlayView1.SetGoldDiffBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView1Page.formatingData.GoldDiffBackgroundColorColor2"> @EndGameView1Page.formatingData.GoldDiffBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView1.GoldDiffBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.GoldDiffGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView1.GoldDiffGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.GoldDiffBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView1Page.formatingData.GoldDiffBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.GoldDiffBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsGoldDiffBorderColor()" @onclick="@TextValueOverlayView1.SetGoldDiffBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffTextColor" @onclick="@TextValueOverlayView1.SetGoldDiffTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffTextColor"> @EndGameView1Page.formatingData.GoldDiffTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffBlueTextGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffBlueTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffBlueTextGoldColor"> @EndGameView1Page.formatingData.GoldDiffBlueTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffRedTextGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffRedTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffRedTextGoldColor"> @EndGameView1Page.formatingData.GoldDiffRedTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffZeroTextGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffZeroTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffZeroTextGoldColor"> @EndGameView1Page.formatingData.GoldDiffZeroTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffBluePointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffBluePointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffBluePointGoldColor"> @EndGameView1Page.formatingData.GoldDiffBluePointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffRedPointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffRedPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffRedPointGoldColor"> @EndGameView1Page.formatingData.GoldDiffRedPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffZeroPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor"> @EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Start and End Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffStartEndPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor"> @EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Link Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor" @onclick="@TextValueOverlayView1.SetGoldDiffLinkPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor"> @EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor</spam>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.GoldDiffBarColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Bar Color ("@EndGameView1Page.formatingData.GoldDiffBarColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.GoldDiffBarColor" placeholder="1" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsGoldDiffBarColor()" @onclick="@TextValueOverlayView1.SetGoldDiffBarColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1GoldDiff">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                @*<div class="color-picker" style="visibility: @colorPickerOverlay1">
+                <div class="color-picker-position">
+                <MudGrid>
+                <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                </MudGrid>
+                </div>
+                </div>*@
+            </div>
+
+
+            @*View2*@
+            <br />
+            <div class="end-game-overlay-2">
+                <h3 class="title">End Game Overlay 2 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@EndGameView2Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="endgame/view2" target="_blank">Link Overlay 2</a>
+                <button class="btn btn-primary button-form" style="background-color: @displayContentView2Button.color" @onclick="@HideOrDisplayContentView2">
+                    Clic to @displayContentView2Button.text customization
+                </button>
+                <div style="display: @displayContentView2">
+                    <div class="general">
+                        <div>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TopBarBlueTeamNameSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Name ("@EndGameView2Page.formatingData.TopBarBlueTeamName") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TopBarBlueTeamName" placeholder="Skynet" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TopBarRedTeamNameSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Name ("@EndGameView2Page.formatingData.TopBarRedTeamName") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TopBarRedTeamName" placeholder="CSC" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TopBarBlueTeamScoreSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Score ("@EndGameView2Page.formatingData.TopBarBlueTeamScore") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TopBarBlueTeamScore" placeholder="1" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TopBarRedTeamScoreSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Score ("@EndGameView2Page.formatingData.TopBarRedTeamScore") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TopBarRedTeamScore" placeholder="0" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.SwitchSideRedBlue">
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                            </EditForm>
+                            <br />
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.BackgroundColorEnableDisableSubmit">
+                                <label style="font-weight: bold">Display Backgroud Color : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView2.BackgroundColor" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.BackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView2Page.formatingData.BackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.BackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.BackgroundColorColor1" @onclick="@TextValueOverlayView2.SetBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.BackgroundColorColor1"> @EndGameView2Page.formatingData.BackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.BackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.BackgroundColorColor2" @onclick="@TextValueOverlayView2.SetBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.BackgroundColorColor2"> @EndGameView2Page.formatingData.BackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.BackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <br />
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" @onclick="@EnableAllGradiantView2">
+                                Enable all
+                                <br>gradiant
+                            </button>
+                            <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@DisableAllGradiantView2">
+                                Disable all
+                                <br>gradiant
+                            </button>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <h4><b>Timer Bar</b></h4>
+                    <div class="timer-bar">
+                        <div>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TopBarBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView2Page.formatingData.TopBarBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.TopBarBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarBackgroundColorColor1" @onclick="@TextValueOverlayView2.SetTopBarBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.TopBarBackgroundColorColor1"> @EndGameView2Page.formatingData.TopBarBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.TopBarBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarBackgroundColorColor2" @onclick="@TextValueOverlayView2.SetTopBarBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.TopBarBackgroundColorColor2"> @EndGameView2Page.formatingData.TopBarBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.TopBarBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TopBarGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView2.TopBarGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TopBarBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView2Page.formatingData.TopBarBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView2.TopBarBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView2.TempsTopBarBorderColor()" @onclick="@TextValueOverlayView2.SetTopBarBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Blue Team Name Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarBlueTeamNameColor" @onclick="@TextValueOverlayView2.SetTopBarBlueTeamNameColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.TopBarBlueTeamNameColor"> @EndGameView2Page.formatingData.TopBarBlueTeamNameColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Team WinLoss Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarBlueTeamWinLossColor" @onclick="@TextValueOverlayView2.SetTopBarBlueTeamWinLossColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.TopBarBlueTeamWinLossColor"> @EndGameView2Page.formatingData.TopBarBlueTeamWinLossColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Team Score Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarBlueTeamScoreColor" @onclick="@TextValueOverlayView2.SetTopBarBlueTeamScoreColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.TopBarBlueTeamScoreColor"> @EndGameView2Page.formatingData.TopBarBlueTeamScoreColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Team Name Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarRedTeamNameColor" @onclick="@TextValueOverlayView2.SetTopBarRedTeamNameColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.TopBarRedTeamNameColor"> @EndGameView2Page.formatingData.TopBarRedTeamNameColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Team WinLoss Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarRedTeamWinLossColor" @onclick="@TextValueOverlayView2.SetTopBarRedTeamWinLossColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.TopBarRedTeamWinLossColor"> @EndGameView2Page.formatingData.TopBarRedTeamWinLossColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Team Score Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarRedTeamScoreColor" @onclick="@TextValueOverlayView2.SetTopBarRedTeamScoreColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.TopBarRedTeamScoreColor"> @EndGameView2Page.formatingData.TopBarRedTeamScoreColor</spam>
+                            <br /><spam style="font-weight: bold"> Timer Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarTimerTextColor" @onclick="@TextValueOverlayView2.SetTopBarTimerTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.TopBarTimerTextColor"> @EndGameView2Page.formatingData.TopBarTimerTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Timer Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.TopBarTimerColor" @onclick="@TextValueOverlayView2.SetTopBarTimerColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.TopBarTimerColor"> @EndGameView2Page.formatingData.TopBarTimerColor</spam>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1TimerBar">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4><b>Champion Info</b></h4>
+                    <div class="champion-info">
+                        <div>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.ChampionInfoBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView2Page.formatingData.ChampionInfoBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.ChampionInfoBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.ChampionInfoBackgroundColorColor1" @onclick="@TextValueOverlayView2.SetChampionInfoBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.ChampionInfoBackgroundColorColor1"> @EndGameView2Page.formatingData.ChampionInfoBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.ChampionInfoBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.ChampionInfoBackgroundColorColor2" @onclick="@TextValueOverlayView2.SetChampionInfoBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.ChampionInfoBackgroundColorColor2"> @EndGameView2Page.formatingData.ChampionInfoBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.ChampionInfoBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.ChampionInfoGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView2.ChampionInfoGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.ChampionInfoBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView2Page.formatingData.ChampionInfoBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView2.ChampionInfoBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView2.TempsChampionInfoBorderColor()" @onclick="@TextValueOverlayView2.SetChampionInfoBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.ChampionInfoTextColor" @onclick="@TextValueOverlayView2.SetChampionInfoTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.ChampionInfoTextColor"> @EndGameView2Page.formatingData.ChampionInfoTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Bar Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.ChampionInfoBlueBarColor" @onclick="@TextValueOverlayView2.SetChampionInfoBlueBarColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.ChampionInfoBlueBarColor"> @EndGameView2Page.formatingData.ChampionInfoBlueBarColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Dega text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.ChampionInfoBlueDegaTextColor" @onclick="@TextValueOverlayView2.SetChampionInfoBlueDegaTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.ChampionInfoBlueDegaTextColor"> @EndGameView2Page.formatingData.ChampionInfoBlueDegaTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Bar Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.ChampionInfoRedBarColor" @onclick="@TextValueOverlayView2.SetChampionInfoRedBarColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.ChampionInfoRedBarColor"> @EndGameView2Page.formatingData.ChampionInfoRedBarColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Dega text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.ChampionInfoRedDegaTextColor" @onclick="@TextValueOverlayView2.SetChampionInfoRedDegaTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.ChampionInfoRedDegaTextColor"> @EndGameView2Page.formatingData.ChampionInfoRedDegaTextColor</spam>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1ChampInfo">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4><b>Bans</b></h4>
+                    <div class="bans">
+                        <div>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.BansBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView2Page.formatingData.BansBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.BansBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.BansBackgroundColorColor1" @onclick="@TextValueOverlayView2.SetBansBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.BansBackgroundColorColor1"> @EndGameView2Page.formatingData.BansBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.BansBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.BansBackgroundColorColor2" @onclick="@TextValueOverlayView2.SetBansBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.BansBackgroundColorColor2"> @EndGameView2Page.formatingData.BansBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.BansBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.BansGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView2.BansGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.BansBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView2Page.formatingData.BansBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView2.BansBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView2.TempsBansBorderColor()" @onclick="@TextValueOverlayView2.SetBansBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.BansTextColor" @onclick="@TextValueOverlayView2.SetBansTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.BansTextColor"> @EndGameView2Page.formatingData.BansTextColor</spam>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1Bans">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+                    <h4><b>Global Stats</b></h4>
+                    <div class="global-stats">
+                        <div>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.GlobalStatsBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView2Page.formatingData.GlobalStatsBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.GlobalStatsBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GlobalStatsBackgroundColorColor1" @onclick="@TextValueOverlayView2.SetGlobalStatsBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.GlobalStatsBackgroundColorColor1"> @EndGameView2Page.formatingData.GlobalStatsBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.GlobalStatsBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GlobalStatsBackgroundColorColor2" @onclick="@TextValueOverlayView2.SetGlobalStatsBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.GlobalStatsBackgroundColorColor2"> @EndGameView2Page.formatingData.GlobalStatsBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.GlobalStatsBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.GlobalStatsGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView2.GlobalStatsGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.GlobalStatsBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView2Page.formatingData.GlobalStatsBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView2.GlobalStatsBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView2.TempsGlobalStatsBorderColor()" @onclick="@TextValueOverlayView2.SetGlobalStatsBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GlobalStatsTextColor" @onclick="@TextValueOverlayView2.SetGlobalStatsTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GlobalStatsTextColor"> @EndGameView2Page.formatingData.GlobalStatsTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GlobalStatsBlueTextColor" @onclick="@TextValueOverlayView2.SetGlobalStatsBlueTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GlobalStatsBlueTextColor"> @EndGameView2Page.formatingData.GlobalStatsBlueTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GlobalStatsRedTextColor" @onclick="@TextValueOverlayView2.SetGlobalStatsRedTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GlobalStatsRedTextColor"> @EndGameView2Page.formatingData.GlobalStatsRedTextColor</spam>
+
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1GlobalStats">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4><b>Gold diff</b></h4>
+                    <div class="gold-diff">
+                        <div>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.GoldDiffBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView2Page.formatingData.GoldDiffBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.GoldDiffBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffBackgroundColorColor1" @onclick="@TextValueOverlayView2.SetGoldDiffBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.GoldDiffBackgroundColorColor1"> @EndGameView2Page.formatingData.GoldDiffBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.GoldDiffBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffBackgroundColorColor2" @onclick="@TextValueOverlayView2.SetGoldDiffBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView2Page.formatingData.GoldDiffBackgroundColorColor2"> @EndGameView2Page.formatingData.GoldDiffBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.GoldDiffBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.GoldDiffGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView2.GoldDiffGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.GoldDiffBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView2Page.formatingData.GoldDiffBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView2.GoldDiffBorderColor" placeholder="5" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView2.TempsGoldDiffBorderColor()" @onclick="@TextValueOverlayView2.SetGoldDiffBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffTextColor" @onclick="@TextValueOverlayView2.SetGoldDiffTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffTextColor"> @EndGameView2Page.formatingData.GoldDiffTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffBlueTextGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffBlueTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffBlueTextGoldColor"> @EndGameView2Page.formatingData.GoldDiffBlueTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffRedTextGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffRedTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffRedTextGoldColor"> @EndGameView2Page.formatingData.GoldDiffRedTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffZeroTextGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffZeroTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffZeroTextGoldColor"> @EndGameView2Page.formatingData.GoldDiffZeroTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffBluePointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffBluePointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffBluePointGoldColor"> @EndGameView2Page.formatingData.GoldDiffBluePointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffRedPointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffRedPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffRedPointGoldColor"> @EndGameView2Page.formatingData.GoldDiffRedPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffZeroPointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffZeroPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffZeroPointGoldColor"> @EndGameView2Page.formatingData.GoldDiffZeroPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Start and End Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffStartEndPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor"> @EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Link Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor" @onclick="@TextValueOverlayView2.SetGoldDiffLinkPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor"> @EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor</spam>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.GoldDiffBarColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Bar Color ("@EndGameView2Page.formatingData.GoldDiffBarColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView2.GoldDiffBarColor" placeholder="1" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView2.TempsGoldDiffBarColor()" @onclick="@TextValueOverlayView2.SetGoldDiffBarColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1GoldDiff">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                @*<div class="color-picker" style="visibility: @colorPickerOverlay1">
+                <div class="color-picker-position">
+                <MudGrid>
+                <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                </MudGrid>
+                </div>
+                </div>*@
+            </div>
+
+            @*View3*@
+            <br />
+            <div class="end-game-overlay-3">
+                <h3 class="title">End Game Overlay 3 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@EndGameView3Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="endgame/View3" target="_blank">Link Overlay 3</a>
+                <button class="btn btn-primary button-form" style="background-color: @displayContentView3Button.color" @onclick="@HideOrDisplayContentView3">
+                    Clic to @displayContentView3Button.text customization
+                </button>
+                <div style="display: @displayContentView3">
+                    <div class="general">
+                        <div>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TopBarBlueTeamNameSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Name ("@EndGameView3Page.formatingData.TopBarBlueTeamName") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TopBarBlueTeamName" placeholder="Skynet" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TopBarRedTeamNameSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Name ("@EndGameView3Page.formatingData.TopBarRedTeamName") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TopBarRedTeamName" placeholder="CSC" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TopBarBlueTeamScoreSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Score ("@EndGameView3Page.formatingData.TopBarBlueTeamScore") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TopBarBlueTeamScore" placeholder="1" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TopBarRedTeamScoreSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Blue Side Team Score ("@EndGameView3Page.formatingData.TopBarRedTeamScore") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TopBarRedTeamScore" placeholder="0" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.SwitchSideRedBlue">
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                            </EditForm>
+                            <br />
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.BackgroundColorEnableDisableSubmit">
+                                <label style="font-weight: bold">Display Backgroud Color : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.BackgroundColor" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.BackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView3Page.formatingData.BackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.BackgroundColorDeg" placeholder="45" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.BackgroundColorColor1" @onclick="@TextValueOverlayView3.SetBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.BackgroundColorColor1"> @EndGameView3Page.formatingData.BackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.BackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.BackgroundColorColor2" @onclick="@TextValueOverlayView3.SetBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.BackgroundColorColor2"> @EndGameView3Page.formatingData.BackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.BackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <br />
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" @onclick="@EnableAllGradiantView3">
+                                Enable all
+                                <br>gradiant
+                            </button>
+                            <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@DisableAllGradiantView3">
+                                Disable all
+                                <br>gradiant
+                            </button>
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" @onclick="@EnableAllBackgroundView3">
+                                Enable all
+                                <br>background
+                            </button>
+                            <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@DisableAllBackgroundView3">
+                                Disable all
+                                <br>background
+                            </button>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <h4><b>Timer Bar</b></h4>
+                    <div class="timer-bar">
+                        <div>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TopBarBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView3Page.formatingData.TopBarBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.TopBarBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarBackgroundColorColor1" @onclick="@TextValueOverlayView3.SetTopBarBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.TopBarBackgroundColorColor1"> @EndGameView3Page.formatingData.TopBarBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.TopBarBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarBackgroundColorColor2" @onclick="@TextValueOverlayView3.SetTopBarBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.TopBarBackgroundColorColor2"> @EndGameView3Page.formatingData.TopBarBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.TopBarBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TopBarBackgroundSubmit">
+                                <label style="font-weight: bold">Display Background : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.TopBarBackground" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TopBarGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.TopBarGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TopBarBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.TopBarBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.TopBarBorderColor" placeholder="0" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsTopBarBorderColor()" @onclick="@TextValueOverlayView3.SetTopBarBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Blue Team Name Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarBlueTeamNameColor" @onclick="@TextValueOverlayView3.SetTopBarBlueTeamNameColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.TopBarBlueTeamNameColor"> @EndGameView3Page.formatingData.TopBarBlueTeamNameColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Team WinLoss Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarBlueTeamWinLossColor" @onclick="@TextValueOverlayView3.SetTopBarBlueTeamWinLossColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.TopBarBlueTeamWinLossColor"> @EndGameView3Page.formatingData.TopBarBlueTeamWinLossColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Team Score Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarBlueTeamScoreColor" @onclick="@TextValueOverlayView3.SetTopBarBlueTeamScoreColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.TopBarBlueTeamScoreColor"> @EndGameView3Page.formatingData.TopBarBlueTeamScoreColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Team Name Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarRedTeamNameColor" @onclick="@TextValueOverlayView3.SetTopBarRedTeamNameColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.TopBarRedTeamNameColor"> @EndGameView3Page.formatingData.TopBarRedTeamNameColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Team WinLoss Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarRedTeamWinLossColor" @onclick="@TextValueOverlayView3.SetTopBarRedTeamWinLossColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.TopBarRedTeamWinLossColor"> @EndGameView3Page.formatingData.TopBarRedTeamWinLossColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Team Score Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarRedTeamScoreColor" @onclick="@TextValueOverlayView3.SetTopBarRedTeamScoreColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.TopBarRedTeamScoreColor"> @EndGameView3Page.formatingData.TopBarRedTeamScoreColor</spam>
+                            <br /><spam style="font-weight: bold"> Timer Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarTimerTextColor" @onclick="@TextValueOverlayView3.SetTopBarTimerTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.TopBarTimerTextColor"> @EndGameView3Page.formatingData.TopBarTimerTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Timer Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.TopBarTimerColor" @onclick="@TextValueOverlayView3.SetTopBarTimerColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.TopBarTimerColor"> @EndGameView3Page.formatingData.TopBarTimerColor</spam>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1TimerBar">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4><b>Champion Info</b></h4>
+                    <div class="champion-info">
+                        <div>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.ChampionInfoBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView3Page.formatingData.ChampionInfoBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.ChampionInfoBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.ChampionInfoBackgroundColorColor1" @onclick="@TextValueOverlayView3.SetChampionInfoBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.ChampionInfoBackgroundColorColor1"> @EndGameView3Page.formatingData.ChampionInfoBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.ChampionInfoBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.ChampionInfoBackgroundColorColor2" @onclick="@TextValueOverlayView3.SetChampionInfoBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.ChampionInfoBackgroundColorColor2"> @EndGameView3Page.formatingData.ChampionInfoBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.ChampionInfoBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.ChampionInfoBackgroundSubmit">
+                                <label style="font-weight: bold">Display Background : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.ChampionInfoBackground" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.ChampionInfoGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.ChampionInfoGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.ChampionInfoBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.ChampionInfoBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.ChampionInfoBorderColor" placeholder="0" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsChampionInfoBorderColor()" @onclick="@TextValueOverlayView3.SetChampionInfoBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.ChampionInfoTextColor" @onclick="@TextValueOverlayView3.SetChampionInfoTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.ChampionInfoTextColor"> @EndGameView3Page.formatingData.ChampionInfoTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Bar Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.ChampionInfoBlueBarColor" @onclick="@TextValueOverlayView3.SetChampionInfoBlueBarColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.ChampionInfoBlueBarColor"> @EndGameView3Page.formatingData.ChampionInfoBlueBarColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Dega text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.ChampionInfoBlueDegaTextColor" @onclick="@TextValueOverlayView3.SetChampionInfoBlueDegaTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.ChampionInfoBlueDegaTextColor"> @EndGameView3Page.formatingData.ChampionInfoBlueDegaTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Bar Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.ChampionInfoRedBarColor" @onclick="@TextValueOverlayView3.SetChampionInfoRedBarColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.ChampionInfoRedBarColor"> @EndGameView3Page.formatingData.ChampionInfoRedBarColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Dega text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.ChampionInfoRedDegaTextColor" @onclick="@TextValueOverlayView3.SetChampionInfoRedDegaTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.ChampionInfoRedDegaTextColor"> @EndGameView3Page.formatingData.ChampionInfoRedDegaTextColor</spam>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1ChampInfo">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4><b>Bans</b></h4>
+                    <div class="bans">
+                        <div>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.BansBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView3Page.formatingData.BansBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.BansBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.BansBackgroundColorColor1" @onclick="@TextValueOverlayView3.SetBansBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.BansBackgroundColorColor1"> @EndGameView3Page.formatingData.BansBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.BansBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.BansBackgroundColorColor2" @onclick="@TextValueOverlayView3.SetBansBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.BansBackgroundColorColor2"> @EndGameView3Page.formatingData.BansBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.BansBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.BansBackgroundSubmit">
+                                <label style="font-weight: bold">Display Background : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.BansBackground" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.BansGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.BansGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.BansBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.BansBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.BansBorderColor" placeholder="0" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsBansBorderColor()" @onclick="@TextValueOverlayView3.SetBansBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.BansTextColor" @onclick="@TextValueOverlayView3.SetBansTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.BansTextColor"> @EndGameView3Page.formatingData.BansTextColor</spam>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1Bans">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+                    <h4><b>Global Stats</b></h4>
+                    <div class="global-stats">
+                        <div>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GlobalStatsBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView3Page.formatingData.GlobalStatsBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.GlobalStatsBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GlobalStatsBackgroundColorColor1" @onclick="@TextValueOverlayView3.SetGlobalStatsBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.GlobalStatsBackgroundColorColor1"> @EndGameView3Page.formatingData.GlobalStatsBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.GlobalStatsBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GlobalStatsBackgroundColorColor2" @onclick="@TextValueOverlayView3.SetGlobalStatsBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.GlobalStatsBackgroundColorColor2"> @EndGameView3Page.formatingData.GlobalStatsBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.GlobalStatsBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GlobalStatsBackgroundSubmit">
+                                <label style="font-weight: bold">Display Background : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.GlobalStatsBackground" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GlobalStatsGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.GlobalStatsGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GlobalStatsBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.GlobalStatsBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.GlobalStatsBorderColor" placeholder="0" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsGlobalStatsBorderColor()" @onclick="@TextValueOverlayView3.SetGlobalStatsBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GlobalStatsSeparationColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Separation Color ("@EndGameView3Page.formatingData.GlobalStatsSeparationColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.GlobalStatsSeparationColor" placeholder="2" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsGlobalStatsSeparationColor()" @onclick="@TextValueOverlayView3.SetGlobalStatsSeparationColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GlobalStatsTextColor" @onclick="@TextValueOverlayView3.SetGlobalStatsTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GlobalStatsTextColor"> @EndGameView3Page.formatingData.GlobalStatsTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GlobalStatsBlueTextColor" @onclick="@TextValueOverlayView3.SetGlobalStatsBlueTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GlobalStatsBlueTextColor"> @EndGameView3Page.formatingData.GlobalStatsBlueTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GlobalStatsRedTextColor" @onclick="@TextValueOverlayView3.SetGlobalStatsRedTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GlobalStatsRedTextColor"> @EndGameView3Page.formatingData.GlobalStatsRedTextColor</spam>
+
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1GlobalStats">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <h4><b>Gold diff</b></h4>
+                    <div class="gold-diff">
+                        <div>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GoldDiffBackgroundColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Backgroud Color ("@EndGameView3Page.formatingData.GoldDiffBackgroundColor") : </label>
+                                <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.GoldDiffBackgroundColorDeg" placeholder="90" />
+                                deg
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffBackgroundColorColor1" @onclick="@TextValueOverlayView3.SetGoldDiffBackgroundColorColor1"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.GoldDiffBackgroundColorColor1"> @EndGameView3Page.formatingData.GoldDiffBackgroundColorColor1</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.GoldDiffBackgroundColorPercent1" placeholder="0" />
+                                %
+                                <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffBackgroundColorColor2" @onclick="@TextValueOverlayView3.SetGoldDiffBackgroundColorColor2"></button> <spam style="font-weight: bold ;color: @EndGameView3Page.formatingData.GoldDiffBackgroundColorColor2"> @EndGameView3Page.formatingData.GoldDiffBackgroundColorColor2</spam>
+                                <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.GoldDiffBackgroundColorPercent2" placeholder="100" />
+                                %
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GoldDiffBackgroundSubmit">
+                                <label style="font-weight: bold">Display Background : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.GoldDiffBackground" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GoldDiffGradiantSubmit">
+                                <label style="font-weight: bold">Display Gradiant : </label>
+                                <InputCheckbox id="name" @bind-Value="textValueOverlayView3.GoldDiffGradiant" />
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GoldDiffBorderColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Border Color ("@EndGameView3Page.formatingData.GoldDiffBorderColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.GoldDiffBorderColor" placeholder="0" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsGoldDiffBorderColor()" @onclick="@TextValueOverlayView3.SetGoldDiffBorderColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffTextColor" @onclick="@TextValueOverlayView3.SetGoldDiffTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffTextColor"> @EndGameView3Page.formatingData.GoldDiffTextColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffBlueTextGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffBlueTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffBlueTextGoldColor"> @EndGameView3Page.formatingData.GoldDiffBlueTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffRedTextGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffRedTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffRedTextGoldColor"> @EndGameView3Page.formatingData.GoldDiffRedTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffZeroTextGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffZeroTextGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffZeroTextGoldColor"> @EndGameView3Page.formatingData.GoldDiffZeroTextGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Blue Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffBluePointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffBluePointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffBluePointGoldColor"> @EndGameView3Page.formatingData.GoldDiffBluePointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Red Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffRedPointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffRedPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffRedPointGoldColor"> @EndGameView3Page.formatingData.GoldDiffRedPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Zero Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffZeroPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor"> @EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Start and End Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffStartEndPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor"> @EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor</spam>
+                            <br /><spam style="font-weight: bold"> Link Point Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor" @onclick="@TextValueOverlayView3.SetGoldDiffLinkPointGoldColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor"> @EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor</spam>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GoldDiffBarColorSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Bar Color ("@EndGameView3Page.formatingData.GoldDiffBarColor") : </label>
+                                <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView3.GoldDiffBarColor" placeholder="1" />
+                                <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView3.TempsGoldDiffBarColor()" @onclick="@TextValueOverlayView3.SetGoldDiffBarColor"></button>
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                        </div>
+                        <div class="color-picker" style="visibility: @colorPickerOverlay1GoldDiff">
+                            <div class="color-picker-position">
+                                <MudGrid>
+                                    <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                                </MudGrid>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                @*<div class="color-picker" style="visibility: @colorPickerOverlay1">
+                <div class="color-picker-position">
+                <MudGrid>
+                <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                </MudGrid>
+                </div>
+                </div>*@
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+@code {
+    public static TextValueOverlayView1 textValueOverlayView1 = new();
+    public static TextValueOverlayView2 textValueOverlayView2 = new();
+    public static TextValueOverlayView3 textValueOverlayView3 = new();
+}

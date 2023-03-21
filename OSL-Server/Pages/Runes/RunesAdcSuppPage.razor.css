@@ -1,0 +1,493 @@
+@font-face {
+    font-family: LolFont;
+    src: url(./css/font/fontLoL.ttf);
+}
+
+@font-face {
+    font-family: EurostileCondensedBold;
+    src: url("css/font/EurostileCondensedBold.otf") format("opentype");
+}
+
+html, body {
+    font-family: EurostileCondensedBold;
+    background-color: black;
+    color: white;
+}
+
+.perks-background {
+    width: 1920px;
+    height: 1080px;
+    position: absolute;
+    /*background-color: red;*/
+}
+
+    .perks-background .perks-background-img {
+        /*background-color: red;*/
+        position: absolute;
+        left: 592px;
+        top: 845px;
+        height: 235px;
+        /*display: none;*/
+    }
+
+    .perks-background .perks-background-gradiant {
+        top: 854px;
+        left: 609px;
+        width: 717px;
+        height: 220px;
+        position: absolute;
+        /*background-image: linear-gradient(150deg, #0b849e 0%, #be1e37 100%);*/
+        /*background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% );*/
+    }
+
+    .perks-background .perks-background-color {
+        /*top: 854px;*/
+        /*left: 609px;*/
+        width: 717px;
+        height: 220px;
+        /*position: absolute;*/
+        /*background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% );*/
+        /*background-image: linear-gradient(150deg, #0b849e 0%, #be1e37 100%);*/
+    }
+
+
+.separation-bar-adc-blue {
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    background-color: #c99d53;
+    top: 919px;
+    left: 637px;
+}
+
+.separation-bar-supp-blue {
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    background-color: #c99d53;
+    top: 1027px;
+    left: 637px;
+}
+
+.separation-bar-adc-red {
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    background-color: #c99d53;
+    top: 919px;
+    left: 1097px;
+}
+
+.separation-bar-supp-red {
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    background-color: #c99d53;
+    top: 1027px;
+    left: 1097px;
+}
+
+.lane-picture-adc {
+    position: absolute;
+}
+
+    .lane-picture-adc .lane-picture-img {
+        position: absolute;
+        top: 853px;
+        left: 950px;
+        height: 33px;
+    }
+
+.lane-picture-supp {
+    position: absolute;
+}
+
+    .lane-picture-supp .lane-picture-img {
+        position: absolute;
+        top: 960px;
+        left: 950px;
+        height: 33px;
+    }
+
+
+.perks {
+    /*background: url(./assets/runes/backgroundV2.png);*/
+    /*    background-size: 1920px;*/
+    height: 1080px;
+    width: 1920px;
+}
+
+.summoner-name-adc-blue {
+    position: absolute;
+    font-family: EurostileCondensedBold;
+    font-size: 20px;
+    top: 852px;
+    right: 970px;
+    position: absolute;
+    letter-spacing: -1px;
+}
+
+.champ-picture-adc-blue {
+    position: absolute;
+}
+
+    .champ-picture-adc-blue .champ-picture-adc-img {
+        position: absolute;
+        height: 79px;
+        top: 882px;
+        left: 868px;
+        border: 2px solid #c99d53;
+    }
+
+.summoner-name-supp-blue {
+    position: absolute;
+    font-family: EurostileCondensedBold;
+    font-size: 20px;
+    top: 960px;
+    right: 970px;
+    position: absolute;
+    letter-spacing: -1px;
+}
+
+.champ-picture-supp-blue {
+    position: absolute;
+}
+
+    .champ-picture-supp-blue .champ-picture-supp-img {
+        position: absolute;
+        height: 79px;
+        top: 990px;
+        left: 868px;
+        border: 2px solid #c99d53;
+    }
+
+.summoner-name-adc-red {
+    position: absolute;
+    font-family: EurostileCondensedBold;
+    font-size: 20px;
+    top: 852px;
+    left: 995px;
+    position: absolute;
+    letter-spacing: -1px;
+}
+
+.champ-picture-adc-red {
+    position: absolute;
+}
+
+    .champ-picture-adc-red .champ-picture-adc-img {
+        position: absolute;
+        height: 79px;
+        top: 882px;
+        left: 987px;
+        border: 2px solid #c99d53;
+    }
+
+.summoner-name-supp-red {
+    position: absolute;
+    font-family: EurostileCondensedBold;
+    font-size: 20px;
+    top: 960px;
+    left: 995px;
+    position: absolute;
+    letter-spacing: -1px;
+}
+
+.champ-picture-supp-red {
+    position: absolute;
+}
+
+    .champ-picture-supp-red .champ-picture-supp-img {
+        position: absolute;
+        height: 79px;
+        top: 990px;
+        left: 987px;
+        border: 2px solid #c99d53;
+    }
+
+
+.perks-wrapper-adc-blue {
+    position: absolute;
+}
+
+    .perks-wrapper-adc-blue .perks-img-adc-blue {
+        position: absolute;
+    }
+
+    .perks-wrapper-adc-blue:nth-child(1) .perks-img-adc-blue {
+        position: absolute;
+        height: 60px;
+        top: 865px;
+        left: 790px;
+    }
+
+    .perks-wrapper-adc-blue:nth-child(2) .perks-img-adc-blue {
+        position: absolute;
+        height: 33px;
+        top: 880px;
+        left: 745px;
+    }
+
+    .perks-wrapper-adc-blue:nth-child(3) .perks-img-adc-blue {
+        position: absolute;
+        height: 33px;
+        top: 880px;
+        left: 705px;
+    }
+
+    .perks-wrapper-adc-blue:nth-child(4) .perks-img-adc-blue {
+        position: absolute;
+        height: 33px;
+        top: 880px;
+        left: 665px;
+    }
+
+    .perks-wrapper-adc-blue:nth-child(5) .perks-img-adc-blue {
+        position: absolute;
+        height: 33px;
+        top: 925px;
+        left: 810px;
+    }
+
+    .perks-wrapper-adc-blue:nth-child(6) .perks-img-adc-blue {
+        position: absolute;
+        height: 33px;
+        top: 925px;
+        left: 770px;
+    }
+
+    .perks-wrapper-adc-blue:nth-child(7) .perks-img-adc-blue {
+        position: absolute;
+        /*height: 33px;*/
+        top: 926px;
+        left: 701px;
+    }
+
+    .perks-wrapper-adc-blue:nth-child(8) .perks-img-adc-blue {
+        position: absolute;
+        /*height: 33px;*/
+        top: 926px;
+        left: 671px;
+    }
+
+    .perks-wrapper-adc-blue:nth-child(9) .perks-img-adc-blue {
+        position: absolute;
+        /*height: 33px;*/
+        top: 926px;
+        left: 641px;
+    }
+
+.perks-wrapper-supp-blue {
+    position: absolute;
+}
+
+    .perks-wrapper-supp-blue .perks-img-supp-blue {
+        position: absolute;
+    }
+
+    .perks-wrapper-supp-blue:nth-child(1) .perks-img-supp-blue {
+        position: absolute;
+        height: 60px;
+        top: 975px;
+        left: 790px;
+    }
+
+    .perks-wrapper-supp-blue:nth-child(2) .perks-img-supp-blue {
+        position: absolute;
+        height: 33px;
+        top: 990px;
+        left: 745px;
+    }
+
+    .perks-wrapper-supp-blue:nth-child(3) .perks-img-supp-blue {
+        position: absolute;
+        height: 33px;
+        top: 990px;
+        left: 705px;
+    }
+
+    .perks-wrapper-supp-blue:nth-child(4) .perks-img-supp-blue {
+        position: absolute;
+        height: 33px;
+        top: 990px;
+        left: 665px;
+    }
+
+    .perks-wrapper-supp-blue:nth-child(5) .perks-img-supp-blue {
+        position: absolute;
+        height: 33px;
+        top: 1035px;
+        left: 810px;
+    }
+
+    .perks-wrapper-supp-blue:nth-child(6) .perks-img-supp-blue {
+        position: absolute;
+        height: 33px;
+        top: 1035px;
+        left: 770px;
+    }
+
+    .perks-wrapper-supp-blue:nth-child(7) .perks-img-supp-blue {
+        position: absolute;
+        /*height: 33px;*/
+        top: 1036px;
+        left: 701px;
+    }
+
+    .perks-wrapper-supp-blue:nth-child(8) .perks-img-supp-blue {
+        position: absolute;
+        /*height: 33px;*/
+        top: 1036px;
+        left: 671px;
+    }
+
+    .perks-wrapper-supp-blue:nth-child(9) .perks-img-supp-blue {
+        position: absolute;
+        /*height: 33px;*/
+        top: 1036px;
+        left: 641px;
+    }
+
+
+
+.perks-wrapper-adc-red {
+    position: absolute;
+}
+
+    .perks-wrapper-adc-red .perks-img-adc-red {
+        position: absolute;
+    }
+
+    .perks-wrapper-adc-red:nth-child(1) .perks-img-adc-red {
+        position: absolute;
+        height: 60px;
+        top: 865px;
+        left: 1080px;
+    }
+
+    .perks-wrapper-adc-red:nth-child(2) .perks-img-adc-red {
+        position: absolute;
+        height: 33px;
+        top: 880px;
+        left: 1155px;
+    }
+
+    .perks-wrapper-adc-red:nth-child(3) .perks-img-adc-red {
+        position: absolute;
+        height: 33px;
+        top: 880px;
+        left: 1195px;
+    }
+
+    .perks-wrapper-adc-red:nth-child(4) .perks-img-adc-red {
+        position: absolute;
+        height: 33px;
+        top: 880px;
+        left: 1235px;
+    }
+
+    .perks-wrapper-adc-red:nth-child(5) .perks-img-adc-red {
+        position: absolute;
+        height: 33px;
+        top: 925px;
+        left: 1090px;
+    }
+
+    .perks-wrapper-adc-red:nth-child(6) .perks-img-adc-red {
+        position: absolute;
+        height: 33px;
+        top: 925px;
+        left: 1130px;
+    }
+
+    .perks-wrapper-adc-red:nth-child(7) .perks-img-adc-red {
+        position: absolute;
+        /*height: 33px;*/
+        top: 926px;
+        left: 1200px;
+    }
+
+    .perks-wrapper-adc-red:nth-child(8) .perks-img-adc-red {
+        position: absolute;
+        /*height: 33px;*/
+        top: 926px;
+        left: 1230px;
+    }
+
+    .perks-wrapper-adc-red:nth-child(9) .perks-img-adc-red {
+        position: absolute;
+        /*height: 33px;*/
+        top: 926px;
+        left: 1260px;
+    }
+
+.perks-wrapper-supp-red {
+    position: absolute;
+}
+
+    .perks-wrapper-supp-red .perks-img-supp-red {
+        position: absolute;
+    }
+
+    .perks-wrapper-supp-red:nth-child(1) .perks-img-supp-red {
+        position: absolute;
+        height: 60px;
+        top: 975px;
+        left: 1080px;
+    }
+
+    .perks-wrapper-supp-red:nth-child(2) .perks-img-supp-red {
+        position: absolute;
+        height: 33px;
+        top: 990px;
+        left: 1155px;
+    }
+
+    .perks-wrapper-supp-red:nth-child(3) .perks-img-supp-red {
+        position: absolute;
+        height: 33px;
+        top: 990px;
+        left: 1195px;
+    }
+
+    .perks-wrapper-supp-red:nth-child(4) .perks-img-supp-red {
+        position: absolute;
+        height: 33px;
+        top: 990px;
+        left: 1235px;
+    }
+
+    .perks-wrapper-supp-red:nth-child(5) .perks-img-supp-red {
+        position: absolute;
+        height: 33px;
+        top: 1035px;
+        left: 1090px;
+    }
+
+    .perks-wrapper-supp-red:nth-child(6) .perks-img-supp-red {
+        position: absolute;
+        height: 33px;
+        top: 1035px;
+        left: 1130px;
+    }
+
+    .perks-wrapper-supp-red:nth-child(7) .perks-img-supp-red {
+        position: absolute;
+        /*height: 33px;*/
+        top: 1036px;
+        left: 1200px;
+    }
+
+    .perks-wrapper-supp-red:nth-child(8) .perks-img-supp-red {
+        position: absolute;
+        /*height: 33px;*/
+        top: 1036px;
+        left: 1230px;
+    }
+
+    .perks-wrapper-supp-red:nth-child(9) .perks-img-supp-red {
+        position: absolute;
+        /*height: 33px;*/
+        top: 1036px;
+        left: 1260px;
+    }

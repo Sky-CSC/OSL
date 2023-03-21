@@ -16,7 +16,7 @@ namespace OSL_Client.Communication.OSLServer
         /// Receive
         /// </summary>
         /// <param name="client">Socket client</param>
-        private static void Receive(Socket client)
+        public static void Receive(Socket client)
         {
             try
             {
@@ -26,6 +26,24 @@ namespace OSL_Client.Communication.OSLServer
 
                 // Begin receiving the data from the remote device.  
                 client.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
+                    new AsyncCallback(ReceiveCallback), state);
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "Receive()", "Error Client Recive : " + e.Message);
+            }
+        }
+
+        public static void Receive()
+        {
+            try
+            {
+                // Create the state object.  
+                StateObject state = new StateObject();
+                state.workSocket = oslServerSocket;
+
+                // Begin receiving the data from the remote device.  
+                oslServerSocket.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
                     new AsyncCallback(ReceiveCallback), state);
             }
             catch (Exception e)

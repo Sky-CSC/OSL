@@ -1,0 +1,1417 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay
+  commentId: T:OSL_Server.Pages.Runes.RunesPage.Overlay
+  id: RunesPage.Overlay
+  parent: OSL_Server.Pages.Runes
+  children:
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientDeg
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent1
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent2
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientSubmit
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPicture
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPictureSubmit
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampion
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionNotSet
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionSubmit
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackground
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackgroundSubmit
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampion
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionNotSet
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionSubmit
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor1
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor2
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorBorderChampion
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorSeparationBar
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorTextSummoner
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorBorderChampion
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorSeparationBar
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorTextSummoner
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.TempsBlueSideColorBorderChampion
+  - OSL_Server.Pages.Runes.RunesPage.Overlay.TempsRedSideColorBorderChampion
+  langs:
+  - csharp
+  - vb
+  name: RunesPage.Overlay
+  nameWithType: RunesPage.Overlay
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Overlay
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 261
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public class Overlay
+    content.vb: Public Class Overlay
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPicture
+  commentId: P:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPicture
+  id: BackgroundPicture
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: BackgroundPicture
+  nameWithType: RunesPage.Overlay.BackgroundPicture
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPicture
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroundPicture
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 263
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public bool BackgroundPicture { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property BackgroundPicture As Boolean
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPicture*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPictureSubmit
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPictureSubmit
+  id: BackgroundPictureSubmit
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: BackgroundPictureSubmit()
+  nameWithType: RunesPage.Overlay.BackgroundPictureSubmit()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPictureSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroundPictureSubmit
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 265
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void BackgroundPictureSubmit()
+    content.vb: Public Shared Sub BackgroundPictureSubmit
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPictureSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientDeg
+  commentId: P:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientDeg
+  id: BackgroudGradientDeg
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradientDeg
+  nameWithType: RunesPage.Overlay.BackgroudGradientDeg
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientDeg
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradientDeg
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 269
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: >-
+      [Required]
+
+      [Range(-360, 360, ErrorMessage = "Accommodation invalid (-360-360).")]
+
+      public int BackgroudGradientDeg { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Required>
+
+      <Range(-360, 360, ErrorMessage:="Accommodation invalid (-360-360).")>
+
+      Public Property BackgroudGradientDeg As Integer
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientDeg*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: -360
+    - type: System.Int32
+      value: 360
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Accommodation invalid (-360-360).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent1
+  commentId: P:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent1
+  id: BackgroudGradientPercent1
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradientPercent1
+  nameWithType: RunesPage.Overlay.BackgroudGradientPercent1
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent1
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradientPercent1
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 273
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: >-
+      [Required]
+
+      [Range(0, 100, ErrorMessage = "Accommodation invalid (0-100).")]
+
+      public int BackgroudGradientPercent1 { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Required>
+
+      <Range(0, 100, ErrorMessage:="Accommodation invalid (0-100).")>
+
+      Public Property BackgroudGradientPercent1 As Integer
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent1*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 100
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Accommodation invalid (0-100).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent2
+  commentId: P:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent2
+  id: BackgroudGradientPercent2
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradientPercent2
+  nameWithType: RunesPage.Overlay.BackgroudGradientPercent2
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent2
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradientPercent2
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 277
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: >-
+      [Required]
+
+      [Range(0, 100, ErrorMessage = "Accommodation invalid (0-100).")]
+
+      public int BackgroudGradientPercent2 { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Required>
+
+      <Range(0, 100, ErrorMessage:="Accommodation invalid (0-100).")>
+
+      Public Property BackgroudGradientPercent2 As Integer
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent2*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 100
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Accommodation invalid (0-100).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientSubmit
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientSubmit
+  id: BackgroudGradientSubmit
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradientSubmit()
+  nameWithType: RunesPage.Overlay.BackgroudGradientSubmit()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradientSubmit
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 280
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void BackgroudGradientSubmit()
+    content.vb: Public Shared Sub BackgroudGradientSubmit
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor1
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor1
+  id: SetBackgroudGradientColor1
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: SetBackgroudGradientColor1()
+  nameWithType: RunesPage.Overlay.SetBackgroudGradientColor1()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor1()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetBackgroudGradientColor1
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 294
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void SetBackgroudGradientColor1()
+    content.vb: Public Shared Sub SetBackgroudGradientColor1
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor1*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor2
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor2
+  id: SetBackgroudGradientColor2
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: SetBackgroudGradientColor2()
+  nameWithType: RunesPage.Overlay.SetBackgroudGradientColor2()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor2()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetBackgroudGradientColor2
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 315
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void SetBackgroudGradientColor2()
+    content.vb: Public Shared Sub SetBackgroudGradientColor2
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackground
+  commentId: P:OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackground
+  id: ForegroundBackground
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: ForegroundBackground
+  nameWithType: RunesPage.Overlay.ForegroundBackground
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackground
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ForegroundBackground
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 336
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public bool ForegroundBackground { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ForegroundBackground As Boolean
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackground*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackgroundSubmit
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackgroundSubmit
+  id: ForegroundBackgroundSubmit
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: ForegroundBackgroundSubmit()
+  nameWithType: RunesPage.Overlay.ForegroundBackgroundSubmit()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackgroundSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ForegroundBackgroundSubmit
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 338
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void ForegroundBackgroundSubmit()
+    content.vb: Public Shared Sub ForegroundBackgroundSubmit
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackgroundSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorTextSummoner
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorTextSummoner
+  id: SetBlueSideColorTextSummoner
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: SetBlueSideColorTextSummoner()
+  nameWithType: RunesPage.Overlay.SetBlueSideColorTextSummoner()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorTextSummoner()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetBlueSideColorTextSummoner
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 343
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void SetBlueSideColorTextSummoner()
+    content.vb: Public Shared Sub SetBlueSideColorTextSummoner
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorTextSummoner*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorTextSummoner
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorTextSummoner
+  id: SetRedSideColorTextSummoner
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: SetRedSideColorTextSummoner()
+  nameWithType: RunesPage.Overlay.SetRedSideColorTextSummoner()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorTextSummoner()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetRedSideColorTextSummoner
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 363
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void SetRedSideColorTextSummoner()
+    content.vb: Public Shared Sub SetRedSideColorTextSummoner
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorTextSummoner*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorSeparationBar
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorSeparationBar
+  id: SetBlueSideColorSeparationBar
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: SetBlueSideColorSeparationBar()
+  nameWithType: RunesPage.Overlay.SetBlueSideColorSeparationBar()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorSeparationBar()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetBlueSideColorSeparationBar
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 383
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void SetBlueSideColorSeparationBar()
+    content.vb: Public Shared Sub SetBlueSideColorSeparationBar
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorSeparationBar*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorSeparationBar
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorSeparationBar
+  id: SetRedSideColorSeparationBar
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: SetRedSideColorSeparationBar()
+  nameWithType: RunesPage.Overlay.SetRedSideColorSeparationBar()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorSeparationBar()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetRedSideColorSeparationBar
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 403
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void SetRedSideColorSeparationBar()
+    content.vb: Public Shared Sub SetRedSideColorSeparationBar
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorSeparationBar*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampion
+  commentId: P:OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampion
+  id: BlueSideColorBorderChampion
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorBorderChampion
+  nameWithType: RunesPage.Overlay.BlueSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorBorderChampion
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 424
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: >-
+      [Required]
+
+      [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+
+      public int BlueSideColorBorderChampion { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Required>
+
+      <Range(0, 10, ErrorMessage:="Accommodation invalid (1-10).")>
+
+      Public Property BlueSideColorBorderChampion As Integer
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampion*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 10
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Accommodation invalid (1-10).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionNotSet
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionNotSet
+  id: BlueSideColorBorderChampionNotSet
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorBorderChampionNotSet
+  nameWithType: RunesPage.Overlay.BlueSideColorBorderChampionNotSet
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionNotSet
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorBorderChampionNotSet
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 427
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static string BlueSideColorBorderChampionNotSet
+    return:
+      type: System.String
+    content.vb: Public Shared BlueSideColorBorderChampionNotSet As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionSubmit
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionSubmit
+  id: BlueSideColorBorderChampionSubmit
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorBorderChampionSubmit()
+  nameWithType: RunesPage.Overlay.BlueSideColorBorderChampionSubmit()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorBorderChampionSubmit
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 428
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void BlueSideColorBorderChampionSubmit()
+    content.vb: Public Shared Sub BlueSideColorBorderChampionSubmit
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsBlueSideColorBorderChampion
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.TempsBlueSideColorBorderChampion
+  id: TempsBlueSideColorBorderChampion
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: TempsBlueSideColorBorderChampion()
+  nameWithType: RunesPage.Overlay.TempsBlueSideColorBorderChampion()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsBlueSideColorBorderChampion()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TempsBlueSideColorBorderChampion
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 439
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static string TempsBlueSideColorBorderChampion()
+    return:
+      type: System.String
+    content.vb: Public Shared Function TempsBlueSideColorBorderChampion As String
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsBlueSideColorBorderChampion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorBorderChampion
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorBorderChampion
+  id: SetBlueSideColorBorderChampion
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: SetBlueSideColorBorderChampion()
+  nameWithType: RunesPage.Overlay.SetBlueSideColorBorderChampion()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorBorderChampion()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetBlueSideColorBorderChampion
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 445
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void SetBlueSideColorBorderChampion()
+    content.vb: Public Shared Sub SetBlueSideColorBorderChampion
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorBorderChampion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampion
+  commentId: P:OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampion
+  id: RedSideColorBorderChampion
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorBorderChampion
+  nameWithType: RunesPage.Overlay.RedSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorBorderChampion
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 460
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: >-
+      [Required]
+
+      [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
+
+      public int RedSideColorBorderChampion { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Required>
+
+      <Range(0, 10, ErrorMessage:="Accommodation invalid (1-10).")>
+
+      Public Property RedSideColorBorderChampion As Integer
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampion*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 10
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Accommodation invalid (1-10).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionNotSet
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionNotSet
+  id: RedSideColorBorderChampionNotSet
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorBorderChampionNotSet
+  nameWithType: RunesPage.Overlay.RedSideColorBorderChampionNotSet
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionNotSet
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorBorderChampionNotSet
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 463
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static string RedSideColorBorderChampionNotSet
+    return:
+      type: System.String
+    content.vb: Public Shared RedSideColorBorderChampionNotSet As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionSubmit
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionSubmit
+  id: RedSideColorBorderChampionSubmit
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorBorderChampionSubmit()
+  nameWithType: RunesPage.Overlay.RedSideColorBorderChampionSubmit()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorBorderChampionSubmit
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 464
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void RedSideColorBorderChampionSubmit()
+    content.vb: Public Shared Sub RedSideColorBorderChampionSubmit
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsRedSideColorBorderChampion
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.TempsRedSideColorBorderChampion
+  id: TempsRedSideColorBorderChampion
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: TempsRedSideColorBorderChampion()
+  nameWithType: RunesPage.Overlay.TempsRedSideColorBorderChampion()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsRedSideColorBorderChampion()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TempsRedSideColorBorderChampion
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 475
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static string TempsRedSideColorBorderChampion()
+    return:
+      type: System.String
+    content.vb: Public Shared Function TempsRedSideColorBorderChampion As String
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsRedSideColorBorderChampion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorBorderChampion
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorBorderChampion
+  id: SetRedSideColorBorderChampion
+  parent: OSL_Server.Pages.Runes.RunesPage.Overlay
+  langs:
+  - csharp
+  - vb
+  name: SetRedSideColorBorderChampion()
+  nameWithType: RunesPage.Overlay.SetRedSideColorBorderChampion()
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorBorderChampion()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetRedSideColorBorderChampion
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 481
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void SetRedSideColorBorderChampion()
+    content.vb: Public Shared Sub SetRedSideColorBorderChampion
+  overload: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorBorderChampion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Pages.Runes
+  commentId: N:OSL_Server.Pages.Runes
+  name: OSL_Server.Pages.Runes
+  nameWithType: OSL_Server.Pages.Runes
+  fullName: OSL_Server.Pages.Runes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPicture*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPicture
+  name: BackgroundPicture
+  nameWithType: RunesPage.Overlay.BackgroundPicture
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPicture
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPictureSubmit*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPictureSubmit
+  name: BackgroundPictureSubmit
+  nameWithType: RunesPage.Overlay.BackgroundPictureSubmit
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroundPictureSubmit
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientDeg*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientDeg
+  name: BackgroudGradientDeg
+  nameWithType: RunesPage.Overlay.BackgroudGradientDeg
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientDeg
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent1*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent1
+  name: BackgroudGradientPercent1
+  nameWithType: RunesPage.Overlay.BackgroudGradientPercent1
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent1
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent2*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent2
+  name: BackgroudGradientPercent2
+  nameWithType: RunesPage.Overlay.BackgroudGradientPercent2
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientPercent2
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientSubmit*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientSubmit
+  name: BackgroudGradientSubmit
+  nameWithType: RunesPage.Overlay.BackgroudGradientSubmit
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BackgroudGradientSubmit
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor1*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor1
+  name: SetBackgroudGradientColor1
+  nameWithType: RunesPage.Overlay.SetBackgroudGradientColor1
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor1
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor2*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor2
+  name: SetBackgroudGradientColor2
+  nameWithType: RunesPage.Overlay.SetBackgroudGradientColor2
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBackgroudGradientColor2
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackground*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackground
+  name: ForegroundBackground
+  nameWithType: RunesPage.Overlay.ForegroundBackground
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackground
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackgroundSubmit*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackgroundSubmit
+  name: ForegroundBackgroundSubmit
+  nameWithType: RunesPage.Overlay.ForegroundBackgroundSubmit
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.ForegroundBackgroundSubmit
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorTextSummoner*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorTextSummoner
+  name: SetBlueSideColorTextSummoner
+  nameWithType: RunesPage.Overlay.SetBlueSideColorTextSummoner
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorTextSummoner
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorTextSummoner*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorTextSummoner
+  name: SetRedSideColorTextSummoner
+  nameWithType: RunesPage.Overlay.SetRedSideColorTextSummoner
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorTextSummoner
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorSeparationBar*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorSeparationBar
+  name: SetBlueSideColorSeparationBar
+  nameWithType: RunesPage.Overlay.SetBlueSideColorSeparationBar
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorSeparationBar
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorSeparationBar*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorSeparationBar
+  name: SetRedSideColorSeparationBar
+  nameWithType: RunesPage.Overlay.SetRedSideColorSeparationBar
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorSeparationBar
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampion*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampion
+  name: BlueSideColorBorderChampion
+  nameWithType: RunesPage.Overlay.BlueSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampion
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionSubmit*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionSubmit
+  name: BlueSideColorBorderChampionSubmit
+  nameWithType: RunesPage.Overlay.BlueSideColorBorderChampionSubmit
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.BlueSideColorBorderChampionSubmit
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsBlueSideColorBorderChampion*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.TempsBlueSideColorBorderChampion
+  name: TempsBlueSideColorBorderChampion
+  nameWithType: RunesPage.Overlay.TempsBlueSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsBlueSideColorBorderChampion
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorBorderChampion*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorBorderChampion
+  name: SetBlueSideColorBorderChampion
+  nameWithType: RunesPage.Overlay.SetBlueSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetBlueSideColorBorderChampion
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampion*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampion
+  name: RedSideColorBorderChampion
+  nameWithType: RunesPage.Overlay.RedSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampion
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionSubmit*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionSubmit
+  name: RedSideColorBorderChampionSubmit
+  nameWithType: RunesPage.Overlay.RedSideColorBorderChampionSubmit
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.RedSideColorBorderChampionSubmit
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsRedSideColorBorderChampion*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.TempsRedSideColorBorderChampion
+  name: TempsRedSideColorBorderChampion
+  nameWithType: RunesPage.Overlay.TempsRedSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.TempsRedSideColorBorderChampion
+- uid: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorBorderChampion*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorBorderChampion
+  name: SetRedSideColorBorderChampion
+  nameWithType: RunesPage.Overlay.SetRedSideColorBorderChampion
+  fullName: OSL_Server.Pages.Runes.RunesPage.Overlay.SetRedSideColorBorderChampion

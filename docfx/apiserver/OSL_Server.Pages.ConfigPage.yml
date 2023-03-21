@@ -6,6 +6,7 @@ items:
   parent: OSL_Server.Pages
   children:
   - OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1
+  - OSL_Server.Pages.ConfigPage.WebRiotApiKeySubmit
   langs:
   - csharp
   - vb
@@ -20,7 +21,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConfigPage
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
-    startLine: 10
+    startLine: 16
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -45,6 +46,38 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: OSL_Server.Pages.ConfigPage.WebRiotApiKeySubmit
+  commentId: M:OSL_Server.Pages.ConfigPage.WebRiotApiKeySubmit
+  id: WebRiotApiKeySubmit
+  parent: OSL_Server.Pages.ConfigPage
+  langs:
+  - csharp
+  - vb
+  name: WebRiotApiKeySubmit()
+  nameWithType: ConfigPage.WebRiotApiKeySubmit()
+  fullName: OSL_Server.Pages.ConfigPage.WebRiotApiKeySubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/ConfigPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: WebRiotApiKeySubmit
+    path: ../OSL-Server/Pages/ConfigPage.razor.cs
+    startLine: 32
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: public static void WebRiotApiKeySubmit()
+    content.vb: Public Shared Sub WebRiotApiKeySubmit
+  overload: OSL_Server.Pages.ConfigPage.WebRiotApiKeySubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1
   commentId: M:OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1
   id: GenerateConfigFileChampSelectView1
@@ -63,7 +96,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GenerateConfigFileChampSelectView1
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
-    startLine: 383
+    startLine: 925
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -375,6 +408,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: OSL_Server.Pages.ConfigPage.WebRiotApiKeySubmit*
+  commentId: Overload:OSL_Server.Pages.ConfigPage.WebRiotApiKeySubmit
+  name: WebRiotApiKeySubmit
+  nameWithType: ConfigPage.WebRiotApiKeySubmit
+  fullName: OSL_Server.Pages.ConfigPage.WebRiotApiKeySubmit
 - uid: OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1*
   commentId: Overload:OSL_Server.Pages.ConfigPage.GenerateConfigFileChampSelectView1
   name: GenerateConfigFileChampSelectView1

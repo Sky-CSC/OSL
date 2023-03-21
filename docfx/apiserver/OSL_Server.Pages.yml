@@ -5,37 +5,13 @@ items:
   id: OSL_Server.Pages
   children:
   - OSL_Server.Pages.CDragonPage
-  - OSL_Server.Pages.ChampSelectPage
-  - OSL_Server.Pages.ChampSelectPage.TextValueOverlayView1
-  - OSL_Server.Pages.ChampSelectPage.TextValueOverlayView2
-  - OSL_Server.Pages.ChampSelectPage.TextValueOverlayView3
-  - OSL_Server.Pages.ChampSelectPage.TextValueOverlayView4
-  - OSL_Server.Pages.ChampSelectView1Page
-  - OSL_Server.Pages.ChampSelectView1Page.FormatingData
-  - OSL_Server.Pages.ChampSelectView2Page
-  - OSL_Server.Pages.ChampSelectView2Page.FormatingData
-  - OSL_Server.Pages.ChampSelectView3Page
-  - OSL_Server.Pages.ChampSelectView3Page.FormatingData
-  - OSL_Server.Pages.ChampSelectView4Page
-  - OSL_Server.Pages.ChampSelectView4Page.FormatingData
   - OSL_Server.Pages.ConfigPage
   - OSL_Server.Pages.ConfigPage.ConfigOverlayText
-  - OSL_Server.Pages.EndGamePage
+  - OSL_Server.Pages.EndGameTestPage
   - OSL_Server.Pages.ErrorModel
   - OSL_Server.Pages.Index
-  - OSL_Server.Pages.InGamePage
-  - OSL_Server.Pages.InGamePage.TextValueOverlayView1
-  - OSL_Server.Pages.InGamePage.TextValueOverlayView2
-  - OSL_Server.Pages.InGamePage.TextValueOverlayView3
-  - OSL_Server.Pages.InGameView1Page
-  - OSL_Server.Pages.InGameView1Page.FormatingData
-  - OSL_Server.Pages.InGameView2Page
-  - OSL_Server.Pages.InGameView2Page.FormatingData
-  - OSL_Server.Pages.InGameView3Page
-  - OSL_Server.Pages.InGameView3Page.FormatingData
   - OSL_Server.Pages.RecapLinkPage
   - OSL_Server.Pages.WaitingGamePage
-  - OSL_Server.Pages.WaitingGameStartPage
   langs:
   - csharp
   - vb
@@ -51,75 +27,6 @@ references:
   name: CDragonPage
   nameWithType: CDragonPage
   fullName: OSL_Server.Pages.CDragonPage
-- uid: OSL_Server.Pages.ChampSelectPage
-  commentId: T:OSL_Server.Pages.ChampSelectPage
-  name: ChampSelectPage
-  nameWithType: ChampSelectPage
-  fullName: OSL_Server.Pages.ChampSelectPage
-- uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView1
-  commentId: T:OSL_Server.Pages.ChampSelectPage.TextValueOverlayView1
-  name: ChampSelectPage.TextValueOverlayView1
-  nameWithType: ChampSelectPage.TextValueOverlayView1
-  fullName: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView1
-- uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView2
-  commentId: T:OSL_Server.Pages.ChampSelectPage.TextValueOverlayView2
-  name: ChampSelectPage.TextValueOverlayView2
-  nameWithType: ChampSelectPage.TextValueOverlayView2
-  fullName: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView2
-- uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView3
-  commentId: T:OSL_Server.Pages.ChampSelectPage.TextValueOverlayView3
-  name: ChampSelectPage.TextValueOverlayView3
-  nameWithType: ChampSelectPage.TextValueOverlayView3
-  fullName: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView3
-- uid: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView4
-  commentId: T:OSL_Server.Pages.ChampSelectPage.TextValueOverlayView4
-  name: ChampSelectPage.TextValueOverlayView4
-  nameWithType: ChampSelectPage.TextValueOverlayView4
-  fullName: OSL_Server.Pages.ChampSelectPage.TextValueOverlayView4
-- uid: OSL_Server.Pages.ChampSelectView1Page
-  commentId: T:OSL_Server.Pages.ChampSelectView1Page
-  name: ChampSelectView1Page
-  nameWithType: ChampSelectView1Page
-  fullName: OSL_Server.Pages.ChampSelectView1Page
-- uid: OSL_Server.Pages.ChampSelectView1Page.FormatingData
-  commentId: T:OSL_Server.Pages.ChampSelectView1Page.FormatingData
-  parent: OSL_Server.Pages
-  name: ChampSelectView1Page.FormatingData
-  nameWithType: ChampSelectView1Page.FormatingData
-  fullName: OSL_Server.Pages.ChampSelectView1Page.FormatingData
-- uid: OSL_Server.Pages.ChampSelectView2Page
-  commentId: T:OSL_Server.Pages.ChampSelectView2Page
-  name: ChampSelectView2Page
-  nameWithType: ChampSelectView2Page
-  fullName: OSL_Server.Pages.ChampSelectView2Page
-- uid: OSL_Server.Pages.ChampSelectView2Page.FormatingData
-  commentId: T:OSL_Server.Pages.ChampSelectView2Page.FormatingData
-  parent: OSL_Server.Pages
-  name: ChampSelectView2Page.FormatingData
-  nameWithType: ChampSelectView2Page.FormatingData
-  fullName: OSL_Server.Pages.ChampSelectView2Page.FormatingData
-- uid: OSL_Server.Pages.ChampSelectView3Page
-  commentId: T:OSL_Server.Pages.ChampSelectView3Page
-  name: ChampSelectView3Page
-  nameWithType: ChampSelectView3Page
-  fullName: OSL_Server.Pages.ChampSelectView3Page
-- uid: OSL_Server.Pages.ChampSelectView3Page.FormatingData
-  commentId: T:OSL_Server.Pages.ChampSelectView3Page.FormatingData
-  parent: OSL_Server.Pages
-  name: ChampSelectView3Page.FormatingData
-  nameWithType: ChampSelectView3Page.FormatingData
-  fullName: OSL_Server.Pages.ChampSelectView3Page.FormatingData
-- uid: OSL_Server.Pages.ChampSelectView4Page
-  commentId: T:OSL_Server.Pages.ChampSelectView4Page
-  name: ChampSelectView4Page
-  nameWithType: ChampSelectView4Page
-  fullName: OSL_Server.Pages.ChampSelectView4Page
-- uid: OSL_Server.Pages.ChampSelectView4Page.FormatingData
-  commentId: T:OSL_Server.Pages.ChampSelectView4Page.FormatingData
-  parent: OSL_Server.Pages
-  name: ChampSelectView4Page.FormatingData
-  nameWithType: ChampSelectView4Page.FormatingData
-  fullName: OSL_Server.Pages.ChampSelectView4Page.FormatingData
 - uid: OSL_Server.Pages.ConfigPage
   commentId: T:OSL_Server.Pages.ConfigPage
   name: ConfigPage
@@ -130,11 +37,11 @@ references:
   name: ConfigPage.ConfigOverlayText
   nameWithType: ConfigPage.ConfigOverlayText
   fullName: OSL_Server.Pages.ConfigPage.ConfigOverlayText
-- uid: OSL_Server.Pages.EndGamePage
-  commentId: T:OSL_Server.Pages.EndGamePage
-  name: EndGamePage
-  nameWithType: EndGamePage
-  fullName: OSL_Server.Pages.EndGamePage
+- uid: OSL_Server.Pages.EndGameTestPage
+  commentId: T:OSL_Server.Pages.EndGameTestPage
+  name: EndGameTestPage
+  nameWithType: EndGameTestPage
+  fullName: OSL_Server.Pages.EndGameTestPage
 - uid: OSL_Server.Pages.ErrorModel
   commentId: T:OSL_Server.Pages.ErrorModel
   name: ErrorModel
@@ -145,59 +52,6 @@ references:
   name: Index
   nameWithType: Index
   fullName: OSL_Server.Pages.Index
-- uid: OSL_Server.Pages.InGamePage
-  commentId: T:OSL_Server.Pages.InGamePage
-  name: InGamePage
-  nameWithType: InGamePage
-  fullName: OSL_Server.Pages.InGamePage
-- uid: OSL_Server.Pages.InGamePage.TextValueOverlayView1
-  commentId: T:OSL_Server.Pages.InGamePage.TextValueOverlayView1
-  name: InGamePage.TextValueOverlayView1
-  nameWithType: InGamePage.TextValueOverlayView1
-  fullName: OSL_Server.Pages.InGamePage.TextValueOverlayView1
-- uid: OSL_Server.Pages.InGamePage.TextValueOverlayView2
-  commentId: T:OSL_Server.Pages.InGamePage.TextValueOverlayView2
-  name: InGamePage.TextValueOverlayView2
-  nameWithType: InGamePage.TextValueOverlayView2
-  fullName: OSL_Server.Pages.InGamePage.TextValueOverlayView2
-- uid: OSL_Server.Pages.InGamePage.TextValueOverlayView3
-  commentId: T:OSL_Server.Pages.InGamePage.TextValueOverlayView3
-  name: InGamePage.TextValueOverlayView3
-  nameWithType: InGamePage.TextValueOverlayView3
-  fullName: OSL_Server.Pages.InGamePage.TextValueOverlayView3
-- uid: OSL_Server.Pages.InGameView1Page
-  commentId: T:OSL_Server.Pages.InGameView1Page
-  name: InGameView1Page
-  nameWithType: InGameView1Page
-  fullName: OSL_Server.Pages.InGameView1Page
-- uid: OSL_Server.Pages.InGameView1Page.FormatingData
-  commentId: T:OSL_Server.Pages.InGameView1Page.FormatingData
-  parent: OSL_Server.Pages
-  name: InGameView1Page.FormatingData
-  nameWithType: InGameView1Page.FormatingData
-  fullName: OSL_Server.Pages.InGameView1Page.FormatingData
-- uid: OSL_Server.Pages.InGameView2Page
-  commentId: T:OSL_Server.Pages.InGameView2Page
-  name: InGameView2Page
-  nameWithType: InGameView2Page
-  fullName: OSL_Server.Pages.InGameView2Page
-- uid: OSL_Server.Pages.InGameView2Page.FormatingData
-  commentId: T:OSL_Server.Pages.InGameView2Page.FormatingData
-  parent: OSL_Server.Pages
-  name: InGameView2Page.FormatingData
-  nameWithType: InGameView2Page.FormatingData
-  fullName: OSL_Server.Pages.InGameView2Page.FormatingData
-- uid: OSL_Server.Pages.InGameView3Page
-  commentId: T:OSL_Server.Pages.InGameView3Page
-  name: InGameView3Page
-  nameWithType: InGameView3Page
-  fullName: OSL_Server.Pages.InGameView3Page
-- uid: OSL_Server.Pages.InGameView3Page.FormatingData
-  commentId: T:OSL_Server.Pages.InGameView3Page.FormatingData
-  parent: OSL_Server.Pages
-  name: InGameView3Page.FormatingData
-  nameWithType: InGameView3Page.FormatingData
-  fullName: OSL_Server.Pages.InGameView3Page.FormatingData
 - uid: OSL_Server.Pages.RecapLinkPage
   commentId: T:OSL_Server.Pages.RecapLinkPage
   name: RecapLinkPage
@@ -208,13 +62,3 @@ references:
   name: WaitingGamePage
   nameWithType: WaitingGamePage
   fullName: OSL_Server.Pages.WaitingGamePage
-- uid: OSL_Server.Pages.WaitingGameStartPage
-  commentId: T:OSL_Server.Pages.WaitingGameStartPage
-  name: WaitingGameStartPage
-  nameWithType: WaitingGameStartPage
-  fullName: OSL_Server.Pages.WaitingGameStartPage
-- uid: OSL_Server.Pages
-  commentId: N:OSL_Server.Pages
-  name: OSL_Server.Pages
-  nameWithType: OSL_Server.Pages
-  fullName: OSL_Server.Pages

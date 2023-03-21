@@ -1,0 +1,1087 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  commentId: T:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  id: EndGameInfo.Stats
+  parent: OSL_Server.DataReciveClient.Processing.EndGame
+  children:
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.assist
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDeal
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToBuildings
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToChampions
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToObjectives
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToTurrets
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageSelftMitigated
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageTaken
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.deaths
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.farm
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.gold
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.heal
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.kill
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.level
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.magicDamageDealToChampion
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.physicalDamageDealToChampion
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.trueDamageDealToChampion
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.visionScore
+  langs:
+  - csharp
+  - vb
+  name: EndGameInfo.Stats
+  nameWithType: EndGameInfo.Stats
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Stats
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 223
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public class Stats
+    content.vb: Public Class Stats
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.kill
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.kill
+  id: kill
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: kill
+  nameWithType: EndGameInfo.Stats.kill
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.kill
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: kill
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 225
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int kill { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property kill As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.kill*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.deaths
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.deaths
+  id: deaths
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: deaths
+  nameWithType: EndGameInfo.Stats.deaths
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.deaths
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: deaths
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 226
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int deaths { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property deaths As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.deaths*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.assist
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.assist
+  id: assist
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: assist
+  nameWithType: EndGameInfo.Stats.assist
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.assist
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: assist
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 227
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int assist { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property assist As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.assist*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.gold
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.gold
+  id: gold
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: gold
+  nameWithType: EndGameInfo.Stats.gold
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.gold
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: gold
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 228
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int gold { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property gold As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.gold*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.level
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.level
+  id: level
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: level
+  nameWithType: EndGameInfo.Stats.level
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.level
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: level
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 229
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int level { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property level As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.level*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.farm
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.farm
+  id: farm
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: farm
+  nameWithType: EndGameInfo.Stats.farm
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.farm
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: farm
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 230
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int farm { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property farm As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.farm*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDeal
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDeal
+  id: damageDeal
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: damageDeal
+  nameWithType: EndGameInfo.Stats.damageDeal
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDeal
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: damageDeal
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 231
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int damageDeal { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property damageDeal As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDeal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToBuildings
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToBuildings
+  id: damageDealToBuildings
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: damageDealToBuildings
+  nameWithType: EndGameInfo.Stats.damageDealToBuildings
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToBuildings
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: damageDealToBuildings
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 232
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int damageDealToBuildings { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property damageDealToBuildings As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToBuildings*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToChampions
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToChampions
+  id: damageDealToChampions
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: damageDealToChampions
+  nameWithType: EndGameInfo.Stats.damageDealToChampions
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToChampions
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: damageDealToChampions
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 233
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int damageDealToChampions { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property damageDealToChampions As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToChampions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToObjectives
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToObjectives
+  id: damageDealToObjectives
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: damageDealToObjectives
+  nameWithType: EndGameInfo.Stats.damageDealToObjectives
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToObjectives
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: damageDealToObjectives
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 234
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int damageDealToObjectives { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property damageDealToObjectives As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToObjectives*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToTurrets
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToTurrets
+  id: damageDealToTurrets
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: damageDealToTurrets
+  nameWithType: EndGameInfo.Stats.damageDealToTurrets
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToTurrets
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: damageDealToTurrets
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 235
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int damageDealToTurrets { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property damageDealToTurrets As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToTurrets*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.trueDamageDealToChampion
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.trueDamageDealToChampion
+  id: trueDamageDealToChampion
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: trueDamageDealToChampion
+  nameWithType: EndGameInfo.Stats.trueDamageDealToChampion
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.trueDamageDealToChampion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: trueDamageDealToChampion
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 236
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int trueDamageDealToChampion { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property trueDamageDealToChampion As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.trueDamageDealToChampion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.physicalDamageDealToChampion
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.physicalDamageDealToChampion
+  id: physicalDamageDealToChampion
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: physicalDamageDealToChampion
+  nameWithType: EndGameInfo.Stats.physicalDamageDealToChampion
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.physicalDamageDealToChampion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: physicalDamageDealToChampion
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 237
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int physicalDamageDealToChampion { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property physicalDamageDealToChampion As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.physicalDamageDealToChampion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.magicDamageDealToChampion
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.magicDamageDealToChampion
+  id: magicDamageDealToChampion
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: magicDamageDealToChampion
+  nameWithType: EndGameInfo.Stats.magicDamageDealToChampion
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.magicDamageDealToChampion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: magicDamageDealToChampion
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 238
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int magicDamageDealToChampion { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property magicDamageDealToChampion As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.magicDamageDealToChampion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageSelftMitigated
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageSelftMitigated
+  id: damageSelftMitigated
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: damageSelftMitigated
+  nameWithType: EndGameInfo.Stats.damageSelftMitigated
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageSelftMitigated
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: damageSelftMitigated
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 239
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int damageSelftMitigated { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property damageSelftMitigated As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageSelftMitigated*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.heal
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.heal
+  id: heal
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: heal
+  nameWithType: EndGameInfo.Stats.heal
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.heal
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: heal
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 240
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int heal { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property heal As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.heal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageTaken
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageTaken
+  id: damageTaken
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: damageTaken
+  nameWithType: EndGameInfo.Stats.damageTaken
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageTaken
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: damageTaken
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 241
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int damageTaken { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property damageTaken As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageTaken*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.visionScore
+  commentId: P:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.visionScore
+  id: visionScore
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats
+  langs:
+  - csharp
+  - vb
+  name: visionScore
+  nameWithType: EndGameInfo.Stats.visionScore
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.visionScore
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: visionScore
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 242
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public int visionScore { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property visionScore As Integer
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.visionScore*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Server.DataReciveClient.Processing.EndGame
+  commentId: N:OSL_Server.DataReciveClient.Processing.EndGame
+  name: OSL_Server.DataReciveClient.Processing.EndGame
+  nameWithType: OSL_Server.DataReciveClient.Processing.EndGame
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.kill*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.kill
+  name: kill
+  nameWithType: EndGameInfo.Stats.kill
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.kill
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.deaths*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.deaths
+  name: deaths
+  nameWithType: EndGameInfo.Stats.deaths
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.deaths
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.assist*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.assist
+  name: assist
+  nameWithType: EndGameInfo.Stats.assist
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.assist
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.gold*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.gold
+  name: gold
+  nameWithType: EndGameInfo.Stats.gold
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.gold
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.level*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.level
+  name: level
+  nameWithType: EndGameInfo.Stats.level
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.level
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.farm*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.farm
+  name: farm
+  nameWithType: EndGameInfo.Stats.farm
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.farm
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDeal*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDeal
+  name: damageDeal
+  nameWithType: EndGameInfo.Stats.damageDeal
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDeal
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToBuildings*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToBuildings
+  name: damageDealToBuildings
+  nameWithType: EndGameInfo.Stats.damageDealToBuildings
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToBuildings
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToChampions*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToChampions
+  name: damageDealToChampions
+  nameWithType: EndGameInfo.Stats.damageDealToChampions
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToChampions
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToObjectives*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToObjectives
+  name: damageDealToObjectives
+  nameWithType: EndGameInfo.Stats.damageDealToObjectives
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToObjectives
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToTurrets*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToTurrets
+  name: damageDealToTurrets
+  nameWithType: EndGameInfo.Stats.damageDealToTurrets
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageDealToTurrets
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.trueDamageDealToChampion*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.trueDamageDealToChampion
+  name: trueDamageDealToChampion
+  nameWithType: EndGameInfo.Stats.trueDamageDealToChampion
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.trueDamageDealToChampion
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.physicalDamageDealToChampion*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.physicalDamageDealToChampion
+  name: physicalDamageDealToChampion
+  nameWithType: EndGameInfo.Stats.physicalDamageDealToChampion
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.physicalDamageDealToChampion
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.magicDamageDealToChampion*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.magicDamageDealToChampion
+  name: magicDamageDealToChampion
+  nameWithType: EndGameInfo.Stats.magicDamageDealToChampion
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.magicDamageDealToChampion
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageSelftMitigated*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageSelftMitigated
+  name: damageSelftMitigated
+  nameWithType: EndGameInfo.Stats.damageSelftMitigated
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageSelftMitigated
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.heal*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.heal
+  name: heal
+  nameWithType: EndGameInfo.Stats.heal
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.heal
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageTaken*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageTaken
+  name: damageTaken
+  nameWithType: EndGameInfo.Stats.damageTaken
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.damageTaken
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.visionScore*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.visionScore
+  name: visionScore
+  nameWithType: EndGameInfo.Stats.visionScore
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.Stats.visionScore

@@ -1,0 +1,530 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage
+  commentId: T:OSL_Server.Pages.Runes.RunesAdcSuppPage
+  id: RunesAdcSuppPage
+  parent: OSL_Server.Pages.Runes
+  children:
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.formatingData
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.GetChampionPicturePath(System.Int32)
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.GetPerksIconPath(System.Int32)
+  - OSL_Server.Pages.Runes.RunesAdcSuppPage.ResetColor
+  langs:
+  - csharp
+  - vb
+  name: RunesAdcSuppPage
+  nameWithType: RunesAdcSuppPage
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RunesAdcSuppPage
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 7
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public class RunesAdcSuppPage
+    content.vb: Public Class RunesAdcSuppPage
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.formatingData
+  commentId: F:OSL_Server.Pages.Runes.RunesAdcSuppPage.formatingData
+  id: formatingData
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage
+  langs:
+  - csharp
+  - vb
+  name: formatingData
+  nameWithType: RunesAdcSuppPage.formatingData
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.formatingData
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: formatingData
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 12
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static RunesAdcSuppPage.FormatingData formatingData
+    return:
+      type: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+    content.vb: Public Shared formatingData As RunesAdcSuppPage.FormatingData
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetPerksIconPath(System.Int32)
+  commentId: M:OSL_Server.Pages.Runes.RunesAdcSuppPage.GetPerksIconPath(System.Int32)
+  id: GetPerksIconPath(System.Int32)
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage
+  langs:
+  - csharp
+  - vb
+  name: GetPerksIconPath(Int32)
+  nameWithType: RunesAdcSuppPage.GetPerksIconPath(Int32)
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetPerksIconPath(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetPerksIconPath
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 36
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  summary: "\nReturn path of perks icon\n"
+  example: []
+  syntax:
+    content: public static string GetPerksIconPath(int perksId)
+    parameters:
+    - id: perksId
+      type: System.Int32
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetPerksIconPath(perksId As Integer) As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetPerksIconPath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetChampionPicturePath(System.Int32)
+  commentId: M:OSL_Server.Pages.Runes.RunesAdcSuppPage.GetChampionPicturePath(System.Int32)
+  id: GetChampionPicturePath(System.Int32)
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage
+  langs:
+  - csharp
+  - vb
+  name: GetChampionPicturePath(Int32)
+  nameWithType: RunesAdcSuppPage.GetChampionPicturePath(Int32)
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetChampionPicturePath(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetChampionPicturePath
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 49
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  summary: "\nReturn champion picture path\n"
+  example: []
+  syntax:
+    content: public static string GetChampionPicturePath(int champId)
+    parameters:
+    - id: champId
+      type: System.Int32
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetChampionPicturePath(champId As Integer) As String
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetChampionPicturePath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.ResetColor
+  commentId: M:OSL_Server.Pages.Runes.RunesAdcSuppPage.ResetColor
+  id: ResetColor
+  parent: OSL_Server.Pages.Runes.RunesAdcSuppPage
+  langs:
+  - csharp
+  - vb
+  name: ResetColor()
+  nameWithType: RunesAdcSuppPage.ResetColor()
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.ResetColor()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ResetColor
+    path: ../OSL-Server/Pages/Runes/RunesAdcSuppPage.razor.cs
+    startLine: 57
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  summary: "\nLoad default datat champ select\n"
+  example: []
+  syntax:
+    content: public static void ResetColor()
+    content.vb: Public Shared Sub ResetColor
+  overload: OSL_Server.Pages.Runes.RunesAdcSuppPage.ResetColor*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Pages.Runes
+  commentId: N:OSL_Server.Pages.Runes
+  name: OSL_Server.Pages.Runes
+  nameWithType: OSL_Server.Pages.Runes
+  fullName: OSL_Server.Pages.Runes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  commentId: T:OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+  parent: OSL_Server.Pages.Runes
+  name: RunesAdcSuppPage.FormatingData
+  nameWithType: RunesAdcSuppPage.FormatingData
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.FormatingData
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetPerksIconPath*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.GetPerksIconPath
+  name: GetPerksIconPath
+  nameWithType: RunesAdcSuppPage.GetPerksIconPath
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetPerksIconPath
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetChampionPicturePath*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.GetChampionPicturePath
+  name: GetChampionPicturePath
+  nameWithType: RunesAdcSuppPage.GetChampionPicturePath
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.GetChampionPicturePath
+- uid: OSL_Server.Pages.Runes.RunesAdcSuppPage.ResetColor*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesAdcSuppPage.ResetColor
+  name: ResetColor
+  nameWithType: RunesAdcSuppPage.ResetColor
+  fullName: OSL_Server.Pages.Runes.RunesAdcSuppPage.ResetColor

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT
+  id: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT
+  children:
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT.ChampionLevel
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT.ChampionLevel
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT.ChampionLevel
+  name: ChampionLevel
+  nameWithType: ChampionLevel
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT.ChampionLevel

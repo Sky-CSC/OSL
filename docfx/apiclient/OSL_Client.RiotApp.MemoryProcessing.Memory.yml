@@ -34,7 +34,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Memory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -75,7 +75,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_Process
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -108,7 +108,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_pProcessHandle
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -141,7 +141,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_iNumberOfBytesRead
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -174,7 +174,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_iNumberOfBytesWritten
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -207,7 +207,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: m_baseAddress
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 20
+    startLine: 24
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -240,7 +240,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsConnected
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -277,7 +277,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Initialize
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -314,7 +314,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetModuleAddress
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 38
+    startLine: 41
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -351,7 +351,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 56
+    startLine: 59
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -395,7 +395,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 65
+    startLine: 68
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -434,7 +434,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadMatrix
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 74
+    startLine: 77
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -480,7 +480,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: WriteMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 83
+    startLine: 86
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -522,7 +522,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: WriteMemory
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 90
+    startLine: 93
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -564,7 +564,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertToFloatArray
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 98
+    startLine: 101
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -604,7 +604,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetChampionObjectSize
     path: ../OSL-Client/RiotApp/MemoryProcessing/Memory.cs
-    startLine: 139
+    startLine: 142
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing

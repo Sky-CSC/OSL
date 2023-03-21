@@ -1,0 +1,1588 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  commentId: T:OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  id: InGameView1Page.FormatingData
+  parent: OSL_Server.Pages.InGame
+  children:
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BluePlayerFrame
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamScoreText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamScoreText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamScoreText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultPatch
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultRegion
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBluePlayerFrame
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeam
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamScore
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayDragonTimer
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayHeraldBaronTimer
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayLeftInfo
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedPlayerFrame
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeam
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamScore
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRightInfo
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DragonTimerFrame
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.HeraldBaronTimerFrame
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.LeftInfoFrame
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedPlayerFrame
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamScoreText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamText
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RightInfoFrame
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamBanner
+  - OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamScoreBanner
+  langs:
+  - csharp
+  - vb
+  name: InGameView1Page.FormatingData
+  nameWithType: InGameView1Page.FormatingData
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: FormatingData
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 13
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  summary: "\nFormating Data\n"
+  example: []
+  syntax:
+    content: public class FormatingData
+    content.vb: Public Class FormatingData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultPatch
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultPatch
+  id: DefaultPatch
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultPatch
+  nameWithType: InGameView1Page.FormatingData.DefaultPatch
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultPatch
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultPatch
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string DefaultPatch { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultPatch As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultPatch*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultRegion
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultRegion
+  id: DefaultRegion
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultRegion
+  nameWithType: InGameView1Page.FormatingData.DefaultRegion
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultRegion
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultRegion
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 16
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string DefaultRegion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultRegion As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultRegion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BluePlayerFrame
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BluePlayerFrame
+  id: BluePlayerFrame
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BluePlayerFrame
+  nameWithType: InGameView1Page.FormatingData.BluePlayerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BluePlayerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BluePlayerFrame
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 17
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string BluePlayerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BluePlayerFrame As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BluePlayerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBluePlayerFrame
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBluePlayerFrame
+  id: DisplayBluePlayerFrame
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayBluePlayerFrame
+  nameWithType: InGameView1Page.FormatingData.DisplayBluePlayerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBluePlayerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayBluePlayerFrame
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 18
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayBluePlayerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayBluePlayerFrame As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBluePlayerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedPlayerFrame
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedPlayerFrame
+  id: RedPlayerFrame
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedPlayerFrame
+  nameWithType: InGameView1Page.FormatingData.RedPlayerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedPlayerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedPlayerFrame
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 19
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string RedPlayerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedPlayerFrame As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedPlayerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedPlayerFrame
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedPlayerFrame
+  id: DisplayRedPlayerFrame
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayRedPlayerFrame
+  nameWithType: InGameView1Page.FormatingData.DisplayRedPlayerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedPlayerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayRedPlayerFrame
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 20
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayRedPlayerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayRedPlayerFrame As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedPlayerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DragonTimerFrame
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DragonTimerFrame
+  id: DragonTimerFrame
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DragonTimerFrame
+  nameWithType: InGameView1Page.FormatingData.DragonTimerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DragonTimerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DragonTimerFrame
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 21
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string DragonTimerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DragonTimerFrame As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DragonTimerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayDragonTimer
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayDragonTimer
+  id: DisplayDragonTimer
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayDragonTimer
+  nameWithType: InGameView1Page.FormatingData.DisplayDragonTimer
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayDragonTimer
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayDragonTimer
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 22
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayDragonTimer { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayDragonTimer As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayDragonTimer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.HeraldBaronTimerFrame
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.HeraldBaronTimerFrame
+  id: HeraldBaronTimerFrame
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: HeraldBaronTimerFrame
+  nameWithType: InGameView1Page.FormatingData.HeraldBaronTimerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.HeraldBaronTimerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: HeraldBaronTimerFrame
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 23
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string HeraldBaronTimerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HeraldBaronTimerFrame As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.HeraldBaronTimerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayHeraldBaronTimer
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayHeraldBaronTimer
+  id: DisplayHeraldBaronTimer
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayHeraldBaronTimer
+  nameWithType: InGameView1Page.FormatingData.DisplayHeraldBaronTimer
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayHeraldBaronTimer
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayHeraldBaronTimer
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 24
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayHeraldBaronTimer { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayHeraldBaronTimer As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayHeraldBaronTimer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.LeftInfoFrame
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.LeftInfoFrame
+  id: LeftInfoFrame
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: LeftInfoFrame
+  nameWithType: InGameView1Page.FormatingData.LeftInfoFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.LeftInfoFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LeftInfoFrame
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 25
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string LeftInfoFrame { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LeftInfoFrame As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.LeftInfoFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayLeftInfo
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayLeftInfo
+  id: DisplayLeftInfo
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayLeftInfo
+  nameWithType: InGameView1Page.FormatingData.DisplayLeftInfo
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayLeftInfo
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayLeftInfo
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 26
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayLeftInfo { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayLeftInfo As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayLeftInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RightInfoFrame
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RightInfoFrame
+  id: RightInfoFrame
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RightInfoFrame
+  nameWithType: InGameView1Page.FormatingData.RightInfoFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RightInfoFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RightInfoFrame
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 27
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string RightInfoFrame { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RightInfoFrame As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RightInfoFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRightInfo
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRightInfo
+  id: DisplayRightInfo
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayRightInfo
+  nameWithType: InGameView1Page.FormatingData.DisplayRightInfo
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRightInfo
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayRightInfo
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 28
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayRightInfo { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayRightInfo As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRightInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamBanner
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamBanner
+  id: TeamBanner
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TeamBanner
+  nameWithType: InGameView1Page.FormatingData.TeamBanner
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamBanner
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TeamBanner
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 29
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string TeamBanner { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamBanner As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamBanner*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamScoreBanner
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamScoreBanner
+  id: TeamScoreBanner
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TeamScoreBanner
+  nameWithType: InGameView1Page.FormatingData.TeamScoreBanner
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamScoreBanner
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TeamScoreBanner
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 30
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string TeamScoreBanner { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamScoreBanner As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamScoreBanner*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamText
+  id: BlueTeamText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamText
+  nameWithType: InGameView1Page.FormatingData.BlueTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 31
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string BlueTeamText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueTeamText As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamScoreText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamScoreText
+  id: BlueTeamScoreText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamScoreText
+  nameWithType: InGameView1Page.FormatingData.BlueTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamScoreText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamScoreText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 32
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string BlueTeamScoreText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueTeamScoreText As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamScoreText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamText
+  id: RedTeamText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedTeamText
+  nameWithType: InGameView1Page.FormatingData.RedTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedTeamText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 33
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string RedTeamText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedTeamText As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamScoreText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamScoreText
+  id: RedTeamScoreText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedTeamScoreText
+  nameWithType: InGameView1Page.FormatingData.RedTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamScoreText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedTeamScoreText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 34
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string RedTeamScoreText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedTeamScoreText As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamScoreText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeam
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeam
+  id: DisplayBlueTeam
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayBlueTeam
+  nameWithType: InGameView1Page.FormatingData.DisplayBlueTeam
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeam
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayBlueTeam
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 35
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayBlueTeam { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayBlueTeam As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamScore
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamScore
+  id: DisplayBlueTeamScore
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayBlueTeamScore
+  nameWithType: InGameView1Page.FormatingData.DisplayBlueTeamScore
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamScore
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayBlueTeamScore
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 36
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayBlueTeamScore { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayBlueTeamScore As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamScore*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamText
+  id: DisplayBlueTeamText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayBlueTeamText
+  nameWithType: InGameView1Page.FormatingData.DisplayBlueTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayBlueTeamText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 37
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayBlueTeamText { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayBlueTeamText As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeam
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeam
+  id: DisplayRedTeam
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayRedTeam
+  nameWithType: InGameView1Page.FormatingData.DisplayRedTeam
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeam
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayRedTeam
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 38
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayRedTeam { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayRedTeam As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamScore
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamScore
+  id: DisplayRedTeamScore
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayRedTeamScore
+  nameWithType: InGameView1Page.FormatingData.DisplayRedTeamScore
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamScore
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayRedTeamScore
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 39
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayRedTeamScore { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayRedTeamScore As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamScore*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamText
+  id: DisplayRedTeamText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayRedTeamText
+  nameWithType: InGameView1Page.FormatingData.DisplayRedTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayRedTeamText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 40
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayRedTeamText { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayRedTeamText As Boolean
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamScoreText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamScoreText
+  id: ColorBlueTeamScoreText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ColorBlueTeamScoreText
+  nameWithType: InGameView1Page.FormatingData.ColorBlueTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamScoreText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorBlueTeamScoreText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 41
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string ColorBlueTeamScoreText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorBlueTeamScoreText As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamScoreText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamText
+  id: ColorBlueTeamText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ColorBlueTeamText
+  nameWithType: InGameView1Page.FormatingData.ColorBlueTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorBlueTeamText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 42
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string ColorBlueTeamText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorBlueTeamText As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamScoreText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamScoreText
+  id: ColorRedTeamScoreText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ColorRedTeamScoreText
+  nameWithType: InGameView1Page.FormatingData.ColorRedTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamScoreText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedTeamScoreText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 43
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string ColorRedTeamScoreText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedTeamScoreText As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamScoreText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamText
+  commentId: P:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamText
+  id: ColorRedTeamText
+  parent: OSL_Server.Pages.InGame.InGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ColorRedTeamText
+  nameWithType: InGameView1Page.FormatingData.ColorRedTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorRedTeamText
+    path: ../OSL-Server/Pages/InGame/InGameView1Page.razor.cs
+    startLine: 44
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public string ColorRedTeamText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorRedTeamText As String
+  overload: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Server.Pages.InGame
+  commentId: N:OSL_Server.Pages.InGame
+  name: OSL_Server.Pages.InGame
+  nameWithType: OSL_Server.Pages.InGame
+  fullName: OSL_Server.Pages.InGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultPatch*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultPatch
+  name: DefaultPatch
+  nameWithType: InGameView1Page.FormatingData.DefaultPatch
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultPatch
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultRegion*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultRegion
+  name: DefaultRegion
+  nameWithType: InGameView1Page.FormatingData.DefaultRegion
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DefaultRegion
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BluePlayerFrame*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BluePlayerFrame
+  name: BluePlayerFrame
+  nameWithType: InGameView1Page.FormatingData.BluePlayerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BluePlayerFrame
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBluePlayerFrame*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBluePlayerFrame
+  name: DisplayBluePlayerFrame
+  nameWithType: InGameView1Page.FormatingData.DisplayBluePlayerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBluePlayerFrame
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedPlayerFrame*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedPlayerFrame
+  name: RedPlayerFrame
+  nameWithType: InGameView1Page.FormatingData.RedPlayerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedPlayerFrame
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedPlayerFrame*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedPlayerFrame
+  name: DisplayRedPlayerFrame
+  nameWithType: InGameView1Page.FormatingData.DisplayRedPlayerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedPlayerFrame
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DragonTimerFrame*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DragonTimerFrame
+  name: DragonTimerFrame
+  nameWithType: InGameView1Page.FormatingData.DragonTimerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DragonTimerFrame
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayDragonTimer*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayDragonTimer
+  name: DisplayDragonTimer
+  nameWithType: InGameView1Page.FormatingData.DisplayDragonTimer
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayDragonTimer
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.HeraldBaronTimerFrame*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.HeraldBaronTimerFrame
+  name: HeraldBaronTimerFrame
+  nameWithType: InGameView1Page.FormatingData.HeraldBaronTimerFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.HeraldBaronTimerFrame
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayHeraldBaronTimer*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayHeraldBaronTimer
+  name: DisplayHeraldBaronTimer
+  nameWithType: InGameView1Page.FormatingData.DisplayHeraldBaronTimer
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayHeraldBaronTimer
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.LeftInfoFrame*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.LeftInfoFrame
+  name: LeftInfoFrame
+  nameWithType: InGameView1Page.FormatingData.LeftInfoFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.LeftInfoFrame
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayLeftInfo*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayLeftInfo
+  name: DisplayLeftInfo
+  nameWithType: InGameView1Page.FormatingData.DisplayLeftInfo
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayLeftInfo
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RightInfoFrame*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RightInfoFrame
+  name: RightInfoFrame
+  nameWithType: InGameView1Page.FormatingData.RightInfoFrame
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RightInfoFrame
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRightInfo*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRightInfo
+  name: DisplayRightInfo
+  nameWithType: InGameView1Page.FormatingData.DisplayRightInfo
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRightInfo
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamBanner*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamBanner
+  name: TeamBanner
+  nameWithType: InGameView1Page.FormatingData.TeamBanner
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamBanner
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamScoreBanner*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamScoreBanner
+  name: TeamScoreBanner
+  nameWithType: InGameView1Page.FormatingData.TeamScoreBanner
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.TeamScoreBanner
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamText
+  name: BlueTeamText
+  nameWithType: InGameView1Page.FormatingData.BlueTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamText
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamScoreText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamScoreText
+  name: BlueTeamScoreText
+  nameWithType: InGameView1Page.FormatingData.BlueTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.BlueTeamScoreText
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamText
+  name: RedTeamText
+  nameWithType: InGameView1Page.FormatingData.RedTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamText
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamScoreText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamScoreText
+  name: RedTeamScoreText
+  nameWithType: InGameView1Page.FormatingData.RedTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.RedTeamScoreText
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeam*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeam
+  name: DisplayBlueTeam
+  nameWithType: InGameView1Page.FormatingData.DisplayBlueTeam
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeam
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamScore*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamScore
+  name: DisplayBlueTeamScore
+  nameWithType: InGameView1Page.FormatingData.DisplayBlueTeamScore
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamScore
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamText
+  name: DisplayBlueTeamText
+  nameWithType: InGameView1Page.FormatingData.DisplayBlueTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayBlueTeamText
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeam*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeam
+  name: DisplayRedTeam
+  nameWithType: InGameView1Page.FormatingData.DisplayRedTeam
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeam
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamScore*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamScore
+  name: DisplayRedTeamScore
+  nameWithType: InGameView1Page.FormatingData.DisplayRedTeamScore
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamScore
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamText
+  name: DisplayRedTeamText
+  nameWithType: InGameView1Page.FormatingData.DisplayRedTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.DisplayRedTeamText
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamScoreText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamScoreText
+  name: ColorBlueTeamScoreText
+  nameWithType: InGameView1Page.FormatingData.ColorBlueTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamScoreText
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamText
+  name: ColorBlueTeamText
+  nameWithType: InGameView1Page.FormatingData.ColorBlueTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorBlueTeamText
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamScoreText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamScoreText
+  name: ColorRedTeamScoreText
+  nameWithType: InGameView1Page.FormatingData.ColorRedTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamScoreText
+- uid: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamText
+  name: ColorRedTeamText
+  nameWithType: InGameView1Page.FormatingData.ColorRedTeamText
+  fullName: OSL_Server.Pages.InGame.InGameView1Page.FormatingData.ColorRedTeamText

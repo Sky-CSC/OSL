@@ -9,7 +9,7 @@
 
 ---
 
-Download last release : [Release v0.3.0-alpha](https://github.com/Sky-CSC/OSL/releases/tag/v0.3.0-alpha)
+Download last release : [Release v1.0.0](https://github.com/Sky-CSC/OSL/releases/tag/v1.3.0)
 
 Not forget run ```OSL-Server.exe```, before run ```OSL-Client.exe```
 
@@ -89,6 +89,26 @@ In Game :
 http://ip:4141/ingame/view1
 http://ip:4141/ingame/view2
 http://ip:4141/ingame/view3
+```
+
+End Game :
+
+```sh
+http://ip:4141/endgame/view1
+http://ip:4141/endgame/view2
+http://ip:4141/endgame/view3
+```
+
+Runes :
+
+```sh
+http://ip:4141/runes/top
+http://ip:4141/runes/mid
+http://ip:4141/runes/jungle
+http://ip:4141/runes/adc
+http://ip:4141/runes/supp
+http://ip:4141/runes/adcsupp
+http://ip:4141/runes/all
 ```
 
 <!-- <li> In Game :
@@ -247,20 +267,46 @@ Exter of game :
 <br>
 
 ### <ins>Information display with overlay in **End Game**
-<br><input type="checkbox" disabled>Timer game
-<br><input type="checkbox" disabled>Teams name
+<br><input type="checkbox" disabled checked>Timer game
+<br><input type="checkbox" disabled checked>Teams name
 <br><input type="checkbox" disabled>Logo teams
-<br><input type="checkbox" disabled>Champ dega
-<br><input type="checkbox" disabled>KDA
-<br><input type="checkbox" disabled>Total golds
-<br><input type="checkbox" disabled>Tower
-<br><input type="checkbox" disabled>Drake
-<br><input type="checkbox" disabled>Elder dragon
-<br><input type="checkbox" disabled>Herald
-<br><input type="checkbox" disabled>Baron
-<br><input type="checkbox" disabled>Ban
-<br><input type="checkbox" disabled>Gold difference over time
+<br><input type="checkbox" disabled checked>Champ dega
+<br><input type="checkbox" disabled checked>KDA
+<br><input type="checkbox" disabled checked>Total golds
+<br><input type="checkbox" disabled checked>Tower
+<br><input type="checkbox" disabled checked>Drake
+<br><input type="checkbox" disabled checked>Elder dragon
+<br><input type="checkbox" disabled checked>Herald
+<br><input type="checkbox" disabled checked>Baron
+<br><input type="checkbox" disabled checked>Ban
+<br><input type="checkbox" disabled checked>Gold difference over time
+
+**View 1 :**
+
+<img src="../picture/EndGameView1.png" width=50%>
+
+**View 2 :**
+
+<img src="../picture/EndGameView2.png" width=50%>
+
+**View 3 :**
+
+<img src="../picture/EndGameView3.png" width=50%>
+
+<br>
+
+### <ins>Information display with overlay **Runes**
+<br><input type="checkbox" disabled checked>Summoner name
+<br><input type="checkbox" disabled checked>Runes
+<br><input type="checkbox" disabled checked>Top rune
+<br><input type="checkbox" disabled checked>Jungle rune
+<br><input type="checkbox" disabled checked>Mid rune
+<br><input type="checkbox" disabled checked>Adc rune
+<br><input type="checkbox" disabled checked>Support rune
+<br><input type="checkbox" disabled checked>Adc and supp rune
+<br><input type="checkbox" disabled checked>All lane rune
+
 
 <!-- Video example End Game
-
 [![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
+

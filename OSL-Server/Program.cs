@@ -1,5 +1,4 @@
 using OSL_Server.Configuration;
-using OSL_Server.Data;
 using MudBlazor.Services;
 using OSL_Server.Communication;
 using OSL_Server.Pages;
@@ -9,13 +8,14 @@ using System;
 using System.Diagnostics;
 using System.Net.Sockets;
 using System.Net;
+using OSL_Server.DataLoader.WebApiRiot;
+using OSL_Server.Pages.Runes;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 
 builder.Services.AddMudServices();
 
@@ -46,7 +46,7 @@ Console.WriteLine("###### Just let this run, do nothing ######");
 Console.WriteLine("###########################################\n");
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("###########################");
-Console.WriteLine("##### Version 0.3.0 #####");
+Console.WriteLine("###### Version 1.0.0 ######");
 Console.WriteLine("###########################\n");
 Console.ResetColor();
 

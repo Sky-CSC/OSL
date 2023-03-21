@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace OSL_Client
 {
+    /// <summary>
+    /// 
+    /// </summary>
     internal class CloseEvent
     {
         [DllImport("Kernel32")]

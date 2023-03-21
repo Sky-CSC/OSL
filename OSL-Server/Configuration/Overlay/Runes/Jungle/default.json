@@ -1,0 +1,14 @@
+{
+  "DefaultPatch": "latest",
+  "DefaultRegion": "fr_fr",
+  "BackgroudGradient": "linear-gradient(150deg, #0b849e 0%, #be1e37 100%)",
+  "OverlayColorBackgroudGradient": "linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% )",
+  "BlueSideColorTextSummoner": "#0b849e",
+  "RedSideColorTextSummoner": "#be1e37",
+  "BlueSideColorBorderChampion": "2px solid #c99d53",
+  "RedSideColorBorderChampion": "2px solid #c99d53",
+  "BlueSideColorSeparationBar": "#c99d53",
+  "RedSideColorSeparationBar": "#c99d53",
+  "BakgroundPicture": "./assets/runes/background-2-2.png",
+  "LanePicture": "./assets/runes/position_jungle.png"
+}

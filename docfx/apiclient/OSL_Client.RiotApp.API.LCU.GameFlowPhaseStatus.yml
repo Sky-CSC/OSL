@@ -22,7 +22,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameFlowPhaseStatus
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 116
+    startLine: 117
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Phase
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 119
+    startLine: 120
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Status
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 120
+    startLine: 121
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU
@@ -135,7 +135,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Date
     path: ../OSL-Client/RiotApp/API/LCU/LcuApi.cs
-    startLine: 121
+    startLine: 122
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.API.LCU

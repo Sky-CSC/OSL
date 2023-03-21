@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  id: Champion
+  parent: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  children:
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.id
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.key
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.loadingImg
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.name
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.splashCenteredImg
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.splashImg
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.squareImg
+  langs:
+  - csharp
+  - vb
+  name: Champion
+  nameWithType: Champion
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  type: Class
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Champion
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+    startLine: 8
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  syntax:
+    content: public class Champion
+    content.vb: Public Class Champion
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.id
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.id
+  id: id
+  parent: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: Champion.id
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.id
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: id
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+    startLine: 10
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  syntax:
+    content: public string id
+    return:
+      type: System.String
+    content.vb: Public id As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.key
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.key
+  id: key
+  parent: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  langs:
+  - csharp
+  - vb
+  name: key
+  nameWithType: Champion.key
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.key
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: key
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+    startLine: 11
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  syntax:
+    content: public int key
+    return:
+      type: System.Int32
+    content.vb: Public key As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.name
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.name
+  id: name
+  parent: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: Champion.name
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.name
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: name
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+    startLine: 12
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  syntax:
+    content: public string name
+    return:
+      type: System.String
+    content.vb: Public name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.splashImg
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.splashImg
+  id: splashImg
+  parent: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  langs:
+  - csharp
+  - vb
+  name: splashImg
+  nameWithType: Champion.splashImg
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.splashImg
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: splashImg
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+    startLine: 13
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  syntax:
+    content: public string splashImg
+    return:
+      type: System.String
+    content.vb: Public splashImg As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.splashCenteredImg
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.splashCenteredImg
+  id: splashCenteredImg
+  parent: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  langs:
+  - csharp
+  - vb
+  name: splashCenteredImg
+  nameWithType: Champion.splashCenteredImg
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.splashCenteredImg
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: splashCenteredImg
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+    startLine: 14
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  syntax:
+    content: public string splashCenteredImg
+    return:
+      type: System.String
+    content.vb: Public splashCenteredImg As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.loadingImg
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.loadingImg
+  id: loadingImg
+  parent: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  langs:
+  - csharp
+  - vb
+  name: loadingImg
+  nameWithType: Champion.loadingImg
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.loadingImg
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: loadingImg
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+    startLine: 15
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  syntax:
+    content: public string loadingImg
+    return:
+      type: System.String
+    content.vb: Public loadingImg As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.squareImg
+  commentId: F:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.squareImg
+  id: squareImg
+  parent: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+  langs:
+  - csharp
+  - vb
+  name: squareImg
+  nameWithType: Champion.squareImg
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion.squareImg
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: squareImg
+    path: ../OSL-Client/RiotApp/MemoryProcessing/Common/Data/DTO/Champion.cs
+    startLine: 16
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  syntax:
+    content: public string squareImg
+    return:
+      type: System.String
+    content.vb: Public squareImg As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  name: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

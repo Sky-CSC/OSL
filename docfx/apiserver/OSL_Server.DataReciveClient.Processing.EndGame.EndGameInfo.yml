@@ -1,0 +1,532 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  commentId: T:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  id: EndGameInfo
+  parent: OSL_Server.DataReciveClient.Processing.EndGame
+  children:
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.EndGame(System.String)
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.infoEndGame
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentEndOfMatch
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentMatch
+  - OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentTimeline
+  langs:
+  - csharp
+  - vb
+  name: EndGameInfo
+  nameWithType: EndGameInfo
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EndGameInfo
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 11
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public class EndGameInfo
+    content.vb: Public Class EndGameInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.infoEndGame
+  commentId: F:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.infoEndGame
+  id: infoEndGame
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  langs:
+  - csharp
+  - vb
+  name: infoEndGame
+  nameWithType: EndGameInfo.infoEndGame
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.infoEndGame
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: infoEndGame
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 14
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public static EndGameInfo.InfoEndGame infoEndGame
+    return:
+      type: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.InfoEndGame
+    content.vb: Public Shared infoEndGame As EndGameInfo.InfoEndGame
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentEndOfMatch
+  commentId: F:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentEndOfMatch
+  id: jsonContentEndOfMatch
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  langs:
+  - csharp
+  - vb
+  name: jsonContentEndOfMatch
+  nameWithType: EndGameInfo.jsonContentEndOfMatch
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentEndOfMatch
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: jsonContentEndOfMatch
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public static dynamic jsonContentEndOfMatch
+    return:
+      type: System.Object
+    content.vb: Public Shared jsonContentEndOfMatch As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentMatch
+  commentId: F:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentMatch
+  id: jsonContentMatch
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  langs:
+  - csharp
+  - vb
+  name: jsonContentMatch
+  nameWithType: EndGameInfo.jsonContentMatch
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentMatch
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: jsonContentMatch
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 16
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public static dynamic jsonContentMatch
+    return:
+      type: System.Object
+    content.vb: Public Shared jsonContentMatch As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentTimeline
+  commentId: F:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentTimeline
+  id: jsonContentTimeline
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  langs:
+  - csharp
+  - vb
+  name: jsonContentTimeline
+  nameWithType: EndGameInfo.jsonContentTimeline
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.jsonContentTimeline
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: jsonContentTimeline
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 17
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public static dynamic jsonContentTimeline
+    return:
+      type: System.Object
+    content.vb: Public Shared jsonContentTimeline As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.EndGame(System.String)
+  commentId: M:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.EndGame(System.String)
+  id: EndGame(System.String)
+  parent: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo
+  langs:
+  - csharp
+  - vb
+  name: EndGame(String)
+  nameWithType: EndGameInfo.EndGame(String)
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.EndGame(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EndGame
+    path: ../OSL-Server/DataReciveClient/Processing/EndGame/EndGameInfo.cs
+    startLine: 18
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.EndGame
+  syntax:
+    content: public static void EndGame(string content)
+    parameters:
+    - id: content
+      type: System.String
+    content.vb: Public Shared Sub EndGame(content As String)
+  overload: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.EndGame*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.DataReciveClient.Processing.EndGame
+  commentId: N:OSL_Server.DataReciveClient.Processing.EndGame
+  name: OSL_Server.DataReciveClient.Processing.EndGame
+  nameWithType: OSL_Server.DataReciveClient.Processing.EndGame
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.InfoEndGame
+  commentId: T:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.InfoEndGame
+  parent: OSL_Server.DataReciveClient.Processing.EndGame
+  name: EndGameInfo.InfoEndGame
+  nameWithType: EndGameInfo.InfoEndGame
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.InfoEndGame
+- uid: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.EndGame*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.EndGame
+  name: EndGame
+  nameWithType: EndGameInfo.EndGame
+  fullName: OSL_Server.DataReciveClient.Processing.EndGame.EndGameInfo.EndGame
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
