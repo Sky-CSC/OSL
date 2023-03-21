@@ -1,5 +1,7 @@
 ﻿using System.Net.Sockets;
 using System.Net;
+using OSL_Server.DataReciveClient;
+using System.Text;
 
 namespace OSL_Server.Communication
 {
@@ -26,6 +28,9 @@ namespace OSL_Server.Communication
             Socket listener = new Socket(AddressFamily.InterNetworkV6,
                 SocketType.Stream, ProtocolType.Tcp);
             listener.SetSocketOption(SocketOptionLevel.IPv6, SocketOptionName.IPv6Only, false);
+            //Socket listener = new Socket(AddressFamily.InterNetwork,
+            //SocketType.Stream, ProtocolType.Tcp);
+            //listener.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.IPOptions, false);
             // Bind the socket to the local endpoint and listen for incoming connections.
             try
             {
@@ -51,7 +56,7 @@ namespace OSL_Server.Communication
                     listener.BeginAccept(
                         new AsyncCallback(AcceptCallback),
                         listener);
-
+                    
                     if (_stop) throw new ThreadInterruptedException();
                     // Wait until a connection is made before continuing.
                     allDone.WaitOne();
@@ -98,9 +103,32 @@ namespace OSL_Server.Communication
                 Client client = new Client();
                 client.Handler = handler;
 
-                handler.BeginReceive(client.buffer, 0, Client.BufferSize, 0,
-                    new AsyncCallback(ReadCallback), client);
-                //Socket never close, system wait interruption kernel to close it
+                while (true)
+                {
+                    int bytesRead = handler.Receive(client.buffer);
+                    //while if dig data
+                    String content = String.Empty;
+                    // Serialisation
+                    if (bytesRead > 0)
+                    {
+                        // There  might be more data, so store the data received so far.
+                        client.sb.Append(Encoding.UTF8.GetString(
+                            client.buffer, 0, bytesRead));
+
+                        // Check for end-of-file tag. If it is not there, read 
+                        // more data.
+                        content = client.sb.ToString();
+                        _logger.log(LoggingLevel.INFO, "ReadCallback()", $"Content recived {content}");
+
+                        string returnContent = ReciveFromClient.ReadData(content);
+
+                        //Send(handler, returnContent);
+                    }
+                    //handler.BeginReceive(client.buffer, 0, Client.BufferSize, 0,
+                    //    ReadCallback, client);
+                    Console.WriteLine("plop");
+                    //Socket never close, system wait interruption kernel to close it
+                }
             }
             catch (Exception e)
             {

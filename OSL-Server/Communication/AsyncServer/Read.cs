@@ -36,11 +36,11 @@ namespace OSL_Server.Communication
                 // Check for end-of-file tag. If it is not there, read 
                 // more data.
                 content = client.sb.ToString();
-                //_logger.log(LoggingLevel.INFO, "ReadCallback()", $"Content recived {content}");
+                _logger.log(LoggingLevel.INFO, "ReadCallback()", $"Content recived {content}");
 
                 string returnContent = ReciveFromClient.ReadData(content);
 
-                Send(handler, returnContent);
+                //Send(handler, returnContent);
             }
         }
     }
