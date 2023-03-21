@@ -24,7 +24,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Offsets
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-    startLine: 186
+    startLine: 182
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Manager
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-    startLine: 189
+    startLine: 185
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -85,7 +85,7 @@ items:
     ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
     arguments:
     - type: System.Type
-      value: OSL_Client.RiotApp.MemoryProcessing.HexStringJsonConverter
+      value: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -108,7 +108,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: MapCount
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-    startLine: 192
+    startLine: 188
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -128,7 +128,7 @@ items:
     ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
     arguments:
     - type: System.Type
-      value: OSL_Client.RiotApp.MemoryProcessing.HexStringJsonConverter
+      value: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -151,7 +151,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: MapRoot
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-    startLine: 195
+    startLine: 191
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -171,7 +171,7 @@ items:
     ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
     arguments:
     - type: System.Type
-      value: OSL_Client.RiotApp.MemoryProcessing.HexStringJsonConverter
+      value: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -194,7 +194,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: MapNodeNetId
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-    startLine: 198
+    startLine: 194
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -214,7 +214,7 @@ items:
     ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
     arguments:
     - type: System.Type
-      value: OSL_Client.RiotApp.MemoryProcessing.HexStringJsonConverter
+      value: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -237,7 +237,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: MapNodeObject
     path: ../OSL-Client/RiotApp/MemoryProcessing/FarsightController.cs
-    startLine: 201
+    startLine: 197
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -257,7 +257,7 @@ items:
     ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
     arguments:
     - type: System.Type
-      value: OSL_Client.RiotApp.MemoryProcessing.HexStringJsonConverter
+      value: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
   modifiers.csharp:
   - public
   modifiers.vb:

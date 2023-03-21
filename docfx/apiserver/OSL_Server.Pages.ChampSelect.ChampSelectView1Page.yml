@@ -1,0 +1,505 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page
+  commentId: T:OSL_Server.Pages.ChampSelect.ChampSelectView1Page
+  id: ChampSelectView1Page
+  parent: OSL_Server.Pages.ChampSelect
+  children:
+  - OSL_Server.Pages.ChampSelect.ChampSelectView1Page.EnableOrDisableOverlayView
+  - OSL_Server.Pages.ChampSelect.ChampSelectView1Page.formatingData
+  - OSL_Server.Pages.ChampSelect.ChampSelectView1Page.overlayLoaded
+  - OSL_Server.Pages.ChampSelect.ChampSelectView1Page.ResetColor
+  langs:
+  - csharp
+  - vb
+  name: ChampSelectView1Page
+  nameWithType: ChampSelectView1Page
+  fullName: OSL_Server.Pages.ChampSelect.ChampSelectView1Page
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampSelectView1Page
+    path: ../OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+    startLine: 8
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.ChampSelect
+  summary: "\nChamp Select View1 Page\n"
+  example: []
+  syntax:
+    content: public class ChampSelectView1Page
+    content.vb: Public Class ChampSelectView1Page
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.overlayLoaded
+  commentId: F:OSL_Server.Pages.ChampSelect.ChampSelectView1Page.overlayLoaded
+  id: overlayLoaded
+  parent: OSL_Server.Pages.ChampSelect.ChampSelectView1Page
+  langs:
+  - csharp
+  - vb
+  name: overlayLoaded
+  nameWithType: ChampSelectView1Page.overlayLoaded
+  fullName: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.overlayLoaded
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: overlayLoaded
+    path: ../OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+    startLine: 12
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.ChampSelect
+  syntax:
+    content: public static bool overlayLoaded
+    return:
+      type: System.Boolean
+    content.vb: Public Shared overlayLoaded As Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.formatingData
+  commentId: F:OSL_Server.Pages.ChampSelect.ChampSelectView1Page.formatingData
+  id: formatingData
+  parent: OSL_Server.Pages.ChampSelect.ChampSelectView1Page
+  langs:
+  - csharp
+  - vb
+  name: formatingData
+  nameWithType: ChampSelectView1Page.formatingData
+  fullName: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.formatingData
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: formatingData
+    path: ../OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.ChampSelect
+  syntax:
+    content: public static ChampSelectView1Page.FormatingData formatingData
+    return:
+      type: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.FormatingData
+    content.vb: Public Shared formatingData As ChampSelectView1Page.FormatingData
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.EnableOrDisableOverlayView
+  commentId: M:OSL_Server.Pages.ChampSelect.ChampSelectView1Page.EnableOrDisableOverlayView
+  id: EnableOrDisableOverlayView
+  parent: OSL_Server.Pages.ChampSelect.ChampSelectView1Page
+  langs:
+  - csharp
+  - vb
+  name: EnableOrDisableOverlayView()
+  nameWithType: ChampSelectView1Page.EnableOrDisableOverlayView()
+  fullName: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.EnableOrDisableOverlayView()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EnableOrDisableOverlayView
+    path: ../OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+    startLine: 56
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.ChampSelect
+  summary: "\nEnable or disable overlay view\n"
+  example: []
+  syntax:
+    content: public static void EnableOrDisableOverlayView()
+    content.vb: Public Shared Sub EnableOrDisableOverlayView
+  overload: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.EnableOrDisableOverlayView*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.ResetColor
+  commentId: M:OSL_Server.Pages.ChampSelect.ChampSelectView1Page.ResetColor
+  id: ResetColor
+  parent: OSL_Server.Pages.ChampSelect.ChampSelectView1Page
+  langs:
+  - csharp
+  - vb
+  name: ResetColor()
+  nameWithType: ChampSelectView1Page.ResetColor()
+  fullName: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.ResetColor()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ResetColor
+    path: ../OSL-Server/Pages/ChampSelect/ChampSelectView1Page.razor.cs
+    startLine: 71
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.ChampSelect
+  summary: "\nLoad default datat champ select\n"
+  example: []
+  syntax:
+    content: public static void ResetColor()
+    content.vb: Public Shared Sub ResetColor
+  overload: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.ResetColor*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Pages.ChampSelect
+  commentId: N:OSL_Server.Pages.ChampSelect
+  name: OSL_Server.Pages.ChampSelect
+  nameWithType: OSL_Server.Pages.ChampSelect
+  fullName: OSL_Server.Pages.ChampSelect
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.FormatingData
+  commentId: T:OSL_Server.Pages.ChampSelect.ChampSelectView1Page.FormatingData
+  parent: OSL_Server.Pages.ChampSelect
+  name: ChampSelectView1Page.FormatingData
+  nameWithType: ChampSelectView1Page.FormatingData
+  fullName: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.FormatingData
+- uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.EnableOrDisableOverlayView*
+  commentId: Overload:OSL_Server.Pages.ChampSelect.ChampSelectView1Page.EnableOrDisableOverlayView
+  name: EnableOrDisableOverlayView
+  nameWithType: ChampSelectView1Page.EnableOrDisableOverlayView
+  fullName: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.EnableOrDisableOverlayView
+- uid: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.ResetColor*
+  commentId: Overload:OSL_Server.Pages.ChampSelect.ChampSelectView1Page.ResetColor
+  name: ResetColor
+  nameWithType: ChampSelectView1Page.ResetColor
+  fullName: OSL_Server.Pages.ChampSelect.ChampSelectView1Page.ResetColor

@@ -1,0 +1,891 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.EndGame.EndGamePage
+  commentId: T:OSL_Server.Pages.EndGame.EndGamePage
+  id: EndGamePage
+  parent: OSL_Server.Pages.EndGame
+  children:
+  - OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1
+  - OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1Bans
+  - OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1ChampInfo
+  - OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1GlobalStats
+  - OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1GoldDiff
+  - OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1TimerBar
+  - OSL_Server.Pages.EndGame.EndGamePage.colorValue
+  - OSL_Server.Pages.EndGame.EndGamePage.DisableAllBackgroundView3
+  - OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView1
+  - OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView2
+  - OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView3
+  - OSL_Server.Pages.EndGame.EndGamePage.EnableAllBackgroundView3
+  - OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView1
+  - OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView2
+  - OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView3
+  langs:
+  - csharp
+  - vb
+  name: EndGamePage
+  nameWithType: EndGamePage
+  fullName: OSL_Server.Pages.EndGame.EndGamePage
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EndGamePage
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 7
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public class EndGamePage
+    content.vb: Public Class EndGamePage
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1
+  commentId: F:OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1
+  id: colorPickerOverlay1
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay1
+  nameWithType: EndGamePage.colorPickerOverlay1
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay1
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 11
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string colorPickerOverlay1
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay1 As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1TimerBar
+  commentId: F:OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1TimerBar
+  id: colorPickerOverlay1TimerBar
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay1TimerBar
+  nameWithType: EndGamePage.colorPickerOverlay1TimerBar
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1TimerBar
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay1TimerBar
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 12
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string colorPickerOverlay1TimerBar
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay1TimerBar As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1ChampInfo
+  commentId: F:OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1ChampInfo
+  id: colorPickerOverlay1ChampInfo
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay1ChampInfo
+  nameWithType: EndGamePage.colorPickerOverlay1ChampInfo
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1ChampInfo
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay1ChampInfo
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 13
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string colorPickerOverlay1ChampInfo
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay1ChampInfo As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1Bans
+  commentId: F:OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1Bans
+  id: colorPickerOverlay1Bans
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay1Bans
+  nameWithType: EndGamePage.colorPickerOverlay1Bans
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1Bans
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay1Bans
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 14
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string colorPickerOverlay1Bans
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay1Bans As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1GlobalStats
+  commentId: F:OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1GlobalStats
+  id: colorPickerOverlay1GlobalStats
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay1GlobalStats
+  nameWithType: EndGamePage.colorPickerOverlay1GlobalStats
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1GlobalStats
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay1GlobalStats
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string colorPickerOverlay1GlobalStats
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay1GlobalStats As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1GoldDiff
+  commentId: F:OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1GoldDiff
+  id: colorPickerOverlay1GoldDiff
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorPickerOverlay1GoldDiff
+  nameWithType: EndGamePage.colorPickerOverlay1GoldDiff
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.colorPickerOverlay1GoldDiff
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPickerOverlay1GoldDiff
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 16
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string colorPickerOverlay1GoldDiff
+    return:
+      type: System.String
+    content.vb: Public Shared colorPickerOverlay1GoldDiff As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.colorValue
+  commentId: F:OSL_Server.Pages.EndGame.EndGamePage.colorValue
+  id: colorValue
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: colorValue
+  nameWithType: EndGamePage.colorValue
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.colorValue
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorValue
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 17
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string colorValue
+    return:
+      type: System.String
+    content.vb: Public Shared colorValue As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView1
+  commentId: M:OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView1
+  id: EnableAllGradiantView1
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: EnableAllGradiantView1()
+  nameWithType: EndGamePage.EnableAllGradiantView1()
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView1()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EnableAllGradiantView1
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 2942
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void EnableAllGradiantView1()
+    content.vb: Public Shared Sub EnableAllGradiantView1
+  overload: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView1*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView1
+  commentId: M:OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView1
+  id: DisableAllGradiantView1
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: DisableAllGradiantView1()
+  nameWithType: EndGamePage.DisableAllGradiantView1()
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView1()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisableAllGradiantView1
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 2950
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void DisableAllGradiantView1()
+    content.vb: Public Shared Sub DisableAllGradiantView1
+  overload: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView1*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView2
+  commentId: M:OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView2
+  id: EnableAllGradiantView2
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: EnableAllGradiantView2()
+  nameWithType: EndGamePage.EnableAllGradiantView2()
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView2()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EnableAllGradiantView2
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 2959
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void EnableAllGradiantView2()
+    content.vb: Public Shared Sub EnableAllGradiantView2
+  overload: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView2
+  commentId: M:OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView2
+  id: DisableAllGradiantView2
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: DisableAllGradiantView2()
+  nameWithType: EndGamePage.DisableAllGradiantView2()
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView2()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisableAllGradiantView2
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 2967
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void DisableAllGradiantView2()
+    content.vb: Public Shared Sub DisableAllGradiantView2
+  overload: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView3
+  commentId: M:OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView3
+  id: EnableAllGradiantView3
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: EnableAllGradiantView3()
+  nameWithType: EndGamePage.EnableAllGradiantView3()
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView3()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EnableAllGradiantView3
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 2975
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void EnableAllGradiantView3()
+    content.vb: Public Shared Sub EnableAllGradiantView3
+  overload: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView3
+  commentId: M:OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView3
+  id: DisableAllGradiantView3
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: DisableAllGradiantView3()
+  nameWithType: EndGamePage.DisableAllGradiantView3()
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView3()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisableAllGradiantView3
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 2983
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void DisableAllGradiantView3()
+    content.vb: Public Shared Sub DisableAllGradiantView3
+  overload: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.EnableAllBackgroundView3
+  commentId: M:OSL_Server.Pages.EndGame.EndGamePage.EnableAllBackgroundView3
+  id: EnableAllBackgroundView3
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: EnableAllBackgroundView3()
+  nameWithType: EndGamePage.EnableAllBackgroundView3()
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.EnableAllBackgroundView3()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EnableAllBackgroundView3
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 2991
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void EnableAllBackgroundView3()
+    content.vb: Public Shared Sub EnableAllBackgroundView3
+  overload: OSL_Server.Pages.EndGame.EndGamePage.EnableAllBackgroundView3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGamePage.DisableAllBackgroundView3
+  commentId: M:OSL_Server.Pages.EndGame.EndGamePage.DisableAllBackgroundView3
+  id: DisableAllBackgroundView3
+  parent: OSL_Server.Pages.EndGame.EndGamePage
+  langs:
+  - csharp
+  - vb
+  name: DisableAllBackgroundView3()
+  nameWithType: EndGamePage.DisableAllBackgroundView3()
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.DisableAllBackgroundView3()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisableAllBackgroundView3
+    path: ../OSL-Server/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 2999
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void DisableAllBackgroundView3()
+    content.vb: Public Shared Sub DisableAllBackgroundView3
+  overload: OSL_Server.Pages.EndGame.EndGamePage.DisableAllBackgroundView3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Pages.EndGame
+  commentId: N:OSL_Server.Pages.EndGame
+  name: OSL_Server.Pages.EndGame
+  nameWithType: OSL_Server.Pages.EndGame
+  fullName: OSL_Server.Pages.EndGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView1*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView1
+  name: EnableAllGradiantView1
+  nameWithType: EndGamePage.EnableAllGradiantView1
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView1
+- uid: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView1*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView1
+  name: DisableAllGradiantView1
+  nameWithType: EndGamePage.DisableAllGradiantView1
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView1
+- uid: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView2*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView2
+  name: EnableAllGradiantView2
+  nameWithType: EndGamePage.EnableAllGradiantView2
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView2
+- uid: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView2*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView2
+  name: DisableAllGradiantView2
+  nameWithType: EndGamePage.DisableAllGradiantView2
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView2
+- uid: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView3*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView3
+  name: EnableAllGradiantView3
+  nameWithType: EndGamePage.EnableAllGradiantView3
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.EnableAllGradiantView3
+- uid: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView3*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView3
+  name: DisableAllGradiantView3
+  nameWithType: EndGamePage.DisableAllGradiantView3
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.DisableAllGradiantView3
+- uid: OSL_Server.Pages.EndGame.EndGamePage.EnableAllBackgroundView3*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGamePage.EnableAllBackgroundView3
+  name: EnableAllBackgroundView3
+  nameWithType: EndGamePage.EnableAllBackgroundView3
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.EnableAllBackgroundView3
+- uid: OSL_Server.Pages.EndGame.EndGamePage.DisableAllBackgroundView3*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGamePage.DisableAllBackgroundView3
+  name: DisableAllBackgroundView3
+  nameWithType: EndGamePage.DisableAllBackgroundView3
+  fullName: OSL_Server.Pages.EndGame.EndGamePage.DisableAllBackgroundView3

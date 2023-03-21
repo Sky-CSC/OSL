@@ -1,0 +1,504 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataLoader.WebApiRiot.Match_V5
+  commentId: T:OSL_Server.DataLoader.WebApiRiot.Match_V5
+  id: Match_V5
+  parent: OSL_Server.DataLoader.WebApiRiot
+  children:
+  - OSL_Server.DataLoader.WebApiRiot.Match_V5.ByPuuid(System.String,System.Int64,System.Int64,System.Int32,System.String,System.Int32,System.Int32)
+  - OSL_Server.DataLoader.WebApiRiot.Match_V5.Matches(System.Int64)
+  - OSL_Server.DataLoader.WebApiRiot.Match_V5.Timeline(System.Int64)
+  langs:
+  - csharp
+  - vb
+  name: Match_V5
+  nameWithType: Match_V5
+  fullName: OSL_Server.DataLoader.WebApiRiot.Match_V5
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Match-V5.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Match_V5
+    path: ../OSL-Server/DataLoader/WebApiRiot/Match-V5.cs
+    startLine: 4
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public class Match_V5
+    content.vb: Public Class Match_V5
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.DataLoader.WebApiRiot.Match_V5.ByPuuid(System.String,System.Int64,System.Int64,System.Int32,System.String,System.Int32,System.Int32)
+  commentId: M:OSL_Server.DataLoader.WebApiRiot.Match_V5.ByPuuid(System.String,System.Int64,System.Int64,System.Int32,System.String,System.Int32,System.Int32)
+  id: ByPuuid(System.String,System.Int64,System.Int64,System.Int32,System.String,System.Int32,System.Int32)
+  parent: OSL_Server.DataLoader.WebApiRiot.Match_V5
+  langs:
+  - csharp
+  - vb
+  name: ByPuuid(String, Int64, Int64, Int32, String, Int32, Int32)
+  nameWithType: Match_V5.ByPuuid(String, Int64, Int64, Int32, String, Int32, Int32)
+  fullName: OSL_Server.DataLoader.WebApiRiot.Match_V5.ByPuuid(System.String, System.Int64, System.Int64, System.Int32, System.String, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Match-V5.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ByPuuid
+    path: ../OSL-Server/DataLoader/WebApiRiot/Match-V5.cs
+    startLine: 10
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public static string ByPuuid(string puuid, long startTime = -1L, long endTime = -1L, int queue = -1, string type = "", int start = -1, int count = -1)
+    parameters:
+    - id: puuid
+      type: System.String
+    - id: startTime
+      type: System.Int64
+    - id: endTime
+      type: System.Int64
+    - id: queue
+      type: System.Int32
+    - id: type
+      type: System.String
+    - id: start
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Public Shared Function ByPuuid(puuid As String, startTime As Long = -1L, endTime As Long = -1L, queue As Integer = -1, type As String = "", start As Integer = -1, count As Integer = -1) As String
+  overload: OSL_Server.DataLoader.WebApiRiot.Match_V5.ByPuuid*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.WebApiRiot.Match_V5.Matches(System.Int64)
+  commentId: M:OSL_Server.DataLoader.WebApiRiot.Match_V5.Matches(System.Int64)
+  id: Matches(System.Int64)
+  parent: OSL_Server.DataLoader.WebApiRiot.Match_V5
+  langs:
+  - csharp
+  - vb
+  name: Matches(Int64)
+  nameWithType: Match_V5.Matches(Int64)
+  fullName: OSL_Server.DataLoader.WebApiRiot.Match_V5.Matches(System.Int64)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Match-V5.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Matches
+    path: ../OSL-Server/DataLoader/WebApiRiot/Match-V5.cs
+    startLine: 41
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public static string Matches(long matchId)
+    parameters:
+    - id: matchId
+      type: System.Int64
+    return:
+      type: System.String
+    content.vb: Public Shared Function Matches(matchId As Long) As String
+  overload: OSL_Server.DataLoader.WebApiRiot.Match_V5.Matches*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataLoader.WebApiRiot.Match_V5.Timeline(System.Int64)
+  commentId: M:OSL_Server.DataLoader.WebApiRiot.Match_V5.Timeline(System.Int64)
+  id: Timeline(System.Int64)
+  parent: OSL_Server.DataLoader.WebApiRiot.Match_V5
+  langs:
+  - csharp
+  - vb
+  name: Timeline(Int64)
+  nameWithType: Match_V5.Timeline(Int64)
+  fullName: OSL_Server.DataLoader.WebApiRiot.Match_V5.Timeline(System.Int64)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataLoader/WebApiRiot/Match-V5.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Timeline
+    path: ../OSL-Server/DataLoader/WebApiRiot/Match-V5.cs
+    startLine: 46
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataLoader.WebApiRiot
+  syntax:
+    content: public static string Timeline(long matchId)
+    parameters:
+    - id: matchId
+      type: System.Int64
+    return:
+      type: System.String
+    content.vb: Public Shared Function Timeline(matchId As Long) As String
+  overload: OSL_Server.DataLoader.WebApiRiot.Match_V5.Timeline*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.DataLoader.WebApiRiot
+  commentId: N:OSL_Server.DataLoader.WebApiRiot
+  name: OSL_Server.DataLoader.WebApiRiot
+  nameWithType: OSL_Server.DataLoader.WebApiRiot
+  fullName: OSL_Server.DataLoader.WebApiRiot
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.DataLoader.WebApiRiot.Match_V5.ByPuuid*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.Match_V5.ByPuuid
+  name: ByPuuid
+  nameWithType: Match_V5.ByPuuid
+  fullName: OSL_Server.DataLoader.WebApiRiot.Match_V5.ByPuuid
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.DataLoader.WebApiRiot.Match_V5.Matches*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.Match_V5.Matches
+  name: Matches
+  nameWithType: Match_V5.Matches
+  fullName: OSL_Server.DataLoader.WebApiRiot.Match_V5.Matches
+- uid: OSL_Server.DataLoader.WebApiRiot.Match_V5.Timeline*
+  commentId: Overload:OSL_Server.DataLoader.WebApiRiot.Match_V5.Timeline
+  name: Timeline
+  nameWithType: Match_V5.Timeline
+  fullName: OSL_Server.DataLoader.WebApiRiot.Match_V5.Timeline

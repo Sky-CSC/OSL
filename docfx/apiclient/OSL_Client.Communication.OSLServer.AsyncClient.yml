@@ -5,6 +5,12 @@ items:
   id: AsyncClient
   parent: OSL_Client.Communication.OSLServer
   children:
+  - OSL_Client.Communication.OSLServer.AsyncClient.CloseClient
+  - OSL_Client.Communication.OSLServer.AsyncClient.oslServerSocket
+  - OSL_Client.Communication.OSLServer.AsyncClient.Receive
+  - OSL_Client.Communication.OSLServer.AsyncClient.Receive(System.Net.Sockets.Socket)
+  - OSL_Client.Communication.OSLServer.AsyncClient.Send(System.Net.Sockets.Socket,System.String)
+  - OSL_Client.Communication.OSLServer.AsyncClient.Send(System.String)
   - OSL_Client.Communication.OSLServer.AsyncClient.StartClient(System.String)
   langs:
   - csharp
@@ -45,6 +51,39 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: OSL_Client.Communication.OSLServer.AsyncClient.oslServerSocket
+  commentId: F:OSL_Client.Communication.OSLServer.AsyncClient.oslServerSocket
+  id: oslServerSocket
+  parent: OSL_Client.Communication.OSLServer.AsyncClient
+  langs:
+  - csharp
+  - vb
+  name: oslServerSocket
+  nameWithType: AsyncClient.oslServerSocket
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient.oslServerSocket
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Communication/OSLServer/Client.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: oslServerSocket
+    path: ../OSL-Client/Communication/OSLServer/Client.cs
+    startLine: 37
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Communication.OSLServer
+  syntax:
+    content: public static Socket oslServerSocket
+    return:
+      type: System.Net.Sockets.Socket
+    content.vb: Public Shared oslServerSocket As Socket
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: OSL_Client.Communication.OSLServer.AsyncClient.StartClient(System.String)
   commentId: M:OSL_Client.Communication.OSLServer.AsyncClient.StartClient(System.String)
   id: StartClient(System.String)
@@ -63,23 +102,206 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: StartClient
     path: ../OSL-Client/Communication/OSLServer/Client.cs
-    startLine: 54
+    startLine: 57
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Communication.OSLServer
-  summary: "\nRun connexion for connect to server\n"
+  summary: "\n\n"
   example: []
   syntax:
     content: public static bool StartClient(string data)
     parameters:
     - id: data
       type: System.String
-      description: data recive
+      description: ''
     return:
       type: System.Boolean
-      description: Connexion are enabled
+      description: ''
     content.vb: Public Shared Function StartClient(data As String) As Boolean
   overload: OSL_Client.Communication.OSLServer.AsyncClient.StartClient*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Communication.OSLServer.AsyncClient.CloseClient
+  commentId: M:OSL_Client.Communication.OSLServer.AsyncClient.CloseClient
+  id: CloseClient
+  parent: OSL_Client.Communication.OSLServer.AsyncClient
+  langs:
+  - csharp
+  - vb
+  name: CloseClient()
+  nameWithType: AsyncClient.CloseClient()
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient.CloseClient()
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Communication/OSLServer/Client.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: CloseClient
+    path: ../OSL-Client/Communication/OSLServer/Client.cs
+    startLine: 118
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Communication.OSLServer
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public static bool CloseClient()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function CloseClient As Boolean
+  overload: OSL_Client.Communication.OSLServer.AsyncClient.CloseClient*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Communication.OSLServer.AsyncClient.Receive(System.Net.Sockets.Socket)
+  commentId: M:OSL_Client.Communication.OSLServer.AsyncClient.Receive(System.Net.Sockets.Socket)
+  id: Receive(System.Net.Sockets.Socket)
+  parent: OSL_Client.Communication.OSLServer.AsyncClient
+  langs:
+  - csharp
+  - vb
+  name: Receive(Socket)
+  nameWithType: AsyncClient.Receive(Socket)
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient.Receive(System.Net.Sockets.Socket)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Communication/OSLServer/Recive.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Receive
+    path: ../OSL-Client/Communication/OSLServer/Recive.cs
+    startLine: 18
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Communication.OSLServer
+  summary: "\nReceive\n"
+  example: []
+  syntax:
+    content: public static void Receive(Socket client)
+    parameters:
+    - id: client
+      type: System.Net.Sockets.Socket
+      description: Socket client
+    content.vb: Public Shared Sub Receive(client As Socket)
+  overload: OSL_Client.Communication.OSLServer.AsyncClient.Receive*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Communication.OSLServer.AsyncClient.Receive
+  commentId: M:OSL_Client.Communication.OSLServer.AsyncClient.Receive
+  id: Receive
+  parent: OSL_Client.Communication.OSLServer.AsyncClient
+  langs:
+  - csharp
+  - vb
+  name: Receive()
+  nameWithType: AsyncClient.Receive()
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient.Receive()
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Communication/OSLServer/Recive.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Receive
+    path: ../OSL-Client/Communication/OSLServer/Recive.cs
+    startLine: 36
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Communication.OSLServer
+  syntax:
+    content: public static void Receive()
+    content.vb: Public Shared Sub Receive
+  overload: OSL_Client.Communication.OSLServer.AsyncClient.Receive*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Communication.OSLServer.AsyncClient.Send(System.Net.Sockets.Socket,System.String)
+  commentId: M:OSL_Client.Communication.OSLServer.AsyncClient.Send(System.Net.Sockets.Socket,System.String)
+  id: Send(System.Net.Sockets.Socket,System.String)
+  parent: OSL_Client.Communication.OSLServer.AsyncClient
+  langs:
+  - csharp
+  - vb
+  name: Send(Socket, String)
+  nameWithType: AsyncClient.Send(Socket, String)
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient.Send(System.Net.Sockets.Socket, System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Communication/OSLServer/Send.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Send
+    path: ../OSL-Client/Communication/OSLServer/Send.cs
+    startLine: 19
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Communication.OSLServer
+  summary: "\nSend\n"
+  example: []
+  syntax:
+    content: public static void Send(Socket client, string data)
+    parameters:
+    - id: client
+      type: System.Net.Sockets.Socket
+      description: Socket client
+    - id: data
+      type: System.String
+      description: data to send
+    content.vb: Public Shared Sub Send(client As Socket, data As String)
+  overload: OSL_Client.Communication.OSLServer.AsyncClient.Send*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Communication.OSLServer.AsyncClient.Send(System.String)
+  commentId: M:OSL_Client.Communication.OSLServer.AsyncClient.Send(System.String)
+  id: Send(System.String)
+  parent: OSL_Client.Communication.OSLServer.AsyncClient
+  langs:
+  - csharp
+  - vb
+  name: Send(String)
+  nameWithType: AsyncClient.Send(String)
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient.Send(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Communication/OSLServer/Send.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Send
+    path: ../OSL-Client/Communication/OSLServer/Send.cs
+    startLine: 29
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Communication.OSLServer
+  syntax:
+    content: public static void Send(string data)
+    parameters:
+    - id: data
+      type: System.String
+    content.vb: Public Shared Sub Send(data As String)
+  overload: OSL_Client.Communication.OSLServer.AsyncClient.Send*
   modifiers.csharp:
   - public
   - static
@@ -384,6 +606,19 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Net.Sockets.Socket
+  commentId: T:System.Net.Sockets.Socket
+  parent: System.Net.Sockets
+  isExternal: true
+  name: Socket
+  nameWithType: Socket
+  fullName: System.Net.Sockets.Socket
+- uid: System.Net.Sockets
+  commentId: N:System.Net.Sockets
+  isExternal: true
+  name: System.Net.Sockets
+  nameWithType: System.Net.Sockets
+  fullName: System.Net.Sockets
 - uid: OSL_Client.Communication.OSLServer.AsyncClient.StartClient*
   commentId: Overload:OSL_Client.Communication.OSLServer.AsyncClient.StartClient
   name: StartClient
@@ -403,3 +638,18 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: OSL_Client.Communication.OSLServer.AsyncClient.CloseClient*
+  commentId: Overload:OSL_Client.Communication.OSLServer.AsyncClient.CloseClient
+  name: CloseClient
+  nameWithType: AsyncClient.CloseClient
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient.CloseClient
+- uid: OSL_Client.Communication.OSLServer.AsyncClient.Receive*
+  commentId: Overload:OSL_Client.Communication.OSLServer.AsyncClient.Receive
+  name: Receive
+  nameWithType: AsyncClient.Receive
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient.Receive
+- uid: OSL_Client.Communication.OSLServer.AsyncClient.Send*
+  commentId: Overload:OSL_Client.Communication.OSLServer.AsyncClient.Send
+  name: Send
+  nameWithType: AsyncClient.Send
+  fullName: OSL_Client.Communication.OSLServer.AsyncClient.Send

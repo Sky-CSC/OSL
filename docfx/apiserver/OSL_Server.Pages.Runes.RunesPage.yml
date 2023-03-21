@@ -1,0 +1,744 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.Runes.RunesPage
+  commentId: T:OSL_Server.Pages.Runes.RunesPage
+  id: RunesPage
+  parent: OSL_Server.Pages.Runes
+  children:
+  - OSL_Server.Pages.Runes.RunesPage.colorPicker
+  - OSL_Server.Pages.Runes.RunesPage.colorValue
+  - OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksList(System.String)
+  - OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksListV2(System.String)
+  - OSL_Server.Pages.Runes.RunesPage.formatingData
+  - OSL_Server.Pages.Runes.RunesPage.GetChampionPicturePath(System.Int32)
+  - OSL_Server.Pages.Runes.RunesPage.ResetLanes
+  - OSL_Server.Pages.Runes.RunesPage.summonerPerksList
+  langs:
+  - csharp
+  - vb
+  name: RunesPage
+  nameWithType: RunesPage
+  fullName: OSL_Server.Pages.Runes.RunesPage
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RunesPage
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 11
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public class RunesPage
+    content.vb: Public Class RunesPage
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.Runes.RunesPage.colorPicker
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.colorPicker
+  id: colorPicker
+  parent: OSL_Server.Pages.Runes.RunesPage
+  langs:
+  - csharp
+  - vb
+  name: colorPicker
+  nameWithType: RunesPage.colorPicker
+  fullName: OSL_Server.Pages.Runes.RunesPage.colorPicker
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorPicker
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 15
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static string colorPicker
+    return:
+      type: System.String
+    content.vb: Public Shared colorPicker As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.colorValue
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.colorValue
+  id: colorValue
+  parent: OSL_Server.Pages.Runes.RunesPage
+  langs:
+  - csharp
+  - vb
+  name: colorValue
+  nameWithType: RunesPage.colorValue
+  fullName: OSL_Server.Pages.Runes.RunesPage.colorValue
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: colorValue
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 16
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static string colorValue
+    return:
+      type: System.String
+    content.vb: Public Shared colorValue As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.summonerPerksList
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.summonerPerksList
+  id: summonerPerksList
+  parent: OSL_Server.Pages.Runes.RunesPage
+  langs:
+  - csharp
+  - vb
+  name: summonerPerksList
+  nameWithType: RunesPage.summonerPerksList
+  fullName: OSL_Server.Pages.Runes.RunesPage.summonerPerksList
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: summonerPerksList
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 18
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static List<RunesPage.InfoForPerks> summonerPerksList
+    return:
+      type: List{OSL_Server.Pages.Runes.RunesPage.InfoForPerks}
+    content.vb: Public Shared summonerPerksList As List(Of RunesPage.InfoForPerks)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.formatingData
+  commentId: F:OSL_Server.Pages.Runes.RunesPage.formatingData
+  id: formatingData
+  parent: OSL_Server.Pages.Runes.RunesPage
+  langs:
+  - csharp
+  - vb
+  name: formatingData
+  nameWithType: RunesPage.formatingData
+  fullName: OSL_Server.Pages.Runes.RunesPage.formatingData
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: formatingData
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 20
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static RunesPage.FormatingData formatingData
+    return:
+      type: OSL_Server.Pages.Runes.RunesPage.FormatingData
+    content.vb: Public Shared formatingData As RunesPage.FormatingData
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksListV2(System.String)
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksListV2(System.String)
+  id: CreateSummonerPerksListV2(System.String)
+  parent: OSL_Server.Pages.Runes.RunesPage
+  langs:
+  - csharp
+  - vb
+  name: CreateSummonerPerksListV2(String)
+  nameWithType: RunesPage.CreateSummonerPerksListV2(String)
+  fullName: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksListV2(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: CreateSummonerPerksListV2
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 28
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void CreateSummonerPerksListV2(string content)
+    parameters:
+    - id: content
+      type: System.String
+    content.vb: Public Shared Sub CreateSummonerPerksListV2(content As String)
+  overload: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksListV2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksList(System.String)
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksList(System.String)
+  id: CreateSummonerPerksList(System.String)
+  parent: OSL_Server.Pages.Runes.RunesPage
+  langs:
+  - csharp
+  - vb
+  name: CreateSummonerPerksList(String)
+  nameWithType: RunesPage.CreateSummonerPerksList(String)
+  fullName: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksList(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: CreateSummonerPerksList
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 112
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void CreateSummonerPerksList(string summonerName)
+    parameters:
+    - id: summonerName
+      type: System.String
+    content.vb: Public Shared Sub CreateSummonerPerksList(summonerName As String)
+  overload: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksList*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.ResetLanes
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.ResetLanes
+  id: ResetLanes
+  parent: OSL_Server.Pages.Runes.RunesPage
+  langs:
+  - csharp
+  - vb
+  name: ResetLanes()
+  nameWithType: RunesPage.ResetLanes()
+  fullName: OSL_Server.Pages.Runes.RunesPage.ResetLanes()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ResetLanes
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 161
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  syntax:
+    content: public static void ResetLanes()
+    content.vb: Public Shared Sub ResetLanes
+  overload: OSL_Server.Pages.Runes.RunesPage.ResetLanes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.Runes.RunesPage.GetChampionPicturePath(System.Int32)
+  commentId: M:OSL_Server.Pages.Runes.RunesPage.GetChampionPicturePath(System.Int32)
+  id: GetChampionPicturePath(System.Int32)
+  parent: OSL_Server.Pages.Runes.RunesPage
+  langs:
+  - csharp
+  - vb
+  name: GetChampionPicturePath(Int32)
+  nameWithType: RunesPage.GetChampionPicturePath(Int32)
+  fullName: OSL_Server.Pages.Runes.RunesPage.GetChampionPicturePath(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/Runes/RunesPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetChampionPicturePath
+    path: ../OSL-Server/Pages/Runes/RunesPage.razor.cs
+    startLine: 174
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.Runes
+  summary: "\nReturn champion picture path\n"
+  example: []
+  syntax:
+    content: public static string GetChampionPicturePath(int champId)
+    parameters:
+    - id: champId
+      type: System.Int32
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: Public Shared Function GetChampionPicturePath(champId As Integer) As String
+  overload: OSL_Server.Pages.Runes.RunesPage.GetChampionPicturePath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Pages.Runes
+  commentId: N:OSL_Server.Pages.Runes
+  name: OSL_Server.Pages.Runes
+  nameWithType: OSL_Server.Pages.Runes
+  fullName: OSL_Server.Pages.Runes
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: List{OSL_Server.Pages.Runes.RunesPage.InfoForPerks}
+  commentId: '!:List{OSL_Server.Pages.Runes.RunesPage.InfoForPerks}'
+  definition: List`1
+  name: List<RunesPage.InfoForPerks>
+  nameWithType: List<RunesPage.InfoForPerks>
+  fullName: List<OSL_Server.Pages.Runes.RunesPage.InfoForPerks>
+  nameWithType.vb: List(Of RunesPage.InfoForPerks)
+  fullName.vb: List(Of OSL_Server.Pages.Runes.RunesPage.InfoForPerks)
+  name.vb: List(Of RunesPage.InfoForPerks)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_Server.Pages.Runes.RunesPage.InfoForPerks
+    name: RunesPage.InfoForPerks
+    nameWithType: RunesPage.InfoForPerks
+    fullName: OSL_Server.Pages.Runes.RunesPage.InfoForPerks
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_Server.Pages.Runes.RunesPage.InfoForPerks
+    name: RunesPage.InfoForPerks
+    nameWithType: RunesPage.InfoForPerks
+    fullName: OSL_Server.Pages.Runes.RunesPage.InfoForPerks
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Server.Pages.Runes.RunesPage.FormatingData
+  commentId: T:OSL_Server.Pages.Runes.RunesPage.FormatingData
+  parent: OSL_Server.Pages.Runes
+  name: RunesPage.FormatingData
+  nameWithType: RunesPage.FormatingData
+  fullName: OSL_Server.Pages.Runes.RunesPage.FormatingData
+- uid: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksListV2*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksListV2
+  name: CreateSummonerPerksListV2
+  nameWithType: RunesPage.CreateSummonerPerksListV2
+  fullName: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksListV2
+- uid: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksList*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksList
+  name: CreateSummonerPerksList
+  nameWithType: RunesPage.CreateSummonerPerksList
+  fullName: OSL_Server.Pages.Runes.RunesPage.CreateSummonerPerksList
+- uid: OSL_Server.Pages.Runes.RunesPage.ResetLanes*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.ResetLanes
+  name: ResetLanes
+  nameWithType: RunesPage.ResetLanes
+  fullName: OSL_Server.Pages.Runes.RunesPage.ResetLanes
+- uid: OSL_Server.Pages.Runes.RunesPage.GetChampionPicturePath*
+  commentId: Overload:OSL_Server.Pages.Runes.RunesPage.GetChampionPicturePath
+  name: GetChampionPicturePath
+  nameWithType: RunesPage.GetChampionPicturePath
+  fullName: OSL_Server.Pages.Runes.RunesPage.GetChampionPicturePath
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

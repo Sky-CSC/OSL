@@ -1,0 +1,1667 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page
+  commentId: T:OSL_Server.Pages.EndGame.EndGameView1Page
+  id: EndGameView1Page
+  parent: OSL_Server.Pages.EndGame
+  children:
+  - OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToAngle(System.Int32,System.Double,System.Int32,System.Double)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToHyp(System.Int32,System.Double,System.Int32,System.Double)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToK(System.Double)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString(System.Double)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString(System.Int32)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToWidth(System.Int32)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.CreateTabGold
+  - OSL_Server.Pages.EndGame.EndGameView1Page.formatingData
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillBlue
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillRed
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPath(System.String)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPathByPath(System.String)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetDragonsKill(System.String)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillBlue
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillRed
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldBlue
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldRed
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillBlue
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillRed
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetKDABlue
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetKDARed
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetTimer
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerDiv(System.Double)
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerInt
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillBlue
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillRed
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossBlue
+  - OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossRed
+  - OSL_Server.Pages.EndGame.EndGameView1Page.goldDiff
+  - OSL_Server.Pages.EndGame.EndGameView1Page.MaxGold
+  - OSL_Server.Pages.EndGame.EndGameView1Page.ResetColor
+  langs:
+  - csharp
+  - vb
+  name: EndGameView1Page
+  nameWithType: EndGameView1Page
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: EndGameView1Page
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 6
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public class EndGameView1Page
+    content.vb: Public Class EndGameView1Page
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.formatingData
+  commentId: F:OSL_Server.Pages.EndGame.EndGameView1Page.formatingData
+  id: formatingData
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: formatingData
+  nameWithType: EndGameView1Page.formatingData
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.formatingData
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: formatingData
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 11
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static EndGameView1Page.FormatingData formatingData
+    return:
+      type: OSL_Server.Pages.EndGame.EndGameView1Page.FormatingData
+    content.vb: Public Shared formatingData As EndGameView1Page.FormatingData
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.goldDiff
+  commentId: F:OSL_Server.Pages.EndGame.EndGameView1Page.goldDiff
+  id: goldDiff
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: goldDiff
+  nameWithType: EndGameView1Page.goldDiff
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.goldDiff
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: goldDiff
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 14
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static List<int> goldDiff
+    return:
+      type: List{System.Int32}
+    content.vb: Public Shared goldDiff As List(Of Integer)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimer
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetTimer
+  id: GetTimer
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetTimer()
+  nameWithType: EndGameView1Page.GetTimer()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimer()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetTimer
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 109
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetTimer()
+    return:
+      type: System.String
+    content.vb: Public Function GetTimer As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerInt
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerInt
+  id: GetTimerInt
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetTimerInt()
+  nameWithType: EndGameView1Page.GetTimerInt()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerInt()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetTimerInt
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 123
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public int GetTimerInt()
+    return:
+      type: System.Int32
+    content.vb: Public Function GetTimerInt As Integer
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerInt*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerDiv(System.Double)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerDiv(System.Double)
+  id: GetTimerDiv(System.Double)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetTimerDiv(Double)
+  nameWithType: EndGameView1Page.GetTimerDiv(Double)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerDiv(System.Double)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetTimerDiv
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 138
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetTimerDiv(double div)
+    parameters:
+    - id: div
+      type: System.Double
+    return:
+      type: System.String
+    content.vb: Public Function GetTimerDiv(div As Double) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerDiv*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPathByPath(System.String)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPathByPath(System.String)
+  id: GetChampionPathByPath(System.String)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetChampionPathByPath(String)
+  nameWithType: EndGameView1Page.GetChampionPathByPath(String)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPathByPath(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetChampionPathByPath
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 153
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetChampionPathByPath(string championId)
+    parameters:
+    - id: championId
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function GetChampionPathByPath(championId As String) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPathByPath*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPath(System.String)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPath(System.String)
+  id: GetChampionPath(System.String)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetChampionPath(String)
+  nameWithType: EndGameView1Page.GetChampionPath(String)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPath(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetChampionPath
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 160
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetChampionPath(string championId)
+    parameters:
+    - id: championId
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function GetChampionPath(championId As String) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPath*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToK(System.Double)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToK(System.Double)
+  id: ConvertToK(System.Double)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: ConvertToK(Double)
+  nameWithType: EndGameView1Page.ConvertToK(Double)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToK(System.Double)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ConvertToK
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 165
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string ConvertToK(double total)
+    parameters:
+    - id: total
+      type: System.Double
+    return:
+      type: System.String
+    content.vb: Public Function ConvertToK(total As Double) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToK*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToWidth(System.Int32)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToWidth(System.Int32)
+  id: ConvertToWidth(System.Int32)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: ConvertToWidth(Int32)
+  nameWithType: EndGameView1Page.ConvertToWidth(Int32)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToWidth(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ConvertToWidth
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 181
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string ConvertToWidth(int total)
+    parameters:
+    - id: total
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Public Function ConvertToWidth(total As Integer) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToWidth*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDABlue
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetKDABlue
+  id: GetKDABlue
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetKDABlue()
+  nameWithType: EndGameView1Page.GetKDABlue()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDABlue()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetKDABlue
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 198
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetKDABlue()
+    return:
+      type: System.String
+    content.vb: Public Function GetKDABlue As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDABlue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDARed
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetKDARed
+  id: GetKDARed
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetKDARed()
+  nameWithType: EndGameView1Page.GetKDARed()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDARed()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetKDARed
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 205
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetKDARed()
+    return:
+      type: System.String
+    content.vb: Public Function GetKDARed As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDARed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldBlue
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldBlue
+  id: GetGoldBlue
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetGoldBlue()
+  nameWithType: EndGameView1Page.GetGoldBlue()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldBlue()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetGoldBlue
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 213
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetGoldBlue()
+    return:
+      type: System.String
+    content.vb: Public Function GetGoldBlue As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldBlue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldRed
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldRed
+  id: GetGoldRed
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetGoldRed()
+  nameWithType: EndGameView1Page.GetGoldRed()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldRed()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetGoldRed
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 229
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetGoldRed()
+    return:
+      type: System.String
+    content.vb: Public Function GetGoldRed As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldRed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillBlue
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillBlue
+  id: GetTowerKillBlue
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetTowerKillBlue()
+  nameWithType: EndGameView1Page.GetTowerKillBlue()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillBlue()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetTowerKillBlue
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 246
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetTowerKillBlue()
+    return:
+      type: System.String
+    content.vb: Public Function GetTowerKillBlue As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillBlue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillRed
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillRed
+  id: GetTowerKillRed
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetTowerKillRed()
+  nameWithType: EndGameView1Page.GetTowerKillRed()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillRed()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetTowerKillRed
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 252
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetTowerKillRed()
+    return:
+      type: System.String
+    content.vb: Public Function GetTowerKillRed As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillRed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetDragonsKill(System.String)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetDragonsKill(System.String)
+  id: GetDragonsKill(System.String)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetDragonsKill(String)
+  nameWithType: EndGameView1Page.GetDragonsKill(String)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetDragonsKill(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetDragonsKill
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 258
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetDragonsKill(string monsterSubType)
+    parameters:
+    - id: monsterSubType
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function GetDragonsKill(monsterSubType As String) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetDragonsKill*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillBlue
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillBlue
+  id: GetElderKillBlue
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetElderKillBlue()
+  nameWithType: EndGameView1Page.GetElderKillBlue()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillBlue()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetElderKillBlue
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 288
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetElderKillBlue()
+    return:
+      type: System.String
+    content.vb: Public Function GetElderKillBlue As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillBlue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillRed
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillRed
+  id: GetElderKillRed
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetElderKillRed()
+  nameWithType: EndGameView1Page.GetElderKillRed()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillRed()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetElderKillRed
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 312
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetElderKillRed()
+    return:
+      type: System.String
+    content.vb: Public Function GetElderKillRed As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillRed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillBlue
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillBlue
+  id: GetHeraldKillBlue
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetHeraldKillBlue()
+  nameWithType: EndGameView1Page.GetHeraldKillBlue()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillBlue()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetHeraldKillBlue
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 336
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetHeraldKillBlue()
+    return:
+      type: System.String
+    content.vb: Public Function GetHeraldKillBlue As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillBlue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillRed
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillRed
+  id: GetHeraldKillRed
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetHeraldKillRed()
+  nameWithType: EndGameView1Page.GetHeraldKillRed()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillRed()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetHeraldKillRed
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 360
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetHeraldKillRed()
+    return:
+      type: System.String
+    content.vb: Public Function GetHeraldKillRed As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillRed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillBlue
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillBlue
+  id: GetBaronKillBlue
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetBaronKillBlue()
+  nameWithType: EndGameView1Page.GetBaronKillBlue()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillBlue()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetBaronKillBlue
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 384
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetBaronKillBlue()
+    return:
+      type: System.String
+    content.vb: Public Function GetBaronKillBlue As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillBlue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillRed
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillRed
+  id: GetBaronKillRed
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetBaronKillRed()
+  nameWithType: EndGameView1Page.GetBaronKillRed()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillRed()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetBaronKillRed
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 408
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetBaronKillRed()
+    return:
+      type: System.String
+    content.vb: Public Function GetBaronKillRed As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillRed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossBlue
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossBlue
+  id: GetWinLossBlue
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetWinLossBlue()
+  nameWithType: EndGameView1Page.GetWinLossBlue()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossBlue()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetWinLossBlue
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 432
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetWinLossBlue()
+    return:
+      type: System.String
+    content.vb: Public Function GetWinLossBlue As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossBlue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossRed
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossRed
+  id: GetWinLossRed
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: GetWinLossRed()
+  nameWithType: EndGameView1Page.GetWinLossRed()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossRed()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GetWinLossRed
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 449
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public string GetWinLossRed()
+    return:
+      type: System.String
+    content.vb: Public Function GetWinLossRed As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossRed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ResetColor
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.ResetColor
+  id: ResetColor
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: ResetColor()
+  nameWithType: EndGameView1Page.ResetColor()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ResetColor()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ResetColor
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 466
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void ResetColor()
+    content.vb: Public Shared Sub ResetColor
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.ResetColor*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.CreateTabGold
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.CreateTabGold
+  id: CreateTabGold
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: CreateTabGold()
+  nameWithType: EndGameView1Page.CreateTabGold()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.CreateTabGold()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: CreateTabGold
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 510
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static void CreateTabGold()
+    content.vb: Public Shared Sub CreateTabGold
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.CreateTabGold*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.MaxGold
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.MaxGold
+  id: MaxGold
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: MaxGold()
+  nameWithType: EndGameView1Page.MaxGold()
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.MaxGold()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: MaxGold
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 540
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static int MaxGold()
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function MaxGold As Integer
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.MaxGold*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString(System.Int32)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString(System.Int32)
+  id: ConvertToString(System.Int32)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: ConvertToString(Int32)
+  nameWithType: EndGameView1Page.ConvertToString(Int32)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ConvertToString
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 555
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string ConvertToString(int x)
+    parameters:
+    - id: x
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Public Shared Function ConvertToString(x As Integer) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString(System.Double)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString(System.Double)
+  id: ConvertToString(System.Double)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: ConvertToString(Double)
+  nameWithType: EndGameView1Page.ConvertToString(Double)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString(System.Double)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ConvertToString
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 560
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string ConvertToString(double x)
+    parameters:
+    - id: x
+      type: System.Double
+    return:
+      type: System.String
+    content.vb: Public Shared Function ConvertToString(x As Double) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToHyp(System.Int32,System.Double,System.Int32,System.Double)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToHyp(System.Int32,System.Double,System.Int32,System.Double)
+  id: ConvertToHyp(System.Int32,System.Double,System.Int32,System.Double)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: ConvertToHyp(Int32, Double, Int32, Double)
+  nameWithType: EndGameView1Page.ConvertToHyp(Int32, Double, Int32, Double)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToHyp(System.Int32, System.Double, System.Int32, System.Double)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ConvertToHyp
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 565
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string ConvertToHyp(int x, double y, int prex, double prey)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Double
+    - id: prex
+      type: System.Int32
+    - id: prey
+      type: System.Double
+    return:
+      type: System.String
+    content.vb: Public Shared Function ConvertToHyp(x As Integer, y As Double, prex As Integer, prey As Double) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToHyp*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToAngle(System.Int32,System.Double,System.Int32,System.Double)
+  commentId: M:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToAngle(System.Int32,System.Double,System.Int32,System.Double)
+  id: ConvertToAngle(System.Int32,System.Double,System.Int32,System.Double)
+  parent: OSL_Server.Pages.EndGame.EndGameView1Page
+  langs:
+  - csharp
+  - vb
+  name: ConvertToAngle(Int32, Double, Int32, Double)
+  nameWithType: EndGameView1Page.ConvertToAngle(Int32, Double, Int32, Double)
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToAngle(System.Int32, System.Double, System.Int32, System.Double)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ConvertToAngle
+    path: ../OSL-Server/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 574
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.EndGame
+  syntax:
+    content: public static string ConvertToAngle(int x, double y, int prex, double prey)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: y
+      type: System.Double
+    - id: prex
+      type: System.Int32
+    - id: prey
+      type: System.Double
+    return:
+      type: System.String
+    content.vb: Public Shared Function ConvertToAngle(x As Integer, y As Double, prex As Integer, prey As Double) As String
+  overload: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToAngle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Pages.EndGame
+  commentId: N:OSL_Server.Pages.EndGame
+  name: OSL_Server.Pages.EndGame
+  nameWithType: OSL_Server.Pages.EndGame
+  fullName: OSL_Server.Pages.EndGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.FormatingData
+  commentId: T:OSL_Server.Pages.EndGame.EndGameView1Page.FormatingData
+  parent: OSL_Server.Pages.EndGame
+  name: EndGameView1Page.FormatingData
+  nameWithType: EndGameView1Page.FormatingData
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.FormatingData
+- uid: List{System.Int32}
+  commentId: '!:List{System.Int32}'
+  definition: List`1
+  name: List<Int32>
+  nameWithType: List<Int32>
+  fullName: List<System.Int32>
+  nameWithType.vb: List(Of Int32)
+  fullName.vb: List(Of System.Int32)
+  name.vb: List(Of Int32)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimer*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetTimer
+  name: GetTimer
+  nameWithType: EndGameView1Page.GetTimer
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerInt*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerInt
+  name: GetTimerInt
+  nameWithType: EndGameView1Page.GetTimerInt
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerInt
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerDiv*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerDiv
+  name: GetTimerDiv
+  nameWithType: EndGameView1Page.GetTimerDiv
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTimerDiv
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPathByPath*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPathByPath
+  name: GetChampionPathByPath
+  nameWithType: EndGameView1Page.GetChampionPathByPath
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPathByPath
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPath*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPath
+  name: GetChampionPath
+  nameWithType: EndGameView1Page.GetChampionPath
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetChampionPath
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToK*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToK
+  name: ConvertToK
+  nameWithType: EndGameView1Page.ConvertToK
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToK
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToWidth*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToWidth
+  name: ConvertToWidth
+  nameWithType: EndGameView1Page.ConvertToWidth
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToWidth
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDABlue*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetKDABlue
+  name: GetKDABlue
+  nameWithType: EndGameView1Page.GetKDABlue
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDABlue
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDARed*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetKDARed
+  name: GetKDARed
+  nameWithType: EndGameView1Page.GetKDARed
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetKDARed
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldBlue*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldBlue
+  name: GetGoldBlue
+  nameWithType: EndGameView1Page.GetGoldBlue
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldBlue
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldRed*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldRed
+  name: GetGoldRed
+  nameWithType: EndGameView1Page.GetGoldRed
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetGoldRed
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillBlue*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillBlue
+  name: GetTowerKillBlue
+  nameWithType: EndGameView1Page.GetTowerKillBlue
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillBlue
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillRed*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillRed
+  name: GetTowerKillRed
+  nameWithType: EndGameView1Page.GetTowerKillRed
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetTowerKillRed
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetDragonsKill*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetDragonsKill
+  name: GetDragonsKill
+  nameWithType: EndGameView1Page.GetDragonsKill
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetDragonsKill
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillBlue*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillBlue
+  name: GetElderKillBlue
+  nameWithType: EndGameView1Page.GetElderKillBlue
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillBlue
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillRed*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillRed
+  name: GetElderKillRed
+  nameWithType: EndGameView1Page.GetElderKillRed
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetElderKillRed
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillBlue*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillBlue
+  name: GetHeraldKillBlue
+  nameWithType: EndGameView1Page.GetHeraldKillBlue
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillBlue
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillRed*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillRed
+  name: GetHeraldKillRed
+  nameWithType: EndGameView1Page.GetHeraldKillRed
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetHeraldKillRed
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillBlue*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillBlue
+  name: GetBaronKillBlue
+  nameWithType: EndGameView1Page.GetBaronKillBlue
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillBlue
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillRed*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillRed
+  name: GetBaronKillRed
+  nameWithType: EndGameView1Page.GetBaronKillRed
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetBaronKillRed
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossBlue*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossBlue
+  name: GetWinLossBlue
+  nameWithType: EndGameView1Page.GetWinLossBlue
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossBlue
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossRed*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossRed
+  name: GetWinLossRed
+  nameWithType: EndGameView1Page.GetWinLossRed
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.GetWinLossRed
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ResetColor*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.ResetColor
+  name: ResetColor
+  nameWithType: EndGameView1Page.ResetColor
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ResetColor
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.CreateTabGold*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.CreateTabGold
+  name: CreateTabGold
+  nameWithType: EndGameView1Page.CreateTabGold
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.CreateTabGold
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.MaxGold*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.MaxGold
+  name: MaxGold
+  nameWithType: EndGameView1Page.MaxGold
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.MaxGold
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString
+  name: ConvertToString
+  nameWithType: EndGameView1Page.ConvertToString
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToString
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToHyp*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToHyp
+  name: ConvertToHyp
+  nameWithType: EndGameView1Page.ConvertToHyp
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToHyp
+- uid: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToAngle*
+  commentId: Overload:OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToAngle
+  name: ConvertToAngle
+  nameWithType: EndGameView1Page.ConvertToAngle
+  fullName: OSL_Server.Pages.EndGame.EndGameView1Page.ConvertToAngle

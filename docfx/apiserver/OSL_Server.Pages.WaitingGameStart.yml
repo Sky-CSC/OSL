@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.WaitingGameStart
+  commentId: N:OSL_Server.Pages.WaitingGameStart
+  id: OSL_Server.Pages.WaitingGameStart
+  children:
+  - OSL_Server.Pages.WaitingGameStart.WaitingGameStartPage
+  langs:
+  - csharp
+  - vb
+  name: OSL_Server.Pages.WaitingGameStart
+  nameWithType: OSL_Server.Pages.WaitingGameStart
+  fullName: OSL_Server.Pages.WaitingGameStart
+  type: Namespace
+  assemblies:
+  - OSL-Server
+references:
+- uid: OSL_Server.Pages.WaitingGameStart.WaitingGameStartPage
+  commentId: T:OSL_Server.Pages.WaitingGameStart.WaitingGameStartPage
+  name: WaitingGameStartPage
+  nameWithType: WaitingGameStartPage
+  fullName: OSL_Server.Pages.WaitingGameStart.WaitingGameStartPage

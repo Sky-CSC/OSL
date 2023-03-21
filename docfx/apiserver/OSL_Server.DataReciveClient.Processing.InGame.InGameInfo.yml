@@ -1,0 +1,431 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo
+  commentId: T:OSL_Server.DataReciveClient.Processing.InGame.InGameInfo
+  id: InGameInfo
+  parent: OSL_Server.DataReciveClient.Processing.InGame
+  children:
+  - OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.firstCall
+  - OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.InGame(System.String)
+  langs:
+  - csharp
+  - vb
+  name: InGameInfo
+  nameWithType: InGameInfo
+  fullName: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/InGame/InGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: InGameInfo
+    path: ../OSL-Server/DataReciveClient/Processing/InGame/InGameInfo.cs
+    startLine: 5
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.InGame
+  syntax:
+    content: public class InGameInfo
+    content.vb: Public Class InGameInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.firstCall
+  commentId: F:OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.firstCall
+  id: firstCall
+  parent: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo
+  langs:
+  - csharp
+  - vb
+  name: firstCall
+  nameWithType: InGameInfo.firstCall
+  fullName: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.firstCall
+  type: Field
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/InGame/InGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: firstCall
+    path: ../OSL-Server/DataReciveClient/Processing/InGame/InGameInfo.cs
+    startLine: 8
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.InGame
+  syntax:
+    content: public static bool firstCall
+    return:
+      type: System.Boolean
+    content.vb: Public Shared firstCall As Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.InGame(System.String)
+  commentId: M:OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.InGame(System.String)
+  id: InGame(System.String)
+  parent: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo
+  langs:
+  - csharp
+  - vb
+  name: InGame(String)
+  nameWithType: InGameInfo.InGame(String)
+  fullName: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.InGame(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/DataReciveClient/Processing/InGame/InGameInfo.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: InGame
+    path: ../OSL-Server/DataReciveClient/Processing/InGame/InGameInfo.cs
+    startLine: 9
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.DataReciveClient.Processing.InGame
+  syntax:
+    content: public static void InGame(string content)
+    parameters:
+    - id: content
+      type: System.String
+    content.vb: Public Shared Sub InGame(content As String)
+  overload: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.InGame*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.DataReciveClient.Processing.InGame
+  commentId: N:OSL_Server.DataReciveClient.Processing.InGame
+  name: OSL_Server.DataReciveClient.Processing.InGame
+  nameWithType: OSL_Server.DataReciveClient.Processing.InGame
+  fullName: OSL_Server.DataReciveClient.Processing.InGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.InGame*
+  commentId: Overload:OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.InGame
+  name: InGame
+  nameWithType: InGameInfo.InGame
+  fullName: OSL_Server.DataReciveClient.Processing.InGame.InGameInfo.InGame
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

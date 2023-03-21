@@ -27,7 +27,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Snapshot
     path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -68,14 +68,14 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Champions
     path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
   syntax:
     content: public List<GameObject> Champions
     return:
-      type: System.Collections.Generic.List{OSL_Client.RiotApp.MemoryProcessing.GameObject}
+      type: System.Collections.Generic.List{OSL_Client.RiotApp.MemoryProcessing.Object.GameObject}
     content.vb: Public Champions As List(Of GameObject)
   modifiers.csharp:
   - public
@@ -99,14 +99,14 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Dragon
     path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
   syntax:
     content: public GameObject Dragon
     return:
-      type: OSL_Client.RiotApp.MemoryProcessing.GameObject
+      type: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
     content.vb: Public Dragon As GameObject
   modifiers.csharp:
   - public
@@ -130,14 +130,14 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Baron
     path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
   syntax:
     content: public GameObject Baron
     return:
-      type: OSL_Client.RiotApp.MemoryProcessing.GameObject
+      type: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
     content.vb: Public Baron As GameObject
   modifiers.csharp:
   - public
@@ -161,14 +161,14 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Herald
     path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
   syntax:
     content: public GameObject Herald
     return:
-      type: OSL_Client.RiotApp.MemoryProcessing.GameObject
+      type: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
     content.vb: Public Herald As GameObject
   modifiers.csharp:
   - public
@@ -192,14 +192,14 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ObjectMap
     path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
   syntax:
     content: public Dictionary<int, GameObject> ObjectMap
     return:
-      type: System.Collections.Generic.Dictionary{System.Int32,OSL_Client.RiotApp.MemoryProcessing.GameObject}
+      type: System.Collections.Generic.Dictionary{System.Int32,OSL_Client.RiotApp.MemoryProcessing.Object.GameObject}
     content.vb: Public ObjectMap As Dictionary(Of Integer, GameObject)
   modifiers.csharp:
   - public
@@ -223,7 +223,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: IndexToNetID
     path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -254,7 +254,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdatedThisFrame
     path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -285,7 +285,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Client/RiotApp/MemoryProcessing/Snapshot.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - OSL-Client
   namespace: OSL_Client.RiotApp.MemoryProcessing
@@ -595,15 +595,15 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Collections.Generic.List{OSL_Client.RiotApp.MemoryProcessing.GameObject}
-  commentId: T:System.Collections.Generic.List{OSL_Client.RiotApp.MemoryProcessing.GameObject}
+- uid: System.Collections.Generic.List{OSL_Client.RiotApp.MemoryProcessing.Object.GameObject}
+  commentId: T:System.Collections.Generic.List{OSL_Client.RiotApp.MemoryProcessing.Object.GameObject}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   name: List<GameObject>
   nameWithType: List<GameObject>
-  fullName: System.Collections.Generic.List<OSL_Client.RiotApp.MemoryProcessing.GameObject>
+  fullName: System.Collections.Generic.List<OSL_Client.RiotApp.MemoryProcessing.Object.GameObject>
   nameWithType.vb: List(Of GameObject)
-  fullName.vb: System.Collections.Generic.List(Of OSL_Client.RiotApp.MemoryProcessing.GameObject)
+  fullName.vb: System.Collections.Generic.List(Of OSL_Client.RiotApp.MemoryProcessing.Object.GameObject)
   name.vb: List(Of GameObject)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
@@ -614,10 +614,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    fullName: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -630,10 +630,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    fullName: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
   - name: )
     nameWithType: )
     fullName: )
@@ -682,21 +682,26 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
-  commentId: T:OSL_Client.RiotApp.MemoryProcessing.GameObject
-  parent: OSL_Client.RiotApp.MemoryProcessing
+- uid: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
+  parent: OSL_Client.RiotApp.MemoryProcessing.Object
   name: GameObject
   nameWithType: GameObject
-  fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
-- uid: System.Collections.Generic.Dictionary{System.Int32,OSL_Client.RiotApp.MemoryProcessing.GameObject}
-  commentId: T:System.Collections.Generic.Dictionary{System.Int32,OSL_Client.RiotApp.MemoryProcessing.GameObject}
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
+- uid: OSL_Client.RiotApp.MemoryProcessing.Object
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing.Object
+  name: OSL_Client.RiotApp.MemoryProcessing.Object
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing.Object
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Object
+- uid: System.Collections.Generic.Dictionary{System.Int32,OSL_Client.RiotApp.MemoryProcessing.Object.GameObject}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,OSL_Client.RiotApp.MemoryProcessing.Object.GameObject}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.Dictionary`2
   name: Dictionary<Int32, GameObject>
   nameWithType: Dictionary<Int32, GameObject>
-  fullName: System.Collections.Generic.Dictionary<System.Int32, OSL_Client.RiotApp.MemoryProcessing.GameObject>
+  fullName: System.Collections.Generic.Dictionary<System.Int32, OSL_Client.RiotApp.MemoryProcessing.Object.GameObject>
   nameWithType.vb: Dictionary(Of Int32, GameObject)
-  fullName.vb: System.Collections.Generic.Dictionary(Of System.Int32, OSL_Client.RiotApp.MemoryProcessing.GameObject)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Int32, OSL_Client.RiotApp.MemoryProcessing.Object.GameObject)
   name.vb: Dictionary(Of Int32, GameObject)
   spec.csharp:
   - uid: System.Collections.Generic.Dictionary`2
@@ -715,10 +720,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    fullName: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -739,10 +744,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
     name: GameObject
     nameWithType: GameObject
-    fullName: OSL_Client.RiotApp.MemoryProcessing.GameObject
+    fullName: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
   - name: )
     nameWithType: )
     fullName: )

@@ -6,7 +6,7 @@
 > **Documentation in progress** 
 
 ---
-Download last release : [First Release v0.3.0-alpha](https://github.com/Sky-CSC/OSL/releases/tag/v0.3.0-alpha)
+Download last release : [Release v1.0.0](https://github.com/Sky-CSC/OSL/releases/tag/v1.0.0)
 
 Not forget run ```OSL-Server.exe```, before run ```OSL-Client.exe```
 

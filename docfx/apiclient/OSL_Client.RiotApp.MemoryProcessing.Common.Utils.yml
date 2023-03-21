@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  id: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  children:
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Utils.ByteUtils
+  - OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.ByteUtils
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Common.Utils.ByteUtils
+  name: ByteUtils
+  nameWithType: ByteUtils
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.ByteUtils
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
+  commentId: T:OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
+  parent: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  name: HexStringJsonConverter
+  nameWithType: HexStringJsonConverter
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  commentId: N:OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  name: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  nameWithType: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  fullName: OSL_Client.RiotApp.MemoryProcessing.Common.Utils

@@ -1,8 +1,9 @@
-# OSL : **Overlay Spectator Live**
+# **OSL : Overlay Spectator Live**
 ![work-in-progress](https://img.shields.io/badge/respos%20status-WIP-yellow)
 ![stability](https://img.shields.io/badge/stability-experimental-orange)
 ![language](https://img.shields.io/badge/language-c%23-brightgreen)
 ![.Net-6.0](https://img.shields.io/badge/.NET-6.0-brightgreen)
+![framework](https://img.shields.io/badge/framework-blazor-brightgreen)
 ![platform](https://img.shields.io/badge/platform-windows-brightgreen)
 ![license](https://img.shields.io/badge/license-comming%20soon-critical)
 ![LoL1](https://img.shields.io/badge/Game%20Client%20API-League%20of%20Legends-blue)
@@ -12,10 +13,53 @@
 ![riot1](https://img.shields.io/badge/Web%20API%20Riot-RIOT-blue)
 ![riot2](https://img.shields.io/badge/CDragon%20API-CDragon-blue)
 
-Here you'll find the OSL-Client and OSL-Server for the Overlay Spectator Live software suit.
-This project permite to have an overlay for display informattion in **Waiting a Game**, **Champ Select**, **Waiting Game Start**, **In Game** and **End Game** in streamings.
+This project allows you to display an overlay with additional information for your League of Legends games
 
-## Applications architecture 
+Applications use various APIs to collect information about the game, champions, players, .....
+
+# **Features**
+
+**[Champ Select :](https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-in-champ-select)**
+- 4 view
+- Champ ban/select
+- Summoners names
+- Team name
+- Number of victory/lose teams
+- Timer ban/select/waiting
+- Summoners Spell
+
+**[In Game :](https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-in-game)**
+
+[With riot overlay :](https://sky-csc.github.io/OSL/serverdoc/intro.html#with-riot-overlay-)
+- 3 view
+- Team/Dragon/Baron frame
+- Team name
+- Number of victory/lose teams
+- Frame for video/logo/player picture ...
+
+**[End Game :](https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-in-end-game)**
+- 3 view
+- Team name
+- Team score
+- Team win loose
+- Damage to champion
+- Bans
+- KDA/Gold/Tower/Dragon/Elder Dragon/Herald/Baron
+- Gold Diff
+
+**[Runes :](https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-runes)**
+- 7 view
+- Top
+- Jungle
+- Mid
+- Adc
+- Support
+- Adc and support
+- All
+
+<br>
+
+# Applications architecture 
 ![](picture/OSL-architecture2.drawio.png)
 
 ## For more information, please refer to these different documentations.

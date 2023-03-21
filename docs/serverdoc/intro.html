@@ -99,7 +99,7 @@
 <p><strong>These features are under development, they are not available</strong></p>
 </div>
 <hr>
-<p>Download last release : <a href="https://github.com/Sky-CSC/OSL/releases/tag/v0.3.0-alpha">Release v0.3.0-alpha</a></p>
+<p>Download last release : <a href="https://github.com/Sky-CSC/OSL/releases/tag/v1.3.0">Release v1.0.0</a></p>
 <p>Not forget run <code>OSL-Server.exe</code>, before run <code>OSL-Client.exe</code></p>
 <p>Open in a browser <a href="https://ip:4242">https://&lt; ip &gt;:4242</a> (change ip by your computer ip)</p>
 <p>Home : Link to documentation</p>
@@ -163,6 +163,20 @@ http://ip:4141/champselect/view1
 http://ip:4141/ingame/view2
 http://ip:4141/ingame/view3
 </code></pre>
+<p>End Game :</p>
+<pre><code class="lang-sh">http://ip:4141/endgame/view1
+http://ip:4141/endgame/view2
+http://ip:4141/endgame/view3
+</code></pre>
+<p>Runes :</p>
+<pre><code class="lang-sh">http://ip:4141/runes/top
+http://ip:4141/runes/mid
+http://ip:4141/runes/jungle
+http://ip:4141/runes/adc
+http://ip:4141/runes/supp
+http://ip:4141/runes/adcsupp
+http://ip:4141/runes/all
+</code></pre>
 <!-- <li> In Game :
 <ul>
 <li style="list-style-type: circle;">http://ip:4141/ingame/view1
@@ -222,10 +236,10 @@ alt="Video example Waiting a Game" width="240" height="180" border="0" /></a> --
 <img src="../picture/ChampSelectView4.png" width="50%">
 <!-- ![view4](../picture/view4.png) -->
 <!-- Video example Champ Select
-<p sourceFile="serverdoc/intro.md" sourceStartLineNumber="178"><a href="https://www.youtube.com/watch?v=46wy47H3D6o" sourceFile="serverdoc/intro.md" sourceStartLineNumber="178"><img src="https://img.youtube.com/vi/46wy47H3D6o/0.jpg" sourceFile="serverdoc/intro.md" sourceStartLineNumber="178" alt="Video example Waiting a Game" /></a> --&gt;</p>
+<p sourceFile="serverdoc/intro.md" sourceStartLineNumber="198"><a href="https://www.youtube.com/watch?v=46wy47H3D6o" sourceFile="serverdoc/intro.md" sourceStartLineNumber="198"><img src="https://img.youtube.com/vi/46wy47H3D6o/0.jpg" sourceFile="serverdoc/intro.md" sourceStartLineNumber="198" alt="Video example Waiting a Game" /></a> --&gt;</p>
 <br>
-<h3 id="information-display-with-overlay-waiting-game-start" sourceFile="serverdoc/intro.md" sourceStartLineNumber="182"><ins>Information display with overlay <strong sourceFile="serverdoc/intro.md" sourceStartLineNumber="182">Waiting Game Start</strong></h3>
-<p sourceFile="serverdoc/intro.md" sourceStartLineNumber="183"><br><input type="checkbox" disabled>Stats of players in the champ pick
+<h3 id="information-display-with-overlay-waiting-game-start" sourceFile="serverdoc/intro.md" sourceStartLineNumber="202"><ins>Information display with overlay <strong sourceFile="serverdoc/intro.md" sourceStartLineNumber="202">Waiting Game Start</strong></h3>
+<p sourceFile="serverdoc/intro.md" sourceStartLineNumber="203"><br><input type="checkbox" disabled>Stats of players in the champ pick
 <br><input type="checkbox" disabled>Stats Summoners on champ</p>
 <!-- Video example Waiting Game Start
 
@@ -274,21 +288,37 @@ alt="Video example Waiting a Game" width="240" height="180" border="0" /></a> --
 [![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
 <br>
 <h3 id="information-display-with-overlay-in-end-game"><ins>Information display with overlay in <strong>End Game</strong></ins></h3>
-<p><br><input type="checkbox" disabled="">Timer game
-<br><input type="checkbox" disabled="">Teams name
+<p><br><input type="checkbox" disabled="" checked="">Timer game
+<br><input type="checkbox" disabled="" checked="">Teams name
 <br><input type="checkbox" disabled="">Logo teams
-<br><input type="checkbox" disabled="">Champ dega
-<br><input type="checkbox" disabled="">KDA
-<br><input type="checkbox" disabled="">Total golds
-<br><input type="checkbox" disabled="">Tower
-<br><input type="checkbox" disabled="">Drake
-<br><input type="checkbox" disabled="">Elder dragon
-<br><input type="checkbox" disabled="">Herald
-<br><input type="checkbox" disabled="">Baron
-<br><input type="checkbox" disabled="">Ban
-<br><input type="checkbox" disabled="">Gold difference over time</p>
+<br><input type="checkbox" disabled="" checked="">Champ dega
+<br><input type="checkbox" disabled="" checked="">KDA
+<br><input type="checkbox" disabled="" checked="">Total golds
+<br><input type="checkbox" disabled="" checked="">Tower
+<br><input type="checkbox" disabled="" checked="">Drake
+<br><input type="checkbox" disabled="" checked="">Elder dragon
+<br><input type="checkbox" disabled="" checked="">Herald
+<br><input type="checkbox" disabled="" checked="">Baron
+<br><input type="checkbox" disabled="" checked="">Ban
+<br><input type="checkbox" disabled="" checked="">Gold difference over time</p>
+<p><strong>View 1 :</strong></p>
+<img src="../picture/EndGameView1.png" width="50%">
+<p><strong>View 2 :</strong></p>
+<img src="../picture/EndGameView2.png" width="50%">
+<p><strong>View 3 :</strong></p>
+<img src="../picture/EndGameView3.png" width="50%">
+<br>
+<h3 id="information-display-with-overlay-runes"><ins>Information display with overlay <strong>Runes</strong></ins></h3>
+<p><br><input type="checkbox" disabled="" checked="">Summoner name
+<br><input type="checkbox" disabled="" checked="">Runes
+<br><input type="checkbox" disabled="" checked="">Top rune
+<br><input type="checkbox" disabled="" checked="">Jungle rune
+<br><input type="checkbox" disabled="" checked="">Mid rune
+<br><input type="checkbox" disabled="" checked="">Adc rune
+<br><input type="checkbox" disabled="" checked="">Support rune
+<br><input type="checkbox" disabled="" checked="">Adc and supp rune
+<br><input type="checkbox" disabled="" checked="">All lane rune</p>
 <!-- Video example End Game
-
 [![Video example Waiting a Game](https://img.youtube.com/vi/46wy47H3D6o/0.jpg)](https://www.youtube.com/watch?v=46wy47H3D6o) -->
 </article>
                 </div>

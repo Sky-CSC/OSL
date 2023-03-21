@@ -1,0 +1,1005 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  commentId: T:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  id: InGamePage.TextValueOverlayView1
+  parent: OSL_Server.Pages.InGame
+  children:
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreText
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamText
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamTextSubmit
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.DisplayDragonTimer
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.InputCheckboxSubmit
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreText
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamText
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamTextSubmit
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamText
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamText
+  - OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SwitchSideRedBlue
+  langs:
+  - csharp
+  - vb
+  name: InGamePage.TextValueOverlayView1
+  nameWithType: InGamePage.TextValueOverlayView1
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  type: Class
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TextValueOverlayView1
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 12
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public class TextValueOverlayView1
+    content.vb: Public Class TextValueOverlayView1
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamText
+  commentId: P:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamText
+  id: BlueTeamText
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamText
+  nameWithType: InGamePage.TextValueOverlayView1.BlueTeamText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamText
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 14
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: >-
+      [StringLength(37, ErrorMessage = "Name is too long (37 character limit).")]
+
+      public string BlueTeamText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(37, ErrorMessage:="Name is too long (37 character limit).")>
+
+      Public Property BlueTeamText As String
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamText*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 37
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Name is too long (37 character limit).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreText
+  commentId: P:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreText
+  id: BlueTeamScoreText
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamScoreText
+  nameWithType: InGamePage.TextValueOverlayView1.BlueTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamScoreText
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 16
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: >-
+      [StringLength(7, ErrorMessage = "Name is too long (7 character limit).")]
+
+      public string BlueTeamScoreText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(7, ErrorMessage:="Name is too long (7 character limit).")>
+
+      Public Property BlueTeamScoreText As String
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreText*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 7
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Name is too long (7 character limit).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamText
+  commentId: P:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamText
+  id: RedTeamText
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: RedTeamText
+  nameWithType: InGamePage.TextValueOverlayView1.RedTeamText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedTeamText
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 18
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: >-
+      [StringLength(37, ErrorMessage = "Name is too long (37 character limit).")]
+
+      public string RedTeamText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(37, ErrorMessage:="Name is too long (37 character limit).")>
+
+      Public Property RedTeamText As String
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamText*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 37
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Name is too long (37 character limit).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreText
+  commentId: P:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreText
+  id: RedTeamScoreText
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: RedTeamScoreText
+  nameWithType: InGamePage.TextValueOverlayView1.RedTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreText
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedTeamScoreText
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 20
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: >-
+      [StringLength(7, ErrorMessage = "Name is too long (7 character limit).")]
+
+      public string RedTeamScoreText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(7, ErrorMessage:="Name is too long (7 character limit).")>
+
+      Public Property RedTeamScoreText As String
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreText*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 7
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Name is too long (7 character limit).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.DisplayDragonTimer
+  commentId: P:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.DisplayDragonTimer
+  id: DisplayDragonTimer
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: DisplayDragonTimer
+  nameWithType: InGamePage.TextValueOverlayView1.DisplayDragonTimer
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.DisplayDragonTimer
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayDragonTimer
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 23
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public bool DisplayDragonTimer { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayDragonTimer As Boolean
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.DisplayDragonTimer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamTextSubmit
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamTextSubmit
+  id: BlueTeamTextSubmit
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamTextSubmit()
+  nameWithType: InGamePage.TextValueOverlayView1.BlueTeamTextSubmit()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamTextSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamTextSubmit
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 25
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void BlueTeamTextSubmit()
+    content.vb: Public Shared Sub BlueTeamTextSubmit
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamTextSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit
+  id: BlueTeamScoreTextSubmit
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: BlueTeamScoreTextSubmit()
+  nameWithType: InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueTeamScoreTextSubmit
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 30
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void BlueTeamScoreTextSubmit()
+    content.vb: Public Shared Sub BlueTeamScoreTextSubmit
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamTextSubmit
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamTextSubmit
+  id: RedTeamTextSubmit
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: RedTeamTextSubmit()
+  nameWithType: InGamePage.TextValueOverlayView1.RedTeamTextSubmit()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamTextSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedTeamTextSubmit
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 34
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void RedTeamTextSubmit()
+    content.vb: Public Shared Sub RedTeamTextSubmit
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamTextSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit
+  id: RedTeamScoreTextSubmit
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: RedTeamScoreTextSubmit()
+  nameWithType: InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedTeamScoreTextSubmit
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 38
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void RedTeamScoreTextSubmit()
+    content.vb: Public Shared Sub RedTeamScoreTextSubmit
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SwitchSideRedBlue
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SwitchSideRedBlue
+  id: SwitchSideRedBlue
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: SwitchSideRedBlue()
+  nameWithType: InGamePage.TextValueOverlayView1.SwitchSideRedBlue()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SwitchSideRedBlue()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SwitchSideRedBlue
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 42
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void SwitchSideRedBlue()
+    content.vb: Public Shared Sub SwitchSideRedBlue
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SwitchSideRedBlue*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.InputCheckboxSubmit
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.InputCheckboxSubmit
+  id: InputCheckboxSubmit
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: InputCheckboxSubmit()
+  nameWithType: InGamePage.TextValueOverlayView1.InputCheckboxSubmit()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.InputCheckboxSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: InputCheckboxSubmit
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 62
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void InputCheckboxSubmit()
+    content.vb: Public Shared Sub InputCheckboxSubmit
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.InputCheckboxSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText
+  id: SetColorBlueTeamScoreText
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: SetColorBlueTeamScoreText()
+  nameWithType: InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetColorBlueTeamScoreText
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 67
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void SetColorBlueTeamScoreText()
+    content.vb: Public Shared Sub SetColorBlueTeamScoreText
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamText
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamText
+  id: SetColorBlueTeamText
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: SetColorBlueTeamText()
+  nameWithType: InGamePage.TextValueOverlayView1.SetColorBlueTeamText()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamText()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetColorBlueTeamText
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 81
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void SetColorBlueTeamText()
+    content.vb: Public Shared Sub SetColorBlueTeamText
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamText*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText
+  id: SetColorRedTeamScoreText
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: SetColorRedTeamScoreText()
+  nameWithType: InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetColorRedTeamScoreText
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 95
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void SetColorRedTeamScoreText()
+    content.vb: Public Shared Sub SetColorRedTeamScoreText
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamText
+  commentId: M:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamText
+  id: SetColorRedTeamText
+  parent: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1
+  langs:
+  - csharp
+  - vb
+  name: SetColorRedTeamText()
+  nameWithType: InGamePage.TextValueOverlayView1.SetColorRedTeamText()
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamText()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Pages/InGame/InGamePage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetColorRedTeamText
+    path: ../OSL-Server/Pages/InGame/InGamePage.razor.cs
+    startLine: 109
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages.InGame
+  syntax:
+    content: public static void SetColorRedTeamText()
+    content.vb: Public Shared Sub SetColorRedTeamText
+  overload: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamText*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Server.Pages.InGame
+  commentId: N:OSL_Server.Pages.InGame
+  name: OSL_Server.Pages.InGame
+  nameWithType: OSL_Server.Pages.InGame
+  fullName: OSL_Server.Pages.InGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamText
+  name: BlueTeamText
+  nameWithType: InGamePage.TextValueOverlayView1.BlueTeamText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreText
+  name: BlueTeamScoreText
+  nameWithType: InGamePage.TextValueOverlayView1.BlueTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreText
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamText
+  name: RedTeamText
+  nameWithType: InGamePage.TextValueOverlayView1.RedTeamText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamText
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreText
+  name: RedTeamScoreText
+  nameWithType: InGamePage.TextValueOverlayView1.RedTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreText
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.DisplayDragonTimer*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.DisplayDragonTimer
+  name: DisplayDragonTimer
+  nameWithType: InGamePage.TextValueOverlayView1.DisplayDragonTimer
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.DisplayDragonTimer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamTextSubmit*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamTextSubmit
+  name: BlueTeamTextSubmit
+  nameWithType: InGamePage.TextValueOverlayView1.BlueTeamTextSubmit
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamTextSubmit
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit
+  name: BlueTeamScoreTextSubmit
+  nameWithType: InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.BlueTeamScoreTextSubmit
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamTextSubmit*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamTextSubmit
+  name: RedTeamTextSubmit
+  nameWithType: InGamePage.TextValueOverlayView1.RedTeamTextSubmit
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamTextSubmit
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit
+  name: RedTeamScoreTextSubmit
+  nameWithType: InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.RedTeamScoreTextSubmit
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SwitchSideRedBlue*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SwitchSideRedBlue
+  name: SwitchSideRedBlue
+  nameWithType: InGamePage.TextValueOverlayView1.SwitchSideRedBlue
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SwitchSideRedBlue
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.InputCheckboxSubmit*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.InputCheckboxSubmit
+  name: InputCheckboxSubmit
+  nameWithType: InGamePage.TextValueOverlayView1.InputCheckboxSubmit
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.InputCheckboxSubmit
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText
+  name: SetColorBlueTeamScoreText
+  nameWithType: InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamScoreText
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamText
+  name: SetColorBlueTeamText
+  nameWithType: InGamePage.TextValueOverlayView1.SetColorBlueTeamText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorBlueTeamText
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText
+  name: SetColorRedTeamScoreText
+  nameWithType: InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamScoreText
+- uid: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamText*
+  commentId: Overload:OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamText
+  name: SetColorRedTeamText
+  nameWithType: InGamePage.TextValueOverlayView1.SetColorRedTeamText
+  fullName: OSL_Server.Pages.InGame.InGamePage.TextValueOverlayView1.SetColorRedTeamText

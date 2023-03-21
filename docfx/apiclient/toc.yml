@@ -49,31 +49,39 @@
 - uid: OSL_Client.RiotApp.MemoryProcessing
   name: OSL_Client.RiotApp.MemoryProcessing
   items:
-  - uid: OSL_Client.RiotApp.MemoryProcessing.AppStateController
-    name: AppStateController
-  - uid: OSL_Client.RiotApp.MemoryProcessing.ByteUtils
-    name: ByteUtils
-  - uid: OSL_Client.RiotApp.MemoryProcessing.Champion
-    name: Champion
-  - uid: OSL_Client.RiotApp.MemoryProcessing.ChampionLevel
-    name: ChampionLevel
   - uid: OSL_Client.RiotApp.MemoryProcessing.FarsightController
     name: FarsightController
   - uid: OSL_Client.RiotApp.MemoryProcessing.FarsightController.Offsets
     name: FarsightController.Offsets
-  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject
-    name: GameObject
-  - uid: OSL_Client.RiotApp.MemoryProcessing.GameObject.Offsets
-    name: GameObject.Offsets
-  - uid: OSL_Client.RiotApp.MemoryProcessing.HexStringJsonConverter
-    name: HexStringJsonConverter
-  - uid: OSL_Client.RiotApp.MemoryProcessing.JSONConfig
-    name: JSONConfig
   - uid: OSL_Client.RiotApp.MemoryProcessing.Memory
     name: Memory
   - uid: OSL_Client.RiotApp.MemoryProcessing.Memory.MEMORY_BASIC_INFORMATION
     name: Memory.MEMORY_BASIC_INFORMATION
-  - uid: OSL_Client.RiotApp.MemoryProcessing.Offsets
-    name: Offsets
   - uid: OSL_Client.RiotApp.MemoryProcessing.Snapshot
     name: Snapshot
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  name: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO
+  items:
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.CDragonChampion
+    name: CDragonChampion
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.DTO.Champion
+    name: Champion
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT
+  name: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT
+  items:
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Common.Data.RIOT.ChampionLevel
+    name: ChampionLevel
+- uid: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  name: OSL_Client.RiotApp.MemoryProcessing.Common.Utils
+  items:
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.ByteUtils
+    name: ByteUtils
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Common.Utils.HexStringJsonConverter
+    name: HexStringJsonConverter
+- uid: OSL_Client.RiotApp.MemoryProcessing.Object
+  name: OSL_Client.RiotApp.MemoryProcessing.Object
+  items:
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject
+    name: GameObject
+  - uid: OSL_Client.RiotApp.MemoryProcessing.Object.GameObject.Offsets
+    name: GameObject.Offsets

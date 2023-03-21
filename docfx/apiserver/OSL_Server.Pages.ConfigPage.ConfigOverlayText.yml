@@ -6,6 +6,7 @@ items:
   parent: OSL_Server.Pages
   children:
   - OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port
+  - OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey
   langs:
   - csharp
   - vb
@@ -20,7 +21,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConfigOverlayText
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
-    startLine: 15
+    startLine: 21
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -61,7 +62,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Port
     path: ../OSL-Server/Pages/ConfigPage.razor.cs
-    startLine: 17
+    startLine: 23
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Pages
@@ -97,6 +98,67 @@ items:
     - name: ErrorMessage
       type: System.String
       value: Accommodation invalid (1-65535).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey
+  commentId: P:OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey
+  id: WebRiotApiKey
+  parent: OSL_Server.Pages.ConfigPage.ConfigOverlayText
+  langs:
+  - csharp
+  - vb
+  name: WebRiotApiKey
+  nameWithType: ConfigPage.ConfigOverlayText.WebRiotApiKey
+  fullName: OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey
+  type: Property
+  source:
+    remote:
+      path: OSL-Server/Pages/ConfigPage.razor.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: WebRiotApiKey
+    path: ../OSL-Server/Pages/ConfigPage.razor.cs
+    startLine: 27
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Pages
+  syntax:
+    content: >-
+      [Required]
+
+      [StringLength(42, MinimumLength = 42, ErrorMessage = "API key is incorect (42 character).")]
+
+      public string WebRiotApiKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Required>
+
+      <StringLength(42, MinimumLength:=42, ErrorMessage:="API key is incorect (42 character).")>
+
+      Public Property WebRiotApiKey As String
+  overload: OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 42
+    namedArguments:
+    - name: MinimumLength
+      type: System.Int32
+      value: 42
+    - name: ErrorMessage
+      type: System.String
+      value: API key is incorect (42 character).
   modifiers.csharp:
   - public
   - get
@@ -413,3 +475,15 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey*
+  commentId: Overload:OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey
+  name: WebRiotApiKey
+  nameWithType: ConfigPage.ConfigOverlayText.WebRiotApiKey
+  fullName: OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

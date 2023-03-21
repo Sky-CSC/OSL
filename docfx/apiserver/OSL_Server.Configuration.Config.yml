@@ -11,20 +11,43 @@ items:
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView2
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView3
   - OSL_Server.Configuration.Config.LoadConfigChampSelectView4
+  - OSL_Server.Configuration.Config.LoadConfigEndGameView1Page
+  - OSL_Server.Configuration.Config.LoadConfigEndGameView2Page
+  - OSL_Server.Configuration.Config.LoadConfigEndGameView3Page
   - OSL_Server.Configuration.Config.LoadConfigInGameView1
   - OSL_Server.Configuration.Config.LoadConfigInGameView2
   - OSL_Server.Configuration.Config.LoadConfigInGameView3
   - OSL_Server.Configuration.Config.LoadConfigOslServerHost
+  - OSL_Server.Configuration.Config.LoadConfigRunesAdcPage
+  - OSL_Server.Configuration.Config.LoadConfigRunesAdcSuppPage
+  - OSL_Server.Configuration.Config.LoadConfigRunesAllPage
+  - OSL_Server.Configuration.Config.LoadConfigRunesJunglePage
+  - OSL_Server.Configuration.Config.LoadConfigRunesMidPage
+  - OSL_Server.Configuration.Config.LoadConfigRunesPage
+  - OSL_Server.Configuration.Config.LoadConfigRunesSuppPage
+  - OSL_Server.Configuration.Config.LoadConfigRunesTopPage
   - OSL_Server.Configuration.Config.LoadConfigServerSocket
   - OSL_Server.Configuration.Config.LoadConfigTimer
   - OSL_Server.Configuration.Config.LoadDefaultSession
+  - OSL_Server.Configuration.Config.LoadDefaultSessionEndGame
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView1
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView2
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView3
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigChampSelectView4
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView1
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView2
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView3
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView1
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView2
   - OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcPage
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcSuppPage
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAllPage
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesJunglePage
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesMidPage
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesSuppPage
+  - OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesTopPage
+  - OSL_Server.Configuration.Config.LoadWebRiotApiKey
   - OSL_Server.Configuration.Config.oslServerHost
   - OSL_Server.Configuration.Config.oslServerHostName
   - OSL_Server.Configuration.Config.oslServerHttpPort
@@ -43,7 +66,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 13
+    startLine: 20
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -86,7 +109,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: oslServerHost
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 17
+    startLine: 24
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -119,7 +142,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: oslServerHostName
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 18
+    startLine: 25
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -152,7 +175,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: oslServerHttpPort
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 19
+    startLine: 26
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -185,7 +208,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: oslServerHttpsPort
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 20
+    startLine: 27
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -218,7 +241,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfig
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 25
+    startLine: 32
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -252,10 +275,12 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigOslServerHost
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 54
+    startLine: 96
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
+  summary: "\nLoad Config Osl Server Host for urls\n"
+  example: []
   syntax:
     content: public static void LoadConfigOslServerHost()
     content.vb: Public Shared Sub LoadConfigOslServerHost
@@ -284,7 +309,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigServerSocket
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 65
+    startLine: 107
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -318,7 +343,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigCDragon
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 83
+    startLine: 125
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -352,7 +377,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigTimer
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 123
+    startLine: 165
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -386,7 +411,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView1
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 134
+    startLine: 176
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -420,7 +445,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigChampSelectView1
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 154
+    startLine: 196
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -454,7 +479,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView2
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 190
+    startLine: 232
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -488,7 +513,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigChampSelectView2
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 211
+    startLine: 253
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -522,7 +547,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView3
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 252
+    startLine: 294
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -556,7 +581,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigChampSelectView3
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 273
+    startLine: 315
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -590,7 +615,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigChampSelectView4
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 315
+    startLine: 357
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -624,7 +649,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigChampSelectView4
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 336
+    startLine: 378
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -658,7 +683,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadDefaultSession
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 377
+    startLine: 419
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -668,6 +693,40 @@ items:
     content: public static void LoadDefaultSession()
     content.vb: Public Shared Sub LoadDefaultSession
   overload: OSL_Server.Configuration.Config.LoadDefaultSession*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadDefaultSessionEndGame
+  commentId: M:OSL_Server.Configuration.Config.LoadDefaultSessionEndGame
+  id: LoadDefaultSessionEndGame
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadDefaultSessionEndGame()
+  nameWithType: Config.LoadDefaultSessionEndGame()
+  fullName: OSL_Server.Configuration.Config.LoadDefaultSessionEndGame()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadDefaultSessionEndGame
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 428
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  summary: "\nLoad Default Session for display att start information on end game views\n"
+  example: []
+  syntax:
+    content: public static void LoadDefaultSessionEndGame()
+    content.vb: Public Shared Sub LoadDefaultSessionEndGame
+  overload: OSL_Server.Configuration.Config.LoadDefaultSessionEndGame*
   modifiers.csharp:
   - public
   - static
@@ -692,7 +751,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigInGameView1
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 383
+    startLine: 438
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -724,7 +783,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigInGameView1
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 399
+    startLine: 454
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -756,7 +815,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigInGameView2
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 435
+    startLine: 490
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -788,7 +847,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigInGameView2
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 451
+    startLine: 506
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -820,7 +879,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigInGameView3
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 485
+    startLine: 540
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -852,7 +911,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadFormatingDataConfigInGameView3
     path: ../OSL-Server/Configuration/Config.cs
-    startLine: 501
+    startLine: 556
   assemblies:
   - OSL-Server
   namespace: OSL_Server.Configuration
@@ -860,6 +919,710 @@ items:
     content: public static void LoadFormatingDataConfigInGameView3()
     content.vb: Public Shared Sub LoadFormatingDataConfigInGameView3
   overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadWebRiotApiKey
+  commentId: M:OSL_Server.Configuration.Config.LoadWebRiotApiKey
+  id: LoadWebRiotApiKey
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadWebRiotApiKey()
+  nameWithType: Config.LoadWebRiotApiKey()
+  fullName: OSL_Server.Configuration.Config.LoadWebRiotApiKey()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadWebRiotApiKey
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 572
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadWebRiotApiKey()
+    content.vb: Public Shared Sub LoadWebRiotApiKey
+  overload: OSL_Server.Configuration.Config.LoadWebRiotApiKey*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesPage
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigRunesPage
+  id: LoadConfigRunesPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigRunesPage()
+  nameWithType: Config.LoadConfigRunesPage()
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigRunesPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 581
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigRunesPage()
+    content.vb: Public Shared Sub LoadConfigRunesPage
+  overload: OSL_Server.Configuration.Config.LoadConfigRunesPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesTopPage
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigRunesTopPage
+  id: LoadConfigRunesTopPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigRunesTopPage()
+  nameWithType: Config.LoadConfigRunesTopPage()
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesTopPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigRunesTopPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 598
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigRunesTopPage()
+    content.vb: Public Shared Sub LoadConfigRunesTopPage
+  overload: OSL_Server.Configuration.Config.LoadConfigRunesTopPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesTopPage
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesTopPage
+  id: LoadFormatingDataConfigRunesTopPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigRunesTopPage()
+  nameWithType: Config.LoadFormatingDataConfigRunesTopPage()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesTopPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigRunesTopPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 615
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigRunesTopPage()
+    content.vb: Public Shared Sub LoadFormatingDataConfigRunesTopPage
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesTopPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesMidPage
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigRunesMidPage
+  id: LoadConfigRunesMidPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigRunesMidPage()
+  nameWithType: Config.LoadConfigRunesMidPage()
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesMidPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigRunesMidPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 633
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigRunesMidPage()
+    content.vb: Public Shared Sub LoadConfigRunesMidPage
+  overload: OSL_Server.Configuration.Config.LoadConfigRunesMidPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesMidPage
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesMidPage
+  id: LoadFormatingDataConfigRunesMidPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigRunesMidPage()
+  nameWithType: Config.LoadFormatingDataConfigRunesMidPage()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesMidPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigRunesMidPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 650
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigRunesMidPage()
+    content.vb: Public Shared Sub LoadFormatingDataConfigRunesMidPage
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesMidPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesJunglePage
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigRunesJunglePage
+  id: LoadConfigRunesJunglePage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigRunesJunglePage()
+  nameWithType: Config.LoadConfigRunesJunglePage()
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesJunglePage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigRunesJunglePage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 668
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigRunesJunglePage()
+    content.vb: Public Shared Sub LoadConfigRunesJunglePage
+  overload: OSL_Server.Configuration.Config.LoadConfigRunesJunglePage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesJunglePage
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesJunglePage
+  id: LoadFormatingDataConfigRunesJunglePage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigRunesJunglePage()
+  nameWithType: Config.LoadFormatingDataConfigRunesJunglePage()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesJunglePage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigRunesJunglePage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 685
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigRunesJunglePage()
+    content.vb: Public Shared Sub LoadFormatingDataConfigRunesJunglePage
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesJunglePage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesAdcPage
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigRunesAdcPage
+  id: LoadConfigRunesAdcPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigRunesAdcPage()
+  nameWithType: Config.LoadConfigRunesAdcPage()
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesAdcPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigRunesAdcPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 703
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigRunesAdcPage()
+    content.vb: Public Shared Sub LoadConfigRunesAdcPage
+  overload: OSL_Server.Configuration.Config.LoadConfigRunesAdcPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcPage
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcPage
+  id: LoadFormatingDataConfigRunesAdcPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigRunesAdcPage()
+  nameWithType: Config.LoadFormatingDataConfigRunesAdcPage()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigRunesAdcPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 720
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigRunesAdcPage()
+    content.vb: Public Shared Sub LoadFormatingDataConfigRunesAdcPage
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesSuppPage
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigRunesSuppPage
+  id: LoadConfigRunesSuppPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigRunesSuppPage()
+  nameWithType: Config.LoadConfigRunesSuppPage()
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesSuppPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigRunesSuppPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 743
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigRunesSuppPage()
+    content.vb: Public Shared Sub LoadConfigRunesSuppPage
+  overload: OSL_Server.Configuration.Config.LoadConfigRunesSuppPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesSuppPage
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesSuppPage
+  id: LoadFormatingDataConfigRunesSuppPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigRunesSuppPage()
+  nameWithType: Config.LoadFormatingDataConfigRunesSuppPage()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesSuppPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigRunesSuppPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 760
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigRunesSuppPage()
+    content.vb: Public Shared Sub LoadFormatingDataConfigRunesSuppPage
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesSuppPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesAdcSuppPage
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigRunesAdcSuppPage
+  id: LoadConfigRunesAdcSuppPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigRunesAdcSuppPage()
+  nameWithType: Config.LoadConfigRunesAdcSuppPage()
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesAdcSuppPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigRunesAdcSuppPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 778
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigRunesAdcSuppPage()
+    content.vb: Public Shared Sub LoadConfigRunesAdcSuppPage
+  overload: OSL_Server.Configuration.Config.LoadConfigRunesAdcSuppPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcSuppPage
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcSuppPage
+  id: LoadFormatingDataConfigRunesAdcSuppPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigRunesAdcSuppPage()
+  nameWithType: Config.LoadFormatingDataConfigRunesAdcSuppPage()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcSuppPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigRunesAdcSuppPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 795
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigRunesAdcSuppPage()
+    content.vb: Public Shared Sub LoadFormatingDataConfigRunesAdcSuppPage
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcSuppPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesAllPage
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigRunesAllPage
+  id: LoadConfigRunesAllPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigRunesAllPage()
+  nameWithType: Config.LoadConfigRunesAllPage()
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesAllPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigRunesAllPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 814
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigRunesAllPage()
+    content.vb: Public Shared Sub LoadConfigRunesAllPage
+  overload: OSL_Server.Configuration.Config.LoadConfigRunesAllPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAllPage
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAllPage
+  id: LoadFormatingDataConfigRunesAllPage
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigRunesAllPage()
+  nameWithType: Config.LoadFormatingDataConfigRunesAllPage()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAllPage()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigRunesAllPage
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 831
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigRunesAllPage()
+    content.vb: Public Shared Sub LoadFormatingDataConfigRunesAllPage
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAllPage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigEndGameView1Page
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigEndGameView1Page
+  id: LoadConfigEndGameView1Page
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigEndGameView1Page()
+  nameWithType: Config.LoadConfigEndGameView1Page()
+  fullName: OSL_Server.Configuration.Config.LoadConfigEndGameView1Page()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigEndGameView1Page
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 853
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigEndGameView1Page()
+    content.vb: Public Shared Sub LoadConfigEndGameView1Page
+  overload: OSL_Server.Configuration.Config.LoadConfigEndGameView1Page*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView1
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView1
+  id: LoadFormatingDataConfigEndGameView1
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigEndGameView1()
+  nameWithType: Config.LoadFormatingDataConfigEndGameView1()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView1()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigEndGameView1
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 870
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigEndGameView1()
+    content.vb: Public Shared Sub LoadFormatingDataConfigEndGameView1
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView1*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigEndGameView2Page
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigEndGameView2Page
+  id: LoadConfigEndGameView2Page
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigEndGameView2Page()
+  nameWithType: Config.LoadConfigEndGameView2Page()
+  fullName: OSL_Server.Configuration.Config.LoadConfigEndGameView2Page()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigEndGameView2Page
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 958
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigEndGameView2Page()
+    content.vb: Public Shared Sub LoadConfigEndGameView2Page
+  overload: OSL_Server.Configuration.Config.LoadConfigEndGameView2Page*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView2
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView2
+  id: LoadFormatingDataConfigEndGameView2
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigEndGameView2()
+  nameWithType: Config.LoadFormatingDataConfigEndGameView2()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView2()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigEndGameView2
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 975
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigEndGameView2()
+    content.vb: Public Shared Sub LoadFormatingDataConfigEndGameView2
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView2*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadConfigEndGameView3Page
+  commentId: M:OSL_Server.Configuration.Config.LoadConfigEndGameView3Page
+  id: LoadConfigEndGameView3Page
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigEndGameView3Page()
+  nameWithType: Config.LoadConfigEndGameView3Page()
+  fullName: OSL_Server.Configuration.Config.LoadConfigEndGameView3Page()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigEndGameView3Page
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 1062
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadConfigEndGameView3Page()
+    content.vb: Public Shared Sub LoadConfigEndGameView3Page
+  overload: OSL_Server.Configuration.Config.LoadConfigEndGameView3Page*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView3
+  commentId: M:OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView3
+  id: LoadFormatingDataConfigEndGameView3
+  parent: OSL_Server.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfigEndGameView3()
+  nameWithType: Config.LoadFormatingDataConfigEndGameView3()
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView3()
+  type: Method
+  source:
+    remote:
+      path: OSL-Server/Configuration/Config.cs
+      branch: InGame
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfigEndGameView3
+    path: ../OSL-Server/Configuration/Config.cs
+    startLine: 1078
+  assemblies:
+  - OSL-Server
+  namespace: OSL_Server.Configuration
+  syntax:
+    content: public static void LoadFormatingDataConfigEndGameView3()
+    content.vb: Public Shared Sub LoadFormatingDataConfigEndGameView3
+  overload: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView3*
   modifiers.csharp:
   - public
   - static
@@ -1261,6 +2024,11 @@ references:
   name: LoadDefaultSession
   nameWithType: Config.LoadDefaultSession
   fullName: OSL_Server.Configuration.Config.LoadDefaultSession
+- uid: OSL_Server.Configuration.Config.LoadDefaultSessionEndGame*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadDefaultSessionEndGame
+  name: LoadDefaultSessionEndGame
+  nameWithType: Config.LoadDefaultSessionEndGame
+  fullName: OSL_Server.Configuration.Config.LoadDefaultSessionEndGame
 - uid: OSL_Server.Configuration.Config.LoadConfigInGameView1*
   commentId: Overload:OSL_Server.Configuration.Config.LoadConfigInGameView1
   name: LoadConfigInGameView1
@@ -1291,3 +2059,113 @@ references:
   name: LoadFormatingDataConfigInGameView3
   nameWithType: Config.LoadFormatingDataConfigInGameView3
   fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigInGameView3
+- uid: OSL_Server.Configuration.Config.LoadWebRiotApiKey*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadWebRiotApiKey
+  name: LoadWebRiotApiKey
+  nameWithType: Config.LoadWebRiotApiKey
+  fullName: OSL_Server.Configuration.Config.LoadWebRiotApiKey
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigRunesPage
+  name: LoadConfigRunesPage
+  nameWithType: Config.LoadConfigRunesPage
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesPage
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesTopPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigRunesTopPage
+  name: LoadConfigRunesTopPage
+  nameWithType: Config.LoadConfigRunesTopPage
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesTopPage
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesTopPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesTopPage
+  name: LoadFormatingDataConfigRunesTopPage
+  nameWithType: Config.LoadFormatingDataConfigRunesTopPage
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesTopPage
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesMidPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigRunesMidPage
+  name: LoadConfigRunesMidPage
+  nameWithType: Config.LoadConfigRunesMidPage
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesMidPage
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesMidPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesMidPage
+  name: LoadFormatingDataConfigRunesMidPage
+  nameWithType: Config.LoadFormatingDataConfigRunesMidPage
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesMidPage
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesJunglePage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigRunesJunglePage
+  name: LoadConfigRunesJunglePage
+  nameWithType: Config.LoadConfigRunesJunglePage
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesJunglePage
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesJunglePage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesJunglePage
+  name: LoadFormatingDataConfigRunesJunglePage
+  nameWithType: Config.LoadFormatingDataConfigRunesJunglePage
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesJunglePage
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesAdcPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigRunesAdcPage
+  name: LoadConfigRunesAdcPage
+  nameWithType: Config.LoadConfigRunesAdcPage
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesAdcPage
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcPage
+  name: LoadFormatingDataConfigRunesAdcPage
+  nameWithType: Config.LoadFormatingDataConfigRunesAdcPage
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcPage
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesSuppPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigRunesSuppPage
+  name: LoadConfigRunesSuppPage
+  nameWithType: Config.LoadConfigRunesSuppPage
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesSuppPage
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesSuppPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesSuppPage
+  name: LoadFormatingDataConfigRunesSuppPage
+  nameWithType: Config.LoadFormatingDataConfigRunesSuppPage
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesSuppPage
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesAdcSuppPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigRunesAdcSuppPage
+  name: LoadConfigRunesAdcSuppPage
+  nameWithType: Config.LoadConfigRunesAdcSuppPage
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesAdcSuppPage
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcSuppPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcSuppPage
+  name: LoadFormatingDataConfigRunesAdcSuppPage
+  nameWithType: Config.LoadFormatingDataConfigRunesAdcSuppPage
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAdcSuppPage
+- uid: OSL_Server.Configuration.Config.LoadConfigRunesAllPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigRunesAllPage
+  name: LoadConfigRunesAllPage
+  nameWithType: Config.LoadConfigRunesAllPage
+  fullName: OSL_Server.Configuration.Config.LoadConfigRunesAllPage
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAllPage*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAllPage
+  name: LoadFormatingDataConfigRunesAllPage
+  nameWithType: Config.LoadFormatingDataConfigRunesAllPage
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigRunesAllPage
+- uid: OSL_Server.Configuration.Config.LoadConfigEndGameView1Page*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigEndGameView1Page
+  name: LoadConfigEndGameView1Page
+  nameWithType: Config.LoadConfigEndGameView1Page
+  fullName: OSL_Server.Configuration.Config.LoadConfigEndGameView1Page
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView1*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView1
+  name: LoadFormatingDataConfigEndGameView1
+  nameWithType: Config.LoadFormatingDataConfigEndGameView1
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView1
+- uid: OSL_Server.Configuration.Config.LoadConfigEndGameView2Page*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigEndGameView2Page
+  name: LoadConfigEndGameView2Page
+  nameWithType: Config.LoadConfigEndGameView2Page
+  fullName: OSL_Server.Configuration.Config.LoadConfigEndGameView2Page
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView2*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView2
+  name: LoadFormatingDataConfigEndGameView2
+  nameWithType: Config.LoadFormatingDataConfigEndGameView2
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView2
+- uid: OSL_Server.Configuration.Config.LoadConfigEndGameView3Page*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadConfigEndGameView3Page
+  name: LoadConfigEndGameView3Page
+  nameWithType: Config.LoadConfigEndGameView3Page
+  fullName: OSL_Server.Configuration.Config.LoadConfigEndGameView3Page
+- uid: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView3*
+  commentId: Overload:OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView3
+  name: LoadFormatingDataConfigEndGameView3
+  nameWithType: Config.LoadFormatingDataConfigEndGameView3
+  fullName: OSL_Server.Configuration.Config.LoadFormatingDataConfigEndGameView3

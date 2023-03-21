@@ -140,7 +140,7 @@
     <a href="https://github.com/Sky-CSC/OSL/new/InGame/apiSpec/new?filename=OSL_Server_Pages_ConfigPage_ConfigOverlayText_Port.md&amp;value=---%0Auid%3A%20OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Sky-CSC/OSL/blob/InGame/OSL-Server/Pages/ConfigPage.razor.cs/#L18">View Source</a>
+    <a href="https://github.com/Sky-CSC/OSL/blob/InGame/OSL-Server/Pages/ConfigPage.razor.cs/#L24">View Source</a>
   </span>
   <a id="OSL_Server_Pages_ConfigPage_ConfigOverlayText_Port_" data-uid="OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port*"></a>
   <h4 id="OSL_Server_Pages_ConfigPage_ConfigOverlayText_Port" data-uid="OSL_Server.Pages.ConfigPage.ConfigOverlayText.Port">Port</h4>
@@ -163,6 +163,38 @@ public int Port { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Sky-CSC/OSL/new/InGame/apiSpec/new?filename=OSL_Server_Pages_ConfigPage_ConfigOverlayText_WebRiotApiKey.md&amp;value=---%0Auid%3A%20OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Sky-CSC/OSL/blob/InGame/OSL-Server/Pages/ConfigPage.razor.cs/#L28">View Source</a>
+  </span>
+  <a id="OSL_Server_Pages_ConfigPage_ConfigOverlayText_WebRiotApiKey_" data-uid="OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey*"></a>
+  <h4 id="OSL_Server_Pages_ConfigPage_ConfigOverlayText_WebRiotApiKey" data-uid="OSL_Server.Pages.ConfigPage.ConfigOverlayText.WebRiotApiKey">WebRiotApiKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+[StringLength(42, MinimumLength = 42, ErrorMessage = &quot;API key is incorect (42 character).&quot;)]
+public string WebRiotApiKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>

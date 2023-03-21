@@ -158,7 +158,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerksStyle
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
-    startLine: 115
+    startLine: 123
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -208,7 +208,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: PerksAsyncDownload
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
-    startLine: 162
+    startLine: 170
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
@@ -264,7 +264,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonPerks
     path: ../OSL-Server/DataLoader/CDragon/PerksManager.cs
-    startLine: 174
+    startLine: 182
   assemblies:
   - OSL-Server
   namespace: OSL_Server.DataLoader.CDragon
