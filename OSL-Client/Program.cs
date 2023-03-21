@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 //using OSL_Client.RiotApp.MemoryProcessing;
 using OSL_Client.Communication.OSLServer;
 using System.Net;
+using OSL_Client.RiotApp.MemoryProcessing;
 
 Console.WriteLine("");
 OSLLogger logger = new("Program");
@@ -21,7 +22,7 @@ Console.WriteLine("# No forget to check if server is running #");
 Console.WriteLine("###########################################\n");
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("###########################");
-Console.WriteLine("##### Version 0.1.0 #####");
+Console.WriteLine("###### Version 1.0.0 ######");
 Console.WriteLine("###########################\n");
 Console.ResetColor();
 
@@ -30,6 +31,7 @@ Config.LoadConfig();
 
 String data = "Hello OSL-Server is OSL-Client managed by Sky";
 AsyncClient.StartClient(data);
+Thread.Sleep(1000);
 //while (!AsyncClient.StartClient(data))
 //{
 
@@ -56,3 +58,5 @@ while (true)
         }
     }
 }
+
+//TestClass.Test();

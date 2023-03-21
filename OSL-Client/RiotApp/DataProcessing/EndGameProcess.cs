@@ -15,6 +15,7 @@ namespace OSL_Client.RiotApp.DataProcessing
     /// </summary>
     internal class EndGameProcess
     {
+        private static OSLLogger _logger = new OSLLogger("EndGameProcess");
         /// <summary>
         /// Send to socket server data recive from riot client from end game
         /// </summary>
@@ -28,10 +29,18 @@ namespace OSL_Client.RiotApp.DataProcessing
                 Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
             };
             string inGameStartSend = JsonConvert.SerializeObject(inGameStart); //send to server information
-            AsyncClient.StartClient(inGameStartSend);
+            //AsyncClient.StartClient(inGameStartSend);
+            AsyncClient.Send(inGameStartSend);
 
             string sessionInfo = ApiRequest.RequestGameClientAPI("/lol-end-of-game/v1/eog-stats-block");
-            AsyncClient.StartClient(sessionInfo);
+            //AsyncClient.StartClient(sessionInfo);
+            AsyncClient.Send(sessionInfo);
+
+            while (sessionInfo != null && ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase).Equals(GameFlowPhase.EndOfGame))
+            {
+                _logger.log(LoggingLevel.INFO, "InEndGame()", "In end game");
+                Thread.Sleep(5000);
+            }
 
             var inGameEnd = new GameFlowPhaseStatus
             {
@@ -41,7 +50,8 @@ namespace OSL_Client.RiotApp.DataProcessing
                 Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
             };
             string inGameEndSend = JsonConvert.SerializeObject(inGameEnd); //send to server information
-            AsyncClient.StartClient(inGameEndSend);
+            //AsyncClient.StartClient(inGameEndSend);
+            AsyncClient.Send(inGameEndSend);
         }
     }
 }

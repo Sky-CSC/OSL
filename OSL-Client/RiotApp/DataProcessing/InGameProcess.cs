@@ -33,16 +33,32 @@ namespace OSL_Client.RiotApp.DataProcessing
                 Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
             };
             string inGameStartSend = JsonConvert.SerializeObject(inGameStart); //send to server information
-            AsyncClient.StartClient(inGameStartSend);
-
+            //AsyncClient.StartClient(inGameStartSend);
+            AsyncClient.Send(inGameStartSend);
 
             ConnectLiveEventsAPI();
+
             //string playerList = ApiRequest.RequestGameClientReplayAPI("/liveclientdata/playerlist");
             string sessionInfo = ApiRequest.RequestGameClientAPI("/lol-gameflow/v1/session");
-            AsyncClient.StartClient(sessionInfo);
+            //AsyncClient.StartClient(sessionInfo);
+            AsyncClient.Send(sessionInfo);
+            //if (sessionInfo != null)
+            //{
+            //    AsyncClient.StartClient(sessionInfo);
+            //}
+            //else
+            //{
+            //    string sessionInfo = ApiRequest.RequestGameClientAPI("/lol-gameflow/v1/session");
+            //}
             //Send information from game to serveur
             string gameFlowPhase;
             gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase);
+
+            while (gameFlowPhase != null && ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase).Equals(GameFlowPhase.InProgress))
+            {
+                _logger.log(LoggingLevel.INFO, "InGame()", "In game");
+                Thread.Sleep(5000);
+            }
             //while (gameFlowPhase != null && gameFlowPhase.Equals(GameFlowPhase.InProgress))
             //{
             //    Thread.Sleep(5000);
@@ -68,7 +84,7 @@ namespace OSL_Client.RiotApp.DataProcessing
 
             //    gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase);
             //}
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
 
             var inGameEnd = new GameFlowPhaseStatus
             {
@@ -78,8 +94,8 @@ namespace OSL_Client.RiotApp.DataProcessing
                 Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
             };
             string inGameEndSend = JsonConvert.SerializeObject(inGameEnd); //send to server information
-            AsyncClient.StartClient(inGameEndSend);
-
+            //AsyncClient.StartClient(inGameEndSend);
+            AsyncClient.Send(inGameEndSend);
 
             //Init all fonction of this game
 
