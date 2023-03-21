@@ -7,6 +7,7 @@ using OSL_Server.Pages.InGame;
 using OSL_Server.Pages.Runes;
 using OSL_Server.Pages.EndGame;
 using System.Net.Http.Json;
+using OSL_Server.DataLoader.WebApiRiot;
 
 namespace OSL_Server.Pages
 {
@@ -23,6 +24,16 @@ namespace OSL_Server.Pages
             [Required]
             [Range(0, 65535, ErrorMessage = "Accommodation invalid (1-65535).")]
             public int Port { get; set; } = 45678;
+
+            [Required]
+            [StringLength(42, MinimumLength = 42, ErrorMessage = "API key is incorect (42 character).")]
+            public string WebRiotApiKey { get; set; }
+        }
+
+        public static void WebRiotApiKeySubmit()
+        {
+            WebApiRiot.apiKey = OverlayText.WebRiotApiKey;
+            _logger.log(LoggingLevel.INFO, "WebRiotApiKeySubmit()", $"Web riot api key change : {WebApiRiot.apiKey}");
         }
 
         private async Task LoadFiles(InputFileChangeEventArgs e)

@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSL-Server", "OSL-Server\OS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSL-Client", "OSL-Client\OSL-Client.csproj", "{11EBDE30-D290-4B6A-9928-6A1532DF5917}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OSL-Api", "OSL-Api\OSL-Api.csproj", "{6185E035-2A09-443D-B604-58253F335D2D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{11EBDE30-D290-4B6A-9928-6A1532DF5917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11EBDE30-D290-4B6A-9928-6A1532DF5917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11EBDE30-D290-4B6A-9928-6A1532DF5917}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6185E035-2A09-443D-B604-58253F335D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6185E035-2A09-443D-B604-58253F335D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6185E035-2A09-443D-B604-58253F335D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6185E035-2A09-443D-B604-58253F335D2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

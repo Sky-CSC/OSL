@@ -37,6 +37,26 @@ Applications use various APIs to collect information about the game, champions, 
 - Number of victory/lose teams
 - Frame for video/logo/player picture ...
 
+**[End Game :](https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-in-end-game)**
+- 3 view
+- Team name
+- Team score
+- Team win loose
+- Damage to champion
+- Bans
+- KDA/Gold/Tower/Dragon/Elder Dragon/Herald/Baron
+- Gold Diff
+
+**[Runes :](https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-runes)**
+- 7 view
+- Top
+- Jungle
+- Mid
+- Adc
+- Support
+- Adc and support
+- All
+
 # **Documentation**
 I try to provide full documentation on the code and API I use. **[Link documentation](https://sky-csc.github.io/OSL/)**
 
@@ -51,35 +71,26 @@ I try to provide full documentation on the code and API I use. **[Link documenta
 5. Add http://ip:4141/champselect/view1 and/or http://ip:4141/champselect/view2 and/or 
 http://ip:4141/champselect/view3 and/or http://ip:4141/champselect/view4 as a browser source in OBS in your ban pick scene
 6. Add http://ip:4141/ingame/view1 and/or http://ip:4141/ingame/view2 and/or http://ip:4141/ingame/view3 as a browser source in OBS in your in game scene
+7. Add http://ip:4141/endgame/view1 and/or http://ip:4141/endgame/view2 and/or http://ip:4141/endgame/view3 as a browser source in OBS in your in game scene
+8. Add http://ip:4141/runes/top and http://ip:4141/runes/jungle and http://ip:4141/runes/mid and http://ip:4141/runes/adc and http://ip:4141/runes/supp and http://ip:4141/runes/adcsupp and http://ip:4141/runes/all as a browser source in OBS in your in game scene
 
 # **Roadmap**
 
-**Champ Select :**
-- Improved customization **(In progress !!)**
+**Refactoring code :**
+-  **(In progress !!)**
 
 **In Game**
-- Get action/information give by League of Legends api
-- Read in memory
+- Read in memory 
+- Improved customization
 
-**Runes**
-- Display of players' runes, lane by lane (blue champion midlane vs red champion midlane, blue champion adc and supp vs red champion adc and supp, ...) **(In progress !!)**
+**Champ Select :**
+- Improved customization
 
 **End Game**
-- Recap of the game
-  - Timer game
-  - Teams name
-  - Logo teams
-  - Champ dega
-  - KDA
-  - Total golds
-  - Number tower kill by team
-  - Number drake kill by team
-  - Number elder dragon kill by team
-  - Number herald kill by team
-  - Number baron kill by team
-  - Champion Ban/Pick
-  - Gold difference over time
+- Improved customization
 
+**Runes**
+- Improved customization
 
 # **License**
 ⚠️**The license of this code is not given yet, it is coming soon**⚠️

@@ -112,13 +112,14 @@ namespace OSL_Server.Communication
                     if (bytesRead > 0)
                     {
                         // There  might be more data, so store the data received so far.
-                        client.sb.Append(Encoding.UTF8.GetString(
-                            client.buffer, 0, bytesRead));
+                        //client.sb.Append(Encoding.UTF8.GetString(
+                        //    client.buffer, 0, bytesRead));
 
                         // Check for end-of-file tag. If it is not there, read 
                         // more data.
-                        content = client.sb.ToString();
-                        _logger.log(LoggingLevel.INFO, "ReadCallback()", $"Content recived {content}");
+                        //content = client.sb.ToString();
+                        content = Encoding.UTF8.GetString(client.buffer, 0, bytesRead);
+                        //_logger.log(LoggingLevel.INFO, "ReadCallback()", $"Content recived {content}");
 
                         string returnContent = ReciveFromClient.ReadData(content);
 
@@ -126,7 +127,6 @@ namespace OSL_Server.Communication
                     }
                     //handler.BeginReceive(client.buffer, 0, Client.BufferSize, 0,
                     //    ReadCallback, client);
-                    Console.WriteLine("plop");
                     //Socket never close, system wait interruption kernel to close it
                 }
             }

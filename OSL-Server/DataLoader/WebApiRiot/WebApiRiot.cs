@@ -64,6 +64,8 @@ namespace OSL_Server.DataLoader.WebApiRiot
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(httpsWebApiRiot);
                 request.Headers["X-Riot-Token"] = apiKey;
+                Console.WriteLine(apiKey);
+                _logger.log(LoggingLevel.INFO, "apiKey", "apiKey " + apiKey);
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 Stream resStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(resStream);
