@@ -1,0 +1,190 @@
+﻿@page "/runes"
+@using MudBlazor
+@using static OSL_Web.DataProcessing.Runes;
+
+<PageTitle>Runes</PageTitle>
+<div class="parent">
+    <div class="runes">
+        <div class="content">
+            <h1 class="title">Runes</h1>
+            Champions are automatically placed on the lanes
+            <br />Choose champion lanes for display runes lane vs lane <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@RunesPage.ResetLanes">Reset champion lane</button>
+            <br />
+            <br />
+            <a class="btn btn-primary button-form" href="runes/top" target="_blank">Link Runes Top</a>
+            <a class="btn btn-primary button-form" href="runes/mid" target="_blank">Link Runes Mid</a>
+            <a class="btn btn-primary button-form" href="runes/jungle" target="_blank">Link Runes Jungle</a>
+            <a class="btn btn-primary button-form" href="runes/adc" target="_blank">Link Runes Adc</a>
+            <a class="btn btn-primary button-form" href="runes/supp" target="_blank">Link Runes Support</a>
+            <a class="btn btn-primary button-form" href="runes/adcsupp" target="_blank">Link Runes Adc and Support</a>
+            <a class="btn btn-primary button-form" href="runes/all" target="_blank">Link Runes All</a>
+            <br />
+            <br />
+
+            @if (summonerPerksList.Count() != 0)
+            {
+                <div class="alert-primary" style="border-radius: 10px;">
+                    <h3 style="padding: 5px;"><strong>Info!</strong> Rune information available</h3>
+                </div>
+                <br />
+                <div class="summoner-lane">
+                    <div class="blue-side">
+                        @foreach (var summoner in summonerPerksList.Select((info, index) => (info, index)))
+                        {
+                            @if (summoner.info.TeamId == 100)
+                            {
+                                <div class="summoner-lane-info">
+                                    <div class="summoner-lane-info-summoner-name">
+                                        @summonerPerksList[summoner.index].SummonerName
+                                    </div>
+                                    <div class="summoner-lane-info-picture-champ">
+                                        <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[summoner.index].ChampionId)" />
+                                    </div>
+                                    <div class="summoner-lane-info-select">
+                                        <EditForm Model="laneSelectionSummoner1">
+                                            <InputSelect @bind-Value="summonerPerksList[summoner.index].Lane">
+                                                @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
+                                                {
+                                                    <option>@lane</option>
+                                                }
+                                            </InputSelect>
+                                        </EditForm>
+                                    </div>
+                                </div>
+                                summonerPerksList[summoner.index].Lane = summonerPerksList[summoner.index].Lane;
+                            }
+                        }
+                    </div>
+
+                    <div class="red-side">
+                        @foreach (var summoner in summonerPerksList.Select((info, index) => (info, index)))
+                        {
+                            @if (summoner.info.TeamId == 200)
+                            {
+                                <div class="summoner-lane-info">
+                                    <div class="summoner-lane-info-summoner-name">
+                                        @summonerPerksList[summoner.index].SummonerName
+                                    </div>
+                                    <div class="summoner-lane-info-picture-champ">
+                                        <img class="summoner-lane-info-picture-champ-img" src="@GetChampionPicturePath(summonerPerksList[summoner.index].ChampionId)" />
+                                    </div>
+                                    <div class="summoner-lane-info-select">
+                                        <EditForm Model="laneSelectionSummoner1">
+                                            <InputSelect @bind-Value="summonerPerksList[summoner.index].Lane">
+                                                @foreach (Lanes lane in Enum.GetValues(typeof(Lanes)))
+                                                {
+                                                    <option>@lane</option>
+                                                }
+                                            </InputSelect>
+                                        </EditForm>
+                                    </div>
+                                </div>
+                                summonerPerksList[summoner.index].Lane = summonerPerksList[summoner.index].Lane;
+                            }
+                        }
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert-warning" style="border-radius: 10px;">
+                    <h3 style="padding: 5px;"><strong>Warning!</strong> Not rune information found</h3>
+                </div>
+            }
+            <br />
+            <div class="customization">
+                <button class="btn btn-primary button-form" style="background-color: @overlayButton.color" @onclick="@HideOrDisplayContent">
+                    Clic to @overlayButton.text customization
+                </button>
+                <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ResetColor">Reset color</button>
+                <br />
+                <br />
+                <div style="display: @displayContent">
+                    <EditForm Model="@overlay" OnValidSubmit="@Overlay.BackgroundPictureSubmit">
+                        <label style="font-weight: bold">Background Picture : </label>
+                        <InputCheckbox id="name" @bind-Value="overlay.BackgroundPicture" />
+                    </EditForm>
+                    <EditForm Model="@overlay" OnValidSubmit="@Overlay.ForegroundBackgroundSubmit">
+                        <label style="font-weight: bold">Enable foreground background : </label>
+                        <InputCheckbox id="name" @bind-Value="overlay.ForegroundBackground" />
+                    </EditForm>
+                    <EditForm Model="@overlay" OnValidSubmit="@Overlay.BackgroudGradientSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label style="font-weight: bold">Backgroud Gradient ("@RunesAdcPage.formatingData.BackgroudGradient") : </label>
+                        <br /><InputNumber id="name" style="width: 50px" @bind-Value="overlay.BackgroudGradientDeg" placeholder="150" />
+                        deg
+                        <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @RunesAdcPage.formatingData.BackgroudGradientColor1" @onclick="@Overlay.SetBackgroudGradientColor1"></button> <spam style="font-weight: bold ;color: @RunesAdcPage.formatingData.BackgroudGradientColor1"> @RunesAdcPage.formatingData.BackgroudGradientColor1</spam>
+                        <InputNumber id="name" style="width: 50px" @bind-Value="overlay.BackgroudGradientPercent1" placeholder="0" />
+                        %
+                        <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @RunesAdcPage.formatingData.BackgroudGradientColor2" @onclick="@Overlay.SetBackgroudGradientColor2"></button> <spam style="font-weight: bold ;color: @RunesAdcPage.formatingData.BackgroudGradientColor2"> @RunesAdcPage.formatingData.BackgroudGradientColor2</spam>
+                        <InputNumber id="name" style="width: 50px" @bind-Value="overlay.BackgroudGradientPercent2" placeholder="100" />
+                        %
+                        <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                    </EditForm>
+
+                    <br /><spam style="font-weight: bold">Blue Side Color Text Summoner  </spam><button class="btn btn-primary button-form button-color" style="background-color: @RunesAdcPage.formatingData.BlueSideColorTextSummoner" @onclick="@Overlay.SetBlueSideColorTextSummoner"></button> <spam style="font-weight: bold ;color: @RunesAdcPage.formatingData.BlueSideColorTextSummoner"> @RunesAdcPage.formatingData.BlueSideColorTextSummoner</spam>
+                    <br /><spam style="font-weight: bold">Blue Side Color Separation Bar  </spam><button class="btn btn-primary button-form button-color" style="background-color: @RunesAdcPage.formatingData.BlueSideColorSeparationBar" @onclick="@Overlay.SetBlueSideColorSeparationBar"></button> <spam style="font-weight: bold ;color: @RunesAdcPage.formatingData.BlueSideColorSeparationBar"> @RunesAdcPage.formatingData.BlueSideColorSeparationBar</spam>
+                    <EditForm Model="@overlay" OnValidSubmit="@Overlay.BlueSideColorBorderChampionSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label style="font-weight: bold">Blue Side Color Border Champion ("@RunesAdcPage.formatingData.BlueSideColorBorderChampion") : </label>
+                        <InputNumber id="name" style="width: 40px" @bind-Value="overlay.BlueSideColorBorderChampion" placeholder="2" />
+                        <button class="btn btn-primary button-form button-color" style="background-color: @Overlay.TempsBlueSideColorBorderChampion()" @onclick="@Overlay.SetBlueSideColorBorderChampion"></button>
+                        <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                    </EditForm>
+                    <br /><spam style="font-weight: bold">Red Side Color Text Summoner  </spam><button class="btn btn-primary button-form button-color" style="background-color: @RunesAdcPage.formatingData.RedSideColorTextSummoner" @onclick="@Overlay.SetRedSideColorTextSummoner"></button> <spam style="font-weight: bold ;color: @RunesAdcPage.formatingData.RedSideColorTextSummoner"> @RunesAdcPage.formatingData.RedSideColorTextSummoner</spam>
+                    <br /><spam style="font-weight: bold">Red Side Color Separation Bar  </spam><button class="btn btn-primary button-form button-color" style="background-color: @RunesAdcPage.formatingData.RedSideColorSeparationBar" @onclick="@Overlay.SetRedSideColorSeparationBar"></button> <spam style="font-weight: bold ;color: @RunesAdcPage.formatingData.RedSideColorSeparationBar"> @RunesAdcPage.formatingData.RedSideColorSeparationBar</spam>
+                    <EditForm Model="@overlay" OnValidSubmit="@Overlay.RedSideColorBorderChampionSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label style="font-weight: bold">Red Side Color Border Champion ("@RunesAdcPage.formatingData.RedSideColorBorderChampion") : </label>
+                        <InputNumber id="name" style="width: 40px" @bind-Value="overlay.RedSideColorBorderChampion" placeholder="2" />
+                        <button class="btn btn-primary button-form button-color" style="background-color: @Overlay.TempsRedSideColorBorderChampion()" @onclick="@Overlay.SetRedSideColorBorderChampion"></button>
+                        <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                    </EditForm>
+                    <br />
+                </div>
+
+                <br />
+                <div class="color-picker" style="visibility: @colorPicker">
+                    <div class="color-picker-position">
+                        <MudGrid>
+                            <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                        </MudGrid>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+
+@code {
+    public static LaneInfo laneSelectionSummoner1 = new();
+    public static LaneInfo laneSelectionSummoner2 = new();
+
+    public static Overlay overlay = new();
+
+    private System.Timers.Timer timer = new(5000);
+
+    protected override void OnInitialized()
+    {
+        timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        timer.Start();
+    }
+
+    private void OnTimerCallback()
+    {
+        _ = InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => timer.Dispose();
+}

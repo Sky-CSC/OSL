@@ -1,0 +1,549 @@
+﻿@page "/champselect"
+@using OSL_Web.DataProcessing
+@using MudBlazor
+
+<PageTitle>Champ Select</PageTitle>
+<div class="parent">
+    <div class="champSelect">
+        <div class="content">
+            <h1 class="title">Champ Select :</h1>
+            @{
+                LoadTextEnableOrDisableOverlays();
+            }
+            <br />
+
+            @if (ChampSelect.session is null)
+            {
+                <div class="alert-warning" style="width: 520px; border-radius: 10px;">
+                    <h3><strong>Warning!</strong> Champ Select not in progress</h3>
+                </div>
+            }
+            else
+            {
+                <div class="alert-info" style="width: 500px; border-radius: 10px;">
+                    <h3><strong>Info!</strong> Champ Select in progress</h3>
+                </div>
+            }
+
+            This allows you to customize the champion selection overlay
+            <br />- Team name
+            <br />- Background
+            <br />- Summoners Spell
+            <br />- Blue/red side background/text/border color
+            <br />- Ban backgound color
+
+            <br />
+            @*View1*@
+            <br /><div class="champ-select-overlay-1">
+                <h3 class="title">Champ Select Overlay 1 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView1Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="champselect/view1" target="_blank">Link Overlay 1</a>
+                @*<button class="btn btn-primary button-form" style="background-color: @overlayView1Button.color" @onclick="@ChampSelectView1Page.EnableOrDisableOverlayView" disabled="@(ChampSelect.session is null)">
+                    Clic to @overlayView1Button.text
+                </button>*@
+                <button class="btn btn-primary button-form" style="background-color: @displayContentView1Button.color" @onclick="@HideOrDisplayContentView1">
+                    Clic to @displayContentView1Button.text customization
+                </button>
+                <div style="display: @displayContentView1">
+                    <p>
+                        <br />
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BlueSideTeamNameSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Team Name ("@ChampSelectView1Page.formatingData.BlueSideTeamName") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView1.BlueSideTeamName" placeholder="Skynet" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BlueSideTeamSubtextSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Subtext ("@ChampSelectView1Page.formatingData.BlueTeamSubtext") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView1.BlueTeamSubtext" placeholder="2-1" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.RedSideTeamNameSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Red Side Team Name ("@ChampSelectView1Page.formatingData.RedSideTeamName") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView1.RedSideTeamName" placeholder="Cyberdyne Systems" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.RedSideTeamSubtextSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Red Side Subtext ("@ChampSelectView1Page.formatingData.RedTeamSubtext") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView1.RedTeamSubtext" placeholder="1-2" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.SwitchSideRedBlue">
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                        </EditForm>
+                        <br />
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.OverlayBackgroundSubmit">
+                            <label style="font-weight: bold">Overlay Background : </label>
+                            <InputCheckbox id="name" @bind-Value="textValueOverlayView1.OverlayBackground" />
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.DisplaySummonerSpellSubmit">
+                            <label style="font-weight: bold">Display Summoners Spell : </label>
+                            <InputCheckbox id="name" @bind-Value="textValueOverlayView1.DisplaySummonerSpell" />
+                        </EditForm>
+                        @*Backgournd*@
+
+                        <br />
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BlueSideTimerBorderColorSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Timer Border Color ("@ChampSelectView1Page.formatingData.BlueSideTimerBorderColor") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.BlueSideTimerBorderColor" placeholder="5" />
+                            <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsBlueSideTimerBorderColor()" @onclick="@TextValueOverlayView1.SetBlueSideTimerBorderColor"></button>
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BlueSideBorderColorSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Border Color ("@ChampSelectView1Page.formatingData.BlueSideBorderColor") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.BlueSideBorderColor" placeholder="5" />
+                            <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsBlueSideBorderColor()" @onclick="@TextValueOverlayView1.SetBlueSideBorderColor"></button>
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <spam style="font-weight: bold"> Blue Team Name Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.BlueTeamNameColor" @onclick="@TextValueOverlayView1.SetBlueTeamNameColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.BlueTeamNameColor"> @ChampSelectView1Page.formatingData.BlueTeamNameColor</spam>
+                        <br /><spam style="font-weight: bold"> Blue Team Subtext Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.BlueTeamSubtextColor" @onclick="@TextValueOverlayView1.SetBlueTeamSubtextColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.BlueTeamSubtextColor"> @ChampSelectView1Page.formatingData.BlueTeamSubtextColor</spam>
+                        <br /><spam style="font-weight: bold"> Blue Side Texte Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.BlueSideTexteColor" @onclick="@TextValueOverlayView1.SetBlueSideTexteColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.BlueSideTexteColor"> @ChampSelectView1Page.formatingData.BlueSideTexteColor</spam>
+                        <br /><spam style="font-weight: bold"> Blue Side Backgroud Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.BlueSideBackgroudColor" @onclick="@TextValueOverlayView1.SetBlueSideBackgroudColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.BlueSideBackgroudColor"> @ChampSelectView1Page.formatingData.BlueSideBackgroudColor</spam>
+                        <br /><spam style="font-weight: bold"> Blue Side Timer Backgroud Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.BlueSideTimerBackgroudColor" @onclick="@TextValueOverlayView1.SetBlueSideTimerBackgroudColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.BlueSideTimerBackgroudColor"> @ChampSelectView1Page.formatingData.BlueSideTimerBackgroudColor</spam>
+                        <br /><spam style="font-weight: bold"> Blue Side Timer Texte Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.BlueSideTimerTexteColor" @onclick="@TextValueOverlayView1.SetBlueSideTimerTexteColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.BlueSideTimerTexteColor"> @ChampSelectView1Page.formatingData.BlueSideTimerTexteColor</spam>
+                        <br /><br />
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.RedSideTimerBorderColorSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Red Side Timer Border Color ("@ChampSelectView1Page.formatingData.RedSideTimerBorderColor") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.RedSideTimerBorderColor" placeholder="5" />
+                            <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsRedSideTimerBorderColor()" @onclick="@TextValueOverlayView1.SetRedSideTimerBorderColor"></button>
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.RedSideBorderColorSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Red Side Border Color ("@ChampSelectView1Page.formatingData.RedSideBorderColor") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView1.RedSideBorderColor" placeholder="5" />
+                            <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView1.TempsRedSideBorderColor()" @onclick="@TextValueOverlayView1.SetRedSideBorderColor"></button>
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <spam style="font-weight: bold"> Red Team Name Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.RedTeamNameColor" @onclick="@TextValueOverlayView1.SetRedTeamNameColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.RedTeamNameColor"> @ChampSelectView1Page.formatingData.RedTeamNameColor</spam>
+                        <br /><spam style="font-weight: bold"> Red Team Subtext Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.RedTeamSubtextColor" @onclick="@TextValueOverlayView1.SetRedTeamSubtextColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.RedTeamSubtextColor"> @ChampSelectView1Page.formatingData.RedTeamSubtextColor</spam>
+                        <br /><spam style="font-weight: bold"> Red Side Texte Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.RedSideTexteColor" @onclick="@TextValueOverlayView1.SetRedSideTexteColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.RedSideTexteColor"> @ChampSelectView1Page.formatingData.RedSideTexteColor</spam>
+                        <br /><spam style="font-weight: bold"> Red Side Backgroud Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.RedSideBackgroudColor" @onclick="@TextValueOverlayView1.SetRedSideBackgroudColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.RedSideBackgroudColor"> @ChampSelectView1Page.formatingData.RedSideBackgroudColor</spam>
+                        <br /><spam style="font-weight: bold"> Red Side Timer Backgroud Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.RedSideTimerBackgroudColor" @onclick="@TextValueOverlayView1.SetRedSideTimerBackgroudColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.RedSideTimerBackgroudColor"> @ChampSelectView1Page.formatingData.RedSideTimerBackgroudColor</spam>
+                        <br /><spam style="font-weight: bold"> Red Side Timer Texte Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.RedSideTimerTexteColor" @onclick="@TextValueOverlayView1.SetRedSideTimerTexteColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.RedSideTimerTexteColor"> @ChampSelectView1Page.formatingData.RedSideTimerTexteColor</spam>
+                        <br /><br /><spam style="font-weight: bold"> Ban Background Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView1Page.formatingData.BanBackgroundColor" @onclick="@TextValueOverlayView1.SetBanBackgroundColor"></button> <spam style="font-weight: bold; color: @ChampSelectView1Page.formatingData.BanBackgroundColor"> @ChampSelectView1Page.formatingData.BanBackgroundColor</spam>
+                    </p>
+                </div>
+                <div class="color-picker" style="visibility: @colorPickerOverlay1">
+                    <div class="color-picker-position">
+                        <MudGrid>
+                            <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                        </MudGrid>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            @*View2*@
+            <div class="champ-select-overlay-2">
+                <h3 class="title">Champ Select Overlay 2 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView2Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="champselect/view2" target="_blank">Link Overlay 2</a>
+                @*<button class="btn btn-primary button-form" style="background-color: @overlayView2Button.color" @onclick="@ChampSelectView2Page.EnableOrDisableOverlayView" disabled="@(ChampSelect.session is null)">Clic to @overlayView2Button.text </button>*@
+                <button class="btn btn-primary button-form" style="background-color: @displayContentView2Button.color" @onclick="@HideOrDisplayContentView2">
+                    Clic to @displayContentView2Button.text customization
+                </button>
+                <div style="display: @displayContentView2">
+                    <p>
+                        <br />
+
+                        <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.BlueSideTeamNameSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Team Name ("@ChampSelectView2Page.formatingData.BlueSideTeamName") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView2.BlueSideTeamName" placeholder="Sky" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.RedSideTeamNameSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Red Side Team Name ("@ChampSelectView2Page.formatingData.RedSideTeamName") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView2.RedSideTeamName" placeholder="CSC" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.SwitchSideRedBlue">
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                        </EditForm>
+                        <br />
+                        <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TimerSubmit">
+                            <label style="font-weight: bold">Enable Timer : </label>
+                            <InputCheckbox id="name" @bind-Value="textValueOverlayView2.EnableTimer" />
+                        </EditForm>
+
+                        <br /><spam style="font-weight: bold">Timer Background  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.TimerBackground" @onclick="@TextValueOverlayView2.SetTimerBackground"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.TimerBackground"> @ChampSelectView2Page.formatingData.TimerBackground</spam>
+                        <br /><spam style="font-weight: bold">Timer Blue  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.TimerBlue" @onclick="@TextValueOverlayView2.SetTimerBlue"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.TimerBlue"> @ChampSelectView2Page.formatingData.TimerBlue</spam>
+                        <br /><spam style="font-weight: bold">Timer Red  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.TimerRed" @onclick="@TextValueOverlayView2.SetTimerRed"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.TimerRed"> @ChampSelectView2Page.formatingData.TimerRed</spam>
+                        <br /><br /><spam style="font-weight: bold">Blue Side Backgroud  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.BlueSideBackgroud" @onclick="@TextValueOverlayView2.SetBlueSideBackgroud"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.BlueSideBackgroud"> @ChampSelectView2Page.formatingData.BlueSideBackgroud</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Summoner  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.BlueSideSummoner" @onclick="@TextValueOverlayView2.SetBlueSideSummoner"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.BlueSideSummoner"> @ChampSelectView2Page.formatingData.BlueSideSummoner</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Backgroud Summoner Pick  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.BlueSideBackgroudSummonerPick" @onclick="@TextValueOverlayView2.SetBlueSideBackgroudSummonerPick"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.BlueSideBackgroudSummonerPick"> @ChampSelectView2Page.formatingData.BlueSideBackgroudSummonerPick</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Backgroud Summoner Pick End  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.BlueSideBackgroudSummonerPickEnd" @onclick="@TextValueOverlayView2.SetBlueSideBackgroudSummonerPickEnd"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.BlueSideBackgroudSummonerPickEnd"> @ChampSelectView2Page.formatingData.BlueSideBackgroudSummonerPickEnd</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Team Name Color  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.BlueSideTeamNameColor" @onclick="@TextValueOverlayView2.SetBlueSideTeamNameColor"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.BlueSideTeamNameColor"> @ChampSelectView2Page.formatingData.BlueSideTeamNameColor</spam>
+                        <br /><br />
+                        <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.KeystonePickColorSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Keystone color ("@ChampSelectView2Page.formatingData.KeystonePickColor") : </label>
+                            <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.KeystonePickColorDeg" placeholder="150" />
+                            deg
+                            <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.KeystonePickColor1" @onclick="@TextValueOverlayView2.SetKeystoneColor1"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.KeystonePickColor1"> @ChampSelectView2Page.formatingData.KeystonePickColor1</spam>
+                            <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.KeystonePickColorPercent1" placeholder="0" />
+                            %
+                            <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.KeystonePickColor2" @onclick="@TextValueOverlayView2.SetKeystoneColor2"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.KeystonePickColor2"> @ChampSelectView2Page.formatingData.KeystonePickColor2</spam>
+                            <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView2.KeystonePickColorPercent2" placeholder="100" />
+                            %
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <br /><br /><spam style="font-weight: bold">Red Side Backgroud  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.RedSideBackgroud" @onclick="@TextValueOverlayView2.SetRedSideBackgroud"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.RedSideBackgroud"> @ChampSelectView2Page.formatingData.RedSideBackgroud</spam>
+                        <br /><spam style="font-weight: bold">Red Side Summoner  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.RedSideSummoner" @onclick="@TextValueOverlayView2.SetRedSideSummoner"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.RedSideSummoner"> @ChampSelectView2Page.formatingData.RedSideSummoner</spam>
+                        <br /><spam style="font-weight: bold">Red Side Backgroud Summoner Pick  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.RedSideBackgroudSummonerPick" @onclick="@TextValueOverlayView2.SetRedSideBackgroudSummonerPick"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.RedSideBackgroudSummonerPick"> @ChampSelectView2Page.formatingData.RedSideBackgroudSummonerPick</spam>
+                        <br /><spam style="font-weight: bold">Red Side Backgroud Summoner Pick End  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.RedSideBackgroudSummonerPickEnd" @onclick="@TextValueOverlayView2.SetRedSideBackgroudSummonerPickEnd"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.RedSideBackgroudSummonerPickEnd"> @ChampSelectView2Page.formatingData.RedSideBackgroudSummonerPickEnd</spam>
+                        <br /><spam style="font-weight: bold">Red Side Team Name Color  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.RedSideTeamNameColor" @onclick="@TextValueOverlayView2.SetRedSideTeamNameColor"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.RedSideTeamNameColor"> @ChampSelectView2Page.formatingData.RedSideTeamNameColor</spam>
+                        <br /><br /><spam style="font-weight: bold">Ban Background Color </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView2Page.formatingData.BanBackgroundColor" @onclick="@TextValueOverlayView2.SetBanBackgroundColor"></button> <spam style="font-weight: bold ;color: @ChampSelectView2Page.formatingData.BanBackgroundColor"> @ChampSelectView2Page.formatingData.BanBackgroundColor</spam>
+                    </p>
+                </div>
+                <div class="color-picker" style="visibility: @colorPickerOverlay2">
+                    <div class="color-picker-position">
+                        <MudGrid>
+                            <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                        </MudGrid>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            @*View3*@
+            <div class="champ-select-overlay-3">
+                <h3 class="title">Champ Select Overlay 3 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView3Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="champselect/view3" target="_blank">Link Overlay 3</a>
+
+                @*<button class="btn btn-primary button-form" style="background-color: @overlayView3Button.color" @onclick="@ChampSelectView3Page.EnableOrDisableOverlayView" disabled="@(ChampSelect.session is null)">Clic to @overlayView3Button.text </button>*@
+                <button class="btn btn-primary button-form" style="background-color: @displayContentView3Button.color" @onclick="@HideOrDisplayContentView3">
+                    Clic to @displayContentView3Button.text customization
+                </button>
+                <div style="display: @displayContentView3">
+                    <p>
+                        <br />
+                        <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.BlueSideTeamNameSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Team Name ("@ChampSelectView3Page.formatingData.BlueSideTeamName") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView3.BlueSideTeamName" placeholder="Sky" />
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.RedSideTeamNameSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Red Side Team Name ("@ChampSelectView3Page.formatingData.RedSideTeamName") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView3.RedSideTeamName" placeholder="CSC" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.SwitchSideRedBlue">
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                        </EditForm>
+                        <br />
+                        <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TimerSubmit">
+                            <label style="font-weight: bold">Enable Timer : </label>
+                            <InputCheckbox id="name" @bind-Value="textValueOverlayView3.EnableTimer" />
+                        </EditForm>
+                        <br /><spam style="font-weight: bold">Timer Background  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.TimerBackground" @onclick="@TextValueOverlayView3.SetTimerBackground"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.TimerBackground"> @ChampSelectView3Page.formatingData.TimerBackground</spam>
+                        <br /><spam style="font-weight: bold">Timer Blue  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.TimerBlue" @onclick="@TextValueOverlayView3.SetTimerBlue"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.TimerBlue"> @ChampSelectView3Page.formatingData.TimerBlue</spam>
+                        <br /><spam style="font-weight: bold">Timer Red  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.TimerRed" @onclick="@TextValueOverlayView3.SetTimerRed"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.TimerRed"> @ChampSelectView3Page.formatingData.TimerRed</spam>
+                        <br /><br /><spam style="font-weight: bold">Blue Side Backgroud  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.BlueSideBackgroud" @onclick="@TextValueOverlayView3.SetBlueSideBackgroud"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.BlueSideBackgroud"> @ChampSelectView3Page.formatingData.BlueSideBackgroud</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Summoner  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.BlueSideSummoner" @onclick="@TextValueOverlayView3.SetBlueSideSummoner"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.BlueSideSummoner"> @ChampSelectView3Page.formatingData.BlueSideSummoner</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Backgroud Summoner Pick  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.BlueSideBackgroudSummonerPick" @onclick="@TextValueOverlayView3.SetBlueSideBackgroudSummonerPick"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.BlueSideBackgroudSummonerPick"> @ChampSelectView3Page.formatingData.BlueSideBackgroudSummonerPick</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Backgroud Summoner Pick End  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.BlueSideBackgroudSummonerPickEnd" @onclick="@TextValueOverlayView3.SetBlueSideBackgroudSummonerPickEnd"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.BlueSideBackgroudSummonerPickEnd"> @ChampSelectView3Page.formatingData.BlueSideBackgroudSummonerPickEnd</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Team Name Color  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.BlueSideTeamNameColor" @onclick="@TextValueOverlayView3.SetBlueSideTeamNameColor"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.BlueSideTeamNameColor"> @ChampSelectView3Page.formatingData.BlueSideTeamNameColor</spam>
+                        <br /><br />
+                        <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.KeystonePickColorSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Keystone color ("@ChampSelectView3Page.formatingData.KeystonePickColor") : </label>
+                            <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.KeystonePickColorDeg" placeholder="150" />
+                            deg
+                            <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.KeystonePickColor1" @onclick="@TextValueOverlayView3.SetKeystoneColor1"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.KeystonePickColor1"> @ChampSelectView3Page.formatingData.KeystonePickColor1</spam>
+                            <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.KeystonePickColorPercent1" placeholder="0" />
+                            %
+                            <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.KeystonePickColor2" @onclick="@TextValueOverlayView3.SetKeystoneColor2"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.KeystonePickColor2"> @ChampSelectView3Page.formatingData.KeystonePickColor2</spam>
+                            <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView3.KeystonePickColorPercent2" placeholder="100" />
+                            %
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <br /><br /><spam style="font-weight: bold">Red Side Backgroud  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.RedSideBackgroud" @onclick="@TextValueOverlayView3.SetRedSideBackgroud"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.RedSideBackgroud"> @ChampSelectView3Page.formatingData.RedSideBackgroud</spam>
+                        <br /><spam style="font-weight: bold">Red Side Summoner  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.RedSideSummoner" @onclick="@TextValueOverlayView3.SetRedSideSummoner"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.RedSideSummoner"> @ChampSelectView3Page.formatingData.RedSideSummoner</spam>
+                        <br /><spam style="font-weight: bold">Red Side Backgroud Summoner Pick  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.RedSideBackgroudSummonerPick" @onclick="@TextValueOverlayView3.SetRedSideBackgroudSummonerPick"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.RedSideBackgroudSummonerPick"> @ChampSelectView3Page.formatingData.RedSideBackgroudSummonerPick</spam>
+                        <br /><spam style="font-weight: bold">Red Side Backgroud Summoner Pick End  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.RedSideBackgroudSummonerPickEnd" @onclick="@TextValueOverlayView3.SetRedSideBackgroudSummonerPickEnd"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.RedSideBackgroudSummonerPickEnd"> @ChampSelectView3Page.formatingData.RedSideBackgroudSummonerPickEnd</spam>
+                        <br /><spam style="font-weight: bold">Red Side Team Name Color  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.RedSideTeamNameColor" @onclick="@TextValueOverlayView3.SetRedSideTeamNameColor"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.RedSideTeamNameColor"> @ChampSelectView3Page.formatingData.RedSideTeamNameColor</spam>
+                        <br /><br /><spam style="font-weight: bold">Ban Background Color </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView3Page.formatingData.BanBackgroundColor" @onclick="@TextValueOverlayView3.SetBanBackgroundColor"></button> <spam style="font-weight: bold ;color: @ChampSelectView3Page.formatingData.BanBackgroundColor"> @ChampSelectView3Page.formatingData.BanBackgroundColor</spam>
+                    </p>
+                </div>
+                <br />
+                <div class="color-picker" style="visibility: @colorPickerOverlay3">
+                    <div class="color-picker-position">
+                        <MudGrid>
+                            <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                        </MudGrid>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            @*View4*@
+            <div class="champ-select-overlay-4">
+                <h3 class="title">Champ Select Overlay 4 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@ChampSelectView4Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="champselect/view4" target="_blank">Link Overlay 4</a>
+
+                @*<button class="btn btn-primary button-form" style="background-color: @overlayView4Button.color" @onclick="@ChampSelectView4Page.EnableOrDisableOverlayView" disabled="@(ChampSelect.session is null)">Clic to @overlayView4Button.text </button>*@
+                <button class="btn btn-primary button-form" style="background-color: @displayContentView4Button.color" @onclick="@HideOrDisplayContentView4">
+                    Clic to @displayContentView4Button.text customization
+                </button>
+                <div style="display: @displayContentView4">
+                    <p>
+                        <br />
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.BlueSideTeamNameSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Team Name ("@ChampSelectView4Page.formatingData.BlueSideTeamName") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView4.BlueSideTeamName" placeholder="Skynet" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.BlueSideTeamNameSubtextSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Subtext ("@ChampSelectView4Page.formatingData.BlueSideTeamNameSubtext") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView4.BlueSideTeamNameSubtext" placeholder="2-1" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.RedSideTeamNameSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Red Side Team Name ("@ChampSelectView4Page.formatingData.RedSideTeamName") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView4.RedSideTeamName" placeholder="Cyberdyne Systems" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.RedSideTeamNameSubtextSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Red Side Subtext ("@ChampSelectView4Page.formatingData.RedSideTeamNameSubtext") : </label>
+                            <InputText id="name" @bind-Value="textValueOverlayView4.RedSideTeamNameSubtext" placeholder="1-2" />
+
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.SwitchSideRedBlue">
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                        </EditForm>
+                        <br />
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.BorderTopSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Border Top ("@ChampSelectView4Page.formatingData.BorderTop") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView4.BorderTop" placeholder="5" />
+                            <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView4.TempsBorderTop()" @onclick="@TextValueOverlayView4.SetBorderTop"></button>
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.BorderBottomPixelSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Pixel Border Bottom ("@ChampSelectView4Page.formatingData.BorderBottomPixel") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView4.BorderBottomPixel" placeholder="5" />
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.BackgroudGradientView4">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Backgroud Gradient ("@ChampSelectView4Page.formatingData.BackgroudGradient") : </label>
+                            <br /><InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView4.BackgroudGradientDeg" placeholder="150" />
+                            deg
+                            <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.BackgroudGradientColor1" @onclick="@TextValueOverlayView4.SetBackgroudGradientColor1"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.BackgroudGradientColor1"> @ChampSelectView4Page.formatingData.BackgroudGradientColor1</spam>
+                            <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView4.BackgroudGradientPercent1" placeholder="0" />
+                            %
+                            <spam style="font-weight: bold"></spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.BackgroudGradientColor2" @onclick="@TextValueOverlayView4.SetBackgroudGradientColor2"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.BackgroudGradientColor2"> @ChampSelectView4Page.formatingData.BackgroudGradientColor2</spam>
+                            <InputNumber id="name" style="width: 50px" @bind-Value="textValueOverlayView4.BackgroudGradientPercent2" placeholder="100" />
+                            %
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.OverlayForegoundSubmit">
+                            <label style="font-weight: bold">Enable foreground background: </label>
+                            <InputCheckbox id="name" @bind-Value="textValueOverlayView4.EnableForegroundBackground" />
+                        </EditForm>
+                        <br />
+                        <br /><spam style="font-weight: bold">Blue Side Color Text  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.BlueSideColorText" @onclick="@TextValueOverlayView4.SetBlueSideColorText"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.BlueSideColorText"> @ChampSelectView4Page.formatingData.BlueSideColorText</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Color Sub Text  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.BlueSideColorSubText" @onclick="@TextValueOverlayView4.SetBlueSideColorSubText"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.BlueSideColorSubText"> @ChampSelectView4Page.formatingData.BlueSideColorSubText</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Color Text Ban  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.BlueSideColorTextBan" @onclick="@TextValueOverlayView4.SetBlueSideColorTextBan"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.BlueSideColorTextBan"> @ChampSelectView4Page.formatingData.BlueSideColorTextBan</spam>
+                        <br /><spam style="font-weight: bold">Blue Side Color Text Pick  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.BlueSideColorTextPick" @onclick="@TextValueOverlayView4.SetBlueSideColorTextPick"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.BlueSideColorTextPick"> @ChampSelectView4Page.formatingData.BlueSideColorTextPick</spam>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.BlueSideBorderColorBanSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Border Color Ban ("@ChampSelectView4Page.formatingData.BlueSideBorderColorBan") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView4.BlueSideBorderColorBan" placeholder="2" />
+                            <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView4.TempsBlueSideBorderColorBan()" @onclick="@TextValueOverlayView4.SetBlueSideBorderColorBan"></button>
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.BlueSideBorderColorPickSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Border Color Pick ("@ChampSelectView4Page.formatingData.BlueSideBorderColorPick") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView4.BlueSideBorderColorPick" placeholder="2" />
+                            <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView4.TempsBlueSideBorderColorPick()" @onclick="@TextValueOverlayView4.SetBlueSideBorderColorPick"></button>
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <br />
+                        <br /><spam style="font-weight: bold">Red Side Color Text  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.RedSideColorText" @onclick="@TextValueOverlayView4.SetRedSideColorText"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.RedSideColorText"> @ChampSelectView4Page.formatingData.RedSideColorText</spam>
+                        <br /><spam style="font-weight: bold">Red Side Color Sub Text  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.RedSideColorSubText" @onclick="@TextValueOverlayView4.SetRedSideColorSubText"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.RedSideColorSubText"> @ChampSelectView4Page.formatingData.RedSideColorSubText</spam>
+                        <br /><spam style="font-weight: bold">Red Side Color Text Ban  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.RedSideColorTextBan" @onclick="@TextValueOverlayView4.SetRedSideColorTextBan"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.RedSideColorTextBan"> @ChampSelectView4Page.formatingData.RedSideColorTextBan</spam>
+                        <br /><spam style="font-weight: bold">Red Side Color Text Pick  </spam><button class="btn btn-primary button-form button-color" style="background-color: @ChampSelectView4Page.formatingData.RedSideColorTextPick" @onclick="@TextValueOverlayView4.SetRedSideColorTextPick"></button> <spam style="font-weight: bold ;color: @ChampSelectView4Page.formatingData.RedSideColorTextPick"> @ChampSelectView4Page.formatingData.RedSideColorTextPick</spam>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.RedSideBorderColorBanSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Red Side Border Color Ban ("@ChampSelectView4Page.formatingData.RedSideBorderColorBan") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView4.RedSideBorderColorBan" placeholder="2" />
+                            <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView4.TempsRedSideBorderColorBan()" @onclick="@TextValueOverlayView4.SetRedSideBorderColorBan"></button>
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <EditForm Model="@textValueOverlayView4" OnValidSubmit="@TextValueOverlayView4.RedSideBorderColorPickSubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Blue Side Border Color Pick ("@ChampSelectView4Page.formatingData.RedSideBorderColorPick") : </label>
+                            <InputNumber id="name" style="width: 40px" @bind-Value="textValueOverlayView4.RedSideBorderColorPick" placeholder="2" />
+                            <button class="btn btn-primary button-form button-color" style="background-color: @TextValueOverlayView4.TempsRedSideBorderColorPick()" @onclick="@TextValueOverlayView4.SetRedSideBorderColorPick"></button>
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                    </p>
+                </div>
+                <br />
+                <div class="color-picker" style="visibility: @colorPickerOverlay4">
+                    <div class="color-picker-position">
+                        <MudGrid>
+                            <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                        </MudGrid>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+@*Liste de patch et de région*@
+@*<p>
+    <br />
+    <div class="patch">
+        Chose Patch and region <select name="patch" id="patch-select">
+            <option value="latest fr_fr">latest fr_fr</option>
+            @{
+                foreach (var patch in CDragon.dataCDragon.Patch)
+                {
+                    foreach (var region in patch.Region)
+                    {
+                        <option value="@patch.Name @region.Name">@patch.Name @region.Name</option>
+                    }
+                }
+            }
+        </select>
+    </div>
+
+    <br /><label for="favcolor">Color blue side texte :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side backgroud :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side border :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side timer backgroud :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side timer border :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color blue side timer texte :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+
+    <br /><label for="favcolor">Color red side texte :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side backgroud :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side border :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side timer backgroud :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side timer border :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+    <br /><label for="favcolor">Color red side timer texte :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+
+    <br /> <label> Ban background picture </label> <input type"texte" style="">
+    <br /> <label> Ban overlay picture </label> <input type"texte" style="">
+    <br /><label for="favcolor">Ban background color :</label>
+    <input type="color" id="favcolor" name="favcolor" value="">
+
+    <br /> <label> Overlay background </label> <input type"texte" style="">
+</p>*@
+
+@*<button class="btn btn-primary button-form button-color" style="background-color: @colorValue" @onclick="@VisibilityColor1"></button>
+<br />
+<br />*@
+@*<div class="color-picker" style="visibility: @ColorPicker">
+    <MudGrid>
+        @*<MudItem md="8" Class="d-flex justify-center">*@
+@*<MudColorPicker Label="Basic Color Picker" @bind-Text="colorValue" Style="@($"color: {colorValue};")" Placeholder="Select Color" />*@
+@*<MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />*@
+@*</MudItem>*@
+@*<MudItem md="4">*@
+@*<MudPaper Height="400px" Class="px-4 pt-2 pb-4">
+            <MudText Typo="Typo.h6">Options</MudText>
+            <MudCheckBox @bind-Checked="@DisableToolbar" Label="Disable Toolbar" Color="Color.Primary" Dense="true" />
+            <MudCheckBox @bind-Checked="@DisableAlpha" Label="Disable Alpha" Color="Color.Primary" Dense="true" />
+            <MudCheckBox @bind-Checked="@DisableColorField" Label="Disable Color Field" Color="Color.Primary" Dense="true" />
+            <MudCheckBox @bind-Checked="@DisablePreview" Label="Disable Preview" Color="Color.Primary" Dense="true" />
+            <MudCheckBox @bind-Checked="@DisableSliders" Label="Disable Sliders" Color="Color.Primary" Dense="true" />
+            <MudCheckBox @bind-Checked="@DisableInputs" Label="Disable Inputs" Color="Color.Primary" Dense="true" />
+            <MudCheckBox @bind-Checked="@DisableModeSwitch" Label="Disable Mode Switch" Color="Color.Primary" Dense="true" />
+            <MudSelect Label="Color Picker Mode" Variant="Variant.Outlined" Dense="true" Margin="Margin.Dense" @bind-Value="ColorPickerMode" Class="mt-4">
+            <MudSelectItem T="ColorPickerMode" Value="ColorPickerMode.RGB">RGB</MudSelectItem>
+            <MudSelectItem T="ColorPickerMode" Value="ColorPickerMode.HSL">HSL</MudSelectItem>
+            <MudSelectItem T="ColorPickerMode" Value="ColorPickerMode.HEX">HEX</MudSelectItem>
+            </MudSelect>
+            </MudPaper>*@
+@*</MudItem>*@
+@*</MudGrid>*@
+@*</div>*@
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+
+@code {
+    public static TextValueOverlayView1 textValueOverlayView1 = new();
+    public static TextValueOverlayView2 textValueOverlayView2 = new();
+    public static TextValueOverlayView3 textValueOverlayView3 = new();
+    public static TextValueOverlayView4 textValueOverlayView4 = new();
+
+    public bool DisableToolbar { get; set; } = true;
+    public bool DisableAlpha { get; set; }
+    public bool DisableColorField { get; set; }
+    public bool DisablePreview { get; set; }
+    public bool DisableSliders { get; set; }
+    public bool DisableInputs { get; set; }
+    public bool DisableModeSwitch { get; set; }
+
+    public ColorPickerMode ColorPickerMode { get; set; }
+}

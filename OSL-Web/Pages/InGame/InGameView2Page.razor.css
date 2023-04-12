@@ -1,0 +1,171 @@
+/*##########################################################*/
+/*######################## General #########################*/
+/*##########################################################*/
+
+@font-face {
+    font-family: MyFont;
+    src: url(../css/font/fonts/fontLoL.ttf);
+}
+
+div {
+    font-family: MyFont;
+    font-weight: bold;
+}
+
+.display-in-game {
+    height: 1080px;
+    width: 1920px;
+    position: absolute;
+}
+
+/*##########################################################*/
+/*########################## Timer #########################*/
+/*##########################################################*/
+.dragon-timer {
+    position: absolute;
+    top: 19px;
+    left: 22px;
+}
+
+.herald-baron-timer {
+    position: absolute;
+    top: 19px;
+    right: 24px;
+}
+
+/*##########################################################*/
+/*######################### Banner #########################*/
+/*##########################################################*/
+.blue-team {
+    position: absolute;
+    top: 0px;
+    left: 231px;
+    height: 63px;
+    width: 236px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.blue-team-score-banner {
+    position: absolute;
+    height: 40px;
+    width: 75px;
+    clip-path: inset(0 20px 0 0);
+    left: -50px;
+    top: 0px;
+}
+
+.blue-team-score {
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    width: 60px;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    padding-top: 3px;
+    font-size: 15px;
+}
+
+.red-team-score-banner {
+    position: absolute;
+    height: 40px;
+    width: 75px;
+    clip-path: inset(0 20px 0 0);
+    right: -50px;
+    top: 0px;
+    transform: scaleX(-1);
+}
+
+.red-team-score {
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    width: 60px;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    padding-top: 3px;
+    font-size: 15px;
+}
+
+.blue-team-banner {
+    position: absolute;
+    height: 63px;
+    width: 236px;
+}
+
+.blue-team-text {
+    padding-left: 14px;
+    padding-right: 14px;
+    position: absolute;
+    text-align: center;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.red-team {
+    position: absolute;
+    top: 0px;
+    right: 218px;
+    height: 63px;
+    width: 236px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.red-team-banner {
+    position: absolute;
+    height: 63px;
+    width: 236px;
+}
+
+.red-team-text {
+    padding-left: 14px;
+    padding-right: 14px;
+    position: absolute;
+    text-align: center;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+
+/*##########################################################*/
+/*########################## Team ##########################*/
+/*##########################################################*/
+.blue-player {
+    position: absolute;
+    top: 156px;
+    left: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .blue-player .blue-player-frame {
+        position: relative;
+        margin-bottom: 57px;
+    }
+
+.red-player {
+    position: absolute;
+    top: 156px;
+    right: 29px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .red-player .red-player-frame {
+        position: relative;
+        margin-bottom: 57px;
+    }
+
+/*##########################################################*/
+/*######################### Bottom #########################*/
+/*##########################################################*/
+.left-info {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}

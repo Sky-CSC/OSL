@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>OSL_Web</RootNamespace>
+    <Title>OSL-Web</Title>
+    <Version>1.1.0.0</Version>
+    <Authors>Sky csc</Authors>
+    <Company>Sky csc</Company>
+    <Copyright>Sky csc</Copyright>
+    <PackageProjectUrl>https://github.com/Sky-CSC/OSL</PackageProjectUrl>
+    <PackageIcon>Icone_Eau.ico</PackageIcon>
+    <RepositoryUrl>https://github.com/Sky-CSC/OSL</RepositoryUrl>
+    <ApplicationIcon>Icone_Eau.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Configuration\CDragon\cdragon.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icone_Eau.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorColorPicker" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.16" />
+    <PackageReference Include="MudBlazor" Version="6.0.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OSL-WebApiRiot\OSL-WebApiRiot.csproj" />
+    <ProjectReference Include="..\OSL-CDragon\OSL-CDragon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Configuration\CDragon\cdragon.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Icone_Eau.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

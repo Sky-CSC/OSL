@@ -1,0 +1,286 @@
+/*##########################################################*/
+/*######################## General #########################*/
+/*##########################################################*/
+
+
+@font-face {
+    font-family: MyFont;
+    src: url(../css/font/fonts/fontLoL.ttf);
+}
+
+div {
+    font-family: MyFont;
+    font-weight: bold;
+}
+
+.display-champ-select {
+    height: 1080px;
+    width: 1920px;
+    position: absolute;
+}
+
+.champ-select-footer {
+    margin-top: 791px;
+    height: 289px;
+}
+
+.champ-select-footer-ban {
+    position: absolute;
+    top: 796px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+}
+
+/*##########################################################*/
+/*####################### Not Active #######################*/
+/*##########################################################*/
+.alert {
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    top: 20px;
+    width: 800px;
+    left: 20px;
+}
+
+.alert-warning {
+    padding: 20px;
+    background-color: darkred;
+    color: white;
+    top: 20px;
+    width: 900px;
+    left: 20px;
+    border-radius: 10px;
+}
+
+/*##########################################################*/
+/*########################## Pick ##########################*/
+/*##########################################################*/
+
+.text-pick-blue {
+    position: absolute;
+    bottom: 86px;
+    left: 200px;
+    font-size: 25px;
+}
+
+.text-pick-red {
+    position: absolute;
+    bottom: 86px;
+    right: 200px;
+    font-size: 25px;
+}
+
+.side {
+    width: 435px;
+    position: absolute;
+    height: 90px;
+    bottom: 60px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+    .side
+    .champ-wrapper
+    .border-color {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        -webkit-filter: saturate(0.6);
+    }
+
+.champ-wrapper {
+    width: 90px;
+    height: 90px;
+    position: relative;
+}
+
+#blueSide {
+    left: 314px;
+}
+
+    #blueSide
+    .champ-wrapper
+    .champ-wrapper {
+        -webkit-filter: saturate(0.6);
+    }
+
+    #blueSide .champ-wrapper {
+        margin-right: 5px;
+    }
+
+        #blueSide .champ-wrapper:nth-child(3) {
+            margin-right: 34px;
+        }
+
+#redSide {
+    right: 314px;
+    flex-direction: row-reverse;
+}
+
+    #redSide
+    .champ-wrapper
+    .champ-wrapper {
+        -webkit-filter: saturate(0.6);
+    }
+
+    #redSide .champ-wrapper {
+        margin-left: 5px;
+    }
+
+        #redSide .champ-wrapper:nth-child(3) {
+            margin-left: 34px;
+        }
+
+
+/*#########################################################*/
+/*########################## Ban ##########################*/
+/*#########################################################*/
+
+.text-ban-blue {
+    position: absolute;
+    top: 65px;
+    left: 244px;
+    font-size: 25px;
+}
+
+.text-ban-red {
+    position: absolute;
+    top: 65px;
+    right: 244px;
+    font-size: 25px;
+}
+
+.ban-veil {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+}
+
+.bans {
+    width: 435px;
+    position: absolute;
+    height: 90px;
+    bottom: 130px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.ban-wrapper {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+
+#blueBans {
+    left: 400px;
+}
+
+    #blueBans .ban-wrapper {
+        margin-right: 5px;
+    }
+
+        #blueBans .ban-wrapper:nth-child(3) {
+            margin-right: 34px;
+        }
+
+#redBans {
+    right: 400px;
+    flex-direction: row-reverse;
+}
+
+    #redBans .ban-wrapper {
+        margin-left: 5px;
+    }
+
+        #redBans .ban-wrapper:nth-child(3) {
+            margin-left: 34px;
+        }
+
+/*###########################################################*/
+/*########################## Pick Keystone ##########################*/
+/*###########################################################*/
+
+.champ-select-footer-pick-keystone {
+    bottom: 0px;
+    width: 350px;
+    height: 245px;
+    left: 790px;
+    position: absolute;
+    -webkit-filter: saturate(0.6);
+}
+
+    .champ-select-footer-pick-keystone .gradient-background-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% );
+    }
+
+/*###########################################################*/
+/*########################## Patch ##########################*/
+/*###########################################################*/
+.champ-select-footer-patch-keystone {
+    bottom: 0px;
+    width: 162px;
+    height: 80px;
+    left: 879px;
+    background: #010a13;
+    opacity: 0.8;
+    position: absolute;
+}
+
+    .champ-select-footer-patch-keystone
+    .patch-text {
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        top: 5px;
+        position: relative
+    }
+
+    .champ-select-footer-patch-keystone
+    .patch-name {
+        font-size: 35px;
+        color: white;
+        text-align: center;
+        bottom: 5px;
+        position: relative
+    }
+
+/*###########################################################*/
+/*######################## Team Text ########################*/
+/*###########################################################*/
+
+.blue-text {
+    position: absolute;
+    bottom: 110px;
+    left: 10px;
+    font-size: 35px;
+}
+
+.blue-sub-text {
+    position: absolute;
+    bottom: 80px;
+    left: 10px;
+    font-size: 25px;
+}
+
+.red-text {
+    position: absolute;
+    bottom: 110px;
+    right: 10px;
+    font-size: 35px;
+}
+
+.red-sub-text {
+    position: absolute;
+    bottom: 80px;
+    right: 10px;
+    font-size: 25px;
+}

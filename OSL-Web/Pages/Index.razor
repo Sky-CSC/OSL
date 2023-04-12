@@ -1,0 +1,76 @@
+﻿@page "/"
+@using MudBlazor
+
+<PageTitle>OSL</PageTitle>
+
+<h1 class="title">Welcome to OSL!</h1>
+
+<b>For more information for how to use this application see <a href="https://sky-csc.github.io/OSL/" target="_blank">documentation</a></b>
+<br />
+<br />
+
+<div class="">
+
+
+    <h2 class="title">CDragon :</h2>
+    Data download from CDragon (picture, perks, spell ... of League of Legends)
+    <br /><br />
+    <h2 class="title">Config :</h2>
+    Change port for OSL-Client exchange,
+    <br />Load or save champ select view or in game view
+    <br /><br />
+    <h2 class="title">Champ Select :</h2>
+    Customization of champion selection overlay
+    <br /><br />
+    <h2 class="title">In Game :</h2>
+    Customization of in game overlay
+    <br /><br />
+    <h2 class="title">OBS configuration :</h2>
+
+    Add to your différents scènes the différents URL
+    <br />ip : your local or distant ip
+    <br />port : your local or distant port (default http port 4141)
+    <br />
+    <br />
+        <div class="alert-warning">
+                <strong>Warning!</strong>
+                <br>https does not work with OBS for the moment
+        </div>
+    <br />
+    <h4 class="title">Champion selection :</h4>
+    http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/champselect/view1
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/champselect/view2
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/champselect/view3
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/champselect/view4
+    <br />
+    <br />
+    <h4 class="title">In game :</h4>
+    http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/ingame/view1
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/ingame/view2
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/ingame/view3
+    <br />
+    <br />
+    <h4 class="title">End Game :</h4>
+    http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/endgame/view1
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/endgame/view2
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/endgame/view3
+    <br />
+    <br />
+    <h4 class="title">Runes :</h4>
+    http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/runes/adc
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/runes/adcsupp
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/runes/jungle
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/runes/mid
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/runes/top
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/runes/supp
+    <br />http://@Configuration.Config.webHostName:@Configuration.Config.webHttpPort/runes/all
+    <br />
+    <br />
+    <br />
+
+</div>
+
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
