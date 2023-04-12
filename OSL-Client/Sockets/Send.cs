@@ -1,15 +1,13 @@
-﻿using System;
+﻿using OSL_Common.System.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OSL_Client.Communication.OSLServer
+namespace OSL_Client.Sockets
 {
-    /// <summary>
-    /// Asynchrone client
-    /// </summary>
     public partial class AsyncClient
     {
         /// <summary>

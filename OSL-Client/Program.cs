@@ -1,18 +1,8 @@
-﻿using OSL_Client;
-using OSL_Client.Communication;
-using OSL_Client.Configuration;
-using OSL_Client.RiotApp;
-using OSL_Client.RiotApp.API;
-using OSL_Client.RiotApp.API.LCU;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-//using OSL_Client.RiotApp.MemoryProcessing;
-using OSL_Client.Communication.OSLServer;
-using System.Net;
-using OSL_Client.RiotApp.MemoryProcessing;
-
-Console.WriteLine("");
-OSLLogger logger = new("Program");
+﻿using OSL_Client.Configuration;
+using OSL_Client.Riot;
+using OSL_Client.Riot.GameFlow;
+using OSL_Client.Sockets;
+using static OSL_Client.CloseEvent;
 
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("###########################################");
@@ -22,41 +12,38 @@ Console.WriteLine("# No forget to check if server is running #");
 Console.WriteLine("###########################################\n");
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("###########################");
-Console.WriteLine("###### Version 1.0.0 ######");
+Console.WriteLine("###### Version 1.1.0 ######");
 Console.WriteLine("###########################\n");
 Console.ResetColor();
 
+SetConsoleCtrlHandler(new SetConsoleCtrlEventHandler(Handler), true);
+
 Config.LoadConfig();
-//Initialisation for acces att the champion selection or a game
 
-String data = "Hello OSL-Server is OSL-Client managed by Sky";
-AsyncClient.StartClient(data);
+//Console.WriteLine(Directory.GetCurrentDirectory().Replace("\\", "/") + "\n");
+//Console.WriteLine(Environment.CurrentDirectory.Replace("\\", "/") + "\n");
+//Path.DirectorySeparatorChar;
+
+AsyncClient.StartClient("Hello is OSL-Client");
 Thread.Sleep(1000);
-//while (!AsyncClient.StartClient(data))
-//{
-
-//    Thread.Sleep(1000);
-//}
 
 while (true)
 {
-    if (LaunchChecker.LoLLauncherCheck()) //Chek if lol is running
+    if (LeagueClient.CheckLaunch()) //Chek if lol is running
     {
-        if (FilesRiotApp.LockFileCheck()) //Get lock file pass
+        if (LeagueClient.LockFile()) //Get lock file pass
         {
-            if (Config.SetHostPassGameClientApi()) //Get pass and host of client api
+            if (LeagueClient.SetHostApi()) //Get pass and host of client api
             {
                 string gameFlowPhase;
                 do
                 {
                     Thread.Sleep(1000);
-                    gameFlowPhase = ApiRequest.RequestGameClientAPI(UrlRequest.lolgameflowv1gameflowphase); //Request game client api
-                    LcuApi.GameFlowPhaseCheck(gameFlowPhase); //Check which phase
+                    gameFlowPhase = GameFlow.PhaseRequest();
+                    GameFlow.Phase(gameFlowPhase); //Check which phase
                 }
                 while (gameFlowPhase != null);
             }
         }
     }
 }
-
-//TestClass.Test();

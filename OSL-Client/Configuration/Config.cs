@@ -1,59 +1,47 @@
 ﻿using Newtonsoft.Json;
-using OSL_Client.FileManager;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OSL_Common.System.Logging;
+using OSL_Common.System.FileManager;
 
 namespace OSL_Client.Configuration
 {
-    /// <summary>
-    /// Class for configure client application
-    /// </summary>
     public class Config
     {
-        private static OSLLogger _logger = new OSLLogger("Config");
+        private static Logger _logger = new("Config");
 
-        //public static string serverIPSocket = "localhost";
-        public static string serverIPSocketOSLServer = "127.0.0.1";
-        public static int serverPortSocketOSLServer = 45678;
-        public static string leagueClientProcess = "LeagueClient";
-        public static string leagueClientFullFilePath = "";
-        public static string leagueClientPath = "";
-        public static string lockFilePath = "";
-        public static int lockFileProcessId;
-        public static int lockFilePort;
-        public static string lockFilePassword = "";
-        public static string localIpHttps = "https://127.0.0.1";
+        public static string? serverSocketIp;
+        public static int serverSocketPort;
+        public static string? leagueClientProcess;
+        public static string? leagueClientFullFilePath;
+        public static string? leagueClientPath;
+        public static string? leagueClientLockFilePath;
+        public static int leagueClientLockFileProcessId;
+        public static int leagueClientLockFilePort;
+        public static string? leagueClientLockFilePassword;
+        public static string? riotLogin;
+        public static int riotPort;
+        public static string? leagueClientApiLocalHost;
+        public static string? leagueClientApiPassword;
+        public static int leagueClientLiveEventsApiPort;
+
         public static string localIpHttp = "127.0.0.1";
-        public static string loginRiot = "riot";
-        public static string portRiot = "2999";
-        public static string GameClientApiLocalHost = "";
-        public static string GameClientApiPassword = "";
-        //public static string LiveEventsAPIIP = "127.0.0.1";
-        public static int LiveEventsAPIPort = 34243;
+        public static string localIpHttps = "https://127.0.0.1";
 
-        /// <summary>
-        /// Load configuration
-        /// </summary>
+
         public static void LoadConfig()
         {
             LoadConfigServerSocket();
+            LoadConfigRiot();
         }
 
-        /// <summary>
-        /// Loads the config from the config file.
-        /// </summary>
         public static void LoadConfigServerSocket()
         {
-            string filePath = "./" + "Configuration" + "/" + "configServerSocketOSLServer.json";
-            dynamic configHost = JsonConvert.DeserializeObject(FileManagerLocal.ReadInFile(filePath));
             try
             {
-                serverIPSocketOSLServer = configHost.ipOSLServer;
-                serverPortSocketOSLServer = configHost.portOSLServer;
-                _logger.log(LoggingLevel.INFO, "LoadConfigServerSocket()", $"Config host load Ip : {serverIPSocketOSLServer} Port : {serverPortSocketOSLServer}");
+                string filePath = "./" + "Configuration" + "/" + "server-socket.json";
+                dynamic jsonContent = JsonConvert.DeserializeObject(FileManagerLocal.ReadInFile(filePath));
+                serverSocketIp = jsonContent.ip;
+                serverSocketPort = jsonContent.port;
+                _logger.log(LoggingLevel.INFO, "LoadConfigServerSocket()", $"Config host load Ip : {serverSocketIp} Port : {serverSocketPort}");
             }
             catch (Exception e)
             {
@@ -61,23 +49,21 @@ namespace OSL_Client.Configuration
             }
         }
 
-        /// <summary>
-        /// Game client api host and password
-        /// </summary>
-        /// <returns></returns>
-        public static bool SetHostPassGameClientApi()
+        public static void LoadConfigRiot()
         {
             try
             {
-                GameClientApiLocalHost = Config.localIpHttp + ":" + Config.lockFilePort;
-                GameClientApiPassword = "Basic " + Convert.ToBase64String(Encoding.ASCII.GetBytes($"{Config.loginRiot}:{Config.lockFilePassword}"));
-                _logger.log(LoggingLevel.INFO, "HostPassGameClientApi()", "Host and password game client api set");
-                return true;
+                string filePath = "./" + "Configuration" + "/" + "riot.json";
+                dynamic jsonContent = JsonConvert.DeserializeObject(FileManagerLocal.ReadInFile(filePath));
+                leagueClientLiveEventsApiPort = jsonContent.leagueClientLiveEventsApiPort;
+                leagueClientProcess = jsonContent.leagueClientProcess;
+                riotLogin = jsonContent.riotLogin;
+                riotPort = jsonContent.riotPort;
+                _logger.log(LoggingLevel.INFO, "LoadConfigRiot()", $"Config riot load leagueClientLiveEventsApiPort : {leagueClientLiveEventsApiPort}, leagueClientProcess : {leagueClientProcess},  riotLogin : {riotLogin} riotPort : {riotPort}");
             }
-            catch
+            catch (Exception e)
             {
-                _logger.log(LoggingLevel.ERROR, "HostPassGameClientApi()", "Error host and password to game client api");
-                return false;
+                _logger.log(LoggingLevel.ERROR, "LoadConfigRiot()", e.Message);
             }
         }
     }
