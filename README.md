@@ -7,7 +7,7 @@
 ![framework](https://img.shields.io/badge/framework-blazor-brightgreen)
 ![platform](https://img.shields.io/badge/platform-windows-brightgreen)
 
-![license](https://img.shields.io/badge/license-comming%20soon-critical)
+![license](https://img.shields.io/badge/license-MIT-darkgreen)
 
 ![LoL1](https://img.shields.io/badge/Game%20Client%20API-League%20of%20Legends-blue)
 ![LoL2](https://img.shields.io/badge/Game%20Client%20Replay%20API-League%20of%20Legends-blue)
@@ -120,7 +120,7 @@ http://ip:4141/champselect/view3 and/or http://ip:4141/champselect/view4 as a br
 [overlay](https://github.com/piorrro33/overlay/tree/v1.5.1) (Customizable UI for League of Legends champion select spectating)
 
 # **License**
-⚠️**The license of this code is not given yet, it is coming soon**⚠️
+Distributed under the MIT License. See LICENSE for more information.
 
 
 # **Legal disclaimer**
