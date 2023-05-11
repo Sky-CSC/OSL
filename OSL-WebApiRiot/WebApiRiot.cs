@@ -10,6 +10,11 @@ namespace OSL_WebApiRiot.WebApiRiot
     {
         private static Logger _logger = new("WebApiRiot");
         public static string apiKey;
+        /// <summary>
+        /// http request to web api riot
+        /// </summary>
+        /// <param name="urlRequest"></param>
+        /// <returns></returns>
         public static string RequestWebApiRiot(string urlRequest)
         {
             string httpsWebApiRiot = urlRequest;
