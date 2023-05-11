@@ -4,10 +4,18 @@ using OSL_Common.System.Logging;
 
 namespace OSL_Common.System.ProcessManager
 {
+    /// <summary>
+    /// Manage process
+    /// </summary>
     public class ProcessInfo
     {
         private static Logger _logger = new("ProcessInfo");
 
+        /// <summary>
+        /// Get process information by name
+        /// </summary>
+        /// <param name="nameProcess"></param>
+        /// <returns></returns>
         public static Process[] GetByName(string nameProcess)
         {
             try
@@ -31,6 +39,11 @@ namespace OSL_Common.System.ProcessManager
             }
         }
 
+        /// <summary>
+        /// Get process information by ID
+        /// </summary>
+        /// <param name="idProcess"></param>
+        /// <returns></returns>
         public static Process GetById(int idProcess)
         {
             try

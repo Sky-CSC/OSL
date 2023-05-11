@@ -10,6 +10,7 @@ namespace OSL_Common.Download
         private static Logger _logger = new("Download");
         public static int downloadAllFile;
         public static int errorDownloadAllFile;
+
         /// <summary>
         /// Download String Async
         /// </summary>

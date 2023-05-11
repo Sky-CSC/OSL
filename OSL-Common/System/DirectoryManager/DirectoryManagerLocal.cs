@@ -2,6 +2,9 @@
 
 namespace OSL_Common.System.DirectoryManager
 {
+    /// <summary>
+    /// Gestion of local directory
+    /// </summary>
     public class DirectoryManagerLocal
     {
         private static Logger _logger = new("DirectoryManagerLocal");
