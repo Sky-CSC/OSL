@@ -6,6 +6,9 @@ using OSL_Web.Pages.ChampSelect;
 
 namespace OSL_Web.Configuration.Overlay.ChampSelect.View3
 {
+    /// <summary>
+    /// Configuration Champ Select View 3
+    /// </summary>
     public class Config
     {
         private static Logger _logger = new("Config");

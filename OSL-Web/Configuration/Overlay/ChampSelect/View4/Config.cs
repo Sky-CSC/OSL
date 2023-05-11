@@ -6,6 +6,9 @@ using OSL_Web.Pages.ChampSelect;
 
 namespace OSL_Web.Configuration.Overlay.ChampSelect.View4
 {
+    /// <summary>
+    /// Configuration Champ Select View 4
+    /// </summary>
     public class Config
     {
         private static Logger _logger = new("Config");
@@ -17,7 +20,7 @@ namespace OSL_Web.Configuration.Overlay.ChampSelect.View4
         }
 
         /// <summary>
-        /// Load configuration Champ Select View4
+        /// Load configuration Champ Select View 4
         /// </summary>
         public static void LoadPatchRegionConfig()
         {

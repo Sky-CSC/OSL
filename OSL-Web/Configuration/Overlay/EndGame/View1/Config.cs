@@ -7,16 +7,25 @@ using OSL_Web.Pages.EndGame;
 
 namespace OSL_Web.Configuration.Overlay.EndGame.View1
 {
+    /// <summary>
+    /// Configuration End Game View 1
+    /// </summary>
     public class Config
     {
         private static Logger _logger = new("Config");
 
+        /// <summary>
+        /// Load config
+        /// </summary>
         public static void LoadConfig()
         {
             LoadFormatingDataConfig();
             LoadPatchRegionConfig();
         }
 
+        /// <summary>
+        /// Load num patch and région name
+        /// </summary>
         public static void LoadPatchRegionConfig()
         {
             try
@@ -34,6 +43,9 @@ namespace OSL_Web.Configuration.Overlay.EndGame.View1
             _logger.log(LoggingLevel.INFO, "LoadConfigEndGameView1Page()", $"{EndGameView1Page.formatingData.DefaultRegion}");
         }
 
+        /// <summary>
+        /// Load default json file for overlay view 1
+        /// </summary>
         public static void LoadFormatingDataConfig()
         {
             string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/EndGame/View1/default.json");

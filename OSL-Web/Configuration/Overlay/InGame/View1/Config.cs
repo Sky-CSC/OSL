@@ -6,15 +6,24 @@ using OSL_Web.Pages.InGame;
 
 namespace OSL_Web.Configuration.Overlay.InGame.View1
 {
+    /// <summary>
+    /// Configuration In Game View 1
+    /// </summary>
     public class Config
     {
         private static Logger _logger = new("Config");
+        /// <summary>
+        /// Load config
+        /// </summary>
         public static void LoadConfig()
         {
             LoadFormatingDataConfig();
             LoadPatchRegionConfig();
         }
 
+        /// <summary>
+        /// Load num patch and région name
+        /// </summary>
         public static void LoadPatchRegionConfig()
         {
             try
@@ -30,6 +39,9 @@ namespace OSL_Web.Configuration.Overlay.InGame.View1
             _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView1Page.formatingData.DefaultPatch}");
             _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView1Page.formatingData.DefaultRegion}");
         }
+        /// <summary>
+        /// Load default json file for overlay view 1
+        /// </summary>
         public static void LoadFormatingDataConfig()
         {
             string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/InGame/View1/default.json");

@@ -6,9 +6,15 @@ using OSL_Common.System.DirectoryManager;
 
 namespace OSL_Web.Configuration.CDragon
 {
+    /// <summary>
+    /// CDragon configuration
+    /// </summary>
     public class CDragonConfig
     {
         private static Logger _logger = new("CDragonConfig");
+        /// <summary>
+        /// Load configuration
+        /// </summary>
         public static void LoadJsonConfig()
         {
             string filePath = "./" + "Configuration" + "/" + "CDragon" + "/" + "cdragon.json";
@@ -44,6 +50,9 @@ namespace OSL_Web.Configuration.CDragon
             }
         }
 
+        /// <summary>
+        /// Create variable for default directory
+        /// </summary>
         public static void LoadDirectoryConfig()
         {
             //string path = Directory.GetCurrentDirectory().Replace("\\", "/");
