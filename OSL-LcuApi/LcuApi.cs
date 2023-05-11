@@ -7,11 +7,22 @@ using System.Net;
 
 namespace OSL_LcuApi
 {
+    /// <summary>
+    /// Local API for league of legends
+    /// </summary>
     public class LcuApi
     {
 
         private static Logger _logger = new("LcuApi");
 
+        /// <summary>
+        /// http request
+        /// </summary>
+        /// <param name="nameRequest"></param>
+        /// <param name="leagueClientLockFilePort"></param>
+        /// <param name="leagueClientApiLocalHost"></param>
+        /// <param name="leagueClientApiPassword"></param>
+        /// <returns></returns>
         public static string Request(string nameRequest, int leagueClientLockFilePort, string leagueClientApiLocalHost, string leagueClientApiPassword)
         {
             SSL.BypassSSL();
