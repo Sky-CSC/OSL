@@ -7,7 +7,7 @@
 ![framework](https://img.shields.io/badge/framework-blazor-brightgreen)
 ![platform](https://img.shields.io/badge/platform-windows-brightgreen)
 
-![license](https://img.shields.io/badge/license-comming%20soon-critical)
+![license](https://img.shields.io/badge/license-MIT-darkgreen)
 
 ![LoL1](https://img.shields.io/badge/Game%20Client%20API-League%20of%20Legends-blue)
 ![LoL2](https://img.shields.io/badge/Game%20Client%20Replay%20API-League%20of%20Legends-blue)
@@ -150,8 +150,8 @@ Applications use various APIs to collect information about the game, champions, 
 > [!TIP]
 > **If you have any suggestions don't hesitate**
 
-> [!CAUTION]
-> **The license of this code is not given yet, it is coming soon**
+> [!TIP]
+> **Distributed under the MIT License. See LICENSE for more information**
 
 > [!WARNING]
 > **Legal disclaimer**
