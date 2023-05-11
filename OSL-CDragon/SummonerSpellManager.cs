@@ -4,7 +4,7 @@ using OSL_Common.System.Logging;
 namespace OSL_CDragon
 {
     /// <summary>
-    /// Summoner Spell Manager
+    /// Retrieve data from each summoner spell
     /// </summary>
     public class SummonerSpellManager
     {

@@ -5,7 +5,7 @@ using OSL_Common.System.Logging;
 namespace OSL_CDragon
 {
     /// <summary>
-    /// Perks Manager
+    /// Retrieve data from each perks
     /// </summary>
     public class PerksManager
     {

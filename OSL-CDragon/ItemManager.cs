@@ -5,7 +5,7 @@ using OSL_Common.Download;
 namespace OSL_CDragon
 {
     /// <summary>
-    /// Item Manager
+    /// Retrieve data from each items
     /// </summary>
     public class ItemManager
     {

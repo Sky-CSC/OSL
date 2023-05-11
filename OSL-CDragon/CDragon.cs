@@ -6,7 +6,7 @@ using OSL_Common.Download;
 namespace OSL_CDragon
 {
     /// <summary>
-    /// CDragon
+    /// Download data from CDragon
     /// </summary>
     public class CDragon
     {
@@ -35,7 +35,7 @@ namespace OSL_CDragon
         public static string dataCDragonPath = "./" + "dataCDragon.json";
 
         /// <summary>
-        /// Download
+        /// Download data
         /// </summary>
         public class DownloadData
         {
@@ -133,6 +133,11 @@ namespace OSL_CDragon
                 _logger.log(LoggingLevel.INFO, "DownloadFiles()", $"End download and charge config view");
             }
 
+            /// <summary>
+            /// Create directory for save data
+            /// </summary>
+            /// <param name="numPatch"></param>
+            /// <param name="region"></param>
             private static void CreatedDirectory(string numPatch, string region)
             {
                 championDirectory += numPatch + "/" + region + "/" + "Champions" + "/"; 

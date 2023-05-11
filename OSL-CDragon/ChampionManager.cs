@@ -7,7 +7,7 @@ using static OSL_CDragon.CDragon;
 namespace OSL_CDragon
 {
     /// <summary>
-    /// Champion Manager
+    /// Retrieve data from each champion
     /// </summary>
     public class ChampionManager
     {
