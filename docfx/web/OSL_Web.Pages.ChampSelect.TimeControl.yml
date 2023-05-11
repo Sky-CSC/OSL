@@ -1,0 +1,740 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Pages.ChampSelect.TimeControl
+  commentId: T:OSL_Web.Pages.ChampSelect.TimeControl
+  id: TimeControl
+  parent: OSL_Web.Pages.ChampSelect
+  children:
+  - OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelect(System.Int32)
+  - OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  - OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectView3(System.Int32,System.Int32)
+  - OSL_Web.Pages.ChampSelect.TimeControl.gobalTimer
+  - OSL_Web.Pages.ChampSelect.TimeControl.phaseTime
+  - OSL_Web.Pages.ChampSelect.TimeControl.phaseTimeFast
+  - OSL_Web.Pages.ChampSelect.TimeControl.phaseTimer
+  - OSL_Web.Pages.ChampSelect.TimeControl.phaseTimerFast
+  - OSL_Web.Pages.ChampSelect.TimeControl.phaseTimerView3
+  - OSL_Web.Pages.ChampSelect.TimeControl.phaseTimeView3
+  langs:
+  - csharp
+  - vb
+  name: TimeControl
+  nameWithType: TimeControl
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TimeControl
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 7
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  summary: "\nGestion timer for champ select page\n"
+  example: []
+  syntax:
+    content: public class TimeControl
+    content.vb: Public Class TimeControl
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.gobalTimer
+  commentId: F:OSL_Web.Pages.ChampSelect.TimeControl.gobalTimer
+  id: gobalTimer
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: gobalTimer
+  nameWithType: TimeControl.gobalTimer
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.gobalTimer
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: gobalTimer
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 9
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public static int gobalTimer
+    return:
+      type: System.Int32
+    content.vb: Public Shared gobalTimer As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.phaseTime
+  commentId: F:OSL_Web.Pages.ChampSelect.TimeControl.phaseTime
+  id: phaseTime
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: phaseTime
+  nameWithType: TimeControl.phaseTime
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.phaseTime
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTime
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 10
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public static int phaseTime
+    return:
+      type: System.Int32
+    content.vb: Public Shared phaseTime As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimeFast
+  commentId: F:OSL_Web.Pages.ChampSelect.TimeControl.phaseTimeFast
+  id: phaseTimeFast
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: phaseTimeFast
+  nameWithType: TimeControl.phaseTimeFast
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimeFast
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimeFast
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 11
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public static int phaseTimeFast
+    return:
+      type: System.Int32
+    content.vb: Public Shared phaseTimeFast As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimeView3
+  commentId: F:OSL_Web.Pages.ChampSelect.TimeControl.phaseTimeView3
+  id: phaseTimeView3
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: phaseTimeView3
+  nameWithType: TimeControl.phaseTimeView3
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimeView3
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimeView3
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 12
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public static int phaseTimeView3
+    return:
+      type: System.Int32
+    content.vb: Public Shared phaseTimeView3 As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimer
+  commentId: F:OSL_Web.Pages.ChampSelect.TimeControl.phaseTimer
+  id: phaseTimer
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: phaseTimer
+  nameWithType: TimeControl.phaseTimer
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimer
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimer
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 13
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public static Timer phaseTimer
+    return:
+      type: System.Timers.Timer
+    content.vb: Public Shared phaseTimer As Timer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimerFast
+  commentId: F:OSL_Web.Pages.ChampSelect.TimeControl.phaseTimerFast
+  id: phaseTimerFast
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: phaseTimerFast
+  nameWithType: TimeControl.phaseTimerFast
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimerFast
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimerFast
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 14
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public static Timer phaseTimerFast
+    return:
+      type: System.Timers.Timer
+    content.vb: Public Shared phaseTimerFast As Timer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimerView3
+  commentId: F:OSL_Web.Pages.ChampSelect.TimeControl.phaseTimerView3
+  id: phaseTimerView3
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: phaseTimerView3
+  nameWithType: TimeControl.phaseTimerView3
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.phaseTimerView3
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: phaseTimerView3
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 15
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public static Timer phaseTimerView3
+    return:
+      type: System.Timers.Timer
+    content.vb: Public Shared phaseTimerView3 As Timer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelect(System.Int32)
+  commentId: M:OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelect(System.Int32)
+  id: DecreasingTimerChapSelect(System.Int32)
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: DecreasingTimerChapSelect(Int32)
+  nameWithType: TimeControl.DecreasingTimerChapSelect(Int32)
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelect(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DecreasingTimerChapSelect
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 65
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  summary: "\nDecreasing timer function (second display)\n"
+  example: []
+  syntax:
+    content: public static void DecreasingTimerChapSelect(int time)
+    parameters:
+    - id: time
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Sub DecreasingTimerChapSelect(time As Integer)
+  overload: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelect*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  commentId: M:OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  id: DecreasingTimerChapSelectFast(System.Int32,System.Int32)
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: DecreasingTimerChapSelectFast(Int32, Int32)
+  nameWithType: TimeControl.DecreasingTimerChapSelectFast(Int32, Int32)
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectFast(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DecreasingTimerChapSelectFast
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 79
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  summary: "\nDecreasing timer function (pixel display)\n"
+  example: []
+  syntax:
+    content: public static void DecreasingTimerChapSelectFast(int time, int interval)
+    parameters:
+    - id: time
+      type: System.Int32
+      description: ''
+    - id: interval
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Sub DecreasingTimerChapSelectFast(time As Integer, interval As Integer)
+  overload: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectFast*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectView3(System.Int32,System.Int32)
+  commentId: M:OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectView3(System.Int32,System.Int32)
+  id: DecreasingTimerChapSelectView3(System.Int32,System.Int32)
+  parent: OSL_Web.Pages.ChampSelect.TimeControl
+  langs:
+  - csharp
+  - vb
+  name: DecreasingTimerChapSelectView3(Int32, Int32)
+  nameWithType: TimeControl.DecreasingTimerChapSelectView3(Int32, Int32)
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectView3(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/TimeControl.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DecreasingTimerChapSelectView3
+    path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
+    startLine: 93
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  summary: "\nDecreasing timer function (pixel display)\n"
+  example: []
+  syntax:
+    content: public static void DecreasingTimerChapSelectView3(int time, int interval)
+    parameters:
+    - id: time
+      type: System.Int32
+      description: ''
+    - id: interval
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Sub DecreasingTimerChapSelectView3(time As Integer, interval As Integer)
+  overload: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectView3*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Web.Pages.ChampSelect
+  commentId: N:OSL_Web.Pages.ChampSelect
+  name: OSL_Web.Pages.ChampSelect
+  nameWithType: OSL_Web.Pages.ChampSelect
+  fullName: OSL_Web.Pages.ChampSelect
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Timers.Timer
+  commentId: T:System.Timers.Timer
+  parent: System.Timers
+  isExternal: true
+  name: Timer
+  nameWithType: Timer
+  fullName: System.Timers.Timer
+- uid: System.Timers
+  commentId: N:System.Timers
+  isExternal: true
+  name: System.Timers
+  nameWithType: System.Timers
+  fullName: System.Timers
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelect*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelect
+  name: DecreasingTimerChapSelect
+  nameWithType: TimeControl.DecreasingTimerChapSelect
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelect
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectFast*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectFast
+  name: DecreasingTimerChapSelectFast
+  nameWithType: TimeControl.DecreasingTimerChapSelectFast
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectFast
+- uid: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectView3*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectView3
+  name: DecreasingTimerChapSelectView3
+  nameWithType: TimeControl.DecreasingTimerChapSelectView3
+  fullName: OSL_Web.Pages.ChampSelect.TimeControl.DecreasingTimerChapSelectView3

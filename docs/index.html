@@ -89,13 +89,13 @@
 <h1 id="osl--overlay-spectator-live"><strong>OSL : Overlay Spectator Live</strong></h1>
 
 <p><img src="https://img.shields.io/badge/respos%20status-WIP-yellow" alt="work-in-progress">
-<img src="https://img.shields.io/badge/stability-experimental-orange" alt="stability">
-<img src="https://img.shields.io/badge/language-c%23-brightgreen" alt="language">
+<img src="https://img.shields.io/badge/version-v1.1.0-blue" alt="version"></p>
+<p><img src="https://img.shields.io/badge/language-c%23-brightgreen" alt="language">
 <img src="https://img.shields.io/badge/.NET-6.0-brightgreen" alt=".Net-6.0">
 <img src="https://img.shields.io/badge/framework-blazor-brightgreen" alt="framework">
-<img src="https://img.shields.io/badge/platform-windows-brightgreen" alt="platform">
-<img src="https://img.shields.io/badge/license-comming%20soon-critical" alt="license">
-<img src="https://img.shields.io/badge/Game%20Client%20API-League%20of%20Legends-blue" alt="LoL1">
+<img src="https://img.shields.io/badge/platform-windows-brightgreen" alt="platform"></p>
+<p><img src="https://img.shields.io/badge/license-comming%20soon-critical" alt="license"></p>
+<p><img src="https://img.shields.io/badge/Game%20Client%20API-League%20of%20Legends-blue" alt="LoL1">
 <img src="https://img.shields.io/badge/Game%20Client%20Replay%20API-League%20of%20Legends-blue" alt="LoL2">
 <img src="https://img.shields.io/badge/Live%20Events%20API-League%20of%20Legends-blue" alt="LoL3">
 <img src="https://img.shields.io/badge/Memory%20Reader-League%20of%20Legends-blue" alt="LoL4">
@@ -103,8 +103,9 @@
 <img src="https://img.shields.io/badge/CDragon%20API-CDragon-blue" alt="riot2"></p>
 <p>This project allows you to display an overlay with additional information for your League of Legends games</p>
 <p>Applications use various APIs to collect information about the game, champions, players, .....</p>
+<hr>
 <h1 id="features"><strong>Features</strong></h1>
-<p><strong><a href="https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-in-champ-select">Champ Select :</a></strong></p>
+<p><strong><a href="https://sky-csc.github.io/OSL/web/index.html#information-display-with-overlay-in-champ-select">Champ Select :</a></strong></p>
 <ul>
 <li>4 view</li>
 <li>Champ ban/select</li>
@@ -114,8 +115,8 @@
 <li>Timer ban/select/waiting</li>
 <li>Summoners Spell</li>
 </ul>
-<p><strong><a href="https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-in-game">In Game :</a></strong></p>
-<p><a href="https://sky-csc.github.io/OSL/serverdoc/intro.html#with-riot-overlay-">With riot overlay :</a></p>
+<p><strong><a href="https://sky-csc.github.io/OSL/web/index.html#information-display-with-overlay-in-game">In Game :</a></strong></p>
+<p><a href="https://sky-csc.github.io/OSL/web/index.html#with-riot-overlay-">With riot overlay :</a></p>
 <ul>
 <li>3 view</li>
 <li>Team/Dragon/Baron frame</li>
@@ -123,7 +124,7 @@
 <li>Number of victory/lose teams</li>
 <li>Frame for video/logo/player picture ...</li>
 </ul>
-<p><strong><a href="https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-in-end-game">End Game :</a></strong></p>
+<p><strong><a href="https://sky-csc.github.io/OSL/web/index.html#information-display-with-overlay-in-end-game">End Game :</a></strong></p>
 <ul>
 <li>3 view</li>
 <li>Team name</li>
@@ -134,7 +135,7 @@
 <li>KDA/Gold/Tower/Dragon/Elder Dragon/Herald/Baron</li>
 <li>Gold Diff</li>
 </ul>
-<p><strong><a href="https://sky-csc.github.io/OSL/serverdoc/intro.html#information-display-with-overlay-runes">Runes :</a></strong></p>
+<p><strong><a href="https://sky-csc.github.io/OSL/web/index.html#information-display-with-overlay-runes">Runes :</a></strong></p>
 <ul>
 <li>7 view</li>
 <li>Top</li>
@@ -146,40 +147,81 @@
 <li>All</li>
 </ul>
 <br>
+<hr>
 <h1 id="applications-architecture">Applications architecture</h1>
 <p><img src="picture/OSL-architecture2.drawio.png" alt=""></p>
-<h2 id="for-more-information-please-refer-to-these-different-documentations">For more information, please refer to these different documentations.</h2>
+<hr>
+<h1 id="documentations">Documentations.</h1>
 <ul>
-<li><a href="clientdoc/intro.html"><strong>Client</strong></a></li>
+<li><a href="client/index.html"><strong>Client</strong></a></li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>How to use and configure the application locally to sends information to the <strong>Server</strong></p>
-<p>How to set up and use riot viewer mode</p>
-</div>
-<ul>
-<li><a href="serverdoc/intro.html"><strong>Server</strong></a></li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>How to use the server application and retrieve information and overlay from a game.</p>
-</div>
-<ul>
-<li><a href="apiclient/index.html"><strong>Developer Client</strong></a></li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>What information it sends to the <strong>Server</strong> in what data format.</p>
+<p>How to use and configure the application locally to sends information to the <strong>Web</strong> application</p>
+<p>How to set up and use riot spectator mode</p>
 <p>Code explanation.</p>
 </div>
 <ul>
-<li><a href="apiserver/index.html"><strong>Developer Server</strong></a></li>
+<li><a href="web/index.html"><strong>Web</strong></a></li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
-<p>What information are recover and in what data format.</p>
+<p>How to use the web application and retrieve information and overlay from a game.</p>
 <p>Code explanation.</p>
 </div>
+<ul>
+<li><a href="common/index.html"><strong>Common</strong></a></li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A library for interacting OSL project.</p>
+<p>Code explanation.</p>
+</div>
+<ul>
+<li><a href="cdragon/index.html"><strong>CDragon</strong></a></li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A library for interacting with CDragon data.</p>
+<p>Code explanation.</p>
+</div>
+<ul>
+<li><a href="lcuapi/index.html"><strong>LcuApi</strong></a></li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A library for interacting with League of Legends client.</p>
+<p>Code explanation.</p>
+</div>
+<ul>
+<li><a href="replayapi/index.html"><strong>ReplayApi</strong></a></li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A library for interacting with league of legends client.</p>
+<p>Code explanation.</p>
+</div>
+<ul>
+<li><a href="webapiriot/index.html"><strong>WebApiRiot</strong></a></li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>A library for interacting with online riot api.</p>
+<p>Code explanation.</p>
+</div>
+<br>
+<hr>
+<h1 id="thanks-to-these-projets-and-community">Thanks to these projets and community</h1>
+<h2 id="floh22"><a href="https://github.com/floh22">Floh22</a></h2>
+<p><a href="https://github.com/floh22/LeagueBroadcast">LeagueBroadcast</a> (League of Legends Spectate Overlay Tools )</p>
+<h2 id="riot-community-volunteers-"><a href="https://github.com/RCVolus">Riot Community Volunteers </a></h2>
+<p><a href="https://github.com/RCVolus/league-prod-toolkit">league-prod-toolkit</a> (Toolkit for League Productions with overlays for champion select, ingame events, end of game stats, and more)</p>
+<p><a href="https://github.com/RCVolus/league-observer-tool">league-observer-tool</a> (An addition to the league-prod-toolkit for the observer PC)</p>
+<p><a href="https://github.com/RCVolus/lol-pick-ban-ui">lol-pick-ban-ui</a> (Web-Based UI to display the league of legends champ select in esports tournaments)</p>
+<h2 id="litzuck"><a href="https://github.com/Litzuck">Litzuck</a></h2>
+<p><a href="https://github.com/Litzuck/lol-spectator-overlay-client">lol-spectator-overlay-client</a> (A client that produces an overlay similar to that of the one used in the broadcasts of LoL Esports during 2015-2017)</p>
+<h2 id="piorrro33"><a href="https://github.com/piorrro33">Piorrro33</a></h2>
+<p><a href="https://github.com/piorrro33/overlay/tree/v1.5.1">overlay</a> (Customizable UI for League of Legends champion select spectating)</p>
 <hr>
 <div class="WARNING">
 <h5>Warning</h5>

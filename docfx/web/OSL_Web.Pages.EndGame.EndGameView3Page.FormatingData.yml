@@ -1,0 +1,3752 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  commentId: T:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  id: EndGameView3Page.FormatingData
+  parent: OSL_Web.Pages.EndGame
+  children:
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorDeg
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorDeg
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBorderColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansGradiant
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansTextColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueBarColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBorderColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoGradiant
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedBarColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoText
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoTextColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultPatch
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultRegion
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBlueTextColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBorderColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsGradiant
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsRedTextColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsSeparationColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsTextColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBarColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBorderColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffGradiant
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffText
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffTextColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorDeg
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamName
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamNameColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScore
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBorderColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarGradiant
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamName
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamNameColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScore
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScoreColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerColor
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerText
+  - OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerTextColor
+  langs:
+  - csharp
+  - vb
+  name: EndGameView3Page.FormatingData
+  nameWithType: EndGameView3Page.FormatingData
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: FormatingData
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 12
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public class FormatingData
+    content.vb: Public Class FormatingData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultPatch
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultPatch
+  id: DefaultPatch
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultPatch
+  nameWithType: EndGameView3Page.FormatingData.DefaultPatch
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultPatch
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultPatch
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 14
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string DefaultPatch { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultPatch As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultPatch*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultRegion
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultRegion
+  id: DefaultRegion
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultRegion
+  nameWithType: EndGameView3Page.FormatingData.DefaultRegion
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultRegion
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultRegion
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 15
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string DefaultRegion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultRegion As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultRegion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColor
+  id: BackgroundColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroundColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 17
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BackgroundColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroundColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorDeg
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorDeg
+  id: BackgroundColorDeg
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorDeg
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroundColorDeg
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 18
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BackgroundColorDeg { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroundColorDeg As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorDeg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor1
+  id: BackgroundColorColor1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroundColorColor1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 19
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BackgroundColorColor1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroundColorColor1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent1
+  id: BackgroundColorPercent1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroundColorPercent1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 20
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BackgroundColorPercent1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroundColorPercent1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor2
+  id: BackgroundColorColor2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroundColorColor2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 21
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BackgroundColorColor2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroundColorColor2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent2
+  id: BackgroundColorPercent2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroundColorPercent2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 22
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BackgroundColorPercent2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroundColorPercent2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColor
+  id: TopBarBackgroundColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBackgroundColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 24
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBackgroundColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBackgroundColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorDeg
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorDeg
+  id: TopBarBackgroundColorDeg
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorDeg
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBackgroundColorDeg
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 25
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBackgroundColorDeg { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBackgroundColorDeg As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorDeg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor1
+  id: TopBarBackgroundColorColor1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBackgroundColorColor1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 26
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBackgroundColorColor1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBackgroundColorColor1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1
+  id: TopBarBackgroundColorPercent1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBackgroundColorPercent1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 27
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBackgroundColorPercent1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBackgroundColorPercent1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor2
+  id: TopBarBackgroundColorColor2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBackgroundColorColor2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 28
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBackgroundColorColor2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBackgroundColorColor2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2
+  id: TopBarBackgroundColorPercent2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBackgroundColorPercent2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 29
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBackgroundColorPercent2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBackgroundColorPercent2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarGradiant
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarGradiant
+  id: TopBarGradiant
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarGradiant
+  nameWithType: EndGameView3Page.FormatingData.TopBarGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarGradiant
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarGradiant
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 30
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarGradiant { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarGradiant As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarGradiant*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBorderColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBorderColor
+  id: TopBarBorderColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBorderColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBorderColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBorderColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 31
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBorderColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBorderColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBorderColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerText
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerText
+  id: TopBarTimerText
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarTimerText
+  nameWithType: EndGameView3Page.FormatingData.TopBarTimerText
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarTimerText
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 32
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarTimerText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarTimerText As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerTextColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerTextColor
+  id: TopBarTimerTextColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarTimerTextColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarTimerTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerTextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarTimerTextColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 33
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarTimerTextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarTimerTextColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerTextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerColor
+  id: TopBarTimerColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarTimerColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarTimerColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarTimerColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 34
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarTimerColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarTimerColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamName
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamName
+  id: TopBarBlueTeamName
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBlueTeamName
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamName
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamName
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBlueTeamName
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 35
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBlueTeamName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBlueTeamName As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScore
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScore
+  id: TopBarBlueTeamScore
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBlueTeamScore
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamScore
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScore
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBlueTeamScore
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 36
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBlueTeamScore { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBlueTeamScore As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScore*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamNameColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamNameColor
+  id: TopBarBlueTeamNameColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBlueTeamNameColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamNameColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamNameColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBlueTeamNameColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 37
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBlueTeamNameColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBlueTeamNameColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamNameColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor
+  id: TopBarBlueTeamScoreColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBlueTeamScoreColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBlueTeamScoreColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 38
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBlueTeamScoreColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBlueTeamScoreColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor
+  id: TopBarBlueTeamWinLossColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarBlueTeamWinLossColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarBlueTeamWinLossColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 39
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarBlueTeamWinLossColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarBlueTeamWinLossColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamName
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamName
+  id: TopBarRedTeamName
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarRedTeamName
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamName
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamName
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarRedTeamName
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 40
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarRedTeamName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarRedTeamName As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScore
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScore
+  id: TopBarRedTeamScore
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarRedTeamScore
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamScore
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScore
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarRedTeamScore
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 41
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarRedTeamScore { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarRedTeamScore As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScore*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamNameColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamNameColor
+  id: TopBarRedTeamNameColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarRedTeamNameColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamNameColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamNameColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarRedTeamNameColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 42
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarRedTeamNameColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarRedTeamNameColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamNameColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScoreColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScoreColor
+  id: TopBarRedTeamScoreColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarRedTeamScoreColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamScoreColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScoreColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarRedTeamScoreColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 43
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarRedTeamScoreColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarRedTeamScoreColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScoreColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor
+  id: TopBarRedTeamWinLossColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: TopBarRedTeamWinLossColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TopBarRedTeamWinLossColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 44
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string TopBarRedTeamWinLossColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TopBarRedTeamWinLossColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColor
+  id: ChampionInfoBackgroundColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoBackgroundColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 46
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoBackgroundColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoBackgroundColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg
+  id: ChampionInfoBackgroundColorDeg
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoBackgroundColorDeg
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 47
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoBackgroundColorDeg { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoBackgroundColorDeg As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1
+  id: ChampionInfoBackgroundColorColor1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoBackgroundColorColor1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 48
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoBackgroundColorColor1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoBackgroundColorColor1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1
+  id: ChampionInfoBackgroundColorPercent1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoBackgroundColorPercent1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 49
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoBackgroundColorPercent1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoBackgroundColorPercent1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2
+  id: ChampionInfoBackgroundColorColor2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoBackgroundColorColor2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 50
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoBackgroundColorColor2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoBackgroundColorColor2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2
+  id: ChampionInfoBackgroundColorPercent2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoBackgroundColorPercent2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 51
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoBackgroundColorPercent2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoBackgroundColorPercent2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoGradiant
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoGradiant
+  id: ChampionInfoGradiant
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoGradiant
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoGradiant
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoGradiant
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 52
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoGradiant { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoGradiant As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoGradiant*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBorderColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBorderColor
+  id: ChampionInfoBorderColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoBorderColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBorderColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoBorderColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 53
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoBorderColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoBorderColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBorderColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoText
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoText
+  id: ChampionInfoText
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoText
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoText
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoText
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 54
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoText As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoTextColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoTextColor
+  id: ChampionInfoTextColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoTextColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoTextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoTextColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 55
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoTextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoTextColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoTextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueBarColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueBarColor
+  id: ChampionInfoBlueBarColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoBlueBarColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBlueBarColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueBarColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoBlueBarColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 56
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoBlueBarColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoBlueBarColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueBarColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedBarColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedBarColor
+  id: ChampionInfoRedBarColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoRedBarColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoRedBarColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedBarColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoRedBarColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 57
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoRedBarColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoRedBarColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedBarColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor
+  id: ChampionInfoBlueDegaTextColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoBlueDegaTextColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoBlueDegaTextColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 58
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoBlueDegaTextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoBlueDegaTextColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor
+  id: ChampionInfoRedDegaTextColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ChampionInfoRedDegaTextColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionInfoRedDegaTextColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 59
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string ChampionInfoRedDegaTextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChampionInfoRedDegaTextColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColor
+  id: BansBackgroundColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BansBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BansBackgroundColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 61
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BansBackgroundColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BansBackgroundColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorDeg
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorDeg
+  id: BansBackgroundColorDeg
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BansBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorDeg
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BansBackgroundColorDeg
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 62
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BansBackgroundColorDeg { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BansBackgroundColorDeg As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorDeg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor1
+  id: BansBackgroundColorColor1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BansBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BansBackgroundColorColor1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 63
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BansBackgroundColorColor1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BansBackgroundColorColor1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent1
+  id: BansBackgroundColorPercent1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BansBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BansBackgroundColorPercent1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 64
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BansBackgroundColorPercent1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BansBackgroundColorPercent1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor2
+  id: BansBackgroundColorColor2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BansBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BansBackgroundColorColor2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 65
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BansBackgroundColorColor2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BansBackgroundColorColor2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent2
+  id: BansBackgroundColorPercent2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BansBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BansBackgroundColorPercent2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 66
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BansBackgroundColorPercent2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BansBackgroundColorPercent2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansGradiant
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansGradiant
+  id: BansGradiant
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BansGradiant
+  nameWithType: EndGameView3Page.FormatingData.BansGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansGradiant
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BansGradiant
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 67
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BansGradiant { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BansGradiant As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansGradiant*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBorderColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBorderColor
+  id: BansBorderColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BansBorderColor
+  nameWithType: EndGameView3Page.FormatingData.BansBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBorderColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BansBorderColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 68
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BansBorderColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BansBorderColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBorderColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansTextColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansTextColor
+  id: BansTextColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BansTextColor
+  nameWithType: EndGameView3Page.FormatingData.BansTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansTextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BansTextColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 69
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string BansTextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BansTextColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansTextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColor
+  id: GlobalStatsBackgroundColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsBackgroundColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 71
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsBackgroundColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsBackgroundColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg
+  id: GlobalStatsBackgroundColorDeg
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsBackgroundColorDeg
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 72
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsBackgroundColorDeg { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsBackgroundColorDeg As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1
+  id: GlobalStatsBackgroundColorColor1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsBackgroundColorColor1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 73
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsBackgroundColorColor1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsBackgroundColorColor1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1
+  id: GlobalStatsBackgroundColorPercent1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsBackgroundColorPercent1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 74
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsBackgroundColorPercent1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsBackgroundColorPercent1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2
+  id: GlobalStatsBackgroundColorColor2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsBackgroundColorColor2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 75
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsBackgroundColorColor2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsBackgroundColorColor2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2
+  id: GlobalStatsBackgroundColorPercent2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsBackgroundColorPercent2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 76
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsBackgroundColorPercent2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsBackgroundColorPercent2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsGradiant
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsGradiant
+  id: GlobalStatsGradiant
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsGradiant
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsGradiant
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsGradiant
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 77
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsGradiant { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsGradiant As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsGradiant*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBorderColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBorderColor
+  id: GlobalStatsBorderColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsBorderColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBorderColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsBorderColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 78
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsBorderColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsBorderColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBorderColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsSeparationColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsSeparationColor
+  id: GlobalStatsSeparationColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsSeparationColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsSeparationColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsSeparationColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsSeparationColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 79
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsSeparationColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsSeparationColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsSeparationColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsTextColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsTextColor
+  id: GlobalStatsTextColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsTextColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsTextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsTextColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 80
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsTextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsTextColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsTextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBlueTextColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBlueTextColor
+  id: GlobalStatsBlueTextColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsBlueTextColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBlueTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBlueTextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsBlueTextColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 81
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsBlueTextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsBlueTextColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBlueTextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsRedTextColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsRedTextColor
+  id: GlobalStatsRedTextColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GlobalStatsRedTextColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsRedTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsRedTextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GlobalStatsRedTextColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 82
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GlobalStatsRedTextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GlobalStatsRedTextColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsRedTextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColor
+  id: GoldDiffBackgroundColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBackgroundColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 84
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBackgroundColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBackgroundColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg
+  id: GoldDiffBackgroundColorDeg
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBackgroundColorDeg
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 85
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBackgroundColorDeg { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBackgroundColorDeg As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1
+  id: GoldDiffBackgroundColorColor1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBackgroundColorColor1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 86
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBackgroundColorColor1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBackgroundColorColor1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1
+  id: GoldDiffBackgroundColorPercent1
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBackgroundColorPercent1
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 87
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBackgroundColorPercent1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBackgroundColorPercent1 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2
+  id: GoldDiffBackgroundColorColor2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBackgroundColorColor2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 88
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBackgroundColorColor2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBackgroundColorColor2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2
+  id: GoldDiffBackgroundColorPercent2
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBackgroundColorPercent2
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 89
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBackgroundColorPercent2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBackgroundColorPercent2 As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffGradiant
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffGradiant
+  id: GoldDiffGradiant
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffGradiant
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffGradiant
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffGradiant
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 90
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffGradiant { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffGradiant As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffGradiant*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBorderColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBorderColor
+  id: GoldDiffBorderColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBorderColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBorderColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBorderColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 91
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBorderColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBorderColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBorderColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffText
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffText
+  id: GoldDiffText
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffText
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffText
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffText
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 92
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffText As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffTextColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffTextColor
+  id: GoldDiffTextColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffTextColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffTextColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffTextColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 93
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffTextColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffTextColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffTextColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor
+  id: GoldDiffBlueTextGoldColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBlueTextGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBlueTextGoldColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 94
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBlueTextGoldColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBlueTextGoldColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor
+  id: GoldDiffRedTextGoldColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffRedTextGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffRedTextGoldColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 95
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffRedTextGoldColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffRedTextGoldColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor
+  id: GoldDiffZeroTextGoldColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffZeroTextGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffZeroTextGoldColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 96
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffZeroTextGoldColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffZeroTextGoldColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor
+  id: GoldDiffBluePointGoldColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBluePointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBluePointGoldColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 97
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBluePointGoldColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBluePointGoldColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor
+  id: GoldDiffRedPointGoldColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffRedPointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffRedPointGoldColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 98
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffRedPointGoldColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffRedPointGoldColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor
+  id: GoldDiffZeroPointGoldColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffZeroPointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffZeroPointGoldColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 99
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffZeroPointGoldColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffZeroPointGoldColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor
+  id: GoldDiffStartEndPointGoldColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffStartEndPointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffStartEndPointGoldColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 100
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffStartEndPointGoldColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffStartEndPointGoldColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor
+  id: GoldDiffLinkPointGoldColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffLinkPointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffLinkPointGoldColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 101
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffLinkPointGoldColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffLinkPointGoldColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBarColor
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBarColor
+  id: GoldDiffBarColor
+  parent: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: GoldDiffBarColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBarColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBarColor
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: GoldDiffBarColor
+    path: ../OSL-Web/Pages/EndGame/EndGameView3Page.razor.cs
+    startLine: 102
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string GoldDiffBarColor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GoldDiffBarColor As String
+  overload: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBarColor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Web.Pages.EndGame
+  commentId: N:OSL_Web.Pages.EndGame
+  name: OSL_Web.Pages.EndGame
+  nameWithType: OSL_Web.Pages.EndGame
+  fullName: OSL_Web.Pages.EndGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultPatch*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultPatch
+  name: DefaultPatch
+  nameWithType: EndGameView3Page.FormatingData.DefaultPatch
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultPatch
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultRegion*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultRegion
+  name: DefaultRegion
+  nameWithType: EndGameView3Page.FormatingData.DefaultRegion
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.DefaultRegion
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColor
+  name: BackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorDeg*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorDeg
+  name: BackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorDeg
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor1
+  name: BackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent1
+  name: BackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor2
+  name: BackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorColor2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent2
+  name: BackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.BackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BackgroundColorPercent2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColor
+  name: TopBarBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorDeg*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorDeg
+  name: TopBarBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorDeg
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor1
+  name: TopBarBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1
+  name: TopBarBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor2
+  name: TopBarBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorColor2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2
+  name: TopBarBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBackgroundColorPercent2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarGradiant*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarGradiant
+  name: TopBarGradiant
+  nameWithType: EndGameView3Page.FormatingData.TopBarGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarGradiant
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBorderColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBorderColor
+  name: TopBarBorderColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBorderColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerText*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerText
+  name: TopBarTimerText
+  nameWithType: EndGameView3Page.FormatingData.TopBarTimerText
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerText
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerTextColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerTextColor
+  name: TopBarTimerTextColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarTimerTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerTextColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerColor
+  name: TopBarTimerColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarTimerColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarTimerColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamName*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamName
+  name: TopBarBlueTeamName
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamName
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamName
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScore*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScore
+  name: TopBarBlueTeamScore
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamScore
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScore
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamNameColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamNameColor
+  name: TopBarBlueTeamNameColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamNameColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamNameColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor
+  name: TopBarBlueTeamScoreColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamScoreColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor
+  name: TopBarBlueTeamWinLossColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarBlueTeamWinLossColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamName*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamName
+  name: TopBarRedTeamName
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamName
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamName
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScore*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScore
+  name: TopBarRedTeamScore
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamScore
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScore
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamNameColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamNameColor
+  name: TopBarRedTeamNameColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamNameColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamNameColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScoreColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScoreColor
+  name: TopBarRedTeamScoreColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamScoreColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamScoreColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor
+  name: TopBarRedTeamWinLossColor
+  nameWithType: EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.TopBarRedTeamWinLossColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColor
+  name: ChampionInfoBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg
+  name: ChampionInfoBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorDeg
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1
+  name: ChampionInfoBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1
+  name: ChampionInfoBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2
+  name: ChampionInfoBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorColor2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2
+  name: ChampionInfoBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBackgroundColorPercent2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoGradiant*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoGradiant
+  name: ChampionInfoGradiant
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoGradiant
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBorderColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBorderColor
+  name: ChampionInfoBorderColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBorderColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoText*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoText
+  name: ChampionInfoText
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoText
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoText
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoTextColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoTextColor
+  name: ChampionInfoTextColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoTextColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueBarColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueBarColor
+  name: ChampionInfoBlueBarColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBlueBarColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueBarColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedBarColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedBarColor
+  name: ChampionInfoRedBarColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoRedBarColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedBarColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor
+  name: ChampionInfoBlueDegaTextColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoBlueDegaTextColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor
+  name: ChampionInfoRedDegaTextColor
+  nameWithType: EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.ChampionInfoRedDegaTextColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColor
+  name: BansBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorDeg*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorDeg
+  name: BansBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorDeg
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor1
+  name: BansBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent1
+  name: BansBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor2
+  name: BansBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorColor2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent2
+  name: BansBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.BansBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBackgroundColorPercent2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansGradiant*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansGradiant
+  name: BansGradiant
+  nameWithType: EndGameView3Page.FormatingData.BansGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansGradiant
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBorderColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBorderColor
+  name: BansBorderColor
+  nameWithType: EndGameView3Page.FormatingData.BansBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansBorderColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansTextColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansTextColor
+  name: BansTextColor
+  nameWithType: EndGameView3Page.FormatingData.BansTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.BansTextColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColor
+  name: GlobalStatsBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg
+  name: GlobalStatsBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorDeg
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1
+  name: GlobalStatsBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1
+  name: GlobalStatsBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2
+  name: GlobalStatsBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorColor2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2
+  name: GlobalStatsBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBackgroundColorPercent2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsGradiant*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsGradiant
+  name: GlobalStatsGradiant
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsGradiant
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBorderColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBorderColor
+  name: GlobalStatsBorderColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBorderColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsSeparationColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsSeparationColor
+  name: GlobalStatsSeparationColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsSeparationColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsSeparationColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsTextColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsTextColor
+  name: GlobalStatsTextColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsTextColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBlueTextColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBlueTextColor
+  name: GlobalStatsBlueTextColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsBlueTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsBlueTextColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsRedTextColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsRedTextColor
+  name: GlobalStatsRedTextColor
+  nameWithType: EndGameView3Page.FormatingData.GlobalStatsRedTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GlobalStatsRedTextColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColor
+  name: GoldDiffBackgroundColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg
+  name: GoldDiffBackgroundColorDeg
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorDeg
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1
+  name: GoldDiffBackgroundColorColor1
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1
+  name: GoldDiffBackgroundColorPercent1
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent1
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2
+  name: GoldDiffBackgroundColorColor2
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorColor2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2
+  name: GoldDiffBackgroundColorPercent2
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBackgroundColorPercent2
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffGradiant*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffGradiant
+  name: GoldDiffGradiant
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffGradiant
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffGradiant
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBorderColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBorderColor
+  name: GoldDiffBorderColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBorderColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBorderColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffText*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffText
+  name: GoldDiffText
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffText
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffText
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffTextColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffTextColor
+  name: GoldDiffTextColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffTextColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffTextColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor
+  name: GoldDiffBlueTextGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBlueTextGoldColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor
+  name: GoldDiffRedTextGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedTextGoldColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor
+  name: GoldDiffZeroTextGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroTextGoldColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor
+  name: GoldDiffBluePointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBluePointGoldColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor
+  name: GoldDiffRedPointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffRedPointGoldColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor
+  name: GoldDiffZeroPointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffZeroPointGoldColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor
+  name: GoldDiffStartEndPointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffStartEndPointGoldColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor
+  name: GoldDiffLinkPointGoldColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffLinkPointGoldColor
+- uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBarColor*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBarColor
+  name: GoldDiffBarColor
+  nameWithType: EndGameView3Page.FormatingData.GoldDiffBarColor
+  fullName: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData.GoldDiffBarColor

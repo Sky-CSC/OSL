@@ -1,0 +1,1022 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.Configuration.Config
+  commentId: T:OSL_Client.Configuration.Config
+  id: Config
+  parent: OSL_Client.Configuration
+  children:
+  - OSL_Client.Configuration.Config.leagueClientApiLocalHost
+  - OSL_Client.Configuration.Config.leagueClientApiPassword
+  - OSL_Client.Configuration.Config.leagueClientFullFilePath
+  - OSL_Client.Configuration.Config.leagueClientLiveEventsApiPort
+  - OSL_Client.Configuration.Config.leagueClientLockFilePassword
+  - OSL_Client.Configuration.Config.leagueClientLockFilePath
+  - OSL_Client.Configuration.Config.leagueClientLockFilePort
+  - OSL_Client.Configuration.Config.leagueClientLockFileProcessId
+  - OSL_Client.Configuration.Config.leagueClientPath
+  - OSL_Client.Configuration.Config.leagueClientProcess
+  - OSL_Client.Configuration.Config.LoadConfig
+  - OSL_Client.Configuration.Config.LoadConfigRiot
+  - OSL_Client.Configuration.Config.LoadConfigServerSocket
+  - OSL_Client.Configuration.Config.localIpHttp
+  - OSL_Client.Configuration.Config.localIpHttps
+  - OSL_Client.Configuration.Config.riotLogin
+  - OSL_Client.Configuration.Config.riotPort
+  - OSL_Client.Configuration.Config.serverSocketIp
+  - OSL_Client.Configuration.Config.serverSocketPort
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: Config
+  fullName: OSL_Client.Configuration.Config
+  type: Class
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Config
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 9
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  summary: "\nGestion of configuration fo client\n"
+  example: []
+  syntax:
+    content: public class Config
+    content.vb: Public Class Config
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Client.Configuration.Config.serverSocketIp
+  commentId: F:OSL_Client.Configuration.Config.serverSocketIp
+  id: serverSocketIp
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: serverSocketIp
+  nameWithType: Config.serverSocketIp
+  fullName: OSL_Client.Configuration.Config.serverSocketIp
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: serverSocketIp
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 13
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string serverSocketIp
+    return:
+      type: System.String
+    content.vb: Public Shared serverSocketIp As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.serverSocketPort
+  commentId: F:OSL_Client.Configuration.Config.serverSocketPort
+  id: serverSocketPort
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: serverSocketPort
+  nameWithType: Config.serverSocketPort
+  fullName: OSL_Client.Configuration.Config.serverSocketPort
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: serverSocketPort
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 14
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static int serverSocketPort
+    return:
+      type: System.Int32
+    content.vb: Public Shared serverSocketPort As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientProcess
+  commentId: F:OSL_Client.Configuration.Config.leagueClientProcess
+  id: leagueClientProcess
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientProcess
+  nameWithType: Config.leagueClientProcess
+  fullName: OSL_Client.Configuration.Config.leagueClientProcess
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientProcess
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 15
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string leagueClientProcess
+    return:
+      type: System.String
+    content.vb: Public Shared leagueClientProcess As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientFullFilePath
+  commentId: F:OSL_Client.Configuration.Config.leagueClientFullFilePath
+  id: leagueClientFullFilePath
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientFullFilePath
+  nameWithType: Config.leagueClientFullFilePath
+  fullName: OSL_Client.Configuration.Config.leagueClientFullFilePath
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientFullFilePath
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 16
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string leagueClientFullFilePath
+    return:
+      type: System.String
+    content.vb: Public Shared leagueClientFullFilePath As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientPath
+  commentId: F:OSL_Client.Configuration.Config.leagueClientPath
+  id: leagueClientPath
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientPath
+  nameWithType: Config.leagueClientPath
+  fullName: OSL_Client.Configuration.Config.leagueClientPath
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientPath
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 17
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string leagueClientPath
+    return:
+      type: System.String
+    content.vb: Public Shared leagueClientPath As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientLockFilePath
+  commentId: F:OSL_Client.Configuration.Config.leagueClientLockFilePath
+  id: leagueClientLockFilePath
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientLockFilePath
+  nameWithType: Config.leagueClientLockFilePath
+  fullName: OSL_Client.Configuration.Config.leagueClientLockFilePath
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientLockFilePath
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 18
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string leagueClientLockFilePath
+    return:
+      type: System.String
+    content.vb: Public Shared leagueClientLockFilePath As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientLockFileProcessId
+  commentId: F:OSL_Client.Configuration.Config.leagueClientLockFileProcessId
+  id: leagueClientLockFileProcessId
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientLockFileProcessId
+  nameWithType: Config.leagueClientLockFileProcessId
+  fullName: OSL_Client.Configuration.Config.leagueClientLockFileProcessId
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientLockFileProcessId
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 19
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static int leagueClientLockFileProcessId
+    return:
+      type: System.Int32
+    content.vb: Public Shared leagueClientLockFileProcessId As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientLockFilePort
+  commentId: F:OSL_Client.Configuration.Config.leagueClientLockFilePort
+  id: leagueClientLockFilePort
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientLockFilePort
+  nameWithType: Config.leagueClientLockFilePort
+  fullName: OSL_Client.Configuration.Config.leagueClientLockFilePort
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientLockFilePort
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 20
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static int leagueClientLockFilePort
+    return:
+      type: System.Int32
+    content.vb: Public Shared leagueClientLockFilePort As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientLockFilePassword
+  commentId: F:OSL_Client.Configuration.Config.leagueClientLockFilePassword
+  id: leagueClientLockFilePassword
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientLockFilePassword
+  nameWithType: Config.leagueClientLockFilePassword
+  fullName: OSL_Client.Configuration.Config.leagueClientLockFilePassword
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientLockFilePassword
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 21
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string leagueClientLockFilePassword
+    return:
+      type: System.String
+    content.vb: Public Shared leagueClientLockFilePassword As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.riotLogin
+  commentId: F:OSL_Client.Configuration.Config.riotLogin
+  id: riotLogin
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: riotLogin
+  nameWithType: Config.riotLogin
+  fullName: OSL_Client.Configuration.Config.riotLogin
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: riotLogin
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 22
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string riotLogin
+    return:
+      type: System.String
+    content.vb: Public Shared riotLogin As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.riotPort
+  commentId: F:OSL_Client.Configuration.Config.riotPort
+  id: riotPort
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: riotPort
+  nameWithType: Config.riotPort
+  fullName: OSL_Client.Configuration.Config.riotPort
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: riotPort
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 23
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static int riotPort
+    return:
+      type: System.Int32
+    content.vb: Public Shared riotPort As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientApiLocalHost
+  commentId: F:OSL_Client.Configuration.Config.leagueClientApiLocalHost
+  id: leagueClientApiLocalHost
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientApiLocalHost
+  nameWithType: Config.leagueClientApiLocalHost
+  fullName: OSL_Client.Configuration.Config.leagueClientApiLocalHost
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientApiLocalHost
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 24
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string leagueClientApiLocalHost
+    return:
+      type: System.String
+    content.vb: Public Shared leagueClientApiLocalHost As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientApiPassword
+  commentId: F:OSL_Client.Configuration.Config.leagueClientApiPassword
+  id: leagueClientApiPassword
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientApiPassword
+  nameWithType: Config.leagueClientApiPassword
+  fullName: OSL_Client.Configuration.Config.leagueClientApiPassword
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientApiPassword
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 25
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string leagueClientApiPassword
+    return:
+      type: System.String
+    content.vb: Public Shared leagueClientApiPassword As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.leagueClientLiveEventsApiPort
+  commentId: F:OSL_Client.Configuration.Config.leagueClientLiveEventsApiPort
+  id: leagueClientLiveEventsApiPort
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: leagueClientLiveEventsApiPort
+  nameWithType: Config.leagueClientLiveEventsApiPort
+  fullName: OSL_Client.Configuration.Config.leagueClientLiveEventsApiPort
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: leagueClientLiveEventsApiPort
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 26
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static int leagueClientLiveEventsApiPort
+    return:
+      type: System.Int32
+    content.vb: Public Shared leagueClientLiveEventsApiPort As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.localIpHttp
+  commentId: F:OSL_Client.Configuration.Config.localIpHttp
+  id: localIpHttp
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: localIpHttp
+  nameWithType: Config.localIpHttp
+  fullName: OSL_Client.Configuration.Config.localIpHttp
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: localIpHttp
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 28
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string localIpHttp
+    return:
+      type: System.String
+    content.vb: Public Shared localIpHttp As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.localIpHttps
+  commentId: F:OSL_Client.Configuration.Config.localIpHttps
+  id: localIpHttps
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: localIpHttps
+  nameWithType: Config.localIpHttps
+  fullName: OSL_Client.Configuration.Config.localIpHttps
+  type: Field
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: localIpHttps
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 29
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  syntax:
+    content: public static string localIpHttps
+    return:
+      type: System.String
+    content.vb: Public Shared localIpHttps As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.LoadConfig
+  commentId: M:OSL_Client.Configuration.Config.LoadConfig
+  id: LoadConfig
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig()
+  nameWithType: Config.LoadConfig()
+  fullName: OSL_Client.Configuration.Config.LoadConfig()
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfig
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 34
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  summary: "\nLoad config\n"
+  example: []
+  syntax:
+    content: public static void LoadConfig()
+    content.vb: Public Shared Sub LoadConfig
+  overload: OSL_Client.Configuration.Config.LoadConfig*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.LoadConfigServerSocket
+  commentId: M:OSL_Client.Configuration.Config.LoadConfigServerSocket
+  id: LoadConfigServerSocket
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigServerSocket()
+  nameWithType: Config.LoadConfigServerSocket()
+  fullName: OSL_Client.Configuration.Config.LoadConfigServerSocket()
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigServerSocket
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 43
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  summary: "\nLoad config server socket\n"
+  example: []
+  syntax:
+    content: public static void LoadConfigServerSocket()
+    content.vb: Public Shared Sub LoadConfigServerSocket
+  overload: OSL_Client.Configuration.Config.LoadConfigServerSocket*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Configuration.Config.LoadConfigRiot
+  commentId: M:OSL_Client.Configuration.Config.LoadConfigRiot
+  id: LoadConfigRiot
+  parent: OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigRiot()
+  nameWithType: Config.LoadConfigRiot()
+  fullName: OSL_Client.Configuration.Config.LoadConfigRiot()
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigRiot
+    path: ../OSL-Client/Configuration/Config.cs
+    startLine: 62
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Configuration
+  summary: "\nload config riot\n"
+  example: []
+  syntax:
+    content: public static void LoadConfigRiot()
+    content.vb: Public Shared Sub LoadConfigRiot
+  overload: OSL_Client.Configuration.Config.LoadConfigRiot*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Client.Configuration
+  commentId: N:OSL_Client.Configuration
+  name: OSL_Client.Configuration
+  nameWithType: OSL_Client.Configuration
+  fullName: OSL_Client.Configuration
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Client.Configuration.Config.LoadConfig*
+  commentId: Overload:OSL_Client.Configuration.Config.LoadConfig
+  name: LoadConfig
+  nameWithType: Config.LoadConfig
+  fullName: OSL_Client.Configuration.Config.LoadConfig
+- uid: OSL_Client.Configuration.Config.LoadConfigServerSocket*
+  commentId: Overload:OSL_Client.Configuration.Config.LoadConfigServerSocket
+  name: LoadConfigServerSocket
+  nameWithType: Config.LoadConfigServerSocket
+  fullName: OSL_Client.Configuration.Config.LoadConfigServerSocket
+- uid: OSL_Client.Configuration.Config.LoadConfigRiot*
+  commentId: Overload:OSL_Client.Configuration.Config.LoadConfigRiot
+  name: LoadConfigRiot
+  nameWithType: Config.LoadConfigRiot
+  fullName: OSL_Client.Configuration.Config.LoadConfigRiot

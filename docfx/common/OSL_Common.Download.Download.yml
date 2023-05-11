@@ -1,0 +1,589 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.Download.Download
+  commentId: T:OSL_Common.Download.Download
+  id: Download
+  parent: OSL_Common.Download
+  children:
+  - OSL_Common.Download.Download.downloadAllFile
+  - OSL_Common.Download.Download.DownloadFileAsync(Uri,System.String)
+  - OSL_Common.Download.Download.DownloadStringAsync(Uri)
+  - OSL_Common.Download.Download.errorDownloadAllFile
+  langs:
+  - csharp
+  - vb
+  name: Download
+  nameWithType: Download
+  fullName: OSL_Common.Download.Download
+  type: Class
+  source:
+    id: Download
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    startLine: 7
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.Download
+  summary: "\nDownload file\n"
+  example: []
+  syntax:
+    content: public class Download
+    content.vb: Public Class Download
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Common.Download.Download.downloadAllFile
+  commentId: F:OSL_Common.Download.Download.downloadAllFile
+  id: downloadAllFile
+  parent: OSL_Common.Download.Download
+  langs:
+  - csharp
+  - vb
+  name: downloadAllFile
+  nameWithType: Download.downloadAllFile
+  fullName: OSL_Common.Download.Download.downloadAllFile
+  type: Field
+  source:
+    id: downloadAllFile
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    startLine: 10
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.Download
+  syntax:
+    content: public static int downloadAllFile
+    return:
+      type: System.Int32
+    content.vb: Public Shared downloadAllFile As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Common.Download.Download.errorDownloadAllFile
+  commentId: F:OSL_Common.Download.Download.errorDownloadAllFile
+  id: errorDownloadAllFile
+  parent: OSL_Common.Download.Download
+  langs:
+  - csharp
+  - vb
+  name: errorDownloadAllFile
+  nameWithType: Download.errorDownloadAllFile
+  fullName: OSL_Common.Download.Download.errorDownloadAllFile
+  type: Field
+  source:
+    id: errorDownloadAllFile
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    startLine: 11
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.Download
+  syntax:
+    content: public static int errorDownloadAllFile
+    return:
+      type: System.Int32
+    content.vb: Public Shared errorDownloadAllFile As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Common.Download.Download.DownloadStringAsync(Uri)
+  commentId: M:OSL_Common.Download.Download.DownloadStringAsync(Uri)
+  id: DownloadStringAsync(Uri)
+  parent: OSL_Common.Download.Download
+  langs:
+  - csharp
+  - vb
+  name: DownloadStringAsync(Uri)
+  nameWithType: Download.DownloadStringAsync(Uri)
+  fullName: OSL_Common.Download.Download.DownloadStringAsync(Uri)
+  type: Method
+  source:
+    id: DownloadStringAsync
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    startLine: 18
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.Download
+  summary: "\nDownload String Async\n"
+  example: []
+  syntax:
+    content: public static async Task<string> DownloadStringAsync(Uri url)
+    parameters:
+    - id: url
+      type: Uri
+      description: ''
+    return:
+      type: Task{System.String}
+      description: ''
+    content.vb: Public Shared Function DownloadStringAsync(url As Uri) As Task(Of String)
+  overload: OSL_Common.Download.Download.DownloadStringAsync*
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Common.Download.Download.DownloadFileAsync(Uri,System.String)
+  commentId: M:OSL_Common.Download.Download.DownloadFileAsync(Uri,System.String)
+  id: DownloadFileAsync(Uri,System.String)
+  parent: OSL_Common.Download.Download
+  langs:
+  - csharp
+  - vb
+  name: DownloadFileAsync(Uri, String)
+  nameWithType: Download.DownloadFileAsync(Uri, String)
+  fullName: OSL_Common.Download.Download.DownloadFileAsync(Uri, System.String)
+  type: Method
+  source:
+    id: DownloadFileAsync
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    startLine: 41
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.Download
+  summary: "\nDownload File Async\n"
+  example: []
+  syntax:
+    content: public static async void DownloadFileAsync(Uri url, string outputPath)
+    parameters:
+    - id: url
+      type: Uri
+      description: ''
+    - id: outputPath
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub DownloadFileAsync(url As Uri, outputPath As String)
+  overload: OSL_Common.Download.Download.DownloadFileAsync*
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Common.Download
+  commentId: N:OSL_Common.Download
+  name: OSL_Common.Download
+  nameWithType: OSL_Common.Download
+  fullName: OSL_Common.Download
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Common.Download.Download.DownloadStringAsync*
+  commentId: Overload:OSL_Common.Download.Download.DownloadStringAsync
+  name: DownloadStringAsync
+  nameWithType: Download.DownloadStringAsync
+  fullName: OSL_Common.Download.Download.DownloadStringAsync
+- uid: Uri
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: Uri
+- uid: Task{System.String}
+  commentId: '!:Task{System.String}'
+  definition: Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  commentId: '!:Task`1'
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Common.Download.Download.DownloadFileAsync*
+  commentId: Overload:OSL_Common.Download.Download.DownloadFileAsync
+  name: DownloadFileAsync
+  nameWithType: Download.DownloadFileAsync
+  fullName: OSL_Common.Download.Download.DownloadFileAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Pages.Config
+  commentId: N:OSL_Web.Pages.Config
+  id: OSL_Web.Pages.Config
+  children:
+  - OSL_Web.Pages.Config.ConfigPage
+  - OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText
+  langs:
+  - csharp
+  - vb
+  name: OSL_Web.Pages.Config
+  nameWithType: OSL_Web.Pages.Config
+  fullName: OSL_Web.Pages.Config
+  type: Namespace
+  assemblies:
+  - OSL-Web
+references:
+- uid: OSL_Web.Pages.Config.ConfigPage
+  commentId: T:OSL_Web.Pages.Config.ConfigPage
+  name: ConfigPage
+  nameWithType: ConfigPage
+  fullName: OSL_Web.Pages.Config.ConfigPage
+- uid: OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText
+  commentId: T:OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText
+  name: ConfigPage.ConfigOverlayText
+  nameWithType: ConfigPage.ConfigOverlayText
+  fullName: OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText

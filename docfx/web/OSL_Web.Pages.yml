@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Pages
+  commentId: N:OSL_Web.Pages
+  id: OSL_Web.Pages
+  children:
+  - OSL_Web.Pages.ErrorModel
+  - OSL_Web.Pages.Index
+  langs:
+  - csharp
+  - vb
+  name: OSL_Web.Pages
+  nameWithType: OSL_Web.Pages
+  fullName: OSL_Web.Pages
+  type: Namespace
+  assemblies:
+  - OSL-Web
+references:
+- uid: OSL_Web.Pages.ErrorModel
+  commentId: T:OSL_Web.Pages.ErrorModel
+  name: ErrorModel
+  nameWithType: ErrorModel
+  fullName: OSL_Web.Pages.ErrorModel
+- uid: OSL_Web.Pages.Index
+  commentId: T:OSL_Web.Pages.Index
+  name: Index
+  nameWithType: Index
+  fullName: OSL_Web.Pages.Index

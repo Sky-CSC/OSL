@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.Riot.GameFlow
+  commentId: N:OSL_Client.Riot.GameFlow
+  id: OSL_Client.Riot.GameFlow
+  children:
+  - OSL_Client.Riot.GameFlow.GameFlow
+  - OSL_Client.Riot.GameFlow.GameFlow.PhaseStatus
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.Riot.GameFlow
+  nameWithType: OSL_Client.Riot.GameFlow
+  fullName: OSL_Client.Riot.GameFlow
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.Riot.GameFlow.GameFlow
+  commentId: T:OSL_Client.Riot.GameFlow.GameFlow
+  name: GameFlow
+  nameWithType: GameFlow
+  fullName: OSL_Client.Riot.GameFlow.GameFlow
+- uid: OSL_Client.Riot.GameFlow.GameFlow.PhaseStatus
+  commentId: T:OSL_Client.Riot.GameFlow.GameFlow.PhaseStatus
+  name: GameFlow.PhaseStatus
+  nameWithType: GameFlow.PhaseStatus
+  fullName: OSL_Client.Riot.GameFlow.GameFlow.PhaseStatus

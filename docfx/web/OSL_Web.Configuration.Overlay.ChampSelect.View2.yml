@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Configuration.Overlay.ChampSelect.View2
+  commentId: N:OSL_Web.Configuration.Overlay.ChampSelect.View2
+  id: OSL_Web.Configuration.Overlay.ChampSelect.View2
+  children:
+  - OSL_Web.Configuration.Overlay.ChampSelect.View2.Config
+  langs:
+  - csharp
+  - vb
+  name: OSL_Web.Configuration.Overlay.ChampSelect.View2
+  nameWithType: OSL_Web.Configuration.Overlay.ChampSelect.View2
+  fullName: OSL_Web.Configuration.Overlay.ChampSelect.View2
+  type: Namespace
+  assemblies:
+  - OSL-Web
+references:
+- uid: OSL_Web.Configuration.Overlay.ChampSelect.View2.Config
+  commentId: T:OSL_Web.Configuration.Overlay.ChampSelect.View2.Config
+  name: Config
+  nameWithType: Config
+  fullName: OSL_Web.Configuration.Overlay.ChampSelect.View2.Config

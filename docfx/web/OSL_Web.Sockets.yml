@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Sockets
+  commentId: N:OSL_Web.Sockets
+  id: OSL_Web.Sockets
+  children:
+  - OSL_Web.Sockets.AsyncServer
+  langs:
+  - csharp
+  - vb
+  name: OSL_Web.Sockets
+  nameWithType: OSL_Web.Sockets
+  fullName: OSL_Web.Sockets
+  type: Namespace
+  assemblies:
+  - OSL-Web
+references:
+- uid: OSL_Web.Sockets.AsyncServer
+  commentId: T:OSL_Web.Sockets.AsyncServer
+  name: AsyncServer
+  nameWithType: AsyncServer
+  fullName: OSL_Web.Sockets.AsyncServer

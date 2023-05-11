@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.System.FileManager
+  commentId: N:OSL_Common.System.FileManager
+  id: OSL_Common.System.FileManager
+  children:
+  - OSL_Common.System.FileManager.FileManagerLocal
+  langs:
+  - csharp
+  - vb
+  name: OSL_Common.System.FileManager
+  nameWithType: OSL_Common.System.FileManager
+  fullName: OSL_Common.System.FileManager
+  type: Namespace
+  assemblies:
+  - OSL-Common
+references:
+- uid: OSL_Common.System.FileManager.FileManagerLocal
+  commentId: T:OSL_Common.System.FileManager.FileManagerLocal
+  name: FileManagerLocal
+  nameWithType: FileManagerLocal
+  fullName: OSL_Common.System.FileManager.FileManagerLocal

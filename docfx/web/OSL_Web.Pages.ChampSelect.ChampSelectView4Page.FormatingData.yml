@@ -1,0 +1,1622 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  commentId: T:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  id: ChampSelectView4Page.FormatingData
+  parent: OSL_Web.Pages.ChampSelect
+  children:
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradient
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor1
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor2
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientDeg
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent1
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent2
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBanText
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorBan
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorPick
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorSubText
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorText
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextBan
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextPick
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSidePickText
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamName
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderBottomPixel
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderTop
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultPatch
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultRegion
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBanText
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorBan
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorPick
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorSubText
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorText
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextBan
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextPick
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSidePickText
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamName
+  - OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext
+  langs:
+  - csharp
+  - vb
+  name: ChampSelectView4Page.FormatingData
+  nameWithType: ChampSelectView4Page.FormatingData
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: FormatingData
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 19
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  summary: "\nFormating Data\n"
+  example: []
+  syntax:
+    content: public class FormatingData
+    content.vb: Public Class FormatingData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultPatch
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultPatch
+  id: DefaultPatch
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultPatch
+  nameWithType: ChampSelectView4Page.FormatingData.DefaultPatch
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultPatch
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultPatch
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 21
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string DefaultPatch { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultPatch As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultPatch*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultRegion
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultRegion
+  id: DefaultRegion
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultRegion
+  nameWithType: ChampSelectView4Page.FormatingData.DefaultRegion
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultRegion
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultRegion
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 22
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string DefaultRegion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultRegion As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultRegion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderBottomPixel
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderBottomPixel
+  id: BorderBottomPixel
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BorderBottomPixel
+  nameWithType: ChampSelectView4Page.FormatingData.BorderBottomPixel
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderBottomPixel
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BorderBottomPixel
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 23
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BorderBottomPixel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BorderBottomPixel As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderBottomPixel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderTop
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderTop
+  id: BorderTop
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BorderTop
+  nameWithType: ChampSelectView4Page.FormatingData.BorderTop
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderTop
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BorderTop
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 24
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BorderTop { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BorderTop As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderTop*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradient
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradient
+  id: BackgroudGradient
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradient
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradient
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradient
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradient
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 25
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BackgroudGradient { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroudGradient As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradient*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientDeg
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientDeg
+  id: BackgroudGradientDeg
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradientDeg
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientDeg
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientDeg
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradientDeg
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 26
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BackgroudGradientDeg { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroudGradientDeg As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientDeg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor1
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor1
+  id: BackgroudGradientColor1
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradientColor1
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientColor1
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradientColor1
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 27
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BackgroudGradientColor1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroudGradientColor1 As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent1
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent1
+  id: BackgroudGradientPercent1
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradientPercent1
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientPercent1
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent1
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradientPercent1
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 28
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BackgroudGradientPercent1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroudGradientPercent1 As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor2
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor2
+  id: BackgroudGradientColor2
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradientColor2
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientColor2
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradientColor2
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 29
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BackgroudGradientColor2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroudGradientColor2 As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent2
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent2
+  id: BackgroudGradientPercent2
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BackgroudGradientPercent2
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientPercent2
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent2
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BackgroudGradientPercent2
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 30
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BackgroudGradientPercent2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BackgroudGradientPercent2 As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient
+  id: OverlayColorBackgroudGradient
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: OverlayColorBackgroudGradient
+  nameWithType: ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: OverlayColorBackgroudGradient
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 31
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string OverlayColorBackgroudGradient { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OverlayColorBackgroudGradient As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorPick
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorPick
+  id: BlueSideBorderColorPick
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideBorderColorPick
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideBorderColorPick
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorPick
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideBorderColorPick
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 32
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSideBorderColorPick { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideBorderColorPick As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorPick*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorBan
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorBan
+  id: BlueSideBorderColorBan
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideBorderColorBan
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideBorderColorBan
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorBan
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideBorderColorBan
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 33
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSideBorderColorBan { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideBorderColorBan As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorBan*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamName
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamName
+  id: BlueSideTeamName
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideTeamName
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideTeamName
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamName
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideTeamName
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 34
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSideTeamName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideTeamName As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext
+  id: BlueSideTeamNameSubtext
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideTeamNameSubtext
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideTeamNameSubtext
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 35
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSideTeamNameSubtext { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideTeamNameSubtext As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBanText
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBanText
+  id: BlueSideBanText
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideBanText
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideBanText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBanText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideBanText
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 36
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSideBanText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideBanText As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBanText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSidePickText
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSidePickText
+  id: BlueSidePickText
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSidePickText
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSidePickText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSidePickText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSidePickText
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 37
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSidePickText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSidePickText As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSidePickText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorText
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorText
+  id: BlueSideColorText
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorText
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideColorText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorText
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 38
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSideColorText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideColorText As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorSubText
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorSubText
+  id: BlueSideColorSubText
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorSubText
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideColorSubText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorSubText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorSubText
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 39
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSideColorSubText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideColorSubText As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorSubText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextBan
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextBan
+  id: BlueSideColorTextBan
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorTextBan
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideColorTextBan
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextBan
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorTextBan
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 40
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSideColorTextBan { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideColorTextBan As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextBan*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextPick
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextPick
+  id: BlueSideColorTextPick
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BlueSideColorTextPick
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideColorTextPick
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextPick
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BlueSideColorTextPick
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 41
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string BlueSideColorTextPick { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BlueSideColorTextPick As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextPick*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorPick
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorPick
+  id: RedSideBorderColorPick
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideBorderColorPick
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideBorderColorPick
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorPick
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideBorderColorPick
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 42
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSideBorderColorPick { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideBorderColorPick As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorPick*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorBan
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorBan
+  id: RedSideBorderColorBan
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideBorderColorBan
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideBorderColorBan
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorBan
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideBorderColorBan
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 43
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSideBorderColorBan { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideBorderColorBan As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorBan*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamName
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamName
+  id: RedSideTeamName
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideTeamName
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideTeamName
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamName
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideTeamName
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 44
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSideTeamName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideTeamName As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext
+  id: RedSideTeamNameSubtext
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideTeamNameSubtext
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideTeamNameSubtext
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 45
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSideTeamNameSubtext { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideTeamNameSubtext As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBanText
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBanText
+  id: RedSideBanText
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideBanText
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideBanText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBanText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideBanText
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 46
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSideBanText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideBanText As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBanText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSidePickText
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSidePickText
+  id: RedSidePickText
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSidePickText
+  nameWithType: ChampSelectView4Page.FormatingData.RedSidePickText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSidePickText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSidePickText
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 47
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSidePickText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSidePickText As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSidePickText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorText
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorText
+  id: RedSideColorText
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorText
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideColorText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorText
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 48
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSideColorText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideColorText As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorSubText
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorSubText
+  id: RedSideColorSubText
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorSubText
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideColorSubText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorSubText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorSubText
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 49
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSideColorSubText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideColorSubText As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorSubText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextBan
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextBan
+  id: RedSideColorTextBan
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorTextBan
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideColorTextBan
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextBan
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorTextBan
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 50
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSideColorTextBan { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideColorTextBan As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextBan*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextPick
+  commentId: P:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextPick
+  id: RedSideColorTextPick
+  parent: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedSideColorTextPick
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideColorTextPick
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextPick
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedSideColorTextPick
+    path: ../OSL-Web/Pages/ChampSelect/ChampSelectView4Page.razor.cs
+    startLine: 51
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.ChampSelect
+  syntax:
+    content: public string RedSideColorTextPick { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedSideColorTextPick As String
+  overload: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextPick*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Web.Pages.ChampSelect
+  commentId: N:OSL_Web.Pages.ChampSelect
+  name: OSL_Web.Pages.ChampSelect
+  nameWithType: OSL_Web.Pages.ChampSelect
+  fullName: OSL_Web.Pages.ChampSelect
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultPatch*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultPatch
+  name: DefaultPatch
+  nameWithType: ChampSelectView4Page.FormatingData.DefaultPatch
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultPatch
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultRegion*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultRegion
+  name: DefaultRegion
+  nameWithType: ChampSelectView4Page.FormatingData.DefaultRegion
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.DefaultRegion
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderBottomPixel*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderBottomPixel
+  name: BorderBottomPixel
+  nameWithType: ChampSelectView4Page.FormatingData.BorderBottomPixel
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderBottomPixel
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderTop*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderTop
+  name: BorderTop
+  nameWithType: ChampSelectView4Page.FormatingData.BorderTop
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BorderTop
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradient*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradient
+  name: BackgroudGradient
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradient
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradient
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientDeg*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientDeg
+  name: BackgroudGradientDeg
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientDeg
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientDeg
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor1*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor1
+  name: BackgroudGradientColor1
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientColor1
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor1
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent1*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent1
+  name: BackgroudGradientPercent1
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientPercent1
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent1
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor2*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor2
+  name: BackgroudGradientColor2
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientColor2
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientColor2
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent2*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent2
+  name: BackgroudGradientPercent2
+  nameWithType: ChampSelectView4Page.FormatingData.BackgroudGradientPercent2
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BackgroudGradientPercent2
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient
+  name: OverlayColorBackgroudGradient
+  nameWithType: ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.OverlayColorBackgroudGradient
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorPick*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorPick
+  name: BlueSideBorderColorPick
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideBorderColorPick
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorPick
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorBan*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorBan
+  name: BlueSideBorderColorBan
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideBorderColorBan
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBorderColorBan
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamName*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamName
+  name: BlueSideTeamName
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideTeamName
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamName
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext
+  name: BlueSideTeamNameSubtext
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideTeamNameSubtext
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBanText*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBanText
+  name: BlueSideBanText
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideBanText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideBanText
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSidePickText*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSidePickText
+  name: BlueSidePickText
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSidePickText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSidePickText
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorText*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorText
+  name: BlueSideColorText
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideColorText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorText
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorSubText*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorSubText
+  name: BlueSideColorSubText
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideColorSubText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorSubText
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextBan*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextBan
+  name: BlueSideColorTextBan
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideColorTextBan
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextBan
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextPick*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextPick
+  name: BlueSideColorTextPick
+  nameWithType: ChampSelectView4Page.FormatingData.BlueSideColorTextPick
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.BlueSideColorTextPick
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorPick*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorPick
+  name: RedSideBorderColorPick
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideBorderColorPick
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorPick
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorBan*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorBan
+  name: RedSideBorderColorBan
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideBorderColorBan
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBorderColorBan
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamName*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamName
+  name: RedSideTeamName
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideTeamName
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamName
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext
+  name: RedSideTeamNameSubtext
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideTeamNameSubtext
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBanText*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBanText
+  name: RedSideBanText
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideBanText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideBanText
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSidePickText*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSidePickText
+  name: RedSidePickText
+  nameWithType: ChampSelectView4Page.FormatingData.RedSidePickText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSidePickText
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorText*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorText
+  name: RedSideColorText
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideColorText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorText
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorSubText*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorSubText
+  name: RedSideColorSubText
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideColorSubText
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorSubText
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextBan*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextBan
+  name: RedSideColorTextBan
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideColorTextBan
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextBan
+- uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextPick*
+  commentId: Overload:OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextPick
+  name: RedSideColorTextPick
+  nameWithType: ChampSelectView4Page.FormatingData.RedSideColorTextPick
+  fullName: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData.RedSideColorTextPick

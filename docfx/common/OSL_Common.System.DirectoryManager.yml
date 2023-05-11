@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.System.DirectoryManager
+  commentId: N:OSL_Common.System.DirectoryManager
+  id: OSL_Common.System.DirectoryManager
+  children:
+  - OSL_Common.System.DirectoryManager.DirectoryManagerLocal
+  langs:
+  - csharp
+  - vb
+  name: OSL_Common.System.DirectoryManager
+  nameWithType: OSL_Common.System.DirectoryManager
+  fullName: OSL_Common.System.DirectoryManager
+  type: Namespace
+  assemblies:
+  - OSL-Common
+references:
+- uid: OSL_Common.System.DirectoryManager.DirectoryManagerLocal
+  commentId: T:OSL_Common.System.DirectoryManager.DirectoryManagerLocal
+  name: DirectoryManagerLocal
+  nameWithType: DirectoryManagerLocal
+  fullName: OSL_Common.System.DirectoryManager.DirectoryManagerLocal

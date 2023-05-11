@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Configuration.Overlay.EndGame.View3
+  commentId: N:OSL_Web.Configuration.Overlay.EndGame.View3
+  id: OSL_Web.Configuration.Overlay.EndGame.View3
+  children:
+  - OSL_Web.Configuration.Overlay.EndGame.View3.Config
+  langs:
+  - csharp
+  - vb
+  name: OSL_Web.Configuration.Overlay.EndGame.View3
+  nameWithType: OSL_Web.Configuration.Overlay.EndGame.View3
+  fullName: OSL_Web.Configuration.Overlay.EndGame.View3
+  type: Namespace
+  assemblies:
+  - OSL-Web
+references:
+- uid: OSL_Web.Configuration.Overlay.EndGame.View3.Config
+  commentId: T:OSL_Web.Configuration.Overlay.EndGame.View3.Config
+  name: Config
+  nameWithType: Config
+  fullName: OSL_Web.Configuration.Overlay.EndGame.View3.Config

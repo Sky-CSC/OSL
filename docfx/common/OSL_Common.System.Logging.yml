@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.System.Logging
+  commentId: N:OSL_Common.System.Logging
+  id: OSL_Common.System.Logging
+  children:
+  - OSL_Common.System.Logging.Logger
+  - OSL_Common.System.Logging.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: OSL_Common.System.Logging
+  nameWithType: OSL_Common.System.Logging
+  fullName: OSL_Common.System.Logging
+  type: Namespace
+  assemblies:
+  - OSL-Common
+references:
+- uid: OSL_Common.System.Logging.Logger
+  commentId: T:OSL_Common.System.Logging.Logger
+  name: Logger
+  nameWithType: Logger
+  fullName: OSL_Common.System.Logging.Logger
+- uid: OSL_Common.System.Logging.LoggingLevel
+  commentId: T:OSL_Common.System.Logging.LoggingLevel
+  parent: OSL_Common.System.Logging
+  name: LoggingLevel
+  nameWithType: LoggingLevel
+  fullName: OSL_Common.System.Logging.LoggingLevel
+- uid: OSL_Common.System.Logging
+  commentId: N:OSL_Common.System.Logging
+  name: OSL_Common.System.Logging
+  nameWithType: OSL_Common.System.Logging
+  fullName: OSL_Common.System.Logging

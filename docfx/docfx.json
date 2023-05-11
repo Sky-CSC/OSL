@@ -6,10 +6,10 @@
           "files": [
             "**.csproj"
           ],
-          "src": "../OSL-Client/"
+          "src": "../OSL-CDragon/"
         }
       ],
-      "dest": "apiclient",
+      "dest": "cdragon",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     },
@@ -19,30 +19,118 @@
           "files": [
             "**.csproj"
           ],
-          "src": "../OSL-Server/"
+          "src": "../OSL-Client/"
         }
       ],
-      "dest": "apiserver",
+      "dest": "client",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "../OSL-Common/"
+        }
+      ],
+      "dest": "common",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "../OSL-LcuApi/"
+        }
+      ],
+      "dest": "lcuapi",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "../OSL-ReplayApi/"
+        }
+      ],
+      "dest": "replayapi",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "../OSL-Web/"
+        }
+      ],
+      "dest": "web",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "../OSL-WebApiRiot/"
+        }
+      ],
+      "dest": "webapiriot",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
     }
+
   ],
   "build": {
     "content": [
       {
         "files": [
-          "apiclient/**.yml",
-          "apiclient/index.md",
-          "apiserver/**.yml",
-          "apiserver/index.md"
+          "cdragon/**.yml",
+          "cdragon/index.md",
+          "client/**.yml",
+          "client/index.md",
+          "client/intro.md",
+          "common/**.yml",
+          "common/index.md",
+          "lcuapi/**.yml",
+          "lcuapi/index.md",
+          "replayapi/**.yml",
+          "replayapi/index.md",
+          "web/**.yml",
+          "web/index.md",
+          "web/intro.md",
+          "webapiriot/**.yml",
+          "webapiriot/index.md"
         ]
       },
       {
         "files": [
-          "clientdoc/**.md",
-          "clientdoc/**/toc.yml",
-          "serverdoc/**.md",
-          "serverdoc/**/toc.yml",
+          "cdragon/**.md",
+          "cdragon/**/toc.yml",
+          "client/**.md",
+          "client/**/toc.yml",
+          "common/**.md",
+          "common/**/toc.yml",
+          "lcuapi/**.md",
+          "lcuapi/**/toc.yml",
+          "replayapi/**.md",
+          "replayapi/**/toc.yml",
+          "web/**.md",
+          "web/**/toc.yml",
+          "webapiriot/**.md",
+          "webapiriot/**/toc.yml",
 
           "toc.yml",
           "*.md"

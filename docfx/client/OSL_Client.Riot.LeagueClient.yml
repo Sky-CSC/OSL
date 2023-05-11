@@ -1,0 +1,480 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.Riot.LeagueClient
+  commentId: T:OSL_Client.Riot.LeagueClient
+  id: LeagueClient
+  parent: OSL_Client.Riot
+  children:
+  - OSL_Client.Riot.LeagueClient.CheckLaunch
+  - OSL_Client.Riot.LeagueClient.LockFile
+  - OSL_Client.Riot.LeagueClient.SetHostApi
+  langs:
+  - csharp
+  - vb
+  name: LeagueClient
+  nameWithType: LeagueClient
+  fullName: OSL_Client.Riot.LeagueClient
+  type: Class
+  source:
+    remote:
+      path: OSL-Client/Riot/LeagueClient.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LeagueClient
+    path: ../OSL-Client/Riot/LeagueClient.cs
+    startLine: 12
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Riot
+  summary: "\nLeague of Legend client\n"
+  example: []
+  syntax:
+    content: public class LeagueClient
+    content.vb: Public Class LeagueClient
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Client.Riot.LeagueClient.CheckLaunch
+  commentId: M:OSL_Client.Riot.LeagueClient.CheckLaunch
+  id: CheckLaunch
+  parent: OSL_Client.Riot.LeagueClient
+  langs:
+  - csharp
+  - vb
+  name: CheckLaunch()
+  nameWithType: LeagueClient.CheckLaunch()
+  fullName: OSL_Client.Riot.LeagueClient.CheckLaunch()
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Riot/LeagueClient.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: CheckLaunch
+    path: ../OSL-Client/Riot/LeagueClient.cs
+    startLine: 20
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Riot
+  summary: "\nCheck if League of Legend client is running\n"
+  example: []
+  syntax:
+    content: public static bool CheckLaunch()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function CheckLaunch As Boolean
+  overload: OSL_Client.Riot.LeagueClient.CheckLaunch*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Riot.LeagueClient.LockFile
+  commentId: M:OSL_Client.Riot.LeagueClient.LockFile
+  id: LockFile
+  parent: OSL_Client.Riot.LeagueClient
+  langs:
+  - csharp
+  - vb
+  name: LockFile()
+  nameWithType: LeagueClient.LockFile()
+  fullName: OSL_Client.Riot.LeagueClient.LockFile()
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Riot/LeagueClient.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LockFile
+    path: ../OSL-Client/Riot/LeagueClient.cs
+    startLine: 51
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Riot
+  summary: "\nGet Port and Password for api\n"
+  example: []
+  syntax:
+    content: public static bool LockFile()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function LockFile As Boolean
+  overload: OSL_Client.Riot.LeagueClient.LockFile*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Client.Riot.LeagueClient.SetHostApi
+  commentId: M:OSL_Client.Riot.LeagueClient.SetHostApi
+  id: SetHostApi
+  parent: OSL_Client.Riot.LeagueClient
+  langs:
+  - csharp
+  - vb
+  name: SetHostApi()
+  nameWithType: LeagueClient.SetHostApi()
+  fullName: OSL_Client.Riot.LeagueClient.SetHostApi()
+  type: Method
+  source:
+    remote:
+      path: OSL-Client/Riot/LeagueClient.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetHostApi
+    path: ../OSL-Client/Riot/LeagueClient.cs
+    startLine: 84
+  assemblies:
+  - OSL-Client
+  namespace: OSL_Client.Riot
+  summary: "\nSet host and password for connect api\n"
+  example: []
+  syntax:
+    content: public static bool SetHostApi()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function SetHostApi As Boolean
+  overload: OSL_Client.Riot.LeagueClient.SetHostApi*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Client.Riot
+  commentId: N:OSL_Client.Riot
+  name: OSL_Client.Riot
+  nameWithType: OSL_Client.Riot
+  fullName: OSL_Client.Riot
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Client.Riot.LeagueClient.CheckLaunch*
+  commentId: Overload:OSL_Client.Riot.LeagueClient.CheckLaunch
+  name: CheckLaunch
+  nameWithType: LeagueClient.CheckLaunch
+  fullName: OSL_Client.Riot.LeagueClient.CheckLaunch
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Client.Riot.LeagueClient.LockFile*
+  commentId: Overload:OSL_Client.Riot.LeagueClient.LockFile
+  name: LockFile
+  nameWithType: LeagueClient.LockFile
+  fullName: OSL_Client.Riot.LeagueClient.LockFile
+- uid: OSL_Client.Riot.LeagueClient.SetHostApi*
+  commentId: Overload:OSL_Client.Riot.LeagueClient.SetHostApi
+  name: SetHostApi
+  nameWithType: LeagueClient.SetHostApi
+  fullName: OSL_Client.Riot.LeagueClient.SetHostApi

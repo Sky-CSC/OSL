@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.Riot
+  commentId: N:OSL_Client.Riot
+  id: OSL_Client.Riot
+  children:
+  - OSL_Client.Riot.LeagueClient
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.Riot
+  nameWithType: OSL_Client.Riot
+  fullName: OSL_Client.Riot
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.Riot.LeagueClient
+  commentId: T:OSL_Client.Riot.LeagueClient
+  name: LeagueClient
+  nameWithType: LeagueClient
+  fullName: OSL_Client.Riot.LeagueClient

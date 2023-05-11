@@ -1,12 +1,21 @@
-- name: Client Documentation
-  href: clientdoc/
-  homepage: clientdoc/intro.md
-- name: Server Documentation
-  href: serverdoc/
-  homepage: serverdoc/intro.md
-- name: Developer Documentation Client
-  href: apiclient/
-  homepage: apiclient/index.md
-- name: Developer Documentation Server
-  href: apiserver/
-  homepage: apiserver/index.md
+- name: Client
+  href: client/
+  homepage: client/index.md
+- name: Web
+  href: web/
+  homepage: web/index.md
+- name: Common
+  href: common/
+  homepage: common/index.md
+- name: CDragon
+  href: cdragon/
+  homepage: cdragon/index.md
+- name: LcuApi
+  href: lcuapi/
+  homepage: lcuapi/index.md
+- name: ReplayApi
+  href: replayapi/
+  homepage: replayapi/index.md
+- name: WebApiRiot
+  href: webapiriot/
+  homepage: webapiriot/index.md

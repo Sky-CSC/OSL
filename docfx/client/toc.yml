@@ -1,0 +1,32 @@
+### YamlMime:TableOfContent
+- uid: OSL_Client.Configuration
+  name: OSL_Client.Configuration
+  items:
+  - uid: OSL_Client.Configuration.Config
+    name: Config
+- uid: OSL_Client.Riot
+  name: OSL_Client.Riot
+  items:
+  - uid: OSL_Client.Riot.LeagueClient
+    name: LeagueClient
+- uid: OSL_Client.Riot.GameFlow
+  name: OSL_Client.Riot.GameFlow
+  items:
+  - uid: OSL_Client.Riot.GameFlow.GameFlow
+    name: GameFlow
+  - uid: OSL_Client.Riot.GameFlow.GameFlow.PhaseStatus
+    name: GameFlow.PhaseStatus
+- uid: OSL_Client.Riot.GameFlow.Phase
+  name: OSL_Client.Riot.GameFlow.Phase
+  items:
+  - uid: OSL_Client.Riot.GameFlow.Phase.ChampSelect
+    name: ChampSelect
+  - uid: OSL_Client.Riot.GameFlow.Phase.EndGame
+    name: EndGame
+  - uid: OSL_Client.Riot.GameFlow.Phase.InGame
+    name: InGame
+- uid: OSL_Client.Sockets
+  name: OSL_Client.Sockets
+  items:
+  - uid: OSL_Client.Sockets.AsyncClient
+    name: AsyncClient

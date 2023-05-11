@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.DataProcessing.Runes.Lanes
+  commentId: T:OSL_Web.DataProcessing.Runes.Lanes
+  id: Runes.Lanes
+  parent: OSL_Web.DataProcessing
+  children:
+  - OSL_Web.DataProcessing.Runes.Lanes.ADC
+  - OSL_Web.DataProcessing.Runes.Lanes.Jungle
+  - OSL_Web.DataProcessing.Runes.Lanes.Mid
+  - OSL_Web.DataProcessing.Runes.Lanes.None
+  - OSL_Web.DataProcessing.Runes.Lanes.Support
+  - OSL_Web.DataProcessing.Runes.Lanes.Top
+  langs:
+  - csharp
+  - vb
+  name: Runes.Lanes
+  nameWithType: Runes.Lanes
+  fullName: OSL_Web.DataProcessing.Runes.Lanes
+  type: Enum
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/Runes.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Lanes
+    path: ../OSL-Web/DataProcessing/Runes.cs
+    startLine: 129
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public enum Lanes
+    content.vb: Public Enum Lanes
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: OSL_Web.DataProcessing.Runes.Lanes.None
+  commentId: F:OSL_Web.DataProcessing.Runes.Lanes.None
+  id: None
+  parent: OSL_Web.DataProcessing.Runes.Lanes
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Runes.Lanes.None
+  fullName: OSL_Web.DataProcessing.Runes.Lanes.None
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/Runes.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: None
+    path: ../OSL-Web/DataProcessing/Runes.cs
+    startLine: 131
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: None = 0
+    return:
+      type: OSL_Web.DataProcessing.Runes.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Web.DataProcessing.Runes.Lanes.Top
+  commentId: F:OSL_Web.DataProcessing.Runes.Lanes.Top
+  id: Top
+  parent: OSL_Web.DataProcessing.Runes.Lanes
+  langs:
+  - csharp
+  - vb
+  name: Top
+  nameWithType: Runes.Lanes.Top
+  fullName: OSL_Web.DataProcessing.Runes.Lanes.Top
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/Runes.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Top
+    path: ../OSL-Web/DataProcessing/Runes.cs
+    startLine: 132
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: Top = 1
+    return:
+      type: OSL_Web.DataProcessing.Runes.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Web.DataProcessing.Runes.Lanes.Mid
+  commentId: F:OSL_Web.DataProcessing.Runes.Lanes.Mid
+  id: Mid
+  parent: OSL_Web.DataProcessing.Runes.Lanes
+  langs:
+  - csharp
+  - vb
+  name: Mid
+  nameWithType: Runes.Lanes.Mid
+  fullName: OSL_Web.DataProcessing.Runes.Lanes.Mid
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/Runes.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Mid
+    path: ../OSL-Web/DataProcessing/Runes.cs
+    startLine: 133
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: Mid = 2
+    return:
+      type: OSL_Web.DataProcessing.Runes.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Web.DataProcessing.Runes.Lanes.Jungle
+  commentId: F:OSL_Web.DataProcessing.Runes.Lanes.Jungle
+  id: Jungle
+  parent: OSL_Web.DataProcessing.Runes.Lanes
+  langs:
+  - csharp
+  - vb
+  name: Jungle
+  nameWithType: Runes.Lanes.Jungle
+  fullName: OSL_Web.DataProcessing.Runes.Lanes.Jungle
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/Runes.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Jungle
+    path: ../OSL-Web/DataProcessing/Runes.cs
+    startLine: 134
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: Jungle = 3
+    return:
+      type: OSL_Web.DataProcessing.Runes.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Web.DataProcessing.Runes.Lanes.ADC
+  commentId: F:OSL_Web.DataProcessing.Runes.Lanes.ADC
+  id: ADC
+  parent: OSL_Web.DataProcessing.Runes.Lanes
+  langs:
+  - csharp
+  - vb
+  name: ADC
+  nameWithType: Runes.Lanes.ADC
+  fullName: OSL_Web.DataProcessing.Runes.Lanes.ADC
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/Runes.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ADC
+    path: ../OSL-Web/DataProcessing/Runes.cs
+    startLine: 135
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: ADC = 4
+    return:
+      type: OSL_Web.DataProcessing.Runes.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Web.DataProcessing.Runes.Lanes.Support
+  commentId: F:OSL_Web.DataProcessing.Runes.Lanes.Support
+  id: Support
+  parent: OSL_Web.DataProcessing.Runes.Lanes
+  langs:
+  - csharp
+  - vb
+  name: Support
+  nameWithType: Runes.Lanes.Support
+  fullName: OSL_Web.DataProcessing.Runes.Lanes.Support
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/Runes.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Support
+    path: ../OSL-Web/DataProcessing/Runes.cs
+    startLine: 136
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: Support = 5
+    return:
+      type: OSL_Web.DataProcessing.Runes.Lanes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: OSL_Web.DataProcessing
+  commentId: N:OSL_Web.DataProcessing
+  name: OSL_Web.DataProcessing
+  nameWithType: OSL_Web.DataProcessing
+  fullName: OSL_Web.DataProcessing
+- uid: OSL_Web.DataProcessing.Runes.Lanes
+  commentId: T:OSL_Web.DataProcessing.Runes.Lanes
+  parent: OSL_Web.DataProcessing
+  name: Runes.Lanes
+  nameWithType: Runes.Lanes
+  fullName: OSL_Web.DataProcessing.Runes.Lanes

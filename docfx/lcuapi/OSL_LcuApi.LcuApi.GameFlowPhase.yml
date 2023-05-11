@@ -1,0 +1,795 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase
+  commentId: T:OSL_LcuApi.LcuApi.GameFlowPhase
+  id: LcuApi.GameFlowPhase
+  parent: OSL_LcuApi
+  children:
+  - OSL_LcuApi.LcuApi.GameFlowPhase.ChampSelect
+  - OSL_LcuApi.LcuApi.GameFlowPhase.CheckedIntoTournament
+  - OSL_LcuApi.LcuApi.GameFlowPhase.EndOfGame
+  - OSL_LcuApi.LcuApi.GameFlowPhase.FailedToLaunch
+  - OSL_LcuApi.LcuApi.GameFlowPhase.GameStart
+  - OSL_LcuApi.LcuApi.GameFlowPhase.InProgress
+  - OSL_LcuApi.LcuApi.GameFlowPhase.Lobby
+  - OSL_LcuApi.LcuApi.GameFlowPhase.Matchmaking
+  - OSL_LcuApi.LcuApi.GameFlowPhase.None
+  - OSL_LcuApi.LcuApi.GameFlowPhase.PreEndOfGame
+  - OSL_LcuApi.LcuApi.GameFlowPhase.ReadyCheck
+  - OSL_LcuApi.LcuApi.GameFlowPhase.Reconnect
+  - OSL_LcuApi.LcuApi.GameFlowPhase.TerminatedInError
+  - OSL_LcuApi.LcuApi.GameFlowPhase.WaitingForStats
+  langs:
+  - csharp
+  - vb
+  name: LcuApi.GameFlowPhase
+  nameWithType: LcuApi.GameFlowPhase
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase
+  type: Class
+  source:
+    id: GameFlowPhase
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 76
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  summary: "\nList of phase of LCU API\n"
+  example: []
+  syntax:
+    content: public class GameFlowPhase
+    content.vb: Public Class GameFlowPhase
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.None
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.None
+  id: None
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: LcuApi.GameFlowPhase.None
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.None
+  type: Field
+  source:
+    id: None
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 78
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string None
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly None As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.Lobby
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.Lobby
+  id: Lobby
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: Lobby
+  nameWithType: LcuApi.GameFlowPhase.Lobby
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.Lobby
+  type: Field
+  source:
+    id: Lobby
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 79
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string Lobby
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Lobby As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.Matchmaking
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.Matchmaking
+  id: Matchmaking
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: Matchmaking
+  nameWithType: LcuApi.GameFlowPhase.Matchmaking
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.Matchmaking
+  type: Field
+  source:
+    id: Matchmaking
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 80
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string Matchmaking
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Matchmaking As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.CheckedIntoTournament
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.CheckedIntoTournament
+  id: CheckedIntoTournament
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: CheckedIntoTournament
+  nameWithType: LcuApi.GameFlowPhase.CheckedIntoTournament
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.CheckedIntoTournament
+  type: Field
+  source:
+    id: CheckedIntoTournament
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 81
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string CheckedIntoTournament
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly CheckedIntoTournament As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.ReadyCheck
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.ReadyCheck
+  id: ReadyCheck
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: ReadyCheck
+  nameWithType: LcuApi.GameFlowPhase.ReadyCheck
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.ReadyCheck
+  type: Field
+  source:
+    id: ReadyCheck
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 82
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string ReadyCheck
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly ReadyCheck As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.ChampSelect
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.ChampSelect
+  id: ChampSelect
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: ChampSelect
+  nameWithType: LcuApi.GameFlowPhase.ChampSelect
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.ChampSelect
+  type: Field
+  source:
+    id: ChampSelect
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 83
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string ChampSelect
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly ChampSelect As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.GameStart
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.GameStart
+  id: GameStart
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: GameStart
+  nameWithType: LcuApi.GameFlowPhase.GameStart
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.GameStart
+  type: Field
+  source:
+    id: GameStart
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 84
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string GameStart
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly GameStart As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.FailedToLaunch
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.FailedToLaunch
+  id: FailedToLaunch
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: FailedToLaunch
+  nameWithType: LcuApi.GameFlowPhase.FailedToLaunch
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.FailedToLaunch
+  type: Field
+  source:
+    id: FailedToLaunch
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 85
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string FailedToLaunch
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly FailedToLaunch As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.InProgress
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.InProgress
+  id: InProgress
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: InProgress
+  nameWithType: LcuApi.GameFlowPhase.InProgress
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.InProgress
+  type: Field
+  source:
+    id: InProgress
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 86
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string InProgress
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly InProgress As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.Reconnect
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.Reconnect
+  id: Reconnect
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: Reconnect
+  nameWithType: LcuApi.GameFlowPhase.Reconnect
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.Reconnect
+  type: Field
+  source:
+    id: Reconnect
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 87
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string Reconnect
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Reconnect As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.WaitingForStats
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.WaitingForStats
+  id: WaitingForStats
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: WaitingForStats
+  nameWithType: LcuApi.GameFlowPhase.WaitingForStats
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.WaitingForStats
+  type: Field
+  source:
+    id: WaitingForStats
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 88
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string WaitingForStats
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly WaitingForStats As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.PreEndOfGame
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.PreEndOfGame
+  id: PreEndOfGame
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: PreEndOfGame
+  nameWithType: LcuApi.GameFlowPhase.PreEndOfGame
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.PreEndOfGame
+  type: Field
+  source:
+    id: PreEndOfGame
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 89
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string PreEndOfGame
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly PreEndOfGame As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.EndOfGame
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.EndOfGame
+  id: EndOfGame
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: EndOfGame
+  nameWithType: LcuApi.GameFlowPhase.EndOfGame
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.EndOfGame
+  type: Field
+  source:
+    id: EndOfGame
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 90
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string EndOfGame
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly EndOfGame As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase.TerminatedInError
+  commentId: F:OSL_LcuApi.LcuApi.GameFlowPhase.TerminatedInError
+  id: TerminatedInError
+  parent: OSL_LcuApi.LcuApi.GameFlowPhase
+  langs:
+  - csharp
+  - vb
+  name: TerminatedInError
+  nameWithType: LcuApi.GameFlowPhase.TerminatedInError
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase.TerminatedInError
+  type: Field
+  source:
+    id: TerminatedInError
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    startLine: 91
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string TerminatedInError
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly TerminatedInError As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: OSL_LcuApi
+  commentId: N:OSL_LcuApi
+  name: OSL_LcuApi
+  nameWithType: OSL_LcuApi
+  fullName: OSL_LcuApi
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

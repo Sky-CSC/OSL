@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Configuration.WebApiRiot
+  commentId: N:OSL_Web.Configuration.WebApiRiot
+  id: OSL_Web.Configuration.WebApiRiot
+  children:
+  - OSL_Web.Configuration.WebApiRiot.WebApiRiotConfig
+  langs:
+  - csharp
+  - vb
+  name: OSL_Web.Configuration.WebApiRiot
+  nameWithType: OSL_Web.Configuration.WebApiRiot
+  fullName: OSL_Web.Configuration.WebApiRiot
+  type: Namespace
+  assemblies:
+  - OSL-Web
+references:
+- uid: OSL_Web.Configuration.WebApiRiot.WebApiRiotConfig
+  commentId: T:OSL_Web.Configuration.WebApiRiot.WebApiRiotConfig
+  name: WebApiRiotConfig
+  nameWithType: WebApiRiotConfig
+  fullName: OSL_Web.Configuration.WebApiRiot.WebApiRiotConfig

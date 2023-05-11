@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.System.Logging.LoggingLevel
+  commentId: T:OSL_Common.System.Logging.LoggingLevel
+  id: LoggingLevel
+  parent: OSL_Common.System.Logging
+  children:
+  - OSL_Common.System.Logging.LoggingLevel.DEBUG
+  - OSL_Common.System.Logging.LoggingLevel.ERROR
+  - OSL_Common.System.Logging.LoggingLevel.INFO
+  - OSL_Common.System.Logging.LoggingLevel.OFF
+  - OSL_Common.System.Logging.LoggingLevel.WARN
+  langs:
+  - csharp
+  - vb
+  name: LoggingLevel
+  nameWithType: LoggingLevel
+  fullName: OSL_Common.System.Logging.LoggingLevel
+  type: Enum
+  source:
+    id: LoggingLevel
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 195
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  summary: "\nLevel of logging\n"
+  example: []
+  syntax:
+    content: public enum LoggingLevel
+    content.vb: Public Enum LoggingLevel
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: OSL_Common.System.Logging.LoggingLevel.OFF
+  commentId: F:OSL_Common.System.Logging.LoggingLevel.OFF
+  id: OFF
+  parent: OSL_Common.System.Logging.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: OFF
+  nameWithType: LoggingLevel.OFF
+  fullName: OSL_Common.System.Logging.LoggingLevel.OFF
+  type: Field
+  source:
+    id: OFF
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 197
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  syntax:
+    content: OFF = 0
+    return:
+      type: OSL_Common.System.Logging.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Common.System.Logging.LoggingLevel.ERROR
+  commentId: F:OSL_Common.System.Logging.LoggingLevel.ERROR
+  id: ERROR
+  parent: OSL_Common.System.Logging.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: ERROR
+  nameWithType: LoggingLevel.ERROR
+  fullName: OSL_Common.System.Logging.LoggingLevel.ERROR
+  type: Field
+  source:
+    id: ERROR
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 198
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  syntax:
+    content: ERROR = 1
+    return:
+      type: OSL_Common.System.Logging.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Common.System.Logging.LoggingLevel.WARN
+  commentId: F:OSL_Common.System.Logging.LoggingLevel.WARN
+  id: WARN
+  parent: OSL_Common.System.Logging.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: WARN
+  nameWithType: LoggingLevel.WARN
+  fullName: OSL_Common.System.Logging.LoggingLevel.WARN
+  type: Field
+  source:
+    id: WARN
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 199
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  syntax:
+    content: WARN = 2
+    return:
+      type: OSL_Common.System.Logging.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Common.System.Logging.LoggingLevel.INFO
+  commentId: F:OSL_Common.System.Logging.LoggingLevel.INFO
+  id: INFO
+  parent: OSL_Common.System.Logging.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: INFO
+  nameWithType: LoggingLevel.INFO
+  fullName: OSL_Common.System.Logging.LoggingLevel.INFO
+  type: Field
+  source:
+    id: INFO
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 200
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  syntax:
+    content: INFO = 3
+    return:
+      type: OSL_Common.System.Logging.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: OSL_Common.System.Logging.LoggingLevel.DEBUG
+  commentId: F:OSL_Common.System.Logging.LoggingLevel.DEBUG
+  id: DEBUG
+  parent: OSL_Common.System.Logging.LoggingLevel
+  langs:
+  - csharp
+  - vb
+  name: DEBUG
+  nameWithType: LoggingLevel.DEBUG
+  fullName: OSL_Common.System.Logging.LoggingLevel.DEBUG
+  type: Field
+  source:
+    id: DEBUG
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 201
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  syntax:
+    content: DEBUG = 4
+    return:
+      type: OSL_Common.System.Logging.LoggingLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: OSL_Common.System.Logging
+  commentId: N:OSL_Common.System.Logging
+  name: OSL_Common.System.Logging
+  nameWithType: OSL_Common.System.Logging
+  fullName: OSL_Common.System.Logging
+- uid: OSL_Common.System.Logging.LoggingLevel
+  commentId: T:OSL_Common.System.Logging.LoggingLevel
+  parent: OSL_Common.System.Logging
+  name: LoggingLevel
+  nameWithType: LoggingLevel
+  fullName: OSL_Common.System.Logging.LoggingLevel

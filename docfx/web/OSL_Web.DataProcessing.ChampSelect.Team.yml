@@ -1,0 +1,652 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.DataProcessing.ChampSelect.Team
+  commentId: T:OSL_Web.DataProcessing.ChampSelect.Team
+  id: ChampSelect.Team
+  parent: OSL_Web.DataProcessing
+  children:
+  - OSL_Web.DataProcessing.ChampSelect.Team.CellId
+  - OSL_Web.DataProcessing.ChampSelect.Team.ChampionId
+  - OSL_Web.DataProcessing.ChampSelect.Team.Spell1Id
+  - OSL_Web.DataProcessing.ChampSelect.Team.Spell2Id
+  - OSL_Web.DataProcessing.ChampSelect.Team.SummonerId
+  - OSL_Web.DataProcessing.ChampSelect.Team.SummonerName
+  - OSL_Web.DataProcessing.ChampSelect.Team.TeamNum
+  langs:
+  - csharp
+  - vb
+  name: ChampSelect.Team
+  nameWithType: ChampSelect.Team
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Team
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 246
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  summary: "\nTeam json\n"
+  example: []
+  syntax:
+    content: public class Team
+    content.vb: Public Class Team
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.CellId
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Team.CellId
+  id: CellId
+  parent: OSL_Web.DataProcessing.ChampSelect.Team
+  langs:
+  - csharp
+  - vb
+  name: CellId
+  nameWithType: ChampSelect.Team.CellId
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.CellId
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: CellId
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 248
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public int CellId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CellId As Integer
+  overload: OSL_Web.DataProcessing.ChampSelect.Team.CellId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.ChampionId
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Team.ChampionId
+  id: ChampionId
+  parent: OSL_Web.DataProcessing.ChampSelect.Team
+  langs:
+  - csharp
+  - vb
+  name: ChampionId
+  nameWithType: ChampSelect.Team.ChampionId
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.ChampionId
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionId
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 249
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public int ChampionId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ChampionId As Integer
+  overload: OSL_Web.DataProcessing.ChampSelect.Team.ChampionId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.Spell1Id
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Team.Spell1Id
+  id: Spell1Id
+  parent: OSL_Web.DataProcessing.ChampSelect.Team
+  langs:
+  - csharp
+  - vb
+  name: Spell1Id
+  nameWithType: ChampSelect.Team.Spell1Id
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.Spell1Id
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Spell1Id
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 250
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public ulong Spell1Id { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Spell1Id As ULong
+  overload: OSL_Web.DataProcessing.ChampSelect.Team.Spell1Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.Spell2Id
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Team.Spell2Id
+  id: Spell2Id
+  parent: OSL_Web.DataProcessing.ChampSelect.Team
+  langs:
+  - csharp
+  - vb
+  name: Spell2Id
+  nameWithType: ChampSelect.Team.Spell2Id
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.Spell2Id
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Spell2Id
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 251
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public ulong Spell2Id { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Spell2Id As ULong
+  overload: OSL_Web.DataProcessing.ChampSelect.Team.Spell2Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.SummonerId
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Team.SummonerId
+  id: SummonerId
+  parent: OSL_Web.DataProcessing.ChampSelect.Team
+  langs:
+  - csharp
+  - vb
+  name: SummonerId
+  nameWithType: ChampSelect.Team.SummonerId
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.SummonerId
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SummonerId
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 252
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public ulong SummonerId { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property SummonerId As ULong
+  overload: OSL_Web.DataProcessing.ChampSelect.Team.SummonerId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.SummonerName
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Team.SummonerName
+  id: SummonerName
+  parent: OSL_Web.DataProcessing.ChampSelect.Team
+  langs:
+  - csharp
+  - vb
+  name: SummonerName
+  nameWithType: ChampSelect.Team.SummonerName
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.SummonerName
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SummonerName
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 253
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public string SummonerName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SummonerName As String
+  overload: OSL_Web.DataProcessing.ChampSelect.Team.SummonerName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.TeamNum
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Team.TeamNum
+  id: TeamNum
+  parent: OSL_Web.DataProcessing.ChampSelect.Team
+  langs:
+  - csharp
+  - vb
+  name: TeamNum
+  nameWithType: ChampSelect.Team.TeamNum
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.TeamNum
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TeamNum
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 254
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public int TeamNum { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TeamNum As Integer
+  overload: OSL_Web.DataProcessing.ChampSelect.Team.TeamNum*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Web.DataProcessing
+  commentId: N:OSL_Web.DataProcessing
+  name: OSL_Web.DataProcessing
+  nameWithType: OSL_Web.DataProcessing
+  fullName: OSL_Web.DataProcessing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.CellId*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Team.CellId
+  name: CellId
+  nameWithType: ChampSelect.Team.CellId
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.CellId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.ChampionId*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Team.ChampionId
+  name: ChampionId
+  nameWithType: ChampSelect.Team.ChampionId
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.ChampionId
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.Spell1Id*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Team.Spell1Id
+  name: Spell1Id
+  nameWithType: ChampSelect.Team.Spell1Id
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.Spell1Id
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.Spell2Id*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Team.Spell2Id
+  name: Spell2Id
+  nameWithType: ChampSelect.Team.Spell2Id
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.Spell2Id
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.SummonerId*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Team.SummonerId
+  name: SummonerId
+  nameWithType: ChampSelect.Team.SummonerId
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.SummonerId
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.SummonerName*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Team.SummonerName
+  name: SummonerName
+  nameWithType: ChampSelect.Team.SummonerName
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.SummonerName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Web.DataProcessing.ChampSelect.Team.TeamNum*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Team.TeamNum
+  name: TeamNum
+  nameWithType: ChampSelect.Team.TeamNum
+  fullName: OSL_Web.DataProcessing.ChampSelect.Team.TeamNum

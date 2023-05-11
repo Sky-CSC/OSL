@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.Riot.GameFlow.Phase
+  commentId: N:OSL_Client.Riot.GameFlow.Phase
+  id: OSL_Client.Riot.GameFlow.Phase
+  children:
+  - OSL_Client.Riot.GameFlow.Phase.ChampSelect
+  - OSL_Client.Riot.GameFlow.Phase.EndGame
+  - OSL_Client.Riot.GameFlow.Phase.InGame
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.Riot.GameFlow.Phase
+  nameWithType: OSL_Client.Riot.GameFlow.Phase
+  fullName: OSL_Client.Riot.GameFlow.Phase
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.Riot.GameFlow.Phase.ChampSelect
+  commentId: T:OSL_Client.Riot.GameFlow.Phase.ChampSelect
+  name: ChampSelect
+  nameWithType: ChampSelect
+  fullName: OSL_Client.Riot.GameFlow.Phase.ChampSelect
+- uid: OSL_Client.Riot.GameFlow.Phase.EndGame
+  commentId: T:OSL_Client.Riot.GameFlow.Phase.EndGame
+  name: EndGame
+  nameWithType: EndGame
+  fullName: OSL_Client.Riot.GameFlow.Phase.EndGame
+- uid: OSL_Client.Riot.GameFlow.Phase.InGame
+  commentId: T:OSL_Client.Riot.GameFlow.Phase.InGame
+  name: InGame
+  nameWithType: InGame
+  fullName: OSL_Client.Riot.GameFlow.Phase.InGame

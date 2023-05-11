@@ -1,0 +1,768 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  commentId: T:OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  id: InGameView3Page.FormatingData
+  parent: OSL_Web.Pages.InGame
+  children:
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.BluePlayerFrame
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ColorReplayInfoText
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultPatch
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultRegion
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayBluePlayerFrame
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayRedPlayerFrame
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayReplayInfoFrame
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.RedPlayerFrame
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoFrame
+  - OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoText
+  langs:
+  - csharp
+  - vb
+  name: InGameView3Page.FormatingData
+  nameWithType: InGameView3Page.FormatingData
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: FormatingData
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 13
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  summary: "\nFormating Data\n"
+  example: []
+  syntax:
+    content: public class FormatingData
+    content.vb: Public Class FormatingData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultPatch
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultPatch
+  id: DefaultPatch
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultPatch
+  nameWithType: InGameView3Page.FormatingData.DefaultPatch
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultPatch
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultPatch
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 15
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public string DefaultPatch { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultPatch As String
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultPatch*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultRegion
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultRegion
+  id: DefaultRegion
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DefaultRegion
+  nameWithType: InGameView3Page.FormatingData.DefaultRegion
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultRegion
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DefaultRegion
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 16
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public string DefaultRegion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DefaultRegion As String
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultRegion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoFrame
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoFrame
+  id: ReplayInfoFrame
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ReplayInfoFrame
+  nameWithType: InGameView3Page.FormatingData.ReplayInfoFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReplayInfoFrame
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 17
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public string ReplayInfoFrame { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ReplayInfoFrame As String
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.BluePlayerFrame
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.BluePlayerFrame
+  id: BluePlayerFrame
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: BluePlayerFrame
+  nameWithType: InGameView3Page.FormatingData.BluePlayerFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.BluePlayerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BluePlayerFrame
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 18
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public string BluePlayerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BluePlayerFrame As String
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.BluePlayerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.RedPlayerFrame
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.RedPlayerFrame
+  id: RedPlayerFrame
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: RedPlayerFrame
+  nameWithType: InGameView3Page.FormatingData.RedPlayerFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.RedPlayerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: RedPlayerFrame
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 19
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public string RedPlayerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RedPlayerFrame As String
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.RedPlayerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoText
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoText
+  id: ReplayInfoText
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ReplayInfoText
+  nameWithType: InGameView3Page.FormatingData.ReplayInfoText
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReplayInfoText
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 20
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public string ReplayInfoText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ReplayInfoText As String
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ColorReplayInfoText
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ColorReplayInfoText
+  id: ColorReplayInfoText
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: ColorReplayInfoText
+  nameWithType: InGameView3Page.FormatingData.ColorReplayInfoText
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ColorReplayInfoText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ColorReplayInfoText
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 21
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public string ColorReplayInfoText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ColorReplayInfoText As String
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ColorReplayInfoText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayReplayInfoFrame
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayReplayInfoFrame
+  id: DisplayReplayInfoFrame
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayReplayInfoFrame
+  nameWithType: InGameView3Page.FormatingData.DisplayReplayInfoFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayReplayInfoFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayReplayInfoFrame
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 22
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public bool DisplayReplayInfoFrame { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayReplayInfoFrame As Boolean
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayReplayInfoFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayBluePlayerFrame
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayBluePlayerFrame
+  id: DisplayBluePlayerFrame
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayBluePlayerFrame
+  nameWithType: InGameView3Page.FormatingData.DisplayBluePlayerFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayBluePlayerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayBluePlayerFrame
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 23
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public bool DisplayBluePlayerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayBluePlayerFrame As Boolean
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayBluePlayerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayRedPlayerFrame
+  commentId: P:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayRedPlayerFrame
+  id: DisplayRedPlayerFrame
+  parent: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: DisplayRedPlayerFrame
+  nameWithType: InGameView3Page.FormatingData.DisplayRedPlayerFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayRedPlayerFrame
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DisplayRedPlayerFrame
+    path: ../OSL-Web/Pages/InGame/InGameView3Page.razor.cs
+    startLine: 24
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public bool DisplayRedPlayerFrame { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DisplayRedPlayerFrame As Boolean
+  overload: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayRedPlayerFrame*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Web.Pages.InGame
+  commentId: N:OSL_Web.Pages.InGame
+  name: OSL_Web.Pages.InGame
+  nameWithType: OSL_Web.Pages.InGame
+  fullName: OSL_Web.Pages.InGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultPatch*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultPatch
+  name: DefaultPatch
+  nameWithType: InGameView3Page.FormatingData.DefaultPatch
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultPatch
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultRegion*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultRegion
+  name: DefaultRegion
+  nameWithType: InGameView3Page.FormatingData.DefaultRegion
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DefaultRegion
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoFrame*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoFrame
+  name: ReplayInfoFrame
+  nameWithType: InGameView3Page.FormatingData.ReplayInfoFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoFrame
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.BluePlayerFrame*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.BluePlayerFrame
+  name: BluePlayerFrame
+  nameWithType: InGameView3Page.FormatingData.BluePlayerFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.BluePlayerFrame
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.RedPlayerFrame*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.RedPlayerFrame
+  name: RedPlayerFrame
+  nameWithType: InGameView3Page.FormatingData.RedPlayerFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.RedPlayerFrame
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoText*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoText
+  name: ReplayInfoText
+  nameWithType: InGameView3Page.FormatingData.ReplayInfoText
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ReplayInfoText
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ColorReplayInfoText*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ColorReplayInfoText
+  name: ColorReplayInfoText
+  nameWithType: InGameView3Page.FormatingData.ColorReplayInfoText
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.ColorReplayInfoText
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayReplayInfoFrame*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayReplayInfoFrame
+  name: DisplayReplayInfoFrame
+  nameWithType: InGameView3Page.FormatingData.DisplayReplayInfoFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayReplayInfoFrame
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayBluePlayerFrame*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayBluePlayerFrame
+  name: DisplayBluePlayerFrame
+  nameWithType: InGameView3Page.FormatingData.DisplayBluePlayerFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayBluePlayerFrame
+- uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayRedPlayerFrame*
+  commentId: Overload:OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayRedPlayerFrame
+  name: DisplayRedPlayerFrame
+  nameWithType: InGameView3Page.FormatingData.DisplayRedPlayerFrame
+  fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData.DisplayRedPlayerFrame
