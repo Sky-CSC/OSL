@@ -5,6 +5,9 @@ using System.Net;
 
 namespace OSL_ReplayApi
 {
+    /// <summary>
+    /// Get information of Replay API give by League of Legends Client
+    /// </summary>
     public class ReplayApi
     {
         private static Logger _logger = new("ReplayApi");
@@ -34,6 +37,9 @@ namespace OSL_ReplayApi
             }
         }
 
+        /// <summary>
+        /// List of url
+        /// </summary>
         public class Url
         {
             public static readonly string replaygame = "/replay/game"; //Information about the game client process.
