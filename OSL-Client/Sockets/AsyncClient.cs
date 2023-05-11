@@ -7,9 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using OSL_Common.System.Logging;
 using OSL_Client.Configuration;
+using Microsoft.Owin.BuilderProperties;
 
 namespace OSL_Client.Sockets
 {
+    /// <summary>
+    /// Socket
+    /// </summary>
     public partial class AsyncClient
     {
         private static Logger _logger = new("AsyncClient");
@@ -32,7 +36,7 @@ namespace OSL_Client.Sockets
 
 
         /// <summary>
-        /// 
+        /// Start socket client
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
@@ -42,12 +46,21 @@ namespace OSL_Client.Sockets
             {
                 Socket client = null;
                 IPEndPoint ipe = null;
+                IPHostEntry hostEntry = Dns.GetHostEntry("192.168.1.5");
+                _logger.log(LoggingLevel.WARN, "StartClient()", "AddressList : " + hostEntry.AddressList.Length);
+                _logger.log(LoggingLevel.WARN, "StartClient()", "HostName : " + hostEntry.HostName);
+                _logger.log(LoggingLevel.WARN, "StartClient()", "Aliases : " + hostEntry.Aliases.Length);
 
-                IPHostEntry hostEntry = Dns.GetHostEntry(Config.serverSocketIp);
+                if (hostEntry.AddressList.Length == 0)
+                {
+                    hostEntry = Dns.GetHostEntry(hostEntry.HostName.Split(".")[0]);
+                    _logger.log(LoggingLevel.WARN, "StartClient()", "GetHostEntry : " + hostEntry.HostName.Split(".")[0]);
+                }
 
                 foreach (IPAddress address in hostEntry.AddressList)
                 {
                     Console.WriteLine(address);
+                    _logger.log(LoggingLevel.WARN, "StartClient()", "address : " + address);
                     if (address.AddressFamily.ToString() == ProtocolFamily.InterNetwork.ToString())
                     {
                         ipe = new IPEndPoint(address, Config.serverSocketPort);
@@ -74,7 +87,7 @@ namespace OSL_Client.Sockets
                         }
                     }
                 }
-
+                _logger.log(LoggingLevel.WARN, "StartClient()", "client : " + client);
                 Send(client, data);
                 sendDone.WaitOne();
 
@@ -85,12 +98,13 @@ namespace OSL_Client.Sockets
             catch (Exception e)
             {
                 _logger.log(LoggingLevel.ERROR, "StartClient()", "Error Client : " + e.Message);
+                _logger.log(LoggingLevel.ERROR, "StartClient()", "Error Client : " + e);
                 return false;
             }
         }
 
         /// <summary>
-        /// 
+        /// close socket client
         /// </summary>
         /// <returns></returns>
         public static bool CloseClient()

@@ -7,10 +7,17 @@ using System.Text;
 
 namespace OSL_Client.Riot
 {
+    /// <summary>
+    /// League of Legend client
+    /// </summary>
     public class LeagueClient
     {
         private static Logger _logger = new("LeagueClient");
 
+        /// <summary>
+        /// Check if League of Legend client is running
+        /// </summary>
+        /// <returns></returns>
         public static bool CheckLaunch()
         {
             Process[] localAll = ProcessInfo.GetByName(Config.leagueClientProcess);
@@ -38,6 +45,10 @@ namespace OSL_Client.Riot
             }
         }
 
+        /// <summary>
+        /// Get Port and Password for api
+        /// </summary>
+        /// <returns></returns>
         public static bool LockFile()
         {
             Config.leagueClientLockFilePath = Config.leagueClientPath + "lockfile";
@@ -67,7 +78,10 @@ namespace OSL_Client.Riot
             }
         }
 
-
+        /// <summary>
+        /// Set host and password for connect api
+        /// </summary>
+        /// <returns></returns>
         public static bool SetHostApi()
         {
             try

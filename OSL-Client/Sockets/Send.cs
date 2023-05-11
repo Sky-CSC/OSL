@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace OSL_Client.Sockets
 {
+    /// <summary>
+    /// Socket
+    /// </summary>
     public partial class AsyncClient
     {
         /// <summary>

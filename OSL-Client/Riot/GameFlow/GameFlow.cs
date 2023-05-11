@@ -6,14 +6,26 @@ using OSL_ReplayApi;
 
 namespace OSL_Client.Riot.GameFlow
 {
+    /// <summary>
+    /// Gestion of game flow
+    /// </summary>
     public class GameFlow
     {
         private static Logger _logger = new("GameFlow");
 
+        /// <summary>
+        /// Check phase of league client
+        /// </summary>
+        /// <returns></returns>
         public static string PhaseRequest()
         {
             return LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword); //Request game client api
         }
+
+        /// <summary>
+        /// Send data to specific phase
+        /// </summary>
+        /// <param name="gameFlowPhase"></param>
         public static void Phase(string gameFlowPhase)
         {
             if (gameFlowPhase == null)
@@ -101,6 +113,9 @@ namespace OSL_Client.Riot.GameFlow
             }
         }
 
+        /// <summary>
+        /// Information for send information of status of phase to server
+        /// </summary>
         public class PhaseStatus
         {
             //public Int64 IdGame { get; set; }

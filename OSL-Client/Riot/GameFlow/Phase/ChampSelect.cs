@@ -7,9 +7,15 @@ using OSL_LcuApi;
 
 namespace OSL_Client.Riot.GameFlow.Phase
 {
+    /// <summary>
+    /// Gestion of champ selection
+    /// </summary>
     public class ChampSelect
     {
         private static Logger _logger = new("ChampSelect");
+        /// <summary>
+        /// Send information of champ select to server
+        /// </summary>
         public static void Progress()
         {
             var champSelectStart = new GameFlow.PhaseStatus

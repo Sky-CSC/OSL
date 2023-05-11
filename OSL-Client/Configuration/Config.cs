@@ -4,6 +4,9 @@ using OSL_Common.System.FileManager;
 
 namespace OSL_Client.Configuration
 {
+    /// <summary>
+    /// Gestion of configuration fo client
+    /// </summary>
     public class Config
     {
         private static Logger _logger = new("Config");
@@ -26,13 +29,18 @@ namespace OSL_Client.Configuration
         public static string localIpHttp = "127.0.0.1";
         public static string localIpHttps = "https://127.0.0.1";
 
-
+        /// <summary>
+        /// Load config
+        /// </summary>
         public static void LoadConfig()
         {
             LoadConfigServerSocket();
             LoadConfigRiot();
         }
 
+        /// <summary>
+        /// Load config server socket
+        /// </summary>
         public static void LoadConfigServerSocket()
         {
             try
@@ -49,6 +57,9 @@ namespace OSL_Client.Configuration
             }
         }
 
+        /// <summary>
+        /// load config riot
+        /// </summary>
         public static void LoadConfigRiot()
         {
             try

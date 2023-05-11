@@ -6,9 +6,15 @@ using OSL_LcuApi;
 
 namespace OSL_Client.Riot.GameFlow.Phase
 {
+    /// <summary>
+    /// Gestion of champ selection
+    /// </summary>
     public class EndGame
     {
         private static Logger _logger = new("EndGame");
+        /// <summary>
+        /// Send information of end game to server
+        /// </summary>
         public static void Progress()
         {
             var endGameStart = new GameFlow.PhaseStatus

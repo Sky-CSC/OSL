@@ -3,6 +3,9 @@ using OSL_Common.System.Logging;
 
 namespace OSL_Client
 {
+    /// <summary>
+    /// Get close events
+    /// </summary>
     internal class CloseEvent
     {
         private static Logger _logger = new("CloseEvent");
@@ -18,6 +21,11 @@ namespace OSL_Client
             CTRL_LOGOFF_EVENT = 5,
             CTRL_SHUTDOWN_EVENT = 6
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="signal"></param>
+        /// <returns></returns>
         public static bool Handler(CtrlType signal)
         {
             switch (signal)
