@@ -46,7 +46,7 @@ namespace OSL_Client.Sockets
             {
                 Socket client = null;
                 IPEndPoint ipe = null;
-                IPHostEntry hostEntry = Dns.GetHostEntry("192.168.1.5");
+                IPHostEntry hostEntry = Dns.GetHostEntry(Config.serverSocketIp);
                 _logger.log(LoggingLevel.WARN, "StartClient()", "AddressList : " + hostEntry.AddressList.Length);
                 _logger.log(LoggingLevel.WARN, "StartClient()", "HostName : " + hostEntry.HostName);
                 _logger.log(LoggingLevel.WARN, "StartClient()", "Aliases : " + hostEntry.Aliases.Length);
