@@ -4,6 +4,7 @@ using OSL_Web.Configuration.Socket;
 using OSL_Web.Configuration.WebApiRiot;
 using System.Net;
 using OSL_Web.Pages.ChampSelect;
+using System.Net.Sockets;
 
 namespace OSL_Web.Configuration
 {
@@ -58,6 +59,13 @@ namespace OSL_Web.Configuration
         {
             webHost = Dns.Resolve("0.0.0.0");
             webHostName = webHost.HostName;
+            foreach (var machin in webHost.AddressList)
+            {
+                if (machin.AddressFamily is AddressFamily.InterNetwork)
+                {
+                    webHostName = machin.ToString();
+                }
+            }
             webHttpPort = 4141;
             webHttpsPort = 4242;
         }
