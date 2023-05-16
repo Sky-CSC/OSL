@@ -40,7 +40,9 @@ items:
       <IgnoreAntiforgeryToken>
 
       Public Class ErrorModel
+
           Inherits PageModel
+
           Implements IAsyncPageFilter, IPageFilter, IFilterMetadata
   inheritance:
   - System.Object
