@@ -1,18 +1,21 @@
 # **OSL : Overlay Spectator Live**
 ![work-in-progress](https://img.shields.io/badge/respos%20status-WIP-yellow)
-![version](https://img.shields.io/badge/version-v1.1.0-blue)
+[![GitHub Release](https://img.shields.io/github/release/Sky-csc/OSL)](https://github.com/Sky-csc/OSL/releases/latest)
+[![Stargazers](https://img.shields.io/github/stars/Sky-csc/OSL)](https://github.com/Sky-csc/OSL/stargazers)
+[![Issues](https://img.shields.io/github/issues/Sky-csc/OSL)](https://github.com/Sky-csc/OSL/issues)
 
-![language](https://img.shields.io/badge/language-c%23-brightgreen)
+![language](https://img.shields.io/badge/c%23-10.0-brightgreen)
 ![.Net-6.0](https://img.shields.io/badge/.NET-6.0-brightgreen)
 ![framework](https://img.shields.io/badge/framework-blazor-brightgreen)
 ![platform](https://img.shields.io/badge/platform-windows-brightgreen)
 
-![license](https://img.shields.io/badge/license-MIT-darkgreen)
+[![MIT Licensed](https://img.shields.io/github/license/Sky-csc/OSL)](https://github.com/Sky-CSC/OSL/blob/main/LICENSE)
 
 ![LoL1](https://img.shields.io/badge/Game%20Client%20API-League%20of%20Legends-blue)
 ![LoL2](https://img.shields.io/badge/Game%20Client%20Replay%20API-League%20of%20Legends-blue)
 ![LoL3](https://img.shields.io/badge/Live%20Events%20API-League%20of%20Legends-blue)
 ![LoL4](https://img.shields.io/badge/Memory%20Reader-League%20of%20Legends-blue)
+![LoL4](https://img.shields.io/badge/LCU%20API-League%20of%20Legends-blue)
 ![riot1](https://img.shields.io/badge/Web%20API%20Riot-RIOT-blue)
 ![riot2](https://img.shields.io/badge/CDragon%20API-CDragon-blue)
 
@@ -70,22 +73,50 @@ Applications, riot api and installation documentation. **[Link documentation](ht
 [OSL-Web](https://sky-csc.github.io/OSL/web/index.html)
 1. Download [last release](https://github.com/Sky-CSC/OSL/releases/latest)
 2. Unzip release to desired install folder
-3. Run OSL-Client on the computer where the spectator game is running
-4. Run OSL-Client on the computer you want (be careful, these two computers must be able to communicate, same network, or communicating network)
-5. Add http://ip:4141/champselect/view1 and/or http://ip:4141/champselect/view2 and/or 
+3. Run ```OSL-Web.exe```
+4. Change the Web Riot Api key in the web interface configuration
+[Riot Developer page (take your api key)](https://developer.riotgames.com/)
+Login and copy past your "Development API Key" 
+5. Get IP of your computer where ```OSL-Web.exe``` is running (windows+r, cmd, ipconfig, field IPv4) and copy this ip on ip field on ```OSL-CLient-vx.x.x/Configuration/server-socket.json```
+6. If you understand what you are doing, add this information in this file ```C:/Riot Games/League of Legends/Config/game.cfg```
+```
+[General]
+EnableReplayApi=1
+
+[Spectator]
+eSportsNeutralTimers=1
+
+[LiveEvents]
+Enable=1
+Port=34243
+```
+7. If you understand what you are doing, create file ```C:/Riot Games/League of Legends/Config/LiveEvents.ini``` and copy on it
+```
+OnKill
+OnKillDragon_Spectator
+OnNeutralMinionKill
+OnMinionKill
+OnSummonRiftHerald
+OnKillWorm_Spectator
+OnTurretDie
+OnMinionKill
+OnChampionKill
+```
+6. If you don't understand what you are doing download <a href="../misc/game.cfg" download>game.cfg</a>  and replace the file on ```C:/Riot Games/League of Legends/Config/game.cfg``` 
+7. If you don't understand what you are doing download <a href="../misc/LiveEvents.ini" download>LiveEvents.ini</a>  and replace the file on ```C:/Riot Games/League of Legends/Config/LiveEvents.ini``` 
+8. Run ```OSL-Client.exe``` on the computer where the spectator game is running
+9. Add http://ip:4141/champselect/view1 and/or http://ip:4141/champselect/view2 and/or 
 http://ip:4141/champselect/view3 and/or http://ip:4141/champselect/view4 as a browser source in OBS in your ban pick scene
-6. Add http://ip:4141/ingame/view1 and/or http://ip:4141/ingame/view2 and/or http://ip:4141/ingame/view3 as a browser source in OBS in your in game scene
-7. Add http://ip:4141/endgame/view1 and/or http://ip:4141/endgame/view2 and/or http://ip:4141/endgame/view3 as a browser source in OBS in your in game scene
-8. Add http://ip:4141/runes/view1/top and http://ip:4141/runes/view1/jungle and http://ip:4141/runes/view1/mid and http://ip:4141/runes/view1/adc and http://ip:4141/runes/view1/supp and http://ip:4141/runes/view1/adcsupp and http://ip:4141/runes/view1/all as a browser source in OBS in your in game scene
+10. Add http://ip:4141/ingame/view1 and/or http://ip:4141/ingame/view2 and/or http://ip:4141/ingame/view3 as a browser source in OBS in your in game scene
+11. Add http://ip:4141/endgame/view1 and/or http://ip:4141/endgame/view2 and/or http://ip:4141/endgame/view3 as a browser source in OBS in your in game scene
+12. Add http://ip:4141/runes/view1/top and http://ip:4141/runes/view1/jungle and http://ip:4141/runes/view1/mid and http://ip:4141/runes/view1/adc and http://ip:4141/runes/view1/supp and http://ip:4141/runes/view1/adcsupp and http://ip:4141/runes/view1/all as a browser source in OBS in your in game scene
+13. Have fun
 
 # **Roadmap**
 
-**Refactoring code :**
--  **(In progress !!)**
-
 **In Game**
 - Read in memory 
-- Get game information (items, events ...)
+- Get game information (items, events ...) without reading in memory  **(In progress !!)**
 - Improved customization
 
 **Champ Select :**
@@ -95,15 +126,15 @@ http://ip:4141/champselect/view3 and/or http://ip:4141/champselect/view4 as a br
 - Improved customization
 
 **Runes**
-- View 2
+- Create view 2
 - Improved customization
 
 # Thanks to these projets and community
-## [Floh22](https://github.com/floh22)
+### [Floh22](https://github.com/floh22)
 
 [LeagueBroadcast](https://github.com/floh22/LeagueBroadcast) (League of Legends Spectate Overlay Tools )
 
-## [Riot Community Volunteers ](https://github.com/RCVolus)
+### [Riot Community Volunteers ](https://github.com/RCVolus)
 
 [league-prod-toolkit](https://github.com/RCVolus/league-prod-toolkit) (Toolkit for League Productions with overlays for champion select, ingame events, end of game stats, and more)
 
@@ -111,13 +142,13 @@ http://ip:4141/champselect/view3 and/or http://ip:4141/champselect/view4 as a br
 
 [lol-pick-ban-ui](https://github.com/RCVolus/lol-pick-ban-ui) (Web-Based UI to display the league of legends champ select in esports tournaments)
 
-## [Litzuck](https://github.com/Litzuck)
+### [Litzuck](https://github.com/Litzuck)
 
 [lol-spectator-overlay-client](https://github.com/Litzuck/lol-spectator-overlay-client) (A client that produces an overlay similar to that of the one used in the broadcasts of LoL Esports during 2015-2017)
 
-## [Piorrro33](https://github.com/piorrro33)
+### [Piorrro33](https://github.com/piorrro33)
 
-[overlay](https://github.com/piorrro33/overlay/tree/v1.5.1) (Customizable UI for League of Legends champion select spectating)
+[overlay](https://github.com/piorrro33/overlay) (Customizable UI for League of Legends champion select spectating)
 
 # **License**
 Distributed under the MIT License. See LICENSE for more information.
