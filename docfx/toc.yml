@@ -1,9 +1,9 @@
-- name: Client
-  href: client/
-  homepage: client/index.md
 - name: Web
   href: web/
   homepage: web/index.md
+- name: Client
+  href: client/
+  homepage: client/index.md
 - name: Common
   href: common/
   homepage: common/index.md

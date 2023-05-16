@@ -10,7 +10,7 @@
 ## Run application
 1. Download last release : [Release v1.1.0](https://github.com/Sky-CSC/OSL/releases/latest)
 2. Unzip ``OSL-Web-1.1.0-win-x64.zip`` to desired install folder
-3. Run ```OSL-Web.exe```
+3. Run ```OSL-Web.exe```, **Read the index web page when OSL-Web is launched**
 4. Change the Web Riot Api key in the web interface configuration
 
 [Riot Developer page (take your api key)](https://developer.riotgames.com/)
@@ -18,6 +18,8 @@ Login and copy past your "Development API Key"
 
 <img src="../picture/login.png" width=30%>
 <img src="../picture/copy.png" width=30%>
+
+**Read the index web page when OSL-Web is launched**
 
 ---
 

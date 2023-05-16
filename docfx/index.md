@@ -76,17 +76,18 @@ Applications use various APIs to collect information about the game, champions, 
 ---
 
 # Documentations.
+
+- [**Web**](web/index.md)
+> [!NOTE]
+> How to use the web application and retrieve information and overlay from a game.
+>
+> Code explanation.
+
 - [**Client**](client/index.md)
 > [!NOTE] 
 > How to use and configure the application locally to sends information to the **Web** application
 >
 > How to set up and use riot spectator mode
->
-> Code explanation.
-
-- [**Web**](web/index.md)
-> [!NOTE]
-> How to use the web application and retrieve information and overlay from a game.
 >
 > Code explanation.
 
