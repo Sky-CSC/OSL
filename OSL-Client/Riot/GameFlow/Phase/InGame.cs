@@ -28,8 +28,18 @@ namespace OSL_Client.Riot.GameFlow.Phase
 
             _logger.log(LoggingLevel.INFO, "Progress()", "In game start");
 
-            string sessionInfo = LcuApi.Request(LcuApi.Url.lolgameflowv1session, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword);
-            AsyncClient.Send(sessionInfo);
+            try
+            {
+                string sessionInfo = LcuApi.Request(LcuApi.Url.lolgameflowv1session, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword);
+                if (sessionInfo != null)
+                {
+                    AsyncClient.Send(sessionInfo);
+                }
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "Progress()", "Error request lolgameflowv1session : " + e.Message);
+            }
 
             string gameFlowPhase;
             gameFlowPhase = LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword);
