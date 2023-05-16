@@ -1,6 +1,7 @@
 ﻿@page "/config"
 @using Microsoft.AspNetCore.SignalR.Client
 @using MudBlazor
+@using OSL_WebApiRiot.WebApiRiot;
 
 <PageTitle>Config</PageTitle>
 <div class="parent">
@@ -16,9 +17,11 @@
                             <DataAnnotationsValidator />
                             <ValidationSummary />
                             <label style="font-weight: bold">Web riot api key : </label>
-                            <InputText id="name" @bind-Value="OverlayText.WebRiotApiKey" placeholder="RGAPI-a42a42aa-4242-42cc-42bb-abcd8a42cdd1" />
+                            <InputText id="name" @bind-Value="OverlayText.WebRiotApiKey" placeholder="RGAPI-00000000-0000-0000-0000-000000000000" />
                             <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                         </EditForm>
+                        <b>Current Web riot api Key :</b> @WebApiRiot.apiKey
+                        <br />
                         <a href="https://developer.riotgames.com/" target="_blank">Riot Developer page (take your api key)</a>
                         <br />Login and copi past your "Development API Key"
                     </div>

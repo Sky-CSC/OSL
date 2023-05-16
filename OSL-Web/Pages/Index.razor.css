@@ -28,3 +28,16 @@ html, body {
     width: 400px;
     height: auto;
 }
+
+.alert-info {
+    padding: 20px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+}
+
+.presentation-gif{
+    width: 50%;
+}
