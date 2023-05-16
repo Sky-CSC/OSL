@@ -28,7 +28,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -69,7 +69,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: webHost
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -102,7 +102,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: webHostName
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -135,7 +135,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: webHttpPort
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -168,7 +168,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: webHttpsPort
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -201,7 +201,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfig
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -233,7 +233,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigWebHost
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 56
+    startLine: 57
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -265,7 +265,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigTimer
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 67
+    startLine: 75
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -299,7 +299,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadDefaultDataChampSelect
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 75
+    startLine: 83
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -331,7 +331,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadDefaultDataEndGame
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 80
+    startLine: 88
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration

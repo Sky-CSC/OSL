@@ -1,18 +1,21 @@
 # **OSL : Overlay Spectator Live**
 ![work-in-progress](https://img.shields.io/badge/respos%20status-WIP-yellow)
-![version](https://img.shields.io/badge/version-v1.1.0-blue)
+[![GitHub Release](https://img.shields.io/github/release/Sky-csc/OSL)](https://github.com/Sky-csc/OSL/releases/latest)
+[![Stargazers](https://img.shields.io/github/stars/Sky-csc/OSL)](https://github.com/Sky-csc/OSL/stargazers)
+[![Issues](https://img.shields.io/github/issues/Sky-csc/OSL)](https://github.com/Sky-csc/OSL/issues)
 
-![language](https://img.shields.io/badge/language-c%23-brightgreen)
+![language](https://img.shields.io/badge/c%23-10.0-brightgreen)
 ![.Net-6.0](https://img.shields.io/badge/.NET-6.0-brightgreen)
 ![framework](https://img.shields.io/badge/framework-blazor-brightgreen)
 ![platform](https://img.shields.io/badge/platform-windows-brightgreen)
 
-![license](https://img.shields.io/badge/license-MIT-darkgreen)
+[![MIT Licensed](https://img.shields.io/github/license/Sky-csc/OSL)](https://github.com/Sky-CSC/OSL/blob/main/LICENSE)
 
 ![LoL1](https://img.shields.io/badge/Game%20Client%20API-League%20of%20Legends-blue)
 ![LoL2](https://img.shields.io/badge/Game%20Client%20Replay%20API-League%20of%20Legends-blue)
 ![LoL3](https://img.shields.io/badge/Live%20Events%20API-League%20of%20Legends-blue)
 ![LoL4](https://img.shields.io/badge/Memory%20Reader-League%20of%20Legends-blue)
+![LoL4](https://img.shields.io/badge/LCU%20API-League%20of%20Legends-blue)
 ![riot1](https://img.shields.io/badge/Web%20API%20Riot-RIOT-blue)
 ![riot2](https://img.shields.io/badge/CDragon%20API-CDragon-blue)
 
@@ -122,25 +125,21 @@ Applications use various APIs to collect information about the game, champions, 
 ---
 
 # Thanks to these projets and community
-## [Floh22](https://github.com/floh22)
-
+### [Floh22](https://github.com/floh22)
 [LeagueBroadcast](https://github.com/floh22/LeagueBroadcast) (League of Legends Spectate Overlay Tools )
 
-## [Riot Community Volunteers ](https://github.com/RCVolus)
-
+### [Riot Community Volunteers ](https://github.com/RCVolus)
 [league-prod-toolkit](https://github.com/RCVolus/league-prod-toolkit) (Toolkit for League Productions with overlays for champion select, ingame events, end of game stats, and more)
 
 [league-observer-tool](https://github.com/RCVolus/league-observer-tool) (An addition to the league-prod-toolkit for the observer PC)
 
 [lol-pick-ban-ui](https://github.com/RCVolus/lol-pick-ban-ui) (Web-Based UI to display the league of legends champ select in esports tournaments)
 
-## [Litzuck](https://github.com/Litzuck)
-
+### [Litzuck](https://github.com/Litzuck)
 [lol-spectator-overlay-client](https://github.com/Litzuck/lol-spectator-overlay-client) (A client that produces an overlay similar to that of the one used in the broadcasts of LoL Esports during 2015-2017)
 
-## [Piorrro33](https://github.com/piorrro33)
-
-[overlay](https://github.com/piorrro33/overlay/tree/v1.5.1) (Customizable UI for League of Legends champion select spectating)
+### [Piorrro33](https://github.com/piorrro33)
+[overlay](https://github.com/piorrro33/overlay) (Customizable UI for League of Legends champion select spectating)
 
 ---
 

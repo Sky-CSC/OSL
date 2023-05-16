@@ -8,7 +8,7 @@
 ---
 
 ## Run application
-1. Download last release : [Release v1.1.0](https://github.com/Sky-CSC/OSL/releases/tag/v1.1.0)
+1. Download last release : [Release v1.1.0](https://github.com/Sky-CSC/OSL/releases/latest)
 2. Unzip ``OSL-Web-1.1.0-win-x64.zip`` to desired install folder
 3. Run ```OSL-Web.exe```
 4. Change the Web Riot Api key in the web interface configuration
@@ -271,3 +271,30 @@ Exter of game :
 <br><input type="checkbox" disabled checked>Adc and supp rune
 <br><input type="checkbox" disabled checked>All lane rune
 
+**View 1 Top :**
+
+<img src="../picture/RunesTop.png" width=50%>
+
+**View 1 Mid :**
+
+<img src="../picture/RunesMid.png" width=50%>
+
+**View 1 Jungle :**
+
+<img src="../picture/RunesJungle.png" width=50%>
+
+**View 1 Adc :**
+
+<img src="../picture/RunesAdc.png" width=50%>
+
+**View 1 Supp :**
+
+<img src="../picture/RunesSupp.png" width=50%>
+
+**View 1 Adc & Supp :**
+
+<img src="../picture/RunesAdcSupp.png" width=50%>
+
+**View 1 All :**
+
+<img src="../picture/RunesAll.png" width=50%>
