@@ -69,8 +69,12 @@ Applications, riot api and installation documentation. **[Link documentation](ht
 # **Getting Started**
 
 **Installation**
-[OSL-Client](https://sky-csc.github.io/OSL/client/index.html)
-[OSL-Web](https://sky-csc.github.io/OSL/web/index.html)
+
+Link to [OSL-Web installation](https://sky-csc.github.io/OSL/web/index.html) (Read the index web page when OSL-Web is launched)
+
+Link to [OSL-Client installation](https://sky-csc.github.io/OSL/client/index.html)
+
+A summary of the process to be followed :
 1. Download [last release](https://github.com/Sky-CSC/OSL/releases/latest)
 2. Unzip release to desired install folder
 3. Run ```OSL-Web.exe```
