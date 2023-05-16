@@ -1,0 +1,456 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.All.Config
+  commentId: T:OSL_Web.Configuration.Overlay.Rune.View1.All.Config
+  id: Config
+  parent: OSL_Web.Configuration.Overlay.Rune.View1.All
+  children:
+  - OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadConfig
+  - OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadFormatingDataConfig
+  - OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadPatchRegionConfig
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: Config
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.All.Config
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/Configuration/Overlay/Rune/View1/All/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Config
+    path: ../OSL-Web/Configuration/Overlay/Rune/View1/All/Config.cs
+    startLine: 8
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration.Overlay.Rune.View1.All
+  syntax:
+    content: public class Config
+    content.vb: Public Class Config
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadConfig
+  commentId: M:OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadConfig
+  id: LoadConfig
+  parent: OSL_Web.Configuration.Overlay.Rune.View1.All.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig()
+  nameWithType: Config.LoadConfig()
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadConfig()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Overlay/Rune/View1/All/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfig
+    path: ../OSL-Web/Configuration/Overlay/Rune/View1/All/Config.cs
+    startLine: 12
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration.Overlay.Rune.View1.All
+  syntax:
+    content: public static void LoadConfig()
+    content.vb: Public Shared Sub LoadConfig
+  overload: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadConfig*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadPatchRegionConfig
+  commentId: M:OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadPatchRegionConfig
+  id: LoadPatchRegionConfig
+  parent: OSL_Web.Configuration.Overlay.Rune.View1.All.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadPatchRegionConfig()
+  nameWithType: Config.LoadPatchRegionConfig()
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadPatchRegionConfig()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Overlay/Rune/View1/All/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadPatchRegionConfig
+    path: ../OSL-Web/Configuration/Overlay/Rune/View1/All/Config.cs
+    startLine: 17
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration.Overlay.Rune.View1.All
+  syntax:
+    content: public static void LoadPatchRegionConfig()
+    content.vb: Public Shared Sub LoadPatchRegionConfig
+  overload: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadPatchRegionConfig*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadFormatingDataConfig
+  commentId: M:OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadFormatingDataConfig
+  id: LoadFormatingDataConfig
+  parent: OSL_Web.Configuration.Overlay.Rune.View1.All.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadFormatingDataConfig()
+  nameWithType: Config.LoadFormatingDataConfig()
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadFormatingDataConfig()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Overlay/Rune/View1/All/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadFormatingDataConfig
+    path: ../OSL-Web/Configuration/Overlay/Rune/View1/All/Config.cs
+    startLine: 33
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration.Overlay.Rune.View1.All
+  syntax:
+    content: public static void LoadFormatingDataConfig()
+    content.vb: Public Shared Sub LoadFormatingDataConfig
+  overload: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadFormatingDataConfig*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.All
+  commentId: N:OSL_Web.Configuration.Overlay.Rune.View1.All
+  name: OSL_Web.Configuration.Overlay.Rune.View1.All
+  nameWithType: OSL_Web.Configuration.Overlay.Rune.View1.All
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.All
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadConfig*
+  commentId: Overload:OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadConfig
+  name: LoadConfig
+  nameWithType: Config.LoadConfig
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadConfig
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadPatchRegionConfig*
+  commentId: Overload:OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadPatchRegionConfig
+  name: LoadPatchRegionConfig
+  nameWithType: Config.LoadPatchRegionConfig
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadPatchRegionConfig
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadFormatingDataConfig*
+  commentId: Overload:OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadFormatingDataConfig
+  name: LoadFormatingDataConfig
+  nameWithType: Config.LoadFormatingDataConfig
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.All.Config.LoadFormatingDataConfig

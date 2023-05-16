@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_ReplayApi
+  commentId: N:OSL_ReplayApi
+  id: OSL_ReplayApi
+  children:
+  - OSL_ReplayApi.ReplayApi
+  - OSL_ReplayApi.ReplayApi.Url
+  langs:
+  - csharp
+  - vb
+  name: OSL_ReplayApi
+  nameWithType: OSL_ReplayApi
+  fullName: OSL_ReplayApi
+  type: Namespace
+  assemblies:
+  - OSL-ReplayApi
+references:
+- uid: OSL_ReplayApi.ReplayApi
+  commentId: T:OSL_ReplayApi.ReplayApi
+  name: ReplayApi
+  nameWithType: ReplayApi
+  fullName: OSL_ReplayApi.ReplayApi
+- uid: OSL_ReplayApi.ReplayApi.Url
+  commentId: T:OSL_ReplayApi.ReplayApi.Url
+  name: ReplayApi.Url
+  nameWithType: ReplayApi.Url
+  fullName: OSL_ReplayApi.ReplayApi.Url

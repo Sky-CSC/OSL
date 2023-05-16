@@ -1,0 +1,43 @@
+.inGame {
+    /*background-color: none;*/
+    /*    height: 1080px;
+    width: 1920px;*/
+}
+
+@font-face {
+    font-family: MyFont;
+    src: url(../css/font/fonts/fontLoL.ttf);
+}
+
+html, body {
+    background-color: black;
+    color: white;
+}
+
+.title {
+    font-family: MyFont;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.alert-warning {
+    padding: 20px;
+    background-color: darkred;
+    color: white;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+}
+
+.alert-info {
+    padding: 20px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+}
+
+.presentation-gif{
+    width: 50%;
+}

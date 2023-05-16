@@ -1,0 +1,739 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.DataProcessing.ChampSelect.Session
+  commentId: T:OSL_Web.DataProcessing.ChampSelect.Session
+  id: ChampSelect.Session
+  parent: OSL_Web.DataProcessing
+  children:
+  - OSL_Web.DataProcessing.ChampSelect.Session.#ctor
+  - OSL_Web.DataProcessing.ChampSelect.Session.Actions
+  - OSL_Web.DataProcessing.ChampSelect.Session.Bans
+  - OSL_Web.DataProcessing.ChampSelect.Session.MyTeam
+  - OSL_Web.DataProcessing.ChampSelect.Session.TheirTeam
+  - OSL_Web.DataProcessing.ChampSelect.Session.Timer
+  langs:
+  - csharp
+  - vb
+  name: ChampSelect.Session
+  nameWithType: ChampSelect.Session
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Session
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 198
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  summary: "\nSession json\n"
+  example: []
+  syntax:
+    content: public class Session
+    content.vb: Public Class Session
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.Actions
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Session.Actions
+  id: Actions
+  parent: OSL_Web.DataProcessing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: Actions
+  nameWithType: ChampSelect.Session.Actions
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.Actions
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Actions
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 200
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public List<List<ChampSelect.Actions>> Actions { get; set; }
+    parameters: []
+    return:
+      type: List{List{OSL_Web.DataProcessing.ChampSelect.Actions}}
+    content.vb: Public Property Actions As List(Of List(Of ChampSelect.Actions))
+  overload: OSL_Web.DataProcessing.ChampSelect.Session.Actions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.Bans
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Session.Bans
+  id: Bans
+  parent: OSL_Web.DataProcessing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: Bans
+  nameWithType: ChampSelect.Session.Bans
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.Bans
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Bans
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 201
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public ChampSelect.Bans Bans { get; set; }
+    parameters: []
+    return:
+      type: OSL_Web.DataProcessing.ChampSelect.Bans
+    content.vb: Public Property Bans As ChampSelect.Bans
+  overload: OSL_Web.DataProcessing.ChampSelect.Session.Bans*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.MyTeam
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Session.MyTeam
+  id: MyTeam
+  parent: OSL_Web.DataProcessing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: MyTeam
+  nameWithType: ChampSelect.Session.MyTeam
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.MyTeam
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: MyTeam
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 202
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public List<ChampSelect.Team> MyTeam { get; set; }
+    parameters: []
+    return:
+      type: List{OSL_Web.DataProcessing.ChampSelect.Team}
+    content.vb: Public Property MyTeam As List(Of ChampSelect.Team)
+  overload: OSL_Web.DataProcessing.ChampSelect.Session.MyTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.TheirTeam
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Session.TheirTeam
+  id: TheirTeam
+  parent: OSL_Web.DataProcessing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: TheirTeam
+  nameWithType: ChampSelect.Session.TheirTeam
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.TheirTeam
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TheirTeam
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 203
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public List<ChampSelect.Team> TheirTeam { get; set; }
+    parameters: []
+    return:
+      type: List{OSL_Web.DataProcessing.ChampSelect.Team}
+    content.vb: Public Property TheirTeam As List(Of ChampSelect.Team)
+  overload: OSL_Web.DataProcessing.ChampSelect.Session.TheirTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.Timer
+  commentId: P:OSL_Web.DataProcessing.ChampSelect.Session.Timer
+  id: Timer
+  parent: OSL_Web.DataProcessing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: Timer
+  nameWithType: ChampSelect.Session.Timer
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.Timer
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Timer
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 204
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public ChampSelect.Timer Timer { get; set; }
+    parameters: []
+    return:
+      type: OSL_Web.DataProcessing.ChampSelect.Timer
+    content.vb: Public Property Timer As ChampSelect.Timer
+  overload: OSL_Web.DataProcessing.ChampSelect.Session.Timer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.#ctor
+  commentId: M:OSL_Web.DataProcessing.ChampSelect.Session.#ctor
+  id: '#ctor'
+  parent: OSL_Web.DataProcessing.ChampSelect.Session
+  langs:
+  - csharp
+  - vb
+  name: Session()
+  nameWithType: ChampSelect.Session.Session()
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.Session()
+  type: Constructor
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/ChampSelect.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: .ctor
+    path: ../OSL-Web/DataProcessing/ChampSelect.cs
+    startLine: 205
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public Session()
+    content.vb: Public Sub New
+  overload: OSL_Web.DataProcessing.ChampSelect.Session.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Web.DataProcessing
+  commentId: N:OSL_Web.DataProcessing
+  name: OSL_Web.DataProcessing
+  nameWithType: OSL_Web.DataProcessing
+  fullName: OSL_Web.DataProcessing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.Actions*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Session.Actions
+  name: Actions
+  nameWithType: ChampSelect.Session.Actions
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.Actions
+- uid: List{List{OSL_Web.DataProcessing.ChampSelect.Actions}}
+  commentId: '!:List{List{OSL_Web.DataProcessing.ChampSelect.Actions}}'
+  definition: List`1
+  name: List<List<ChampSelect.Actions>>
+  nameWithType: List<List<ChampSelect.Actions>>
+  fullName: List<List<OSL_Web.DataProcessing.ChampSelect.Actions>>
+  nameWithType.vb: List(Of List(Of ChampSelect.Actions))
+  fullName.vb: List(Of List(Of OSL_Web.DataProcessing.ChampSelect.Actions))
+  name.vb: List(Of List(Of ChampSelect.Actions))
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_Web.DataProcessing.ChampSelect.Actions
+    name: ChampSelect.Actions
+    nameWithType: ChampSelect.Actions
+    fullName: OSL_Web.DataProcessing.ChampSelect.Actions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_Web.DataProcessing.ChampSelect.Actions
+    name: ChampSelect.Actions
+    nameWithType: ChampSelect.Actions
+    fullName: OSL_Web.DataProcessing.ChampSelect.Actions
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.Bans*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Session.Bans
+  name: Bans
+  nameWithType: ChampSelect.Session.Bans
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.Bans
+- uid: OSL_Web.DataProcessing.ChampSelect.Bans
+  commentId: T:OSL_Web.DataProcessing.ChampSelect.Bans
+  parent: OSL_Web.DataProcessing
+  name: ChampSelect.Bans
+  nameWithType: ChampSelect.Bans
+  fullName: OSL_Web.DataProcessing.ChampSelect.Bans
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.MyTeam*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Session.MyTeam
+  name: MyTeam
+  nameWithType: ChampSelect.Session.MyTeam
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.MyTeam
+- uid: List{OSL_Web.DataProcessing.ChampSelect.Team}
+  commentId: '!:List{OSL_Web.DataProcessing.ChampSelect.Team}'
+  definition: List`1
+  name: List<ChampSelect.Team>
+  nameWithType: List<ChampSelect.Team>
+  fullName: List<OSL_Web.DataProcessing.ChampSelect.Team>
+  nameWithType.vb: List(Of ChampSelect.Team)
+  fullName.vb: List(Of OSL_Web.DataProcessing.ChampSelect.Team)
+  name.vb: List(Of ChampSelect.Team)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_Web.DataProcessing.ChampSelect.Team
+    name: ChampSelect.Team
+    nameWithType: ChampSelect.Team
+    fullName: OSL_Web.DataProcessing.ChampSelect.Team
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_Web.DataProcessing.ChampSelect.Team
+    name: ChampSelect.Team
+    nameWithType: ChampSelect.Team
+    fullName: OSL_Web.DataProcessing.ChampSelect.Team
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.TheirTeam*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Session.TheirTeam
+  name: TheirTeam
+  nameWithType: ChampSelect.Session.TheirTeam
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.TheirTeam
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.Timer*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Session.Timer
+  name: Timer
+  nameWithType: ChampSelect.Session.Timer
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.Timer
+- uid: OSL_Web.DataProcessing.ChampSelect.Timer
+  commentId: T:OSL_Web.DataProcessing.ChampSelect.Timer
+  parent: OSL_Web.DataProcessing
+  name: ChampSelect.Timer
+  nameWithType: ChampSelect.Timer
+  fullName: OSL_Web.DataProcessing.ChampSelect.Timer
+- uid: OSL_Web.DataProcessing.ChampSelect.Session.#ctor*
+  commentId: Overload:OSL_Web.DataProcessing.ChampSelect.Session.#ctor
+  name: Session
+  nameWithType: ChampSelect.Session.Session
+  fullName: OSL_Web.DataProcessing.ChampSelect.Session.Session

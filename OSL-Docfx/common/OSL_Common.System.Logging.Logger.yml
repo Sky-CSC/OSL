@@ -1,0 +1,613 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.System.Logging.Logger
+  commentId: T:OSL_Common.System.Logging.Logger
+  id: Logger
+  parent: OSL_Common.System.Logging
+  children:
+  - OSL_Common.System.Logging.Logger.#ctor(System.String,System.Nullable{OSL_Common.System.Logging.LoggingLevel})
+  - OSL_Common.System.Logging.Logger.contextPrefix
+  - OSL_Common.System.Logging.Logger.DefaultLoggingLevel
+  - OSL_Common.System.Logging.Logger.log(OSL_Common.System.Logging.LoggingLevel,System.String,System.Object)
+  - OSL_Common.System.Logging.Logger.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: Logger
+  nameWithType: Logger
+  fullName: OSL_Common.System.Logging.Logger
+  type: Class
+  source:
+    id: Logger
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 9
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  summary: "\nLogger\n"
+  example: []
+  syntax:
+    content: public class Logger
+    content.vb: Public Class Logger
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Common.System.Logging.Logger.LogLevel
+  commentId: F:OSL_Common.System.Logging.Logger.LogLevel
+  id: LogLevel
+  parent: OSL_Common.System.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: LogLevel
+  nameWithType: Logger.LogLevel
+  fullName: OSL_Common.System.Logging.Logger.LogLevel
+  type: Field
+  source:
+    id: LogLevel
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 13
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  syntax:
+    content: public LoggingLevel LogLevel
+    return:
+      type: OSL_Common.System.Logging.LoggingLevel
+    content.vb: Public LogLevel As LoggingLevel
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Common.System.Logging.Logger.contextPrefix
+  commentId: F:OSL_Common.System.Logging.Logger.contextPrefix
+  id: contextPrefix
+  parent: OSL_Common.System.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: contextPrefix
+  nameWithType: Logger.contextPrefix
+  fullName: OSL_Common.System.Logging.Logger.contextPrefix
+  type: Field
+  source:
+    id: contextPrefix
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 14
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  syntax:
+    content: public string contextPrefix
+    return:
+      type: System.String
+    content.vb: Public contextPrefix As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: OSL_Common.System.Logging.Logger.DefaultLoggingLevel
+  commentId: F:OSL_Common.System.Logging.Logger.DefaultLoggingLevel
+  id: DefaultLoggingLevel
+  parent: OSL_Common.System.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: DefaultLoggingLevel
+  nameWithType: Logger.DefaultLoggingLevel
+  fullName: OSL_Common.System.Logging.Logger.DefaultLoggingLevel
+  type: Field
+  source:
+    id: DefaultLoggingLevel
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 18
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  syntax:
+    content: public static LoggingLevel DefaultLoggingLevel
+    return:
+      type: OSL_Common.System.Logging.LoggingLevel
+    content.vb: Public Shared DefaultLoggingLevel As LoggingLevel
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Common.System.Logging.Logger.#ctor(System.String,System.Nullable{OSL_Common.System.Logging.LoggingLevel})
+  commentId: M:OSL_Common.System.Logging.Logger.#ctor(System.String,System.Nullable{OSL_Common.System.Logging.LoggingLevel})
+  id: '#ctor(System.String,System.Nullable{OSL_Common.System.Logging.LoggingLevel})'
+  parent: OSL_Common.System.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: Logger(String, Nullable<LoggingLevel>)
+  nameWithType: Logger.Logger(String, Nullable<LoggingLevel>)
+  fullName: OSL_Common.System.Logging.Logger.Logger(System.String, System.Nullable<OSL_Common.System.Logging.LoggingLevel>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 83
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  summary: "\nInitializes a new instance of the <xref href=\"OSL_Common.System.Logging.Logger\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public Logger(string contextPrefix = "", LoggingLevel? logLevel = null)
+    parameters:
+    - id: contextPrefix
+      type: System.String
+      description: ''
+    - id: logLevel
+      type: System.Nullable{OSL_Common.System.Logging.LoggingLevel}
+      description: ''
+    content.vb: Public Sub New(contextPrefix As String = "", logLevel As LoggingLevel? = Nothing)
+  overload: OSL_Common.System.Logging.Logger.#ctor*
+  nameWithType.vb: Logger.Logger(String, Nullable(Of LoggingLevel))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: OSL_Common.System.Logging.Logger.Logger(System.String, System.Nullable(Of OSL_Common.System.Logging.LoggingLevel))
+  name.vb: Logger(String, Nullable(Of LoggingLevel))
+- uid: OSL_Common.System.Logging.Logger.log(OSL_Common.System.Logging.LoggingLevel,System.String,System.Object)
+  commentId: M:OSL_Common.System.Logging.Logger.log(OSL_Common.System.Logging.LoggingLevel,System.String,System.Object)
+  id: log(OSL_Common.System.Logging.LoggingLevel,System.String,System.Object)
+  parent: OSL_Common.System.Logging.Logger
+  langs:
+  - csharp
+  - vb
+  name: log(LoggingLevel, String, Object)
+  nameWithType: Logger.log(LoggingLevel, String, Object)
+  fullName: OSL_Common.System.Logging.Logger.log(OSL_Common.System.Logging.LoggingLevel, System.String, System.Object)
+  type: Method
+  source:
+    id: log
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    startLine: 111
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.Logging
+  summary: "\nLogs the specified message.\n"
+  example: []
+  syntax:
+    content: public void log(LoggingLevel level, string context, object message)
+    parameters:
+    - id: level
+      type: OSL_Common.System.Logging.LoggingLevel
+      description: ''
+    - id: context
+      type: System.String
+      description: ''
+    - id: message
+      type: System.Object
+      description: ''
+    content.vb: Public Sub log(level As LoggingLevel, context As String, message As Object)
+  overload: OSL_Common.System.Logging.Logger.log*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Common.System.Logging
+  commentId: N:OSL_Common.System.Logging
+  name: OSL_Common.System.Logging
+  nameWithType: OSL_Common.System.Logging
+  fullName: OSL_Common.System.Logging
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Common.System.Logging.LoggingLevel
+  commentId: T:OSL_Common.System.Logging.LoggingLevel
+  parent: OSL_Common.System.Logging
+  name: LoggingLevel
+  nameWithType: LoggingLevel
+  fullName: OSL_Common.System.Logging.LoggingLevel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Common.System.Logging.Logger
+  commentId: T:OSL_Common.System.Logging.Logger
+  name: Logger
+  nameWithType: Logger
+  fullName: OSL_Common.System.Logging.Logger
+- uid: OSL_Common.System.Logging.Logger.#ctor*
+  commentId: Overload:OSL_Common.System.Logging.Logger.#ctor
+  name: Logger
+  nameWithType: Logger.Logger
+  fullName: OSL_Common.System.Logging.Logger.Logger
+- uid: System.Nullable{OSL_Common.System.Logging.LoggingLevel}
+  commentId: T:System.Nullable{OSL_Common.System.Logging.LoggingLevel}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<LoggingLevel>
+  nameWithType: Nullable<LoggingLevel>
+  fullName: System.Nullable<OSL_Common.System.Logging.LoggingLevel>
+  nameWithType.vb: Nullable(Of LoggingLevel)
+  fullName.vb: System.Nullable(Of OSL_Common.System.Logging.LoggingLevel)
+  name.vb: Nullable(Of LoggingLevel)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_Common.System.Logging.LoggingLevel
+    name: LoggingLevel
+    nameWithType: LoggingLevel
+    fullName: OSL_Common.System.Logging.LoggingLevel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_Common.System.Logging.LoggingLevel
+    name: LoggingLevel
+    nameWithType: LoggingLevel
+    fullName: OSL_Common.System.Logging.LoggingLevel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Common.System.Logging.Logger.log*
+  commentId: Overload:OSL_Common.System.Logging.Logger.log
+  name: log
+  nameWithType: Logger.log
+  fullName: OSL_Common.System.Logging.Logger.log

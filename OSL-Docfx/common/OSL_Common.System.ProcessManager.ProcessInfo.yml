@@ -1,0 +1,479 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.System.ProcessManager.ProcessInfo
+  commentId: T:OSL_Common.System.ProcessManager.ProcessInfo
+  id: ProcessInfo
+  parent: OSL_Common.System.ProcessManager
+  children:
+  - OSL_Common.System.ProcessManager.ProcessInfo.GetById(System.Int32)
+  - OSL_Common.System.ProcessManager.ProcessInfo.GetByName(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ProcessInfo
+  nameWithType: ProcessInfo
+  fullName: OSL_Common.System.ProcessManager.ProcessInfo
+  type: Class
+  source:
+    id: ProcessInfo
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\ProcessManager\ProcessInfo.cs
+    startLine: 9
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.ProcessManager
+  summary: "\nManage process\n"
+  example: []
+  syntax:
+    content: public class ProcessInfo
+    content.vb: Public Class ProcessInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Common.System.ProcessManager.ProcessInfo.GetByName(System.String)
+  commentId: M:OSL_Common.System.ProcessManager.ProcessInfo.GetByName(System.String)
+  id: GetByName(System.String)
+  parent: OSL_Common.System.ProcessManager.ProcessInfo
+  langs:
+  - csharp
+  - vb
+  name: GetByName(String)
+  nameWithType: ProcessInfo.GetByName(String)
+  fullName: OSL_Common.System.ProcessManager.ProcessInfo.GetByName(System.String)
+  type: Method
+  source:
+    id: GetByName
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\ProcessManager\ProcessInfo.cs
+    startLine: 18
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.ProcessManager
+  summary: "\nGet process information by name\n"
+  example: []
+  syntax:
+    content: public static Process[] GetByName(string nameProcess)
+    parameters:
+    - id: nameProcess
+      type: System.String
+      description: ''
+    return:
+      type: System.Diagnostics.Process[]
+      description: ''
+    content.vb: Public Shared Function GetByName(nameProcess As String) As Process()
+  overload: OSL_Common.System.ProcessManager.ProcessInfo.GetByName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Common.System.ProcessManager.ProcessInfo.GetById(System.Int32)
+  commentId: M:OSL_Common.System.ProcessManager.ProcessInfo.GetById(System.Int32)
+  id: GetById(System.Int32)
+  parent: OSL_Common.System.ProcessManager.ProcessInfo
+  langs:
+  - csharp
+  - vb
+  name: GetById(Int32)
+  nameWithType: ProcessInfo.GetById(Int32)
+  fullName: OSL_Common.System.ProcessManager.ProcessInfo.GetById(System.Int32)
+  type: Method
+  source:
+    id: GetById
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\ProcessManager\ProcessInfo.cs
+    startLine: 46
+  assemblies:
+  - OSL-Common
+  namespace: OSL_Common.System.ProcessManager
+  summary: "\nGet process information by ID\n"
+  example: []
+  syntax:
+    content: public static Process GetById(int idProcess)
+    parameters:
+    - id: idProcess
+      type: System.Int32
+      description: ''
+    return:
+      type: System.Diagnostics.Process
+      description: ''
+    content.vb: Public Shared Function GetById(idProcess As Integer) As Process
+  overload: OSL_Common.System.ProcessManager.ProcessInfo.GetById*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Common.System.ProcessManager
+  commentId: N:OSL_Common.System.ProcessManager
+  name: OSL_Common.System.ProcessManager
+  nameWithType: OSL_Common.System.ProcessManager
+  fullName: OSL_Common.System.ProcessManager
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Common.System.ProcessManager.ProcessInfo.GetByName*
+  commentId: Overload:OSL_Common.System.ProcessManager.ProcessInfo.GetByName
+  name: GetByName
+  nameWithType: ProcessInfo.GetByName
+  fullName: OSL_Common.System.ProcessManager.ProcessInfo.GetByName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Diagnostics.Process[]
+  isExternal: true
+  name: Process[]
+  nameWithType: Process[]
+  fullName: System.Diagnostics.Process[]
+  nameWithType.vb: Process()
+  fullName.vb: System.Diagnostics.Process()
+  name.vb: Process()
+  spec.csharp:
+  - uid: System.Diagnostics.Process
+    name: Process
+    nameWithType: Process
+    fullName: System.Diagnostics.Process
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Diagnostics.Process
+    name: Process
+    nameWithType: Process
+    fullName: System.Diagnostics.Process
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: OSL_Common.System.ProcessManager.ProcessInfo.GetById*
+  commentId: Overload:OSL_Common.System.ProcessManager.ProcessInfo.GetById
+  name: GetById
+  nameWithType: ProcessInfo.GetById
+  fullName: OSL_Common.System.ProcessManager.ProcessInfo.GetById
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Diagnostics.Process
+  commentId: T:System.Diagnostics.Process
+  parent: System.Diagnostics
+  isExternal: true
+  name: Process
+  nameWithType: Process
+  fullName: System.Diagnostics.Process
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics

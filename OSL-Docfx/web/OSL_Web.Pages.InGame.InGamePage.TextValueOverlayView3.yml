@@ -1,0 +1,520 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
+  commentId: T:OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
+  id: InGamePage.TextValueOverlayView3
+  parent: OSL_Web.Pages.InGame
+  children:
+  - OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.InputCheckboxSubmit
+  - OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoText
+  - OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit
+  - OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.SetColorReplayInfoText
+  langs:
+  - csharp
+  - vb
+  name: InGamePage.TextValueOverlayView3
+  nameWithType: InGamePage.TextValueOverlayView3
+  fullName: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGamePage.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TextValueOverlayView3
+    path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
+    startLine: 236
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public class TextValueOverlayView3
+    content.vb: Public Class TextValueOverlayView3
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoText
+  commentId: P:OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoText
+  id: ReplayInfoText
+  parent: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
+  langs:
+  - csharp
+  - vb
+  name: ReplayInfoText
+  nameWithType: InGamePage.TextValueOverlayView3.ReplayInfoText
+  fullName: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGamePage.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReplayInfoText
+    path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
+    startLine: 238
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: >-
+      [StringLength(9, ErrorMessage = "Name is too long (9 character limit).")]
+
+      public string ReplayInfoText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(9, ErrorMessage:="Name is too long (9 character limit).")>
+
+      Public Property ReplayInfoText As String
+  overload: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoText*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 9
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Name is too long (9 character limit).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit
+  commentId: M:OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit
+  id: ReplayInfoTextSubmit
+  parent: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
+  langs:
+  - csharp
+  - vb
+  name: ReplayInfoTextSubmit()
+  nameWithType: InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit()
+  fullName: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGamePage.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReplayInfoTextSubmit
+    path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
+    startLine: 243
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static void ReplayInfoTextSubmit()
+    content.vb: Public Shared Sub ReplayInfoTextSubmit
+  overload: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.SetColorReplayInfoText
+  commentId: M:OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.SetColorReplayInfoText
+  id: SetColorReplayInfoText
+  parent: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
+  langs:
+  - csharp
+  - vb
+  name: SetColorReplayInfoText()
+  nameWithType: InGamePage.TextValueOverlayView3.SetColorReplayInfoText()
+  fullName: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.SetColorReplayInfoText()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGamePage.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetColorReplayInfoText
+    path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
+    startLine: 247
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static void SetColorReplayInfoText()
+    content.vb: Public Shared Sub SetColorReplayInfoText
+  overload: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.SetColorReplayInfoText*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.InputCheckboxSubmit
+  commentId: M:OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.InputCheckboxSubmit
+  id: InputCheckboxSubmit
+  parent: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
+  langs:
+  - csharp
+  - vb
+  name: InputCheckboxSubmit()
+  nameWithType: InGamePage.TextValueOverlayView3.InputCheckboxSubmit()
+  fullName: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.InputCheckboxSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/InGamePage.razor.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: InputCheckboxSubmit
+    path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
+    startLine: 261
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static void InputCheckboxSubmit()
+    content.vb: Public Shared Sub InputCheckboxSubmit
+  overload: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.InputCheckboxSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Web.Pages.InGame
+  commentId: N:OSL_Web.Pages.InGame
+  name: OSL_Web.Pages.InGame
+  nameWithType: OSL_Web.Pages.InGame
+  fullName: OSL_Web.Pages.InGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoText*
+  commentId: Overload:OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoText
+  name: ReplayInfoText
+  nameWithType: InGamePage.TextValueOverlayView3.ReplayInfoText
+  fullName: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit*
+  commentId: Overload:OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit
+  name: ReplayInfoTextSubmit
+  nameWithType: InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit
+  fullName: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.ReplayInfoTextSubmit
+- uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.SetColorReplayInfoText*
+  commentId: Overload:OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.SetColorReplayInfoText
+  name: SetColorReplayInfoText
+  nameWithType: InGamePage.TextValueOverlayView3.SetColorReplayInfoText
+  fullName: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.SetColorReplayInfoText
+- uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.InputCheckboxSubmit*
+  commentId: Overload:OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.InputCheckboxSubmit
+  name: InputCheckboxSubmit
+  nameWithType: InGamePage.TextValueOverlayView3.InputCheckboxSubmit
+  fullName: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3.InputCheckboxSubmit

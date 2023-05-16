@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_LcuApi
+  commentId: N:OSL_LcuApi
+  id: OSL_LcuApi
+  children:
+  - OSL_LcuApi.LcuApi
+  - OSL_LcuApi.LcuApi.GameFlowPhase
+  - OSL_LcuApi.LcuApi.Url
+  langs:
+  - csharp
+  - vb
+  name: OSL_LcuApi
+  nameWithType: OSL_LcuApi
+  fullName: OSL_LcuApi
+  type: Namespace
+  assemblies:
+  - OSL-LcuApi
+references:
+- uid: OSL_LcuApi.LcuApi
+  commentId: T:OSL_LcuApi.LcuApi
+  name: LcuApi
+  nameWithType: LcuApi
+  fullName: OSL_LcuApi.LcuApi
+- uid: OSL_LcuApi.LcuApi.Url
+  commentId: T:OSL_LcuApi.LcuApi.Url
+  name: LcuApi.Url
+  nameWithType: LcuApi.Url
+  fullName: OSL_LcuApi.LcuApi.Url
+- uid: OSL_LcuApi.LcuApi.GameFlowPhase
+  commentId: T:OSL_LcuApi.LcuApi.GameFlowPhase
+  name: LcuApi.GameFlowPhase
+  nameWithType: LcuApi.GameFlowPhase
+  fullName: OSL_LcuApi.LcuApi.GameFlowPhase

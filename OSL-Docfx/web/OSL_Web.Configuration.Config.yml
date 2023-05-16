@@ -1,0 +1,697 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Configuration.Config
+  commentId: T:OSL_Web.Configuration.Config
+  id: Config
+  parent: OSL_Web.Configuration
+  children:
+  - OSL_Web.Configuration.Config.LoadConfig
+  - OSL_Web.Configuration.Config.LoadConfigTimer
+  - OSL_Web.Configuration.Config.LoadConfigWebHost
+  - OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
+  - OSL_Web.Configuration.Config.LoadDefaultDataEndGame
+  - OSL_Web.Configuration.Config.webHost
+  - OSL_Web.Configuration.Config.webHostName
+  - OSL_Web.Configuration.Config.webHttpPort
+  - OSL_Web.Configuration.Config.webHttpsPort
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: Config
+  fullName: OSL_Web.Configuration.Config
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Config
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 10
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public class Config
+    content.vb: Public Class Config
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.Configuration.Config.webHost
+  commentId: F:OSL_Web.Configuration.Config.webHost
+  id: webHost
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: webHost
+  nameWithType: Config.webHost
+  fullName: OSL_Web.Configuration.Config.webHost
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: webHost
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 14
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static IPHostEntry webHost
+    return:
+      type: System.Net.IPHostEntry
+    content.vb: Public Shared webHost As IPHostEntry
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Config.webHostName
+  commentId: F:OSL_Web.Configuration.Config.webHostName
+  id: webHostName
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: webHostName
+  nameWithType: Config.webHostName
+  fullName: OSL_Web.Configuration.Config.webHostName
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: webHostName
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 15
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static string webHostName
+    return:
+      type: System.String
+    content.vb: Public Shared webHostName As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Config.webHttpPort
+  commentId: F:OSL_Web.Configuration.Config.webHttpPort
+  id: webHttpPort
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: webHttpPort
+  nameWithType: Config.webHttpPort
+  fullName: OSL_Web.Configuration.Config.webHttpPort
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: webHttpPort
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 16
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static int webHttpPort
+    return:
+      type: System.Int32
+    content.vb: Public Shared webHttpPort As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Config.webHttpsPort
+  commentId: F:OSL_Web.Configuration.Config.webHttpsPort
+  id: webHttpsPort
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: webHttpsPort
+  nameWithType: Config.webHttpsPort
+  fullName: OSL_Web.Configuration.Config.webHttpsPort
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: webHttpsPort
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 17
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static int webHttpsPort
+    return:
+      type: System.Int32
+    content.vb: Public Shared webHttpsPort As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Config.LoadConfig
+  commentId: M:OSL_Web.Configuration.Config.LoadConfig
+  id: LoadConfig
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfig()
+  nameWithType: Config.LoadConfig()
+  fullName: OSL_Web.Configuration.Config.LoadConfig()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfig
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 18
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static void LoadConfig()
+    content.vb: Public Shared Sub LoadConfig
+  overload: OSL_Web.Configuration.Config.LoadConfig*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Config.LoadConfigWebHost
+  commentId: M:OSL_Web.Configuration.Config.LoadConfigWebHost
+  id: LoadConfigWebHost
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigWebHost()
+  nameWithType: Config.LoadConfigWebHost()
+  fullName: OSL_Web.Configuration.Config.LoadConfigWebHost()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigWebHost
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 57
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static void LoadConfigWebHost()
+    content.vb: Public Shared Sub LoadConfigWebHost
+  overload: OSL_Web.Configuration.Config.LoadConfigWebHost*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Config.LoadConfigTimer
+  commentId: M:OSL_Web.Configuration.Config.LoadConfigTimer
+  id: LoadConfigTimer
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadConfigTimer()
+  nameWithType: Config.LoadConfigTimer()
+  fullName: OSL_Web.Configuration.Config.LoadConfigTimer()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadConfigTimer
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 75
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  summary: "\nLoad timer for champ select view\n"
+  example: []
+  syntax:
+    content: public static void LoadConfigTimer()
+    content.vb: Public Shared Sub LoadConfigTimer
+  overload: OSL_Web.Configuration.Config.LoadConfigTimer*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
+  commentId: M:OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
+  id: LoadDefaultDataChampSelect
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadDefaultDataChampSelect()
+  nameWithType: Config.LoadDefaultDataChampSelect()
+  fullName: OSL_Web.Configuration.Config.LoadDefaultDataChampSelect()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadDefaultDataChampSelect
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 83
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static void LoadDefaultDataChampSelect()
+    content.vb: Public Shared Sub LoadDefaultDataChampSelect
+  overload: OSL_Web.Configuration.Config.LoadDefaultDataChampSelect*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Config.LoadDefaultDataEndGame
+  commentId: M:OSL_Web.Configuration.Config.LoadDefaultDataEndGame
+  id: LoadDefaultDataEndGame
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: LoadDefaultDataEndGame()
+  nameWithType: Config.LoadDefaultDataEndGame()
+  fullName: OSL_Web.Configuration.Config.LoadDefaultDataEndGame()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: refactoring
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoadDefaultDataEndGame
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 88
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static void LoadDefaultDataEndGame()
+    content.vb: Public Shared Sub LoadDefaultDataEndGame
+  overload: OSL_Web.Configuration.Config.LoadDefaultDataEndGame*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Web.Configuration
+  commentId: N:OSL_Web.Configuration
+  name: OSL_Web.Configuration
+  nameWithType: OSL_Web.Configuration
+  fullName: OSL_Web.Configuration
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Net.IPHostEntry
+  commentId: T:System.Net.IPHostEntry
+  parent: System.Net
+  isExternal: true
+  name: IPHostEntry
+  nameWithType: IPHostEntry
+  fullName: System.Net.IPHostEntry
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Web.Configuration.Config.LoadConfig*
+  commentId: Overload:OSL_Web.Configuration.Config.LoadConfig
+  name: LoadConfig
+  nameWithType: Config.LoadConfig
+  fullName: OSL_Web.Configuration.Config.LoadConfig
+- uid: OSL_Web.Configuration.Config.LoadConfigWebHost*
+  commentId: Overload:OSL_Web.Configuration.Config.LoadConfigWebHost
+  name: LoadConfigWebHost
+  nameWithType: Config.LoadConfigWebHost
+  fullName: OSL_Web.Configuration.Config.LoadConfigWebHost
+- uid: OSL_Web.Configuration.Config.LoadConfigTimer*
+  commentId: Overload:OSL_Web.Configuration.Config.LoadConfigTimer
+  name: LoadConfigTimer
+  nameWithType: Config.LoadConfigTimer
+  fullName: OSL_Web.Configuration.Config.LoadConfigTimer
+- uid: OSL_Web.Configuration.Config.LoadDefaultDataChampSelect*
+  commentId: Overload:OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
+  name: LoadDefaultDataChampSelect
+  nameWithType: Config.LoadDefaultDataChampSelect
+  fullName: OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
+- uid: OSL_Web.Configuration.Config.LoadDefaultDataEndGame*
+  commentId: Overload:OSL_Web.Configuration.Config.LoadDefaultDataEndGame
+  name: LoadDefaultDataEndGame
+  nameWithType: Config.LoadDefaultDataEndGame
+  fullName: OSL_Web.Configuration.Config.LoadDefaultDataEndGame

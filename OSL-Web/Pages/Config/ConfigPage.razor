@@ -1,0 +1,207 @@
+﻿@page "/config"
+@using Microsoft.AspNetCore.SignalR.Client
+@using MudBlazor
+@using OSL_WebApiRiot.WebApiRiot;
+
+<PageTitle>Config</PageTitle>
+<div class="parent">
+    <div class="Configuration">
+        <div class="content">
+            <h1 class="title">Configuration :</h1>
+            <br />               
+            <div class="configuration-web-api-key">
+                <h2 class="title">Web riot api key :</h2>
+                <div class="configuration-web-api-key-content">
+                    <div>
+                        <EditForm Model="@OverlayText" OnValidSubmit="@WebRiotApiKeySubmit">
+                            <DataAnnotationsValidator />
+                            <ValidationSummary />
+                            <label style="font-weight: bold">Web riot api key : </label>
+                            <InputText id="name" @bind-Value="OverlayText.WebRiotApiKey" placeholder="RGAPI-00000000-0000-0000-0000-000000000000" />
+                            <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                        </EditForm>
+                        <b>Current Web riot api Key :</b> @WebApiRiot.apiKey
+                        <br />
+                        <a href="https://developer.riotgames.com/" target="_blank">Riot Developer page (take your api key)</a>
+                        <br />Login and copi past your "Development API Key"
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="configuration-champ-select">
+                <h2 class="title">Configuration champ select :</h2>
+                <div class="configuration-champ-select-content">
+                    <div>
+                        <h3 class="title">View 1 :</h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileChampSelectView1">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileChampSelectView1()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title">View 2 :</h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileChampSelectView2">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileChampSelectView2()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title">View 3 :</h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileChampSelectView3">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileChampSelectView3()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title">View 4 :</h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileChampSelectView4">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileChampSelectView4()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="configuration-in-game">
+                <h2 class="title">Configuration in game :</h2>
+                <div class="configuration-in-game-content">
+                    <div>
+                        <h3 class="title"><u>View 1 :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileInGameView1">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileInGameView1()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title">View 2 :</h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileInGameView2">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileInGameView2()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title">View 3 :</h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileInGameView3">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileInGameView3()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="configuration-end-game">
+                <h2 class="title">Configuration end game :</h2>
+                <div class="configuration-end-game-content">
+                    <div>
+                        <h3 class="title"><u>View 1 :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileEndGameView1">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileEndGameView1()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>View 2 :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileEndGameView2">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileEndGameView2()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>View 3 :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileEndGameView3">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileEndGameView3()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="configuration-runes">
+                <h2 class="title">Configuration runes :</h2>
+                <div class="configuration-runes-content">
+                    <div>
+                        <h3 class="title"><u>Adc :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileRunesAdc">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileRuneAdc()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>Adc and Support :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileRunesAdcSupp">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileRuneAdcSupp()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>Jungle :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileRunesJungle">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileRuneJungle()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>Mid :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileRunesMid">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileRuneMid()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>Support :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileRunesSupp">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileRuneSupp()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>Top :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileRunesTop">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileRuneTop()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="title"><u>All :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileRunesAll">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileRuneAll()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+@code {
+    public static ConfigOverlayText OverlayText = new();
+    private HubConnection? hubConnection;
+}

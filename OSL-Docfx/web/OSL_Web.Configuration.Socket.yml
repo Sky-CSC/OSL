@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Configuration.Socket
+  commentId: N:OSL_Web.Configuration.Socket
+  id: OSL_Web.Configuration.Socket
+  children:
+  - OSL_Web.Configuration.Socket.SocketConfig
+  langs:
+  - csharp
+  - vb
+  name: OSL_Web.Configuration.Socket
+  nameWithType: OSL_Web.Configuration.Socket
+  fullName: OSL_Web.Configuration.Socket
+  type: Namespace
+  assemblies:
+  - OSL-Web
+references:
+- uid: OSL_Web.Configuration.Socket.SocketConfig
+  commentId: T:OSL_Web.Configuration.Socket.SocketConfig
+  name: SocketConfig
+  nameWithType: SocketConfig
+  fullName: OSL_Web.Configuration.Socket.SocketConfig

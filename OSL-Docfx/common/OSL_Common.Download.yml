@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.Download
+  commentId: N:OSL_Common.Download
+  id: OSL_Common.Download
+  children:
+  - OSL_Common.Download.Download
+  langs:
+  - csharp
+  - vb
+  name: OSL_Common.Download
+  nameWithType: OSL_Common.Download
+  fullName: OSL_Common.Download
+  type: Namespace
+  assemblies:
+  - OSL-Common
+references:
+- uid: OSL_Common.Download.Download
+  commentId: T:OSL_Common.Download.Download
+  name: Download
+  nameWithType: Download
+  fullName: OSL_Common.Download.Download

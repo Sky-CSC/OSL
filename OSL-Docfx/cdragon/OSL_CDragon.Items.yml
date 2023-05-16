@@ -1,0 +1,652 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_CDragon.Items
+  commentId: T:OSL_CDragon.Items
+  id: Items
+  parent: OSL_CDragon
+  children:
+  - OSL_CDragon.Items.#ctor
+  - OSL_CDragon.Items.From
+  - OSL_CDragon.Items.IconPath
+  - OSL_CDragon.Items.Id
+  - OSL_CDragon.Items.Name
+  - OSL_CDragon.Items.To
+  langs:
+  - csharp
+  - vb
+  name: Items
+  nameWithType: Items
+  fullName: OSL_CDragon.Items
+  type: Class
+  source:
+    id: Items
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 265
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nItems information\n"
+  example: []
+  syntax:
+    content: public class Items
+    content.vb: Public Class Items
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_CDragon.Items.Id
+  commentId: P:OSL_CDragon.Items.Id
+  id: Id
+  parent: OSL_CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Items.Id
+  fullName: OSL_CDragon.Items.Id
+  type: Property
+  source:
+    id: Id
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 267
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: OSL_CDragon.Items.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Items.Name
+  commentId: P:OSL_CDragon.Items.Name
+  id: Name
+  parent: OSL_CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Items.Name
+  fullName: OSL_CDragon.Items.Name
+  type: Property
+  source:
+    id: Name
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 268
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: OSL_CDragon.Items.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Items.IconPath
+  commentId: P:OSL_CDragon.Items.IconPath
+  id: IconPath
+  parent: OSL_CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: IconPath
+  nameWithType: Items.IconPath
+  fullName: OSL_CDragon.Items.IconPath
+  type: Property
+  source:
+    id: IconPath
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 269
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public string IconPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IconPath As String
+  overload: OSL_CDragon.Items.IconPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Items.From
+  commentId: P:OSL_CDragon.Items.From
+  id: From
+  parent: OSL_CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: From
+  nameWithType: Items.From
+  fullName: OSL_CDragon.Items.From
+  type: Property
+  source:
+    id: From
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 270
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public List<string> From { get; set; }
+    parameters: []
+    return:
+      type: List{System.String}
+    content.vb: Public Property From As List(Of String)
+  overload: OSL_CDragon.Items.From*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Items.To
+  commentId: P:OSL_CDragon.Items.To
+  id: To
+  parent: OSL_CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: To
+  nameWithType: Items.To
+  fullName: OSL_CDragon.Items.To
+  type: Property
+  source:
+    id: To
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 271
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public List<string> To { get; set; }
+    parameters: []
+    return:
+      type: List{System.String}
+    content.vb: Public Property To As List(Of String)
+  overload: OSL_CDragon.Items.To*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Items.#ctor
+  commentId: M:OSL_CDragon.Items.#ctor
+  id: '#ctor'
+  parent: OSL_CDragon.Items
+  langs:
+  - csharp
+  - vb
+  name: Items()
+  nameWithType: Items.Items()
+  fullName: OSL_CDragon.Items.Items()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 272
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public Items()
+    content.vb: Public Sub New
+  overload: OSL_CDragon.Items.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_CDragon
+  commentId: N:OSL_CDragon
+  name: OSL_CDragon
+  nameWithType: OSL_CDragon
+  fullName: OSL_CDragon
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_CDragon.Items.Id*
+  commentId: Overload:OSL_CDragon.Items.Id
+  name: Id
+  nameWithType: Items.Id
+  fullName: OSL_CDragon.Items.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_CDragon.Items.Name*
+  commentId: Overload:OSL_CDragon.Items.Name
+  name: Name
+  nameWithType: Items.Name
+  fullName: OSL_CDragon.Items.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_CDragon.Items.IconPath*
+  commentId: Overload:OSL_CDragon.Items.IconPath
+  name: IconPath
+  nameWithType: Items.IconPath
+  fullName: OSL_CDragon.Items.IconPath
+- uid: OSL_CDragon.Items.From*
+  commentId: Overload:OSL_CDragon.Items.From
+  name: From
+  nameWithType: Items.From
+  fullName: OSL_CDragon.Items.From
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_CDragon.Items.To*
+  commentId: Overload:OSL_CDragon.Items.To
+  name: To
+  nameWithType: Items.To
+  fullName: OSL_CDragon.Items.To
+- uid: OSL_CDragon.Items.#ctor*
+  commentId: Overload:OSL_CDragon.Items.#ctor
+  name: Items
+  nameWithType: Items.Items
+  fullName: OSL_CDragon.Items.Items

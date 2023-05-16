@@ -1,45 +1,48 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFramework>net6.0</TargetFramework>
-		<RootNamespace>OSL_Client</RootNamespace>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<StartupObject></StartupObject>
-		<ApplicationIcon>Icone_Terre.ico</ApplicationIcon>
-		<Copyright>Sky-csc</Copyright>
-		<PackageProjectUrl>https://github.com/Sky-CSC/OSL</PackageProjectUrl>
-		<AssemblyVersion>1.0.0</AssemblyVersion>
-		<FileVersion>1.0.0</FileVersion>
-		<Version>1.0.0</Version>
-	</PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>OSL_Client</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationIcon>Icone_Terre.ico</ApplicationIcon>
+    <PackageProjectUrl>https://github.com/Sky-CSC/OSL</PackageProjectUrl>
+    <Copyright>Sky csc</Copyright>
+    <Authors>Sky csc</Authors>
+    <Company>Sky csc</Company>
+    <Title>OSL-Client</Title>
+    <PackageIcon>Icone_Terre.ico</PackageIcon>
+    <RepositoryUrl>https://github.com/Sky-CSC/OSL</RepositoryUrl>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
+    <FileVersion>1.1.0</FileVersion>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<Content Include="Icone_Terre.ico" />
-	</ItemGroup>
+  <ItemGroup>
+    <Content Include="Icone_Terre.ico" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.9" />
-		<PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="6.0.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<None Update="Configuration\configHost.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-		<None Update="Configuration\configRiot.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-		<None Update="Configuration\configServerSocketOSLServer.json">
-		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OSL-Common\OSL-Common.csproj" />
+    <ProjectReference Include="..\OSL-LcuApi\OSL-LcuApi.csproj" />
+    <ProjectReference Include="..\OSL-ReplayApi\OSL-ReplayApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Configuration\riot.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Configuration\server-socket.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Icone_Terre.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.Sockets
+  commentId: N:OSL_Client.Sockets
+  id: OSL_Client.Sockets
+  children:
+  - OSL_Client.Sockets.AsyncClient
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.Sockets
+  nameWithType: OSL_Client.Sockets
+  fullName: OSL_Client.Sockets
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.Sockets.AsyncClient
+  commentId: T:OSL_Client.Sockets.AsyncClient
+  name: AsyncClient
+  nameWithType: AsyncClient
+  fullName: OSL_Client.Sockets.AsyncClient

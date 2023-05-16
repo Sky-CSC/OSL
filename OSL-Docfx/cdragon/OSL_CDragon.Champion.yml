@@ -1,0 +1,773 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_CDragon.Champion
+  commentId: T:OSL_CDragon.Champion
+  id: Champion
+  parent: OSL_CDragon
+  children:
+  - OSL_CDragon.Champion.#ctor
+  - OSL_CDragon.Champion.Alias
+  - OSL_CDragon.Champion.Id
+  - OSL_CDragon.Champion.Name
+  - OSL_CDragon.Champion.Roles
+  - OSL_CDragon.Champion.Skins
+  - OSL_CDragon.Champion.Sound
+  - OSL_CDragon.Champion.SquarePortraitPath
+  langs:
+  - csharp
+  - vb
+  name: Champion
+  nameWithType: Champion
+  fullName: OSL_CDragon.Champion
+  type: Class
+  source:
+    id: Champion
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 221
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nChampion information\n"
+  example: []
+  syntax:
+    content: public class Champion
+    content.vb: Public Class Champion
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_CDragon.Champion.Id
+  commentId: P:OSL_CDragon.Champion.Id
+  id: Id
+  parent: OSL_CDragon.Champion
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Champion.Id
+  fullName: OSL_CDragon.Champion.Id
+  type: Property
+  source:
+    id: Id
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 223
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: OSL_CDragon.Champion.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Champion.Name
+  commentId: P:OSL_CDragon.Champion.Name
+  id: Name
+  parent: OSL_CDragon.Champion
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Champion.Name
+  fullName: OSL_CDragon.Champion.Name
+  type: Property
+  source:
+    id: Name
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 224
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: OSL_CDragon.Champion.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Champion.Alias
+  commentId: P:OSL_CDragon.Champion.Alias
+  id: Alias
+  parent: OSL_CDragon.Champion
+  langs:
+  - csharp
+  - vb
+  name: Alias
+  nameWithType: Champion.Alias
+  fullName: OSL_CDragon.Champion.Alias
+  type: Property
+  source:
+    id: Alias
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 225
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public string Alias { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Alias As String
+  overload: OSL_CDragon.Champion.Alias*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Champion.SquarePortraitPath
+  commentId: P:OSL_CDragon.Champion.SquarePortraitPath
+  id: SquarePortraitPath
+  parent: OSL_CDragon.Champion
+  langs:
+  - csharp
+  - vb
+  name: SquarePortraitPath
+  nameWithType: Champion.SquarePortraitPath
+  fullName: OSL_CDragon.Champion.SquarePortraitPath
+  type: Property
+  source:
+    id: SquarePortraitPath
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 226
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public string SquarePortraitPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SquarePortraitPath As String
+  overload: OSL_CDragon.Champion.SquarePortraitPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Champion.Sound
+  commentId: P:OSL_CDragon.Champion.Sound
+  id: Sound
+  parent: OSL_CDragon.Champion
+  langs:
+  - csharp
+  - vb
+  name: Sound
+  nameWithType: Champion.Sound
+  fullName: OSL_CDragon.Champion.Sound
+  type: Property
+  source:
+    id: Sound
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 227
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public Sound Sound { get; set; }
+    parameters: []
+    return:
+      type: OSL_CDragon.Sound
+    content.vb: Public Property Sound As Sound
+  overload: OSL_CDragon.Champion.Sound*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Champion.Roles
+  commentId: P:OSL_CDragon.Champion.Roles
+  id: Roles
+  parent: OSL_CDragon.Champion
+  langs:
+  - csharp
+  - vb
+  name: Roles
+  nameWithType: Champion.Roles
+  fullName: OSL_CDragon.Champion.Roles
+  type: Property
+  source:
+    id: Roles
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 228
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public List<string> Roles { get; set; }
+    parameters: []
+    return:
+      type: List{System.String}
+    content.vb: Public Property Roles As List(Of String)
+  overload: OSL_CDragon.Champion.Roles*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Champion.Skins
+  commentId: P:OSL_CDragon.Champion.Skins
+  id: Skins
+  parent: OSL_CDragon.Champion
+  langs:
+  - csharp
+  - vb
+  name: Skins
+  nameWithType: Champion.Skins
+  fullName: OSL_CDragon.Champion.Skins
+  type: Property
+  source:
+    id: Skins
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 229
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public List<Skins> Skins { get; set; }
+    parameters: []
+    return:
+      type: List{OSL_CDragon.Skins}
+    content.vb: Public Property Skins As List(Of Skins)
+  overload: OSL_CDragon.Champion.Skins*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Champion.#ctor
+  commentId: M:OSL_CDragon.Champion.#ctor
+  id: '#ctor'
+  parent: OSL_CDragon.Champion
+  langs:
+  - csharp
+  - vb
+  name: Champion()
+  nameWithType: Champion.Champion()
+  fullName: OSL_CDragon.Champion.Champion()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 231
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public Champion()
+    content.vb: Public Sub New
+  overload: OSL_CDragon.Champion.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_CDragon
+  commentId: N:OSL_CDragon
+  name: OSL_CDragon
+  nameWithType: OSL_CDragon
+  fullName: OSL_CDragon
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_CDragon.Champion.Id*
+  commentId: Overload:OSL_CDragon.Champion.Id
+  name: Id
+  nameWithType: Champion.Id
+  fullName: OSL_CDragon.Champion.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_CDragon.Champion.Name*
+  commentId: Overload:OSL_CDragon.Champion.Name
+  name: Name
+  nameWithType: Champion.Name
+  fullName: OSL_CDragon.Champion.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_CDragon.Champion.Alias*
+  commentId: Overload:OSL_CDragon.Champion.Alias
+  name: Alias
+  nameWithType: Champion.Alias
+  fullName: OSL_CDragon.Champion.Alias
+- uid: OSL_CDragon.Champion.SquarePortraitPath*
+  commentId: Overload:OSL_CDragon.Champion.SquarePortraitPath
+  name: SquarePortraitPath
+  nameWithType: Champion.SquarePortraitPath
+  fullName: OSL_CDragon.Champion.SquarePortraitPath
+- uid: OSL_CDragon.Champion.Sound*
+  commentId: Overload:OSL_CDragon.Champion.Sound
+  name: Sound
+  nameWithType: Champion.Sound
+  fullName: OSL_CDragon.Champion.Sound
+- uid: OSL_CDragon.Sound
+  commentId: T:OSL_CDragon.Sound
+  parent: OSL_CDragon
+  name: Sound
+  nameWithType: Sound
+  fullName: OSL_CDragon.Sound
+- uid: OSL_CDragon.Champion.Roles*
+  commentId: Overload:OSL_CDragon.Champion.Roles
+  name: Roles
+  nameWithType: Champion.Roles
+  fullName: OSL_CDragon.Champion.Roles
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_CDragon.Champion.Skins*
+  commentId: Overload:OSL_CDragon.Champion.Skins
+  name: Skins
+  nameWithType: Champion.Skins
+  fullName: OSL_CDragon.Champion.Skins
+- uid: List{OSL_CDragon.Skins}
+  commentId: '!:List{OSL_CDragon.Skins}'
+  definition: List`1
+  name: List<Skins>
+  nameWithType: List<Skins>
+  fullName: List<OSL_CDragon.Skins>
+  nameWithType.vb: List(Of Skins)
+  fullName.vb: List(Of OSL_CDragon.Skins)
+  name.vb: List(Of Skins)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_CDragon.Skins
+    name: Skins
+    nameWithType: Skins
+    fullName: OSL_CDragon.Skins
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_CDragon.Skins
+    name: Skins
+    nameWithType: Skins
+    fullName: OSL_CDragon.Skins
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_CDragon.Champion.#ctor*
+  commentId: Overload:OSL_CDragon.Champion.#ctor
+  name: Champion
+  nameWithType: Champion.Champion
+  fullName: OSL_CDragon.Champion.Champion

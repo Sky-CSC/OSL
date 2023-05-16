@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.Mid
+  commentId: N:OSL_Web.Configuration.Overlay.Rune.View1.Mid
+  id: OSL_Web.Configuration.Overlay.Rune.View1.Mid
+  children:
+  - OSL_Web.Configuration.Overlay.Rune.View1.Mid.Config
+  langs:
+  - csharp
+  - vb
+  name: OSL_Web.Configuration.Overlay.Rune.View1.Mid
+  nameWithType: OSL_Web.Configuration.Overlay.Rune.View1.Mid
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.Mid
+  type: Namespace
+  assemblies:
+  - OSL-Web
+references:
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.Mid.Config
+  commentId: T:OSL_Web.Configuration.Overlay.Rune.View1.Mid.Config
+  name: Config
+  nameWithType: Config
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.Mid.Config

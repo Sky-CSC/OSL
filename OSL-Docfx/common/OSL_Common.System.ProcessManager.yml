@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.System.ProcessManager
+  commentId: N:OSL_Common.System.ProcessManager
+  id: OSL_Common.System.ProcessManager
+  children:
+  - OSL_Common.System.ProcessManager.ProcessInfo
+  langs:
+  - csharp
+  - vb
+  name: OSL_Common.System.ProcessManager
+  nameWithType: OSL_Common.System.ProcessManager
+  fullName: OSL_Common.System.ProcessManager
+  type: Namespace
+  assemblies:
+  - OSL-Common
+references:
+- uid: OSL_Common.System.ProcessManager.ProcessInfo
+  commentId: T:OSL_Common.System.ProcessManager.ProcessInfo
+  name: ProcessInfo
+  nameWithType: ProcessInfo
+  fullName: OSL_Common.System.ProcessManager.ProcessInfo

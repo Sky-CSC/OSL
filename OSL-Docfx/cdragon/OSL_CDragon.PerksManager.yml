@@ -1,0 +1,603 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_CDragon.PerksManager
+  commentId: T:OSL_CDragon.PerksManager
+  id: PerksManager
+  parent: OSL_CDragon
+  children:
+  - OSL_CDragon.PerksManager.DownloadPerks(System.String,System.String)
+  - OSL_CDragon.PerksManager.DownloadPerksComposent(System.String,System.String,System.String,System.Int32,System.Int32)
+  - OSL_CDragon.PerksManager.DownloadPerksStyle(System.String,System.String,System.String,System.Int32,System.Int32)
+  - OSL_CDragon.PerksManager.PerksAsyncDownload(System.Int32,System.Int32,System.String,System.Object,System.String,System.Int32,System.String)
+  - OSL_CDragon.PerksManager.UpdateDataCDragonPerks(System.Int32,System.Int32,System.Object,System.String)
+  langs:
+  - csharp
+  - vb
+  name: PerksManager
+  nameWithType: PerksManager
+  fullName: OSL_CDragon.PerksManager
+  type: Class
+  source:
+    id: PerksManager
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    startLine: 9
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nRetrieve data from each perks\n"
+  example: []
+  syntax:
+    content: public class PerksManager
+    content.vb: Public Class PerksManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_CDragon.PerksManager.DownloadPerks(System.String,System.String)
+  commentId: M:OSL_CDragon.PerksManager.DownloadPerks(System.String,System.String)
+  id: DownloadPerks(System.String,System.String)
+  parent: OSL_CDragon.PerksManager
+  langs:
+  - csharp
+  - vb
+  name: DownloadPerks(String, String)
+  nameWithType: PerksManager.DownloadPerks(String, String)
+  fullName: OSL_CDragon.PerksManager.DownloadPerks(System.String, System.String)
+  type: Method
+  source:
+    id: DownloadPerks
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    startLine: 18
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nRecover all perks existing and is data\n"
+  example: []
+  syntax:
+    content: public static void DownloadPerks(string numPatch, string region)
+    parameters:
+    - id: numPatch
+      type: System.String
+      description: ''
+    - id: region
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub DownloadPerks(numPatch As String, region As String)
+  overload: OSL_CDragon.PerksManager.DownloadPerks*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_CDragon.PerksManager.DownloadPerksComposent(System.String,System.String,System.String,System.Int32,System.Int32)
+  commentId: M:OSL_CDragon.PerksManager.DownloadPerksComposent(System.String,System.String,System.String,System.Int32,System.Int32)
+  id: DownloadPerksComposent(System.String,System.String,System.String,System.Int32,System.Int32)
+  parent: OSL_CDragon.PerksManager
+  langs:
+  - csharp
+  - vb
+  name: DownloadPerksComposent(String, String, String, Int32, Int32)
+  nameWithType: PerksManager.DownloadPerksComposent(String, String, String, Int32, Int32)
+  fullName: OSL_CDragon.PerksManager.DownloadPerksComposent(System.String, System.String, System.String, System.Int32, System.Int32)
+  type: Method
+  source:
+    id: DownloadPerksComposent
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    startLine: 44
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nDownload all perks existing and is data\n"
+  example: []
+  syntax:
+    content: public static void DownloadPerksComposent(string numPatch, string region, string perksDirectory, int indexPatch, int indexRegion)
+    parameters:
+    - id: numPatch
+      type: System.String
+      description: ''
+    - id: region
+      type: System.String
+      description: ''
+    - id: perksDirectory
+      type: System.String
+      description: ''
+    - id: indexPatch
+      type: System.Int32
+      description: ''
+    - id: indexRegion
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Sub DownloadPerksComposent(numPatch As String, region As String, perksDirectory As String, indexPatch As Integer, indexRegion As Integer)
+  overload: OSL_CDragon.PerksManager.DownloadPerksComposent*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_CDragon.PerksManager.DownloadPerksStyle(System.String,System.String,System.String,System.Int32,System.Int32)
+  commentId: M:OSL_CDragon.PerksManager.DownloadPerksStyle(System.String,System.String,System.String,System.Int32,System.Int32)
+  id: DownloadPerksStyle(System.String,System.String,System.String,System.Int32,System.Int32)
+  parent: OSL_CDragon.PerksManager
+  langs:
+  - csharp
+  - vb
+  name: DownloadPerksStyle(String, String, String, Int32, Int32)
+  nameWithType: PerksManager.DownloadPerksStyle(String, String, String, Int32, Int32)
+  fullName: OSL_CDragon.PerksManager.DownloadPerksStyle(System.String, System.String, System.String, System.Int32, System.Int32)
+  type: Method
+  source:
+    id: DownloadPerksStyle
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    startLine: 125
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nDownload all perks existing and is data\n"
+  example: []
+  syntax:
+    content: public static void DownloadPerksStyle(string numPatch, string region, string perksDirectory, int indexPatch, int indexRegion)
+    parameters:
+    - id: numPatch
+      type: System.String
+      description: ''
+    - id: region
+      type: System.String
+      description: ''
+    - id: perksDirectory
+      type: System.String
+      description: ''
+    - id: indexPatch
+      type: System.Int32
+      description: ''
+    - id: indexRegion
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Sub DownloadPerksStyle(numPatch As String, region As String, perksDirectory As String, indexPatch As Integer, indexRegion As Integer)
+  overload: OSL_CDragon.PerksManager.DownloadPerksStyle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_CDragon.PerksManager.PerksAsyncDownload(System.Int32,System.Int32,System.String,System.Object,System.String,System.Int32,System.String)
+  commentId: M:OSL_CDragon.PerksManager.PerksAsyncDownload(System.Int32,System.Int32,System.String,System.Object,System.String,System.Int32,System.String)
+  id: PerksAsyncDownload(System.Int32,System.Int32,System.String,System.Object,System.String,System.Int32,System.String)
+  parent: OSL_CDragon.PerksManager
+  langs:
+  - csharp
+  - vb
+  name: PerksAsyncDownload(Int32, Int32, String, Object, String, Int32, String)
+  nameWithType: PerksManager.PerksAsyncDownload(Int32, Int32, String, Object, String, Int32, String)
+  fullName: OSL_CDragon.PerksManager.PerksAsyncDownload(System.Int32, System.Int32, System.String, System.Object, System.String, System.Int32, System.String)
+  type: Method
+  source:
+    id: PerksAsyncDownload
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    startLine: 172
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nDownload perks async\n"
+  example: []
+  syntax:
+    content: public static void PerksAsyncDownload(int indexPatch, int indexRegion, string numPatch, dynamic perk, string perksDirectory, int perkId, string perkFullName)
+    parameters:
+    - id: indexPatch
+      type: System.Int32
+      description: ''
+    - id: indexRegion
+      type: System.Int32
+      description: ''
+    - id: numPatch
+      type: System.String
+      description: ''
+    - id: perk
+      type: System.Object
+      description: ''
+    - id: perksDirectory
+      type: System.String
+      description: ''
+    - id: perkId
+      type: System.Int32
+      description: ''
+    - id: perkFullName
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub PerksAsyncDownload(indexPatch As Integer, indexRegion As Integer, numPatch As String, perk As Object, perksDirectory As String, perkId As Integer, perkFullName As String)
+  overload: OSL_CDragon.PerksManager.PerksAsyncDownload*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_CDragon.PerksManager.UpdateDataCDragonPerks(System.Int32,System.Int32,System.Object,System.String)
+  commentId: M:OSL_CDragon.PerksManager.UpdateDataCDragonPerks(System.Int32,System.Int32,System.Object,System.String)
+  id: UpdateDataCDragonPerks(System.Int32,System.Int32,System.Object,System.String)
+  parent: OSL_CDragon.PerksManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateDataCDragonPerks(Int32, Int32, Object, String)
+  nameWithType: PerksManager.UpdateDataCDragonPerks(Int32, Int32, Object, String)
+  fullName: OSL_CDragon.PerksManager.UpdateDataCDragonPerks(System.Int32, System.Int32, System.Object, System.String)
+  type: Method
+  source:
+    id: UpdateDataCDragonPerks
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    startLine: 184
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  example: []
+  syntax:
+    content: public static void UpdateDataCDragonPerks(int indexPatch, int indexRegion, dynamic perk, string perkIcone)
+    parameters:
+    - id: indexPatch
+      type: System.Int32
+    - id: indexRegion
+      type: System.Int32
+    - id: perk
+      type: System.Object
+    - id: perkIcone
+      type: System.String
+    content.vb: Public Shared Sub UpdateDataCDragonPerks(indexPatch As Integer, indexRegion As Integer, perk As Object, perkIcone As String)
+  overload: OSL_CDragon.PerksManager.UpdateDataCDragonPerks*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_CDragon
+  commentId: N:OSL_CDragon
+  name: OSL_CDragon
+  nameWithType: OSL_CDragon
+  fullName: OSL_CDragon
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_CDragon.PerksManager.DownloadPerks*
+  commentId: Overload:OSL_CDragon.PerksManager.DownloadPerks
+  name: DownloadPerks
+  nameWithType: PerksManager.DownloadPerks
+  fullName: OSL_CDragon.PerksManager.DownloadPerks
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_CDragon.PerksManager.DownloadPerksComposent*
+  commentId: Overload:OSL_CDragon.PerksManager.DownloadPerksComposent
+  name: DownloadPerksComposent
+  nameWithType: PerksManager.DownloadPerksComposent
+  fullName: OSL_CDragon.PerksManager.DownloadPerksComposent
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_CDragon.PerksManager.DownloadPerksStyle*
+  commentId: Overload:OSL_CDragon.PerksManager.DownloadPerksStyle
+  name: DownloadPerksStyle
+  nameWithType: PerksManager.DownloadPerksStyle
+  fullName: OSL_CDragon.PerksManager.DownloadPerksStyle
+- uid: OSL_CDragon.PerksManager.PerksAsyncDownload*
+  commentId: Overload:OSL_CDragon.PerksManager.PerksAsyncDownload
+  name: PerksAsyncDownload
+  nameWithType: PerksManager.PerksAsyncDownload
+  fullName: OSL_CDragon.PerksManager.PerksAsyncDownload
+- uid: OSL_CDragon.PerksManager.UpdateDataCDragonPerks*
+  commentId: Overload:OSL_CDragon.PerksManager.UpdateDataCDragonPerks
+  name: UpdateDataCDragonPerks
+  nameWithType: PerksManager.UpdateDataCDragonPerks
+  fullName: OSL_CDragon.PerksManager.UpdateDataCDragonPerks

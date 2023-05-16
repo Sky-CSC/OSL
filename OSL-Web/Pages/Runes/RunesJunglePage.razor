@@ -1,0 +1,115 @@
+﻿@page "/runes/view1/jungle"
+@using Newtonsoft.Json;
+@layout EmptyLayout
+<PageTitle>Runes Overlay Jungle</PageTitle>
+
+<div class="perks">
+    @**@
+    @{
+        string backgroundPicture;
+        if (RunesPage.overlay.BackgroundPicture == false)
+        {
+            backgroundPicture = "";
+        }
+        else
+        {
+            backgroundPicture = formatingData.BakgroundPicture;
+        }
+
+        string colorForegroundBackground;
+        if (RunesPage.overlay.ForegroundBackground == false)
+        {
+            colorForegroundBackground = "";
+        }
+        else
+        {
+            colorForegroundBackground = formatingData.OverlayColorBackgroudGradient;
+        }
+    }
+    <div class="perks-background">
+        @*Bakground color*@
+        <div class="perks-background-gradiant" style="background-image: @formatingData.BackgroudGradient">
+            @*Black veil*@
+            <div class="perks-background-color" style="background-image: @colorForegroundBackground">
+            </div>
+        </div>
+        @*Bakground picture*@
+        <img class="perks-background-img" src="@backgroundPicture" />
+    </div>
+    @*Lane picture*@
+    <div class="lane-picture">
+        <img class="lane-picture-img" src="@formatingData.LanePicture" />
+    </div>
+    @foreach (var participants in DataProcessing.Runes.summonerPerksList)
+    {
+        @if (participants.Lane.CompareTo(DataProcessing.Runes.Lanes.Jungle) == 0)
+        {
+            if (participants.TeamId == 100)
+            {
+                @*Display name*@
+                <div class="summoner-name" style="color: @formatingData.BlueSideColorTextSummoner">
+                    @participants.SummonerName
+                </div>
+
+                @*Display champ picture*@
+                <div class="champ-picture">
+                    <img class="champ-picture-img" style="border: @formatingData.BlueSideColorBorderChampion" src="@GetChampionPicturePath(participants.ChampionId)" />
+                </div>
+            }
+            else
+            {
+                @*Display name*@
+                <div class="summoner-name" style="color: @formatingData.RedSideColorTextSummoner;">
+                    @participants.SummonerName
+                </div>
+
+                @*Display champ picture*@
+                <div class="champ-picture">
+                    <img class="champ-picture-img" style="border: @formatingData.RedSideColorBorderChampion" src="@GetChampionPicturePath(participants.ChampionId)" />
+                </div>
+            }
+            <div class="perks-list">
+                @foreach (int perks in participants.Perks.perkIds)
+                {
+                    @*Display perks*@
+                    <div class="perks-wrapper">
+                        <img class="perks-img" src="@GetPerksIconPath(perks)" />
+                    </div>
+                }
+            </div>
+            if (participants.TeamId == 100)
+            {
+                @*Perks separator bar*@
+                <div class="separation-bar" style="background-color: @formatingData.BlueSideColorSeparationBar">
+                </div>
+            }
+            else
+            {
+                @*Perks separator bar*@
+                <div class="separation-bar" style="background-color: @formatingData.RedSideColorSeparationBar">
+                </div>
+            }
+        }
+    }
+</div>
+
+
+@code {
+    private System.Timers.Timer timer = new(5000);
+
+    protected override void OnInitialized()
+    {
+        timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        timer.Start();
+    }
+
+    private void OnTimerCallback()
+    {
+        _ = InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => timer.Dispose();
+}

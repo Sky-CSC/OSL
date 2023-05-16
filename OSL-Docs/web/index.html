@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Web Documentation | OSL </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Web Documentation | OSL ">
+      <meta name="generator" content="docfx 2.59.4.0">
+      
+      <link rel="shortcut icon" href="../picture/Icone_Feu.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+      
+      <meta property="docfx:rel" content="../">
+      <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../index.html">
+              <img src="../picture/Icone_Feu.png" alt="Overlay Spectator Live" class="logomark">
+              <span class="brand-title">Overlay Spectator Live</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../index.html">
+                          <img src="../picture/Icone_Feu.png" alt="Overlay Spectator Live" class="logomark">
+                          <span class="brand-title">Overlay Spectator Live</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  <strong><a href='https://github.com/Sky-CSC/OSL'>Sky csc</a> </strong>
+                  
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="web-documentation"><strong>Web</strong> Documentation</h1>
+
+<hr>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p><strong>Documentation in progress</strong></p>
+</div>
+<hr>
+<h2 id="run-application">Run application</h2>
+<ol>
+<li>Download last release : <a href="https://github.com/Sky-CSC/OSL/releases/latest">Release v1.1.0</a></li>
+<li>Unzip <code>OSL-Web-1.1.0-win-x64.zip</code> to desired install folder</li>
+<li>Run <code>OSL-Web.exe</code>, <strong>Read the index web page when OSL-Web is launched</strong></li>
+<li>Change the Web Riot Api key in the web interface configuration</li>
+</ol>
+<p><a href="https://developer.riotgames.com/">Riot Developer page (take your api key)</a>
+Login and copy past your &quot;Development API Key&quot;</p>
+<img src="../picture/login.png" width="30%">
+<img src="../picture/copy.png" width="30%">
+<p><strong>Read the index web page when OSL-Web is launched</strong></p>
+<hr>
+<h2 id="obs-configuration-"><strong>OBS</strong> configuration :</h2>
+<p>Add to your différents scènes the différents URL (change ip by your local ip)</p>
+<p>Champ Select :</p>
+<pre><code class="lang-sh">http://ip:4141/champselect/view1
+http://ip:4141/champselect/view2
+http://ip:4141/champselect/view3
+http://ip:4141/champselect/view4
+</code></pre>
+<p>In Game :</p>
+<pre><code class="lang-sh">http://ip:4141/ingame/view1
+http://ip:4141/ingame/view2
+http://ip:4141/ingame/view3
+</code></pre>
+<p>End Game :</p>
+<pre><code class="lang-sh">http://ip:4141/endgame/view1
+http://ip:4141/endgame/view2
+http://ip:4141/endgame/view3
+</code></pre>
+<p>Runes :</p>
+<pre><code class="lang-sh">http://ip:4141/runes/view1/top
+http://ip:4141/runes/view1/mid
+http://ip:4141/runes/view1/jungle
+http://ip:4141/runes/view1/adc
+http://ip:4141/runes/view1/supp
+http://ip:4141/runes/view1/adcsupp
+http://ip:4141/runes/view1/all
+</code></pre>
+<hr>
+<h2 id="features-information-display-on-pages">Features, information display on pages</h2>
+<p><input type="checkbox" disabled="" checked=""> : Feature implemented</p>
+<p><input type="checkbox" disabled=""> : Feature not implemented</p>
+<h3 id="platform-routing-values-covered-web-riot-api"><ins><strong>Platform Routing Values Covered (Web Riot Api)</strong></ins></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Activate</th>
+<th style="text-align: center;">Platform</th>
+<th style="text-align: center;">Host</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">BR1</td>
+<td style="text-align: center;">br1.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">EUN1</td>
+<td style="text-align: center;">eun1.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled="" checked=""></td>
+<td style="text-align: center;">EUW1</td>
+<td style="text-align: center;">euw1.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">JP1</td>
+<td style="text-align: center;">jp1.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">KR</td>
+<td style="text-align: center;">kr.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">LA1</td>
+<td style="text-align: center;">la1.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">LA2</td>
+<td style="text-align: center;">la2.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">NA1</td>
+<td style="text-align: center;">na1.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">OC1</td>
+<td style="text-align: center;">oc1.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">TR1</td>
+<td style="text-align: center;">tr1.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">RU</td>
+<td style="text-align: center;">ru.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">PH2</td>
+<td style="text-align: center;">ph2.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">SG2</td>
+<td style="text-align: center;">sg2.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">TH2</td>
+<td style="text-align: center;">th2.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">TW2</td>
+<td style="text-align: center;">tw2.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">VN2</td>
+<td style="text-align: center;">vn2.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;">.</td>
+<td style="text-align: center;">.</td>
+<td style="text-align: center;">.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regional-routing-values-covered-web-riot-api"><ins><strong>Regional Routing Values Covered (Web Riot Api)</strong></ins></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Activate</th>
+<th style="text-align: center;">Region</th>
+<th style="text-align: center;">Host</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">AMERICAS</td>
+<td style="text-align: center;">americas.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">ASIA</td>
+<td style="text-align: center;">asia.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled="" checked=""></td>
+<td style="text-align: center;">EUROPE</td>
+<td style="text-align: center;">europe.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">SEA</td>
+<td style="text-align: center;">sea.api.riotgames.com</td>
+</tr>
+<tr>
+<td style="text-align: center;">.</td>
+<td style="text-align: center;">.</td>
+<td style="text-align: center;">.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="language-covered-cdragon"><ins><strong>Language Covered (CDragon)</strong></ins></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Activate</th>
+<th style="text-align: center;">Language</th>
+<th style="text-align: center;">Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">.</td>
+<td style="text-align: center;">.</td>
+<td style="text-align: center;">.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Czech (Czech Republic)</td>
+<td style="text-align: center;">cs_cz/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">German (Germany)</td>
+<td style="text-align: center;">de_de/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">default/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Greek (Greece)</td>
+<td style="text-align: center;">el_gr/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">English (Australia)</td>
+<td style="text-align: center;">en_au/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">English (United Kingdom)</td>
+<td style="text-align: center;">en_gb/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">English (Philippines)</td>
+<td style="text-align: center;">en_ph/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">English (Singapore)</td>
+<td style="text-align: center;">en_sg/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Spanish (Argentina)</td>
+<td style="text-align: center;">es_ar/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Spanish (Spain)</td>
+<td style="text-align: center;">es_es/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Spanish (Mexican)</td>
+<td style="text-align: center;">es_mx/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled="" checked=""></td>
+<td style="text-align: center;">French (France)</td>
+<td style="text-align: center;">fr_fr/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Hungarian (Hungary)</td>
+<td style="text-align: center;">hu_hu/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Italian (Italy)</td>
+<td style="text-align: center;">it_it/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Japanese (Japan)</td>
+<td style="text-align: center;">ja_jp/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Korean (Korea, Republic of)</td>
+<td style="text-align: center;">ko_kr/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Polish (Poland)</td>
+<td style="text-align: center;">pl_pl/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Portuguese (Brazil)</td>
+<td style="text-align: center;">pt_br/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Romanian (Romania)</td>
+<td style="text-align: center;">ro_ro/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Russian (Russian federation)</td>
+<td style="text-align: center;">ru_ru/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Thai (Thailand)</td>
+<td style="text-align: center;">th_th/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Turkish (Turkey)</td>
+<td style="text-align: center;">tr_tr/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Vietnamese (Viet Nam)</td>
+<td style="text-align: center;">vi_vn/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">vn_vn/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Chinese (China)</td>
+<td style="text-align: center;">zh_cn/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">zh_my/</td>
+</tr>
+<tr>
+<td style="text-align: center;"><input type="checkbox" disabled=""></td>
+<td style="text-align: center;">Chinese (Taiwan)</td>
+<td style="text-align: center;">zh_tw/</td>
+</tr>
+<tr>
+<td style="text-align: center;">.</td>
+<td style="text-align: center;">.</td>
+<td style="text-align: center;">.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="champ-select"><ins><strong>Champ Select</strong></ins></h3>
+<p>Link to LoL client :
+<br><input type="checkbox" disabled="" checked="">Champion Ban
+<br><input type="checkbox" disabled="" checked="">Champion Pick
+<br><input type="checkbox" disabled="" checked="">Summoners Name
+<br><input type="checkbox" disabled="" checked="">Summoners Spell (view 1)
+<br><input type="checkbox" disabled="">Skins
+<br><input type="checkbox" disabled="" checked="">Timer (ban/select/waiting)</p>
+<p>Personal information added :
+<br><input type="checkbox" disabled="">Name Toornament
+<br><input type="checkbox" disabled="" checked="">Win/Lose Team
+<br><input type="checkbox" disabled="">Logo Team
+<br><input type="checkbox" disabled="" checked="">Name Team
+<br><input type="checkbox" disabled="">Name Summoners
+<br><input type="checkbox" disabled="">Name Coach
+<br><input type="checkbox" disabled="">Stats Champ Ban
+<br><input type="checkbox" disabled="">Stats Champ Pick
+<br><input type="checkbox" disabled="">Stats Champ Winrate</p>
+<p><strong>View 1 :</strong></p>
+<img src="../picture/ChampSelectView1.png" width="50%">
+<p><strong>View 2 :</strong></p>
+<img src="../picture/ChampSelectView2.png" width="50%">
+<p><strong>View 3 :</strong></p>
+<img src="../picture/ChampSelectView3.png" width="50%">
+<p><strong>View 4 :</strong></p>
+<img src="../picture/ChampSelectView4.png" width="50%">
+<br>
+<h3 id="in-game"><ins><strong>In Game</strong></ins></h3>
+<h5 id="with-default-riot-overlay-">With default riot overlay :</h5>
+<p><br><input type="checkbox" disabled="" checked="">Team frame
+<br><input type="checkbox" disabled="" checked="">Dragon frame
+<br><input type="checkbox" disabled="" checked="">Baron frame
+<br><input type="checkbox" disabled="" checked="">Name teams
+<br><input type="checkbox" disabled="" checked="">Number of teams victory/lose
+<br><input type="checkbox" disabled="" checked="">Frame for video/logo/...</p>
+<p><strong>View 1 :</strong></p>
+<img src="../picture/InGameView1.png" width="50%">
+<p><strong>View 2 :</strong></p>
+<img src="../picture/InGameView2.png" width="50%">
+<p><strong>View 3 :</strong></p>
+<img src="../picture/InGameView3.png" width="50%">
+<br>
+<h5 id="without-riot-overlay-">Without riot overlay :</h5>
+<p><span style="color:yellow">information</span> : Display information if the default riot overlay is disabled</p>
+<p><span style="color:green">information</span> : Only if reading from memory is enabled. If memory reading is enabled, the default riot overlay can be disabled.</p>
+<p><span style="color:darkred">information</span> : Data not found at this time
+Inter of game :
+<br><input type="checkbox" disabled="">LevelUp
+<br><input type="checkbox" disabled="">Itemps buy
+<br><input type="checkbox" disabled="">Dragon (Kill, <span style="color:darkred">next</span>, soul)
+<br><input type="checkbox" disabled="">Elder Dragon (Timer, buff, all champ kill, <span style="color:green">gold diff</span>, <span style="color:green">damege diff</span>, next helder drake)
+<br><input type="checkbox" disabled="">Baron (buff, timer, all champ dead, <span style="color:green">gold diff</span>, <span style="color:green">damage diff</span>, next nash)
+<br><input type="checkbox" disabled="">Herald (buff, timer, launch or not, take or not)
+<br><input type="checkbox" disabled=""><span style="color:yellow">Kill</span>
+<br><input type="checkbox" disabled=""><span style="color:yellow">Tower</span>
+<br><input type="checkbox" disabled=""><span style="color:yellow">Timer</span>
+<br><input type="checkbox" disabled=""><span style="color:green">Gold</span>
+<br><input type="checkbox" disabled=""><span style="color:green">Gold win during fight</span>
+<br><input type="checkbox" disabled=""><span style="color:green">XP + Level</span>
+<br><input type="checkbox" disabled=""><span style="color:darkred">Damage given</span>
+<br><input type="checkbox" disabled=""><span style="color:darkred">Damage given during fight</span></p>
+<p>Exter of game :
+<br><input type="checkbox" disabled="">Ban/Pick
+<br><input type="checkbox" disabled="">Runes
+<br><input type="checkbox" disabled="">Logo team
+<br><input type="checkbox" disabled="">Team name
+<br><input type="checkbox" disabled="">Lose/Win
+<br><input type="checkbox" disabled="">Video</p>
+<br>
+<h3 id="end-game"><ins><strong>End Game</strong></ins></h3>
+<p><br><input type="checkbox" disabled="" checked="">Timer game
+<br><input type="checkbox" disabled="" checked="">Teams name
+<br><input type="checkbox" disabled="">Logo teams
+<br><input type="checkbox" disabled="" checked="">Champ dega
+<br><input type="checkbox" disabled="" checked="">KDA
+<br><input type="checkbox" disabled="" checked="">Total golds
+<br><input type="checkbox" disabled="" checked="">Tower
+<br><input type="checkbox" disabled="" checked="">Drake
+<br><input type="checkbox" disabled="" checked="">Elder dragon
+<br><input type="checkbox" disabled="" checked="">Herald
+<br><input type="checkbox" disabled="" checked="">Baron
+<br><input type="checkbox" disabled="" checked="">Ban
+<br><input type="checkbox" disabled="" checked="">Gold difference over time</p>
+<p><strong>View 1 :</strong></p>
+<img src="../picture/EndGameView1.png" width="50%">
+<p><strong>View 2 :</strong></p>
+<img src="../picture/EndGameView2.png" width="50%">
+<p><strong>View 3 :</strong></p>
+<img src="../picture/EndGameView3.png" width="50%">
+<br>
+<h3 id="runes"><ins><strong>Runes</strong></ins></h3>
+<p><br><input type="checkbox" disabled="" checked="">Summoner name
+<br><input type="checkbox" disabled="" checked="">Runes
+<br><input type="checkbox" disabled="" checked="">Top rune
+<br><input type="checkbox" disabled="" checked="">Jungle rune
+<br><input type="checkbox" disabled="" checked="">Mid rune
+<br><input type="checkbox" disabled="" checked="">Adc rune
+<br><input type="checkbox" disabled="" checked="">Support rune
+<br><input type="checkbox" disabled="" checked="">Adc and supp rune
+<br><input type="checkbox" disabled="" checked="">All lane rune</p>
+<p><strong>View 1 Top :</strong></p>
+<img src="../picture/RunesTop.png" width="50%">
+<p><strong>View 1 Mid :</strong></p>
+<img src="../picture/RunesMid.png" width="50%">
+<p><strong>View 1 Jungle :</strong></p>
+<img src="../picture/RunesJungle.png" width="50%">
+<p><strong>View 1 Adc :</strong></p>
+<img src="../picture/RunesAdc.png" width="50%">
+<p><strong>View 1 Supp :</strong></p>
+<img src="../picture/RunesSupp.png" width="50%">
+<p><strong>View 1 Adc &amp; Supp :</strong></p>
+<img src="../picture/RunesAdcSupp.png" width="50%">
+<p><strong>View 1 All :</strong></p>
+<img src="../picture/RunesAll.png" width="50%">
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Sky csc. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>    </body>
+</html>

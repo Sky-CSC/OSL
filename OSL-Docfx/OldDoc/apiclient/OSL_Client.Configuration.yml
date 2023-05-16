@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Client.Configuration
+  commentId: N:OSL_Client.Configuration
+  id: OSL_Client.Configuration
+  children:
+  - OSL_Client.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: OSL_Client.Configuration
+  nameWithType: OSL_Client.Configuration
+  fullName: OSL_Client.Configuration
+  type: Namespace
+  assemblies:
+  - OSL-Client
+references:
+- uid: OSL_Client.Configuration.Config
+  commentId: T:OSL_Client.Configuration.Config
+  name: Config
+  nameWithType: Config
+  fullName: OSL_Client.Configuration.Config

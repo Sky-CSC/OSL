@@ -1,0 +1,159 @@
+﻿@page "/champselect/view4"
+@using OSL_Web.DataProcessing;
+@layout EmptyLayout
+
+<PageTitle>Champ Select Overlay 4</PageTitle>
+@if (ChampSelect.session != null)
+{
+    @if (ChampSelect.session.Timer.Phase.Equals("GAME_STARTING"))
+    {
+        <div class="display-champ-select" style="border-bottom:@formatingData.BorderBottomPixel">
+            <div class="overlay-type-4">
+                <div class="champ-select-footer" style="border-top:@formatingData.BorderTop; background:@formatingData.BackgroudGradient">
+                    @*Footer Ban*@
+
+                    @{
+                        string overlayColorBackgroudGradient;
+                        if (ChampSelectPage.textValueOverlayView4.EnableForegroundBackground == false)
+                        {
+                            overlayColorBackgroudGradient = "";
+                        }
+                        else
+                        {
+                            overlayColorBackgroudGradient = formatingData.OverlayColorBackgroudGradient;
+                        }
+                    }
+                    <div class="champ-select-footer-ban" style="background-image: @overlayColorBackgroudGradient">
+                        <div class="blue-text" style="color: @formatingData.BlueSideColorText">
+                            @formatingData.BlueSideTeamName
+                        </div>
+                        <div class="blue-sub-text" style="color: @formatingData.BlueSideColorSubText">
+                            @formatingData.BlueSideTeamNameSubtext
+                        </div>
+                        <div class="text-ban-blue" style="color: @formatingData.BlueSideColorTextBan">
+                            @formatingData.BlueSideBanText
+                        </div>
+                        @*Footer ban blue side*@
+                        <div class="bans" id="blueBans">
+                            @{
+                                @*Ban already completed*@
+                                foreach (var bans in ChampSelect.session.Bans.MyTeamBans)
+                                {
+                                    <div class="ban-wrapper">
+                                        <img style="border: @formatingData.BlueSideBorderColorBan" class="ban-wrapper ban-veil" src="@DefaultSquare(bans)" />
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                        <div class="red-text" style="color: @formatingData.RedSideColorText">
+                            @formatingData.RedSideTeamName
+                        </div>
+                        <div class="red-sub-text" style="color: @formatingData.RedSideColorSubText">
+                            @formatingData.RedSideTeamNameSubtext
+                        </div>
+                        <div class="text-ban-red" style="color: @formatingData.RedSideColorTextBan">
+                            @formatingData.RedSideBanText
+                        </div>
+                        @*Footer ban red side*@
+                        <div class="bans" id="redBans">
+                            @*Ban already completed*@
+                            @{
+                                foreach (var bans in ChampSelect.session.Bans.TheirTeamBans)
+                                {
+                                    <div class="ban-wrapper">
+                                        <img style="border: @formatingData.RedSideBorderColorBan" class="ban-wrapper ban-veil" src="@DefaultSquare(bans)" />
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+
+                    @*Blue side display informations*@
+                    <div class="champ-select-footer-pick">
+                        <div class="text-pick-blue" style="color: @formatingData.BlueSideColorTextPick">
+                            @formatingData.BlueSidePickText
+                        </div>
+                        <div class="side" id="blueSide">
+                            @{
+                                foreach (var pick in ChampSelect.session.MyTeam)
+                                {
+                                    <div class="champ-wrapper">
+                                        @*Champion picture*@
+                                        <img style="border: @formatingData.BlueSideBorderColorPick" class="champ-wrapper" src="@DefaultSquare(pick.ChampionId)">
+                                    </div>
+                                }
+                            }
+                        </div>
+                        @*Keystone*@
+                        @*<div class="champ-select-footer-pick-keystone" style="background: @KeystonePickColor">
+                <div class="gradient-background-overlay"></div>
+                </div>*@
+                        @*Red side display informations*@
+                        <div class="text-pick-red" style="color: @formatingData.RedSideColorTextPick">
+                            @formatingData.RedSidePickText
+                        </div>
+                        <div class="side" id="redSide">
+                            @{
+                                foreach (var pick in ChampSelect.session.TheirTeam)
+                                {
+                                    <div class="champ-wrapper">
+                                        @*Champion picture*@
+                                        <img style="border: @formatingData.RedSideBorderColorPick" class="champ-wrapper" src="@DefaultSquare(pick.ChampionId)">
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    @*Footer Patch keystone*@
+                    <div class="champ-select-footer-patch-keystone">
+                        <div class="patch-text">
+                            PATCH
+                            @*@Patch*@
+                        </div>
+                        <div class="patch-name">
+                            @formatingData.DefaultPatch
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert-warning">
+            <h1>
+                <strong>Warning!</strong>
+                <br>Champ select phase is not in "GAME_STARTING"
+                <br />It is necessary to wait for the end of the phases
+            </h1>
+        </div>
+    }
+}
+else
+{
+    <div class="alert-warning">
+        <h1><strong>Warning!</strong> Champ Select not in progress</h1>
+    </div>
+}
+
+
+@code {
+    private System.Timers.Timer timer = new(100);
+
+    protected override void OnInitialized()
+    {
+        timer.Elapsed += (sender, eventArgs) => OnTimerCallback();
+        timer.Start();
+    }
+
+    private void OnTimerCallback()
+    {
+        _ = InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => timer.Dispose();
+}

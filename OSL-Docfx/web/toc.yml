@@ -1,0 +1,282 @@
+### YamlMime:TableOfContent
+- uid: OSL_Web.Configuration
+  name: OSL_Web.Configuration
+  items:
+  - uid: OSL_Web.Configuration.Config
+    name: Config
+- uid: OSL_Web.Configuration.CDragon
+  name: OSL_Web.Configuration.CDragon
+  items:
+  - uid: OSL_Web.Configuration.CDragon.CDragonConfig
+    name: CDragonConfig
+- uid: OSL_Web.Configuration.Overlay.ChampSelect.View1
+  name: OSL_Web.Configuration.Overlay.ChampSelect.View1
+  items:
+  - uid: OSL_Web.Configuration.Overlay.ChampSelect.View1.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.ChampSelect.View2
+  name: OSL_Web.Configuration.Overlay.ChampSelect.View2
+  items:
+  - uid: OSL_Web.Configuration.Overlay.ChampSelect.View2.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.ChampSelect.View3
+  name: OSL_Web.Configuration.Overlay.ChampSelect.View3
+  items:
+  - uid: OSL_Web.Configuration.Overlay.ChampSelect.View3.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.ChampSelect.View4
+  name: OSL_Web.Configuration.Overlay.ChampSelect.View4
+  items:
+  - uid: OSL_Web.Configuration.Overlay.ChampSelect.View4.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.EndGame.View1
+  name: OSL_Web.Configuration.Overlay.EndGame.View1
+  items:
+  - uid: OSL_Web.Configuration.Overlay.EndGame.View1.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.EndGame.View2
+  name: OSL_Web.Configuration.Overlay.EndGame.View2
+  items:
+  - uid: OSL_Web.Configuration.Overlay.EndGame.View2.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.EndGame.View3
+  name: OSL_Web.Configuration.Overlay.EndGame.View3
+  items:
+  - uid: OSL_Web.Configuration.Overlay.EndGame.View3.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.InGame.View1
+  name: OSL_Web.Configuration.Overlay.InGame.View1
+  items:
+  - uid: OSL_Web.Configuration.Overlay.InGame.View1.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.InGame.View2
+  name: OSL_Web.Configuration.Overlay.InGame.View2
+  items:
+  - uid: OSL_Web.Configuration.Overlay.InGame.View2.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.InGame.View3
+  name: OSL_Web.Configuration.Overlay.InGame.View3
+  items:
+  - uid: OSL_Web.Configuration.Overlay.InGame.View3.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.Rune.View1
+  name: OSL_Web.Configuration.Overlay.Rune.View1
+  items:
+  - uid: OSL_Web.Configuration.Overlay.Rune.View1.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.Adc
+  name: OSL_Web.Configuration.Overlay.Rune.View1.Adc
+  items:
+  - uid: OSL_Web.Configuration.Overlay.Rune.View1.Adc.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.AdcSupp
+  name: OSL_Web.Configuration.Overlay.Rune.View1.AdcSupp
+  items:
+  - uid: OSL_Web.Configuration.Overlay.Rune.View1.AdcSupp.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.All
+  name: OSL_Web.Configuration.Overlay.Rune.View1.All
+  items:
+  - uid: OSL_Web.Configuration.Overlay.Rune.View1.All.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.Jungle
+  name: OSL_Web.Configuration.Overlay.Rune.View1.Jungle
+  items:
+  - uid: OSL_Web.Configuration.Overlay.Rune.View1.Jungle.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.Mid
+  name: OSL_Web.Configuration.Overlay.Rune.View1.Mid
+  items:
+  - uid: OSL_Web.Configuration.Overlay.Rune.View1.Mid.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.Supp
+  name: OSL_Web.Configuration.Overlay.Rune.View1.Supp
+  items:
+  - uid: OSL_Web.Configuration.Overlay.Rune.View1.Supp.Config
+    name: Config
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.Top
+  name: OSL_Web.Configuration.Overlay.Rune.View1.Top
+  items:
+  - uid: OSL_Web.Configuration.Overlay.Rune.View1.Top.Config
+    name: Config
+- uid: OSL_Web.Configuration.Socket
+  name: OSL_Web.Configuration.Socket
+  items:
+  - uid: OSL_Web.Configuration.Socket.SocketConfig
+    name: SocketConfig
+- uid: OSL_Web.Configuration.WebApiRiot
+  name: OSL_Web.Configuration.WebApiRiot
+  items:
+  - uid: OSL_Web.Configuration.WebApiRiot.WebApiRiotConfig
+    name: WebApiRiotConfig
+- uid: OSL_Web.DataProcessing
+  name: OSL_Web.DataProcessing
+  items:
+  - uid: OSL_Web.DataProcessing.ChampSelect
+    name: ChampSelect
+  - uid: OSL_Web.DataProcessing.ChampSelect.Actions
+    name: ChampSelect.Actions
+  - uid: OSL_Web.DataProcessing.ChampSelect.Bans
+    name: ChampSelect.Bans
+  - uid: OSL_Web.DataProcessing.ChampSelect.Session
+    name: ChampSelect.Session
+  - uid: OSL_Web.DataProcessing.ChampSelect.Team
+    name: ChampSelect.Team
+  - uid: OSL_Web.DataProcessing.ChampSelect.Timer
+    name: ChampSelect.Timer
+  - uid: OSL_Web.DataProcessing.DataRedirection
+    name: DataRedirection
+  - uid: OSL_Web.DataProcessing.DataRedirection.GameFlowPhaseStatus
+    name: DataRedirection.GameFlowPhaseStatus
+  - uid: OSL_Web.DataProcessing.EndGame
+    name: EndGame
+  - uid: OSL_Web.DataProcessing.InGame
+    name: InGame
+  - uid: OSL_Web.DataProcessing.Runes
+    name: Runes
+  - uid: OSL_Web.DataProcessing.Runes.InfoForPerks
+    name: Runes.InfoForPerks
+  - uid: OSL_Web.DataProcessing.Runes.LaneInfo
+    name: Runes.LaneInfo
+  - uid: OSL_Web.DataProcessing.Runes.Lanes
+    name: Runes.Lanes
+  - uid: OSL_Web.DataProcessing.Runes.Perks
+    name: Runes.Perks
+- uid: OSL_Web.Pages
+  name: OSL_Web.Pages
+  items:
+  - uid: OSL_Web.Pages.ErrorModel
+    name: ErrorModel
+  - uid: OSL_Web.Pages.Index
+    name: Index
+- uid: OSL_Web.Pages.CDragon
+  name: OSL_Web.Pages.CDragon
+  items:
+  - uid: OSL_Web.Pages.CDragon.CDragonPage
+    name: CDragonPage
+- uid: OSL_Web.Pages.ChampSelect
+  name: OSL_Web.Pages.ChampSelect
+  items:
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectPage
+    name: ChampSelectPage
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectPage.TextValueOverlayView1
+    name: ChampSelectPage.TextValueOverlayView1
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectPage.TextValueOverlayView2
+    name: ChampSelectPage.TextValueOverlayView2
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectPage.TextValueOverlayView3
+    name: ChampSelectPage.TextValueOverlayView3
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectPage.TextValueOverlayView4
+    name: ChampSelectPage.TextValueOverlayView4
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectView1Page
+    name: ChampSelectView1Page
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectView1Page.FormatingData
+    name: ChampSelectView1Page.FormatingData
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectView2Page
+    name: ChampSelectView2Page
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectView2Page.FormatingData
+    name: ChampSelectView2Page.FormatingData
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectView3Page
+    name: ChampSelectView3Page
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectView3Page.FormatingData
+    name: ChampSelectView3Page.FormatingData
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page
+    name: ChampSelectView4Page
+  - uid: OSL_Web.Pages.ChampSelect.ChampSelectView4Page.FormatingData
+    name: ChampSelectView4Page.FormatingData
+  - uid: OSL_Web.Pages.ChampSelect.TimeControl
+    name: TimeControl
+- uid: OSL_Web.Pages.Config
+  name: OSL_Web.Pages.Config
+  items:
+  - uid: OSL_Web.Pages.Config.ConfigPage
+    name: ConfigPage
+  - uid: OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText
+    name: ConfigPage.ConfigOverlayText
+- uid: OSL_Web.Pages.EndGame
+  name: OSL_Web.Pages.EndGame
+  items:
+  - uid: OSL_Web.Pages.EndGame.EndGamePage
+    name: EndGamePage
+  - uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView1
+    name: EndGamePage.TextValueOverlayView1
+  - uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2
+    name: EndGamePage.TextValueOverlayView2
+  - uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView3
+    name: EndGamePage.TextValueOverlayView3
+  - uid: OSL_Web.Pages.EndGame.EndGameView1Page
+    name: EndGameView1Page
+  - uid: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData
+    name: EndGameView1Page.FormatingData
+  - uid: OSL_Web.Pages.EndGame.EndGameView2Page
+    name: EndGameView2Page
+  - uid: OSL_Web.Pages.EndGame.EndGameView2Page.FormatingData
+    name: EndGameView2Page.FormatingData
+  - uid: OSL_Web.Pages.EndGame.EndGameView3Page
+    name: EndGameView3Page
+  - uid: OSL_Web.Pages.EndGame.EndGameView3Page.FormatingData
+    name: EndGameView3Page.FormatingData
+- uid: OSL_Web.Pages.InGame
+  name: OSL_Web.Pages.InGame
+  items:
+  - uid: OSL_Web.Pages.InGame.InGamePage
+    name: InGamePage
+  - uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView1
+    name: InGamePage.TextValueOverlayView1
+  - uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView2
+    name: InGamePage.TextValueOverlayView2
+  - uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
+    name: InGamePage.TextValueOverlayView3
+  - uid: OSL_Web.Pages.InGame.InGameView1Page
+    name: InGameView1Page
+  - uid: OSL_Web.Pages.InGame.InGameView1Page.FormatingData
+    name: InGameView1Page.FormatingData
+  - uid: OSL_Web.Pages.InGame.InGameView2Page
+    name: InGameView2Page
+  - uid: OSL_Web.Pages.InGame.InGameView2Page.FormatingData
+    name: InGameView2Page.FormatingData
+  - uid: OSL_Web.Pages.InGame.InGameView3Page
+    name: InGameView3Page
+  - uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+    name: InGameView3Page.FormatingData
+- uid: OSL_Web.Pages.Runes
+  name: OSL_Web.Pages.Runes
+  items:
+  - uid: OSL_Web.Pages.Runes.RunesAdcPage
+    name: RunesAdcPage
+  - uid: OSL_Web.Pages.Runes.RunesAdcPage.FormatingData
+    name: RunesAdcPage.FormatingData
+  - uid: OSL_Web.Pages.Runes.RunesAdcSuppPage
+    name: RunesAdcSuppPage
+  - uid: OSL_Web.Pages.Runes.RunesAdcSuppPage.FormatingData
+    name: RunesAdcSuppPage.FormatingData
+  - uid: OSL_Web.Pages.Runes.RunesAllPage
+    name: RunesAllPage
+  - uid: OSL_Web.Pages.Runes.RunesAllPage.FormatingData
+    name: RunesAllPage.FormatingData
+  - uid: OSL_Web.Pages.Runes.RunesJunglePage
+    name: RunesJunglePage
+  - uid: OSL_Web.Pages.Runes.RunesJunglePage.FormatingData
+    name: RunesJunglePage.FormatingData
+  - uid: OSL_Web.Pages.Runes.RunesMidPage
+    name: RunesMidPage
+  - uid: OSL_Web.Pages.Runes.RunesMidPage.FormatingData
+    name: RunesMidPage.FormatingData
+  - uid: OSL_Web.Pages.Runes.RunesPage
+    name: RunesPage
+  - uid: OSL_Web.Pages.Runes.RunesPage.FormatingData
+    name: RunesPage.FormatingData
+  - uid: OSL_Web.Pages.Runes.RunesPage.Overlay
+    name: RunesPage.Overlay
+  - uid: OSL_Web.Pages.Runes.RunesSuppPage
+    name: RunesSuppPage
+  - uid: OSL_Web.Pages.Runes.RunesSuppPage.FormatingData
+    name: RunesSuppPage.FormatingData
+  - uid: OSL_Web.Pages.Runes.RunesTopPage
+    name: RunesTopPage
+  - uid: OSL_Web.Pages.Runes.RunesTopPage.FormatingData
+    name: RunesTopPage.FormatingData
+- uid: OSL_Web.Sockets
+  name: OSL_Web.Sockets
+  items:
+  - uid: OSL_Web.Sockets.AsyncServer
+    name: AsyncServer

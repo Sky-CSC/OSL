@@ -1,0 +1,583 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_CDragon.Skins
+  commentId: T:OSL_CDragon.Skins
+  id: Skins
+  parent: OSL_CDragon
+  children:
+  - OSL_CDragon.Skins.Id
+  - OSL_CDragon.Skins.IsBase
+  - OSL_CDragon.Skins.LoadScreenPath
+  - OSL_CDragon.Skins.SplashePath
+  - OSL_CDragon.Skins.SplasheUncenteredPath
+  - OSL_CDragon.Skins.TilePath
+  langs:
+  - csharp
+  - vb
+  name: Skins
+  nameWithType: Skins
+  fullName: OSL_CDragon.Skins
+  type: Class
+  source:
+    id: Skins
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 252
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nSkins information\n"
+  example: []
+  syntax:
+    content: public class Skins
+    content.vb: Public Class Skins
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_CDragon.Skins.Id
+  commentId: P:OSL_CDragon.Skins.Id
+  id: Id
+  parent: OSL_CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Skins.Id
+  fullName: OSL_CDragon.Skins.Id
+  type: Property
+  source:
+    id: Id
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 254
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: OSL_CDragon.Skins.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Skins.IsBase
+  commentId: P:OSL_CDragon.Skins.IsBase
+  id: IsBase
+  parent: OSL_CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: IsBase
+  nameWithType: Skins.IsBase
+  fullName: OSL_CDragon.Skins.IsBase
+  type: Property
+  source:
+    id: IsBase
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 255
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public bool IsBase { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsBase As Boolean
+  overload: OSL_CDragon.Skins.IsBase*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Skins.SplashePath
+  commentId: P:OSL_CDragon.Skins.SplashePath
+  id: SplashePath
+  parent: OSL_CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: SplashePath
+  nameWithType: Skins.SplashePath
+  fullName: OSL_CDragon.Skins.SplashePath
+  type: Property
+  source:
+    id: SplashePath
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 256
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public string SplashePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SplashePath As String
+  overload: OSL_CDragon.Skins.SplashePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Skins.SplasheUncenteredPath
+  commentId: P:OSL_CDragon.Skins.SplasheUncenteredPath
+  id: SplasheUncenteredPath
+  parent: OSL_CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: SplasheUncenteredPath
+  nameWithType: Skins.SplasheUncenteredPath
+  fullName: OSL_CDragon.Skins.SplasheUncenteredPath
+  type: Property
+  source:
+    id: SplasheUncenteredPath
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 257
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public string SplasheUncenteredPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SplasheUncenteredPath As String
+  overload: OSL_CDragon.Skins.SplasheUncenteredPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Skins.TilePath
+  commentId: P:OSL_CDragon.Skins.TilePath
+  id: TilePath
+  parent: OSL_CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: TilePath
+  nameWithType: Skins.TilePath
+  fullName: OSL_CDragon.Skins.TilePath
+  type: Property
+  source:
+    id: TilePath
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 258
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public string TilePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TilePath As String
+  overload: OSL_CDragon.Skins.TilePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_CDragon.Skins.LoadScreenPath
+  commentId: P:OSL_CDragon.Skins.LoadScreenPath
+  id: LoadScreenPath
+  parent: OSL_CDragon.Skins
+  langs:
+  - csharp
+  - vb
+  name: LoadScreenPath
+  nameWithType: Skins.LoadScreenPath
+  fullName: OSL_CDragon.Skins.LoadScreenPath
+  type: Property
+  source:
+    id: LoadScreenPath
+    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    startLine: 259
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public string LoadScreenPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LoadScreenPath As String
+  overload: OSL_CDragon.Skins.LoadScreenPath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_CDragon
+  commentId: N:OSL_CDragon
+  name: OSL_CDragon
+  nameWithType: OSL_CDragon
+  fullName: OSL_CDragon
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_CDragon.Skins.Id*
+  commentId: Overload:OSL_CDragon.Skins.Id
+  name: Id
+  nameWithType: Skins.Id
+  fullName: OSL_CDragon.Skins.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_CDragon.Skins.IsBase*
+  commentId: Overload:OSL_CDragon.Skins.IsBase
+  name: IsBase
+  nameWithType: Skins.IsBase
+  fullName: OSL_CDragon.Skins.IsBase
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_CDragon.Skins.SplashePath*
+  commentId: Overload:OSL_CDragon.Skins.SplashePath
+  name: SplashePath
+  nameWithType: Skins.SplashePath
+  fullName: OSL_CDragon.Skins.SplashePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_CDragon.Skins.SplasheUncenteredPath*
+  commentId: Overload:OSL_CDragon.Skins.SplasheUncenteredPath
+  name: SplasheUncenteredPath
+  nameWithType: Skins.SplasheUncenteredPath
+  fullName: OSL_CDragon.Skins.SplasheUncenteredPath
+- uid: OSL_CDragon.Skins.TilePath*
+  commentId: Overload:OSL_CDragon.Skins.TilePath
+  name: TilePath
+  nameWithType: Skins.TilePath
+  fullName: OSL_CDragon.Skins.TilePath
+- uid: OSL_CDragon.Skins.LoadScreenPath*
+  commentId: Overload:OSL_CDragon.Skins.LoadScreenPath
+  name: LoadScreenPath
+  nameWithType: Skins.LoadScreenPath
+  fullName: OSL_CDragon.Skins.LoadScreenPath

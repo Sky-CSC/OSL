@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Configuration.CDragon
+  commentId: N:OSL_Web.Configuration.CDragon
+  id: OSL_Web.Configuration.CDragon
+  children:
+  - OSL_Web.Configuration.CDragon.CDragonConfig
+  langs:
+  - csharp
+  - vb
+  name: OSL_Web.Configuration.CDragon
+  nameWithType: OSL_Web.Configuration.CDragon
+  fullName: OSL_Web.Configuration.CDragon
+  type: Namespace
+  assemblies:
+  - OSL-Web
+references:
+- uid: OSL_Web.Configuration.CDragon.CDragonConfig
+  commentId: T:OSL_Web.Configuration.CDragon.CDragonConfig
+  name: CDragonConfig
+  nameWithType: CDragonConfig
+  fullName: OSL_Web.Configuration.CDragon.CDragonConfig

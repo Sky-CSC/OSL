@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Common.System.SSLCertificate
+  commentId: N:OSL_Common.System.SSLCertificate
+  id: OSL_Common.System.SSLCertificate
+  children:
+  - OSL_Common.System.SSLCertificate.SSL
+  langs:
+  - csharp
+  - vb
+  name: OSL_Common.System.SSLCertificate
+  nameWithType: OSL_Common.System.SSLCertificate
+  fullName: OSL_Common.System.SSLCertificate
+  type: Namespace
+  assemblies:
+  - OSL-Common
+references:
+- uid: OSL_Common.System.SSLCertificate.SSL
+  commentId: T:OSL_Common.System.SSLCertificate.SSL
+  name: SSL
+  nameWithType: SSL
+  fullName: OSL_Common.System.SSLCertificate.SSL
