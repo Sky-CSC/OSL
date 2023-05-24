@@ -106,8 +106,8 @@ OnTurretDie
 OnMinionKill
 OnChampionKill
 ```
-6. If you don't understand what you are doing download <a href="../misc/game.cfg" download>game.cfg</a>  and replace the file on ```C:/Riot Games/League of Legends/Config/game.cfg``` 
-7. If you don't understand what you are doing download <a href="../misc/LiveEvents.ini" download>LiveEvents.ini</a>  and replace the file on ```C:/Riot Games/League of Legends/Config/LiveEvents.ini``` 
+6. If you don't understand what you are doing download <a href="https://sky-csc.github.io/OSL/misc/game.cfg" download>game.cfg</a>  and replace the file on ```C:/Riot Games/League of Legends/Config/game.cfg``` 
+7. If you don't understand what you are doing download <a href="https://sky-csc.github.io/OSL/misc/LiveEvents.ini" download>LiveEvents.ini</a>  and replace the file on ```C:/Riot Games/League of Legends/Config/LiveEvents.ini``` 
 8. Run ```OSL-Client.exe``` on the computer where the spectator game is running
 9. Add http://ip:4141/champselect/view1 and/or http://ip:4141/champselect/view2 and/or 
 http://ip:4141/champselect/view3 and/or http://ip:4141/champselect/view4 as a browser source in OBS in your ban pick scene
