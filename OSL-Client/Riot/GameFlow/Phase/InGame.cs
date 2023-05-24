@@ -1,8 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AspNet.SignalR;
+using Newtonsoft.Json;
 using OSL_Client.Configuration;
 using OSL_Client.Sockets;
 using OSL_Common.System.Logging;
 using OSL_LcuApi;
+using OSL_LiveEvents;
+using OSL_ReplayApi;
 
 namespace OSL_Client.Riot.GameFlow.Phase
 {
@@ -41,13 +44,39 @@ namespace OSL_Client.Riot.GameFlow.Phase
                 _logger.log(LoggingLevel.ERROR, "Progress()", "Error request lolgameflowv1session : " + e.Message);
             }
 
+
+            //Connexion to LiveEvents
+            for (int i = 0; LiveEvents.Connect(Config.localIpHttp, Config.leagueClientLiveEventsPort) == false && i < 10; i++)
+            {
+                _logger.log(LoggingLevel.INFO, "Progress()", "Wainting LiveEvents Connection");
+                Thread.Sleep(1000);
+            }
+
             string gameFlowPhase;
             gameFlowPhase = LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword);
             while (gameFlowPhase != null && LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword).Equals("\"InProgress\""))
             {
                 _logger.log(LoggingLevel.INFO, "Progress()", "In game");
-                Thread.Sleep(5000);
+
+                string replayApiContent = ReplayApi.Request(ReplayApi.Url.liveclientdataplayerlist, Config.riotPort);
+                if (replayApiContent != null)
+                {
+                    AsyncClient.Send(replayApiContent);
+                }
+
+                
+                string liveEventsContent = LiveEvents.Read();
+                if (liveEventsContent != null)
+                {
+                    AsyncClient.Send(liveEventsContent);
+                }
+
+
+                Thread.Sleep(1000);
             }
+
+            //Close LiveEvents
+            LiveEvents.Close();
 
             var inGameEnd = new GameFlow.PhaseStatus
             {

@@ -29,6 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\OSL-Common\OSL-Common.csproj" />
     <ProjectReference Include="..\OSL-LcuApi\OSL-LcuApi.csproj" />
+    <ProjectReference Include="..\OSL-LiveEvents\OSL-LiveEvents.csproj" />
     <ProjectReference Include="..\OSL-ReplayApi\OSL-ReplayApi.csproj" />
   </ItemGroup>
 
