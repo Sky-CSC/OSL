@@ -43,6 +43,8 @@ namespace OSL_ReplayApi
         public class Url
         {
             public static readonly string replaygame = "/replay/game"; //Information about the game client process.
+            public static readonly string liveclientdataplayerlist = "/liveclientdata/playerlist"; //Information about summoners
+
         }
     }
 }
