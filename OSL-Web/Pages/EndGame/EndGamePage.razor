@@ -38,7 +38,7 @@
                             <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TopBarRedTeamNameSubmit">
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
-                                <label style="font-weight: bold">Blue Side Team Name ("@EndGameView1Page.formatingData.TopBarRedTeamName") : </label>
+                                <label style="font-weight: bold">Red Side Team Name ("@EndGameView1Page.formatingData.TopBarRedTeamName") : </label>
                                 <InputText id="name" @bind-Value="textValueOverlayView1.TopBarRedTeamName" placeholder="CSC" />
 
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
@@ -54,7 +54,7 @@
                             <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TopBarRedTeamScoreSubmit">
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
-                                <label style="font-weight: bold">Blue Side Team Score ("@EndGameView1Page.formatingData.TopBarRedTeamScore") : </label>
+                                <label style="font-weight: bold">Red Side Team Score ("@EndGameView1Page.formatingData.TopBarRedTeamScore") : </label>
                                 <InputText id="name" @bind-Value="textValueOverlayView1.TopBarRedTeamScore" placeholder="0" />
 
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
