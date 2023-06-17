@@ -10,6 +10,7 @@ namespace OSL_CDragon
     public class ItemManager
     {
         private static Logger _logger = new("ItemManager");
+        public static dynamic itemsList;
         /// <summary>
         /// Recover all items existing and is data
         /// </summary>
@@ -32,6 +33,7 @@ namespace OSL_CDragon
                 try
                 {
                     dynamic jsonItems = JsonConvert.DeserializeObject(itemsData);
+                    itemsList = jsonItems;
                     OSL_Common.Download.Download.downloadAllFile = 0;
                     OSL_Common.Download.Download.errorDownloadAllFile = 0;
                     foreach (dynamic item in jsonItems)
