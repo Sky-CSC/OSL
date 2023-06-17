@@ -22,8 +22,6 @@ namespace OSL_WebApiRiot.WebApiRiot
             {
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(httpsWebApiRiot);
                 request.Headers["X-Riot-Token"] = apiKey;
-                Console.WriteLine(apiKey);
-                _logger.log(LoggingLevel.INFO, "apiKey", "apiKey " + apiKey);
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 Stream resStream = response.GetResponseStream();
                 StreamReader reader = new StreamReader(resStream);
@@ -35,6 +33,11 @@ namespace OSL_WebApiRiot.WebApiRiot
                 _logger.log(LoggingLevel.ERROR, "RequestGameClientReplayAPI", "Request to " + httpsWebApiRiot + " failed, " + e.Message);
                 return null;
             }
+        }
+
+        public class ApiKeyScheme
+        {
+            public string apiKey { get; set; }
         }
     }
 }
