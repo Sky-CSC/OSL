@@ -36,8 +36,8 @@ namespace OSL_Web.Configuration.Overlay.InGame.View2
                 InGameView2Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
             InGameView2Page.formatingData.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView2Page.formatingData.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView2Page.formatingData.DefaultRegion}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView2Page.formatingData.DefaultPatch}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView2Page.formatingData.DefaultRegion}");
         }
         /// <summary>
         /// Load default json file for overlay view 2

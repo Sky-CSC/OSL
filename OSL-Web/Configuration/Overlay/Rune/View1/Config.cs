@@ -20,8 +20,8 @@ namespace OSL_Web.Configuration.Overlay.Rune.View1
                 RunesPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
             RunesPage.formatingData.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigRunesPage()", $"{RunesPage.formatingData.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigRunesPage()", $"{RunesPage.formatingData.DefaultRegion}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigRunesPage()", $"{RunesPage.formatingData.DefaultPatch}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigRunesPage()", $"{RunesPage.formatingData.DefaultRegion}");
         }
     }
 }

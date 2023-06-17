@@ -38,8 +38,8 @@ namespace OSL_Web.Configuration.Overlay.EndGame.View3
                 EndGameView3Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
             EndGameView3Page.formatingData.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigEndGameView3Page()", $"{EndGameView3Page.formatingData.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigEndGameView3Page()", $"{EndGameView3Page.formatingData.DefaultRegion}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigEndGameView3Page()", $"{EndGameView3Page.formatingData.DefaultPatch}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigEndGameView3Page()", $"{EndGameView3Page.formatingData.DefaultRegion}");
         }
 
         /// <summary>

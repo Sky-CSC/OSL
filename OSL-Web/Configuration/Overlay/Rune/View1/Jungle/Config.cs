@@ -28,8 +28,8 @@ namespace OSL_Web.Configuration.Overlay.Rune.View1.Jungle
                 RunesJunglePage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
             RunesJunglePage.formatingData.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigRunesJunglePage()", $"{RunesJunglePage.formatingData.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigRunesJunglePage()", $"{RunesJunglePage.formatingData.DefaultRegion}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigRunesJunglePage()", $"{RunesJunglePage.formatingData.DefaultPatch}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigRunesJunglePage()", $"{RunesJunglePage.formatingData.DefaultRegion}");
         }
         public static void LoadFormatingDataConfig()
         {

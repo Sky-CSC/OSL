@@ -36,8 +36,8 @@ namespace OSL_Web.Configuration.Overlay.Rune.View1.Adc
                 RunesAdcPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
             RunesAdcPage.formatingData.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigRunesAdcPage()", $"{RunesAdcPage.formatingData.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigRunesAdcPage()", $"{RunesAdcPage.formatingData.DefaultRegion}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigRunesAdcPage()", $"{RunesAdcPage.formatingData.DefaultPatch}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigRunesAdcPage()", $"{RunesAdcPage.formatingData.DefaultRegion}");
         }
         /// <summary>
         /// Load default json file for overlay view 1
