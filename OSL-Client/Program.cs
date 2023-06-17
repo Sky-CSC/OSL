@@ -4,17 +4,29 @@ using OSL_Client.Riot.GameFlow;
 using OSL_Client.Sockets;
 using static OSL_Client.CloseEvent;
 
-Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("###########################################");
-Console.WriteLine("##### Hello and welcome to OSL Client #####");
-Console.WriteLine("###### Just let this run, do nothing ######");
-Console.WriteLine("# No forget to check if server is running #");
-Console.WriteLine("###########################################\n");
+Console.ForegroundColor = ConsoleColor.White;
+Console.WriteLine("  ______    ______   __           ______   __  __                        __     ");
+Console.WriteLine(" /      \\  /      \\ |  \\         /      \\ |  \\|  \\                     |  \\    ");
+Console.WriteLine("|  $$$$$$\\|  $$$$$$\\| $$        |  $$$$$$\\| $$ \\$$  ______   _______  _| $$_   ");
+Console.WriteLine("| $$  | $$| $$___\\$$| $$ ______ | $$   \\$$| $$|  \\ /      \\ |       \\|   $$ \\  ");
+Console.WriteLine("| $$  | $$ \\$$    \\ | $$|      \\| $$      | $$| $$|  $$$$$$\\| $$$$$$$\\$$$$$$  ");
+Console.WriteLine("| $$  | $$ _\\$$$$$$\\| $$ \\$$$$$$| $$   __ | $$| $$| $$    $$| $$  | $$ | $$ __ ");
+Console.WriteLine("| $$__/ $$|  \\__| $$| $$_____   | $$__/  \\| $$| $$| $$$$$$$$| $$  | $$ | $$|  \\");
+Console.WriteLine(" \\$$    $$ \\$$    $$| $$     \\   \\$$    $$| $$| $$ \\$$     \\| $$  | $$  \\$$  $$");
+Console.WriteLine("  \\$$$$$$   \\$$$$$$  \\$$$$$$$$    \\$$$$$$  \\$$ \\$$  \\$$$$$$$ \\$$   \\$$   \\$$$$ ");
+Console.WriteLine();
 Console.ForegroundColor = ConsoleColor.Red;
-Console.WriteLine("###########################");
-Console.WriteLine("###### Version 1.1.0 ######");
-Console.WriteLine("###########################\n");
+Console.WriteLine(" __     __                                __                              __         ______       ______  ");
+Console.WriteLine("|  \\   |  \\                              |  \\                           _/  \\       /      \\     /      \\ ");
+Console.WriteLine("| $$   | $$  ______    ______    _______  \\$$  ______   _______        |   $$      |  $$$$$$\\   |  $$$$$$\\");
+Console.WriteLine("| $$   | $$ /      \\  /      \\  /       \\|  \\ /      \\ |       \\        \\$$$$       \\$$__| $$   | $$$\\| $$");
+Console.WriteLine(" \\$$\\ /  $$|  $$$$$$\\|  $$$$$$\\|  $$$$$$$| $$|  $$$$$$\\| $$$$$$$\\        | $$       /      $$   | $$$$\\ $$");
+Console.WriteLine("  \\$$\\  $$ | $$    $$| $$   \\$$ \\$$    \\ | $$| $$  | $$| $$  | $$        | $$      |  $$$$$$    | $$\\$$\\$$");
+Console.WriteLine("   \\$$ $$  | $$$$$$$$| $$       _\\$$$$$$\\| $$| $$__/ $$| $$  | $$       _| $$_  __ | $$_____  __| $$_\\$$$$");
+Console.WriteLine("    \\$$$    \\$$     \\| $$      |       $$| $$ \\$$    $$| $$  | $$      |   $$ \\|  \\| $$     \\|  \\\\$$  \\$$$");
+Console.WriteLine("     \\$      \\$$$$$$$ \\$$       \\$$$$$$$  \\$$  \\$$$$$$  \\$$   \\$$       \\$$$$$$ \\$$ \\$$$$$$$$ \\$$ \\$$$$$$ ");
 Console.ResetColor();
+Console.WriteLine();
 
 SetConsoleCtrlHandler(new SetConsoleCtrlEventHandler(Handler), true);
 

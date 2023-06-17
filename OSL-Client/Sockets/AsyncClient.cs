@@ -47,20 +47,20 @@ namespace OSL_Client.Sockets
                 Socket client = null;
                 IPEndPoint ipe = null;
                 IPHostEntry hostEntry = Dns.GetHostEntry(Config.serverSocketIp);
-                _logger.log(LoggingLevel.WARN, "StartClient()", "AddressList : " + hostEntry.AddressList.Length);
-                _logger.log(LoggingLevel.WARN, "StartClient()", "HostName : " + hostEntry.HostName);
-                _logger.log(LoggingLevel.WARN, "StartClient()", "Aliases : " + hostEntry.Aliases.Length);
+                //_logger.log(LoggingLevel.WARN, "StartClient()", "AddressList : " + hostEntry.AddressList.Length);
+                //_logger.log(LoggingLevel.WARN, "StartClient()", "HostName : " + hostEntry.HostName);
+                //_logger.log(LoggingLevel.WARN, "StartClient()", "Aliases : " + hostEntry.Aliases.Length);
 
                 if (hostEntry.AddressList.Length == 0)
                 {
                     hostEntry = Dns.GetHostEntry(hostEntry.HostName.Split(".")[0]);
-                    _logger.log(LoggingLevel.WARN, "StartClient()", "GetHostEntry : " + hostEntry.HostName.Split(".")[0]);
+                    //_logger.log(LoggingLevel.WARN, "StartClient()", "GetHostEntry : " + hostEntry.HostName.Split(".")[0]);
                 }
 
                 foreach (IPAddress address in hostEntry.AddressList)
                 {
-                    Console.WriteLine(address);
-                    _logger.log(LoggingLevel.WARN, "StartClient()", "address : " + address);
+                    //Console.WriteLine(address);
+                    //_logger.log(LoggingLevel.WARN, "StartClient()", "address : " + address);
                     if (address.AddressFamily.ToString() == ProtocolFamily.InterNetwork.ToString())
                     {
                         ipe = new IPEndPoint(address, Config.serverSocketPort);
@@ -87,7 +87,7 @@ namespace OSL_Client.Sockets
                         }
                     }
                 }
-                _logger.log(LoggingLevel.WARN, "StartClient()", "client : " + client);
+                _logger.log(LoggingLevel.INFO, "StartClient()", "client : " + client);
                 Send(client, data);
                 sendDone.WaitOne();
 

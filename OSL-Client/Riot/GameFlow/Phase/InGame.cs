@@ -46,33 +46,51 @@ namespace OSL_Client.Riot.GameFlow.Phase
 
 
             //Connexion to LiveEvents
-            for (int i = 0; LiveEvents.Connect(Config.localIpHttp, Config.leagueClientLiveEventsPort) == false && i < 10; i++)
+            for (int i = 0; LiveEvents.Connect(Config.localIpHttp, Config.leagueClientLiveEventsPort) == false && i < 20; i++)
             {
                 _logger.log(LoggingLevel.INFO, "Progress()", "Wainting LiveEvents Connection");
                 Thread.Sleep(1000);
             }
 
-            string gameFlowPhase;
-            gameFlowPhase = LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword);
-            while (gameFlowPhase != null && LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword).Equals("\"InProgress\""))
+            try
             {
-                _logger.log(LoggingLevel.INFO, "Progress()", "In game");
 
-                string replayApiContent = ReplayApi.Request(ReplayApi.Url.liveclientdataplayerlist, Config.riotPort);
-                if (replayApiContent != null)
+                string gameFlowPhase;
+                gameFlowPhase = LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword);
+                string replayApiContentPrevious = "";
+                string replayApiContent;
+                while (gameFlowPhase != null && LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword).Equals("\"InProgress\""))
                 {
-                    AsyncClient.Send(replayApiContent);
+                    _logger.log(LoggingLevel.INFO, "Progress()", "In game");
+
+                    replayApiContent = ReplayApi.Request(ReplayApi.Url.liveclientdataallgamedata, Config.riotPort);
+                    if (!replayApiContent.Equals(replayApiContentPrevious))
+                    {
+                        replayApiContentPrevious = replayApiContent;
+                        if (replayApiContent != null)
+                        {
+                            AsyncClient.Send(replayApiContent);
+                        }
+                    }
+                    else
+                    {
+                        _logger.log(LoggingLevel.WARN, "Progress()", "No modification of replayApiContent");
+                    }
+
+                    string playBackContent = ReplayApi.Request(ReplayApi.Url.replayplayback, Config.riotPort);
+                    AsyncClient.Send(playBackContent);
+
+                    string liveEventsContent = LiveEvents.Read();
+                    if (liveEventsContent != null)
+                    {
+                        AsyncClient.Send(liveEventsContent);
+                    }
+                    Thread.Sleep(1000);
                 }
-
-                
-                string liveEventsContent = LiveEvents.Read();
-                if (liveEventsContent != null)
-                {
-                    AsyncClient.Send(liveEventsContent);
-                }
-
-
-                Thread.Sleep(1000);
+            }
+            catch (Exception e)
+            {
+                _logger.log(LoggingLevel.ERROR, "Progress()", "Error while (possible lolgameflowv1gameflowphase) : " + e.Message);
             }
 
             //Close LiveEvents
