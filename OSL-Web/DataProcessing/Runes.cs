@@ -71,6 +71,10 @@ namespace OSL_Web.DataProcessing
             {
                 _logger.log(LoggingLevel.INFO, "CreateSummonerPerksList()", $"Error creation player rune list : {e.Message}");
                 string nameSummoner = jsonSessionInfo.gameData.teamOne[0].summonerName;
+                if (nameSummoner.Equals("Bot"))
+                {
+                    nameSummoner = jsonSessionInfo.gameData.teamTwo[0].summonerName;
+                }
                 _logger.log(LoggingLevel.WARN, "CreateSummonerPerksList()", $"Try to create player rune list whith GetPerksInformation({jsonSessionInfo.gameData.teamOne[0].summonerName})");
                 GetPerksInformation(nameSummoner);
             }

@@ -39,6 +39,7 @@ namespace OSL_Web.DataProcessing
                         {
                             inGameStatus = true; //We are in game
                             InGame.firstCallPerks = true; //To create a list of perks once
+                            InGame.initTimerGame = true;
                         }
                         else
                         {
