@@ -66,7 +66,7 @@ namespace OSL_LiveEvents
                 }
                 else
                 {
-                    _logger.log(LoggingLevel.ERROR, "Read()", "Receive from LiveEvents not Available");
+                    _logger.log(LoggingLevel.WARN, "Read()", "Receive from LiveEvents not Available");
                     //Close();
                     return null;
                 }
