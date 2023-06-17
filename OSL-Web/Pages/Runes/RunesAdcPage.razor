@@ -40,10 +40,14 @@
     <div class="lane-picture">
         <img class="lane-picture-img" src="@formatingData.LanePicture" />
     </div>
+    @{
+        int count = 0;
+    }
     @foreach (var participants in DataProcessing.Runes.summonerPerksList)
     {
-        @if (participants.Lane.CompareTo(DataProcessing.Runes.Lanes.ADC) == 0)
+        @if (participants.Lane.CompareTo(DataProcessing.Runes.Lanes.ADC) == 0 && count < 2)
         {
+            count++;
             if (participants.TeamId == 100)
             {
                 @*Display name*@

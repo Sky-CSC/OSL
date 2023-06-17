@@ -8,6 +8,8 @@ using OSL_Web.Pages.EndGame;
 using OSL_Common.System.Logging;
 using OSL_WebApiRiot.WebApiRiot;
 using OSL_Common.System.FileManager;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using static OSL_WebApiRiot.WebApiRiot.WebApiRiot;
 
 namespace OSL_Web.Pages.Config
 {
@@ -33,6 +35,11 @@ namespace OSL_Web.Pages.Config
         public static void WebRiotApiKeySubmit()
         {
             WebApiRiot.apiKey = OverlayText.WebRiotApiKey;
+            var webApiRegister = new ApiKeyScheme
+            {
+                apiKey = WebApiRiot.apiKey,
+            };
+            FileManagerLocal.RewrittenFile("./Configuration/WebApiRiot/web-api-riot.json", JsonConvert.SerializeObject(webApiRegister));
             _logger.log(LoggingLevel.INFO, "WebRiotApiKeySubmit()", $"Web riot api key change : {WebApiRiot.apiKey}");
         }
 
