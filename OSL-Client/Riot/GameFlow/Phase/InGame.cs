@@ -63,7 +63,7 @@ namespace OSL_Client.Riot.GameFlow.Phase
                 {
                     _logger.log(LoggingLevel.INFO, "Progress()", "In game");
 
-                    replayApiContent = ReplayApi.Request(ReplayApi.Url.liveclientdataallgamedata, Config.riotPort);
+                    replayApiContent = ReplayApi.Request(ReplayApi.Url.liveclientdataplayerlist, Config.riotPort);
                     if (!replayApiContent.Equals(replayApiContentPrevious))
                     {
                         replayApiContentPrevious = replayApiContent;
@@ -78,6 +78,7 @@ namespace OSL_Client.Riot.GameFlow.Phase
                     }
 
                     string playBackContent = ReplayApi.Request(ReplayApi.Url.replayplayback, Config.riotPort);
+                    //Console.WriteLine(playBackContent);
                     AsyncClient.Send(playBackContent);
 
                     string liveEventsContent = LiveEvents.Read();

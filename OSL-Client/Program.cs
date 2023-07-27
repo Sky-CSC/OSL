@@ -2,6 +2,7 @@
 using OSL_Client.Riot;
 using OSL_Client.Riot.GameFlow;
 using OSL_Client.Sockets;
+using OSL_LcuApi;
 using static OSL_Client.CloseEvent;
 
 Console.ForegroundColor = ConsoleColor.White;
@@ -47,6 +48,7 @@ while (true)
         {
             if (LeagueClient.SetHostApi()) //Get pass and host of client api
             {
+                RegionLocale.SetRegionLocale(); //Send region and laguage for download in OSL-Web information
                 string gameFlowPhase;
                 do
                 {
