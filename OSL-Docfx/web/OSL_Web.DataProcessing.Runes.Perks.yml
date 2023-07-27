@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Perks
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 122
+    startLine: 126
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -59,11 +59,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: perkIds
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 124
+    startLine: 128
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -94,11 +94,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: perkStyle
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 125
+    startLine: 129
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -129,11 +129,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: perkSubStyle
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 126
+    startLine: 130
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

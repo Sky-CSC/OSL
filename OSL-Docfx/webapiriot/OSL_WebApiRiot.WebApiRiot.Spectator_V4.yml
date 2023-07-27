@@ -14,8 +14,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.Spectator_V4
   type: Class
   source:
+    remote:
+      path: OSL-WebApiRiot/Spectator-V4.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Spectator_V4
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\Spectator-V4.cs
+    path: ../OSL-WebApiRiot/Spectator-V4.cs
     startLine: 5
   assemblies:
   - OSL-WebApiRiot
@@ -53,8 +57,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.Spectator_V4.BySummoner(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-WebApiRiot/Spectator-V4.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: BySummoner
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\Spectator-V4.cs
+    path: ../OSL-WebApiRiot/Spectator-V4.cs
     startLine: 16
   assemblies:
   - OSL-WebApiRiot

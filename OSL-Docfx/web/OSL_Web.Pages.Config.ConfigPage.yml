@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Config/ConfigPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConfigPage
     path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.Config
@@ -60,11 +60,11 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Config/ConfigPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: WebRiotApiKeySubmit
     path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
-    startLine: 32
+    startLine: 34
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.Config
@@ -92,11 +92,11 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Config/ConfigPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GenerateConfigFileChampSelectView1
     path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
-    startLine: 925
+    startLine: 932
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.Config

@@ -1,0 +1,1119 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.Pages.InGame.TimerControl
+  commentId: T:OSL_Web.Pages.InGame.TimerControl
+  id: TimerControl
+  parent: OSL_Web.Pages.InGame
+  children:
+  - OSL_Web.Pages.InGame.TimerControl.buffBaron
+  - OSL_Web.Pages.InGame.TimerControl.buffHelder
+  - OSL_Web.Pages.InGame.TimerControl.buffHerald
+  - OSL_Web.Pages.InGame.TimerControl.DecreasingTimer
+  - OSL_Web.Pages.InGame.TimerControl.Enabled
+  - OSL_Web.Pages.InGame.TimerControl.gameTimer
+  - OSL_Web.Pages.InGame.TimerControl.generalTimer
+  - OSL_Web.Pages.InGame.TimerControl.inhibChaosBot
+  - OSL_Web.Pages.InGame.TimerControl.inhibChaosMid
+  - OSL_Web.Pages.InGame.TimerControl.inhibChaosTop
+  - OSL_Web.Pages.InGame.TimerControl.inhibOrderBot
+  - OSL_Web.Pages.InGame.TimerControl.inhibOrderMid
+  - OSL_Web.Pages.InGame.TimerControl.inhibOrderTop
+  - OSL_Web.Pages.InGame.TimerControl.InitTimerGameStart
+  - OSL_Web.Pages.InGame.TimerControl.Interval(System.Double)
+  - OSL_Web.Pages.InGame.TimerControl.nextBaron
+  - OSL_Web.Pages.InGame.TimerControl.nextDrake
+  - OSL_Web.Pages.InGame.TimerControl.nextHelder
+  - OSL_Web.Pages.InGame.TimerControl.nextHerald
+  - OSL_Web.Pages.InGame.TimerControl.Pause
+  - OSL_Web.Pages.InGame.TimerControl.Start
+  langs:
+  - csharp
+  - vb
+  name: TimerControl
+  nameWithType: TimerControl
+  fullName: OSL_Web.Pages.InGame.TimerControl
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: TimerControl
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 4
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public class TimerControl
+    content.vb: Public Class TimerControl
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.Pages.InGame.TimerControl.generalTimer
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.generalTimer
+  id: generalTimer
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: generalTimer
+  nameWithType: TimerControl.generalTimer
+  fullName: OSL_Web.Pages.InGame.TimerControl.generalTimer
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: generalTimer
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 6
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static Timer generalTimer
+    return:
+      type: System.Timers.Timer
+    content.vb: Public Shared generalTimer As Timer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.nextDrake
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.nextDrake
+  id: nextDrake
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: nextDrake
+  nameWithType: TimerControl.nextDrake
+  fullName: OSL_Web.Pages.InGame.TimerControl.nextDrake
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: nextDrake
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 7
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int nextDrake
+    return:
+      type: System.Int32
+    content.vb: Public Shared nextDrake As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.nextHerald
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.nextHerald
+  id: nextHerald
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: nextHerald
+  nameWithType: TimerControl.nextHerald
+  fullName: OSL_Web.Pages.InGame.TimerControl.nextHerald
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: nextHerald
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 9
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int nextHerald
+    return:
+      type: System.Int32
+    content.vb: Public Shared nextHerald As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.nextHelder
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.nextHelder
+  id: nextHelder
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: nextHelder
+  nameWithType: TimerControl.nextHelder
+  fullName: OSL_Web.Pages.InGame.TimerControl.nextHelder
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: nextHelder
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 10
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int nextHelder
+    return:
+      type: System.Int32
+    content.vb: Public Shared nextHelder As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.nextBaron
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.nextBaron
+  id: nextBaron
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: nextBaron
+  nameWithType: TimerControl.nextBaron
+  fullName: OSL_Web.Pages.InGame.TimerControl.nextBaron
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: nextBaron
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 11
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int nextBaron
+    return:
+      type: System.Int32
+    content.vb: Public Shared nextBaron As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.buffHerald
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.buffHerald
+  id: buffHerald
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: buffHerald
+  nameWithType: TimerControl.buffHerald
+  fullName: OSL_Web.Pages.InGame.TimerControl.buffHerald
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: buffHerald
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 12
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int buffHerald
+    return:
+      type: System.Int32
+    content.vb: Public Shared buffHerald As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.buffHelder
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.buffHelder
+  id: buffHelder
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: buffHelder
+  nameWithType: TimerControl.buffHelder
+  fullName: OSL_Web.Pages.InGame.TimerControl.buffHelder
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: buffHelder
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 13
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int buffHelder
+    return:
+      type: System.Int32
+    content.vb: Public Shared buffHelder As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.buffBaron
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.buffBaron
+  id: buffBaron
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: buffBaron
+  nameWithType: TimerControl.buffBaron
+  fullName: OSL_Web.Pages.InGame.TimerControl.buffBaron
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: buffBaron
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 14
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int buffBaron
+    return:
+      type: System.Int32
+    content.vb: Public Shared buffBaron As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.inhibOrderTop
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.inhibOrderTop
+  id: inhibOrderTop
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: inhibOrderTop
+  nameWithType: TimerControl.inhibOrderTop
+  fullName: OSL_Web.Pages.InGame.TimerControl.inhibOrderTop
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: inhibOrderTop
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 15
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int inhibOrderTop
+    return:
+      type: System.Int32
+    content.vb: Public Shared inhibOrderTop As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.inhibOrderMid
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.inhibOrderMid
+  id: inhibOrderMid
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: inhibOrderMid
+  nameWithType: TimerControl.inhibOrderMid
+  fullName: OSL_Web.Pages.InGame.TimerControl.inhibOrderMid
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: inhibOrderMid
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 16
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int inhibOrderMid
+    return:
+      type: System.Int32
+    content.vb: Public Shared inhibOrderMid As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.inhibOrderBot
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.inhibOrderBot
+  id: inhibOrderBot
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: inhibOrderBot
+  nameWithType: TimerControl.inhibOrderBot
+  fullName: OSL_Web.Pages.InGame.TimerControl.inhibOrderBot
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: inhibOrderBot
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 17
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int inhibOrderBot
+    return:
+      type: System.Int32
+    content.vb: Public Shared inhibOrderBot As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.inhibChaosTop
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.inhibChaosTop
+  id: inhibChaosTop
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: inhibChaosTop
+  nameWithType: TimerControl.inhibChaosTop
+  fullName: OSL_Web.Pages.InGame.TimerControl.inhibChaosTop
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: inhibChaosTop
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 18
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int inhibChaosTop
+    return:
+      type: System.Int32
+    content.vb: Public Shared inhibChaosTop As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.inhibChaosMid
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.inhibChaosMid
+  id: inhibChaosMid
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: inhibChaosMid
+  nameWithType: TimerControl.inhibChaosMid
+  fullName: OSL_Web.Pages.InGame.TimerControl.inhibChaosMid
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: inhibChaosMid
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 19
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int inhibChaosMid
+    return:
+      type: System.Int32
+    content.vb: Public Shared inhibChaosMid As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.inhibChaosBot
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.inhibChaosBot
+  id: inhibChaosBot
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: inhibChaosBot
+  nameWithType: TimerControl.inhibChaosBot
+  fullName: OSL_Web.Pages.InGame.TimerControl.inhibChaosBot
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: inhibChaosBot
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 20
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int inhibChaosBot
+    return:
+      type: System.Int32
+    content.vb: Public Shared inhibChaosBot As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.gameTimer
+  commentId: F:OSL_Web.Pages.InGame.TimerControl.gameTimer
+  id: gameTimer
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: gameTimer
+  nameWithType: TimerControl.gameTimer
+  fullName: OSL_Web.Pages.InGame.TimerControl.gameTimer
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: gameTimer
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 21
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static int gameTimer
+    return:
+      type: System.Int32
+    content.vb: Public Shared gameTimer As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.InitTimerGameStart
+  commentId: M:OSL_Web.Pages.InGame.TimerControl.InitTimerGameStart
+  id: InitTimerGameStart
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: InitTimerGameStart()
+  nameWithType: TimerControl.InitTimerGameStart()
+  fullName: OSL_Web.Pages.InGame.TimerControl.InitTimerGameStart()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: InitTimerGameStart
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 154
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static void InitTimerGameStart()
+    content.vb: Public Shared Sub InitTimerGameStart
+  overload: OSL_Web.Pages.InGame.TimerControl.InitTimerGameStart*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.DecreasingTimer
+  commentId: M:OSL_Web.Pages.InGame.TimerControl.DecreasingTimer
+  id: DecreasingTimer
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: DecreasingTimer()
+  nameWithType: TimerControl.DecreasingTimer()
+  fullName: OSL_Web.Pages.InGame.TimerControl.DecreasingTimer()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DecreasingTimer
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 166
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static void DecreasingTimer()
+    content.vb: Public Shared Sub DecreasingTimer
+  overload: OSL_Web.Pages.InGame.TimerControl.DecreasingTimer*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.Pause
+  commentId: M:OSL_Web.Pages.InGame.TimerControl.Pause
+  id: Pause
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: Pause()
+  nameWithType: TimerControl.Pause()
+  fullName: OSL_Web.Pages.InGame.TimerControl.Pause()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Pause
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 174
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static void Pause()
+    content.vb: Public Shared Sub Pause
+  overload: OSL_Web.Pages.InGame.TimerControl.Pause*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.Start
+  commentId: M:OSL_Web.Pages.InGame.TimerControl.Start
+  id: Start
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: TimerControl.Start()
+  fullName: OSL_Web.Pages.InGame.TimerControl.Start()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Start
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 179
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static void Start()
+    content.vb: Public Shared Sub Start
+  overload: OSL_Web.Pages.InGame.TimerControl.Start*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.Enabled
+  commentId: M:OSL_Web.Pages.InGame.TimerControl.Enabled
+  id: Enabled
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: Enabled()
+  nameWithType: TimerControl.Enabled()
+  fullName: OSL_Web.Pages.InGame.TimerControl.Enabled()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Enabled
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 184
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static bool Enabled()
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Enabled As Boolean
+  overload: OSL_Web.Pages.InGame.TimerControl.Enabled*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.InGame.TimerControl.Interval(System.Double)
+  commentId: M:OSL_Web.Pages.InGame.TimerControl.Interval(System.Double)
+  id: Interval(System.Double)
+  parent: OSL_Web.Pages.InGame.TimerControl
+  langs:
+  - csharp
+  - vb
+  name: Interval(Double)
+  nameWithType: TimerControl.Interval(Double)
+  fullName: OSL_Web.Pages.InGame.TimerControl.Interval(System.Double)
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/InGame/TimerControl.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Interval
+    path: ../OSL-Web/Pages/InGame/TimerControl.cs
+    startLine: 189
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.InGame
+  syntax:
+    content: public static void Interval(double interval)
+    parameters:
+    - id: interval
+      type: System.Double
+    content.vb: Public Shared Sub Interval(interval As Double)
+  overload: OSL_Web.Pages.InGame.TimerControl.Interval*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Web.Pages.InGame
+  commentId: N:OSL_Web.Pages.InGame
+  name: OSL_Web.Pages.InGame
+  nameWithType: OSL_Web.Pages.InGame
+  fullName: OSL_Web.Pages.InGame
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Timers.Timer
+  commentId: T:System.Timers.Timer
+  parent: System.Timers
+  isExternal: true
+  name: Timer
+  nameWithType: Timer
+  fullName: System.Timers.Timer
+- uid: System.Timers
+  commentId: N:System.Timers
+  isExternal: true
+  name: System.Timers
+  nameWithType: System.Timers
+  fullName: System.Timers
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: OSL_Web.Pages.InGame.TimerControl.InitTimerGameStart*
+  commentId: Overload:OSL_Web.Pages.InGame.TimerControl.InitTimerGameStart
+  name: InitTimerGameStart
+  nameWithType: TimerControl.InitTimerGameStart
+  fullName: OSL_Web.Pages.InGame.TimerControl.InitTimerGameStart
+- uid: OSL_Web.Pages.InGame.TimerControl.DecreasingTimer*
+  commentId: Overload:OSL_Web.Pages.InGame.TimerControl.DecreasingTimer
+  name: DecreasingTimer
+  nameWithType: TimerControl.DecreasingTimer
+  fullName: OSL_Web.Pages.InGame.TimerControl.DecreasingTimer
+- uid: OSL_Web.Pages.InGame.TimerControl.Pause*
+  commentId: Overload:OSL_Web.Pages.InGame.TimerControl.Pause
+  name: Pause
+  nameWithType: TimerControl.Pause
+  fullName: OSL_Web.Pages.InGame.TimerControl.Pause
+- uid: OSL_Web.Pages.InGame.TimerControl.Start*
+  commentId: Overload:OSL_Web.Pages.InGame.TimerControl.Start
+  name: Start
+  nameWithType: TimerControl.Start
+  fullName: OSL_Web.Pages.InGame.TimerControl.Start
+- uid: OSL_Web.Pages.InGame.TimerControl.Enabled*
+  commentId: Overload:OSL_Web.Pages.InGame.TimerControl.Enabled
+  name: Enabled
+  nameWithType: TimerControl.Enabled
+  fullName: OSL_Web.Pages.InGame.TimerControl.Enabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Web.Pages.InGame.TimerControl.Interval*
+  commentId: Overload:OSL_Web.Pages.InGame.TimerControl.Interval
+  name: Interval
+  nameWithType: TimerControl.Interval
+  fullName: OSL_Web.Pages.InGame.TimerControl.Interval
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double

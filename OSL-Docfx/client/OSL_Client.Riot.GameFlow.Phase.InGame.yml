@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/GameFlow/Phase/InGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: InGame
     path: ../OSL-Client/Riot/GameFlow/Phase/InGame.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Riot.GameFlow.Phase
@@ -59,11 +59,11 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/GameFlow/Phase/InGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Progress
     path: ../OSL-Client/Riot/GameFlow/Phase/InGame.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - OSL-Client
   namespace: OSL_Client.Riot.GameFlow.Phase

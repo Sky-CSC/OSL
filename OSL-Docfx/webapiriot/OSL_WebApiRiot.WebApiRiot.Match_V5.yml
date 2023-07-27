@@ -16,8 +16,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.Match_V5
   type: Class
   source:
+    remote:
+      path: OSL-WebApiRiot/Match-V5.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Match_V5
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\Match-V5.cs
+    path: ../OSL-WebApiRiot/Match-V5.cs
     startLine: 5
   assemblies:
   - OSL-WebApiRiot
@@ -55,8 +59,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.Match_V5.ByPuuid(System.String, System.Int64, System.Int64, System.Int32, System.String, System.Int32, System.Int32)
   type: Method
   source:
+    remote:
+      path: OSL-WebApiRiot/Match-V5.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ByPuuid
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\Match-V5.cs
+    path: ../OSL-WebApiRiot/Match-V5.cs
     startLine: 22
   assemblies:
   - OSL-WebApiRiot
@@ -110,8 +118,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.Match_V5.Matches(Int64)
   type: Method
   source:
+    remote:
+      path: OSL-WebApiRiot/Match-V5.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Matches
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\Match-V5.cs
+    path: ../OSL-WebApiRiot/Match-V5.cs
     startLine: 58
   assemblies:
   - OSL-WebApiRiot
@@ -147,8 +159,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.Match_V5.Timeline(Int64)
   type: Method
   source:
+    remote:
+      path: OSL-WebApiRiot/Match-V5.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Timeline
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\Match-V5.cs
+    path: ../OSL-WebApiRiot/Match-V5.cs
     startLine: 68
   assemblies:
   - OSL-WebApiRiot

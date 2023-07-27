@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGameView2Page.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: InGameView2Page
     path: ../OSL-Web/Pages/InGame/InGameView2Page.razor.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGameView2Page.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: formatingData
     path: ../OSL-Web/Pages/InGame/InGameView2Page.razor.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGameView2Page.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ResetColor
     path: ../OSL-Web/Pages/InGame/InGameView2Page.razor.cs

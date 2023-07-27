@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Runes
     path: ../OSL-Web/DataProcessing/Runes.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: summonerPerksList
     path: ../OSL-Web/DataProcessing/Runes.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetPerksInformation
     path: ../OSL-Web/DataProcessing/Runes.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: CreateSummonerPerksListSpectator
     path: ../OSL-Web/DataProcessing/Runes.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: CreateSummonerPerksList
     path: ../OSL-Web/DataProcessing/Runes.cs

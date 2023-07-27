@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: OSL-Web/Sockets/Listening.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: AsyncServer
     path: ../OSL-Web/Sockets/Listening.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: OSL-Web/Sockets/AsyncServer.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: port
     path: ../OSL-Web/Sockets/AsyncServer.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: OSL-Web/Sockets/AsyncServer.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: allDone
     path: ../OSL-Web/Sockets/AsyncServer.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: OSL-Web/Sockets/AsyncServer.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsRunning
     path: ../OSL-Web/Sockets/AsyncServer.cs
@@ -166,7 +166,7 @@ items:
   source:
     remote:
       path: OSL-Web/Sockets/AsyncServer.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Run
     path: ../OSL-Web/Sockets/AsyncServer.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: OSL-Web/Sockets/AsyncServer.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Stop
     path: ../OSL-Web/Sockets/AsyncServer.cs

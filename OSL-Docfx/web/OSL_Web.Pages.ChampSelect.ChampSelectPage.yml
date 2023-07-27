@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectPage
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay1
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay2
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay3
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay4
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -195,7 +195,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorValue
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs

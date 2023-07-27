@@ -14,8 +14,12 @@ items:
   fullName: OSL_ReplayApi.ReplayApi
   type: Class
   source:
+    remote:
+      path: OSL-ReplayApi/ReplayApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ReplayApi
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-ReplayApi\ReplayApi.cs
+    path: ../OSL-ReplayApi/ReplayApi.cs
     startLine: 10
   assemblies:
   - OSL-ReplayApi
@@ -53,8 +57,12 @@ items:
   fullName: OSL_ReplayApi.ReplayApi.Request(System.String, System.Int32)
   type: Method
   source:
+    remote:
+      path: OSL-ReplayApi/ReplayApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Request
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-ReplayApi\ReplayApi.cs
+    path: ../OSL-ReplayApi/ReplayApi.cs
     startLine: 19
   assemblies:
   - OSL-ReplayApi

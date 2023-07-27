@@ -1,0 +1,486 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_LiveEvents.LiveEvents
+  commentId: T:OSL_LiveEvents.LiveEvents
+  id: LiveEvents
+  parent: OSL_LiveEvents
+  children:
+  - OSL_LiveEvents.LiveEvents.Close
+  - OSL_LiveEvents.LiveEvents.Connect(System.String,System.Int32)
+  - OSL_LiveEvents.LiveEvents.Read
+  langs:
+  - csharp
+  - vb
+  name: LiveEvents
+  nameWithType: LiveEvents
+  fullName: OSL_LiveEvents.LiveEvents
+  type: Class
+  source:
+    remote:
+      path: OSL-LiveEvents/LiveEvents.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LiveEvents
+    path: ../OSL-LiveEvents/LiveEvents.cs
+    startLine: 6
+  assemblies:
+  - OSL-LiveEvents
+  namespace: OSL_LiveEvents
+  syntax:
+    content: public class LiveEvents
+    content.vb: Public Class LiveEvents
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_LiveEvents.LiveEvents.Connect(System.String,System.Int32)
+  commentId: M:OSL_LiveEvents.LiveEvents.Connect(System.String,System.Int32)
+  id: Connect(System.String,System.Int32)
+  parent: OSL_LiveEvents.LiveEvents
+  langs:
+  - csharp
+  - vb
+  name: Connect(String, Int32)
+  nameWithType: LiveEvents.Connect(String, Int32)
+  fullName: OSL_LiveEvents.LiveEvents.Connect(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: OSL-LiveEvents/LiveEvents.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Connect
+    path: ../OSL-LiveEvents/LiveEvents.cs
+    startLine: 10
+  assemblies:
+  - OSL-LiveEvents
+  namespace: OSL_LiveEvents
+  syntax:
+    content: public static bool Connect(string localIpHttp, int leagueClientLiveEventsPort)
+    parameters:
+    - id: localIpHttp
+      type: System.String
+    - id: leagueClientLiveEventsPort
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Connect(localIpHttp As String, leagueClientLiveEventsPort As Integer) As Boolean
+  overload: OSL_LiveEvents.LiveEvents.Connect*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_LiveEvents.LiveEvents.Close
+  commentId: M:OSL_LiveEvents.LiveEvents.Close
+  id: Close
+  parent: OSL_LiveEvents.LiveEvents
+  langs:
+  - csharp
+  - vb
+  name: Close()
+  nameWithType: LiveEvents.Close()
+  fullName: OSL_LiveEvents.LiveEvents.Close()
+  type: Method
+  source:
+    remote:
+      path: OSL-LiveEvents/LiveEvents.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Close
+    path: ../OSL-LiveEvents/LiveEvents.cs
+    startLine: 28
+  assemblies:
+  - OSL-LiveEvents
+  namespace: OSL_LiveEvents
+  syntax:
+    content: public static void Close()
+    content.vb: Public Shared Sub Close
+  overload: OSL_LiveEvents.LiveEvents.Close*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_LiveEvents.LiveEvents.Read
+  commentId: M:OSL_LiveEvents.LiveEvents.Read
+  id: Read
+  parent: OSL_LiveEvents.LiveEvents
+  langs:
+  - csharp
+  - vb
+  name: Read()
+  nameWithType: LiveEvents.Read()
+  fullName: OSL_LiveEvents.LiveEvents.Read()
+  type: Method
+  source:
+    remote:
+      path: OSL-LiveEvents/LiveEvents.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Read
+    path: ../OSL-LiveEvents/LiveEvents.cs
+    startLine: 45
+  assemblies:
+  - OSL-LiveEvents
+  namespace: OSL_LiveEvents
+  syntax:
+    content: public static string Read()
+    return:
+      type: System.String
+    content.vb: Public Shared Function Read As String
+  overload: OSL_LiveEvents.LiveEvents.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_LiveEvents
+  commentId: N:OSL_LiveEvents
+  name: OSL_LiveEvents
+  nameWithType: OSL_LiveEvents
+  fullName: OSL_LiveEvents
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_LiveEvents.LiveEvents.Connect*
+  commentId: Overload:OSL_LiveEvents.LiveEvents.Connect
+  name: Connect
+  nameWithType: LiveEvents.Connect
+  fullName: OSL_LiveEvents.LiveEvents.Connect
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_LiveEvents.LiveEvents.Close*
+  commentId: Overload:OSL_LiveEvents.LiveEvents.Close
+  name: Close
+  nameWithType: LiveEvents.Close
+  fullName: OSL_LiveEvents.LiveEvents.Close
+- uid: OSL_LiveEvents.LiveEvents.Read*
+  commentId: Overload:OSL_LiveEvents.LiveEvents.Read
+  name: Read
+  nameWithType: LiveEvents.Read
+  fullName: OSL_LiveEvents.LiveEvents.Read

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/CDragon/CDragonConfig.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: CDragonConfig
     path: ../OSL-Web/Configuration/CDragon/CDragonConfig.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/CDragon/CDragonConfig.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadJsonConfig
     path: ../OSL-Web/Configuration/CDragon/CDragonConfig.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/CDragon/CDragonConfig.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadDirectoryConfig
     path: ../OSL-Web/Configuration/CDragon/CDragonConfig.cs

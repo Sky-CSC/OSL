@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/WebApiRiot/WebApiRiotConfig.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: WebApiRiotConfig
     path: ../OSL-Web/Configuration/WebApiRiot/WebApiRiotConfig.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/WebApiRiot/WebApiRiotConfig.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadJsonConfig
     path: ../OSL-Web/Configuration/WebApiRiot/WebApiRiotConfig.cs

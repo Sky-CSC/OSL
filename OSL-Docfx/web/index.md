@@ -76,32 +76,32 @@ http://ip:4141/runes/view1/all
 
 | Activate | Platform | Host |
 | :-------: | :-------: | :-------: |
-| <input type="checkbox" disabled> | BR1 |	br1.api.riotgames.com |
-| <input type="checkbox" disabled> | EUN1 |	eun1.api.riotgames.com |
+| <input type="checkbox" disabled checked> | BR1 |	br1.api.riotgames.com |
+| <input type="checkbox" disabled checked> | EUN1 |	eun1.api.riotgames.com |
 | <input type="checkbox" disabled checked> | EUW1 |	euw1.api.riotgames.com |
-| <input type="checkbox" disabled> | JP1 |	jp1.api.riotgames.com |
-| <input type="checkbox" disabled> | KR |	kr.api.riotgames.com |
-| <input type="checkbox" disabled> | LA1 |	la1.api.riotgames.com |
-| <input type="checkbox" disabled> | LA2 |	la2.api.riotgames.com |
-| <input type="checkbox" disabled> | NA1 |	na1.api.riotgames.com |
-| <input type="checkbox" disabled> | OC1 |	oc1.api.riotgames.com |
-| <input type="checkbox" disabled> | TR1 |	tr1.api.riotgames.com |
-| <input type="checkbox" disabled> | RU |	ru.api.riotgames.com |
-| <input type="checkbox" disabled> | PH2 |	ph2.api.riotgames.com |
-| <input type="checkbox" disabled> | SG2 |	sg2.api.riotgames.com |
-| <input type="checkbox" disabled> | TH2 |	th2.api.riotgames.com |
-| <input type="checkbox" disabled> | TW2 |	tw2.api.riotgames.com |
-| <input type="checkbox" disabled> | VN2 |	vn2.api.riotgames.com |
+| <input type="checkbox" disabled checked> | JP1 |	jp1.api.riotgames.com |
+| <input type="checkbox" disabled checked> | KR |	kr.api.riotgames.com |
+| <input type="checkbox" disabled checked> | LA1 |	la1.api.riotgames.com |
+| <input type="checkbox" disabled checked> | LA2 |	la2.api.riotgames.com |
+| <input type="checkbox" disabled checked> | NA1 |	na1.api.riotgames.com |
+| <input type="checkbox" disabled checked> | OC1 |	oc1.api.riotgames.com |
+| <input type="checkbox" disabled checked> | TR1 |	tr1.api.riotgames.com |
+| <input type="checkbox" disabled checked> | RU |	ru.api.riotgames.com |
+| <input type="checkbox" disabled checked> | PH2 |	ph2.api.riotgames.com |
+| <input type="checkbox" disabled checked> | SG2 |	sg2.api.riotgames.com |
+| <input type="checkbox" disabled checked> | TH2 |	th2.api.riotgames.com |
+| <input type="checkbox" disabled checked> | TW2 |	tw2.api.riotgames.com |
+| <input type="checkbox" disabled checked> | VN2 |	vn2.api.riotgames.com |
 | . | . | . |
 
 ### <ins>**Regional Routing Values Covered (Web Riot Api)**
 
 | Activate | Region | Host |
 | :-------: | :-------: | :-------: |
-| <input type="checkbox" disabled> | AMERICAS | americas.api.riotgames.com |
-| <input type="checkbox" disabled> | ASIA | asia.api.riotgames.com |
+| <input type="checkbox" disabled checked> | AMERICAS | americas.api.riotgames.com |
+| <input type="checkbox" disabled checked> | ASIA | asia.api.riotgames.com |
 | <input type="checkbox" disabled checked> | EUROPE | europe.api.riotgames.com |
-| <input type="checkbox" disabled> | SEA | sea.api.riotgames.com |
+| <input type="checkbox" disabled checked> | SEA | sea.api.riotgames.com |
 | . | . | . |
 
 ### <ins>**Language Covered (CDragon)**
@@ -109,33 +109,33 @@ http://ip:4141/runes/view1/all
 | Activate | Language | Key |
 | :-------: | :-------: | :-------: |
 | . | . | . |
-| <input type="checkbox" disabled> | Czech (Czech Republic) | cs_cz/ |
-| <input type="checkbox" disabled> | German (Germany) | de_de/ |
+| <input type="checkbox" disabled checked> | Czech (Czech Republic) | cs_cz/ |
+| <input type="checkbox" disabled checked> | German (Germany) | de_de/ |
 | <input type="checkbox" disabled> | - | default/ |
-| <input type="checkbox" disabled> | Greek (Greece) | el_gr/ |
-| <input type="checkbox" disabled> | English (Australia) | en_au/ |
-| <input type="checkbox" disabled> | English (United Kingdom) | en_gb/ |
-| <input type="checkbox" disabled> | English (Philippines) | en_ph/ |
-| <input type="checkbox" disabled> | English (Singapore) | en_sg/ |
-| <input type="checkbox" disabled> | Spanish (Argentina) | es_ar/ |
-| <input type="checkbox" disabled> | Spanish (Spain) | es_es/ |
-| <input type="checkbox" disabled> | Spanish (Mexican) | es_mx/ |
+| <input type="checkbox" disabled checked> | Greek (Greece) | el_gr/ |
+| <input type="checkbox" disabled checked> | English (Australia) | en_au/ |
+| <input type="checkbox" disabled checked> | English (United Kingdom) | en_gb/ |
+| <input type="checkbox" disabled checked> | English (Philippines) | en_ph/ |
+| <input type="checkbox" disabled checked> | English (Singapore) | en_sg/ |
+| <input type="checkbox" disabled checked> | Spanish (Argentina) | es_ar/ |
+| <input type="checkbox" disabled checked> | Spanish (Spain) | es_es/ |
+| <input type="checkbox" disabled checked> | Spanish (Mexican) | es_mx/ |
 | <input type="checkbox" disabled checked> | French (France) | fr_fr/ |
-| <input type="checkbox" disabled> | Hungarian (Hungary) | hu_hu/ |
-| <input type="checkbox" disabled> | Italian (Italy) | it_it/ |
-| <input type="checkbox" disabled> | Japanese (Japan) | ja_jp/ |
-| <input type="checkbox" disabled> | Korean (Korea, Republic of) | ko_kr/ |
-| <input type="checkbox" disabled> | Polish (Poland) | pl_pl/ |
-| <input type="checkbox" disabled> | Portuguese (Brazil) | pt_br/ |
-| <input type="checkbox" disabled> | Romanian (Romania) | ro_ro/ |
-| <input type="checkbox" disabled> | Russian (Russian federation) | ru_ru/ |
-| <input type="checkbox" disabled> | Thai (Thailand) | th_th/ |
-| <input type="checkbox" disabled> | Turkish (Turkey) | tr_tr/ |
-| <input type="checkbox" disabled> | Vietnamese (Viet Nam) | vi_vn/ |
+| <input type="checkbox" disabled checked> | Hungarian (Hungary) | hu_hu/ |
+| <input type="checkbox" disabled checked> | Italian (Italy) | it_it/ |
+| <input type="checkbox" disabled checked> | Japanese (Japan) | ja_jp/ |
+| <input type="checkbox" disabled checked> | Korean (Korea, Republic of) | ko_kr/ |
+| <input type="checkbox" disabled checked> | Polish (Poland) | pl_pl/ |
+| <input type="checkbox" disable checkedd> | Portuguese (Brazil) | pt_br/ |
+| <input type="checkbox" disabled checked> | Romanian (Romania) | ro_ro/ |
+| <input type="checkbox" disabled checked> | Russian (Russian federation) | ru_ru/ |
+| <input type="checkbox" disabled checked> | Thai (Thailand) | th_th/ |
+| <input type="checkbox" disabled checked> | Turkish (Turkey) | tr_tr/ |
+| <input type="checkbox" disabled checked> | Vietnamese (Viet Nam) | vi_vn/ |
 | <input type="checkbox" disabled> | - | vn_vn/ |
-| <input type="checkbox" disabled> | Chinese (China) | zh_cn/ |
-| <input type="checkbox" disabled> | - | zh_my/ |
-| <input type="checkbox" disabled> | Chinese (Taiwan) | zh_tw/ |
+| <input type="checkbox" disabled checked> | Chinese (China) | zh_cn/ |
+| <input type="checkbox" disabled checked> | - | zh_my/ |
+| <input type="checkbox" disabled checked> | Chinese (Taiwan) | zh_tw/ |
 | . | . | . |
 
 ### <ins>**Champ Select**

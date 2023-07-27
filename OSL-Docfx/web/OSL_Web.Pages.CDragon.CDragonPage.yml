@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/CDragon/CDragonPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: CDragonPage
     path: ../OSL-Web/Pages/CDragon/CDragonPage.razor.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/CDragon/CDragonPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateManual
     path: ../OSL-Web/Pages/CDragon/CDragonPage.razor.cs

@@ -5,7 +5,10 @@ items:
   id: ReplayApi.Url
   parent: OSL_ReplayApi
   children:
+  - OSL_ReplayApi.ReplayApi.Url.liveclientdataallgamedata
+  - OSL_ReplayApi.ReplayApi.Url.liveclientdataplayerlist
   - OSL_ReplayApi.ReplayApi.Url.replaygame
+  - OSL_ReplayApi.ReplayApi.Url.replayplayback
   langs:
   - csharp
   - vb
@@ -14,8 +17,12 @@ items:
   fullName: OSL_ReplayApi.ReplayApi.Url
   type: Class
   source:
+    remote:
+      path: OSL-ReplayApi/ReplayApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Url
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-ReplayApi\ReplayApi.cs
+    path: ../OSL-ReplayApi/ReplayApi.cs
     startLine: 42
   assemblies:
   - OSL-ReplayApi
@@ -53,8 +60,12 @@ items:
   fullName: OSL_ReplayApi.ReplayApi.Url.replaygame
   type: Field
   source:
+    remote:
+      path: OSL-ReplayApi/ReplayApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: replaygame
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-ReplayApi\ReplayApi.cs
+    path: ../OSL-ReplayApi/ReplayApi.cs
     startLine: 44
   assemblies:
   - OSL-ReplayApi
@@ -64,6 +75,111 @@ items:
     return:
       type: System.String
     content.vb: Public Shared ReadOnly replaygame As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_ReplayApi.ReplayApi.Url.liveclientdataallgamedata
+  commentId: F:OSL_ReplayApi.ReplayApi.Url.liveclientdataallgamedata
+  id: liveclientdataallgamedata
+  parent: OSL_ReplayApi.ReplayApi.Url
+  langs:
+  - csharp
+  - vb
+  name: liveclientdataallgamedata
+  nameWithType: ReplayApi.Url.liveclientdataallgamedata
+  fullName: OSL_ReplayApi.ReplayApi.Url.liveclientdataallgamedata
+  type: Field
+  source:
+    remote:
+      path: OSL-ReplayApi/ReplayApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: liveclientdataallgamedata
+    path: ../OSL-ReplayApi/ReplayApi.cs
+    startLine: 45
+  assemblies:
+  - OSL-ReplayApi
+  namespace: OSL_ReplayApi
+  syntax:
+    content: public static readonly string liveclientdataallgamedata
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly liveclientdataallgamedata As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_ReplayApi.ReplayApi.Url.liveclientdataplayerlist
+  commentId: F:OSL_ReplayApi.ReplayApi.Url.liveclientdataplayerlist
+  id: liveclientdataplayerlist
+  parent: OSL_ReplayApi.ReplayApi.Url
+  langs:
+  - csharp
+  - vb
+  name: liveclientdataplayerlist
+  nameWithType: ReplayApi.Url.liveclientdataplayerlist
+  fullName: OSL_ReplayApi.ReplayApi.Url.liveclientdataplayerlist
+  type: Field
+  source:
+    remote:
+      path: OSL-ReplayApi/ReplayApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: liveclientdataplayerlist
+    path: ../OSL-ReplayApi/ReplayApi.cs
+    startLine: 46
+  assemblies:
+  - OSL-ReplayApi
+  namespace: OSL_ReplayApi
+  syntax:
+    content: public static readonly string liveclientdataplayerlist
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly liveclientdataplayerlist As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_ReplayApi.ReplayApi.Url.replayplayback
+  commentId: F:OSL_ReplayApi.ReplayApi.Url.replayplayback
+  id: replayplayback
+  parent: OSL_ReplayApi.ReplayApi.Url
+  langs:
+  - csharp
+  - vb
+  name: replayplayback
+  nameWithType: ReplayApi.Url.replayplayback
+  fullName: OSL_ReplayApi.ReplayApi.Url.replayplayback
+  type: Field
+  source:
+    remote:
+      path: OSL-ReplayApi/ReplayApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: replayplayback
+    path: ../OSL-ReplayApi/ReplayApi.cs
+    startLine: 47
+  assemblies:
+  - OSL-ReplayApi
+  namespace: OSL_ReplayApi
+  syntax:
+    content: public static readonly string replayplayback
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly replayplayback As String
   modifiers.csharp:
   - public
   - static

@@ -24,8 +24,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url
   type: Class
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Url
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 51
   assemblies:
   - OSL-LcuApi
@@ -63,8 +67,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.riotclientappname
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: riotclientappname
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 53
   assemblies:
   - OSL-LcuApi
@@ -94,8 +102,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolgameflowv1session
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolgameflowv1session
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 54
   assemblies:
   - OSL-LcuApi
@@ -125,8 +137,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolgameflowv1gameflowphase
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolgameflowv1gameflowphase
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 55
   assemblies:
   - OSL-LcuApi
@@ -156,8 +172,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolsummonerv1summoners
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolsummonerv1summoners
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 56
   assemblies:
   - OSL-LcuApi
@@ -187,8 +207,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolchampselectv1gridchampions
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1gridchampions
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 59
   assemblies:
   - OSL-LcuApi
@@ -218,8 +242,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolchampselectv1session
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1session
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 60
   assemblies:
   - OSL-LcuApi
@@ -249,8 +277,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolsummonerv1summonersid
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolsummonerv1summonersid
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 61
   assemblies:
   - OSL-LcuApi
@@ -280,8 +312,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolchampselectv1bannablechampionids
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1bannablechampionids
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 62
   assemblies:
   - OSL-LcuApi
@@ -311,8 +347,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolchampselectv1currentchampion
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1currentchampion
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 63
   assemblies:
   - OSL-LcuApi
@@ -342,8 +382,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolchampselectlegacyv1session
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectlegacyv1session
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 66
   assemblies:
   - OSL-LcuApi
@@ -373,8 +417,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Url.lolendofgamev1eogstatsblock
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: lolendofgamev1eogstatsblock
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 69
   assemblies:
   - OSL-LcuApi

@@ -21,11 +21,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Lanes
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 129
+    startLine: 133
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -52,11 +52,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: None
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 131
+    startLine: 135
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -84,11 +84,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Top
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 132
+    startLine: 136
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -116,11 +116,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Mid
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 133
+    startLine: 137
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -148,11 +148,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Jungle
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 134
+    startLine: 138
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -180,11 +180,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ADC
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 135
+    startLine: 139
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -212,11 +212,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Support
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 136
+    startLine: 140
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

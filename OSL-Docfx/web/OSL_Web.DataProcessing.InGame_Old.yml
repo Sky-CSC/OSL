@@ -1,0 +1,719 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.DataProcessing.InGame_Old
+  commentId: T:OSL_Web.DataProcessing.InGame_Old
+  id: InGame_Old
+  parent: OSL_Web.DataProcessing
+  children:
+  - OSL_Web.DataProcessing.InGame_Old.allGameData
+  - OSL_Web.DataProcessing.InGame_Old.CreationGameInformation
+  - OSL_Web.DataProcessing.InGame_Old.firstCallPerks
+  - OSL_Web.DataProcessing.InGame_Old.gameInformation
+  - OSL_Web.DataProcessing.InGame_Old.gameInformationV2
+  - OSL_Web.DataProcessing.InGame_Old.initTimerGame
+  - OSL_Web.DataProcessing.InGame_Old.liveEvent
+  - OSL_Web.DataProcessing.InGame_Old.liveEventContent
+  - OSL_Web.DataProcessing.InGame_Old.playBack
+  - OSL_Web.DataProcessing.InGame_Old.ReadData(System.String)
+  langs:
+  - csharp
+  - vb
+  name: InGame_Old
+  nameWithType: InGame_Old
+  fullName: OSL_Web.DataProcessing.InGame_Old
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: InGame_Old
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 8
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public class InGame_Old
+    content.vb: Public Class InGame_Old
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.DataProcessing.InGame_Old.firstCallPerks
+  commentId: F:OSL_Web.DataProcessing.InGame_Old.firstCallPerks
+  id: firstCallPerks
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: firstCallPerks
+  nameWithType: InGame_Old.firstCallPerks
+  fullName: OSL_Web.DataProcessing.InGame_Old.firstCallPerks
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: firstCallPerks
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 11
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static bool firstCallPerks
+    return:
+      type: System.Boolean
+    content.vb: Public Shared firstCallPerks As Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame_Old.initTimerGame
+  commentId: F:OSL_Web.DataProcessing.InGame_Old.initTimerGame
+  id: initTimerGame
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: initTimerGame
+  nameWithType: InGame_Old.initTimerGame
+  fullName: OSL_Web.DataProcessing.InGame_Old.initTimerGame
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: initTimerGame
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 12
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static bool initTimerGame
+    return:
+      type: System.Boolean
+    content.vb: Public Shared initTimerGame As Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame_Old.allGameData
+  commentId: F:OSL_Web.DataProcessing.InGame_Old.allGameData
+  id: allGameData
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: allGameData
+  nameWithType: InGame_Old.allGameData
+  fullName: OSL_Web.DataProcessing.InGame_Old.allGameData
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: allGameData
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 13
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static dynamic allGameData
+    return:
+      type: System.Object
+    content.vb: Public Shared allGameData As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame_Old.playBack
+  commentId: F:OSL_Web.DataProcessing.InGame_Old.playBack
+  id: playBack
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: playBack
+  nameWithType: InGame_Old.playBack
+  fullName: OSL_Web.DataProcessing.InGame_Old.playBack
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: playBack
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 14
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static dynamic playBack
+    return:
+      type: System.Object
+    content.vb: Public Shared playBack As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame_Old.liveEvent
+  commentId: F:OSL_Web.DataProcessing.InGame_Old.liveEvent
+  id: liveEvent
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: liveEvent
+  nameWithType: InGame_Old.liveEvent
+  fullName: OSL_Web.DataProcessing.InGame_Old.liveEvent
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: liveEvent
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 15
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static bool liveEvent
+    return:
+      type: System.Boolean
+    content.vb: Public Shared liveEvent As Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame_Old.liveEventContent
+  commentId: F:OSL_Web.DataProcessing.InGame_Old.liveEventContent
+  id: liveEventContent
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: liveEventContent
+  nameWithType: InGame_Old.liveEventContent
+  fullName: OSL_Web.DataProcessing.InGame_Old.liveEventContent
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: liveEventContent
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 16
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static dynamic liveEventContent
+    return:
+      type: System.Object
+    content.vb: Public Shared liveEventContent As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame_Old.gameInformation
+  commentId: F:OSL_Web.DataProcessing.InGame_Old.gameInformation
+  id: gameInformation
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: gameInformation
+  nameWithType: InGame_Old.gameInformation
+  fullName: OSL_Web.DataProcessing.InGame_Old.gameInformation
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: gameInformation
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 17
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static InGame_Old.GameInformation gameInformation
+    return:
+      type: OSL_Web.DataProcessing.InGame_Old.GameInformation
+    content.vb: Public Shared gameInformation As InGame_Old.GameInformation
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame_Old.gameInformationV2
+  commentId: F:OSL_Web.DataProcessing.InGame_Old.gameInformationV2
+  id: gameInformationV2
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: gameInformationV2
+  nameWithType: InGame_Old.gameInformationV2
+  fullName: OSL_Web.DataProcessing.InGame_Old.gameInformationV2
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: gameInformationV2
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 18
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static InGame_Old.GameInformationV2 gameInformationV2
+    return:
+      type: OSL_Web.DataProcessing.InGame_Old.GameInformationV2
+    content.vb: Public Shared gameInformationV2 As InGame_Old.GameInformationV2
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame_Old.ReadData(System.String)
+  commentId: M:OSL_Web.DataProcessing.InGame_Old.ReadData(System.String)
+  id: ReadData(System.String)
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: ReadData(String)
+  nameWithType: InGame_Old.ReadData(String)
+  fullName: OSL_Web.DataProcessing.InGame_Old.ReadData(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReadData
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 19
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static void ReadData(string content)
+    parameters:
+    - id: content
+      type: System.String
+    content.vb: Public Shared Sub ReadData(content As String)
+  overload: OSL_Web.DataProcessing.InGame_Old.ReadData*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame_Old.CreationGameInformation
+  commentId: M:OSL_Web.DataProcessing.InGame_Old.CreationGameInformation
+  id: CreationGameInformation
+  parent: OSL_Web.DataProcessing.InGame_Old
+  langs:
+  - csharp
+  - vb
+  name: CreationGameInformation()
+  nameWithType: InGame_Old.CreationGameInformation()
+  fullName: OSL_Web.DataProcessing.InGame_Old.CreationGameInformation()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: CreationGameInformation
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 518
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static void CreationGameInformation()
+    content.vb: Public Shared Sub CreationGameInformation
+  overload: OSL_Web.DataProcessing.InGame_Old.CreationGameInformation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: OSL_Web.DataProcessing
+  commentId: N:OSL_Web.DataProcessing
+  name: OSL_Web.DataProcessing
+  nameWithType: OSL_Web.DataProcessing
+  fullName: OSL_Web.DataProcessing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Web.DataProcessing.InGame_Old.GameInformation
+  commentId: T:OSL_Web.DataProcessing.InGame_Old.GameInformation
+  parent: OSL_Web.DataProcessing
+  name: InGame_Old.GameInformation
+  nameWithType: InGame_Old.GameInformation
+  fullName: OSL_Web.DataProcessing.InGame_Old.GameInformation
+- uid: OSL_Web.DataProcessing.InGame_Old.GameInformationV2
+  commentId: T:OSL_Web.DataProcessing.InGame_Old.GameInformationV2
+  parent: OSL_Web.DataProcessing
+  name: InGame_Old.GameInformationV2
+  nameWithType: InGame_Old.GameInformationV2
+  fullName: OSL_Web.DataProcessing.InGame_Old.GameInformationV2
+- uid: OSL_Web.DataProcessing.InGame_Old.ReadData*
+  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.ReadData
+  name: ReadData
+  nameWithType: InGame_Old.ReadData
+  fullName: OSL_Web.DataProcessing.InGame_Old.ReadData
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Web.DataProcessing.InGame_Old.CreationGameInformation*
+  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.CreationGameInformation
+  name: CreationGameInformation
+  nameWithType: InGame_Old.CreationGameInformation
+  fullName: OSL_Web.DataProcessing.InGame_Old.CreationGameInformation

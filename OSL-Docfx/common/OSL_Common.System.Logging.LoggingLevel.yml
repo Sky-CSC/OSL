@@ -18,8 +18,12 @@ items:
   fullName: OSL_Common.System.Logging.LoggingLevel
   type: Enum
   source:
+    remote:
+      path: OSL-Common/System/Logging/Logger.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: LoggingLevel
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    path: ../OSL-Common/System/Logging/Logger.cs
     startLine: 195
   assemblies:
   - OSL-Common
@@ -47,8 +51,12 @@ items:
   fullName: OSL_Common.System.Logging.LoggingLevel.OFF
   type: Field
   source:
+    remote:
+      path: OSL-Common/System/Logging/Logger.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: OFF
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    path: ../OSL-Common/System/Logging/Logger.cs
     startLine: 197
   assemblies:
   - OSL-Common
@@ -75,8 +83,12 @@ items:
   fullName: OSL_Common.System.Logging.LoggingLevel.ERROR
   type: Field
   source:
+    remote:
+      path: OSL-Common/System/Logging/Logger.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ERROR
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    path: ../OSL-Common/System/Logging/Logger.cs
     startLine: 198
   assemblies:
   - OSL-Common
@@ -103,8 +115,12 @@ items:
   fullName: OSL_Common.System.Logging.LoggingLevel.WARN
   type: Field
   source:
+    remote:
+      path: OSL-Common/System/Logging/Logger.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: WARN
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    path: ../OSL-Common/System/Logging/Logger.cs
     startLine: 199
   assemblies:
   - OSL-Common
@@ -131,8 +147,12 @@ items:
   fullName: OSL_Common.System.Logging.LoggingLevel.INFO
   type: Field
   source:
+    remote:
+      path: OSL-Common/System/Logging/Logger.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: INFO
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    path: ../OSL-Common/System/Logging/Logger.cs
     startLine: 200
   assemblies:
   - OSL-Common
@@ -159,8 +179,12 @@ items:
   fullName: OSL_Common.System.Logging.LoggingLevel.DEBUG
   type: Field
   source:
+    remote:
+      path: OSL-Common/System/Logging/Logger.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DEBUG
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Logging\Logger.cs
+    path: ../OSL-Common/System/Logging/Logger.cs
     startLine: 201
   assemblies:
   - OSL-Common

@@ -14,8 +14,12 @@ items:
   fullName: OSL_LcuApi.LcuApi
   type: Class
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: LcuApi
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 12
   assemblies:
   - OSL-LcuApi
@@ -53,8 +57,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.Request(System.String, System.Int32, System.String, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Request
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 25
   assemblies:
   - OSL-LcuApi

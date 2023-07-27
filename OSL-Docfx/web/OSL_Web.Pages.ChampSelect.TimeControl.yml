@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimeControl
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: gobalTimer
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTime
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimeFast
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -167,7 +167,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimeView3
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimer
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimerFast
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -266,7 +266,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: phaseTimerView3
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -299,7 +299,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelect
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -337,7 +337,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelectFast
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs
@@ -378,7 +378,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/TimeControl.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DecreasingTimerChapSelectView3
     path: ../OSL-Web/Pages/ChampSelect/TimeControl.cs

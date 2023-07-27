@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Config/ConfigPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConfigOverlayText
     path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.Config
@@ -58,11 +58,11 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Config/ConfigPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Port
     path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.Config
@@ -118,11 +118,11 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Config/ConfigPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: WebRiotApiKey
     path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.Config

@@ -16,8 +16,12 @@ items:
   fullName: OSL_CDragon.Sound
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Sound
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 242
   assemblies:
   - OSL-CDragon
@@ -55,8 +59,12 @@ items:
   fullName: OSL_CDragon.Sound.ChoosePath
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ChoosePath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 244
   assemblies:
   - OSL-CDragon
@@ -86,8 +94,12 @@ items:
   fullName: OSL_CDragon.Sound.BanPath
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: BanPath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 245
   assemblies:
   - OSL-CDragon
@@ -117,8 +129,12 @@ items:
   fullName: OSL_CDragon.Sound.SfxPath
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: SfxPath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 246
   assemblies:
   - OSL-CDragon

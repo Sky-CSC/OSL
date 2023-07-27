@@ -16,8 +16,12 @@ items:
   fullName: OSL_CDragon.SummonerSpellManager
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/SummonerSpellManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerSpellManager
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\SummonerSpellManager.cs
+    path: ../OSL-CDragon/SummonerSpellManager.cs
     startLine: 8
   assemblies:
   - OSL-CDragon
@@ -55,8 +59,12 @@ items:
   fullName: OSL_CDragon.SummonerSpellManager.DownloadSummonersSpell(System.String, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/SummonerSpellManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadSummonersSpell
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\SummonerSpellManager.cs
+    path: ../OSL-CDragon/SummonerSpellManager.cs
     startLine: 17
   assemblies:
   - OSL-CDragon
@@ -92,8 +100,12 @@ items:
   fullName: OSL_CDragon.SummonerSpellManager.SummonersSpellAsyncDownload(System.Int32, System.Int32, System.String, System.Object, System.String, System.Int32, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/SummonerSpellManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: SummonersSpellAsyncDownload
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\SummonerSpellManager.cs
+    path: ../OSL-CDragon/SummonerSpellManager.cs
     startLine: 72
   assemblies:
   - OSL-CDragon
@@ -144,8 +156,12 @@ items:
   fullName: OSL_CDragon.SummonerSpellManager.UpdateDataCDragonSummonersSpell(System.Int32, System.Int32, System.Object, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/SummonerSpellManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonSummonersSpell
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\SummonerSpellManager.cs
+    path: ../OSL-CDragon/SummonerSpellManager.cs
     startLine: 87
   assemblies:
   - OSL-CDragon

@@ -16,8 +16,12 @@ items:
   fullName: OSL_CDragon.Perks
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Perks
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 292
   assemblies:
   - OSL-CDragon
@@ -55,8 +59,12 @@ items:
   fullName: OSL_CDragon.Perks.Id
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Id
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 294
   assemblies:
   - OSL-CDragon
@@ -86,8 +94,12 @@ items:
   fullName: OSL_CDragon.Perks.Name
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Name
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 295
   assemblies:
   - OSL-CDragon
@@ -117,8 +129,12 @@ items:
   fullName: OSL_CDragon.Perks.IconPath
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: IconPath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 296
   assemblies:
   - OSL-CDragon

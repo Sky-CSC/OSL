@@ -39,7 +39,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Overlay
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundPicture
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundPictureSubmit
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroudGradientDeg
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroudGradientPercent1
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroudGradientPercent2
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -327,7 +327,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroudGradientSubmit
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -359,7 +359,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBackgroudGradientColor1
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -391,7 +391,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBackgroudGradientColor2
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -423,7 +423,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ForegroundBackground
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -458,7 +458,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ForegroundBackgroundSubmit
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -490,7 +490,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideColorTextSummoner
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -522,7 +522,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideColorTextSummoner
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -554,7 +554,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideColorSeparationBar
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -586,7 +586,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideColorSeparationBar
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -618,7 +618,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideColorBorderChampion
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -678,7 +678,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideColorBorderChampionNotSet
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -711,7 +711,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideColorBorderChampionSubmit
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -743,7 +743,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsBlueSideColorBorderChampion
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -777,7 +777,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideColorBorderChampion
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -809,7 +809,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideColorBorderChampion
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -869,7 +869,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideColorBorderChampionNotSet
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -902,7 +902,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideColorBorderChampionSubmit
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -934,7 +934,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsRedSideColorBorderChampion
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -968,7 +968,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideColorBorderChampion
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs

@@ -58,6 +58,19 @@
           "files": [
             "**.csproj"
           ],
+          "src": "../OSL-LiveEvents/"
+        }
+      ],
+      "dest": "liveevents",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
+    },
+    {
+      "src": [
+        {
+          "files": [
+            "**.csproj"
+          ],
           "src": "../OSL-ReplayApi/"
         }
       ],
@@ -106,6 +119,8 @@
           "common/index.md",
           "lcuapi/**.yml",
           "lcuapi/index.md",
+          "liveevents/**.yml",
+          "liveevents/index.md",
           "replayapi/**.yml",
           "replayapi/index.md",
           "web/**.yml",
@@ -125,6 +140,8 @@
           "common/**/toc.yml",
           "lcuapi/**.md",
           "lcuapi/**/toc.yml",
+          "liveevents/**.md",
+          "liveevents/**/toc.yml",
           "replayapi/**.md",
           "replayapi/**/toc.yml",
           "web/**.md",

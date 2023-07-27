@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/GameFlow/Phase/EndGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: EndGame
     path: ../OSL-Client/Riot/GameFlow/Phase/EndGame.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/GameFlow/Phase/EndGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Progress
     path: ../OSL-Client/Riot/GameFlow/Phase/EndGame.cs

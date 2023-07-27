@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TextValueOverlayView1
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamScoreText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -173,7 +173,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamScoreText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DisplayDragonTimer
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -310,7 +310,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamTextSubmit
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueTeamScoreTextSubmit
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -374,7 +374,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamTextSubmit
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -406,7 +406,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedTeamScoreTextSubmit
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -438,7 +438,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SwitchSideRedBlue
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -470,7 +470,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: InputCheckboxSubmit
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -502,7 +502,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetColorBlueTeamScoreText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -534,7 +534,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetColorBlueTeamText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -566,7 +566,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetColorRedTeamScoreText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -598,7 +598,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetColorRedTeamText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs

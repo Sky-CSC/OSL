@@ -27,8 +27,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase
   type: Class
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: GameFlowPhase
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 76
   assemblies:
   - OSL-LcuApi
@@ -66,8 +70,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.None
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: None
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 78
   assemblies:
   - OSL-LcuApi
@@ -97,8 +105,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.Lobby
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Lobby
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 79
   assemblies:
   - OSL-LcuApi
@@ -128,8 +140,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.Matchmaking
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Matchmaking
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 80
   assemblies:
   - OSL-LcuApi
@@ -159,8 +175,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.CheckedIntoTournament
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: CheckedIntoTournament
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 81
   assemblies:
   - OSL-LcuApi
@@ -190,8 +210,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.ReadyCheck
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ReadyCheck
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 82
   assemblies:
   - OSL-LcuApi
@@ -221,8 +245,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.ChampSelect
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelect
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 83
   assemblies:
   - OSL-LcuApi
@@ -252,8 +280,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.GameStart
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: GameStart
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 84
   assemblies:
   - OSL-LcuApi
@@ -283,8 +315,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.FailedToLaunch
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: FailedToLaunch
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 85
   assemblies:
   - OSL-LcuApi
@@ -314,8 +350,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.InProgress
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: InProgress
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 86
   assemblies:
   - OSL-LcuApi
@@ -345,8 +385,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.Reconnect
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Reconnect
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 87
   assemblies:
   - OSL-LcuApi
@@ -376,8 +420,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.WaitingForStats
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: WaitingForStats
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 88
   assemblies:
   - OSL-LcuApi
@@ -407,8 +455,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.PreEndOfGame
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: PreEndOfGame
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 89
   assemblies:
   - OSL-LcuApi
@@ -438,8 +490,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.EndOfGame
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: EndOfGame
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 90
   assemblies:
   - OSL-LcuApi
@@ -469,8 +525,12 @@ items:
   fullName: OSL_LcuApi.LcuApi.GameFlowPhase.TerminatedInError
   type: Field
   source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: TerminatedInError
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-LcuApi\LcuApi.cs
+    path: ../OSL-LcuApi/LcuApi.cs
     startLine: 91
   assemblies:
   - OSL-LcuApi

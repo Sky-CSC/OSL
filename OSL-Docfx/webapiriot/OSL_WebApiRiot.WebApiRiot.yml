@@ -8,6 +8,7 @@ items:
   - OSL_WebApiRiot.WebApiRiot.Spectator_V4
   - OSL_WebApiRiot.WebApiRiot.Summoner_V4
   - OSL_WebApiRiot.WebApiRiot.WebApiRiot
+  - OSL_WebApiRiot.WebApiRiot.WebApiRiot.ApiKeyScheme
   langs:
   - csharp
   - vb
@@ -38,3 +39,8 @@ references:
   name: WebApiRiot
   nameWithType: WebApiRiot
   fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot
+- uid: OSL_WebApiRiot.WebApiRiot.WebApiRiot.ApiKeyScheme
+  commentId: T:OSL_WebApiRiot.WebApiRiot.WebApiRiot.ApiKeyScheme
+  name: WebApiRiot.ApiKeyScheme
+  nameWithType: WebApiRiot.ApiKeyScheme
+  fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.ApiKeyScheme

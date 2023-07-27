@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: FormatingData
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultPatch
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultRegion
     path: ../OSL-Web/Pages/Runes/RunesPage.razor.cs

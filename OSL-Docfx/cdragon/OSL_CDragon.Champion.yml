@@ -21,8 +21,12 @@ items:
   fullName: OSL_CDragon.Champion
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Champion
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 221
   assemblies:
   - OSL-CDragon
@@ -60,8 +64,12 @@ items:
   fullName: OSL_CDragon.Champion.Id
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Id
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 223
   assemblies:
   - OSL-CDragon
@@ -91,8 +99,12 @@ items:
   fullName: OSL_CDragon.Champion.Name
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Name
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 224
   assemblies:
   - OSL-CDragon
@@ -122,8 +134,12 @@ items:
   fullName: OSL_CDragon.Champion.Alias
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Alias
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 225
   assemblies:
   - OSL-CDragon
@@ -153,8 +169,12 @@ items:
   fullName: OSL_CDragon.Champion.SquarePortraitPath
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: SquarePortraitPath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 226
   assemblies:
   - OSL-CDragon
@@ -184,8 +204,12 @@ items:
   fullName: OSL_CDragon.Champion.Sound
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Sound
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 227
   assemblies:
   - OSL-CDragon
@@ -215,8 +239,12 @@ items:
   fullName: OSL_CDragon.Champion.Roles
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Roles
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 228
   assemblies:
   - OSL-CDragon
@@ -246,8 +274,12 @@ items:
   fullName: OSL_CDragon.Champion.Skins
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Skins
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 229
   assemblies:
   - OSL-CDragon
@@ -277,8 +309,12 @@ items:
   fullName: OSL_CDragon.Champion.Champion()
   type: Constructor
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 231
   assemblies:
   - OSL-CDragon

@@ -1,0 +1,594 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.DataProcessing.InGame_Old.Buff
+  commentId: T:OSL_Web.DataProcessing.InGame_Old.Buff
+  id: InGame_Old.Buff
+  parent: OSL_Web.DataProcessing
+  children:
+  - OSL_Web.DataProcessing.InGame_Old.Buff.#ctor
+  - OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
+  - OSL_Web.DataProcessing.InGame_Old.Buff.Killed
+  - OSL_Web.DataProcessing.InGame_Old.Buff.Team
+  langs:
+  - csharp
+  - vb
+  name: InGame_Old.Buff
+  nameWithType: InGame_Old.Buff
+  fullName: OSL_Web.DataProcessing.InGame_Old.Buff
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Buff
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 687
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public class Buff
+    content.vb: Public Class Buff
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.DataProcessing.InGame_Old.Buff.Killed
+  commentId: P:OSL_Web.DataProcessing.InGame_Old.Buff.Killed
+  id: Killed
+  parent: OSL_Web.DataProcessing.InGame_Old.Buff
+  langs:
+  - csharp
+  - vb
+  name: Killed
+  nameWithType: InGame_Old.Buff.Killed
+  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Killed
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Killed
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 689
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public bool Killed { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Killed As Boolean
+  overload: OSL_Web.DataProcessing.InGame_Old.Buff.Killed*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.InGame_Old.Buff.Team
+  commentId: P:OSL_Web.DataProcessing.InGame_Old.Buff.Team
+  id: Team
+  parent: OSL_Web.DataProcessing.InGame_Old.Buff
+  langs:
+  - csharp
+  - vb
+  name: Team
+  nameWithType: InGame_Old.Buff.Team
+  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Team
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Team
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 690
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public string Team { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Team As String
+  overload: OSL_Web.DataProcessing.InGame_Old.Buff.Team*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
+  commentId: P:OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
+  id: ChampionBuff
+  parent: OSL_Web.DataProcessing.InGame_Old.Buff
+  langs:
+  - csharp
+  - vb
+  name: ChampionBuff
+  nameWithType: InGame_Old.Buff.ChampionBuff
+  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ChampionBuff
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 691
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public List<InGame_Old.ChampionBuff> ChampionBuff { get; set; }
+    parameters: []
+    return:
+      type: List{OSL_Web.DataProcessing.InGame_Old.ChampionBuff}
+    content.vb: Public Property ChampionBuff As List(Of InGame_Old.ChampionBuff)
+  overload: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.InGame_Old.Buff.#ctor
+  commentId: M:OSL_Web.DataProcessing.InGame_Old.Buff.#ctor
+  id: '#ctor'
+  parent: OSL_Web.DataProcessing.InGame_Old.Buff
+  langs:
+  - csharp
+  - vb
+  name: Buff()
+  nameWithType: InGame_Old.Buff.Buff()
+  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Buff()
+  type: Constructor
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame-Old.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: .ctor
+    path: ../OSL-Web/DataProcessing/InGame-Old.cs
+    startLine: 692
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public Buff()
+    content.vb: Public Sub New
+  overload: OSL_Web.DataProcessing.InGame_Old.Buff.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Web.DataProcessing
+  commentId: N:OSL_Web.DataProcessing
+  name: OSL_Web.DataProcessing
+  nameWithType: OSL_Web.DataProcessing
+  fullName: OSL_Web.DataProcessing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Web.DataProcessing.InGame_Old.Buff.Killed*
+  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.Buff.Killed
+  name: Killed
+  nameWithType: InGame_Old.Buff.Killed
+  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Killed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Web.DataProcessing.InGame_Old.Buff.Team*
+  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.Buff.Team
+  name: Team
+  nameWithType: InGame_Old.Buff.Team
+  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Team
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff*
+  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
+  name: ChampionBuff
+  nameWithType: InGame_Old.Buff.ChampionBuff
+  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
+- uid: List{OSL_Web.DataProcessing.InGame_Old.ChampionBuff}
+  commentId: '!:List{OSL_Web.DataProcessing.InGame_Old.ChampionBuff}'
+  definition: List`1
+  name: List<InGame_Old.ChampionBuff>
+  nameWithType: List<InGame_Old.ChampionBuff>
+  fullName: List<OSL_Web.DataProcessing.InGame_Old.ChampionBuff>
+  nameWithType.vb: List(Of InGame_Old.ChampionBuff)
+  fullName.vb: List(Of OSL_Web.DataProcessing.InGame_Old.ChampionBuff)
+  name.vb: List(Of InGame_Old.ChampionBuff)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
+    name: InGame_Old.ChampionBuff
+    nameWithType: InGame_Old.ChampionBuff
+    fullName: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
+    name: InGame_Old.ChampionBuff
+    nameWithType: InGame_Old.ChampionBuff
+    fullName: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Web.DataProcessing.InGame_Old.Buff.#ctor*
+  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.Buff.#ctor
+  name: Buff
+  nameWithType: InGame_Old.Buff.Buff
+  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Buff

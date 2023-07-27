@@ -22,11 +22,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Team
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 246
+    startLine: 249
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -65,11 +65,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: CellId
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 248
+    startLine: 251
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -100,11 +100,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionId
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 249
+    startLine: 252
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -135,11 +135,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Spell1Id
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 250
+    startLine: 253
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -170,11 +170,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Spell2Id
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 251
+    startLine: 254
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -205,11 +205,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerId
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 252
+    startLine: 255
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -240,11 +240,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerName
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 253
+    startLine: 256
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -275,11 +275,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TeamNum
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 254
+    startLine: 257
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

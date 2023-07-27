@@ -142,6 +142,9 @@ Applications use various APIs to collect information about the game, champions, 
 ### [Piorrro33](https://github.com/piorrro33)
 [overlay](https://github.com/piorrro33/overlay) (Customizable UI for League of Legends champion select spectating)
 
+### [SkinSpotlights](https://github.com/SkinSpotlights)
+[LiveEventsDocumentation](https://github.com/SkinSpotlights/LiveEventsDocumentation) (Minimalist documentation of live events)
+
 ---
 
 > [!WARNING] 

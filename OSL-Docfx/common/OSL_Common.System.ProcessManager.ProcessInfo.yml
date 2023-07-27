@@ -15,8 +15,12 @@ items:
   fullName: OSL_Common.System.ProcessManager.ProcessInfo
   type: Class
   source:
+    remote:
+      path: OSL-Common/System/ProcessManager/ProcessInfo.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ProcessInfo
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\ProcessManager\ProcessInfo.cs
+    path: ../OSL-Common/System/ProcessManager/ProcessInfo.cs
     startLine: 9
   assemblies:
   - OSL-Common
@@ -54,8 +58,12 @@ items:
   fullName: OSL_Common.System.ProcessManager.ProcessInfo.GetByName(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/ProcessManager/ProcessInfo.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: GetByName
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\ProcessManager\ProcessInfo.cs
+    path: ../OSL-Common/System/ProcessManager/ProcessInfo.cs
     startLine: 18
   assemblies:
   - OSL-Common
@@ -91,8 +99,12 @@ items:
   fullName: OSL_Common.System.ProcessManager.ProcessInfo.GetById(System.Int32)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/ProcessManager/ProcessInfo.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: GetById
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\ProcessManager\ProcessInfo.cs
+    path: ../OSL-Common/System/ProcessManager/ProcessInfo.cs
     startLine: 46
   assemblies:
   - OSL-Common

@@ -49,6 +49,11 @@
   items:
   - uid: OSL_Web.Configuration.Overlay.InGame.View1.Config
     name: Config
+- uid: OSL_Web.Configuration.Overlay.InGame.View1_1
+  name: OSL_Web.Configuration.Overlay.InGame.View1_1
+  items:
+  - uid: OSL_Web.Configuration.Overlay.InGame.View1_1.Config
+    name: Config
 - uid: OSL_Web.Configuration.Overlay.InGame.View2
   name: OSL_Web.Configuration.Overlay.InGame.View2
   items:
@@ -132,6 +137,42 @@
     name: EndGame
   - uid: OSL_Web.DataProcessing.InGame
     name: InGame
+  - uid: OSL_Web.DataProcessing.InGame.GameInformation
+    name: InGame.GameInformation
+  - uid: OSL_Web.DataProcessing.InGame.Herald
+    name: InGame.Herald
+  - uid: OSL_Web.DataProcessing.InGame.Inhib
+    name: InGame.Inhib
+  - uid: OSL_Web.DataProcessing.InGame.Items
+    name: InGame.Items
+  - uid: OSL_Web.DataProcessing.InGame.Levels
+    name: InGame.Levels
+  - uid: OSL_Web.DataProcessing.InGame.Summoner
+    name: InGame.Summoner
+  - uid: OSL_Web.DataProcessing.InGame.Team
+    name: InGame.Team
+  - uid: OSL_Web.DataProcessing.InGame_Old
+    name: InGame_Old
+  - uid: OSL_Web.DataProcessing.InGame_Old.Buff
+    name: InGame_Old.Buff
+  - uid: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
+    name: InGame_Old.ChampionBuff
+  - uid: OSL_Web.DataProcessing.InGame_Old.Drake
+    name: InGame_Old.Drake
+  - uid: OSL_Web.DataProcessing.InGame_Old.GameInformation
+    name: InGame_Old.GameInformation
+  - uid: OSL_Web.DataProcessing.InGame_Old.GameInformationV2
+    name: InGame_Old.GameInformationV2
+  - uid: OSL_Web.DataProcessing.InGame_Old.Herald
+    name: InGame_Old.Herald
+  - uid: OSL_Web.DataProcessing.InGame_Old.HeraldV2
+    name: InGame_Old.HeraldV2
+  - uid: OSL_Web.DataProcessing.InGame_Old.Items
+    name: InGame_Old.Items
+  - uid: OSL_Web.DataProcessing.InGame_Old.Summoner
+    name: InGame_Old.Summoner
+  - uid: OSL_Web.DataProcessing.InGame_Old.Team
+    name: InGame_Old.Team
   - uid: OSL_Web.DataProcessing.Runes
     name: Runes
   - uid: OSL_Web.DataProcessing.Runes.InfoForPerks
@@ -226,6 +267,10 @@
     name: InGamePage.TextValueOverlayView2
   - uid: OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
     name: InGamePage.TextValueOverlayView3
+  - uid: OSL_Web.Pages.InGame.InGameView1_1Page
+    name: InGameView1_1Page
+  - uid: OSL_Web.Pages.InGame.InGameView1_1Page.FormatingData
+    name: InGameView1_1Page.FormatingData
   - uid: OSL_Web.Pages.InGame.InGameView1Page
     name: InGameView1Page
   - uid: OSL_Web.Pages.InGame.InGameView1Page.FormatingData
@@ -238,6 +283,8 @@
     name: InGameView3Page
   - uid: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
     name: InGameView3Page.FormatingData
+  - uid: OSL_Web.Pages.InGame.TimerControl
+    name: TimerControl
 - uid: OSL_Web.Pages.Runes
   name: OSL_Web.Pages.Runes
   items:

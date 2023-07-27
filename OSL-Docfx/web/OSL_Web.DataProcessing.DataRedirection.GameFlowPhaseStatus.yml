@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/DataRedirection.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameFlowPhaseStatus
     path: ../OSL-Web/DataProcessing/DataRedirection.cs
-    startLine: 104
+    startLine: 105
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/DataRedirection.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Phase
     path: ../OSL-Web/DataProcessing/DataRedirection.cs
-    startLine: 107
+    startLine: 108
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -96,11 +96,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/DataRedirection.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Status
     path: ../OSL-Web/DataProcessing/DataRedirection.cs
-    startLine: 108
+    startLine: 109
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -131,11 +131,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/DataRedirection.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Date
     path: ../OSL-Web/DataProcessing/DataRedirection.cs
-    startLine: 109
+    startLine: 110
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

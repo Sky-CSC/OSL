@@ -8,12 +8,15 @@ items:
   - OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView1
   - OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView2
   - OSL_Web.Pages.InGame.InGamePage.TextValueOverlayView3
+  - OSL_Web.Pages.InGame.InGameView1_1Page
+  - OSL_Web.Pages.InGame.InGameView1_1Page.FormatingData
   - OSL_Web.Pages.InGame.InGameView1Page
   - OSL_Web.Pages.InGame.InGameView1Page.FormatingData
   - OSL_Web.Pages.InGame.InGameView2Page
   - OSL_Web.Pages.InGame.InGameView2Page.FormatingData
   - OSL_Web.Pages.InGame.InGameView3Page
   - OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+  - OSL_Web.Pages.InGame.TimerControl
   langs:
   - csharp
   - vb
@@ -55,6 +58,17 @@ references:
   name: InGameView1Page.FormatingData
   nameWithType: InGameView1Page.FormatingData
   fullName: OSL_Web.Pages.InGame.InGameView1Page.FormatingData
+- uid: OSL_Web.Pages.InGame.InGameView1_1Page
+  commentId: T:OSL_Web.Pages.InGame.InGameView1_1Page
+  name: InGameView1_1Page
+  nameWithType: InGameView1_1Page
+  fullName: OSL_Web.Pages.InGame.InGameView1_1Page
+- uid: OSL_Web.Pages.InGame.InGameView1_1Page.FormatingData
+  commentId: T:OSL_Web.Pages.InGame.InGameView1_1Page.FormatingData
+  parent: OSL_Web.Pages.InGame
+  name: InGameView1_1Page.FormatingData
+  nameWithType: InGameView1_1Page.FormatingData
+  fullName: OSL_Web.Pages.InGame.InGameView1_1Page.FormatingData
 - uid: OSL_Web.Pages.InGame.InGameView2Page
   commentId: T:OSL_Web.Pages.InGame.InGameView2Page
   name: InGameView2Page
@@ -77,6 +91,11 @@ references:
   name: InGameView3Page.FormatingData
   nameWithType: InGameView3Page.FormatingData
   fullName: OSL_Web.Pages.InGame.InGameView3Page.FormatingData
+- uid: OSL_Web.Pages.InGame.TimerControl
+  commentId: T:OSL_Web.Pages.InGame.TimerControl
+  name: TimerControl
+  nameWithType: TimerControl
+  fullName: OSL_Web.Pages.InGame.TimerControl
 - uid: OSL_Web.Pages.InGame
   commentId: N:OSL_Web.Pages.InGame
   name: OSL_Web.Pages.InGame

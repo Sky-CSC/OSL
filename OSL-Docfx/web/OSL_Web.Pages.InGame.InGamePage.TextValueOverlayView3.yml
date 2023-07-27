@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TextValueOverlayView3
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReplayInfoText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReplayInfoTextSubmit
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetColorReplayInfoText
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: InputCheckboxSubmit
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs

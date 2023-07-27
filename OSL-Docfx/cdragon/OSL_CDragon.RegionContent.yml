@@ -18,8 +18,12 @@ items:
   fullName: OSL_CDragon.RegionContent
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: RegionContent
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 203
   assemblies:
   - OSL-CDragon
@@ -57,8 +61,12 @@ items:
   fullName: OSL_CDragon.RegionContent.Champion
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Champion
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 205
   assemblies:
   - OSL-CDragon
@@ -88,8 +96,12 @@ items:
   fullName: OSL_CDragon.RegionContent.Items
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Items
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 206
   assemblies:
   - OSL-CDragon
@@ -119,8 +131,12 @@ items:
   fullName: OSL_CDragon.RegionContent.SummonerSpells
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerSpells
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 207
   assemblies:
   - OSL-CDragon
@@ -150,8 +166,12 @@ items:
   fullName: OSL_CDragon.RegionContent.Perks
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Perks
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 208
   assemblies:
   - OSL-CDragon
@@ -181,8 +201,12 @@ items:
   fullName: OSL_CDragon.RegionContent.RegionContent()
   type: Constructor
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 209
   assemblies:
   - OSL-CDragon

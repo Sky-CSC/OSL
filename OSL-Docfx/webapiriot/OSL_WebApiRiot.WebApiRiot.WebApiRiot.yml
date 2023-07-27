@@ -15,8 +15,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot
   type: Class
   source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: WebApiRiot
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\WebApiRiot.cs
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
     startLine: 8
   assemblies:
   - OSL-WebApiRiot
@@ -54,8 +58,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.apiKey
   type: Field
   source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: apiKey
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\WebApiRiot.cs
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
     startLine: 11
   assemblies:
   - OSL-WebApiRiot
@@ -83,8 +91,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.RequestWebApiRiot(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: RequestWebApiRiot
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\WebApiRiot.cs
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
     startLine: 17
   assemblies:
   - OSL-WebApiRiot
