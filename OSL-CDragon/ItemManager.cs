@@ -92,7 +92,8 @@ namespace OSL_CDragon
             Items itemData = new Items();
             itemData.Id = item.id;
             itemData.Name = item.name;
-            itemData.IconPath = itemIcone;
+            String[] splitItemIcone = itemIcone.Split("/wwwroot");
+            itemData.IconPath = splitItemIcone[0] + splitItemIcone[1];
             //itemData.From = new();
             foreach (string from in item.from)
             {

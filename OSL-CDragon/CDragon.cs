@@ -34,6 +34,41 @@ namespace OSL_CDragon
 
         public static string dataCDragonPath = "./" + "dataCDragon.json";
 
+        public static void SetRegion(string newRegion)
+        {
+            region = newRegion;
+        }
+
+        public static void SetPatch(string newPatch)
+        {
+            patch = newPatch;
+        }
+
+        /// <summary>
+        /// Download files if patch and refion not already present
+        /// </summary>
+        /// <param name="patch"></param>
+        /// <param name="region"></param>
+        /// <returns></returns>
+        public static void DownloadAsyncWithCheck(string patch, string region)
+        {
+            int indexPatch = dataCDragon.Patch.FindIndex(x => x.Name == patch);
+            if (indexPatch != -1)
+            {
+                int indexlocale = dataCDragon.Patch[indexPatch].Region.FindIndex(x => x.Name == region);
+                if (indexlocale == -1)
+                {
+                    Thread DownloadFilesFr = new Thread(() => DownloadData.DownloadFiles(patch, region));
+                    DownloadFilesFr.Start();
+                }
+            }
+            else
+            {
+                Thread DownloadFilesFr = new Thread(() => DownloadData.DownloadFiles(patch, region));
+                DownloadFilesFr.Start();
+            }
+        }
+
         /// <summary>
         /// Download data
         /// </summary>
