@@ -52,6 +52,8 @@ namespace OSL_LcuApi
         public class Url
         {
             public static readonly string riotclientappname = "/riotclient/app-name"; //Application name without file extension
+            public static readonly string riotclientregionlocale= "/riotclient/region-locale"; //locale, region, web language web region
+            public static readonly string lolpublishingcontentv1listenerspubhubconfig= "/lol-publishing-content/v1/listeners/pubhub-config"; //locale, region, web language web region
             public static readonly string lolgameflowv1session = "/lol-gameflow/v1/session"; //
             public static readonly string lolgameflowv1gameflowphase = "/lol-gameflow/v1/gameflow-phase"; //
             public static readonly string lolsummonerv1summoners = "/lol-summoner/v1/summoners/"; // 
