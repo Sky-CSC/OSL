@@ -7,7 +7,7 @@ namespace OSL_Web.Configuration.Overlay.Rune.View1
     public class Config
     {
         private static Logger _logger = new("Config");
-        public static void LoadConfig()
+        public static void LoadPatchRegionConfig()
         {
             try
             {

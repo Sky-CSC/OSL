@@ -12,6 +12,7 @@ namespace OSL_Web.DataProcessing
         private static bool champSelectStatus = false;
         private static bool inGameStatus = false;
         private static bool endGameStatus = false;
+        private static bool regionLocaleStatus = false;
 
         public static void RedirectData(string content)
         {
@@ -59,6 +60,18 @@ namespace OSL_Web.DataProcessing
                         }
                         gameFlowPhaseStatus = true; //Prepare for read data for specific game phase
                     }
+                    else if (dataJsonRecive.Phase.Equals("SetRegionLocale"))
+                    {
+                        if (dataJsonRecive.Status.Equals("Running"))
+                        {
+                            regionLocaleStatus = true; //We we setting region and locale
+                        }
+                        else
+                        {
+                            regionLocaleStatus = false; //Setting region and locale finished
+                        }
+                        gameFlowPhaseStatus = true; //Prepare for read data for specific game phase
+                    }
                 }
                 else
                 {
@@ -89,6 +102,11 @@ namespace OSL_Web.DataProcessing
                     {
                         _logger.log(LoggingLevel.INFO, "RedirectData()", $"Send this data to end game");
                         EndGame.ReadData(content);
+                    }
+                    else if (regionLocaleStatus)
+                    {
+                        _logger.log(LoggingLevel.INFO, "RedirectData()", $"Send this data to region locale");
+                        LoLAppRooting.ReadData(content);
                     }
                 }
                 catch (Exception e)

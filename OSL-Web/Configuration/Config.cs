@@ -35,6 +35,7 @@ namespace OSL_Web.Configuration
 
             //Load configurations in game
             Overlay.InGame.View1.Config.LoadConfig();
+            Overlay.InGame.View1_1.Config.LoadConfig();
             Overlay.InGame.View2.Config.LoadConfig();
             Overlay.InGame.View3.Config.LoadConfig();
 
@@ -44,7 +45,7 @@ namespace OSL_Web.Configuration
             Overlay.EndGame.View3.Config.LoadConfig();
 
             //Load configurations runes
-            Overlay.Rune.View1.Config.LoadConfig();
+            Overlay.Rune.View1.Config.LoadPatchRegionConfig();
             Overlay.Rune.View1.Adc.Config.LoadConfig();
             Overlay.Rune.View1.AdcSupp.Config.LoadConfig();
             Overlay.Rune.View1.All.Config.LoadConfig();
@@ -79,6 +80,36 @@ namespace OSL_Web.Configuration
             TimeControl.DecreasingTimerChapSelect(100);
             TimeControl.DecreasingTimerChapSelectFast(100, 50);
             TimeControl.DecreasingTimerChapSelectView3(100, 50);
+        }
+
+        public static void ReloadPagesView()
+        {
+            //Load configurations champ select
+            Overlay.ChampSelect.View1.Config.LoadPatchRegionConfig();
+            Overlay.ChampSelect.View2.Config.LoadPatchRegionConfig();
+            Overlay.ChampSelect.View3.Config.LoadPatchRegionConfig();
+            Overlay.ChampSelect.View4.Config.LoadPatchRegionConfig();
+
+            //Load configurations in game
+            Overlay.InGame.View1.Config.LoadPatchRegionConfig();
+            Overlay.InGame.View1_1.Config.LoadPatchRegionConfig();
+            Overlay.InGame.View2.Config.LoadPatchRegionConfig();
+            Overlay.InGame.View3.Config.LoadPatchRegionConfig();
+
+            //Load configurations end game
+            Overlay.EndGame.View1.Config.LoadPatchRegionConfig();
+            Overlay.EndGame.View2.Config.LoadPatchRegionConfig();
+            Overlay.EndGame.View3.Config.LoadPatchRegionConfig();
+
+            //Load configurations runes
+            Overlay.Rune.View1.Config.LoadPatchRegionConfig();
+            Overlay.Rune.View1.Adc.Config.LoadPatchRegionConfig();
+            Overlay.Rune.View1.AdcSupp.Config.LoadPatchRegionConfig();
+            Overlay.Rune.View1.All.Config.LoadPatchRegionConfig();
+            Overlay.Rune.View1.Jungle.Config.LoadPatchRegionConfig();
+            Overlay.Rune.View1.Mid.Config.LoadPatchRegionConfig();
+            Overlay.Rune.View1.Supp.Config.LoadPatchRegionConfig();
+            Overlay.Rune.View1.Top.Config.LoadPatchRegionConfig();
         }
 
         public static void LoadDefaultDataChampSelect()

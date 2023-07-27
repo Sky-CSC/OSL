@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using OSL_CDragon;
 using OSL_Common.System.Logging;
+using static OSL_Web.DataProcessing.InGame;
 
 
 namespace OSL_Web.DataProcessing
@@ -10,19 +11,13 @@ namespace OSL_Web.DataProcessing
         private static Logger _logger = new("InGame");
         public static bool firstCallPerks = false;
         public static bool initTimerGame = true;
-        public static dynamic allGameData = null;
+        public static dynamic allPlayerList = null;
         public static dynamic playBack = null;
         public static bool liveEvent = false;
         public static dynamic liveEventContent = null;
         public static GameInformation gameInformation = new();
         public static void ReadData(string content)
         {
-            //if (firstCallPerks)
-            //{
-            //    Runes.CreateSummonerPerksList(content);
-            //    firstCallPerks = false;
-            //}
-            //Faire des fonctions pour valider si c'est telle ou tel type de donnée
             if (content.Contains("gameClients") && content.Contains("gameData") && content.Contains("gameDodge") && content.Contains("map") && content.Contains("phase"))
             {
                 Runes.CreateSummonerPerksList(content);
@@ -32,84 +27,259 @@ namespace OSL_Web.DataProcessing
                 try
                 {
                     //If is json allGameData recive
-                    if (content.Contains("activePlayer") && content.Contains("allPlayers") && content.Contains("events") && content.Contains("gameData"))
+                    if (content.Contains("championName") && content.Contains("isBot") && content.Contains("isDead") && content.Contains("items")) //is playerlist
                     {
-                        allGameData = JsonConvert.DeserializeObject(content);
+                        allPlayerList = JsonConvert.DeserializeObject(content);
 
-                        //foreach (var data in allGameData)
-                        //{
-                        //    if (data.)
-                        //    //Console.WriteLine(champion.championName);
-                        //    foreach (var items in data.items)
-                        //    {
-                        //        //Console.WriteLine(items.itemID);
-                        //    }
-                        //    //Console.WriteLine(champion.level);
-                        //}
+                        //Console.WriteLine("ici");
+                        //Console.WriteLine(allPlayerList[0]);
+                        //Console.WriteLine(allPlayerList[0].championName);
 
-                        //Check if player are dead when herald buff
-                        if (gameInformation.Helder.Killed)
+                        List<dynamic> allPlayers = new();
+                        allPlayers = allPlayerList.ToObject<List<dynamic>>();
+                        //dynamic allPlayers = allPlayerList;
+                        //Console.WriteLine(allPlayers.Count());
+                        //Console.WriteLine("la");
+                        for (int i = 0; i < allPlayers.Count(); i++)
                         {
-                            foreach (var player in allGameData.allPlayers)
+                            string team = allPlayers[i].team;
+                            if (team.Equals("ORDER"))
                             {
-                                string team = player.team;
-                                if (team.Equals(gameInformation.Helder.Team.ToUpper()))
+                                int indexSummoner = gameInformation.Order.Summoners.FindIndex(x => x.SummonerName == (string)allPlayers[i].summonerName);
+                                Console.WriteLine("ORDER -> indexSummoner : " + indexSummoner);
+                                if (indexSummoner != -1) //Exist
                                 {
-                                    if (player.isDead)
+                                    gameInformation.Order.Summoners[indexSummoner].IsDead = (bool)allPlayers[i].isDead;
+                                    Console.WriteLine("ORDER -> allPlayers[i].isDead : " + allPlayers[i].isDead);
+                                    gameInformation.Order.Summoners[indexSummoner].Levels.Level = (int)allPlayers[i].level;
+                                    Console.WriteLine("ORDER -> allPlayers[i].Level : " + allPlayers[i].level);
+                                    if (allPlayers[i].Level > gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel + 1)
                                     {
-                                        gameInformation.Helder.ChampionBuff[gameInformation.Helder.ChampionBuff.IndexOf(player.summonerName)].Buffed = false;
+                                        gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel++;
+                                        Console.WriteLine("ORDER -> gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel : " + gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel);
+                                        gameInformation.Order.Summoners[indexSummoner].Levels.ToShow = true;
+                                    }
+                                    gameInformation.Order.Summoners[indexSummoner].PositionIndice = i;
+                                    Console.WriteLine("ORDER -> PositionIndice : " + i);
+                                    foreach (var item in allPlayers[i].items)
+                                    {
+                                        int indexItem = gameInformation.Order.Summoners[indexSummoner].Items.FindIndex(x => x.ItemID == (int)item.itemID);
+                                        Console.WriteLine("ORDER -> indexItem : " + indexItem);
+                                        if (indexItem == -1) //Cet item n'est pas présent
+                                        {
+                                            Items items = new()
+                                            {
+                                                ItemID = (int)item.itemID,
+                                                ToShow = false,
+                                            };
+                                            Console.WriteLine("ORDER -> items : " + items);
+                                            gameInformation.Order.Summoners[indexSummoner].Items.Add(items);
+                                        }
                                     }
                                 }
+                                else
+                                {
+                                    Summoner summoner = new()
+                                    {
+                                        ChampionName = (string)allPlayers[i].championName,
+                                        IsDead = (bool)allPlayers[i].isDead,
+                                        Levels = new()
+                                        {
+                                            Level = (int)allPlayers[i].level,
+                                            PreviousLevel = (int)allPlayers[i].level - 1,
+                                            ToShow = false,
+                                        },
+                                        SummonerName = (string)allPlayers[i].summonerName,
+                                        PositionIndice = i,
+                                        HelderBuff = false,
+                                        BaronBuff = false
+                                    };
+                                    Console.WriteLine("ORDER -> summoner : " + summoner);
+                                    gameInformation.Order.Summoners.Add(summoner);
+                                    gameInformation.Order.HelderKill = false;
+                                    gameInformation.Order.Herald.Killed = false;
+                                    gameInformation.Order.Herald.Take = false;
+                                    gameInformation.Order.BaronKill = false;
+                                }
                             }
-                            int countChampNotBuffed = 0;
-                            foreach (var buffed in gameInformation.Helder.ChampionBuff)
+                            else //Chaos
                             {
-                                if (!buffed.Buffed)
+                                int indexSummoner = gameInformation.Chaos.Summoners.FindIndex(x => x.SummonerName == (string)allPlayers[i].summonerName);
+                                if (indexSummoner != -1) //Exist
+                                {
+                                    gameInformation.Chaos.Summoners[indexSummoner].IsDead = (bool)allPlayers[i].isDead;
+                                    gameInformation.Chaos.Summoners[indexSummoner].Levels.Level = (int)allPlayers[i].level;
+                                    if (allPlayers[i].Level > gameInformation.Chaos.Summoners[indexSummoner].Levels.PreviousLevel + 1)
+                                    {
+                                        gameInformation.Chaos.Summoners[indexSummoner].Levels.PreviousLevel++;
+                                        gameInformation.Chaos.Summoners[indexSummoner].Levels.ToShow = true;
+                                    }
+                                    gameInformation.Chaos.Summoners[indexSummoner].PositionIndice = i;
+                                    foreach (var item in allPlayers[i].items)
+                                    {
+                                        int indexItem = gameInformation.Chaos.Summoners[indexSummoner].Items.FindIndex(x => x.ItemID == (int)item.itemID);
+                                        if (indexItem == -1) //Cet item n'est pas présent
+                                        {
+                                            Items items = new()
+                                            {
+                                                ItemID = (int)item.itemID,
+                                                ToShow = false,
+                                            };
+                                            gameInformation.Chaos.Summoners[indexSummoner].Items.Add(items);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Summoner summoner = new()
+                                    {
+                                        ChampionName = (string)allPlayers[i].championName,
+                                        IsDead = (bool)allPlayers[i].isDead,
+                                        Levels = new()
+                                        {
+                                            Level = (int)allPlayers[i].level,
+                                            PreviousLevel = (int)allPlayers[i].level - 1,
+                                            ToShow = false,
+                                        },
+                                        SummonerName = (string)allPlayers[i].summonerName,
+                                        PositionIndice = i,
+                                        HelderBuff = false,
+                                        BaronBuff = false
+                                    };
+                                    gameInformation.Chaos.Summoners.Add(summoner);
+                                    gameInformation.Chaos.HelderKill = false;
+                                    gameInformation.Chaos.Herald.Killed = false;
+                                    gameInformation.Chaos.Herald.Take = false;
+                                    gameInformation.Chaos.BaronKill = false;
+                                }
+                            }
+
+                        }
+
+
+                        //Check if player are dead when herald buff
+                        if (gameInformation.Order.HelderKill)
+                        {
+                            int countChampNotBuffed = 0;
+                            foreach (var summoner in gameInformation.Order.Summoners)
+                            {
+                                if (summoner.HelderBuff)
+                                {
+                                    if (summoner.IsDead)
+                                    {
+                                        summoner.HelderBuff = false;
+                                        countChampNotBuffed++;
+                                    }
+                                }
+                                else
                                 {
                                     countChampNotBuffed++;
                                 }
                             }
-                            if (countChampNotBuffed == gameInformation.Helder.ChampionBuff.Count())
+                            if (countChampNotBuffed == gameInformation.Order.Summoners.Count())
                             {
-                                gameInformation.Helder.Killed = false;
+                                gameInformation.Order.HelderKill = false;
                                 //Buff timer 0
                                 Pages.InGame.TimerControl.buffHelder = 0;
+                            }
+                            if (Pages.InGame.TimerControl.buffHelder == 0)
+                            {
+                                gameInformation.Order.HelderKill = false;
+                            }
+                        }
+                        else
+                        {
+                            int countChampNotBuffed = 0;
+                            foreach (var summoner in gameInformation.Chaos.Summoners)
+                            {
+                                if (summoner.HelderBuff)
+                                {
+                                    if (summoner.IsDead)
+                                    {
+                                        summoner.HelderBuff = false;
+                                        countChampNotBuffed++;
+                                    }
+                                }
+                                else
+                                {
+                                    countChampNotBuffed++;
+                                }
+                            }
+                            if (countChampNotBuffed == gameInformation.Chaos.Summoners.Count())
+                            {
+                                gameInformation.Chaos.HelderKill = false;
+                                //Buff timer 0
+                                Pages.InGame.TimerControl.buffHelder = 0;
+                            }
+                            if (Pages.InGame.TimerControl.buffHelder == 0)
+                            {
+                                gameInformation.Chaos.HelderKill = false;
                             }
                         }
 
                         //Check if player are dead when baron buff
-                        if (gameInformation.Baron.Killed)
+                        if (gameInformation.Order.BaronKill)
                         {
-                            foreach (var player in allGameData.allPlayers)
+                            int countChampNotBuffed = 0;
+                            foreach (var summoner in gameInformation.Order.Summoners)
                             {
-                                string team = player.team;
-                                if (team.Equals(gameInformation.Baron.Team.ToUpper()))
+                                if (summoner.HelderBuff)
                                 {
-                                    if (player.isDead)
+                                    if (summoner.IsDead)
                                     {
-                                        gameInformation.Baron.ChampionBuff[gameInformation.Baron.ChampionBuff.IndexOf(player.summonerName)].Buffed = false;
+                                        summoner.HelderBuff = false;
+                                        countChampNotBuffed++;
                                     }
                                 }
-                            }
-                            int countChampNotBuffed = 0;
-                            foreach (var buffed in gameInformation.Baron.ChampionBuff)
-                            {
-                                if (!buffed.Buffed)
+                                else
                                 {
                                     countChampNotBuffed++;
                                 }
                             }
-                            if (countChampNotBuffed == gameInformation.Baron.ChampionBuff.Count())
+                            if (countChampNotBuffed == gameInformation.Order.Summoners.Count())
                             {
-                                gameInformation.Baron.Killed = false;
+                                gameInformation.Order.BaronKill = false;
                                 //Buff timer 0
                                 Pages.InGame.TimerControl.buffBaron = 0;
+                            }
+                            if (Pages.InGame.TimerControl.buffBaron == 0)
+                            {
+                                gameInformation.Order.BaronKill = false;
+                            }
+                        }
+                        else
+                        {
+                            int countChampNotBuffed = 0;
+                            foreach (var summoner in gameInformation.Chaos.Summoners)
+                            {
+                                if (summoner.HelderBuff)
+                                {
+                                    if (summoner.IsDead)
+                                    {
+                                        summoner.HelderBuff = false;
+                                        countChampNotBuffed++;
+                                    }
+                                }
+                                else
+                                {
+                                    countChampNotBuffed++;
+                                }
+                            }
+                            if (countChampNotBuffed == gameInformation.Chaos.Summoners.Count())
+                            {
+                                gameInformation.Chaos.BaronKill = false;
+                                //Buff timer 0
+                                Pages.InGame.TimerControl.buffBaron = 0;
+                            }
+                            if (Pages.InGame.TimerControl.buffBaron == 0)
+                            {
+                                gameInformation.Chaos.BaronKill = false;
                             }
                         }
 
                         liveEvent = false;
                     }
-                    else if (content.Contains("length") && content.Contains("paused") && content.Contains("seeking") && content.Contains("speed") && content.Contains("time"))
+                    else if (content.Contains("length") && content.Contains("paused") && content.Contains("seeking") && content.Contains("speed") && content.Contains("time")) //is playBack 
                     {
 
                         if (initTimerGame)
@@ -118,9 +288,8 @@ namespace OSL_Web.DataProcessing
                             Pages.InGame.TimerControl.InitTimerGameStart();
                             initTimerGame = false;
                         }
-
                         playBack = JsonConvert.DeserializeObject(content);
-                        bool paused = playBack.paused;
+                        bool paused = (bool)playBack.paused;
                         if (paused)
                         {
                             Pages.InGame.TimerControl.Pause();
@@ -133,33 +302,11 @@ namespace OSL_Web.DataProcessing
                             }
                         }
 
-                        float speed = playBack.speed;
-                        Pages.InGame.TimerControl.Interval(1000/speed);
-
-                        //if (speed == 0.25)
-                        //{
-                        //    Pages.InGame.TimerControl.Interval(4000);
-                        //}
-                        //else if (speed == 0.50)
-                        //{
-                        //    Pages.InGame.TimerControl.Interval(2000);
-                        //}
-                        //else if (speed == 1)
-                        //{
-                        //    Pages.InGame.TimerControl.Interval(1000);
-                        //}
-                        //else if (speed == 2)
-                        //{
-                        //    Pages.InGame.TimerControl.Interval(500);
-                        //}
-                        //else if (speed == 4)
-                        //{
-                        //    Pages.InGame.TimerControl.Interval(250);
-                        //}
-                        //else if (speed == 8)
-                        //{
-                        //    Pages.InGame.TimerControl.Interval(125);
-                        //}
+                        double speed = (double)playBack.speed;
+                        if (Pages.InGame.TimerControl.generalTimer.Interval != speed * 1000)
+                        {
+                            Pages.InGame.TimerControl.Interval(1000 / speed);
+                        }
 
                         liveEvent = false;
                     }
@@ -170,7 +317,7 @@ namespace OSL_Web.DataProcessing
                 }
                 catch (Exception e)
                 {
-                    _logger.log(LoggingLevel.WARN, "ReadData()", "Error deserialize player list, possible not playerList");
+                    _logger.log(LoggingLevel.WARN, "ReadData()", "Error deserialize player list, possible not playerList" + e);
                     liveEvent = true;
                 }
                 if (liveEvent)
@@ -178,12 +325,14 @@ namespace OSL_Web.DataProcessing
                     try
                     {
                         string tempsContent = "[\n" + content.Replace("}", "},") + "]";
-                        //Console.WriteLine(tempsContent);
                         liveEventContent = JsonConvert.DeserializeObject(tempsContent);
                         foreach (var events in liveEventContent)
                         {
-                            //Console.WriteLine(events.eventname);
                             string eventname = events.eventname;
+                            if (eventname == null)
+                            {
+                                eventname = "";
+                            }
                             if (eventname.Equals("OnKillDragon_Spectator"))
                             {
                                 string other = events.other;
@@ -194,48 +343,46 @@ namespace OSL_Web.DataProcessing
                                     //Run timer buff helder
                                     Pages.InGame.TimerControl.buffHelder = 150;
 
-                                    Console.WriteLine(events.eventname);
-                                    Console.WriteLine(events.other);
-                                    Console.WriteLine(events.sourceTeam);
-                                    gameInformation.Helder.Killed = true;
                                     string sourceTeam = events.sourceTeam;
-                                    gameInformation.Helder.Team = sourceTeam;
-                                    foreach (var player in allGameData.allPlayers)
+                                    if (sourceTeam.Equals("order"))
                                     {
-                                        string team = player.team;
-                                        if (team.Equals(sourceTeam.ToUpper()))
+                                        gameInformation.Order.HelderKill = true;
+                                        foreach (var summoner in gameInformation.Order.Summoners)
                                         {
-                                            ChampionBuff championBuff = new();
-                                            championBuff.SummonerName = player.summonerName;
-                                            if (!player.isDead)
+                                            if (!summoner.IsDead)//Not dead he win helder dragon buff
                                             {
-                                                championBuff.Buffed = true;
+                                                summoner.HelderBuff = true;
                                             }
-                                            else
+                                        }
+                                    }
+                                    else
+                                    {
+                                        gameInformation.Chaos.HelderKill = true;
+                                        foreach (var summoner in gameInformation.Chaos.Summoners)
+                                        {
+                                            if (!summoner.IsDead)//Not dead he win helder dragon buff
                                             {
-                                                championBuff.Buffed = false;
+                                                summoner.HelderBuff = true;
                                             }
-                                            gameInformation.Helder.ChampionBuff.Add(championBuff);
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    Console.WriteLine(events.eventname);
-                                    Console.WriteLine(events.other);
-                                    Console.WriteLine(events.sourceTeam);
                                     string sourceTeam = events.sourceTeam;
                                     if (sourceTeam.Equals("Order"))
                                     {
-                                        gameInformation.Drake.Order.Add(events.other);
+                                        Console.WriteLine("add");
+                                        gameInformation.Order.Drakes.Add((string)events.other);
                                     }
                                     else if (sourceTeam.Equals("Chaos"))
                                     {
-                                        gameInformation.Drake.Chaos.Add(events.other);
+                                        Console.WriteLine("add");
+                                        gameInformation.Chaos.Drakes.Add((string)events.other);
                                     }
 
                                     //Run timer next drake
-                                    if (gameInformation.Drake.Order.Count == 4 || gameInformation.Drake.Chaos.Count == 4)
+                                    if (gameInformation.Order.Drakes.Count == 4 || gameInformation.Chaos.Drakes.Count == 4)
                                     {
                                         Pages.InGame.TimerControl.nextHelder = 360;
                                     }
@@ -252,25 +399,26 @@ namespace OSL_Web.DataProcessing
                                 //Run timer buff
                                 Pages.InGame.TimerControl.buffBaron = 210;
 
-                                Console.WriteLine(events.eventname);
-                                Console.WriteLine(events.other);
-                                Console.WriteLine(events.sourceTeam);
-                                foreach (var champion in allGameData)
+                                string sourceTeam = events.sourceTeam;
+                                if (sourceTeam.Equals("order"))
                                 {
-                                    //Console.WriteLine(champion.championName);
-                                    string team = champion.team;
-                                    string sourceTeam = events.sourceTeam;
-                                    sourceTeam = sourceTeam.ToUpper();
-                                    if (team.Equals(sourceTeam))
+                                    gameInformation.Order.BaronKill = true;
+                                    foreach (var summoner in gameInformation.Order.Summoners)
                                     {
-                                        bool isDead = champion.isDead;
-                                        if (!isDead)
+                                        if (!summoner.IsDead)//Not dead he win Baron buff
                                         {
-                                            Console.WriteLine("Alive " + champion.championName);
+                                            summoner.BaronBuff = true;
                                         }
-                                        else
+                                    }
+                                }
+                                else
+                                {
+                                    gameInformation.Chaos.BaronKill = true;
+                                    foreach (var summoner in gameInformation.Chaos.Summoners)
+                                    {
+                                        if (!summoner.IsDead)//Not dead he win Baron buff
                                         {
-                                            Console.WriteLine("Dead " + champion.championName);
+                                            summoner.BaronBuff = true;
                                         }
                                     }
                                 }
@@ -281,7 +429,7 @@ namespace OSL_Web.DataProcessing
                                 if (other.Contains("SRU_RiftHerald"))
                                 {
                                     //Run timer next herald if timer not 13:45
-                                    double gameTime = allGameData.gameData.gameTime;
+                                    double gameTime = playBack.time; //voir pour récupérer le gameTime autre part
                                     DateTime timeTemps = new DateTime(1970, 1, 1, 0, 0, 0, 0);
                                     timeTemps = timeTemps.AddSeconds(gameTime);
 
@@ -294,9 +442,18 @@ namespace OSL_Web.DataProcessing
                                         Pages.InGame.TimerControl.nextHerald = 480;
                                     }
 
-                                    Console.WriteLine(events.eventname);
-                                    Console.WriteLine(events.other);
-                                    Console.WriteLine(events.sourceTeam);
+                                    string sourceTeam = events.sourceTeam;
+                                    if (sourceTeam.Equals("order"))
+                                    {
+                                        gameInformation.Order.Herald.Killed = true;
+                                        gameInformation.Order.Herald.Take = false;
+                                    }
+                                    else
+                                    {
+                                        gameInformation.Chaos.Herald.Killed = true;
+                                        gameInformation.Chaos.Herald
+                                            .Take = false;
+                                    }
                                 }
                             }
                             else if (eventname.Equals("OnMinionKill"))
@@ -307,18 +464,65 @@ namespace OSL_Web.DataProcessing
                                     //Run timer buff herald
                                     Pages.InGame.TimerControl.buffHerald = 240;
 
-                                    Console.WriteLine(events.eventname);
-                                    Console.WriteLine(events.other);
-                                    Console.WriteLine(events.otherTeam);
+                                    string sourceTeam = events.sourceTeam;
+                                    if (sourceTeam.Equals("order"))
+                                    {
+                                        gameInformation.Order.Herald.Take = true;
+                                    }
+                                    else
+                                    {
+                                        gameInformation.Chaos.Herald.Take = true;
+                                    }
                                 }
                             }
                             else if (eventname.Equals("OnSummonRiftHerald"))
                             {
                                 Pages.InGame.TimerControl.buffHerald = 0;
-                                Console.WriteLine(events.eventname);
-                                Console.WriteLine(events.other);
-                                Console.WriteLine(events.sourceTeam);
+                                string sourceTeam = events.sourceTeam;
+                                if (sourceTeam.Equals("order"))
+                                {
+                                    gameInformation.Order.Herald.Killed = false;
+                                }
+                                else
+                                {
+                                    gameInformation.Chaos.Herald.Killed = false;
+                                }
                             }
+                            //else if (eventname.Equals("OnDampenerDie"))
+                            //{
+                            //    string sourceTeam = events.sourceTeam;
+                            //    string  source = events.source;
+                            //    if (sourceTeam.Equals("order"))
+                            //    {
+                            //        if (source.Equals(""))
+                            //        {
+                            //            Pages.InGame.TimerControl.inhibOrderTop = 300;
+                            //        }
+                            //        else if (source.Equals(""))
+                            //        {
+                            //            Pages.InGame.TimerControl.inhibOrderMid = 300;
+                            //        }
+                            //        else if (source.Equals(""))
+                            //        {
+                            //            Pages.InGame.TimerControl.inhibOrderBot = 300;
+                            //        }
+                            //    }
+                            //    else
+                            //    {
+                            //        if (source.Equals(""))
+                            //        {
+                            //            Pages.InGame.TimerControl.inhibChaosTop = 300;
+                            //        }
+                            //        else if (source.Equals(""))
+                            //        {
+                            //            Pages.InGame.TimerControl.inhibChaosMid = 300;
+                            //        }
+                            //        else if (source.Equals(""))
+                            //        {
+                            //            Pages.InGame.TimerControl.inhibChaosBot = 300;
+                            //        }
+                            //    }
+                            //}
                         }
                     }
                     catch (Exception e)
@@ -327,152 +531,77 @@ namespace OSL_Web.DataProcessing
                     }
                 }
             }
-
-
-            //Faire une liste d'objet qui se rempli et ce vide à chaque fois que les pages y accédent
-            //Des que un event, item, level arrive, le inGame le consome et le supprime
-            //La page met à jours ces donnée pour savoir ce qu'il y à en cours comme pour les drake par exemple
-            //Récupérer avec le timer les LiveEvents pour savoir si ils ont déjà eu lieu ou pas
-
-            //Pour les items si https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/fr_fr/v1/items.json
-            //to est vide alors c'est le dernier item de ça branche
-
-            //If ReplayApi create summoner list, update it 
-            //Mettre à jours que si c'est différent du json reçu précédament (comme pour champ select dans l'idée)
-            //Afficher les items quand acheté et les level up, pas en boucle 
-            //Si la page n'as jamais chargé la liste il la charge et met un bool à false, plus dispo pour charger info
-
-
-            //Pourquoi ne pas rajouter à allgamedata les true false pour les buff et aussi les drake
-            //On ajoute un true false pour les buff dans allPlayers
-            //On ajoute un catégorie drake avec les équipes et chacun les drake kill
-        }
-
-        public static void CreationGameInformation()
-        {
-            gameInformation.TimeStamp = 123.123;
-            //gameInformation.Drake = new();
-            //gameInformation.Drake.Order = new();
-            //gameInformation.Drake.Chaos = new();
-            gameInformation.Drake.Order.Add("Fire");
-            gameInformation.Drake.Order.Add("Hextech");
-            gameInformation.Drake.Order.Add("Air");
-            gameInformation.Drake.Chaos.Add("Water");
-            gameInformation.Drake.Chaos.Add("Chemtech");
-            gameInformation.Drake.Chaos.Add("Earth");
-            gameInformation.Helder.Killed = true;
-            gameInformation.Helder.Team = "Chaos";
-            //gameInformation.Helder.ChampionBuff = new();
-            ChampionBuff temps = new();
-            temps.SummonerName = "Sky";
-            temps.Buffed = true;
-            gameInformation.Helder.ChampionBuff.Add(temps);
-            ChampionBuff temps2 = new();
-            temps2.SummonerName = "Skynet";
-            temps2.Buffed = false;
-            gameInformation.Helder.ChampionBuff.Add(temps2);
-
-            gameInformation.Baron.Killed = true;
-            gameInformation.Baron.Team = "Chaos";
-            //gameInformation.Baron.ChampionBuff = new();
-            ChampionBuff temps3 = new();
-            temps3.SummonerName = "Sky";
-            temps3.Buffed = false;
-            gameInformation.Baron.ChampionBuff.Add(temps3);
-            ChampionBuff temps4 = new();
-            temps4.SummonerName = "Skynet";
-            temps4.Buffed = true;
-            gameInformation.Baron.ChampionBuff.Add(temps4);
-
-            gameInformation.Herald.Killed = true;
-            gameInformation.Herald.Team = "order";
-            gameInformation.Herald.Take = true;
-            gameInformation.Herald.Launch = false;
-
-            Console.WriteLine("TimeStamp");
-            Console.WriteLine(gameInformation.TimeStamp);
-            Console.WriteLine("\nDrake");
-            foreach (var info in gameInformation.Drake.Order)
-            {
-                Console.WriteLine("Order" + info);
-            }
-            foreach (var info in gameInformation.Drake.Chaos)
-            {
-                Console.WriteLine("Chaos" + info);
-            }
-            Console.WriteLine("\nHelder");
-            Console.WriteLine(gameInformation.Helder.Killed);
-            Console.WriteLine(gameInformation.Helder.Team);
-            foreach (var info in gameInformation.Helder.ChampionBuff)
-            {
-                Console.WriteLine(info.SummonerName);
-                Console.WriteLine(info.Buffed);
-            }
-            Console.WriteLine("\nBaron");
-            Console.WriteLine(gameInformation.Baron.Killed);
-            Console.WriteLine(gameInformation.Baron.Team);
-            foreach (var info in gameInformation.Baron.ChampionBuff)
-            {
-                Console.WriteLine(info.SummonerName);
-                Console.WriteLine(info.Buffed);
-            }
-            Console.WriteLine("\nHerald");
-            Console.WriteLine(gameInformation.Herald.Killed);
-            Console.WriteLine(gameInformation.Herald.Team);
-            Console.WriteLine(gameInformation.Herald.Take);
-            Console.WriteLine(gameInformation.Herald.Launch);
         }
 
         public class GameInformation
         {
             public double TimeStamp { get; set; }
-            public Drake Drake { get; set; }
-            public Buff Helder { get; set; }
-            public Buff Baron { get; set; }
-            public Herald Herald { get; set; }
+            public Team Order { get; set; }
+            public Team Chaos { get; set; }
             public GameInformation()
-            {
-                Drake = new();
-                Helder = new();
-                Baron = new();
-                Herald = new();
-            }
-        }
-
-        public class Drake
-        {
-            public List<string> Order { get; set; }
-            public List<string> Chaos { get; set; }
-            public Drake()
             {
                 Order = new();
                 Chaos = new();
             }
         }
 
-        public class Buff
+        public class Team
         {
-            public bool Killed { get; set; }
-            public string Team { get; set; }
-            public List<ChampionBuff> ChampionBuff { get; set; }
-            public Buff()
+            public List<Summoner> Summoners { get; set; }
+            public List<string> Drakes { get; set; }
+            public bool HelderKill { get; set; }
+            public Herald Herald { get; set; }
+            public bool BaronKill { get; set; }
+            public Inhib Inhib { get; set; }
+            public Team()
             {
-                ChampionBuff = new();
+                Summoners = new();
+                Drakes = new();
+                Herald = new();
+                Inhib = new();
             }
         }
 
-        public class ChampionBuff
+        public class Summoner
         {
+            public string ChampionName { get; set; }
+            public bool IsDead { get; set; }
+            public List<Items> Items { get; set; }
+            public Levels Levels { get; set; }
             public string SummonerName { get; set; }
-            public bool Buffed { get; set; }
+            public int PositionIndice { get; set; } //Position in allgamedata for display in function of position
+            public bool HelderBuff { get; set; }
+            public bool BaronBuff { get; set; }
+            public Summoner()
+            {
+                Items = new();
+                Levels = new();
+            }
+        }
+
+        public class Items
+        {
+            public int ItemID { get; set; }
+            public bool ToShow { get; set; }
+        }
+
+        public class Levels
+        {
+            public int Level { get; set; }
+            public int PreviousLevel { get; set; }
+            public bool ToShow { get; set; }
         }
 
         public class Herald
         {
             public bool Killed { get; set; }
-            public string Team { get; set; }
             public bool Take { get; set; }
-            public bool Launch { get; set; }
+        }
+        public class Inhib
+        {
+            public bool TopKilled { get; set; }
+            public bool MidKilled { get; set; }
+            public bool BotKilled { get; set; }
         }
     }
 }
