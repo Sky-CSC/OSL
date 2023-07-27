@@ -1,13 +1,15 @@
-﻿namespace OSL_WebApiRiot.WebApiRiot
+﻿using static OSL_WebApiRiot.WebApiRiot.WebApiRiot;
+
+namespace OSL_WebApiRiot.WebApiRiot
 {
     /// <summary>
     /// Get information of a summoner
     /// </summary>
     public class Summoner_V4
     {
-        private static string httpsUrl = "https://";
-        private static string region = "euw1";
-        private static string pathUrlApiRiot = ".api.riotgames.com";
+        //private static string httpsUrl = "https://";
+        //public static string region = "euw1";
+        //private static string pathUrlApiRiot = ".api.riotgames.com";
 
         /// <summary>
         /// Get information of summoner by encrypted Account Id
