@@ -33,7 +33,7 @@ namespace OSL_Web.Configuration.Overlay.ChampSelect.View4
             {
                 ChampSelectView4Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
-            ChampSelectView4Page.formatingData.DefaultRegion = "fr_fr";
+            ChampSelectView4Page.formatingData.DefaultRegion = OSL_CDragon.CDragon.region;
             //_logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{ChampSelectView4Page.formatingData.DefaultPatch}");
             //_logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{ChampSelectView4Page.formatingData.DefaultRegion}");
         }

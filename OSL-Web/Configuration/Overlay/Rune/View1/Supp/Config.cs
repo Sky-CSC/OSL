@@ -27,7 +27,7 @@ namespace OSL_Web.Configuration.Overlay.Rune.View1.Supp
             {
                 RunesSuppPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
-            RunesSuppPage.formatingData.DefaultRegion = "fr_fr";
+            RunesSuppPage.formatingData.DefaultRegion = OSL_CDragon.CDragon.region;
             //_logger.log(LoggingLevel.INFO, "LoadConfigRunesSuppPage()", $"{RunesSuppPage.formatingData.DefaultPatch}");
             //_logger.log(LoggingLevel.INFO, "LoadConfigRunesSuppPage()", $"{RunesSuppPage.formatingData.DefaultRegion}");
         }
