@@ -13,6 +13,12 @@ namespace OSL_Web.Pages.InGame
         public static int buffHerald = 240; //Duration 240
         public static int buffHelder = 150; //150 seconds for the first buff; 300 seconds for subsequent buffs 
         public static int buffBaron = 210; //3.30 min
+        public static int inhibOrderTop = 0; //5 min respawn
+        public static int inhibOrderMid = 0; //5 min respawn
+        public static int inhibOrderBot = 0; //5 min respawn
+        public static int inhibChaosTop = 0; //5 min respawn
+        public static int inhibChaosMid = 0; //5 min respawn
+        public static int inhibChaosBot = 0; //5 min respawn
         public static int gameTimer = 0;
 
         //Count down with timer of game
@@ -31,13 +37,6 @@ namespace OSL_Web.Pages.InGame
 
         private static void OnTimedEvent(object source, ElapsedEventArgs e)
         {
-            //nextDrake--;
-            //nextHerald--;
-            //nextHelder--;
-            //nextBaron--;
-            //buffHerald--;
-            //buffHelder--;
-            //buffBaron--;
             gameTimer++;
 
             if (nextDrake <= 0)
@@ -102,6 +101,55 @@ namespace OSL_Web.Pages.InGame
             {
                 buffBaron--;
             }
+
+            if (inhibOrderTop <= 0)
+            {
+                inhibOrderTop = 0;
+            }
+            else
+            {
+                inhibOrderTop--;
+            }
+            if (inhibOrderMid <= 0)
+            {
+                inhibOrderMid = 0;
+            }
+            else
+            {
+                inhibOrderMid--;
+            }
+            if (inhibOrderBot <= 0)
+            {
+                inhibOrderBot = 0;
+            }
+            else
+            {
+                inhibOrderBot--;
+            }
+            if (inhibChaosTop <= 0)
+            {
+                inhibChaosTop = 0;
+            }
+            else
+            {
+                inhibChaosTop--;
+            }
+            if (inhibChaosMid <= 0)
+            {
+                inhibChaosMid = 0;
+            }
+            else
+            {
+                inhibChaosMid--;
+            }
+            if (inhibChaosBot <= 0)
+            {
+                inhibChaosBot = 0;
+            }
+            else
+            {
+                inhibChaosBot--;
+            }
         }
 
         public static void InitTimerGameStart()
@@ -110,13 +158,16 @@ namespace OSL_Web.Pages.InGame
             nextHerald = 480;
             nextBaron = 1200;
             gameTimer = 0;
-            DecreasingTimer();
+            //DecreasingTimer();
+            //Thread RunDecreasingTimer = new Thread(() => DecreasingTimer());
+            //RunDecreasingTimer.Start();
+
         }
 
         public static void DecreasingTimer()
         {
             generalTimer = new System.Timers.Timer();
-            generalTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            generalTimer.Elapsed += OnTimedEvent;
             generalTimer.Interval = 1000;
             generalTimer.Enabled = true;
         }

@@ -6,8 +6,164 @@
 @*<img class="ingame-overlay-picture" src="@formatingData.OverlayBackground" />*@
 
 @*<div class="display-in-game" style="background: url(@formatingData.OverlayBackground)">*@
-    <div class="display-in-game">
+<div class="display-in-game">
     @{
+
+        <div>
+            nextDrake : @TimerControl.nextDrake
+
+            <br>nextHerald : @TimerControl.nextHerald
+            <br>nextHelder : @TimerControl.nextHelder
+            <br>nextBaron : @TimerControl.nextBaron
+            <br>buffHerald : @TimerControl.buffHerald
+            <br>buffHelder : @TimerControl.buffHelder
+            <br>buffBaron : @TimerControl.buffBaron
+            <br>gameTimer : @TimerControl.gameTimer
+            @*</div>*@
+            <br />
+            @*<div>*@
+
+            @foreach (var drakeOrder in DataProcessing.InGame.gameInformation.Order.Drakes)
+            {
+                <div>
+                    drake Order : @drakeOrder
+                </div>
+            }
+            @foreach (var drakeChaos in DataProcessing.InGame.gameInformation.Chaos.Drakes)
+            {
+                <div>
+                    drake Chaos : @drakeChaos
+                </div>
+            }
+
+            @*</div>*@
+            <br>
+            @*<div>*@
+            @if (DataProcessing.InGame.gameInformation.Order.HelderKill)
+            {
+                <div>
+                    @DataProcessing.InGame.gameInformation.Order.HelderKill
+                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Order.Summoners)
+                    {
+                        <div>
+                            ChampionBuff SummonerName : @championBuff.SummonerName
+                            ChampionBuff Buffed : @championBuff.HelderBuff
+                        </div>
+                    }
+                </div>
+            }
+            else if (DataProcessing.InGame.gameInformation.Chaos.HelderKill)
+            {
+                <div>
+                    @DataProcessing.InGame.gameInformation.Chaos.HelderKill
+                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+                    {
+                        <div>
+                            ChampionBuff SummonerName : @championBuff.SummonerName
+                            ChampionBuff Buffed : @championBuff.HelderBuff
+                        </div>
+                    }
+                </div>
+            }
+            @*</div>*@
+            <br>
+            @*<div>*@
+            @if (DataProcessing.InGame.gameInformation.Order.BaronKill)
+            {
+                <div>
+                    @DataProcessing.InGame.gameInformation.Order.BaronKill
+                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Order.Summoners)
+                    {
+                        <div>
+                            ChampionBuff SummonerName : @championBuff.SummonerName
+                            ChampionBuff Buffed : @championBuff.BaronBuff
+                        </div>
+                    }
+                </div>
+            }
+            else if (DataProcessing.InGame.gameInformation.Chaos.BaronKill)
+            {
+                <div>
+                    @DataProcessing.InGame.gameInformation.Chaos.BaronKill
+                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+                    {
+                        <div>
+                            ChampionBuff SummonerName : @championBuff.SummonerName
+                            ChampionBuff Buffed : @championBuff.BaronBuff
+                        </div>
+                    }
+                </div>
+            }
+            @*</div>*@
+            <br>
+            @*<div>*@
+            @if (DataProcessing.InGame.gameInformation.Order.Herald.Killed)
+            {
+                <div>
+                    @DataProcessing.InGame.gameInformation.Order.Herald.Killed
+                    @DataProcessing.InGame.gameInformation.Order.Herald.Take
+                </div>
+            }
+            else if (DataProcessing.InGame.gameInformation.Chaos.Herald.Killed)
+            {
+                <div>
+                    @DataProcessing.InGame.gameInformation.Chaos.Herald.Killed
+                    @DataProcessing.InGame.gameInformation.Chaos.Herald.Take
+                </div>
+            }
+
+            @foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
+            {
+                @foreach (var items in summoner.Items)
+                {
+                    int idItem = items.ItemID;
+                    int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
+                    int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
+                    int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
+                    string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
+
+                    @if (OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].To.Count() == 0)
+                    {
+                        <div class="perks-wrapper">
+                            <div class="perks-wrapper-frame">
+                                <img class="perks-img" src="@iconPath" />
+                            </div>
+                        </div>
+                    }
+                }
+            }
+            @foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+            {
+                @foreach (var items in summoner.Items)
+                {
+                    int idItem = items.ItemID;
+                    int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
+                    int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
+                    int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
+                    string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
+
+                    @if (OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].To.Count() == 0)
+                    {
+                        <div class="perks-wrapper">
+                            <div class="perks-wrapper-frame">
+                                <img class="perks-img" src="@iconPath" />
+                            </div>
+                        </div>
+                    }
+                }
+            }
+
+        </div>
+
+
+
+
+
+
+
+
+
+
         if (formatingData.DisplayDragonTimer)
         {
             <div class="dragon-timer">
@@ -32,7 +188,7 @@
                     @*<div class="blue-team-banner" style="background-image: url(@formatingData.TeamBanner)"></div>*@
                     <img class="blue-team-banner" src="@formatingData.TeamBanner">
                     <div class="blue-team-text">
-                        <div class="blue-team-text-display"style="color: @formatingData.ColorBlueTeamText">
+                        <div class="blue-team-text-display" style="color: @formatingData.ColorBlueTeamText">
                             @formatingData.BlueTeamText
                         </div>
                     </div>
@@ -50,7 +206,7 @@
                 {
                     <img class="red-team-score-banner" src="@formatingData.TeamScoreBanner">
                     <div class="red-team-score">
-                        <div class="red-team-score-text-display"style="color: @formatingData.ColorRedTeamScoreText">
+                        <div class="red-team-score-text-display" style="color: @formatingData.ColorRedTeamScoreText">
                             @formatingData.RedTeamScoreText
                         </div>
                     </div>

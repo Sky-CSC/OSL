@@ -30,6 +30,8 @@ namespace OSL_Web.Pages.Config
             [Required]
             [StringLength(42, MinimumLength = 42, ErrorMessage = "API key is incorect (42 character).")]
             public string WebRiotApiKey { get; set; }
+
+            public string ValuePatchRegion { get; set; } = "latest : fr_fr";
         }
 
         public static void WebRiotApiKeySubmit()
@@ -41,6 +43,14 @@ namespace OSL_Web.Pages.Config
             };
             FileManagerLocal.RewrittenFile("./Configuration/WebApiRiot/web-api-riot.json", JsonConvert.SerializeObject(webApiRegister));
             _logger.log(LoggingLevel.INFO, "WebRiotApiKeySubmit()", $"Web riot api key change : {WebApiRiot.apiKey}");
+        }
+
+        public static void PatchRegionSubmit()
+        {
+            Console.WriteLine("Yolo " + OverlayText.ValuePatchRegion);
+            OSL_CDragon.CDragon.SetPatch(OverlayText.ValuePatchRegion.Split(" : ")[0]);
+            OSL_CDragon.CDragon.SetRegion(OverlayText.ValuePatchRegion.Split(" : ")[1]);
+            Configuration.Config.ReloadPagesView();
         }
 
         private async Task LoadFiles(InputFileChangeEventArgs e)

@@ -5,7 +5,7 @@ namespace OSL_Web.Pages.InGame
 {
     public partial class InGameView1_1Page
     {
-        private static Logger _logger = new("InGameView1Page");
+        private static Logger _logger = new("InGameView1_1Page");
 
         public static FormatingData formatingData = new();
 

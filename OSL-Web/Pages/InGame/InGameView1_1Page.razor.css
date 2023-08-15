@@ -162,6 +162,42 @@ div {
     }
 
 /*##########################################################*/
+/*######################### Items ##########################*/
+/*##########################################################*/
+
+.perks-wrapper {
+    position: absolute;
+    top: 156px;
+    left: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .perks-wrapper .perks-wrapper-frame {
+        position: relative;
+        margin-bottom: 57px;
+
+        animation-name: fade;
+        animation-duration: 5.5s;
+        animation-iteration-count: 3;
+    }
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*##########################################################*/
 /*######################### Bottom #########################*/
 /*##########################################################*/
 .left-info {

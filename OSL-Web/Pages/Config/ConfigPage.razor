@@ -8,7 +8,7 @@
     <div class="Configuration">
         <div class="content">
             <h1 class="title">Configuration :</h1>
-            <br />               
+            <br />
             <div class="configuration-web-api-key">
                 <h2 class="title">Web riot api key :</h2>
                 <div class="configuration-web-api-key-content">
@@ -24,6 +24,30 @@
                         <br />
                         <a href="https://developer.riotgames.com/" target="_blank">Riot Developer page (take your api key)</a>
                         <br />Login and copi past your "Development API Key"
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="configuration-patch-region">
+                <h2 class="title">Patch and Region :</h2>
+                <div class="configuration-patch-region-content">
+                    <div class="form-group row">
+                        <br />
+                        <div class="col-sm-10">
+                            <label style="font-weight: bold">Choose your patch and region configuration</label>
+                            <select id="patch-region" @bind="@OverlayText.ValuePatchRegion" class="form-control" @onclick="@PatchRegionSubmit">
+                                <option value="latest : fr_fr">latest : fr_fr (Default)</option>
+                                @foreach (var patch in OSL_CDragon.CDragon.dataCDragon.Patch)
+                                {
+                                    @foreach (var region in patch.Region)
+                                    {
+                                        <option value="@patch.Name : @region.Name">@patch.Name : @region.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
