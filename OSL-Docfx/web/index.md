@@ -8,8 +8,8 @@
 ---
 
 ## Run application
-1. Download last release : [Release v1.1.5](https://github.com/Sky-CSC/OSL/releases/latest)
-2. Unzip ``OSL-Web-1.1.5-win-x64.zip`` to desired install folder
+1. Download last release : [Release v1.1.6](https://github.com/Sky-CSC/OSL/releases/latest)
+2. Unzip ``OSL-Web-1.1.6-win-x64.zip`` to desired install folder
 3. Run ```OSL-Web.exe```, **Read the index web page when OSL-Web is launched**
 4. Change the Web Riot Api key in the web interface configuration
 
