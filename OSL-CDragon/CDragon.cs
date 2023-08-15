@@ -100,6 +100,7 @@ namespace OSL_CDragon
                             //date now
                             CDragon.date = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
                         }
+                        CDragon.date = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
                         string[] splitContentMetadata = ContentMetadataVersion.Split(".");
                         numPatch = splitContentMetadata[0] + "." + splitContentMetadata[1];
                         //_logger.log(LoggingLevel.INFO, "DownloadFiles()", $"Num patch : {numPatch}, Region : {region}");
@@ -175,10 +176,10 @@ namespace OSL_CDragon
             /// <param name="region"></param>
             private static void CreatedDirectory(string numPatch, string region)
             {
-                championDirectory += numPatch + "/" + region + "/" + "Champions" + "/"; 
-                itemsDirectory += numPatch + "/" + region + "/" + "Items" + "/"; 
+                championDirectory += numPatch + "/" + region + "/" + "Champions" + "/";
+                itemsDirectory += numPatch + "/" + region + "/" + "Items" + "/";
                 summonerSpellsDirectory += numPatch + "/" + region + "/" + "SummonerSpell" + "/";
-                perksDirectory += numPatch + "/" + region + "/" + "Perks" + "/"; 
+                perksDirectory += numPatch + "/" + region + "/" + "Perks" + "/";
                 DirectoryManagerLocal.CreateDirectory(championDirectory);
                 DirectoryManagerLocal.CreateDirectory(itemsDirectory);
                 DirectoryManagerLocal.CreateDirectory(summonerSpellsDirectory);
