@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LaneInfo
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 139
+    startLine: 143
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -57,11 +57,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: lanes
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 141
+    startLine: 145
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

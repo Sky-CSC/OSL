@@ -5,7 +5,7 @@ items:
   id: Config
   parent: OSL_Web.Configuration.Overlay.Rune.View1
   children:
-  - OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadConfig
+  - OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadPatchRegionConfig
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Overlay/Rune/View1/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Web/Configuration/Overlay/Rune/View1/Config.cs
@@ -43,32 +43,32 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadConfig
-  commentId: M:OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadConfig
-  id: LoadConfig
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadPatchRegionConfig
+  commentId: M:OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadPatchRegionConfig
+  id: LoadPatchRegionConfig
   parent: OSL_Web.Configuration.Overlay.Rune.View1.Config
   langs:
   - csharp
   - vb
-  name: LoadConfig()
-  nameWithType: Config.LoadConfig()
-  fullName: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadConfig()
+  name: LoadPatchRegionConfig()
+  nameWithType: Config.LoadPatchRegionConfig()
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadPatchRegionConfig()
   type: Method
   source:
     remote:
       path: OSL-Web/Configuration/Overlay/Rune/View1/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
-    id: LoadConfig
+    id: LoadPatchRegionConfig
     path: ../OSL-Web/Configuration/Overlay/Rune/View1/Config.cs
     startLine: 9
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration.Overlay.Rune.View1
   syntax:
-    content: public static void LoadConfig()
-    content.vb: Public Shared Sub LoadConfig
-  overload: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadConfig*
+    content: public static void LoadPatchRegionConfig()
+    content.vb: Public Shared Sub LoadPatchRegionConfig
+  overload: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadPatchRegionConfig*
   modifiers.csharp:
   - public
   - static
@@ -373,8 +373,8 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadConfig*
-  commentId: Overload:OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadConfig
-  name: LoadConfig
-  nameWithType: Config.LoadConfig
-  fullName: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadConfig
+- uid: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadPatchRegionConfig*
+  commentId: Overload:OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadPatchRegionConfig
+  name: LoadPatchRegionConfig
+  nameWithType: Config.LoadPatchRegionConfig
+  fullName: OSL_Web.Configuration.Overlay.Rune.View1.Config.LoadPatchRegionConfig

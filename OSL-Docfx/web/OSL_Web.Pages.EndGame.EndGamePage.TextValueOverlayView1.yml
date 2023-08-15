@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TextValueOverlayView1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -172,7 +172,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBlueTeamName
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -223,7 +223,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarRedTeamName
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -274,7 +274,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBlueTeamScore
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -325,7 +325,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarRedTeamScore
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -376,7 +376,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarTimerText
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -427,7 +427,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoText
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -478,7 +478,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffText
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -529,7 +529,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -564,7 +564,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -599,7 +599,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -634,7 +634,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -669,7 +669,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -704,7 +704,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -739,7 +739,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -799,7 +799,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -859,7 +859,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -919,7 +919,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -979,7 +979,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1039,7 +1039,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1099,7 +1099,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1159,7 +1159,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1219,7 +1219,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1279,7 +1279,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1339,7 +1339,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1399,7 +1399,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1459,7 +1459,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1519,7 +1519,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1579,7 +1579,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1639,7 +1639,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1699,7 +1699,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1759,7 +1759,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1819,7 +1819,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1879,7 +1879,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1939,7 +1939,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -1999,7 +1999,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2059,7 +2059,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2119,7 +2119,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2179,7 +2179,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBlueTeamNameSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2211,7 +2211,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarRedTeamNameSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2243,7 +2243,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBlueTeamScoreSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2275,7 +2275,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarRedTeamScoreSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2307,7 +2307,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SwitchSideRedBlue
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2339,7 +2339,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2371,7 +2371,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2403,7 +2403,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2435,7 +2435,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2467,7 +2467,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2499,7 +2499,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2531,7 +2531,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2563,7 +2563,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2595,7 +2595,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorEnableDisableSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2627,7 +2627,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2659,7 +2659,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2691,7 +2691,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2723,7 +2723,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2755,7 +2755,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsTopBarBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2789,7 +2789,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2822,7 +2822,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2854,7 +2854,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBlueTeamNameColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2886,7 +2886,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBlueTeamWinLossColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2918,7 +2918,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBlueTeamScoreColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2950,7 +2950,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarRedTeamNameColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -2982,7 +2982,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarRedTeamWinLossColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3014,7 +3014,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarRedTeamScoreColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3046,7 +3046,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarTimerTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3078,7 +3078,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarTimerColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3110,7 +3110,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3142,7 +3142,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3174,7 +3174,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3206,7 +3206,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3238,7 +3238,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsChampionInfoBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3272,7 +3272,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3305,7 +3305,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3337,7 +3337,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3369,7 +3369,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBlueBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3401,7 +3401,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBlueDegaTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3433,7 +3433,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoRedBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3465,7 +3465,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoRedDegaTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3497,7 +3497,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3529,7 +3529,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBansBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3561,7 +3561,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBansBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3593,7 +3593,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3625,7 +3625,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsBansBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3659,7 +3659,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3692,7 +3692,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBansBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3724,7 +3724,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBansTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3756,7 +3756,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3788,7 +3788,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3820,7 +3820,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3852,7 +3852,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3884,7 +3884,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsGlobalStatsBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3918,7 +3918,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3951,7 +3951,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -3983,7 +3983,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4015,7 +4015,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsBlueTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4047,7 +4047,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsRedTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4079,7 +4079,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4111,7 +4111,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4143,7 +4143,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4175,7 +4175,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4207,7 +4207,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsGoldDiffBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4241,7 +4241,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4274,7 +4274,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4306,7 +4306,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBarColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4338,7 +4338,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsGoldDiffBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4372,7 +4372,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBarColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4405,7 +4405,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4437,7 +4437,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4469,7 +4469,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBlueTextGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4501,7 +4501,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffRedTextGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4533,7 +4533,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffZeroTextGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4565,7 +4565,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBluePointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4597,7 +4597,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffRedPointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4629,7 +4629,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffZeroPointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4661,7 +4661,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffStartEndPointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -4693,7 +4693,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffLinkPointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs

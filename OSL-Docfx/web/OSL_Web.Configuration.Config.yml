@@ -10,6 +10,7 @@ items:
   - OSL_Web.Configuration.Config.LoadConfigWebHost
   - OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
   - OSL_Web.Configuration.Config.LoadDefaultDataEndGame
+  - OSL_Web.Configuration.Config.ReloadPagesView
   - OSL_Web.Configuration.Config.webHost
   - OSL_Web.Configuration.Config.webHostName
   - OSL_Web.Configuration.Config.webHttpPort
@@ -24,7 +25,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Config
     path: ../OSL-Web/Configuration/Config.cs
@@ -65,7 +66,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: webHost
     path: ../OSL-Web/Configuration/Config.cs
@@ -98,7 +99,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: webHostName
     path: ../OSL-Web/Configuration/Config.cs
@@ -131,7 +132,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: webHttpPort
     path: ../OSL-Web/Configuration/Config.cs
@@ -164,7 +165,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: webHttpsPort
     path: ../OSL-Web/Configuration/Config.cs
@@ -197,7 +198,7 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfig
     path: ../OSL-Web/Configuration/Config.cs
@@ -229,11 +230,11 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigWebHost
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 57
+    startLine: 58
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -261,11 +262,11 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadConfigTimer
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 75
+    startLine: 76
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -275,6 +276,38 @@ items:
     content: public static void LoadConfigTimer()
     content.vb: Public Shared Sub LoadConfigTimer
   overload: OSL_Web.Configuration.Config.LoadConfigTimer*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Configuration.Config.ReloadPagesView
+  commentId: M:OSL_Web.Configuration.Config.ReloadPagesView
+  id: ReloadPagesView
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: ReloadPagesView()
+  nameWithType: Config.ReloadPagesView()
+  fullName: OSL_Web.Configuration.Config.ReloadPagesView()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReloadPagesView
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 84
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static void ReloadPagesView()
+    content.vb: Public Shared Sub ReloadPagesView
+  overload: OSL_Web.Configuration.Config.ReloadPagesView*
   modifiers.csharp:
   - public
   - static
@@ -295,11 +328,11 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadDefaultDataChampSelect
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 83
+    startLine: 114
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -327,11 +360,11 @@ items:
   source:
     remote:
       path: OSL-Web/Configuration/Config.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadDefaultDataEndGame
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 88
+    startLine: 119
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -685,6 +718,11 @@ references:
   name: LoadConfigTimer
   nameWithType: Config.LoadConfigTimer
   fullName: OSL_Web.Configuration.Config.LoadConfigTimer
+- uid: OSL_Web.Configuration.Config.ReloadPagesView*
+  commentId: Overload:OSL_Web.Configuration.Config.ReloadPagesView
+  name: ReloadPagesView
+  nameWithType: Config.ReloadPagesView
+  fullName: OSL_Web.Configuration.Config.ReloadPagesView
 - uid: OSL_Web.Configuration.Config.LoadDefaultDataChampSelect*
   commentId: Overload:OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
   name: LoadDefaultDataChampSelect

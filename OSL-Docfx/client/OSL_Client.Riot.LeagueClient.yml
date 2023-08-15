@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/LeagueClient.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LeagueClient
     path: ../OSL-Client/Riot/LeagueClient.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/LeagueClient.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: CheckLaunch
     path: ../OSL-Client/Riot/LeagueClient.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/LeagueClient.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LockFile
     path: ../OSL-Client/Riot/LeagueClient.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/LeagueClient.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetHostApi
     path: ../OSL-Client/Riot/LeagueClient.cs

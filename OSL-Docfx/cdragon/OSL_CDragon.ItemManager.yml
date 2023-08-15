@@ -7,6 +7,7 @@ items:
   children:
   - OSL_CDragon.ItemManager.DownloadItems(System.String,System.String)
   - OSL_CDragon.ItemManager.ItemsAsyncDownload(System.Int32,System.Int32,System.String,System.Object,System.String,System.Int32,System.String)
+  - OSL_CDragon.ItemManager.itemsList
   - OSL_CDragon.ItemManager.UpdateDataCDragonItems(System.Int32,System.Int32,System.Object,System.String)
   langs:
   - csharp
@@ -16,8 +17,12 @@ items:
   fullName: OSL_CDragon.ItemManager
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/ItemManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ItemManager
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\ItemManager.cs
+    path: ../OSL-CDragon/ItemManager.cs
     startLine: 9
   assemblies:
   - OSL-CDragon
@@ -43,6 +48,39 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: OSL_CDragon.ItemManager.itemsList
+  commentId: F:OSL_CDragon.ItemManager.itemsList
+  id: itemsList
+  parent: OSL_CDragon.ItemManager
+  langs:
+  - csharp
+  - vb
+  name: itemsList
+  nameWithType: ItemManager.itemsList
+  fullName: OSL_CDragon.ItemManager.itemsList
+  type: Field
+  source:
+    remote:
+      path: OSL-CDragon/ItemManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: itemsList
+    path: ../OSL-CDragon/ItemManager.cs
+    startLine: 12
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public static dynamic itemsList
+    return:
+      type: System.Object
+    content.vb: Public Shared itemsList As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: OSL_CDragon.ItemManager.DownloadItems(System.String,System.String)
   commentId: M:OSL_CDragon.ItemManager.DownloadItems(System.String,System.String)
   id: DownloadItems(System.String,System.String)
@@ -55,9 +93,13 @@ items:
   fullName: OSL_CDragon.ItemManager.DownloadItems(System.String, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/ItemManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadItems
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\ItemManager.cs
-    startLine: 17
+    path: ../OSL-CDragon/ItemManager.cs
+    startLine: 18
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -92,9 +134,13 @@ items:
   fullName: OSL_CDragon.ItemManager.ItemsAsyncDownload(System.Int32, System.Int32, System.String, System.Object, System.String, System.Int32, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/ItemManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ItemsAsyncDownload
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\ItemManager.cs
-    startLine: 72
+    path: ../OSL-CDragon/ItemManager.cs
+    startLine: 74
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -144,9 +190,13 @@ items:
   fullName: OSL_CDragon.ItemManager.UpdateDataCDragonItems(System.Int32, System.Int32, System.Object, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/ItemManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonItems
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\ItemManager.cs
-    startLine: 87
+    path: ../OSL-CDragon/ItemManager.cs
+    startLine: 89
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon

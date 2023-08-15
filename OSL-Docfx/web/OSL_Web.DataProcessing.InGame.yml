@@ -5,7 +5,12 @@ items:
   id: InGame
   parent: OSL_Web.DataProcessing
   children:
-  - OSL_Web.DataProcessing.InGame.firstCallPerks
+  - OSL_Web.DataProcessing.InGame.allPlayerList
+  - OSL_Web.DataProcessing.InGame.gameInformation
+  - OSL_Web.DataProcessing.InGame.initTimerGame
+  - OSL_Web.DataProcessing.InGame.liveEvent
+  - OSL_Web.DataProcessing.InGame.liveEventContent
+  - OSL_Web.DataProcessing.InGame.playBack
   - OSL_Web.DataProcessing.InGame.ReadData(System.String)
   langs:
   - csharp
@@ -17,11 +22,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/InGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: InGame
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -44,33 +49,198 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Web.DataProcessing.InGame.firstCallPerks
-  commentId: F:OSL_Web.DataProcessing.InGame.firstCallPerks
-  id: firstCallPerks
+- uid: OSL_Web.DataProcessing.InGame.initTimerGame
+  commentId: F:OSL_Web.DataProcessing.InGame.initTimerGame
+  id: initTimerGame
   parent: OSL_Web.DataProcessing.InGame
   langs:
   - csharp
   - vb
-  name: firstCallPerks
-  nameWithType: InGame.firstCallPerks
-  fullName: OSL_Web.DataProcessing.InGame.firstCallPerks
+  name: initTimerGame
+  nameWithType: InGame.initTimerGame
+  fullName: OSL_Web.DataProcessing.InGame.initTimerGame
   type: Field
   source:
     remote:
       path: OSL-Web/DataProcessing/InGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
-    id: firstCallPerks
+    id: initTimerGame
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 7
+    startLine: 12
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
   syntax:
-    content: public static bool firstCallPerks
+    content: public static bool initTimerGame
     return:
       type: System.Boolean
-    content.vb: Public Shared firstCallPerks As Boolean
+    content.vb: Public Shared initTimerGame As Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame.allPlayerList
+  commentId: F:OSL_Web.DataProcessing.InGame.allPlayerList
+  id: allPlayerList
+  parent: OSL_Web.DataProcessing.InGame
+  langs:
+  - csharp
+  - vb
+  name: allPlayerList
+  nameWithType: InGame.allPlayerList
+  fullName: OSL_Web.DataProcessing.InGame.allPlayerList
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: allPlayerList
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 13
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static dynamic allPlayerList
+    return:
+      type: System.Object
+    content.vb: Public Shared allPlayerList As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame.playBack
+  commentId: F:OSL_Web.DataProcessing.InGame.playBack
+  id: playBack
+  parent: OSL_Web.DataProcessing.InGame
+  langs:
+  - csharp
+  - vb
+  name: playBack
+  nameWithType: InGame.playBack
+  fullName: OSL_Web.DataProcessing.InGame.playBack
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: playBack
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 14
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static dynamic playBack
+    return:
+      type: System.Object
+    content.vb: Public Shared playBack As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame.liveEvent
+  commentId: F:OSL_Web.DataProcessing.InGame.liveEvent
+  id: liveEvent
+  parent: OSL_Web.DataProcessing.InGame
+  langs:
+  - csharp
+  - vb
+  name: liveEvent
+  nameWithType: InGame.liveEvent
+  fullName: OSL_Web.DataProcessing.InGame.liveEvent
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: liveEvent
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 15
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static bool liveEvent
+    return:
+      type: System.Boolean
+    content.vb: Public Shared liveEvent As Boolean
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame.liveEventContent
+  commentId: F:OSL_Web.DataProcessing.InGame.liveEventContent
+  id: liveEventContent
+  parent: OSL_Web.DataProcessing.InGame
+  langs:
+  - csharp
+  - vb
+  name: liveEventContent
+  nameWithType: InGame.liveEventContent
+  fullName: OSL_Web.DataProcessing.InGame.liveEventContent
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: liveEventContent
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 16
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static dynamic liveEventContent
+    return:
+      type: System.Object
+    content.vb: Public Shared liveEventContent As Object
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.DataProcessing.InGame.gameInformation
+  commentId: F:OSL_Web.DataProcessing.InGame.gameInformation
+  id: gameInformation
+  parent: OSL_Web.DataProcessing.InGame
+  langs:
+  - csharp
+  - vb
+  name: gameInformation
+  nameWithType: InGame.gameInformation
+  fullName: OSL_Web.DataProcessing.InGame.gameInformation
+  type: Field
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: gameInformation
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 17
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public static InGame.GameInformation gameInformation
+    return:
+      type: OSL_Web.DataProcessing.InGame.GameInformation
+    content.vb: Public Shared gameInformation As InGame.GameInformation
   modifiers.csharp:
   - public
   - static
@@ -91,11 +261,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/InGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadData
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 8
+    startLine: 18
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -417,6 +587,12 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: OSL_Web.DataProcessing.InGame.GameInformation
+  commentId: T:OSL_Web.DataProcessing.InGame.GameInformation
+  parent: OSL_Web.DataProcessing
+  name: InGame.GameInformation
+  nameWithType: InGame.GameInformation
+  fullName: OSL_Web.DataProcessing.InGame.GameInformation
 - uid: OSL_Web.DataProcessing.InGame.ReadData*
   commentId: Overload:OSL_Web.DataProcessing.InGame.ReadData
   name: ReadData

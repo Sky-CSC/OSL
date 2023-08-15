@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesMidPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RunesMidPage
     path: ../OSL-Web/Pages/Runes/RunesMidPage.razor.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesMidPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: formatingData
     path: ../OSL-Web/Pages/Runes/RunesMidPage.razor.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesMidPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetPerksIconPath
     path: ../OSL-Web/Pages/Runes/RunesMidPage.razor.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesMidPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetChampionPicturePath
     path: ../OSL-Web/Pages/Runes/RunesMidPage.razor.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesMidPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ResetColor
     path: ../OSL-Web/Pages/Runes/RunesMidPage.razor.cs

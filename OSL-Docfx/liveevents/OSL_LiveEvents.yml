@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_LiveEvents
+  commentId: N:OSL_LiveEvents
+  id: OSL_LiveEvents
+  children:
+  - OSL_LiveEvents.LiveEvents
+  langs:
+  - csharp
+  - vb
+  name: OSL_LiveEvents
+  nameWithType: OSL_LiveEvents
+  fullName: OSL_LiveEvents
+  type: Namespace
+  assemblies:
+  - OSL-LiveEvents
+references:
+- uid: OSL_LiveEvents.LiveEvents
+  commentId: T:OSL_LiveEvents.LiveEvents
+  name: LiveEvents
+  nameWithType: LiveEvents
+  fullName: OSL_LiveEvents.LiveEvents

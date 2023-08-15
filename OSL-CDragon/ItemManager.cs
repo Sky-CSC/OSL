@@ -10,6 +10,7 @@ namespace OSL_CDragon
     public class ItemManager
     {
         private static Logger _logger = new("ItemManager");
+        public static dynamic itemsList;
         /// <summary>
         /// Recover all items existing and is data
         /// </summary>
@@ -32,6 +33,7 @@ namespace OSL_CDragon
                 try
                 {
                     dynamic jsonItems = JsonConvert.DeserializeObject(itemsData);
+                    itemsList = jsonItems;
                     OSL_Common.Download.Download.downloadAllFile = 0;
                     OSL_Common.Download.Download.errorDownloadAllFile = 0;
                     foreach (dynamic item in jsonItems)
@@ -90,7 +92,8 @@ namespace OSL_CDragon
             Items itemData = new Items();
             itemData.Id = item.id;
             itemData.Name = item.name;
-            itemData.IconPath = itemIcone;
+            String[] splitItemIcone = itemIcone.Split("/wwwroot");
+            itemData.IconPath = splitItemIcone[0] + splitItemIcone[1];
             //itemData.From = new();
             foreach (string from in item.from)
             {

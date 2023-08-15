@@ -13,7 +13,14 @@ namespace OSL_Web.Configuration.WebApiRiot
             string content = FileManagerLocal.ReadInFile("./Configuration/WebApiRiot/web-api-riot.json");
             dynamic jsonContent = JsonConvert.DeserializeObject(content);
             OSL_WebApiRiot.WebApiRiot.WebApiRiot.apiKey = jsonContent.apiKey;
-            _logger.log(LoggingLevel.INFO, "LoadWebRiotApiKey()", $"Api key loaded");
+            if (OSL_WebApiRiot.WebApiRiot.WebApiRiot.apiKey == null)
+            {
+                _logger.log(LoggingLevel.ERROR, "LoadWebRiotApiKey()", $"Error Api key not loaded");
+            }
+            else
+            {
+                _logger.log(LoggingLevel.INFO, "LoadWebRiotApiKey()", $"Api key loaded");
+            }
         }
     }
 }

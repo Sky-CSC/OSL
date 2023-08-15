@@ -1,0 +1,1748 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>OSL-LiveEvents Documentation | OSL </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="OSL-LiveEvents Documentation | OSL ">
+      <meta name="generator" content="docfx 2.59.4.0">
+      
+      <link rel="shortcut icon" href="../picture/Icone_Feu.png">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/night-owl.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+      <link rel="stylesheet" href="../styles/config.css">
+      <link rel="stylesheet" href="../styles/discord.css">
+      <link rel="stylesheet" href="../styles/singulink.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+      
+      <meta property="docfx:rel" content="../">
+      <meta property="docfx:newtab" content="true">
+    </head>
+    <body>
+        <div class="top-navbar">
+            <a class="burger-icon" onclick="toggleMenu()">
+                <svg name="Hamburger" style="vertical-align: middle;" width="34" height="34" viewbox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20 6H4V9H20V6ZM4 10.999H20V13.999H4V10.999ZM4 15.999H20V18.999H4V15.999Z"></path></svg>
+            </a>
+
+            
+            <a class="brand" href="../index.html">
+              <img src="../picture/Icone_Feu.png" alt="Overlay Spectator Live" class="logomark">
+              <span class="brand-title">Overlay Spectator Live</span>
+            </a>        </div>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    
+                    <div>
+                      <div class="mobile-hide">
+                        
+                        <a class="brand" href="../index.html">
+                          <img src="../picture/Icone_Feu.png" alt="Overlay Spectator Live" class="logomark">
+                          <span class="brand-title">Overlay Spectator Live</span>
+                        </a>  </div>
+
+                      <div class="sidesearch">
+                        <form id="search" role="search" class="search">
+                            <i class="bi bi-search search-icon"></i>
+                            <input type="text" id="search-query" placeholder="Search" autocomplete="off">
+                        </form>
+                      </div>
+                    
+                      <div id="navbar">
+                      </div>
+                    </div>                    <div class="sidebar-item-separator"></div>
+                        
+                        <div id="sidetoggle">
+                          <div id="sidetoc"></div>
+                        </div>
+                </div>
+                <div class="footer">
+                  <strong><a href='https://github.com/Sky-CSC/OSL'>Sky csc</a> </strong>
+                  
+                </div>            </nav>
+
+            <main class="main-panel">
+                
+                <div id="search-results" style="display: none;">
+                  <h1 class="search-list">Search Results for <span></span></h1>
+                  <div class="sr-items">
+                    <p><i class="bi bi-hourglass-split index-loading"></i></p>
+                  </div>
+                  <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+                </div>
+                <div role="main" class="hide-when-search">
+                        
+                        <div class="subnav navbar navbar-default">
+                          <div class="container hide-when-search" id="breadcrumb">
+                            <ul class="breadcrumb">
+                              <li></li>
+                            </ul>
+                          </div>
+                        </div>
+
+                    <article class="content wrap" id="_content" data-uid="">
+<h1 id="osl-liveevents-documentation"><strong>OSL-LiveEvents</strong> Documentation</h1>
+
+<hr>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p><strong>Documentation in progress</strong></p>
+</div>
+<hr>
+<h2 id="osl-liveevents-is-a-library-for-interacting-with-events-in-league-of-legends-game"><strong>OSL-LiveEvents</strong> is a library for interacting with events in League of Legends game.</h2>
+<div class="CAUTION">
+<h5>Caution</h5>
+<p>This documentation is for <strong>Replay</strong> or <strong>Spectator</strong> mode in Summoner's Rift.
+It may work in other modes, but this has not been tested.
+<a href="../client/index.html">See this documentation for enable LiveEvents</a></p>
+</div>
+<p>If &quot;<span style="color:red"><strong>LiveEventsName</strong></span> <code>no information</code>&quot; is indicated, the data may exist but have not been indexed.</p>
+<p>If &quot;<span style="color:green"><strong>LiveEventsName</strong></span> <code>Brief explanation</code>&quot; is indicated, data exist, but not all cases are necessarily listed.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p><strong>Last update : 26/07/2023</strong></p>
+</div>
+<h2 id="patern-"><strong>Patern</strong> :</h2>
+<pre><code class="lang-json">&quot;eventname&quot;: &quot;string&quot;,
+&quot;other&quot;: &quot;string?&quot;, //Possible to be null
+&quot;otherID&quot;: &quot;string?&quot;, //Possible to be null
+&quot;otherTeam&quot;: &quot;string?&quot;, //Possible to be null
+&quot;source&quot;: &quot;string?&quot;, //Possible to be null
+&quot;sourceID&quot;: &quot;string?&quot;, //Possible to be null
+&quot;sourceTeam&quot;: &quot;string?&quot; //Possible to be null
+</code></pre>
+<ul>
+<li><strong>&quot;eventname&quot;</strong>: Name of the event</li>
+<li><strong>&quot;other&quot;</strong> : Name of the summoner, turret or mobs (minion, neutral mobs, drake, nash, ...) in game he is impacted by the action</li>
+<li><strong>&quot;otherID&quot;</strong> : Id of the summoner in game he make the action (0 to 9) if is not a summoner not display</li>
+<li><strong>&quot;otherTeam&quot;</strong> : Name of the team (Chaos, Order, Neutral)</li>
+<li><strong>&quot;source&quot;</strong>: Name of the summoner, turret or mobs (minion, neutral mobs, drake, nash, ...) in game he make the action</li>
+<li><strong>&quot;sourceID&quot;</strong>: Id of the summoner in game he make the action (0 to 9) if is not a summoner not display</li>
+<li><strong>&quot;sourceTeam&quot;</strong>: Name of the team (Chaos, Order, Neutral)</li>
+</ul>
+<br>
+<h2 id="data"><strong>Data</strong></h2>
+<p><span style="color:red">OnDelete</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpawn</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnDie</span> <code>When a unit or target dies (Order, Chaos or Neutral) </code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnKill</span> <code>When a unit or objectif is killed (Order, Chaos or Neutral) </code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnChampionDie</span> <code>When a champion dies</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionLevelUp</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionKillPre</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnChampionKill</span> <code>When a champion is killed</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionKillPost</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionSingleKill</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnChampionDoubleKill</span> <code>When a player make a double kill</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnChampionTripleKill</span> <code>When a player make a triple kill</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnChampionQuadraKill</span> <code>When a player make a quadra kill</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnChampionPentaKill</span> <code>When a player make a penta kill</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionUnrealKill</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnFirstBlood</span> <code>When a player make the first blood</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnFirstBloodAssist</span> <code>When a player make a assist on first blood</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnDamageTaken</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnDamageGiven</span> When a unit or objectif give damage (Order, Chaos or Neutral)</p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellCast1</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellCast2</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellCast3</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellCast4</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellAvatarCast1</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellAvatarCast2</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGoldSpent</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGoldEarned</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnItemConsumeablePurchased</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCriticalStrike</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnAce</span> <code>When a team make a ace</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnReincarnate</span> <code>When a champion come back to life</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnReviveAlly</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChangeChampion</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnResetChampion</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnDampenerKill</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnDampenerDie</span> <code>When a inhibitor dies</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnDampenerRespawnSoon</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnDampenerRespawn</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnDampenerDamage</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnTurretKill</span> <code>When a tower is killed</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnTurretDie</span> <code>When a tower is dies</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnTurretDamage</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnTurretFirstBlood</span> <code>When a tower make the first blood</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnStructureKill</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnMinionKill</span> <code>When a minion is killed</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnNeutralMinionKill</span> <code>When a neutral unit is killed</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnNeutralMinionCampCleared</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnAcquireRedBuffFromNeutral</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnAcquireBlueBuffFromNeutral</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnHQKill</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnHQDie</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnHQDamage</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnCastHeal</span> <code>When a champion cast a heal</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnBuff</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCrowdControlDealt</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCrowdControlExpired</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillingSpree</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillingSpreeSet1</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillingSpreeSet2</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillingSpreeSet3</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillingSpreeSet4</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillingSpreeSet5</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillingSpreeSet6</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpree</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreSet1</span> <code>n information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreSet2</span> <code>n information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreSet3</span> <code>n information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreSet4</span> <code>n information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreSet5</span> <code>n information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreSet6</span> <code>n information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreeDoublKill</span> <code>n    ormation</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreeTriplKill</span> <code>n    ormation</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreeQuadrKill</span> <code>n    ormation</code></p>
+<details>
+   <summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreePentKill</span> <code>n ormation</code></p>
+<details>
+   <summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKilledUnitOnKillingSpreeUnreaKill</span> <code>n    ormation</code></p>
+<details>
+   <summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnDeathAssist</span> <code>When a player make an kill assist</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnQuit</span> <code>When a player quit the game</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnLeave</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnReconnect</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameEnter</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameStart</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnAssistingSpreeSet1</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnAssistingSpreeSet2</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionTripleAssist</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionPentaAssist</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnPing</span> <code>When a player ping</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnPingPlayer</span> <code>When a player ping a player</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnPingBuilding</span> <code>When a player ping a building</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnPingOther</span> <code>When a player ping</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnEndGame</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellLevelup1</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellLevelup2</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellLevelup3</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellLevelup4</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellEvolve1</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellEvolve2</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellEvolve3</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellEvolve4</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnItemPurchased</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnItemSold</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnItemRemoved</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnItemUndo</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnItemCallout</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnItemChange</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnUndoEnabledChange</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnShopItemSubstitutionChange</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnShopMenuOpen</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnShopMenuClose</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderVoteStart</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderVote</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderVoteAlready</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderFailedVotes</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderTooEarly</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderAgreed</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderSpam</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnNormalAfkSurrenderAllowed</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderEarlyAllowed</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderEarlyAccomplice</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderEarlyOver</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderEarlyFailed</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderEarlyFailedNoLongerAvaiable</span> <code>n ormation</code></p>
+<details>
+   <summary><b>Example value</b></summary>
+json
+	{
+}
+	```
+</details>
+<br>
+<p><span style="color:red">OnSurrenderEarlyFailedDisbled</span> <code>n information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderEarlyTooEarly</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSurrenderEarlyFailedNeverAvaiable</span> <code>n    ormation</code></p>
+<details>
+   <summary><b>Example value</b></summary>
+json
+	{
+}
+	```
+</details>
+<br>
+<p><span style="color:red">OnEarlySurrenderVoteStart</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnUnanimousSurrenderVoteStart</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnUnanimousSurrenderFailedotes</span> <code>n information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnUnanimousAfkSurrenderAlowed</span> <code>n information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnPause</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnPauseResume</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnMinionsSpawn</span> <code>When minion spown att the start</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnStartGameMessage1</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnStartGameMessage2</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnStartGameMessage3</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnStartGameMessage4</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnStartGameMessage5</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnAlert</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnAudioEventFinished</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnNexusCrystalStart</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointNeutralized_A</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointNeutralized_B</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointNeutralized_C</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointNeutralized_D</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointNeutralized_E</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointCaptured_A</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointCaptured_B</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointCaptured_C</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointCaptured_D</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointCaptured_E</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCapturePointFiveCap</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnVictoryPointThreshold1</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnVictoryPointThreshold2</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnVictoryPointThreshold3</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnVictoryPointThreshold4</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement1</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement2</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement3</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement4</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement5</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement6</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement7</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement8</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement9</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement10</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement11</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement12</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement13</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement14</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement15</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameModeAnnouncement16</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnReplayFastForwardStart</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnReplayFastForwardEnd</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnReplayOnKeyframeFinished</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnReplayDestroyAllObjects</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillDragon</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnKillDragon_Spectator</span> <code>When a dragon are killed</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnKillDragonSteal</span> <code>When a dragon are steal by opponents</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillRiftHerald</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillRiftHerald_Spectator</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillRiftHeraldSteal</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnSummonRiftHerald</span> <code>When herald are launched</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillWorm</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnKillWorm_Spectator</span> <code>When baron are killed</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillWormSteal</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillSpiderBoss</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnKillSpiderBoss_Spectator</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCaptureAltar</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCaptureAltar_Spectator</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnPlaceWard</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnKillWard</span> <code>When ward are killed</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnMinionAscended</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionAscended</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnClearAscended</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGameStatEvent</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnRelativeTeamColorChange</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnMapSkinSwap</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnResetGame</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnResetGameCompleted</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnShutdown</span> <code>When a player make a shutdown</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnMute</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionTransformNone</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionTransformAssassin</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnChampionTransformSlayer</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnReceiveShield</span> <code>When a player receive a shield</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGrantShield</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnDamageShielded</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnMaterialOverride</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnObjectiveStolen</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnObjectiveTaken</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnNextDragonQueued</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnGearChanged</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSummonerEmotePlayed</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSummonerEmoteEnd</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnCustomStatStoneEvent</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnStatStoneMilestoneHitEvent</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnEnterStealth</span> <code>When a player enters a vision zone</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnExitStealth</span> `When a player exit a vision zone``</p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnPetSpawned</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnLifeSteal</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnSpellVamp</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnLocalPlayerLoadoutBound</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:green">OnTurretPlateDestroyed</span> <code>When a rower plate are destroyed</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnPlantActivated</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnEnterPlayerVisibility</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnDragonSoulGiven</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnDisconnect</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+<p><span style="color:red">OnConnect</span> <code>no information</code></p>
+<details>
+<summary><b>Example value</b></summary>
+<pre><code class="lang-json">
+</code></pre>
+</details>
+<br>
+</article>
+                </div>
+
+                <div class="copyright-footer">
+                    <span>&#169; Sky csc. All rights reserved.</span>
+                </div>
+            </main>
+        </div>
+
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+        <script type="text/javascript" src="../styles/jquery.twbsPagination.js"></script>
+        <script type="text/javascript" src="../styles/url.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script type="text/javascript" src="../styles/docfx.js"></script>
+        <script type="text/javascript" src="../styles/singulink.js"></script>
+        <script type="text/javascript" src="../styles/main.js"></script>    </body>
+</html>

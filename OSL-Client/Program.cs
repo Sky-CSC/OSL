@@ -2,19 +2,43 @@
 using OSL_Client.Riot;
 using OSL_Client.Riot.GameFlow;
 using OSL_Client.Sockets;
+using OSL_LcuApi;
 using static OSL_Client.CloseEvent;
 
-Console.ForegroundColor = ConsoleColor.Green;
-Console.WriteLine("###########################################");
-Console.WriteLine("##### Hello and welcome to OSL Client #####");
-Console.WriteLine("###### Just let this run, do nothing ######");
-Console.WriteLine("# No forget to check if server is running #");
-Console.WriteLine("###########################################\n");
+Console.ForegroundColor = ConsoleColor.White;
+Console.WriteLine("  ______    ______   __           ______   __  __                        __     ");
+Console.WriteLine(" /      \\  /      \\ |  \\         /      \\ |  \\|  \\                     |  \\    ");
+Console.WriteLine("|  $$$$$$\\|  $$$$$$\\| $$        |  $$$$$$\\| $$ \\$$  ______   _______  _| $$_   ");
+Console.WriteLine("| $$  | $$| $$___\\$$| $$ ______ | $$   \\$$| $$|  \\ /      \\ |       \\|   $$ \\  ");
+Console.WriteLine("| $$  | $$ \\$$    \\ | $$|      \\| $$      | $$| $$|  $$$$$$\\| $$$$$$$\\$$$$$$  ");
+Console.WriteLine("| $$  | $$ _\\$$$$$$\\| $$ \\$$$$$$| $$   __ | $$| $$| $$    $$| $$  | $$ | $$ __ ");
+Console.WriteLine("| $$__/ $$|  \\__| $$| $$_____   | $$__/  \\| $$| $$| $$$$$$$$| $$  | $$ | $$|  \\");
+Console.WriteLine(" \\$$    $$ \\$$    $$| $$     \\   \\$$    $$| $$| $$ \\$$     \\| $$  | $$  \\$$  $$");
+Console.WriteLine("  \\$$$$$$   \\$$$$$$  \\$$$$$$$$    \\$$$$$$  \\$$ \\$$  \\$$$$$$$ \\$$   \\$$   \\$$$$ ");
+Console.WriteLine();
 Console.ForegroundColor = ConsoleColor.Red;
-Console.WriteLine("###########################");
-Console.WriteLine("###### Version 1.1.0 ######");
-Console.WriteLine("###########################\n");
+//Console.WriteLine(" __     __                                __                              __         ______       ______  ");
+//Console.WriteLine("|  \\   |  \\                              |  \\                           _/  \\       /      \\     /      \\ ");
+//Console.WriteLine("| $$   | $$  ______    ______    _______  \\$$  ______   _______        |   $$      |  $$$$$$\\   |  $$$$$$\\");
+//Console.WriteLine("| $$   | $$ /      \\  /      \\  /       \\|  \\ /      \\ |       \\        \\$$$$       \\$$__| $$   | $$$\\| $$");
+//Console.WriteLine(" \\$$\\ /  $$|  $$$$$$\\|  $$$$$$\\|  $$$$$$$| $$|  $$$$$$\\| $$$$$$$\\        | $$       /      $$   | $$$$\\ $$");
+//Console.WriteLine("  \\$$\\  $$ | $$    $$| $$   \\$$ \\$$    \\ | $$| $$  | $$| $$  | $$        | $$      |  $$$$$$    | $$\\$$\\$$");
+//Console.WriteLine("   \\$$ $$  | $$$$$$$$| $$       _\\$$$$$$\\| $$| $$__/ $$| $$  | $$       _| $$_  __ | $$_____  __| $$_\\$$$$");
+//Console.WriteLine("    \\$$$    \\$$     \\| $$      |       $$| $$ \\$$    $$| $$  | $$      |   $$ \\|  \\| $$     \\|  \\\\$$  \\$$$");
+//Console.WriteLine("     \\$      \\$$$$$$$ \\$$       \\$$$$$$$  \\$$  \\$$$$$$  \\$$   \\$$       \\$$$$$$ \\$$ \\$$$$$$$$ \\$$ \\$$$$$$ ");
+Console.WriteLine(" __     __                                __                              __          __       _______  ");
+Console.WriteLine("|  \\   |  \\                              |  \\                           _/  \\       _/  \\     |       \\ ");
+Console.WriteLine("| $$   | $$  ______    ______    _______  \\$$  ______   _______        |   $$      |   $$     | $$$$$$$ ");
+Console.WriteLine("| $$   | $$ /      \\  /      \\  /       \\|  \\ /      \\ |       \\        \\$$$$       \\$$$$     | $$____  ");
+Console.WriteLine(" \\$$\\ /  $$|  $$$$$$\\|  $$$$$$\\|  $$$$$$$| $$|  $$$$$$\\| $$$$$$$\\        | $$        | $$     | $$   \\ ");
+Console.WriteLine("  \\$$\\  $$ | $$    $$| $$   \\$$ \\$$    \\ | $$| $$  | $$| $$  | $$        | $$        | $$      \\$$$$$$$\\");
+Console.WriteLine("   \\$$ $$  | $$$$$$$$| $$       _\\$$$$$$\\| $$| $$__/ $$| $$  | $$       _| $$_  __  _| $$_  __|  \\__| $$");
+Console.WriteLine("    \\$$$    \\$$     \\| $$      |       $$| $$ \\$$    $$| $$  | $$      |   $$ \\|  \\|   $$ \\|  \\\\$$    $$");
+Console.WriteLine("     \\$      \\$$$$$$$ \\$$       \\$$$$$$$  \\$$  \\$$$$$$  \\$$   \\$$       \\$$$$$$ \\$$ \\$$$$$$ \\$$ \\$$$$$$ ");
 Console.ResetColor();
+Console.WriteLine();
+Console.ResetColor();
+Console.WriteLine();
 
 SetConsoleCtrlHandler(new SetConsoleCtrlEventHandler(Handler), true);
 
@@ -35,6 +59,7 @@ while (true)
         {
             if (LeagueClient.SetHostApi()) //Get pass and host of client api
             {
+                RegionLocale.SetRegionLocale(); //Send region and laguage for download in OSL-Web information
                 string gameFlowPhase;
                 do
                 {

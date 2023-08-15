@@ -18,8 +18,12 @@ items:
   fullName: OSL_CDragon.PerksManager
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/PerksManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: PerksManager
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    path: ../OSL-CDragon/PerksManager.cs
     startLine: 9
   assemblies:
   - OSL-CDragon
@@ -57,8 +61,12 @@ items:
   fullName: OSL_CDragon.PerksManager.DownloadPerks(System.String, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/PerksManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerks
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    path: ../OSL-CDragon/PerksManager.cs
     startLine: 18
   assemblies:
   - OSL-CDragon
@@ -94,8 +102,12 @@ items:
   fullName: OSL_CDragon.PerksManager.DownloadPerksComposent(System.String, System.String, System.String, System.Int32, System.Int32)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/PerksManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerksComposent
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    path: ../OSL-CDragon/PerksManager.cs
     startLine: 44
   assemblies:
   - OSL-CDragon
@@ -140,8 +152,12 @@ items:
   fullName: OSL_CDragon.PerksManager.DownloadPerksStyle(System.String, System.String, System.String, System.Int32, System.Int32)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/PerksManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadPerksStyle
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    path: ../OSL-CDragon/PerksManager.cs
     startLine: 125
   assemblies:
   - OSL-CDragon
@@ -186,8 +202,12 @@ items:
   fullName: OSL_CDragon.PerksManager.PerksAsyncDownload(System.Int32, System.Int32, System.String, System.Object, System.String, System.Int32, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/PerksManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: PerksAsyncDownload
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    path: ../OSL-CDragon/PerksManager.cs
     startLine: 172
   assemblies:
   - OSL-CDragon
@@ -238,8 +258,12 @@ items:
   fullName: OSL_CDragon.PerksManager.UpdateDataCDragonPerks(System.Int32, System.Int32, System.Object, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/PerksManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonPerks
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\PerksManager.cs
+    path: ../OSL-CDragon/PerksManager.cs
     startLine: 184
   assemblies:
   - OSL-CDragon

@@ -17,8 +17,12 @@ items:
   fullName: OSL_Common.Download.Download
   type: Class
   source:
+    remote:
+      path: OSL-Common/Download/Download.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Download
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    path: ../OSL-Common/Download/Download.cs
     startLine: 7
   assemblies:
   - OSL-Common
@@ -56,8 +60,12 @@ items:
   fullName: OSL_Common.Download.Download.downloadAllFile
   type: Field
   source:
+    remote:
+      path: OSL-Common/Download/Download.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: downloadAllFile
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    path: ../OSL-Common/Download/Download.cs
     startLine: 10
   assemblies:
   - OSL-Common
@@ -85,8 +93,12 @@ items:
   fullName: OSL_Common.Download.Download.errorDownloadAllFile
   type: Field
   source:
+    remote:
+      path: OSL-Common/Download/Download.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: errorDownloadAllFile
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    path: ../OSL-Common/Download/Download.cs
     startLine: 11
   assemblies:
   - OSL-Common
@@ -114,8 +126,12 @@ items:
   fullName: OSL_Common.Download.Download.DownloadStringAsync(Uri)
   type: Method
   source:
+    remote:
+      path: OSL-Common/Download/Download.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadStringAsync
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    path: ../OSL-Common/Download/Download.cs
     startLine: 18
   assemblies:
   - OSL-Common
@@ -152,8 +168,12 @@ items:
   fullName: OSL_Common.Download.Download.DownloadFileAsync(Uri, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/Download/Download.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadFileAsync
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\Download\Download.cs
+    path: ../OSL-Common/Download/Download.cs
     startLine: 41
   assemblies:
   - OSL-Common

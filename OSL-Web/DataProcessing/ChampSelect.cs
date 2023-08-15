@@ -19,7 +19,6 @@ namespace OSL_Web.DataProcessing
         {
             previousSession = session;
             session = ChampSelectProcessingDataRecive(content);
-
             bool sameTurn = false;
             bool actionInProgress = false;
             _logger.log(LoggingLevel.INFO, "InChampSelect()", $"alreadyLastPhase {alreadyLastPhase}");
@@ -34,6 +33,10 @@ namespace OSL_Web.DataProcessing
                 TimeControl.DecreasingTimerChapSelectView3(1920, 94);
                 //Get runes
                 string summonerName = session.MyTeam[0].SummonerName;
+                if (summonerName.Equals("Bot"))
+                {
+                    summonerName = session.TheirTeam[0].SummonerName;
+                }
                 Runes.GetPerksInformation(summonerName);
             }
             else

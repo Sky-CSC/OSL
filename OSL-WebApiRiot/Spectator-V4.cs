@@ -1,13 +1,15 @@
-﻿namespace OSL_WebApiRiot.WebApiRiot
+﻿using static OSL_WebApiRiot.WebApiRiot.WebApiRiot;
+
+namespace OSL_WebApiRiot.WebApiRiot
 {
     /// <summary>
     /// Get information from match in progress
     /// </summary>
     public class Spectator_V4
     {
-        private static string httpsUrl = "https://";
-        private static string region = "euw1";
-        private static string pathUrlApiRiot = ".api.riotgames.com";
+        //private static string httpsUrl = "https://";
+        //public static string region = "euw1";
+        //private static string pathUrlApiRiot = ".api.riotgames.com";
 
         /// <summary>
         /// Get match information by encrypted Summoner Id

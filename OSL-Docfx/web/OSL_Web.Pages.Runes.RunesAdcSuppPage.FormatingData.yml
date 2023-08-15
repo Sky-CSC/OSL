@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: FormatingData
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultPatch
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DefaultRegion
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -139,7 +139,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroudGradient
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: OverlayColorBackgroudGradient
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideColorTextSummoner
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideColorTextSummoner
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -279,7 +279,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideColorBorderChampion
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideColorBorderChampion
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -349,7 +349,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideColorSeparationBar
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -384,7 +384,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideColorSeparationBar
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -419,7 +419,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BakgroundPicture
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -454,7 +454,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LanePictureAdc
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
@@ -489,7 +489,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: LanePictureSupp
     path: ../OSL-Web/Pages/Runes/RunesAdcSuppPage.razor.cs

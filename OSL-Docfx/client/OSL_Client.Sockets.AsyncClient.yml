@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: OSL-Client/Sockets/Send.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: AsyncClient
     path: ../OSL-Client/Sockets/Send.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: OSL-Client/Sockets/AsyncClient.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: oslServerSocket
     path: ../OSL-Client/Sockets/AsyncClient.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: OSL-Client/Sockets/AsyncClient.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: StartClient
     path: ../OSL-Client/Sockets/AsyncClient.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: OSL-Client/Sockets/AsyncClient.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: CloseClient
     path: ../OSL-Client/Sockets/AsyncClient.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: OSL-Client/Sockets/Send.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Send
     path: ../OSL-Client/Sockets/Send.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: OSL-Client/Sockets/Send.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Send
     path: ../OSL-Client/Sockets/Send.cs

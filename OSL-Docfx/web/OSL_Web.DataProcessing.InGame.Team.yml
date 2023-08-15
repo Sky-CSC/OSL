@@ -1,0 +1,765 @@
+### YamlMime:ManagedReference
+items:
+- uid: OSL_Web.DataProcessing.InGame.Team
+  commentId: T:OSL_Web.DataProcessing.InGame.Team
+  id: InGame.Team
+  parent: OSL_Web.DataProcessing
+  children:
+  - OSL_Web.DataProcessing.InGame.Team.#ctor
+  - OSL_Web.DataProcessing.InGame.Team.BaronKill
+  - OSL_Web.DataProcessing.InGame.Team.Drakes
+  - OSL_Web.DataProcessing.InGame.Team.HelderKill
+  - OSL_Web.DataProcessing.InGame.Team.Herald
+  - OSL_Web.DataProcessing.InGame.Team.Inhib
+  - OSL_Web.DataProcessing.InGame.Team.Summoners
+  langs:
+  - csharp
+  - vb
+  name: InGame.Team
+  nameWithType: InGame.Team
+  fullName: OSL_Web.DataProcessing.InGame.Team
+  type: Class
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Team
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 548
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public class Team
+    content.vb: Public Class Team
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: OSL_Web.DataProcessing.InGame.Team.Summoners
+  commentId: P:OSL_Web.DataProcessing.InGame.Team.Summoners
+  id: Summoners
+  parent: OSL_Web.DataProcessing.InGame.Team
+  langs:
+  - csharp
+  - vb
+  name: Summoners
+  nameWithType: InGame.Team.Summoners
+  fullName: OSL_Web.DataProcessing.InGame.Team.Summoners
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Summoners
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 550
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public List<InGame.Summoner> Summoners { get; set; }
+    parameters: []
+    return:
+      type: List{OSL_Web.DataProcessing.InGame.Summoner}
+    content.vb: Public Property Summoners As List(Of InGame.Summoner)
+  overload: OSL_Web.DataProcessing.InGame.Team.Summoners*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.InGame.Team.Drakes
+  commentId: P:OSL_Web.DataProcessing.InGame.Team.Drakes
+  id: Drakes
+  parent: OSL_Web.DataProcessing.InGame.Team
+  langs:
+  - csharp
+  - vb
+  name: Drakes
+  nameWithType: InGame.Team.Drakes
+  fullName: OSL_Web.DataProcessing.InGame.Team.Drakes
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Drakes
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 551
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public List<string> Drakes { get; set; }
+    parameters: []
+    return:
+      type: List{System.String}
+    content.vb: Public Property Drakes As List(Of String)
+  overload: OSL_Web.DataProcessing.InGame.Team.Drakes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.InGame.Team.HelderKill
+  commentId: P:OSL_Web.DataProcessing.InGame.Team.HelderKill
+  id: HelderKill
+  parent: OSL_Web.DataProcessing.InGame.Team
+  langs:
+  - csharp
+  - vb
+  name: HelderKill
+  nameWithType: InGame.Team.HelderKill
+  fullName: OSL_Web.DataProcessing.InGame.Team.HelderKill
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: HelderKill
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 552
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public bool HelderKill { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HelderKill As Boolean
+  overload: OSL_Web.DataProcessing.InGame.Team.HelderKill*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.InGame.Team.Herald
+  commentId: P:OSL_Web.DataProcessing.InGame.Team.Herald
+  id: Herald
+  parent: OSL_Web.DataProcessing.InGame.Team
+  langs:
+  - csharp
+  - vb
+  name: Herald
+  nameWithType: InGame.Team.Herald
+  fullName: OSL_Web.DataProcessing.InGame.Team.Herald
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Herald
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 553
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public InGame.Herald Herald { get; set; }
+    parameters: []
+    return:
+      type: OSL_Web.DataProcessing.InGame.Herald
+    content.vb: Public Property Herald As InGame.Herald
+  overload: OSL_Web.DataProcessing.InGame.Team.Herald*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.InGame.Team.BaronKill
+  commentId: P:OSL_Web.DataProcessing.InGame.Team.BaronKill
+  id: BaronKill
+  parent: OSL_Web.DataProcessing.InGame.Team
+  langs:
+  - csharp
+  - vb
+  name: BaronKill
+  nameWithType: InGame.Team.BaronKill
+  fullName: OSL_Web.DataProcessing.InGame.Team.BaronKill
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: BaronKill
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 554
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public bool BaronKill { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property BaronKill As Boolean
+  overload: OSL_Web.DataProcessing.InGame.Team.BaronKill*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.InGame.Team.Inhib
+  commentId: P:OSL_Web.DataProcessing.InGame.Team.Inhib
+  id: Inhib
+  parent: OSL_Web.DataProcessing.InGame.Team
+  langs:
+  - csharp
+  - vb
+  name: Inhib
+  nameWithType: InGame.Team.Inhib
+  fullName: OSL_Web.DataProcessing.InGame.Team.Inhib
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: Inhib
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 555
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public InGame.Inhib Inhib { get; set; }
+    parameters: []
+    return:
+      type: OSL_Web.DataProcessing.InGame.Inhib
+    content.vb: Public Property Inhib As InGame.Inhib
+  overload: OSL_Web.DataProcessing.InGame.Team.Inhib*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.DataProcessing.InGame.Team.#ctor
+  commentId: M:OSL_Web.DataProcessing.InGame.Team.#ctor
+  id: '#ctor'
+  parent: OSL_Web.DataProcessing.InGame.Team
+  langs:
+  - csharp
+  - vb
+  name: Team()
+  nameWithType: InGame.Team.Team()
+  fullName: OSL_Web.DataProcessing.InGame.Team.Team()
+  type: Constructor
+  source:
+    remote:
+      path: OSL-Web/DataProcessing/InGame.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: .ctor
+    path: ../OSL-Web/DataProcessing/InGame.cs
+    startLine: 556
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.DataProcessing
+  syntax:
+    content: public Team()
+    content.vb: Public Sub New
+  overload: OSL_Web.DataProcessing.InGame.Team.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: OSL_Web.DataProcessing
+  commentId: N:OSL_Web.DataProcessing
+  name: OSL_Web.DataProcessing
+  nameWithType: OSL_Web.DataProcessing
+  fullName: OSL_Web.DataProcessing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OSL_Web.DataProcessing.InGame.Team.Summoners*
+  commentId: Overload:OSL_Web.DataProcessing.InGame.Team.Summoners
+  name: Summoners
+  nameWithType: InGame.Team.Summoners
+  fullName: OSL_Web.DataProcessing.InGame.Team.Summoners
+- uid: List{OSL_Web.DataProcessing.InGame.Summoner}
+  commentId: '!:List{OSL_Web.DataProcessing.InGame.Summoner}'
+  definition: List`1
+  name: List<InGame.Summoner>
+  nameWithType: List<InGame.Summoner>
+  fullName: List<OSL_Web.DataProcessing.InGame.Summoner>
+  nameWithType.vb: List(Of InGame.Summoner)
+  fullName.vb: List(Of OSL_Web.DataProcessing.InGame.Summoner)
+  name.vb: List(Of InGame.Summoner)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: OSL_Web.DataProcessing.InGame.Summoner
+    name: InGame.Summoner
+    nameWithType: InGame.Summoner
+    fullName: OSL_Web.DataProcessing.InGame.Summoner
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: OSL_Web.DataProcessing.InGame.Summoner
+    name: InGame.Summoner
+    nameWithType: InGame.Summoner
+    fullName: OSL_Web.DataProcessing.InGame.Summoner
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Web.DataProcessing.InGame.Team.Drakes*
+  commentId: Overload:OSL_Web.DataProcessing.InGame.Team.Drakes
+  name: Drakes
+  nameWithType: InGame.Team.Drakes
+  fullName: OSL_Web.DataProcessing.InGame.Team.Drakes
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: OSL_Web.DataProcessing.InGame.Team.HelderKill*
+  commentId: Overload:OSL_Web.DataProcessing.InGame.Team.HelderKill
+  name: HelderKill
+  nameWithType: InGame.Team.HelderKill
+  fullName: OSL_Web.DataProcessing.InGame.Team.HelderKill
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: OSL_Web.DataProcessing.InGame.Team.Herald*
+  commentId: Overload:OSL_Web.DataProcessing.InGame.Team.Herald
+  name: Herald
+  nameWithType: InGame.Team.Herald
+  fullName: OSL_Web.DataProcessing.InGame.Team.Herald
+- uid: OSL_Web.DataProcessing.InGame.Herald
+  commentId: T:OSL_Web.DataProcessing.InGame.Herald
+  parent: OSL_Web.DataProcessing
+  name: InGame.Herald
+  nameWithType: InGame.Herald
+  fullName: OSL_Web.DataProcessing.InGame.Herald
+- uid: OSL_Web.DataProcessing.InGame.Team.BaronKill*
+  commentId: Overload:OSL_Web.DataProcessing.InGame.Team.BaronKill
+  name: BaronKill
+  nameWithType: InGame.Team.BaronKill
+  fullName: OSL_Web.DataProcessing.InGame.Team.BaronKill
+- uid: OSL_Web.DataProcessing.InGame.Team.Inhib*
+  commentId: Overload:OSL_Web.DataProcessing.InGame.Team.Inhib
+  name: Inhib
+  nameWithType: InGame.Team.Inhib
+  fullName: OSL_Web.DataProcessing.InGame.Team.Inhib
+- uid: OSL_Web.DataProcessing.InGame.Inhib
+  commentId: T:OSL_Web.DataProcessing.InGame.Inhib
+  parent: OSL_Web.DataProcessing
+  name: InGame.Inhib
+  nameWithType: InGame.Inhib
+  fullName: OSL_Web.DataProcessing.InGame.Inhib
+- uid: OSL_Web.DataProcessing.InGame.Team.#ctor*
+  commentId: Overload:OSL_Web.DataProcessing.InGame.Team.#ctor
+  name: Team
+  nameWithType: InGame.Team.Team
+  fullName: OSL_Web.DataProcessing.InGame.Team.Team

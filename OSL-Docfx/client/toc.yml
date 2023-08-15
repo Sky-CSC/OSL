@@ -9,6 +9,8 @@
   items:
   - uid: OSL_Client.Riot.LeagueClient
     name: LeagueClient
+  - uid: OSL_Client.Riot.RegionLocale
+    name: RegionLocale
 - uid: OSL_Client.Riot.GameFlow
   name: OSL_Client.Riot.GameFlow
   items:

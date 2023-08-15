@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: InGamePage
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay1
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay2
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay3
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/InGame/InGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorValue
     path: ../OSL-Web/Pages/InGame/InGamePage.razor.cs

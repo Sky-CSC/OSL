@@ -24,7 +24,7 @@ namespace OSL_Client.Configuration
         public static int riotPort;
         public static string? leagueClientApiLocalHost;
         public static string? leagueClientApiPassword;
-        public static int leagueClientLiveEventsApiPort;
+        public static int leagueClientLiveEventsPort;
 
         public static string localIpHttp = "127.0.0.1";
         public static string localIpHttps = "https://127.0.0.1";
@@ -66,11 +66,11 @@ namespace OSL_Client.Configuration
             {
                 string filePath = "./" + "Configuration" + "/" + "riot.json";
                 dynamic jsonContent = JsonConvert.DeserializeObject(FileManagerLocal.ReadInFile(filePath));
-                leagueClientLiveEventsApiPort = jsonContent.leagueClientLiveEventsApiPort;
+                leagueClientLiveEventsPort = jsonContent.leagueClientLiveEventsPort;
                 leagueClientProcess = jsonContent.leagueClientProcess;
                 riotLogin = jsonContent.riotLogin;
                 riotPort = jsonContent.riotPort;
-                _logger.log(LoggingLevel.INFO, "LoadConfigRiot()", $"Config riot load leagueClientLiveEventsApiPort : {leagueClientLiveEventsApiPort}, leagueClientProcess : {leagueClientProcess},  riotLogin : {riotLogin} riotPort : {riotPort}");
+                _logger.log(LoggingLevel.INFO, "LoadConfigRiot()", $"Config riot load leagueClientLiveEventsPort : {leagueClientLiveEventsPort}, leagueClientProcess : {leagueClientProcess},  riotLogin : {riotLogin} riotPort : {riotPort}");
             }
             catch (Exception e)
             {

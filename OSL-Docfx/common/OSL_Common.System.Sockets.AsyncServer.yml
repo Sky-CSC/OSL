@@ -18,8 +18,12 @@ items:
   fullName: OSL_Common.System.Sockets.AsyncServer
   type: Class
   source:
+    remote:
+      path: OSL-Common/System/Sockets/Server/Listening.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: AsyncServer
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Sockets\Server\Listening.cs
+    path: ../OSL-Common/System/Sockets/Server/Listening.cs
     startLine: 7
   assemblies:
   - OSL-Common
@@ -55,8 +59,12 @@ items:
   fullName: OSL_Common.System.Sockets.AsyncServer.port
   type: Field
   source:
+    remote:
+      path: OSL-Common/System/Sockets/Server/AsyncServer.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: port
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Sockets\Server\AsyncServer.cs
+    path: ../OSL-Common/System/Sockets/Server/AsyncServer.cs
     startLine: 15
   assemblies:
   - OSL-Common
@@ -84,8 +92,12 @@ items:
   fullName: OSL_Common.System.Sockets.AsyncServer.allDone
   type: Field
   source:
+    remote:
+      path: OSL-Common/System/Sockets/Server/AsyncServer.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: allDone
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Sockets\Server\AsyncServer.cs
+    path: ../OSL-Common/System/Sockets/Server/AsyncServer.cs
     startLine: 17
   assemblies:
   - OSL-Common
@@ -113,8 +125,12 @@ items:
   fullName: OSL_Common.System.Sockets.AsyncServer.IsRunning()
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/Sockets/Server/AsyncServer.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: IsRunning
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Sockets\Server\AsyncServer.cs
+    path: ../OSL-Common/System/Sockets/Server/AsyncServer.cs
     startLine: 23
   assemblies:
   - OSL-Common
@@ -146,8 +162,12 @@ items:
   fullName: OSL_Common.System.Sockets.AsyncServer.Run()
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/Sockets/Server/AsyncServer.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Run
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Sockets\Server\AsyncServer.cs
+    path: ../OSL-Common/System/Sockets/Server/AsyncServer.cs
     startLine: 33
   assemblies:
   - OSL-Common
@@ -176,8 +196,12 @@ items:
   fullName: OSL_Common.System.Sockets.AsyncServer.Stop()
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/Sockets/Server/AsyncServer.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Stop
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\Sockets\Server\AsyncServer.cs
+    path: ../OSL-Common/System/Sockets/Server/AsyncServer.cs
     startLine: 60
   assemblies:
   - OSL-Common

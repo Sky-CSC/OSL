@@ -15,8 +15,12 @@ items:
   fullName: OSL_Common.System.SSLCertificate.SSL
   type: Class
   source:
+    remote:
+      path: OSL-Common/System/SSLCertificate/SSL.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: SSL
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\SSLCertificate\SSL.cs
+    path: ../OSL-Common/System/SSLCertificate/SSL.cs
     startLine: 9
   assemblies:
   - OSL-Common
@@ -54,8 +58,12 @@ items:
   fullName: OSL_Common.System.SSLCertificate.SSL.BypassSSL()
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/SSLCertificate/SSL.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: BypassSSL
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\SSLCertificate\SSL.cs
+    path: ../OSL-Common/System/SSLCertificate/SSL.cs
     startLine: 14
   assemblies:
   - OSL-Common
@@ -84,8 +92,12 @@ items:
   fullName: OSL_Common.System.SSLCertificate.SSL.ValidateServerCertificate(System.Object, System.Security.Cryptography.X509Certificates.X509Certificate, System.Security.Cryptography.X509Certificates.X509Chain, System.Net.Security.SslPolicyErrors)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/SSLCertificate/SSL.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ValidateServerCertificate
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\SSLCertificate\SSL.cs
+    path: ../OSL-Common/System/SSLCertificate/SSL.cs
     startLine: 26
   assemblies:
   - OSL-Common

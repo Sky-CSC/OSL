@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelect
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: session
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: previousSession
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: alreadyLastPhase
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadData
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
@@ -199,11 +199,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampSelectProcessingDataRecive
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 105
+    startLine: 108
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -240,11 +240,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/ChampSelect.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertTimer
     path: ../OSL-Web/DataProcessing/ChampSelect.cs
-    startLine: 181
+    startLine: 184
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

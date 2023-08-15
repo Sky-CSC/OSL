@@ -12,6 +12,7 @@ items:
   - OSL_CDragon.CDragon.date
   - OSL_CDragon.CDragon.defaultNumPatch
   - OSL_CDragon.CDragon.defaultRegionPatch
+  - OSL_CDragon.CDragon.DownloadAsyncWithCheck(System.String,System.String)
   - OSL_CDragon.CDragon.items
   - OSL_CDragon.CDragon.itemsDirectory
   - OSL_CDragon.CDragon.patch
@@ -20,6 +21,8 @@ items:
   - OSL_CDragon.CDragon.perksDirectoryWebPath
   - OSL_CDragon.CDragon.perkstyles
   - OSL_CDragon.CDragon.region
+  - OSL_CDragon.CDragon.SetPatch(System.String)
+  - OSL_CDragon.CDragon.SetRegion(System.String)
   - OSL_CDragon.CDragon.summonerSpells
   - OSL_CDragon.CDragon.summonerSpellsDirectory
   langs:
@@ -30,8 +33,12 @@ items:
   fullName: OSL_CDragon.CDragon
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: CDragon
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 10
   assemblies:
   - OSL-CDragon
@@ -69,8 +76,12 @@ items:
   fullName: OSL_CDragon.CDragon.dataCDragon
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: dataCDragon
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 13
   assemblies:
   - OSL-CDragon
@@ -98,8 +109,12 @@ items:
   fullName: OSL_CDragon.CDragon.patch
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: patch
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 16
   assemblies:
   - OSL-CDragon
@@ -127,8 +142,12 @@ items:
   fullName: OSL_CDragon.CDragon.date
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: date
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 17
   assemblies:
   - OSL-CDragon
@@ -156,8 +175,12 @@ items:
   fullName: OSL_CDragon.CDragon.region
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: region
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 18
   assemblies:
   - OSL-CDragon
@@ -185,8 +208,12 @@ items:
   fullName: OSL_CDragon.CDragon.championSummary
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: championSummary
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 19
   assemblies:
   - OSL-CDragon
@@ -214,8 +241,12 @@ items:
   fullName: OSL_CDragon.CDragon.items
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: items
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 20
   assemblies:
   - OSL-CDragon
@@ -243,8 +274,12 @@ items:
   fullName: OSL_CDragon.CDragon.summonerSpells
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: summonerSpells
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 21
   assemblies:
   - OSL-CDragon
@@ -272,8 +307,12 @@ items:
   fullName: OSL_CDragon.CDragon.perks
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: perks
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 22
   assemblies:
   - OSL-CDragon
@@ -301,8 +340,12 @@ items:
   fullName: OSL_CDragon.CDragon.perkstyles
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: perkstyles
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 23
   assemblies:
   - OSL-CDragon
@@ -330,8 +373,12 @@ items:
   fullName: OSL_CDragon.CDragon.championDirectory
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: championDirectory
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 25
   assemblies:
   - OSL-CDragon
@@ -359,8 +406,12 @@ items:
   fullName: OSL_CDragon.CDragon.itemsDirectory
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: itemsDirectory
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 26
   assemblies:
   - OSL-CDragon
@@ -388,8 +439,12 @@ items:
   fullName: OSL_CDragon.CDragon.summonerSpellsDirectory
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: summonerSpellsDirectory
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 27
   assemblies:
   - OSL-CDragon
@@ -417,8 +472,12 @@ items:
   fullName: OSL_CDragon.CDragon.perksDirectory
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: perksDirectory
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 28
   assemblies:
   - OSL-CDragon
@@ -446,8 +505,12 @@ items:
   fullName: OSL_CDragon.CDragon.perksDirectoryWebPath
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: perksDirectoryWebPath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 29
   assemblies:
   - OSL-CDragon
@@ -475,8 +538,12 @@ items:
   fullName: OSL_CDragon.CDragon.defaultNumPatch
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: defaultNumPatch
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 31
   assemblies:
   - OSL-CDragon
@@ -504,8 +571,12 @@ items:
   fullName: OSL_CDragon.CDragon.defaultRegionPatch
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: defaultRegionPatch
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 32
   assemblies:
   - OSL-CDragon
@@ -533,8 +604,12 @@ items:
   fullName: OSL_CDragon.CDragon.dataCDragonPath
   type: Field
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: dataCDragonPath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
+    path: ../OSL-CDragon/CDragon.cs
     startLine: 34
   assemblies:
   - OSL-CDragon
@@ -544,6 +619,117 @@ items:
     return:
       type: System.String
     content.vb: Public Shared dataCDragonPath As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_CDragon.CDragon.SetRegion(System.String)
+  commentId: M:OSL_CDragon.CDragon.SetRegion(System.String)
+  id: SetRegion(System.String)
+  parent: OSL_CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: SetRegion(String)
+  nameWithType: CDragon.SetRegion(String)
+  fullName: OSL_CDragon.CDragon.SetRegion(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetRegion
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 36
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public static void SetRegion(string newRegion)
+    parameters:
+    - id: newRegion
+      type: System.String
+    content.vb: Public Shared Sub SetRegion(newRegion As String)
+  overload: OSL_CDragon.CDragon.SetRegion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_CDragon.CDragon.SetPatch(System.String)
+  commentId: M:OSL_CDragon.CDragon.SetPatch(System.String)
+  id: SetPatch(System.String)
+  parent: OSL_CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: SetPatch(String)
+  nameWithType: CDragon.SetPatch(String)
+  fullName: OSL_CDragon.CDragon.SetPatch(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetPatch
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 41
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public static void SetPatch(string newPatch)
+    parameters:
+    - id: newPatch
+      type: System.String
+    content.vb: Public Shared Sub SetPatch(newPatch As String)
+  overload: OSL_CDragon.CDragon.SetPatch*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_CDragon.CDragon.DownloadAsyncWithCheck(System.String,System.String)
+  commentId: M:OSL_CDragon.CDragon.DownloadAsyncWithCheck(System.String,System.String)
+  id: DownloadAsyncWithCheck(System.String,System.String)
+  parent: OSL_CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: DownloadAsyncWithCheck(String, String)
+  nameWithType: CDragon.DownloadAsyncWithCheck(String, String)
+  fullName: OSL_CDragon.CDragon.DownloadAsyncWithCheck(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DownloadAsyncWithCheck
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 52
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nDownload files if patch and refion not already present\n"
+  example: []
+  syntax:
+    content: public static void DownloadAsyncWithCheck(string patch, string region)
+    parameters:
+    - id: patch
+      type: System.String
+      description: ''
+    - id: region
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub DownloadAsyncWithCheck(patch As String, region As String)
+  overload: OSL_CDragon.CDragon.DownloadAsyncWithCheck*
   modifiers.csharp:
   - public
   - static
@@ -861,3 +1047,18 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: OSL_CDragon.CDragon.SetRegion*
+  commentId: Overload:OSL_CDragon.CDragon.SetRegion
+  name: SetRegion
+  nameWithType: CDragon.SetRegion
+  fullName: OSL_CDragon.CDragon.SetRegion
+- uid: OSL_CDragon.CDragon.SetPatch*
+  commentId: Overload:OSL_CDragon.CDragon.SetPatch
+  name: SetPatch
+  nameWithType: CDragon.SetPatch
+  fullName: OSL_CDragon.CDragon.SetPatch
+- uid: OSL_CDragon.CDragon.DownloadAsyncWithCheck*
+  commentId: Overload:OSL_CDragon.CDragon.DownloadAsyncWithCheck
+  name: DownloadAsyncWithCheck
+  nameWithType: CDragon.DownloadAsyncWithCheck
+  fullName: OSL_CDragon.CDragon.DownloadAsyncWithCheck

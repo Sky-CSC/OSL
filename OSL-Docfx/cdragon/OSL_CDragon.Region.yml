@@ -15,9 +15,13 @@ items:
   fullName: OSL_CDragon.Region
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Region
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 193
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 229
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -54,9 +58,13 @@ items:
   fullName: OSL_CDragon.Region.Name
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Name
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 195
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 231
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -85,9 +93,13 @@ items:
   fullName: OSL_CDragon.Region.RegionContent
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: RegionContent
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 197
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 233
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon

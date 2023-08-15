@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/EndGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: EndGame
     path: ../OSL-Web/DataProcessing/EndGame.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/EndGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: jsonContentEndOfMatch
     path: ../OSL-Web/DataProcessing/EndGame.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/EndGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: jsonContentMatch
     path: ../OSL-Web/DataProcessing/EndGame.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/EndGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: jsonContentTimeline
     path: ../OSL-Web/DataProcessing/EndGame.cs
@@ -159,7 +159,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/EndGame.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ReadData
     path: ../OSL-Web/DataProcessing/EndGame.cs

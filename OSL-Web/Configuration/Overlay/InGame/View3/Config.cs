@@ -35,9 +35,9 @@ namespace OSL_Web.Configuration.Overlay.InGame.View3
             {
                 InGameView3Page.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
-            InGameView3Page.formatingData.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView3Page.formatingData.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView3Page.formatingData.DefaultRegion}");
+            InGameView3Page.formatingData.DefaultRegion = OSL_CDragon.CDragon.region;
+            //_logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView3Page.formatingData.DefaultPatch}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigChampSelectView4", $"{InGameView3Page.formatingData.DefaultRegion}");
         }
         /// <summary>
         /// Load default json file for overlay view 3

@@ -30,7 +30,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: EndGamePage
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay1TimerBar
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay1ChampInfo
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -170,7 +170,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay1Bans
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay1GlobalStats
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorPickerOverlay1GoldDiff
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -269,7 +269,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: colorValue
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -302,7 +302,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: EnableAllGradiantView1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -334,7 +334,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DisableAllGradiantView1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -366,7 +366,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: EnableAllGradiantView2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -398,7 +398,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DisableAllGradiantView2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -430,7 +430,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: EnableAllGradiantView3
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -462,7 +462,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DisableAllGradiantView3
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -494,7 +494,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: EnableAllBackgroundView3
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
@@ -526,7 +526,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DisableAllBackgroundView3
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs

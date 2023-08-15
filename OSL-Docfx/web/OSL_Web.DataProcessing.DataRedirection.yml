@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/DataRedirection.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: DataRedirection
     path: ../OSL-Web/DataProcessing/DataRedirection.cs
@@ -57,11 +57,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/DataRedirection.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedirectData
     path: ../OSL-Web/DataProcessing/DataRedirection.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

@@ -27,9 +27,9 @@ namespace OSL_Web.Configuration.Overlay.Rune.View1.Mid
             {
                 RunesMidPage.formatingData.DefaultPatch = DirectoryManagerLocal.CheckExistingDirectoryPatch("./wwwroot/assets");
             }
-            RunesMidPage.formatingData.DefaultRegion = "fr_fr";
-            _logger.log(LoggingLevel.INFO, "LoadConfigRunesMidPage()", $"{RunesMidPage.formatingData.DefaultPatch}");
-            _logger.log(LoggingLevel.INFO, "LoadConfigRunesMidPage()", $"{RunesMidPage.formatingData.DefaultRegion}");
+            RunesMidPage.formatingData.DefaultRegion = OSL_CDragon.CDragon.region;
+            //_logger.log(LoggingLevel.INFO, "LoadConfigRunesMidPage()", $"{RunesMidPage.formatingData.DefaultPatch}");
+            //_logger.log(LoggingLevel.INFO, "LoadConfigRunesMidPage()", $"{RunesMidPage.formatingData.DefaultRegion}");
         }
         public static void LoadFormatingDataConfig()
         {

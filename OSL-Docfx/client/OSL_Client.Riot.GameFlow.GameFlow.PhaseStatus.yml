@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/GameFlow/GameFlow.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: PhaseStatus
     path: ../OSL-Client/Riot/GameFlow/GameFlow.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/GameFlow/GameFlow.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Phase
     path: ../OSL-Client/Riot/GameFlow/GameFlow.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/GameFlow/GameFlow.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Status
     path: ../OSL-Client/Riot/GameFlow/GameFlow.cs
@@ -131,7 +131,7 @@ items:
   source:
     remote:
       path: OSL-Client/Riot/GameFlow/GameFlow.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Date
     path: ../OSL-Client/Riot/GameFlow/GameFlow.cs

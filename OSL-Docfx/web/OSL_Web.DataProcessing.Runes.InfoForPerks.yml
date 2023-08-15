@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: InfoForPerks
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 113
+    startLine: 117
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TeamId
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 115
+    startLine: 119
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -96,11 +96,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Lane
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 116
+    startLine: 120
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -131,11 +131,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionId
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 117
+    startLine: 121
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -166,11 +166,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerName
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 118
+    startLine: 122
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -201,11 +201,11 @@ items:
   source:
     remote:
       path: OSL-Web/DataProcessing/Runes.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: Perks
     path: ../OSL-Web/DataProcessing/Runes.cs
-    startLine: 119
+    startLine: 123
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

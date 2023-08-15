@@ -16,8 +16,12 @@ items:
   fullName: OSL_CDragon.ChampionManager
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/ChampionManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionManager
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\ChampionManager.cs
+    path: ../OSL-CDragon/ChampionManager.cs
     startLine: 11
   assemblies:
   - OSL-CDragon
@@ -55,8 +59,12 @@ items:
   fullName: OSL_CDragon.ChampionManager.DownloadChampion(System.String, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/ChampionManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadChampion
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\ChampionManager.cs
+    path: ../OSL-CDragon/ChampionManager.cs
     startLine: 19
   assemblies:
   - OSL-CDragon
@@ -92,8 +100,12 @@ items:
   fullName: OSL_CDragon.ChampionManager.ChampionAsyncDownload(System.Int32, System.Int32, System.String, System.String, System.String, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/ChampionManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionAsyncDownload
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\ChampionManager.cs
+    path: ../OSL-CDragon/ChampionManager.cs
     startLine: 69
   assemblies:
   - OSL-CDragon
@@ -141,8 +153,12 @@ items:
   fullName: OSL_CDragon.ChampionManager.UpdateDataCDragonChampion(System.Int32, System.Int32, System.Object, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-CDragon/ChampionManager.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateDataCDragonChampion
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\ChampionManager.cs
+    path: ../OSL-CDragon/ChampionManager.cs
     startLine: 178
   assemblies:
   - OSL-CDragon

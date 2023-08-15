@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TextValueOverlayView4
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamName
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -161,7 +161,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamNameSubtext
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamName
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamNameSubtext
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BorderTop
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -374,7 +374,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BorderBottomPixel
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -434,7 +434,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroudGradientDeg
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -494,7 +494,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroudGradientPercent1
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -554,7 +554,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroudGradientPercent2
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -614,7 +614,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: EnableForegroundBackground
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -649,7 +649,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBorderColorBan
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -709,7 +709,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBorderColorPick
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -769,7 +769,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBorderColorBan
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -829,7 +829,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBorderColorPick
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -889,7 +889,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamNameSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -921,7 +921,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamNameSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -953,7 +953,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideTeamNameSubtextSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -985,7 +985,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideTeamNameSubtextSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1017,7 +1017,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SwitchSideRedBlue
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1049,7 +1049,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: OverlayForegoundSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1081,7 +1081,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroudGradientView4
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1113,7 +1113,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BorderBottomPixelSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1145,7 +1145,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BorderTopSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1177,7 +1177,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBorderColorBanSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1209,7 +1209,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBorderColorBanSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1241,7 +1241,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBorderColorPickSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1273,7 +1273,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBorderColorPickSubmit
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1305,7 +1305,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsBorderTop
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1339,7 +1339,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsBlueSideBorderColorBan
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1373,7 +1373,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsRedSideBorderColorBan
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1407,7 +1407,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsBlueSideBorderColorPick
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1441,7 +1441,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsRedSideBorderColorPick
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1475,7 +1475,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideColorText
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1507,7 +1507,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideColorSubText
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1539,7 +1539,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideColorTextBan
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1571,7 +1571,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideColorTextPick
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1603,7 +1603,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideColorText
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1635,7 +1635,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideColorSubText
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1667,7 +1667,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideColorTextBan
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1699,7 +1699,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideColorTextPick
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1731,7 +1731,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BorderTopNotSet
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1764,7 +1764,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBorderTop
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1796,7 +1796,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBorderColorBanNotSet
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1829,7 +1829,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideBorderColorBan
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1861,7 +1861,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBorderColorBanNotSet
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1894,7 +1894,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideBorderColorBan
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1926,7 +1926,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: BlueSideBorderColorPickNotSet
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1959,7 +1959,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBlueSideBorderColorPick
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -1991,7 +1991,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RedSideBorderColorPickNotSet
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -2024,7 +2024,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetRedSideBorderColorPick
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -2056,7 +2056,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBackgroudGradientColor1
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
@@ -2088,7 +2088,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBackgroudGradientColor2
     path: ../OSL-Web/Pages/ChampSelect/ChampSelectPage.razor.cs

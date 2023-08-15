@@ -6,7 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<RootNamespace>OSL_Web</RootNamespace>
 		<Title>OSL-Web</Title>
-		<Version>1.1.0</Version>
+		<Version>1.1.5</Version>
 		<Authors>Sky csc</Authors>
 		<Company>Sky csc</Company>
 		<Copyright>Sky csc</Copyright>
@@ -14,8 +14,8 @@
 		<PackageIcon>Icone_Eau.ico</PackageIcon>
 		<RepositoryUrl>https://github.com/Sky-CSC/OSL</RepositoryUrl>
 		<ApplicationIcon>Icone_Eau.ico</ApplicationIcon>
-		<AssemblyVersion>1.1.0</AssemblyVersion>
-		<FileVersion>1.1.0</FileVersion>
+		<AssemblyVersion>1.1.5</AssemblyVersion>
+		<FileVersion>1.1.5</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>

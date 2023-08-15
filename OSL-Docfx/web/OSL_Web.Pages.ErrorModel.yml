@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Error.cshtml.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ErrorModel
     path: ../OSL-Web/Pages/Error.cshtml.cs
@@ -40,9 +40,7 @@ items:
       <IgnoreAntiforgeryToken>
 
       Public Class ErrorModel
-
           Inherits PageModel
-
           Implements IAsyncPageFilter, IPageFilter, IFilterMetadata
   inheritance:
   - System.Object
@@ -213,7 +211,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Error.cshtml.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: RequestId
     path: ../OSL-Web/Pages/Error.cshtml.cs
@@ -248,7 +246,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Error.cshtml.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: ShowRequestId
     path: ../OSL-Web/Pages/Error.cshtml.cs
@@ -283,7 +281,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Error.cshtml.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Web/Pages/Error.cshtml.cs
@@ -319,7 +317,7 @@ items:
   source:
     remote:
       path: OSL-Web/Pages/Error.cshtml.cs
-      branch: refactoring
+      branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
     id: OnGet
     path: ../OSL-Web/Pages/Error.cshtml.cs

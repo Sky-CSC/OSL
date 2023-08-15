@@ -20,8 +20,12 @@ items:
   fullName: OSL_Common.System.FileManager.FileManagerLocal
   type: Class
   source:
+    remote:
+      path: OSL-Common/System/FileManager/FileManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: FileManagerLocal
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\FileManager\FileManagerLocal.cs
+    path: ../OSL-Common/System/FileManager/FileManagerLocal.cs
     startLine: 7
   assemblies:
   - OSL-Common
@@ -59,8 +63,12 @@ items:
   fullName: OSL_Common.System.FileManager.FileManagerLocal.CreateFile(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/FileManager/FileManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: CreateFile
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\FileManager\FileManagerLocal.cs
+    path: ../OSL-Common/System/FileManager/FileManagerLocal.cs
     startLine: 15
   assemblies:
   - OSL-Common
@@ -93,8 +101,12 @@ items:
   fullName: OSL_Common.System.FileManager.FileManagerLocal.DeleteFile(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/FileManager/FileManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DeleteFile
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\FileManager\FileManagerLocal.cs
+    path: ../OSL-Common/System/FileManager/FileManagerLocal.cs
     startLine: 35
   assemblies:
   - OSL-Common
@@ -127,8 +139,12 @@ items:
   fullName: OSL_Common.System.FileManager.FileManagerLocal.RewrittenFile(System.String, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/FileManager/FileManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: RewrittenFile
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\FileManager\FileManagerLocal.cs
+    path: ../OSL-Common/System/FileManager/FileManagerLocal.cs
     startLine: 56
   assemblies:
   - OSL-Common
@@ -164,8 +180,12 @@ items:
   fullName: OSL_Common.System.FileManager.FileManagerLocal.WriteInFile(System.String, System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/FileManager/FileManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: WriteInFile
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\FileManager\FileManagerLocal.cs
+    path: ../OSL-Common/System/FileManager/FileManagerLocal.cs
     startLine: 75
   assemblies:
   - OSL-Common
@@ -201,8 +221,12 @@ items:
   fullName: OSL_Common.System.FileManager.FileManagerLocal.ReadInFile(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/FileManager/FileManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ReadInFile
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\FileManager\FileManagerLocal.cs
+    path: ../OSL-Common/System/FileManager/FileManagerLocal.cs
     startLine: 92
   assemblies:
   - OSL-Common
@@ -238,8 +262,12 @@ items:
   fullName: OSL_Common.System.FileManager.FileManagerLocal.ReadFilePath(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/FileManager/FileManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: ReadFilePath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\FileManager\FileManagerLocal.cs
+    path: ../OSL-Common/System/FileManager/FileManagerLocal.cs
     startLine: 112
   assemblies:
   - OSL-Common
@@ -275,8 +303,12 @@ items:
   fullName: OSL_Common.System.FileManager.FileManagerLocal.RestrictedAccess(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/FileManager/FileManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: RestrictedAccess
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\FileManager\FileManagerLocal.cs
+    path: ../OSL-Common/System/FileManager/FileManagerLocal.cs
     startLine: 136
   assemblies:
   - OSL-Common

@@ -17,8 +17,12 @@ items:
   fullName: OSL_Common.System.DirectoryManager.DirectoryManagerLocal
   type: Class
   source:
+    remote:
+      path: OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DirectoryManagerLocal
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\DirectoryManager\DirectoryManagerLocal.cs
+    path: ../OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
     startLine: 7
   assemblies:
   - OSL-Common
@@ -56,8 +60,12 @@ items:
   fullName: OSL_Common.System.DirectoryManager.DirectoryManagerLocal.CreateDirectory(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: CreateDirectory
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\DirectoryManager\DirectoryManagerLocal.cs
+    path: ../OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
     startLine: 14
   assemblies:
   - OSL-Common
@@ -90,8 +98,12 @@ items:
   fullName: OSL_Common.System.DirectoryManager.DirectoryManagerLocal.DeleteDirectory(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: DeleteDirectory
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\DirectoryManager\DirectoryManagerLocal.cs
+    path: ../OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
     startLine: 38
   assemblies:
   - OSL-Common
@@ -124,8 +136,12 @@ items:
   fullName: OSL_Common.System.DirectoryManager.DirectoryManagerLocal.CheckDirectory(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: CheckDirectory
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\DirectoryManager\DirectoryManagerLocal.cs
+    path: ../OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
     startLine: 59
   assemblies:
   - OSL-Common
@@ -161,8 +177,12 @@ items:
   fullName: OSL_Common.System.DirectoryManager.DirectoryManagerLocal.CheckExistingDirectoryPatch(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: CheckExistingDirectoryPatch
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-Common\System\DirectoryManager\DirectoryManagerLocal.cs
+    path: ../OSL-Common/System/DirectoryManager/DirectoryManagerLocal.cs
     startLine: 70
   assemblies:
   - OSL-Common

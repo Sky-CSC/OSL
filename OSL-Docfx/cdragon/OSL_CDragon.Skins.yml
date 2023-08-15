@@ -19,9 +19,13 @@ items:
   fullName: OSL_CDragon.Skins
   type: Class
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Skins
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 252
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 288
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -58,9 +62,13 @@ items:
   fullName: OSL_CDragon.Skins.Id
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: Id
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 254
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 290
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -89,9 +97,13 @@ items:
   fullName: OSL_CDragon.Skins.IsBase
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: IsBase
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 255
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 291
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -120,9 +132,13 @@ items:
   fullName: OSL_CDragon.Skins.SplashePath
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: SplashePath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 256
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 292
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -151,9 +167,13 @@ items:
   fullName: OSL_CDragon.Skins.SplasheUncenteredPath
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: SplasheUncenteredPath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 257
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 293
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -182,9 +202,13 @@ items:
   fullName: OSL_CDragon.Skins.TilePath
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: TilePath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 258
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 294
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -213,9 +237,13 @@ items:
   fullName: OSL_CDragon.Skins.LoadScreenPath
   type: Property
   source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: LoadScreenPath
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-CDragon\CDragon.cs
-    startLine: 259
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 295
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon

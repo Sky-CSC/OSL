@@ -6,7 +6,13 @@ items:
   parent: OSL_WebApiRiot.WebApiRiot
   children:
   - OSL_WebApiRiot.WebApiRiot.WebApiRiot.apiKey
+  - OSL_WebApiRiot.WebApiRiot.WebApiRiot.httpsUrl
+  - OSL_WebApiRiot.WebApiRiot.WebApiRiot.pathUrlApiRiot
+  - OSL_WebApiRiot.WebApiRiot.WebApiRiot.region
   - OSL_WebApiRiot.WebApiRiot.WebApiRiot.RequestWebApiRiot(System.String)
+  - OSL_WebApiRiot.WebApiRiot.WebApiRiot.rooting
+  - OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRegion(System.String)
+  - OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRooting
   langs:
   - csharp
   - vb
@@ -15,8 +21,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot
   type: Class
   source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: WebApiRiot
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\WebApiRiot.cs
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
     startLine: 8
   assemblies:
   - OSL-WebApiRiot
@@ -54,8 +64,12 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.apiKey
   type: Field
   source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: apiKey
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\WebApiRiot.cs
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
     startLine: 11
   assemblies:
   - OSL-WebApiRiot
@@ -65,6 +79,138 @@ items:
     return:
       type: System.String
     content.vb: Public Shared apiKey As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_WebApiRiot.WebApiRiot.WebApiRiot.region
+  commentId: F:OSL_WebApiRiot.WebApiRiot.WebApiRiot.region
+  id: region
+  parent: OSL_WebApiRiot.WebApiRiot.WebApiRiot
+  langs:
+  - csharp
+  - vb
+  name: region
+  nameWithType: WebApiRiot.region
+  fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.region
+  type: Field
+  source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: region
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
+    startLine: 12
+  assemblies:
+  - OSL-WebApiRiot
+  namespace: OSL_WebApiRiot.WebApiRiot
+  syntax:
+    content: public static string region
+    return:
+      type: System.String
+    content.vb: Public Shared region As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_WebApiRiot.WebApiRiot.WebApiRiot.rooting
+  commentId: F:OSL_WebApiRiot.WebApiRiot.WebApiRiot.rooting
+  id: rooting
+  parent: OSL_WebApiRiot.WebApiRiot.WebApiRiot
+  langs:
+  - csharp
+  - vb
+  name: rooting
+  nameWithType: WebApiRiot.rooting
+  fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.rooting
+  type: Field
+  source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: rooting
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
+    startLine: 13
+  assemblies:
+  - OSL-WebApiRiot
+  namespace: OSL_WebApiRiot.WebApiRiot
+  syntax:
+    content: public static string rooting
+    return:
+      type: System.String
+    content.vb: Public Shared rooting As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_WebApiRiot.WebApiRiot.WebApiRiot.httpsUrl
+  commentId: F:OSL_WebApiRiot.WebApiRiot.WebApiRiot.httpsUrl
+  id: httpsUrl
+  parent: OSL_WebApiRiot.WebApiRiot.WebApiRiot
+  langs:
+  - csharp
+  - vb
+  name: httpsUrl
+  nameWithType: WebApiRiot.httpsUrl
+  fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.httpsUrl
+  type: Field
+  source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: httpsUrl
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
+    startLine: 14
+  assemblies:
+  - OSL-WebApiRiot
+  namespace: OSL_WebApiRiot.WebApiRiot
+  syntax:
+    content: public static string httpsUrl
+    return:
+      type: System.String
+    content.vb: Public Shared httpsUrl As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_WebApiRiot.WebApiRiot.WebApiRiot.pathUrlApiRiot
+  commentId: F:OSL_WebApiRiot.WebApiRiot.WebApiRiot.pathUrlApiRiot
+  id: pathUrlApiRiot
+  parent: OSL_WebApiRiot.WebApiRiot.WebApiRiot
+  langs:
+  - csharp
+  - vb
+  name: pathUrlApiRiot
+  nameWithType: WebApiRiot.pathUrlApiRiot
+  fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.pathUrlApiRiot
+  type: Field
+  source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: pathUrlApiRiot
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
+    startLine: 15
+  assemblies:
+  - OSL-WebApiRiot
+  namespace: OSL_WebApiRiot.WebApiRiot
+  syntax:
+    content: public static string pathUrlApiRiot
+    return:
+      type: System.String
+    content.vb: Public Shared pathUrlApiRiot As String
   modifiers.csharp:
   - public
   - static
@@ -83,9 +229,13 @@ items:
   fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.RequestWebApiRiot(System.String)
   type: Method
   source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
     id: RequestWebApiRiot
-    path: C:\Users\Sky\Documents\GitHub\OSL\OSL-WebApiRiot\WebApiRiot.cs
-    startLine: 17
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
+    startLine: 22
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -102,6 +252,73 @@ items:
       description: ''
     content.vb: Public Shared Function RequestWebApiRiot(urlRequest As String) As String
   overload: OSL_WebApiRiot.WebApiRiot.WebApiRiot.RequestWebApiRiot*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRegion(System.String)
+  commentId: M:OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRegion(System.String)
+  id: SetRegion(System.String)
+  parent: OSL_WebApiRiot.WebApiRiot.WebApiRiot
+  langs:
+  - csharp
+  - vb
+  name: SetRegion(String)
+  nameWithType: WebApiRiot.SetRegion(String)
+  fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRegion(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetRegion
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
+    startLine: 42
+  assemblies:
+  - OSL-WebApiRiot
+  namespace: OSL_WebApiRiot.WebApiRiot
+  syntax:
+    content: public static void SetRegion(string newRegion)
+    parameters:
+    - id: newRegion
+      type: System.String
+    content.vb: Public Shared Sub SetRegion(newRegion As String)
+  overload: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRegion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRooting
+  commentId: M:OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRooting
+  id: SetRooting
+  parent: OSL_WebApiRiot.WebApiRiot.WebApiRiot
+  langs:
+  - csharp
+  - vb
+  name: SetRooting()
+  nameWithType: WebApiRiot.SetRooting()
+  fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRooting()
+  type: Method
+  source:
+    remote:
+      path: OSL-WebApiRiot/WebApiRiot.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetRooting
+    path: ../OSL-WebApiRiot/WebApiRiot.cs
+    startLine: 48
+  assemblies:
+  - OSL-WebApiRiot
+  namespace: OSL_WebApiRiot.WebApiRiot
+  syntax:
+    content: public static void SetRooting()
+    content.vb: Public Shared Sub SetRooting
+  overload: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRooting*
   modifiers.csharp:
   - public
   - static
@@ -418,3 +635,13 @@ references:
   name: RequestWebApiRiot
   nameWithType: WebApiRiot.RequestWebApiRiot
   fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.RequestWebApiRiot
+- uid: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRegion*
+  commentId: Overload:OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRegion
+  name: SetRegion
+  nameWithType: WebApiRiot.SetRegion
+  fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRegion
+- uid: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRooting*
+  commentId: Overload:OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRooting
+  name: SetRooting
+  nameWithType: WebApiRiot.SetRooting
+  fullName: OSL_WebApiRiot.WebApiRiot.WebApiRiot.SetRooting
