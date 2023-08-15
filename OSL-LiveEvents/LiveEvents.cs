@@ -55,7 +55,8 @@ namespace OSL_LiveEvents
                     {
                         socketLiveEvents.Receive(bytes, 0, size, SocketFlags.None);
                         string content = Encoding.UTF8.GetString(bytes);
-                        _logger.log(LoggingLevel.INFO, "Read()", "Receive from LiveEvents successfull : " + content);
+                        //_logger.log(LoggingLevel.INFO, "Read()", "Receive from LiveEvents successfull : " + content);
+                        _logger.log(LoggingLevel.INFO, "Read()", "Receive from LiveEvents successfull : ");
                         return content;
                     }
                     else
