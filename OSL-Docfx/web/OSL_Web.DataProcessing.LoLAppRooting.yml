@@ -1,35 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.Buff
-  id: InGame_Old.Buff
+- uid: OSL_Web.DataProcessing.LoLAppRooting
+  commentId: T:OSL_Web.DataProcessing.LoLAppRooting
+  id: LoLAppRooting
   parent: OSL_Web.DataProcessing
   children:
-  - OSL_Web.DataProcessing.InGame_Old.Buff.#ctor
-  - OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
-  - OSL_Web.DataProcessing.InGame_Old.Buff.Killed
-  - OSL_Web.DataProcessing.InGame_Old.Buff.Team
+  - OSL_Web.DataProcessing.LoLAppRooting.ReadData(System.String)
   langs:
   - csharp
   - vb
-  name: InGame_Old.Buff
-  nameWithType: InGame_Old.Buff
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff
+  name: LoLAppRooting
+  nameWithType: LoLAppRooting
+  fullName: OSL_Web.DataProcessing.LoLAppRooting
   type: Class
   source:
     remote:
-      path: OSL-Web/DataProcessing/InGame-Old.cs
+      path: OSL-Web/DataProcessing/LoLAppRooting.cs
       branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
-    id: Buff
-    path: ../OSL-Web/DataProcessing/InGame-Old.cs
-    startLine: 687
+    id: LoLAppRooting
+    path: ../OSL-Web/DataProcessing/LoLAppRooting.cs
+    startLine: 11
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
+  summary: "\nConfigure region, rooting, locale and version for download or get the right information from CDragon or API\n"
+  example: []
   syntax:
-    content: public class Buff
-    content.vb: Public Class Buff
+    content: public class LoLAppRooting
+    content.vb: Public Class LoLAppRooting
   inheritance:
   - System.Object
   inheritedMembers:
@@ -46,141 +45,44 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff.Killed
-  commentId: P:OSL_Web.DataProcessing.InGame_Old.Buff.Killed
-  id: Killed
-  parent: OSL_Web.DataProcessing.InGame_Old.Buff
+- uid: OSL_Web.DataProcessing.LoLAppRooting.ReadData(System.String)
+  commentId: M:OSL_Web.DataProcessing.LoLAppRooting.ReadData(System.String)
+  id: ReadData(System.String)
+  parent: OSL_Web.DataProcessing.LoLAppRooting
   langs:
   - csharp
   - vb
-  name: Killed
-  nameWithType: InGame_Old.Buff.Killed
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Killed
-  type: Property
+  name: ReadData(String)
+  nameWithType: LoLAppRooting.ReadData(String)
+  fullName: OSL_Web.DataProcessing.LoLAppRooting.ReadData(System.String)
+  type: Method
   source:
     remote:
-      path: OSL-Web/DataProcessing/InGame-Old.cs
+      path: OSL-Web/DataProcessing/LoLAppRooting.cs
       branch: GameInformation
       repo: https://github.com/Sky-CSC/OSL.git
-    id: Killed
-    path: ../OSL-Web/DataProcessing/InGame-Old.cs
-    startLine: 689
+    id: ReadData
+    path: ../OSL-Web/DataProcessing/LoLAppRooting.cs
+    startLine: 23
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
+  summary: "\nRead data contain information above locale, region, version of client\n"
+  example: []
   syntax:
-    content: public bool Killed { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property Killed As Boolean
-  overload: OSL_Web.DataProcessing.InGame_Old.Buff.Killed*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff.Team
-  commentId: P:OSL_Web.DataProcessing.InGame_Old.Buff.Team
-  id: Team
-  parent: OSL_Web.DataProcessing.InGame_Old.Buff
-  langs:
-  - csharp
-  - vb
-  name: Team
-  nameWithType: InGame_Old.Buff.Team
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Team
-  type: Property
-  source:
-    remote:
-      path: OSL-Web/DataProcessing/InGame-Old.cs
-      branch: GameInformation
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: Team
-    path: ../OSL-Web/DataProcessing/InGame-Old.cs
-    startLine: 690
-  assemblies:
-  - OSL-Web
-  namespace: OSL_Web.DataProcessing
-  syntax:
-    content: public string Team { get; set; }
-    parameters: []
-    return:
+    content: public static void ReadData(string content)
+    parameters:
+    - id: content
       type: System.String
-    content.vb: Public Property Team As String
-  overload: OSL_Web.DataProcessing.InGame_Old.Buff.Team*
+      description: ''
+    content.vb: Public Shared Sub ReadData(content As String)
+  overload: OSL_Web.DataProcessing.LoLAppRooting.ReadData*
   modifiers.csharp:
   - public
-  - get
-  - set
+  - static
   modifiers.vb:
   - Public
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
-  commentId: P:OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
-  id: ChampionBuff
-  parent: OSL_Web.DataProcessing.InGame_Old.Buff
-  langs:
-  - csharp
-  - vb
-  name: ChampionBuff
-  nameWithType: InGame_Old.Buff.ChampionBuff
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
-  type: Property
-  source:
-    remote:
-      path: OSL-Web/DataProcessing/InGame-Old.cs
-      branch: GameInformation
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: ChampionBuff
-    path: ../OSL-Web/DataProcessing/InGame-Old.cs
-    startLine: 691
-  assemblies:
-  - OSL-Web
-  namespace: OSL_Web.DataProcessing
-  syntax:
-    content: public List<InGame_Old.ChampionBuff> ChampionBuff { get; set; }
-    parameters: []
-    return:
-      type: List{OSL_Web.DataProcessing.InGame_Old.ChampionBuff}
-    content.vb: Public Property ChampionBuff As List(Of InGame_Old.ChampionBuff)
-  overload: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff.#ctor
-  commentId: M:OSL_Web.DataProcessing.InGame_Old.Buff.#ctor
-  id: '#ctor'
-  parent: OSL_Web.DataProcessing.InGame_Old.Buff
-  langs:
-  - csharp
-  - vb
-  name: Buff()
-  nameWithType: InGame_Old.Buff.Buff()
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Buff()
-  type: Constructor
-  source:
-    remote:
-      path: OSL-Web/DataProcessing/InGame-Old.cs
-      branch: GameInformation
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: .ctor
-    path: ../OSL-Web/DataProcessing/InGame-Old.cs
-    startLine: 692
-  assemblies:
-  - OSL-Web
-  namespace: OSL_Web.DataProcessing
-  syntax:
-    content: public Buff()
-    content.vb: Public Sub New
-  overload: OSL_Web.DataProcessing.InGame_Old.Buff.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
+  - Shared
 references:
 - uid: OSL_Web.DataProcessing
   commentId: N:OSL_Web.DataProcessing
@@ -479,23 +381,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff.Killed*
-  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.Buff.Killed
-  name: Killed
-  nameWithType: InGame_Old.Buff.Killed
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Killed
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff.Team*
-  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.Buff.Team
-  name: Team
-  nameWithType: InGame_Old.Buff.Team
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Team
+- uid: OSL_Web.DataProcessing.LoLAppRooting.ReadData*
+  commentId: Overload:OSL_Web.DataProcessing.LoLAppRooting.ReadData
+  name: ReadData
+  nameWithType: LoLAppRooting.ReadData
+  fullName: OSL_Web.DataProcessing.LoLAppRooting.ReadData
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -503,92 +393,3 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff*
-  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
-  name: ChampionBuff
-  nameWithType: InGame_Old.Buff.ChampionBuff
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.ChampionBuff
-- uid: List{OSL_Web.DataProcessing.InGame_Old.ChampionBuff}
-  commentId: '!:List{OSL_Web.DataProcessing.InGame_Old.ChampionBuff}'
-  definition: List`1
-  name: List<InGame_Old.ChampionBuff>
-  nameWithType: List<InGame_Old.ChampionBuff>
-  fullName: List<OSL_Web.DataProcessing.InGame_Old.ChampionBuff>
-  nameWithType.vb: List(Of InGame_Old.ChampionBuff)
-  fullName.vb: List(Of OSL_Web.DataProcessing.InGame_Old.ChampionBuff)
-  name.vb: List(Of InGame_Old.ChampionBuff)
-  spec.csharp:
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
-    name: InGame_Old.ChampionBuff
-    nameWithType: InGame_Old.ChampionBuff
-    fullName: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
-    name: InGame_Old.ChampionBuff
-    nameWithType: InGame_Old.ChampionBuff
-    fullName: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: List`1
-  isExternal: true
-  name: List<>
-  nameWithType: List<>
-  fullName: List<>
-  nameWithType.vb: List(Of )
-  fullName.vb: List(Of )
-  name.vb: List(Of )
-  spec.csharp:
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: List`1
-    name: List
-    nameWithType: List
-    fullName: List
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff.#ctor*
-  commentId: Overload:OSL_Web.DataProcessing.InGame_Old.Buff.#ctor
-  name: Buff
-  nameWithType: InGame_Old.Buff.Buff
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff.Buff

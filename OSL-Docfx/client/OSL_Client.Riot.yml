@@ -5,6 +5,7 @@ items:
   id: OSL_Client.Riot
   children:
   - OSL_Client.Riot.LeagueClient
+  - OSL_Client.Riot.RegionLocale
   langs:
   - csharp
   - vb
@@ -20,3 +21,8 @@ references:
   name: LeagueClient
   nameWithType: LeagueClient
   fullName: OSL_Client.Riot.LeagueClient
+- uid: OSL_Client.Riot.RegionLocale
+  commentId: T:OSL_Client.Riot.RegionLocale
+  name: RegionLocale
+  nameWithType: RegionLocale
+  fullName: OSL_Client.Riot.RegionLocale

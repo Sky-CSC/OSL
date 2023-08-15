@@ -126,13 +126,12 @@ http://ip:4141/runes/view1/all
 | <input type="checkbox" disabled checked> | Japanese (Japan) | ja_jp/ |
 | <input type="checkbox" disabled checked> | Korean (Korea, Republic of) | ko_kr/ |
 | <input type="checkbox" disabled checked> | Polish (Poland) | pl_pl/ |
-| <input type="checkbox" disable checkedd> | Portuguese (Brazil) | pt_br/ |
+| <input type="checkbox" disabled checked> | Portuguese (Brazil) | pt_br/ |
 | <input type="checkbox" disabled checked> | Romanian (Romania) | ro_ro/ |
 | <input type="checkbox" disabled checked> | Russian (Russian federation) | ru_ru/ |
 | <input type="checkbox" disabled checked> | Thai (Thailand) | th_th/ |
 | <input type="checkbox" disabled checked> | Turkish (Turkey) | tr_tr/ |
 | <input type="checkbox" disabled checked> | Vietnamese (Viet Nam) | vi_vn/ |
-| <input type="checkbox" disabled> | - | vn_vn/ |
 | <input type="checkbox" disabled checked> | Chinese (China) | zh_cn/ |
 | <input type="checkbox" disabled checked> | - | zh_my/ |
 | <input type="checkbox" disabled checked> | Chinese (Taiwan) | zh_tw/ |

@@ -22,7 +22,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Inhib
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 599
+    startLine: 600
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -63,7 +63,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopKilled
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 601
+    startLine: 602
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -98,7 +98,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: MidKilled
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 602
+    startLine: 603
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -133,7 +133,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BotKilled
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 603
+    startLine: 604
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

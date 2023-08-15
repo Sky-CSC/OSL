@@ -12,6 +12,7 @@ items:
   - OSL_CDragon.CDragon.date
   - OSL_CDragon.CDragon.defaultNumPatch
   - OSL_CDragon.CDragon.defaultRegionPatch
+  - OSL_CDragon.CDragon.DownloadAsyncWithCheck(System.String,System.String)
   - OSL_CDragon.CDragon.items
   - OSL_CDragon.CDragon.itemsDirectory
   - OSL_CDragon.CDragon.patch
@@ -20,6 +21,8 @@ items:
   - OSL_CDragon.CDragon.perksDirectoryWebPath
   - OSL_CDragon.CDragon.perkstyles
   - OSL_CDragon.CDragon.region
+  - OSL_CDragon.CDragon.SetPatch(System.String)
+  - OSL_CDragon.CDragon.SetRegion(System.String)
   - OSL_CDragon.CDragon.summonerSpells
   - OSL_CDragon.CDragon.summonerSpellsDirectory
   langs:
@@ -622,6 +625,117 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: OSL_CDragon.CDragon.SetRegion(System.String)
+  commentId: M:OSL_CDragon.CDragon.SetRegion(System.String)
+  id: SetRegion(System.String)
+  parent: OSL_CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: SetRegion(String)
+  nameWithType: CDragon.SetRegion(String)
+  fullName: OSL_CDragon.CDragon.SetRegion(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetRegion
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 36
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public static void SetRegion(string newRegion)
+    parameters:
+    - id: newRegion
+      type: System.String
+    content.vb: Public Shared Sub SetRegion(newRegion As String)
+  overload: OSL_CDragon.CDragon.SetRegion*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_CDragon.CDragon.SetPatch(System.String)
+  commentId: M:OSL_CDragon.CDragon.SetPatch(System.String)
+  id: SetPatch(System.String)
+  parent: OSL_CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: SetPatch(String)
+  nameWithType: CDragon.SetPatch(String)
+  fullName: OSL_CDragon.CDragon.SetPatch(System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: SetPatch
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 41
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  syntax:
+    content: public static void SetPatch(string newPatch)
+    parameters:
+    - id: newPatch
+      type: System.String
+    content.vb: Public Shared Sub SetPatch(newPatch As String)
+  overload: OSL_CDragon.CDragon.SetPatch*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_CDragon.CDragon.DownloadAsyncWithCheck(System.String,System.String)
+  commentId: M:OSL_CDragon.CDragon.DownloadAsyncWithCheck(System.String,System.String)
+  id: DownloadAsyncWithCheck(System.String,System.String)
+  parent: OSL_CDragon.CDragon
+  langs:
+  - csharp
+  - vb
+  name: DownloadAsyncWithCheck(String, String)
+  nameWithType: CDragon.DownloadAsyncWithCheck(String, String)
+  fullName: OSL_CDragon.CDragon.DownloadAsyncWithCheck(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: OSL-CDragon/CDragon.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: DownloadAsyncWithCheck
+    path: ../OSL-CDragon/CDragon.cs
+    startLine: 52
+  assemblies:
+  - OSL-CDragon
+  namespace: OSL_CDragon
+  summary: "\nDownload files if patch and refion not already present\n"
+  example: []
+  syntax:
+    content: public static void DownloadAsyncWithCheck(string patch, string region)
+    parameters:
+    - id: patch
+      type: System.String
+      description: ''
+    - id: region
+      type: System.String
+      description: ''
+    content.vb: Public Shared Sub DownloadAsyncWithCheck(patch As String, region As String)
+  overload: OSL_CDragon.CDragon.DownloadAsyncWithCheck*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 references:
 - uid: OSL_CDragon
   commentId: N:OSL_CDragon
@@ -933,3 +1047,18 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: OSL_CDragon.CDragon.SetRegion*
+  commentId: Overload:OSL_CDragon.CDragon.SetRegion
+  name: SetRegion
+  nameWithType: CDragon.SetRegion
+  fullName: OSL_CDragon.CDragon.SetRegion
+- uid: OSL_CDragon.CDragon.SetPatch*
+  commentId: Overload:OSL_CDragon.CDragon.SetPatch
+  name: SetPatch
+  nameWithType: CDragon.SetPatch
+  fullName: OSL_CDragon.CDragon.SetPatch
+- uid: OSL_CDragon.CDragon.DownloadAsyncWithCheck*
+  commentId: Overload:OSL_CDragon.CDragon.DownloadAsyncWithCheck
+  name: DownloadAsyncWithCheck
+  nameWithType: CDragon.DownloadAsyncWithCheck
+  fullName: OSL_CDragon.CDragon.DownloadAsyncWithCheck

@@ -21,17 +21,7 @@ items:
   - OSL_Web.DataProcessing.InGame.Levels
   - OSL_Web.DataProcessing.InGame.Summoner
   - OSL_Web.DataProcessing.InGame.Team
-  - OSL_Web.DataProcessing.InGame_Old
-  - OSL_Web.DataProcessing.InGame_Old.Buff
-  - OSL_Web.DataProcessing.InGame_Old.ChampionBuff
-  - OSL_Web.DataProcessing.InGame_Old.Drake
-  - OSL_Web.DataProcessing.InGame_Old.GameInformation
-  - OSL_Web.DataProcessing.InGame_Old.GameInformationV2
-  - OSL_Web.DataProcessing.InGame_Old.Herald
-  - OSL_Web.DataProcessing.InGame_Old.HeraldV2
-  - OSL_Web.DataProcessing.InGame_Old.Items
-  - OSL_Web.DataProcessing.InGame_Old.Summoner
-  - OSL_Web.DataProcessing.InGame_Old.Team
+  - OSL_Web.DataProcessing.LoLAppRooting
   - OSL_Web.DataProcessing.Runes
   - OSL_Web.DataProcessing.Runes.InfoForPerks
   - OSL_Web.DataProcessing.Runes.LaneInfo
@@ -95,68 +85,6 @@ references:
   name: EndGame
   nameWithType: EndGame
   fullName: OSL_Web.DataProcessing.EndGame
-- uid: OSL_Web.DataProcessing.InGame_Old
-  commentId: T:OSL_Web.DataProcessing.InGame_Old
-  name: InGame_Old
-  nameWithType: InGame_Old
-  fullName: OSL_Web.DataProcessing.InGame_Old
-- uid: OSL_Web.DataProcessing.InGame_Old.GameInformationV2
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.GameInformationV2
-  parent: OSL_Web.DataProcessing
-  name: InGame_Old.GameInformationV2
-  nameWithType: InGame_Old.GameInformationV2
-  fullName: OSL_Web.DataProcessing.InGame_Old.GameInformationV2
-- uid: OSL_Web.DataProcessing.InGame_Old.Team
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.Team
-  parent: OSL_Web.DataProcessing
-  name: InGame_Old.Team
-  nameWithType: InGame_Old.Team
-  fullName: OSL_Web.DataProcessing.InGame_Old.Team
-- uid: OSL_Web.DataProcessing.InGame_Old.Summoner
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.Summoner
-  name: InGame_Old.Summoner
-  nameWithType: InGame_Old.Summoner
-  fullName: OSL_Web.DataProcessing.InGame_Old.Summoner
-- uid: OSL_Web.DataProcessing.InGame_Old.Items
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.Items
-  name: InGame_Old.Items
-  nameWithType: InGame_Old.Items
-  fullName: OSL_Web.DataProcessing.InGame_Old.Items
-- uid: OSL_Web.DataProcessing.InGame_Old.HeraldV2
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.HeraldV2
-  parent: OSL_Web.DataProcessing
-  name: InGame_Old.HeraldV2
-  nameWithType: InGame_Old.HeraldV2
-  fullName: OSL_Web.DataProcessing.InGame_Old.HeraldV2
-- uid: OSL_Web.DataProcessing.InGame_Old.GameInformation
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.GameInformation
-  parent: OSL_Web.DataProcessing
-  name: InGame_Old.GameInformation
-  nameWithType: InGame_Old.GameInformation
-  fullName: OSL_Web.DataProcessing.InGame_Old.GameInformation
-- uid: OSL_Web.DataProcessing.InGame_Old.Drake
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.Drake
-  parent: OSL_Web.DataProcessing
-  name: InGame_Old.Drake
-  nameWithType: InGame_Old.Drake
-  fullName: OSL_Web.DataProcessing.InGame_Old.Drake
-- uid: OSL_Web.DataProcessing.InGame_Old.Buff
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.Buff
-  parent: OSL_Web.DataProcessing
-  name: InGame_Old.Buff
-  nameWithType: InGame_Old.Buff
-  fullName: OSL_Web.DataProcessing.InGame_Old.Buff
-- uid: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.ChampionBuff
-  name: InGame_Old.ChampionBuff
-  nameWithType: InGame_Old.ChampionBuff
-  fullName: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
-- uid: OSL_Web.DataProcessing.InGame_Old.Herald
-  commentId: T:OSL_Web.DataProcessing.InGame_Old.Herald
-  parent: OSL_Web.DataProcessing
-  name: InGame_Old.Herald
-  nameWithType: InGame_Old.Herald
-  fullName: OSL_Web.DataProcessing.InGame_Old.Herald
 - uid: OSL_Web.DataProcessing.InGame
   commentId: T:OSL_Web.DataProcessing.InGame
   name: InGame
@@ -202,6 +130,11 @@ references:
   name: InGame.Inhib
   nameWithType: InGame.Inhib
   fullName: OSL_Web.DataProcessing.InGame.Inhib
+- uid: OSL_Web.DataProcessing.LoLAppRooting
+  commentId: T:OSL_Web.DataProcessing.LoLAppRooting
+  name: LoLAppRooting
+  nameWithType: LoLAppRooting
+  fullName: OSL_Web.DataProcessing.LoLAppRooting
 - uid: OSL_Web.DataProcessing.Runes
   commentId: T:OSL_Web.DataProcessing.Runes
   name: Runes

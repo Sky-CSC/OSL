@@ -13,9 +13,11 @@ items:
   - OSL_LcuApi.LcuApi.Url.lolendofgamev1eogstatsblock
   - OSL_LcuApi.LcuApi.Url.lolgameflowv1gameflowphase
   - OSL_LcuApi.LcuApi.Url.lolgameflowv1session
+  - OSL_LcuApi.LcuApi.Url.lolpublishingcontentv1listenerspubhubconfig
   - OSL_LcuApi.LcuApi.Url.lolsummonerv1summoners
   - OSL_LcuApi.LcuApi.Url.lolsummonerv1summonersid
   - OSL_LcuApi.LcuApi.Url.riotclientappname
+  - OSL_LcuApi.LcuApi.Url.riotclientregionlocale
   langs:
   - csharp
   - vb
@@ -90,6 +92,76 @@ items:
   - Public
   - Shared
   - ReadOnly
+- uid: OSL_LcuApi.LcuApi.Url.riotclientregionlocale
+  commentId: F:OSL_LcuApi.LcuApi.Url.riotclientregionlocale
+  id: riotclientregionlocale
+  parent: OSL_LcuApi.LcuApi.Url
+  langs:
+  - csharp
+  - vb
+  name: riotclientregionlocale
+  nameWithType: LcuApi.Url.riotclientregionlocale
+  fullName: OSL_LcuApi.LcuApi.Url.riotclientregionlocale
+  type: Field
+  source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: riotclientregionlocale
+    path: ../OSL-LcuApi/LcuApi.cs
+    startLine: 54
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string riotclientregionlocale
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly riotclientregionlocale As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: OSL_LcuApi.LcuApi.Url.lolpublishingcontentv1listenerspubhubconfig
+  commentId: F:OSL_LcuApi.LcuApi.Url.lolpublishingcontentv1listenerspubhubconfig
+  id: lolpublishingcontentv1listenerspubhubconfig
+  parent: OSL_LcuApi.LcuApi.Url
+  langs:
+  - csharp
+  - vb
+  name: lolpublishingcontentv1listenerspubhubconfig
+  nameWithType: LcuApi.Url.lolpublishingcontentv1listenerspubhubconfig
+  fullName: OSL_LcuApi.LcuApi.Url.lolpublishingcontentv1listenerspubhubconfig
+  type: Field
+  source:
+    remote:
+      path: OSL-LcuApi/LcuApi.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: lolpublishingcontentv1listenerspubhubconfig
+    path: ../OSL-LcuApi/LcuApi.cs
+    startLine: 55
+  assemblies:
+  - OSL-LcuApi
+  namespace: OSL_LcuApi
+  syntax:
+    content: public static readonly string lolpublishingcontentv1listenerspubhubconfig
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly lolpublishingcontentv1listenerspubhubconfig As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
 - uid: OSL_LcuApi.LcuApi.Url.lolgameflowv1session
   commentId: F:OSL_LcuApi.LcuApi.Url.lolgameflowv1session
   id: lolgameflowv1session
@@ -108,7 +180,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolgameflowv1session
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 54
+    startLine: 56
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi
@@ -143,7 +215,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolgameflowv1gameflowphase
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 55
+    startLine: 57
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi
@@ -178,7 +250,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolsummonerv1summoners
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 56
+    startLine: 58
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi
@@ -213,7 +285,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1gridchampions
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 59
+    startLine: 61
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi
@@ -248,7 +320,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1session
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 60
+    startLine: 62
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi
@@ -283,7 +355,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolsummonerv1summonersid
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 61
+    startLine: 63
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi
@@ -318,7 +390,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1bannablechampionids
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 62
+    startLine: 64
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi
@@ -353,7 +425,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectv1currentchampion
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 63
+    startLine: 65
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi
@@ -388,7 +460,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolchampselectlegacyv1session
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 66
+    startLine: 68
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi
@@ -423,7 +495,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: lolendofgamev1eogstatsblock
     path: ../OSL-LcuApi/LcuApi.cs
-    startLine: 69
+    startLine: 71
   assemblies:
   - OSL-LcuApi
   namespace: OSL_LcuApi

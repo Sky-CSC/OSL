@@ -20,7 +20,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadData
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 39
+    startLine: 74
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -63,7 +63,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DownloadFiles
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 46
+    startLine: 81
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon

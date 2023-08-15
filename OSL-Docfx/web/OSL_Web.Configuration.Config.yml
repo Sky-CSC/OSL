@@ -10,6 +10,7 @@ items:
   - OSL_Web.Configuration.Config.LoadConfigWebHost
   - OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
   - OSL_Web.Configuration.Config.LoadDefaultDataEndGame
+  - OSL_Web.Configuration.Config.ReloadPagesView
   - OSL_Web.Configuration.Config.webHost
   - OSL_Web.Configuration.Config.webHostName
   - OSL_Web.Configuration.Config.webHttpPort
@@ -281,6 +282,38 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: OSL_Web.Configuration.Config.ReloadPagesView
+  commentId: M:OSL_Web.Configuration.Config.ReloadPagesView
+  id: ReloadPagesView
+  parent: OSL_Web.Configuration.Config
+  langs:
+  - csharp
+  - vb
+  name: ReloadPagesView()
+  nameWithType: Config.ReloadPagesView()
+  fullName: OSL_Web.Configuration.Config.ReloadPagesView()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Configuration/Config.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ReloadPagesView
+    path: ../OSL-Web/Configuration/Config.cs
+    startLine: 84
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Configuration
+  syntax:
+    content: public static void ReloadPagesView()
+    content.vb: Public Shared Sub ReloadPagesView
+  overload: OSL_Web.Configuration.Config.ReloadPagesView*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
 - uid: OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
   commentId: M:OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
   id: LoadDefaultDataChampSelect
@@ -299,7 +332,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadDefaultDataChampSelect
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 84
+    startLine: 114
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -331,7 +364,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: LoadDefaultDataEndGame
     path: ../OSL-Web/Configuration/Config.cs
-    startLine: 89
+    startLine: 119
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Configuration
@@ -685,6 +718,11 @@ references:
   name: LoadConfigTimer
   nameWithType: Config.LoadConfigTimer
   fullName: OSL_Web.Configuration.Config.LoadConfigTimer
+- uid: OSL_Web.Configuration.Config.ReloadPagesView*
+  commentId: Overload:OSL_Web.Configuration.Config.ReloadPagesView
+  name: ReloadPagesView
+  nameWithType: Config.ReloadPagesView
+  fullName: OSL_Web.Configuration.Config.ReloadPagesView
 - uid: OSL_Web.Configuration.Config.LoadDefaultDataChampSelect*
   commentId: Overload:OSL_Web.Configuration.Config.LoadDefaultDataChampSelect
   name: LoadDefaultDataChampSelect

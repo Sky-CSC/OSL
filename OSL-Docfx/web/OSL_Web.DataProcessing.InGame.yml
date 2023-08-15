@@ -6,7 +6,6 @@ items:
   parent: OSL_Web.DataProcessing
   children:
   - OSL_Web.DataProcessing.InGame.allPlayerList
-  - OSL_Web.DataProcessing.InGame.firstCallPerks
   - OSL_Web.DataProcessing.InGame.gameInformation
   - OSL_Web.DataProcessing.InGame.initTimerGame
   - OSL_Web.DataProcessing.InGame.liveEvent
@@ -50,39 +49,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: OSL_Web.DataProcessing.InGame.firstCallPerks
-  commentId: F:OSL_Web.DataProcessing.InGame.firstCallPerks
-  id: firstCallPerks
-  parent: OSL_Web.DataProcessing.InGame
-  langs:
-  - csharp
-  - vb
-  name: firstCallPerks
-  nameWithType: InGame.firstCallPerks
-  fullName: OSL_Web.DataProcessing.InGame.firstCallPerks
-  type: Field
-  source:
-    remote:
-      path: OSL-Web/DataProcessing/InGame.cs
-      branch: GameInformation
-      repo: https://github.com/Sky-CSC/OSL.git
-    id: firstCallPerks
-    path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 11
-  assemblies:
-  - OSL-Web
-  namespace: OSL_Web.DataProcessing
-  syntax:
-    content: public static bool firstCallPerks
-    return:
-      type: System.Boolean
-    content.vb: Public Shared firstCallPerks As Boolean
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 - uid: OSL_Web.DataProcessing.InGame.initTimerGame
   commentId: F:OSL_Web.DataProcessing.InGame.initTimerGame
   id: initTimerGame

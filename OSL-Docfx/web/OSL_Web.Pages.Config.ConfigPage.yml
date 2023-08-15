@@ -6,6 +6,7 @@ items:
   parent: OSL_Web.Pages.Config
   children:
   - OSL_Web.Pages.Config.ConfigPage.GenerateConfigFileChampSelectView1
+  - OSL_Web.Pages.Config.ConfigPage.PatchRegionSubmit
   - OSL_Web.Pages.Config.ConfigPage.WebRiotApiKeySubmit
   langs:
   - csharp
@@ -64,7 +65,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: WebRiotApiKeySubmit
     path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.Config
@@ -72,6 +73,38 @@ items:
     content: public static void WebRiotApiKeySubmit()
     content.vb: Public Shared Sub WebRiotApiKeySubmit
   overload: OSL_Web.Pages.Config.ConfigPage.WebRiotApiKeySubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.Config.ConfigPage.PatchRegionSubmit
+  commentId: M:OSL_Web.Pages.Config.ConfigPage.PatchRegionSubmit
+  id: PatchRegionSubmit
+  parent: OSL_Web.Pages.Config.ConfigPage
+  langs:
+  - csharp
+  - vb
+  name: PatchRegionSubmit()
+  nameWithType: ConfigPage.PatchRegionSubmit()
+  fullName: OSL_Web.Pages.Config.ConfigPage.PatchRegionSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/Config/ConfigPage.razor.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: PatchRegionSubmit
+    path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
+    startLine: 47
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.Config
+  syntax:
+    content: public static void PatchRegionSubmit()
+    content.vb: Public Shared Sub PatchRegionSubmit
+  overload: OSL_Web.Pages.Config.ConfigPage.PatchRegionSubmit*
   modifiers.csharp:
   - public
   - static
@@ -96,7 +129,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GenerateConfigFileChampSelectView1
     path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
-    startLine: 932
+    startLine: 942
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.Config
@@ -413,6 +446,11 @@ references:
   name: WebRiotApiKeySubmit
   nameWithType: ConfigPage.WebRiotApiKeySubmit
   fullName: OSL_Web.Pages.Config.ConfigPage.WebRiotApiKeySubmit
+- uid: OSL_Web.Pages.Config.ConfigPage.PatchRegionSubmit*
+  commentId: Overload:OSL_Web.Pages.Config.ConfigPage.PatchRegionSubmit
+  name: PatchRegionSubmit
+  nameWithType: ConfigPage.PatchRegionSubmit
+  fullName: OSL_Web.Pages.Config.ConfigPage.PatchRegionSubmit
 - uid: OSL_Web.Pages.Config.ConfigPage.GenerateConfigFileChampSelectView1*
   commentId: Overload:OSL_Web.Pages.Config.ConfigPage.GenerateConfigFileChampSelectView1
   name: GenerateConfigFileChampSelectView1

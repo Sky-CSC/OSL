@@ -22,7 +22,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Match_V5
     path: ../OSL-WebApiRiot/Match-V5.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ByPuuid
     path: ../OSL-WebApiRiot/Match-V5.cs
-    startLine: 22
+    startLine: 24
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -124,7 +124,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Matches
     path: ../OSL-WebApiRiot/Match-V5.cs
-    startLine: 58
+    startLine: 60
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -165,7 +165,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Timeline
     path: ../OSL-WebApiRiot/Match-V5.cs
-    startLine: 68
+    startLine: 70
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot

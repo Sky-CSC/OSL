@@ -23,7 +23,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Summoner_V4
     path: ../OSL-WebApiRiot/Summoner-V4.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -66,7 +66,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ByAccount
     path: ../OSL-WebApiRiot/Summoner-V4.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -107,7 +107,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ByName
     path: ../OSL-WebApiRiot/Summoner-V4.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -148,7 +148,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ByPuuid
     path: ../OSL-WebApiRiot/Summoner-V4.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -189,7 +189,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BySummonerId
     path: ../OSL-WebApiRiot/Summoner-V4.cs
-    startLine: 43
+    startLine: 45
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot

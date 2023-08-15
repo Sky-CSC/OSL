@@ -20,7 +20,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Spectator_V4
     path: ../OSL-WebApiRiot/Spectator-V4.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -63,7 +63,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BySummoner
     path: ../OSL-WebApiRiot/Spectator-V4.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot

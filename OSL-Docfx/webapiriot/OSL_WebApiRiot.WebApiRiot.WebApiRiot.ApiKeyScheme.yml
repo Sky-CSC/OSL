@@ -20,7 +20,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ApiKeyScheme
     path: ../OSL-WebApiRiot/WebApiRiot.cs
-    startLine: 37
+    startLine: 68
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot
@@ -61,7 +61,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: apiKey
     path: ../OSL-WebApiRiot/WebApiRiot.cs
-    startLine: 39
+    startLine: 70
   assemblies:
   - OSL-WebApiRiot
   namespace: OSL_WebApiRiot.WebApiRiot

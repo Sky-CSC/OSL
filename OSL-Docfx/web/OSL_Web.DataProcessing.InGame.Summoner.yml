@@ -28,7 +28,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Summoner
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 564
+    startLine: 565
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -69,7 +69,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionName
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 566
+    startLine: 567
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -104,7 +104,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: IsDead
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 567
+    startLine: 568
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -139,7 +139,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Items
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 568
+    startLine: 569
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -174,7 +174,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Levels
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 569
+    startLine: 570
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -209,7 +209,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerName
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 570
+    startLine: 571
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -244,7 +244,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: PositionIndice
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 571
+    startLine: 572
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -279,7 +279,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: HelderBuff
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 572
+    startLine: 573
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -314,7 +314,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BaronBuff
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 573
+    startLine: 574
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -349,7 +349,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 574
+    startLine: 575
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

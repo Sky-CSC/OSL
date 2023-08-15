@@ -22,7 +22,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Sound
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 242
+    startLine: 278
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChoosePath
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 244
+    startLine: 280
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BanPath
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 245
+    startLine: 281
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -135,7 +135,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SfxPath
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 246
+    startLine: 282
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon

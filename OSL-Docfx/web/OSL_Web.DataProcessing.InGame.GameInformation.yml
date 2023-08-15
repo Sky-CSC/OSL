@@ -23,7 +23,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GameInformation
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 535
+    startLine: 536
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -64,7 +64,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TimeStamp
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 537
+    startLine: 538
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -99,7 +99,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Order
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 538
+    startLine: 539
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -134,7 +134,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Chaos
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 539
+    startLine: 540
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing
@@ -169,7 +169,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-Web/DataProcessing/InGame.cs
-    startLine: 540
+    startLine: 541
   assemblies:
   - OSL-Web
   namespace: OSL_Web.DataProcessing

@@ -6,6 +6,7 @@ items:
   parent: OSL_Web.Pages.Config
   children:
   - OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.Port
+  - OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.ValuePatchRegion
   - OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.WebRiotApiKey
   langs:
   - csharp
@@ -159,6 +160,41 @@ items:
     - name: ErrorMessage
       type: System.String
       value: API key is incorect (42 character).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.ValuePatchRegion
+  commentId: P:OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.ValuePatchRegion
+  id: ValuePatchRegion
+  parent: OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText
+  langs:
+  - csharp
+  - vb
+  name: ValuePatchRegion
+  nameWithType: ConfigPage.ConfigOverlayText.ValuePatchRegion
+  fullName: OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.ValuePatchRegion
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/Config/ConfigPage.razor.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: ValuePatchRegion
+    path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
+    startLine: 33
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.Config
+  syntax:
+    content: public string ValuePatchRegion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ValuePatchRegion As String
+  overload: OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.ValuePatchRegion*
   modifiers.csharp:
   - public
   - get
@@ -487,3 +523,8 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.ValuePatchRegion*
+  commentId: Overload:OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.ValuePatchRegion
+  name: ValuePatchRegion
+  nameWithType: ConfigPage.ConfigOverlayText.ValuePatchRegion
+  fullName: OSL_Web.Pages.Config.ConfigPage.ConfigOverlayText.ValuePatchRegion

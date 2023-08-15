@@ -151,28 +151,8 @@
     name: InGame.Summoner
   - uid: OSL_Web.DataProcessing.InGame.Team
     name: InGame.Team
-  - uid: OSL_Web.DataProcessing.InGame_Old
-    name: InGame_Old
-  - uid: OSL_Web.DataProcessing.InGame_Old.Buff
-    name: InGame_Old.Buff
-  - uid: OSL_Web.DataProcessing.InGame_Old.ChampionBuff
-    name: InGame_Old.ChampionBuff
-  - uid: OSL_Web.DataProcessing.InGame_Old.Drake
-    name: InGame_Old.Drake
-  - uid: OSL_Web.DataProcessing.InGame_Old.GameInformation
-    name: InGame_Old.GameInformation
-  - uid: OSL_Web.DataProcessing.InGame_Old.GameInformationV2
-    name: InGame_Old.GameInformationV2
-  - uid: OSL_Web.DataProcessing.InGame_Old.Herald
-    name: InGame_Old.Herald
-  - uid: OSL_Web.DataProcessing.InGame_Old.HeraldV2
-    name: InGame_Old.HeraldV2
-  - uid: OSL_Web.DataProcessing.InGame_Old.Items
-    name: InGame_Old.Items
-  - uid: OSL_Web.DataProcessing.InGame_Old.Summoner
-    name: InGame_Old.Summoner
-  - uid: OSL_Web.DataProcessing.InGame_Old.Team
-    name: InGame_Old.Team
+  - uid: OSL_Web.DataProcessing.LoLAppRooting
+    name: LoLAppRooting
   - uid: OSL_Web.DataProcessing.Runes
     name: Runes
   - uid: OSL_Web.DataProcessing.Runes.InfoForPerks
