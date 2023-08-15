@@ -154,6 +154,10 @@ http://ip:4141/champselect/view3 and/or http://ip:4141/champselect/view4 as a br
 
 [overlay](https://github.com/piorrro33/overlay) (Customizable UI for League of Legends champion select spectating)
 
+### [SkinSpotlights](https://github.com/SkinSpotlights)
+
+[LiveEventsDocumentation](https://github.com/SkinSpotlights/LiveEventsDocumentation) (Minimalist documentation of live events)
+
 # **License**
 Distributed under the MIT License. See LICENSE for more information.
 
