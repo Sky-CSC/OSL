@@ -60,7 +60,7 @@ namespace OSL_WebApiRiot.WebApiRiot
         /// <returns></returns>
         public static string Matches(Int64 matchId)
         {
-            return $"{httpsUrl}{rooting}{pathUrlApiRiot}/lol/match/v5/matches/{region.ToUpper()}{matchId}";
+            return $"{httpsUrl}{rooting}{pathUrlApiRiot}/lol/match/v5/matches/{region.ToUpper()}_{matchId}";
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace OSL_WebApiRiot.WebApiRiot
         /// <returns></returns>
         public static string Timeline(Int64 matchId)
         {
-            return $"{httpsUrl}{rooting}{pathUrlApiRiot}/lol/match/v5/matches/{region.ToUpper()}{matchId}/timeline";
+            return $"{httpsUrl}{rooting}{pathUrlApiRiot}/lol/match/v5/matches/{region.ToUpper()}_{matchId}/timeline";
         }
     }
 }
