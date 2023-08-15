@@ -39,8 +39,13 @@ namespace OSL_Web.DataProcessing
                         if (dataJsonRecive.Status.Equals("Running"))
                         {
                             inGameStatus = true; //We are in game
-                            InGame.firstCallPerks = true; //To create a list of perks once
-                            InGame.initTimerGame = true;
+                            //InGame.firstCallPerks = true; //To create a list of perks once
+                            InGame.initTimerGame = true; //Reset information
+                            InGame.allPlayerList = null; //Reset information
+                            InGame.playBack = null; //Reset information
+                            InGame.liveEvent = false; //Reset information
+                            InGame.liveEventContent = null; //Reset information
+                            InGame.gameInformation = new(); //Reset information
                         }
                         else
                         {
