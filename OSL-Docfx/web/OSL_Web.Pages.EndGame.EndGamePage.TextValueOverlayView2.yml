@@ -52,6 +52,8 @@ items:
   - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.GoldDiffGradiant
   - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.GoldDiffGradiantSubmit
   - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.GoldDiffText
+  - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseText
+  - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseTextSubmit
   - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.SetBackgroundColorColor1
   - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.SetBackgroundColorColor2
   - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.SetBansBackgroundColorColor1
@@ -121,6 +123,8 @@ items:
   - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.TopBarRedTeamScore
   - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.TopBarRedTeamScoreSubmit
   - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.TopBarTimerText
+  - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinText
+  - OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinTextSubmit
   langs:
   - csharp
   - vb
@@ -135,7 +139,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TextValueOverlayView2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 949
+    startLine: 962
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -176,7 +180,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBlueTeamName
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 951
+    startLine: 964
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -227,7 +231,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarRedTeamName
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 953
+    startLine: 966
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -278,7 +282,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBlueTeamScore
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 955
+    startLine: 968
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -329,7 +333,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarRedTeamScore
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 957
+    startLine: 970
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -380,7 +384,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarTimerText
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 959
+    startLine: 972
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -431,7 +435,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoText
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 961
+    startLine: 974
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -448,6 +452,108 @@ items:
 
       Public Property ChampionInfoText As String
   overload: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.ChampionInfoText*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 20
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Name is too long (20 character limit).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinText
+  commentId: P:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinText
+  id: WinText
+  parent: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2
+  langs:
+  - csharp
+  - vb
+  name: WinText
+  nameWithType: EndGamePage.TextValueOverlayView2.WinText
+  fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: WinText
+    path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 976
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: >-
+      [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
+
+      public string WinText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(20, ErrorMessage:="Name is too long (20 character limit).")>
+
+      Public Property WinText As String
+  overload: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinText*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 20
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Name is too long (20 character limit).
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseText
+  commentId: P:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseText
+  id: LoseText
+  parent: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2
+  langs:
+  - csharp
+  - vb
+  name: LoseText
+  nameWithType: EndGamePage.TextValueOverlayView2.LoseText
+  fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoseText
+    path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 978
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: >-
+      [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
+
+      public string LoseText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <StringLength(20, ErrorMessage:="Name is too long (20 character limit).")>
+
+      Public Property LoseText As String
+  overload: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseText*
   attributes:
   - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
     ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
@@ -482,7 +588,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffText
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 963
+    startLine: 980
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -533,7 +639,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 966
+    startLine: 983
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -568,7 +674,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 967
+    startLine: 984
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -603,7 +709,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 968
+    startLine: 985
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -638,7 +744,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 969
+    startLine: 986
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -673,7 +779,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 970
+    startLine: 987
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -708,7 +814,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffGradiant
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 971
+    startLine: 988
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -743,7 +849,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 974
+    startLine: 991
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -803,7 +909,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 978
+    startLine: 995
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -863,7 +969,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 982
+    startLine: 999
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -923,7 +1029,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 986
+    startLine: 1003
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -983,7 +1089,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 990
+    startLine: 1007
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1043,7 +1149,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 994
+    startLine: 1011
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1103,7 +1209,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 997
+    startLine: 1014
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1163,7 +1269,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1001
+    startLine: 1018
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1223,7 +1329,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1005
+    startLine: 1022
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1283,7 +1389,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1008
+    startLine: 1025
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1343,7 +1449,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1012
+    startLine: 1029
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1403,7 +1509,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1016
+    startLine: 1033
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1463,7 +1569,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1019
+    startLine: 1036
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1523,7 +1629,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1023
+    startLine: 1040
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1583,7 +1689,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1027
+    startLine: 1044
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1643,7 +1749,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBackgroundColorDeg
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1030
+    startLine: 1047
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1703,7 +1809,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBackgroundColorPercent1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1034
+    startLine: 1051
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1763,7 +1869,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBackgroundColorPercent2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1038
+    startLine: 1055
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1823,7 +1929,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1041
+    startLine: 1058
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1883,7 +1989,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1044
+    startLine: 1061
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1943,7 +2049,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1047
+    startLine: 1064
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2003,7 +2109,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1050
+    startLine: 1067
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2063,7 +2169,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1053
+    startLine: 1070
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2123,7 +2229,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1056
+    startLine: 1073
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2183,7 +2289,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBlueTeamNameSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1060
+    startLine: 1077
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2215,7 +2321,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarRedTeamNameSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1064
+    startLine: 1081
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2247,7 +2353,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBlueTeamScoreSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1068
+    startLine: 1085
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2279,7 +2385,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarRedTeamScoreSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1072
+    startLine: 1089
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2311,7 +2417,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SwitchSideRedBlue
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1076
+    startLine: 1093
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2319,6 +2425,70 @@ items:
     content: public static void SwitchSideRedBlue()
     content.vb: Public Shared Sub SwitchSideRedBlue
   overload: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.SwitchSideRedBlue*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinTextSubmit
+  commentId: M:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinTextSubmit
+  id: WinTextSubmit
+  parent: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2
+  langs:
+  - csharp
+  - vb
+  name: WinTextSubmit()
+  nameWithType: EndGamePage.TextValueOverlayView2.WinTextSubmit()
+  fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinTextSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: WinTextSubmit
+    path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 1113
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public static void WinTextSubmit()
+    content.vb: Public Shared Sub WinTextSubmit
+  overload: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinTextSubmit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseTextSubmit
+  commentId: M:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseTextSubmit
+  id: LoseTextSubmit
+  parent: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2
+  langs:
+  - csharp
+  - vb
+  name: LoseTextSubmit()
+  nameWithType: EndGamePage.TextValueOverlayView2.LoseTextSubmit()
+  fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseTextSubmit()
+  type: Method
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGamePage.razor.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoseTextSubmit
+    path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
+    startLine: 1117
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public static void LoseTextSubmit()
+    content.vb: Public Shared Sub LoseTextSubmit
+  overload: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseTextSubmit*
   modifiers.csharp:
   - public
   - static
@@ -2343,7 +2513,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1096
+    startLine: 1122
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2375,7 +2545,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1099
+    startLine: 1125
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2407,7 +2577,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1102
+    startLine: 1128
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2439,7 +2609,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1105
+    startLine: 1131
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2471,7 +2641,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffGradiantSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1108
+    startLine: 1134
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2503,7 +2673,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1114
+    startLine: 1140
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2535,7 +2705,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1122
+    startLine: 1148
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2567,7 +2737,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1136
+    startLine: 1162
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2599,7 +2769,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BackgroundColorEnableDisableSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1151
+    startLine: 1177
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2631,7 +2801,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1166
+    startLine: 1192
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2663,7 +2833,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1174
+    startLine: 1200
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2695,7 +2865,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1188
+    startLine: 1214
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2727,7 +2897,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1203
+    startLine: 1229
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2759,7 +2929,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsTopBarBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1207
+    startLine: 1233
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2793,7 +2963,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TopBarBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1212
+    startLine: 1238
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2826,7 +2996,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1213
+    startLine: 1239
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2858,7 +3028,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBlueTeamNameColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1228
+    startLine: 1254
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2890,7 +3060,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBlueTeamWinLossColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1241
+    startLine: 1267
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2922,7 +3092,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarBlueTeamScoreColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1254
+    startLine: 1280
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2954,7 +3124,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarRedTeamNameColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1267
+    startLine: 1293
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -2986,7 +3156,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarRedTeamWinLossColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1280
+    startLine: 1306
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3018,7 +3188,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarRedTeamScoreColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1293
+    startLine: 1319
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3050,7 +3220,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarTimerTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1306
+    startLine: 1332
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3082,7 +3252,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetTopBarTimerColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1319
+    startLine: 1345
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3114,7 +3284,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1344
+    startLine: 1370
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3146,7 +3316,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1352
+    startLine: 1378
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3178,7 +3348,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1366
+    startLine: 1392
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3210,7 +3380,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1380
+    startLine: 1406
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3242,7 +3412,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsChampionInfoBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1384
+    startLine: 1410
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3276,7 +3446,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ChampionInfoBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1389
+    startLine: 1415
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3309,7 +3479,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1390
+    startLine: 1416
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3341,7 +3511,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1404
+    startLine: 1430
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3373,7 +3543,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBlueBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1417
+    startLine: 1443
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3405,7 +3575,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoBlueDegaTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1430
+    startLine: 1456
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3437,7 +3607,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoRedBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1443
+    startLine: 1469
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3469,7 +3639,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetChampionInfoRedDegaTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1456
+    startLine: 1482
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3501,7 +3671,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1479
+    startLine: 1505
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3533,7 +3703,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBansBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1487
+    startLine: 1513
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3565,7 +3735,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBansBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1501
+    startLine: 1527
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3597,7 +3767,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1515
+    startLine: 1541
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3629,7 +3799,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsBansBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1519
+    startLine: 1545
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3663,7 +3833,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: BansBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1524
+    startLine: 1550
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3696,7 +3866,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBansBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1525
+    startLine: 1551
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3728,7 +3898,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetBansTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1540
+    startLine: 1566
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3760,7 +3930,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1569
+    startLine: 1595
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3792,7 +3962,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1577
+    startLine: 1603
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3824,7 +3994,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1591
+    startLine: 1617
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3856,7 +4026,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1605
+    startLine: 1631
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3888,7 +4058,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsGlobalStatsBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1609
+    startLine: 1635
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3922,7 +4092,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GlobalStatsBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1614
+    startLine: 1640
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3955,7 +4125,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1615
+    startLine: 1641
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -3987,7 +4157,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1629
+    startLine: 1655
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4019,7 +4189,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsBlueTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1643
+    startLine: 1669
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4051,7 +4221,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGlobalStatsRedTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1657
+    startLine: 1683
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4083,7 +4253,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBackgroundColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1677
+    startLine: 1703
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4115,7 +4285,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBackgroundColorColor1
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1685
+    startLine: 1711
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4147,7 +4317,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBackgroundColorColor2
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1699
+    startLine: 1725
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4179,7 +4349,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBorderColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1713
+    startLine: 1739
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4211,7 +4381,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsGoldDiffBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1717
+    startLine: 1743
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4245,7 +4415,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBorderColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1722
+    startLine: 1748
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4278,7 +4448,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBorderColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1723
+    startLine: 1749
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4310,7 +4480,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBarColorSubmit
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1737
+    startLine: 1763
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4342,7 +4512,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: TempsGoldDiffBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1741
+    startLine: 1767
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4376,7 +4546,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GoldDiffBarColorNotSet
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1746
+    startLine: 1772
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4409,7 +4579,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBarColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1747
+    startLine: 1773
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4441,7 +4611,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffTextColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1761
+    startLine: 1787
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4473,7 +4643,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBlueTextGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1775
+    startLine: 1801
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4505,7 +4675,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffRedTextGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1788
+    startLine: 1814
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4537,7 +4707,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffZeroTextGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1801
+    startLine: 1827
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4569,7 +4739,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffBluePointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1814
+    startLine: 1840
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4601,7 +4771,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffRedPointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1827
+    startLine: 1853
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4633,7 +4803,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffZeroPointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1840
+    startLine: 1866
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4665,7 +4835,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffStartEndPointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1853
+    startLine: 1879
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -4697,7 +4867,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SetGoldDiffLinkPointGoldColor
     path: ../OSL-Web/Pages/EndGame/EndGamePage.razor.cs
-    startLine: 1866
+    startLine: 1892
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -5046,6 +5216,16 @@ references:
   name: ChampionInfoText
   nameWithType: EndGamePage.TextValueOverlayView2.ChampionInfoText
   fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.ChampionInfoText
+- uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinText*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinText
+  name: WinText
+  nameWithType: EndGamePage.TextValueOverlayView2.WinText
+  fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinText
+- uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseText*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseText
+  name: LoseText
+  nameWithType: EndGamePage.TextValueOverlayView2.LoseText
+  fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseText
 - uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.GoldDiffText*
   commentId: Overload:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.GoldDiffText
   name: GoldDiffText
@@ -5240,6 +5420,16 @@ references:
   name: SwitchSideRedBlue
   nameWithType: EndGamePage.TextValueOverlayView2.SwitchSideRedBlue
   fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.SwitchSideRedBlue
+- uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinTextSubmit*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinTextSubmit
+  name: WinTextSubmit
+  nameWithType: EndGamePage.TextValueOverlayView2.WinTextSubmit
+  fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.WinTextSubmit
+- uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseTextSubmit*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseTextSubmit
+  name: LoseTextSubmit
+  nameWithType: EndGamePage.TextValueOverlayView2.LoseTextSubmit
+  fullName: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.LoseTextSubmit
 - uid: OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.TopBarGradiantSubmit*
   commentId: Overload:OSL_Web.Pages.EndGame.EndGamePage.TextValueOverlayView2.TopBarGradiantSubmit
   name: TopBarGradiantSubmit

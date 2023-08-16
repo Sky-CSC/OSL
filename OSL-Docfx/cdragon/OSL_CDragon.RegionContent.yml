@@ -24,7 +24,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: RegionContent
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 239
+    startLine: 240
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -67,7 +67,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Champion
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 241
+    startLine: 242
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -102,7 +102,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Items
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 242
+    startLine: 243
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -137,7 +137,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: SummonerSpells
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 243
+    startLine: 244
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -172,7 +172,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Perks
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 244
+    startLine: 245
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -207,7 +207,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 245
+    startLine: 246
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon

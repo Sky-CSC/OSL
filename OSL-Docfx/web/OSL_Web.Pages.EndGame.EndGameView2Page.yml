@@ -156,7 +156,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetTimer
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 105
+    startLine: 107
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -188,7 +188,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetTimerInt
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 119
+    startLine: 121
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -220,7 +220,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetChampionPathByPath
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 134
+    startLine: 136
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -255,7 +255,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetChampionPath
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 141
+    startLine: 143
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -290,7 +290,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertToK
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 146
+    startLine: 148
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -325,7 +325,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertToWidth
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 162
+    startLine: 164
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -360,7 +360,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetKDABlue
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 179
+    startLine: 181
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -392,7 +392,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetKDARed
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 186
+    startLine: 188
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -424,7 +424,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetGoldBlue
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 194
+    startLine: 196
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -456,7 +456,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetGoldRed
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 210
+    startLine: 212
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -488,7 +488,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetTowerKillBlue
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 227
+    startLine: 229
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -520,7 +520,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetTowerKillRed
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 233
+    startLine: 235
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -552,7 +552,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetDragonsKill
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 239
+    startLine: 241
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -587,7 +587,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetElderKillBlue
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 269
+    startLine: 271
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -619,7 +619,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetElderKillRed
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 293
+    startLine: 295
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -651,7 +651,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetHeraldKillBlue
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 317
+    startLine: 319
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -683,7 +683,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetHeraldKillRed
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 341
+    startLine: 343
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -715,7 +715,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetBaronKillBlue
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 365
+    startLine: 367
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -747,7 +747,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetBaronKillRed
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 389
+    startLine: 391
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -779,7 +779,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetWinLossBlue
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 413
+    startLine: 415
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -811,7 +811,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GetWinLossRed
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 430
+    startLine: 432
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -843,7 +843,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ResetColor
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 447
+    startLine: 449
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -875,7 +875,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: CreateTabGold
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 489
+    startLine: 491
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -907,7 +907,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: MaxGold
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 519
+    startLine: 521
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -941,7 +941,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertToString
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 534
+    startLine: 536
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -978,7 +978,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertToString
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 539
+    startLine: 541
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1015,7 +1015,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertToHyp
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 544
+    startLine: 546
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame
@@ -1058,7 +1058,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: ConvertToAngle
     path: ../OSL-Web/Pages/EndGame/EndGameView2Page.razor.cs
-    startLine: 553
+    startLine: 555
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.EndGame

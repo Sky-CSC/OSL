@@ -66,6 +66,7 @@ items:
   - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.GoldDiffTextColor
   - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.GoldDiffZeroPointGoldColor
   - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.GoldDiffZeroTextGoldColor
+  - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.LoseText
   - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.TopBarBackgroundColor
   - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.TopBarBackgroundColorColor1
   - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.TopBarBackgroundColorColor2
@@ -87,6 +88,7 @@ items:
   - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.TopBarTimerColor
   - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.TopBarTimerText
   - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.TopBarTimerTextColor
+  - OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.WinText
   langs:
   - csharp
   - vb
@@ -2994,6 +2996,76 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.WinText
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.WinText
+  id: WinText
+  parent: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: WinText
+  nameWithType: EndGameView1Page.FormatingData.WinText
+  fullName: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.WinText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: WinText
+    path: ../OSL-Web/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 105
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string WinText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property WinText As String
+  overload: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.WinText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.LoseText
+  commentId: P:OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.LoseText
+  id: LoseText
+  parent: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData
+  langs:
+  - csharp
+  - vb
+  name: LoseText
+  nameWithType: EndGameView1Page.FormatingData.LoseText
+  fullName: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.LoseText
+  type: Property
+  source:
+    remote:
+      path: OSL-Web/Pages/EndGame/EndGameView1Page.razor.cs
+      branch: GameInformation
+      repo: https://github.com/Sky-CSC/OSL.git
+    id: LoseText
+    path: ../OSL-Web/Pages/EndGame/EndGameView1Page.razor.cs
+    startLine: 106
+  assemblies:
+  - OSL-Web
+  namespace: OSL_Web.Pages.EndGame
+  syntax:
+    content: public string LoseText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LoseText As String
+  overload: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.LoseText*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 references:
 - uid: OSL_Web.Pages.EndGame
   commentId: N:OSL_Web.Pages.EndGame
@@ -3709,3 +3781,13 @@ references:
   name: GoldDiffBarColor
   nameWithType: EndGameView1Page.FormatingData.GoldDiffBarColor
   fullName: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.GoldDiffBarColor
+- uid: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.WinText*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.WinText
+  name: WinText
+  nameWithType: EndGameView1Page.FormatingData.WinText
+  fullName: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.WinText
+- uid: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.LoseText*
+  commentId: Overload:OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.LoseText
+  name: LoseText
+  nameWithType: EndGameView1Page.FormatingData.LoseText
+  fullName: OSL_Web.Pages.EndGame.EndGameView1Page.FormatingData.LoseText

@@ -36,7 +36,7 @@ namespace OSL_Web.Pages.Runes
             int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
             int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
             int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Perks.FindIndex(obj => obj.Id == perksId);
-            return OSL_CDragon.CDragon.dataCDragon.Patch[0].Region[0].RegionContent.Perks[indexPerks].IconPath;
+            return OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Perks[indexPerks].IconPath;
         }
 
         /// <summary>

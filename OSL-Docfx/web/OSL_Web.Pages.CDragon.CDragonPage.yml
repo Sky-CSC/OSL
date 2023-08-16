@@ -20,7 +20,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: CDragonPage
     path: ../OSL-Web/Pages/CDragon/CDragonPage.razor.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.CDragon
@@ -63,7 +63,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: UpdateManual
     path: ../OSL-Web/Pages/CDragon/CDragonPage.razor.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.CDragon

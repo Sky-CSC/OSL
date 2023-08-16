@@ -132,6 +132,8 @@ namespace OSL_Web.Configuration.Overlay.EndGame.View3
             EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor = jsonContent.GoldDiffStartEndPointGoldColor;
             EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor = jsonContent.GoldDiffLinkPointGoldColor;
             EndGameView3Page.formatingData.GoldDiffBarColor = jsonContent.GoldDiffBarColor;
+            EndGameView3Page.formatingData.WinText = jsonContent.WinText;
+            EndGameView3Page.formatingData.LoseText = jsonContent.LoseText;
         }
     }
 }

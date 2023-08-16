@@ -8,8 +8,8 @@
 ---
 
 ## Run application
-1. Download last release : [Release v1.1.6](https://github.com/Sky-CSC/OSL/releases/latest)
-2. Unzip ``OSL-Client-1.1.6-win-x64.zip`` to desired install folder
+1. Download last release : [Release v1.1.7](https://github.com/Sky-CSC/OSL/releases/latest)
+2. Unzip ``OSL-Client-1.1.7-win-x64.zip`` to desired install folder
 3. Change IP on ```server-socket.json```
 4. > [!CAUTION] If you understand what you are doing, add this information in this file ```C:/Riot Games/League of Legends/Config/game.cfg```
 

@@ -129,7 +129,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: GenerateConfigFileChampSelectView1
     path: ../OSL-Web/Pages/Config/ConfigPage.razor.cs
-    startLine: 942
+    startLine: 947
   assemblies:
   - OSL-Web
   namespace: OSL_Web.Pages.Config
