@@ -54,16 +54,15 @@ Console.ForegroundColor = ConsoleColor.Red;
 //Console.WriteLine("   \\$$ $$  | $$$$$$$$| $$       _\\$$$$$$\\| $$| $$__/ $$| $$  | $$       _| $$_  __ | $$_____  __| $$_\\$$$$");
 //Console.WriteLine("    \\$$$    \\$$     \\| $$      |       $$| $$ \\$$    $$| $$  | $$      |   $$ \\|  \\| $$     \\|  \\\\$$  \\$$$");
 //Console.WriteLine("     \\$      \\$$$$$$$ \\$$       \\$$$$$$$  \\$$  \\$$$$$$  \\$$   \\$$       \\$$$$$$ \\$$ \\$$$$$$$$ \\$$ \\$$$$$$ ");
-
-Console.WriteLine(" __     __                                __                              __          __       _______  ");
-Console.WriteLine("|  \\   |  \\                              |  \\                           _/  \\       _/  \\     |       \\ ");
-Console.WriteLine("| $$   | $$  ______    ______    _______  \\$$  ______   _______        |   $$      |   $$     | $$$$$$$ ");
-Console.WriteLine("| $$   | $$ /      \\  /      \\  /       \\|  \\ /      \\ |       \\        \\$$$$       \\$$$$     | $$____  ");
-Console.WriteLine(" \\$$\\ /  $$|  $$$$$$\\|  $$$$$$\\|  $$$$$$$| $$|  $$$$$$\\| $$$$$$$\\        | $$        | $$     | $$   \\ ");
-Console.WriteLine("  \\$$\\  $$ | $$    $$| $$   \\$$ \\$$    \\ | $$| $$  | $$| $$  | $$        | $$        | $$      \\$$$$$$$\\");
-Console.WriteLine("   \\$$ $$  | $$$$$$$$| $$       _\\$$$$$$\\| $$| $$__/ $$| $$  | $$       _| $$_  __  _| $$_  __|  \\__| $$");
-Console.WriteLine("    \\$$$    \\$$     \\| $$      |       $$| $$ \\$$    $$| $$  | $$      |   $$ \\|  \\|   $$ \\|  \\\\$$    $$");
-Console.WriteLine("     \\$      \\$$$$$$$ \\$$       \\$$$$$$$  \\$$  \\$$$$$$  \\$$   \\$$       \\$$$$$$ \\$$ \\$$$$$$ \\$$ \\$$$$$$ ");                                                                                               
+Console.WriteLine(" __     __                                __                              __          __        ________    ");
+Console.WriteLine("|  \\   |  \\                              |  \\                           _/  \\       _/  \\      |        \\");
+Console.WriteLine("| $$   | $$  ______    ______    _______  \\$$  ______   _______        |   $$      |   $$       \\$$$$$$$$");
+Console.WriteLine("| $$   | $$ /      \\  /      \\  /       \\|  \\ /      \\ |       \\        \\$$$$       \\$$$$          /  $$ ");
+Console.WriteLine(" \\$$\\ /  $$|  $$$$$$\\|  $$$$$$\\|  $$$$$$$| $$|  $$$$$$\\| $$$$$$$\\        | $$        | $$         /  $$  ");
+Console.WriteLine("  \\$$\\  $$ | $$    $$| $$   \\$$ \\$$    \\ | $$| $$  | $$| $$  | $$        | $$        | $$        /  $$   ");
+Console.WriteLine("   \\$$ $$  | $$$$$$$$| $$       _\\$$$$$$\\| $$| $$__/ $$| $$  | $$       _| $$_  __  _| $$_  __  /  $$    ");
+Console.WriteLine("    \\$$$    \\$$     \\| $$      |       $$| $$ \\$$    $$| $$  | $$      |   $$ \\|  \\|   $$ \\|  \\|  $$     ");
+Console.WriteLine("     \\$      \\$$$$$$$ \\$$       \\$$$$$$$  \\$$  \\$$$$$$  \\$$   \\$$       \\$$$$$$ \\$$ \\$$$$$$ \\$$ \\$$      ");                                                                                                
 Console.ResetColor();
 Console.WriteLine();
 
@@ -78,10 +77,10 @@ RunDecreasingTimer.Start();
 AsyncServer.Run(); //Run Socket server
 
 ///Open in default browser application
-Process.Start(new ProcessStartInfo
-{
-    FileName = $"http://{Config.webHostName}:{Config.webHttpPort}",
-    UseShellExecute = true
-});
+//Process.Start(new ProcessStartInfo
+//{
+//    FileName = $"http://{Config.webHostName}:{Config.webHttpPort}",
+//    UseShellExecute = true
+//});
 
 app.Run();
