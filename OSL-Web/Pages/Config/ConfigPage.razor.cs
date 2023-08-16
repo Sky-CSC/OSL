@@ -501,6 +501,8 @@ namespace OSL_Web.Pages.Config
                     EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor = jsonContent.GoldDiffStartEndPointGoldColor;
                     EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor = jsonContent.GoldDiffLinkPointGoldColor;
                     EndGameView1Page.formatingData.GoldDiffBarColor = jsonContent.GoldDiffBarColor;
+                    EndGameView1Page.formatingData.WinText = jsonContent.WinText;
+                    EndGameView1Page.formatingData.LoseText = jsonContent.LoseText;
 
 
                     fileSelected = null;
@@ -593,7 +595,8 @@ namespace OSL_Web.Pages.Config
                     EndGameView2Page.formatingData.GoldDiffBorderColor = jsonContent.GoldDiffBorderColor;
                     EndGameView2Page.formatingData.GoldDiffText = jsonContent.GoldDiffText;
                     EndGameView2Page.formatingData.GoldDiffTextColor = jsonContent.GoldDiffTextColor;
-
+                    EndGameView2Page.formatingData.WinText = jsonContent.WinText;
+                    EndGameView2Page.formatingData.LoseText = jsonContent.LoseText;
 
                     fileSelected = null;
                     StateHasChanged();
@@ -686,6 +689,8 @@ namespace OSL_Web.Pages.Config
                     EndGameView3Page.formatingData.GoldDiffBorderColor = jsonContent.GoldDiffBorderColor;
                     EndGameView3Page.formatingData.GoldDiffText = jsonContent.GoldDiffText;
                     EndGameView3Page.formatingData.GoldDiffTextColor = jsonContent.GoldDiffTextColor;
+                    EndGameView3Page.formatingData.WinText = jsonContent.WinText;
+                    EndGameView3Page.formatingData.LoseText = jsonContent.LoseText;
 
 
                     fileSelected = null;
@@ -1346,7 +1351,9 @@ namespace OSL_Web.Pages.Config
                     GoldDiffZeroPointGoldColor = EndGameView1Page.formatingData.GoldDiffZeroPointGoldColor,
                     GoldDiffStartEndPointGoldColor = EndGameView1Page.formatingData.GoldDiffStartEndPointGoldColor,
                     GoldDiffLinkPointGoldColor = EndGameView1Page.formatingData.GoldDiffLinkPointGoldColor,
-                    GoldDiffBarColor = EndGameView1Page.formatingData.GoldDiffBarColor
+                    GoldDiffBarColor = EndGameView1Page.formatingData.GoldDiffBarColor,
+                    WinText = EndGameView1Page.formatingData.WinText,
+                    LoseText = EndGameView1Page.formatingData.LoseText
                 };
                 string jsonString = JsonConvert.SerializeObject(data);
                 FileManagerLocal.WriteInFile("./wwwroot/assets/endgame/configEndGameView1.json", jsonString);
@@ -1448,6 +1455,8 @@ namespace OSL_Web.Pages.Config
                     GoldDiffStartEndPointGoldColor = EndGameView2Page.formatingData.GoldDiffStartEndPointGoldColor,
                     GoldDiffLinkPointGoldColor = EndGameView2Page.formatingData.GoldDiffLinkPointGoldColor,
                     GoldDiffBarColor = EndGameView2Page.formatingData.GoldDiffBarColor,
+                    WinText = EndGameView2Page.formatingData.WinText,
+                    LoseText = EndGameView2Page.formatingData.LoseText
                 };
                 string jsonString = JsonConvert.SerializeObject(data);
                 FileManagerLocal.WriteInFile("./wwwroot/assets/endgame/configEndGameView2.json", jsonString);
@@ -1549,7 +1558,9 @@ namespace OSL_Web.Pages.Config
                     GoldDiffZeroPointGoldColor = EndGameView3Page.formatingData.GoldDiffZeroPointGoldColor,
                     GoldDiffStartEndPointGoldColor = EndGameView3Page.formatingData.GoldDiffStartEndPointGoldColor,
                     GoldDiffLinkPointGoldColor = EndGameView3Page.formatingData.GoldDiffLinkPointGoldColor,
-                    GoldDiffBarColor = EndGameView3Page.formatingData.GoldDiffBarColor
+                    GoldDiffBarColor = EndGameView3Page.formatingData.GoldDiffBarColor,
+                    WinText = EndGameView3Page.formatingData.WinText,
+                    LoseText = EndGameView3Page.formatingData.LoseText
                 };
                 string jsonString = JsonConvert.SerializeObject(data);
                 FileManagerLocal.WriteInFile("./wwwroot/assets/endgame/configEndGameView3.json", jsonString);
