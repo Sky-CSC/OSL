@@ -1,4 +1,5 @@
 ﻿using OSL_Common.System.Logging;
+using OSL_Web.Configuration.CDragon;
 
 namespace OSL_Web.Pages.CDragon
 {
@@ -15,6 +16,7 @@ namespace OSL_Web.Pages.CDragon
         public static void UpdateManual()
         {
             _logger.log(LoggingLevel.INFO, "UpdateManual()", "Update in progress");
+            CDragonConfig.LoadDirectoryConfig();
             Thread DownloadFilesFr = new Thread(() => OSL_CDragon.CDragon.DownloadData.DownloadFiles("latest", "fr_fr"));
             DownloadFilesFr.Start();
         }
