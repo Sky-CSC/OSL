@@ -41,3 +41,7 @@ html, body {
     left: 50px;
     max-width: 770px;
 }
+
+.form-control{
+    width: 200px;
+}
