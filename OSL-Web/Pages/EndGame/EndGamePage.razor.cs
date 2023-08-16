@@ -26,6 +26,10 @@ namespace OSL_Web.Pages.EndGame
             [StringLength(5, ErrorMessage = "Name is too long (5 character limit).")]
             public string? TopBarRedTeamScore { get; set; }
             [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
+            public string? WinText { get; set; }
+            [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
+            public string? LoseText { get; set; }
+            [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
             public string? TopBarTimerText { get; set; }
             [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
             public string? ChampionInfoText { get; set; }
@@ -160,6 +164,15 @@ namespace OSL_Web.Pages.EndGame
                 textValueOverlayView1.TopBarBlueTeamScore = tempsRextValueOverlayView1TopBarRedTeamScore;
                 textValueOverlayView1.TopBarRedTeamName = tempsRextValueOverlayView1TopBarBlueTeamName;
                 textValueOverlayView1.TopBarRedTeamScore = tempsRextValueOverlayView1TopBarBlueTeamScore;
+            }
+
+            public static void WinTextSubmit()
+            {
+                EndGameView1Page.formatingData.WinText = textValueOverlayView1.WinText;
+            }
+            public static void LoseTextSubmit()
+            {
+                EndGameView1Page.formatingData.LoseText = textValueOverlayView1.LoseText;
             }
 
             public static void TopBarGradiantSubmit()
@@ -962,6 +975,10 @@ namespace OSL_Web.Pages.EndGame
             [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
             public string? ChampionInfoText { get; set; }
             [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
+            public string? WinText { get; set; }
+            [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
+            public string? LoseText { get; set; }
+            [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
             public string? GoldDiffText { get; set; }
 
             public bool BackgroundColor { get; set; } = true;
@@ -1092,6 +1109,15 @@ namespace OSL_Web.Pages.EndGame
                 textValueOverlayView2.TopBarBlueTeamScore = tempsRextValueOverlayView2TopBarRedTeamScore;
                 textValueOverlayView2.TopBarRedTeamName = tempsRextValueOverlayView2TopBarBlueTeamName;
                 textValueOverlayView2.TopBarRedTeamScore = tempsRextValueOverlayView2TopBarBlueTeamScore;
+            }
+
+            public static void WinTextSubmit()
+            {
+                EndGameView2Page.formatingData.WinText = textValueOverlayView2.WinText;
+            }
+            public static void LoseTextSubmit()
+            {
+                EndGameView2Page.formatingData.LoseText = textValueOverlayView2.LoseText;
             }
 
             public static void TopBarGradiantSubmit()
@@ -1895,6 +1921,10 @@ namespace OSL_Web.Pages.EndGame
             [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
             public string? ChampionInfoText { get; set; }
             [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
+            public string? WinText { get; set; }
+            [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
+            public string? LoseText { get; set; }
+            [StringLength(20, ErrorMessage = "Name is too long (20 character limit).")]
             public string? GoldDiffText { get; set; }
 
             public bool BackgroundColor { get; set; } = true;
@@ -2034,6 +2064,15 @@ namespace OSL_Web.Pages.EndGame
                 textValueOverlayView3.TopBarBlueTeamScore = tempsRextValueOverlayView3TopBarRedTeamScore;
                 textValueOverlayView3.TopBarRedTeamName = tempsRextValueOverlayView3TopBarBlueTeamName;
                 textValueOverlayView3.TopBarRedTeamScore = tempsRextValueOverlayView3TopBarBlueTeamScore;
+            }
+
+            public static void WinTextSubmit()
+            {
+                EndGameView3Page.formatingData.WinText = textValueOverlayView3.WinText;
+            }
+            public static void LoseTextSubmit()
+            {
+                EndGameView3Page.formatingData.LoseText = textValueOverlayView3.LoseText;
             }
 
             public static void TopBarBackgroundSubmit()

@@ -103,6 +103,10 @@ namespace OSL_Web.Pages.EndGame
             public string GoldDiffLinkPointGoldColor { get; set; }
             public string GoldDiffBarColor { get; set; }
 
+            public string WinText { get; set; }
+            public string LoseText { get; set; }
+
+
         }
 
         public string GetTimer()
@@ -438,11 +442,11 @@ namespace OSL_Web.Pages.EndGame
                     bool win = participants.win;
                     if (win)
                     {
-                        return $"VICTOIRE";
+                        return formatingData.WinText;
                     }
                 }
             }
-            return $"DÉFAITE";
+            return formatingData.LoseText;
         }
 
         public string GetWinLossRed()
@@ -455,11 +459,11 @@ namespace OSL_Web.Pages.EndGame
                     bool win = participants.win;
                     if (win)
                     {
-                        return $"VICTOIRE";
+                        return formatingData.WinText;
                     }
                 }
             }
-            return $"DÉFAITE";
+            return formatingData.LoseText;
         }
 
         public static void ResetColor()

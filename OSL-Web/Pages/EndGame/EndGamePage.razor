@@ -63,6 +63,23 @@
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
                             </EditForm>
                             <br />
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.WinTextSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Win text ("@EndGameView1Page.formatingData.WinText") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.WinText" placeholder="Victoire" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.LoseTextSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Lose text ("@EndGameView1Page.formatingData.LoseText") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.LoseText" placeholder="Défaite" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <br />
                             <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.BackgroundColorEnableDisableSubmit">
                                 <label style="font-weight: bold">Display Backgroud Color : </label>
                                 <InputCheckbox id="name" @bind-Value="textValueOverlayView1.BackgroundColor" />
@@ -393,6 +410,23 @@
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
                             </EditForm>
                             <br />
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.WinTextSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Win text ("@EndGameView2Page.formatingData.WinText") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.WinText" placeholder="Victoire" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.LoseTextSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Lose text ("@EndGameView2Page.formatingData.LoseText") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.LoseText" placeholder="Défaite" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <br />
                             <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.BackgroundColorEnableDisableSubmit">
                                 <label style="font-weight: bold">Display Backgroud Color : </label>
                                 <InputCheckbox id="name" @bind-Value="textValueOverlayView2.BackgroundColor" />
@@ -720,6 +754,23 @@
                             </EditForm>
                             <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.SwitchSideRedBlue">
                                 <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                            </EditForm>
+                            <br />
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.WinTextSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Win text ("@EndGameView3Page.formatingData.WinText") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.WinText" placeholder="Victoire" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.LoseTextSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Lose text ("@EndGameView3Page.formatingData.LoseText") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.LoseText" placeholder="Défaite" />
+
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
                             </EditForm>
                             <br />
                             <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.BackgroundColorEnableDisableSubmit">
