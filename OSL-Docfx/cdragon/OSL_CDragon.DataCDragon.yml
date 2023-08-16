@@ -21,7 +21,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: DataCDragon
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 207
+    startLine: 208
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -64,7 +64,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: Patch
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 209
+    startLine: 210
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
@@ -99,7 +99,7 @@ items:
       repo: https://github.com/Sky-CSC/OSL.git
     id: .ctor
     path: ../OSL-CDragon/CDragon.cs
-    startLine: 210
+    startLine: 211
   assemblies:
   - OSL-CDragon
   namespace: OSL_CDragon
