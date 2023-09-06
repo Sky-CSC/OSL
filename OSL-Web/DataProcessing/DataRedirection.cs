@@ -43,7 +43,6 @@ namespace OSL_Web.DataProcessing
                             InGame.initTimerGame = true; //Reset information
                             InGame.allPlayerList = null; //Reset information
                             InGame.playBack = null; //Reset information
-                            InGame.liveEvent = false; //Reset information
                             InGame.liveEventContent = null; //Reset information
                             InGame.gameInformation = new(); //Reset information
                         }
