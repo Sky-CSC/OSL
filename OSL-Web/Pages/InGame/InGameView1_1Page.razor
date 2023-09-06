@@ -10,146 +10,430 @@
     @{
 
         <div>
-            nextDrake : @TimerControl.nextDrake
+            @*nextDrake : @TimerControl.nextDrake
 
-            <br>nextHerald : @TimerControl.nextHerald
-            <br>nextHelder : @TimerControl.nextHelder
-            <br>nextBaron : @TimerControl.nextBaron
-            <br>buffHerald : @TimerControl.buffHerald
-            <br>buffHelder : @TimerControl.buffHelder
-            <br>buffBaron : @TimerControl.buffBaron
-            <br>gameTimer : @TimerControl.gameTimer
+        <br>nextHerald : @TimerControl.nextHerald
+        <br>nextHelder : @TimerControl.nextHelder
+        <br>nextBaron : @TimerControl.nextBaron
+        <br>buffHerald : @TimerControl.buffHerald
+        <br>buffHelder : @TimerControl.buffHelder
+        <br>buffBaron : @TimerControl.buffBaron
+        <br>gameTimer : @TimerControl.gameTimer*@
             @*</div>*@
-            <br />
+            @*<br />*@
             @*<div>*@
 
-            @foreach (var drakeOrder in DataProcessing.InGame.gameInformation.Order.Drakes)
-            {
-                <div>
-                    drake Order : @drakeOrder
-                </div>
-            }
-            @foreach (var drakeChaos in DataProcessing.InGame.gameInformation.Chaos.Drakes)
-            {
-                <div>
-                    drake Chaos : @drakeChaos
-                </div>
-            }
+            @*@foreach (var drakeOrder in DataProcessing.InGame.gameInformation.Order.Drakes)
+        {
+        <div>
+        drake Order : @drakeOrder
+        </div>
+        }
+        @foreach (var drakeChaos in DataProcessing.InGame.gameInformation.Chaos.Drakes)
+        {
+        <div>
+        drake Chaos : @drakeChaos
+        </div>
+        }*@
 
             @*</div>*@
-            <br>
+            @*<br>*@
             @*<div>*@
-            @if (DataProcessing.InGame.gameInformation.Order.HelderKill)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Order.HelderKill
-                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Order.Summoners)
-                    {
-                        <div>
-                            ChampionBuff SummonerName : @championBuff.SummonerName
-                            ChampionBuff Buffed : @championBuff.HelderBuff
-                        </div>
-                    }
-                </div>
-            }
-            else if (DataProcessing.InGame.gameInformation.Chaos.HelderKill)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Chaos.HelderKill
-                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Chaos.Summoners)
-                    {
-                        <div>
-                            ChampionBuff SummonerName : @championBuff.SummonerName
-                            ChampionBuff Buffed : @championBuff.HelderBuff
-                        </div>
-                    }
-                </div>
-            }
+            @*@if (DataProcessing.InGame.gameInformation.Order.HelderKill)
+        {
+        <div>
+        @DataProcessing.InGame.gameInformation.Order.HelderKill
+        @foreach (var championBuff in DataProcessing.InGame.gameInformation.Order.Summoners)
+        {
+        <div>
+        ChampionBuff SummonerName : @championBuff.SummonerName
+        ChampionBuff Buffed : @championBuff.HelderBuff
+        </div>
+        }
+        </div>
+        }
+        else if (DataProcessing.InGame.gameInformation.Chaos.HelderKill)
+        {
+        <div>
+        @DataProcessing.InGame.gameInformation.Chaos.HelderKill
+        @foreach (var championBuff in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+        {
+        <div>
+        ChampionBuff SummonerName : @championBuff.SummonerName
+        ChampionBuff Buffed : @championBuff.HelderBuff
+        </div>
+        }
+        </div>
+        }*@
             @*</div>*@
-            <br>
+            @*<br>*@
             @*<div>*@
-            @if (DataProcessing.InGame.gameInformation.Order.BaronKill)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Order.BaronKill
-                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Order.Summoners)
-                    {
-                        <div>
-                            ChampionBuff SummonerName : @championBuff.SummonerName
-                            ChampionBuff Buffed : @championBuff.BaronBuff
-                        </div>
-                    }
-                </div>
-            }
-            else if (DataProcessing.InGame.gameInformation.Chaos.BaronKill)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Chaos.BaronKill
-                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Chaos.Summoners)
-                    {
-                        <div>
-                            ChampionBuff SummonerName : @championBuff.SummonerName
-                            ChampionBuff Buffed : @championBuff.BaronBuff
-                        </div>
-                    }
-                </div>
-            }
+            @*@if (DataProcessing.InGame.gameInformation.Order.BaronKill)
+        {
+        <div>
+        @DataProcessing.InGame.gameInformation.Order.BaronKill
+        @foreach (var championBuff in DataProcessing.InGame.gameInformation.Order.Summoners)
+        {
+        <div>
+        ChampionBuff SummonerName : @championBuff.SummonerName
+        ChampionBuff Buffed : @championBuff.BaronBuff
+        </div>
+        }
+        </div>
+        }
+        else if (DataProcessing.InGame.gameInformation.Chaos.BaronKill)
+        {
+        <div>
+        @DataProcessing.InGame.gameInformation.Chaos.BaronKill
+        @foreach (var championBuff in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+        {
+        <div>
+        ChampionBuff SummonerName : @championBuff.SummonerName
+        ChampionBuff Buffed : @championBuff.BaronBuff
+        </div>
+        }
+        </div>
+        }*@
             @*</div>*@
-            <br>
+            @*<br>*@
             @*<div>*@
-            @if (DataProcessing.InGame.gameInformation.Order.Herald.Killed)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Order.Herald.Killed
-                    @DataProcessing.InGame.gameInformation.Order.Herald.Take
-                </div>
-            }
-            else if (DataProcessing.InGame.gameInformation.Chaos.Herald.Killed)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Chaos.Herald.Killed
-                    @DataProcessing.InGame.gameInformation.Chaos.Herald.Take
-                </div>
-            }
+            @*@if (DataProcessing.InGame.gameInformation.Order.Herald.Killed)
+        {
+        <div>
+        @DataProcessing.InGame.gameInformation.Order.Herald.Killed
+        @DataProcessing.InGame.gameInformation.Order.Herald.Take
+        </div>
+        }
+        else if (DataProcessing.InGame.gameInformation.Chaos.Herald.Killed)
+        {
+        <div>
+        @DataProcessing.InGame.gameInformation.Chaos.Herald.Killed
+        @DataProcessing.InGame.gameInformation.Chaos.Herald.Take
+        </div>
+        }
+
+        @foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
+        {
+        @foreach (var items in summoner.Items)
+        {
+        int idItem = items.ItemID;
+        int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
+        int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
+        int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
+        string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
+
+        @if (OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].To.Count() == 0)
+        {
+        <div class="perks-wrapper">
+        <div class="perks-wrapper-frame">
+        <img class="perks-img" src="@iconPath" />
+        </div>
+        </div>
+        }
+        }
+        }
+        @foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+        {
+        @foreach (var items in summoner.Items)
+        {
+        int idItem = items.ItemID;
+        int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
+        int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
+        int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
+        string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
+
+        @if (OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].To.Count() == 0)
+        {
+        <div class="perks-wrapper">
+        <div class="perks-wrapper-frame">
+        <img class="perks-img" src="@iconPath" />
+        </div>
+        </div>
+        }
+        }
+        }*@
 
             @foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
             {
                 @foreach (var items in summoner.Items)
                 {
                     int idItem = items.ItemID;
-                    int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
-                    int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
-                    int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
-                    string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
-
-                    @if (OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].To.Count() == 0)
+                    if (ItemToDisplay(idItem))
                     {
-                        <div class="perks-wrapper">
-                            <div class="perks-wrapper-frame">
-                                <img class="perks-img" src="@iconPath" />
+                        int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
+                        int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
+                        int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
+                        string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
+
+                        if (summoner.PositionIndice == 0)
+                        {
+                            <div class="order-item-wrapper-0">
+                                <div class="order-item-wrapper-frame">
+                                    <div class="order-item-info">
+                                        <img class="order-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        }
+                        if (summoner.PositionIndice == 1)
+                        {
+                            <div class="order-item-wrapper-1">
+                                <div class="order-item-wrapper-frame">
+                                    <div class="order-item-info">
+                                        <img class="order-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 2)
+                        {
+                            <div class="order-item-wrapper-2">
+                                <div class="order-item-wrapper-frame">
+                                    <div class="order-item-info">
+                                        <img class="order-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 3)
+                        {
+                            <div class="order-item-wrapper-3">
+                                <div class="order-item-wrapper-frame">
+                                    <div class="order-item-info">
+                                        <img class="order-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 4)
+                        {
+                            <div class="order-item-wrapper-4">
+                                <div class="order-item-wrapper-frame">
+                                    <div class="order-item-info">
+                                        <img class="order-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
                     }
                 }
             }
+
             @foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
             {
                 @foreach (var items in summoner.Items)
                 {
                     int idItem = items.ItemID;
-                    int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
-                    int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
-                    int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
-                    string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
-
-                    @if (OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].To.Count() == 0)
+                    if (ItemToDisplay(idItem))
                     {
-                        <div class="perks-wrapper">
-                            <div class="perks-wrapper-frame">
-                                <img class="perks-img" src="@iconPath" />
+                        int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
+                        int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
+                        int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
+                        string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
+
+                        if (summoner.PositionIndice == 5)
+                        {
+                            <div class="chaos-item-wrapper-0">
+                                <div class="chaos-item-wrapper-frame">
+                                    <div class="chaos-item-info">
+                                        <img class="chaos-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 6)
+                        {
+                            <div class="chaos-item-wrapper-1">
+                                <div class="chaos-item-wrapper-frame">
+                                    <div class="chaos-item-info">
+                                        <img class="chaos-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 7)
+                        {
+                            <div class="chaos-item-wrapper-2">
+                                <div class="chaos-item-wrapper-frame">
+                                    <div class="chaos-item-info">
+                                        <img class="chaos-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 8)
+                        {
+                            <div class="chaos-item-wrapper-3">
+                                <div class="chaos-item-wrapper-frame">
+                                    <div class="chaos-item-info">
+                                        <img class="chaos-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 9)
+                        {
+                            <div class="chaos-item-wrapper-4">
+                                <div class="chaos-item-wrapper-frame">
+                                    <div class="chaos-item-info">
+                                        <img class="chaos-item-img" src="@iconPath" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+
+
+            @*@foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+        {
+        @foreach (var items in summoner.Items)
+        {
+        int idItem = items.ItemID;
+        int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
+        int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
+        int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
+        string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
+
+        @if (OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].To.Count() == 0)
+        {
+        <div class="perks-wrapper">
+        <div class="perks-wrapper-frame">
+        <img class="perks-img" src="@iconPath" />
+        </div>
+        </div>
+        }
+        }
+        }*@
+
+
+
+            @foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
+            {
+                @if (summoner.Levels.Level == 6 || summoner.Levels.Level == 11 || summoner.Levels.Level == 16 || summoner.Levels.Level == 18)
+                {
+                    // @summoner.Levels.ToShow
+                    // if (summoner.Levels.ToShow)
+                    // {
+                    if (summoner.PositionIndice == 0)
+                    {
+                        <div class="order-level-wrapper-0">
+                            <div class="order-level-wrapper-frame">
+                                <div class="order-level-text">
+                                    @summoner.Levels.Level
+                                </div>
                             </div>
                         </div>
                     }
+                    if (summoner.PositionIndice == 1)
+                    {
+                        <div class="order-level-wrapper-1">
+                            <div class="order-level-wrapper-frame">
+                                <div class="order-level-text">
+                                    @summoner.Levels.Level
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (summoner.PositionIndice == 2)
+                    {
+                        <div class="order-level-wrapper-2">
+                            <div class="order-level-wrapper-frame">
+                                <div class="order-level-text">
+                                    @summoner.Levels.Level
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (summoner.PositionIndice == 3)
+                    {
+                        <div class="order-level-wrapper-3">
+                            <div class="order-level-wrapper-frame">
+                                <div class="order-level-text">
+                                    @summoner.Levels.Level
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (summoner.PositionIndice == 4)
+                    {
+                        <div class="order-level-wrapper-4">
+                            <div class="order-level-wrapper-frame">
+                                <div class="order-level-text">
+                                    @summoner.Levels.Level
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    // summoner.Levels.ToShow = false;
+                    // }
+                }
+            }
+            @foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+            {
+                @if (summoner.Levels.Level == 6 || summoner.Levels.Level == 11 || summoner.Levels.Level == 16 || summoner.Levels.Level == 18)
+                {
+                    // @summoner.Levels.ToShow
+                    // if (summoner.Levels.ToShow)
+                    // {
+                    if (summoner.PositionIndice == 5)
+                    {
+                        <div class="chaos-level-wrapper-0">
+                            <div class="chaos-level-wrapper-frame">
+                                <div class="chaos-level-text">
+                                    @summoner.Levels.Level
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (summoner.PositionIndice == 6)
+                    {
+                        <div class="chaos-level-wrapper-1">
+                            <div class="chaos-level-wrapper-frame">
+                                <div class="chaos-level-text">
+                                    @summoner.Levels.Level
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (summoner.PositionIndice == 7)
+                    {
+                        <div class="chaos-level-wrapper-2">
+                            <div class="chaos-level-wrapper-frame">
+                                <div class="chaos-level-text">
+                                    @summoner.Levels.Level
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (summoner.PositionIndice == 8)
+                    {
+                        <div class="chaos-level-wrapper-3">
+                            <div class="chaos-level-wrapper-frame">
+                                <div class="chaos-level-text">
+                                    @summoner.Levels.Level
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (summoner.PositionIndice == 9)
+                    {
+                        <div class="chaos-level-wrapper-4">
+                            <div class="chaos-level-wrapper-frame">
+                                <div class="chaos-level-text">
+                                    @summoner.Levels.Level
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    // summoner.Levels.ToShow = false;
+                    // }
                 }
             }
 
