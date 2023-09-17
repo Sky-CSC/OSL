@@ -439,9 +439,46 @@
 
         </div>
 
+        //<img style="position: absolute" src="/assets/ingame/frame/LiveGame-View1.png" />
 
-
-
+        <div class="dragon-banner-kill">
+            <div class="dragon-banner-kill-order">
+                <div>
+                    <img class="dragon-banner-kill-order-banner" src="/assets/ingame/banner/dragon_banner.png">
+                </div>
+                <div>
+                    @foreach (string dragon in DataProcessing.InGame.gameInformation.Order.Drakes)
+                    {
+                        <img class="dragon-banner-kill-order-icon" src="@GetDragonPath(dragon)">
+                    }
+                    @if (DataProcessing.InGame.gameInformation.Chaos.Drakes.Count() == 4)
+                    {
+                        for (int i = 0; i < DataProcessing.InGame.gameInformation.Order.Drakes.Count() - 4; i++)
+                        {
+                            <img class="dragon-banner-kill-order-icon" src="@GetDragonPath("no_dragon")">
+                        }
+                    }
+                </div>
+            </div>
+            <div class="dragon-banner-kill-chaos">
+                <div>
+                    <img class="dragon-banner-kill-chaos-banner" src="/assets/ingame/banner/dragon_banner.png">
+                </div>
+                <div>
+                    @foreach (string dragon in DataProcessing.InGame.gameInformation.Chaos.Drakes)
+                    {
+                        <img class="dragon-banner-kill-chaos-icon" src="@GetDragonPath(dragon)">
+                    }
+                    @if (DataProcessing.InGame.gameInformation.Order.Drakes.Count() == 4)
+                    {
+                        for (int i = 0; i < 4 - DataProcessing.InGame.gameInformation.Chaos.Drakes.Count(); i++)
+                        {
+                            <img class="dragon-banner-kill-chaos-icon" src="@GetDragonPath("no_dragon")">
+                        }
+                    }
+                </div>
+            </div>
+        </div>
 
 
 

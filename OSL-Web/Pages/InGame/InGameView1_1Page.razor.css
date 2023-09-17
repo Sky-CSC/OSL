@@ -235,7 +235,7 @@ div {
     z-index: 100;
 }
 
-.order-item-wrapper-frame .order-item-info{
+.order-item-wrapper-frame .order-item-info {
     height: 74px;
     width: 0px;
     background-color: #0b849e;
@@ -265,9 +265,9 @@ div {
 
 /*.order-item-text {
     font-size: 10px;*/
-    /*height: 72px;
+/*height: 72px;
     width: 77px;*/
-    /*display: table-cell;
+/*display: table-cell;
     vertical-align: middle;
     text-align: center;
     animation: order-item-text 4s 1 linear;
@@ -356,39 +356,38 @@ div {
 /*######################### Level ##########################*/
 /*##########################################################*/
 
-
 .order-level-wrapper-0 {
     position: absolute;
     top: 153px;
-    left: 0px;
+    left: 3px;
     z-index: 100;
 }
 
 .order-level-wrapper-1 {
     position: absolute;
     top: 256px;
-    left: 0px;
+    left: 3px;
     z-index: 100;
 }
 
 .order-level-wrapper-2 {
     position: absolute;
     top: 359px;
-    left: 0px;
+    left: 3px;
     z-index: 100;
 }
 
 .order-level-wrapper-3 {
     position: absolute;
     top: 462px;
-    left: 0px;
+    left: 3px;
     z-index: 100;
 }
 
 .order-level-wrapper-4 {
     position: absolute;
     top: 564px;
-    left: 0px;
+    left: 3px;
     z-index: 100;
 }
 
@@ -415,35 +414,35 @@ div {
 .chaos-level-wrapper-0 {
     position: absolute;
     top: 153px;
-    right: 0px;
+    right: 3px;
     z-index: 100;
 }
 
 .chaos-level-wrapper-1 {
     position: absolute;
     top: 256px;
-    right: 0px;
+    right: 3px;
     z-index: 100;
 }
 
 .chaos-level-wrapper-2 {
     position: absolute;
-    top: 358px;
-    right: 0px;
+    top: 359px;
+    right: 3px;
     z-index: 100;
 }
 
 .chaos-level-wrapper-3 {
     position: absolute;
     top: 462px;
-    right: 0px;
+    right: 3px;
     z-index: 100;
 }
 
 .chaos-level-wrapper-4 {
     position: absolute;
     top: 564px;
-    right: 0px;
+    right: 3px;
     z-index: 100;
 }
 
@@ -528,9 +527,113 @@ div {
     /*margin: 0px 0px 0px -100px;*/
     /*}*/
 }
+/*##########################################################*/
+/*######################### Dragon #########################*/
+/*##########################################################*/
+
+.dragon-banner-kill, dragon-banner-kill-order, dragon-banner-kill-chaos {
+    position: absolute;
+}
+
+.dragon-banner-kill-order-banner {
+    position: absolute;
+    height: 50px;
+    left: 659px;
+    /*left: 659px;*/
+    top: 58px;
+}
+
+.dragon-banner-kill-chaos-banner {
+    position: absolute;
+    height: 50px;
+    left: 1033px;
+    top: 58px;
+}
 
 
+.dragon-banner-kill-order-icon:nth-child(1) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 839.7px;
+}
 
+.dragon-banner-kill-order-icon:nth-child(2) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 784.7px;
+}
+
+.dragon-banner-kill-order-icon:nth-child(3) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 730px;
+}
+
+.dragon-banner-kill-order-icon:nth-child(4) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 675px;
+}
+
+.dragon-banner-kill-chaos-icon:nth-child(1) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 1049px;
+}
+
+.dragon-banner-kill-chaos-icon:nth-child(2) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 1104px;
+}
+
+.dragon-banner-kill-chaos-icon:nth-child(3) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 1159px;
+}
+
+.dragon-banner-kill-chaos-icon:nth-child(4) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 1214px;
+}
+
+/*.dragon-banner-kill-order-icon:nth-child(1) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 839.7px;
+}
+
+.dragon-banner-kill-order-icon:nth-child(2) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 784.7px;
+}
+
+.dragon-banner-kill-order-icon:nth-child(3) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 730px;
+}
+
+.dragon-banner-kill-order-icon:nth-child(4) {
+    position: absolute;
+    height: 41.5px;
+    top: 61px;
+    left: 675px;
+}*/
 
 
 /*##########################################################*/
