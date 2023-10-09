@@ -47,7 +47,6 @@ namespace OSL_Web.Pages.Config
 
         public static void PatchRegionSubmit()
         {
-            Console.WriteLine("Yolo " + OverlayText.ValuePatchRegion);
             OSL_CDragon.CDragon.SetPatch(OverlayText.ValuePatchRegion.Split(" : ")[0]);
             OSL_CDragon.CDragon.SetRegion(OverlayText.ValuePatchRegion.Split(" : ")[1]);
             Configuration.Config.ReloadPagesView();

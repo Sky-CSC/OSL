@@ -21,16 +21,119 @@ div {
 /*##########################################################*/
 /*########################## Timer #########################*/
 /*##########################################################*/
-.dragon-timer {
+.dragon-timer-frame {
     position: absolute;
     top: 19px;
     left: 22px;
 }
 
-.herald-baron-timer {
+.herald-baron-timer-frame {
     position: absolute;
     top: 19px;
     right: 24px;
+    background: #0f1d1f;
+}
+
+.herald-frame {
+    position: absolute;
+    top: 13.5px;
+    right: 50px;
+    height: 55px;
+}
+
+.herald-frame-center {
+    position: absolute;
+    top: 13.5px;
+    right: 33px;
+    height: 55px;
+}
+
+.herald-timer {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 30px;
+    text-shadow: 0.1em 0.1em 0.2em black
+}
+
+.baron-frame {
+    position: absolute;
+    top: 12.5px;
+    right: 49px;
+    height: 58px;
+}
+
+.baron-frame-center {
+    position: absolute;
+    top: 12.5px;
+    right: 33px;
+    height: 58px;
+}
+
+.baron-timer {
+    position: absolute;
+    top: 30px;
+    right: 39px;
+    font-size: 30px;
+    text-shadow: 0.1em 0.1em 0.2em black
+}
+
+.elder-frame {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    height: 55px;
+}
+
+.elder-frame-center {
+    position: absolute;
+    top: 14px;
+    left: 32px;
+    height: 55px;
+}
+
+.elder-timer {
+    position: absolute;
+    top: 30px;
+    left: 87px;
+    font-size: 30px;
+    text-shadow: 0.1em 0.1em 0.2em black
+}
+
+.baron-frame-blink {
+    animation: baron-blink 2s linear infinite;
+}
+
+@keyframes baron-blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.elder-frame-blink {
+    animation: elder-blink 2s linear infinite;
+}
+
+@keyframes elder-blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /*##########################################################*/
@@ -147,6 +250,164 @@ div {
         position: relative;
         margin-bottom: 57px;
     }
+
+.order-baron-buff {
+    height: 130px;
+    /*width: 125px;*/
+    /*aspect-ratio: unset;*/
+    animation: baron-blink 5s linear infinite;
+}
+
+@keyframes baron-blink {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.order-baron-elder-buff-animation-0 {
+    position: absolute;
+    top: 139px;
+    left: -5px;
+}
+
+.order-baron-elder-buff-animation-1 {
+    position: absolute;
+    top: 242px;
+    left: -5px;
+}
+
+.order-baron-elder-buff-animation-2 {
+    position: absolute;
+    top: 345px;
+    left: -5px;
+}
+
+.order-baron-elder-buff-animation-3 {
+    position: absolute;
+    top: 448px;
+    left: -5px;
+}
+
+.order-baron-elder-buff-animation-4 {
+    position: absolute;
+    top: 551px;
+    left: -5px;
+}
+
+
+.chaos-baron-buff {
+    height: 130px;
+    /*width: 125px;*/
+    /*aspect-ratio: unset;*/
+    animation: baron-blink 5s linear infinite;
+    transform: scaleX(-1);
+}
+
+.chaos-baron-elder-buff-animation-0 {
+    position: absolute;
+    top: 139px;
+    right: -5px;
+}
+
+.chaos-baron-elder-buff-animation-1 {
+    position: absolute;
+    top: 242px;
+    right: -5px;
+}
+
+.chaos-baron-elder-buff-animation-2 {
+    position: absolute;
+    top: 345px;
+    right: -5px;
+}
+
+.chaos-baron-elder-buff-animation-3 {
+    position: absolute;
+    top: 448px;
+    right: -5px;
+}
+
+.chaos-baron-elder-buff-animation-4 {
+    position: absolute;
+    top: 551px;
+    right: -5px;
+}
+
+/*.order-baron-buff-animation:nth-child(1) {
+    position: absolute;
+    top: 139px;
+    left: -5px;
+}
+
+.order-baron-buff-animation:nth-child(2) {
+    position: absolute;
+    top: 242px;
+    left: -5px;
+}
+
+.order-baron-buff-animation:nth-child(3) {
+    position: absolute;
+    top: 345px;
+    left: -5px;
+}
+
+.order-baron-buff-animation:nth-child(4) {
+    position: absolute;
+    top: 448px;
+    left: -5px;
+}
+
+.order-baron-buff-animation:nth-child(5) {
+    position: absolute;
+    top: 551px;
+    left: -5px;
+}*/
+
+.order-elder-buff {
+    height: 130px;
+    /*width: 125px;*/
+    /*aspect-ratio: unset;*/
+    animation: elder-blink 5s linear infinite;
+}
+
+.chaos-elder-buff {
+    height: 130px;
+    /*width: 125px;*/
+    /*aspect-ratio: unset;*/
+    animation: elder-blink 5s linear infinite;
+    transform: scaleX(-1);
+}
+
+@keyframes elder-blink {
+    0% {
+        opacity: 0.6;
+    }
+
+    40% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
 
 .red-player {
     position: absolute;
@@ -352,10 +613,182 @@ div {
     }
 }
 
+.order-items-score-display-0 {
+    position: absolute;
+    top: 855px;
+    left: 611px;
+    z-index: 100;
+}
+
+.order-items-score-display-1 {
+    position: absolute;
+    top: 899px;
+    left: 611px;
+    z-index: 100;
+}
+
+.order-items-score-display-2 {
+    position: absolute;
+    top: 943px;
+    left: 611px;
+    z-index: 100;
+}
+
+.order-items-score-display-3 {
+    position: absolute;
+    top: 987px;
+    left: 611px;
+    z-index: 100;
+}
+
+.order-items-score-display-4 {
+    position: absolute;
+    top: 1031px;
+    left: 611px;
+    z-index: 100;
+}
+
+.order-items-score-display {
+    position: absolute;
+    /*height: 43px;*/
+    height: 0px;
+    width: 354px;
+    background: linear-gradient(90deg, #081110 0%, #07161b 100%);
+    /*border: 2px solid #0b849e;*/
+    border: 0px solid #0b849e;
+    animation: order-item-slide-score 7s 1 linear;
+    overflow: hidden;
+}
+
+.order-item-score-info {
+    display: flex;
+    justify-content: right;
+    opacity: 1;
+}
+
+.order-item-score-img {
+    height: 39px;
+}
+
+.order-item-score-text {
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+@keyframes order-item-slide-score {
+    0% {
+        border: 2px solid #0b849e;
+        height: 0px;
+    }
+
+    7% {
+        border: 2px solid #0b849e;
+        height: 43px;
+    }
+
+    93% {
+        border: 2px solid #0b849e;
+        height: 43px;
+    }
+
+    99% {
+        border: 2px solid #0b849e;
+        height: 0px;
+    }
+}
+
+.chaos-items-score-display-0 {
+    position: absolute;
+    top: 855px;
+    right: 951px;
+    z-index: 100;
+}
+
+.chaos-items-score-display-1 {
+    position: absolute;
+    top: 899px;
+    right: 951px;
+    z-index: 100;
+}
+
+.chaos-items-score-display-2 {
+    position: absolute;
+    top: 943px;
+    right: 951px;
+    z-index: 100;
+}
+
+.chaos-items-score-display-3 {
+    position: absolute;
+    top: 987px;
+    right: 951px;
+    z-index: 100;
+}
+
+.chaos-items-score-display-4 {
+    position: absolute;
+    top: 1031px;
+    right: 951px;
+    z-index: 100;
+}
+
+.chaos-items-score-display {
+    position: absolute;
+    /*height: 43px;*/
+    height: 0px;
+    width: 354px;
+    background: linear-gradient(90deg, #1a100d 0%, #08100f 100%);
+    /*border: 2px solid #be1e37;*/
+    border: 0px solid #be1e37;
+    animation: chaos-item-slide-score 7s 1 linear;
+    overflow: hidden;
+}
+
+.chaos-item-score-info {
+    display: flex;
+    justify-content: left;
+    opacity: 1;
+
+}
+
+.chaos-item-score-img {
+    height: 39px;
+}
+
+.chaos-item-score-text {
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+@keyframes chaos-item-slide-score {
+    0% {
+        border: 2px solid #be1e37;
+        height: 0px;
+    }
+
+    7% {
+        border: 2px solid #be1e37;
+        height: 43px;
+    }
+
+    93% {
+        border: 2px solid #be1e37;
+        height: 43px;
+    }
+
+    99% {
+        border: 2px solid #be1e37;
+        height: 0px;
+    }
+}
+
 /*##########################################################*/
 /*######################### Level ##########################*/
 /*##########################################################*/
-
 .order-level-wrapper-0 {
     position: absolute;
     top: 153px;
@@ -392,7 +825,7 @@ div {
 }
 
     .order-level-wrapper-0 .order-level-wrapper-frame, .order-level-wrapper-1 .order-level-wrapper-frame, .order-level-wrapper-2 .order-level-wrapper-frame, .order-level-wrapper-3 .order-level-wrapper-frame, .order-level-wrapper-4 .order-level-wrapper-frame {
-        height: 72px;
+        height: 74px;
         width: 0px;
         background-color: #0b849e;
         animation: level-slide-background 4.30s 1 linear;
@@ -402,7 +835,7 @@ div {
 
 .order-level-text {
     font-size: 40px;
-    height: 72px;
+    height: 74px;
     width: 77px;
     display: table-cell;
     vertical-align: middle;
@@ -447,7 +880,7 @@ div {
 }
 
     .chaos-level-wrapper-0 .chaos-level-wrapper-frame, .chaos-level-wrapper-1 .chaos-level-wrapper-frame, .chaos-level-wrapper-2 .chaos-level-wrapper-frame, .chaos-level-wrapper-3 .chaos-level-wrapper-frame, .chaos-level-wrapper-4 .chaos-level-wrapper-frame {
-        height: 72px;
+        height: 74px;
         width: 0px;
         background-color: #be1e37;
         animation: level-slide-background 4.30s 1 linear;
@@ -457,7 +890,7 @@ div {
 
 .chaos-level-text {
     font-size: 40px;
-    height: 72px;
+    height: 74px;
     width: 77px;
     display: table-cell;
     vertical-align: middle;
@@ -635,7 +1068,145 @@ div {
     left: 675px;
 }*/
 
+/*##########################################################*/
+/*######################### Inhib #########################*/
+/*##########################################################*/
+/*.inhib-frame {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+}*/
 
+.inhib-frame .inhib-background-gradiant {
+    /*top: 641px;*/
+    top: 664px;
+    right: 3px;
+    width: 160px;
+    height: 140px;
+    position: absolute;
+    display: flex;
+}
+
+.inhib-frame .inhib-background-color {
+    width: 160px;
+    height: 140px;
+}
+
+.inhib-border {
+    width: 160px;
+    height: 140px;
+    position: absolute;
+}
+
+.order-inhib-frame-picture-top {
+    position: absolute;
+    right: 121px;
+    top: 665px;
+    height: 30px;
+}
+
+.order-inhib-frame-picture-mid {
+    position: absolute;
+    right: 67px;
+    top: 665px;
+    height: 30px;
+}
+
+.order-inhib-frame-picture-bot {
+    position: absolute;
+    right: 15px;
+    top: 665px;
+    height: 30px;
+}
+
+.chaos-inhib-frame-picture-top {
+    position: absolute;
+    right: 121px;
+    top: 773px;
+    height: 30px;
+}
+
+.chaos-inhib-frame-picture-mid {
+    position: absolute;
+    right: 67px;
+    top: 773px;
+    height: 30px;
+}
+
+.chaos-inhib-frame-picture-bot {
+    position: absolute;
+    right: 15px;
+    top: 773px;
+    height: 30px;
+}
+
+.center-inhib-picture {
+    position: absolute;
+    right: 70.5px;
+    top: 721px;
+    height: 25px;
+}
+
+
+.order-inhib-frame-timer-top {
+    position: absolute;
+    right: 116px;
+    top: 690px;
+    font-size: 20px;
+    height: 30px;
+    width: 40px;
+    text-align: center
+}
+
+.order-inhib-frame-timer-mid {
+    position: absolute;
+    right: 62px;
+    top: 690px;
+    font-size: 20px;
+    height: 30px;
+    width: 40px;
+    text-align: center
+}
+
+.order-inhib-frame-timer-bot {
+    position: absolute;
+    right: 10px;
+    top: 690px;
+    font-size: 20px;
+    height: 30px;
+    width: 40px;
+    text-align: center
+}
+
+.chaos-inhib-frame-timer-top {
+    position: absolute;
+    right: 116px;
+    top: 746px;
+    font-size: 20px;
+    height: 30px;
+    width: 40px;
+    text-align: center
+}
+
+.chaos-inhib-frame-timer-mid {
+    position: absolute;
+    right: 62px;
+    top: 746px;
+    font-size: 20px;
+    height: 30px;
+    width: 40px;
+    text-align: center
+}
+
+.chaos-inhib-frame-timer-bot {
+    position: absolute;
+    right: 10px;
+    top: 746px;
+    font-size: 20px;
+    height: 30px;
+    width: 40px;
+    text-align: center
+}
 /*##########################################################*/
 /*######################### Bottom #########################*/
 /*##########################################################*/
