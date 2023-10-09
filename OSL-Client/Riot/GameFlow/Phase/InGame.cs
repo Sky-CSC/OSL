@@ -57,36 +57,55 @@ namespace OSL_Client.Riot.GameFlow.Phase
 
                 string gameFlowPhase;
                 gameFlowPhase = LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword);
-                string replayApiContentPrevious = "";
-                string replayApiContent;
+                string replayApiContentPreviousPlayerList = "";
+                string replayApiContentPreviousEventData = "";
+                string replayApiContentPlayerList;
+                string replayApiContentEventData;
                 while (gameFlowPhase != null && LcuApi.Request(LcuApi.Url.lolgameflowv1gameflowphase, Config.leagueClientLockFilePort, Config.leagueClientApiLocalHost, Config.leagueClientApiPassword).Equals("\"InProgress\""))
                 {
                     _logger.log(LoggingLevel.INFO, "Progress()", "In game");
 
-                    replayApiContent = ReplayApi.Request(ReplayApi.Url.liveclientdataplayerlist, Config.riotPort);
-                    if (!replayApiContent.Equals(replayApiContentPrevious))
+                    replayApiContentPlayerList = ReplayApi.Request(ReplayApi.Url.liveclientdataplayerlist, Config.riotPort);
+                    if (!replayApiContentPlayerList.Equals(replayApiContentPreviousPlayerList))
                     {
-                        replayApiContentPrevious = replayApiContent;
-                        if (replayApiContent != null)
+                        replayApiContentPreviousPlayerList = replayApiContentPlayerList;
+                        if (replayApiContentPlayerList != null)
                         {
-                            AsyncClient.Send(replayApiContent);
+                            AsyncClient.Send(replayApiContentPlayerList + "#00#");
+                            Thread.Sleep(333);
                         }
                     }
                     else
                     {
-                        _logger.log(LoggingLevel.WARN, "Progress()", "No modification of replayApiContent");
+                        _logger.log(LoggingLevel.WARN, "Progress()", "No modification of replayApiContent PlayerList");
+                    }
+
+                    replayApiContentEventData = ReplayApi.Request(ReplayApi.Url.liveclientdataeventdata, Config.riotPort);
+                    if (!replayApiContentEventData.Equals(replayApiContentPreviousEventData))
+                    {
+                        replayApiContentPreviousEventData = replayApiContentEventData;
+                        if (replayApiContentEventData != null)
+                        {
+                            AsyncClient.Send(replayApiContentEventData + "#00#");
+                            Thread.Sleep(333);
+                        }
+                    }
+                    else
+                    {
+                        _logger.log(LoggingLevel.WARN, "Progress()", "No modification of replayApiContent EventData");
                     }
 
                     string playBackContent = ReplayApi.Request(ReplayApi.Url.replayplayback, Config.riotPort);
                     //Console.WriteLine(playBackContent);
-                    AsyncClient.Send(playBackContent);
+                    AsyncClient.Send(playBackContent + "#00#");
+                    Thread.Sleep(333);
 
                     string liveEventsContent = LiveEvents.Read();
                     if (liveEventsContent != null)
                     {
-                        AsyncClient.Send(liveEventsContent);
+                        AsyncClient.Send(liveEventsContent + "#00#");
+                        Thread.Sleep(333);
                     }
-                    Thread.Sleep(1000);
                 }
             }
             catch (Exception e)
