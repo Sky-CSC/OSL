@@ -29,26 +29,26 @@ namespace OSL_Web.DataProcessing
                         if (team.Equals("ORDER"))
                         {
                             int indexSummoner = gameInformation.Order.Summoners.FindIndex(x => x.SummonerName == (string)allPlayers[i].summonerName);
-                            Console.WriteLine("ORDER -> indexSummoner : " + indexSummoner);
+                            //Console.WriteLine("ORDER -> indexSummoner : " + indexSummoner);
                             if (indexSummoner != -1) //Exist
                             {
                                 gameInformation.Order.Summoners[indexSummoner].IsDead = (bool)allPlayers[i].isDead;
-                                Console.WriteLine("ORDER -> allPlayers[i].isDead : " + allPlayers[i].isDead);
+                                //Console.WriteLine("ORDER -> allPlayers[i].isDead : " + allPlayers[i].isDead);
                                 gameInformation.Order.Summoners[indexSummoner].Levels.Level = (int)allPlayers[i].level;
-                                Console.WriteLine("ORDER -> allPlayers[i].Level : " + allPlayers[i].level);
+                                //Console.WriteLine("ORDER -> allPlayers[i].Level : " + allPlayers[i].level);
 
                                 if (gameInformation.Order.Summoners[indexSummoner].Levels.Level > gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel + 1)
                                 {
                                     gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel++;
-                                    Console.WriteLine("ORDER -> gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel : " + gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel);
+                                    //Console.WriteLine("ORDER -> gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel : " + gameInformation.Order.Summoners[indexSummoner].Levels.PreviousLevel);
                                     gameInformation.Order.Summoners[indexSummoner].Levels.ToShow = true;
                                 }
                                 gameInformation.Order.Summoners[indexSummoner].PositionIndice = i;
-                                Console.WriteLine("ORDER -> PositionIndice : " + i);
+                                //Console.WriteLine("ORDER -> PositionIndice : " + i);
                                 foreach (var item in allPlayers[i].items)
                                 {
                                     int indexItem = gameInformation.Order.Summoners[indexSummoner].Items.FindIndex(x => x.ItemID == (int)item.itemID);
-                                    Console.WriteLine("ORDER -> indexItem : " + indexItem);
+                                    //Console.WriteLine("ORDER -> indexItem : " + indexItem);
                                     if (indexItem == -1) //Cet item n'est pas présent
                                     {
                                         Items items = new()
@@ -56,10 +56,10 @@ namespace OSL_Web.DataProcessing
                                             ItemID = (int)item.itemID,
                                             ToShow = false,
                                         };
-                                        Console.WriteLine("ORDER -> items : " + items);
+                                        //Console.WriteLine("ORDER -> items : " + items);
                                         gameInformation.Order.Summoners[indexSummoner].Items.Add(items);
                                     }
-                                    Console.WriteLine("ORDER -> idItem : " + (int)item.itemID);
+                                    //Console.WriteLine("ORDER -> idItem : " + (int)item.itemID);
                                 }
                             }
                             else
@@ -76,15 +76,19 @@ namespace OSL_Web.DataProcessing
                                     },
                                     SummonerName = (string)allPlayers[i].summonerName,
                                     PositionIndice = i,
-                                    HelderBuff = false,
+                                    ElderBuff = false,
                                     BaronBuff = false
                                 };
-                                Console.WriteLine("ORDER -> summoner : " + summoner);
+                                //Console.WriteLine("ORDER -> summoner : " + summoner);
                                 gameInformation.Order.Summoners.Add(summoner);
-                                gameInformation.Order.HelderKill = false;
+                                gameInformation.Order.ElderKill = false;
                                 gameInformation.Order.Herald.Killed = false;
                                 gameInformation.Order.Herald.Take = false;
                                 gameInformation.Order.BaronKill = false;
+                                gameInformation.Order.Inhib.TopKilled = false;
+                                gameInformation.Order.Inhib.MidKilled = false;
+                                gameInformation.Order.Inhib.BotKilled = false;
+
                             }
                         }
                         else //Chaos
@@ -128,14 +132,17 @@ namespace OSL_Web.DataProcessing
                                     },
                                     SummonerName = (string)allPlayers[i].summonerName,
                                     PositionIndice = i,
-                                    HelderBuff = false,
+                                    ElderBuff = false,
                                     BaronBuff = false
                                 };
                                 gameInformation.Chaos.Summoners.Add(summoner);
-                                gameInformation.Chaos.HelderKill = false;
+                                gameInformation.Chaos.ElderKill = false;
                                 gameInformation.Chaos.Herald.Killed = false;
                                 gameInformation.Chaos.Herald.Take = false;
                                 gameInformation.Chaos.BaronKill = false;
+                                gameInformation.Chaos.Inhib.TopKilled = false;
+                                gameInformation.Chaos.Inhib.MidKilled = false;
+                                gameInformation.Chaos.Inhib.BotKilled = false;
                             }
                         }
 
@@ -143,16 +150,16 @@ namespace OSL_Web.DataProcessing
 
 
                     //Check if player are dead when herald buff
-                    if (gameInformation.Order.HelderKill)
+                    if (gameInformation.Order.ElderKill)
                     {
                         int countChampNotBuffed = 0;
                         foreach (var summoner in gameInformation.Order.Summoners)
                         {
-                            if (summoner.HelderBuff)
+                            if (summoner.ElderBuff)
                             {
                                 if (summoner.IsDead)
                                 {
-                                    summoner.HelderBuff = false;
+                                    summoner.ElderBuff = false;
                                     countChampNotBuffed++;
                                 }
                             }
@@ -163,13 +170,13 @@ namespace OSL_Web.DataProcessing
                         }
                         if (countChampNotBuffed == gameInformation.Order.Summoners.Count())
                         {
-                            gameInformation.Order.HelderKill = false;
+                            gameInformation.Order.ElderKill = false;
                             //Buff timer 0
-                            Pages.InGame.TimerControl.buffHelder = 0;
+                            Pages.InGame.TimerControl.buffElder = 0;
                         }
-                        if (Pages.InGame.TimerControl.buffHelder == 0)
+                        if (Pages.InGame.TimerControl.buffElder == 0)
                         {
-                            gameInformation.Order.HelderKill = false;
+                            gameInformation.Order.ElderKill = false;
                         }
                     }
                     else
@@ -177,11 +184,11 @@ namespace OSL_Web.DataProcessing
                         int countChampNotBuffed = 0;
                         foreach (var summoner in gameInformation.Chaos.Summoners)
                         {
-                            if (summoner.HelderBuff)
+                            if (summoner.ElderBuff)
                             {
                                 if (summoner.IsDead)
                                 {
-                                    summoner.HelderBuff = false;
+                                    summoner.ElderBuff = false;
                                     countChampNotBuffed++;
                                 }
                             }
@@ -192,13 +199,13 @@ namespace OSL_Web.DataProcessing
                         }
                         if (countChampNotBuffed == gameInformation.Chaos.Summoners.Count())
                         {
-                            gameInformation.Chaos.HelderKill = false;
+                            gameInformation.Chaos.ElderKill = false;
                             //Buff timer 0
-                            Pages.InGame.TimerControl.buffHelder = 0;
+                            Pages.InGame.TimerControl.buffElder = 0;
                         }
-                        if (Pages.InGame.TimerControl.buffHelder == 0)
+                        if (Pages.InGame.TimerControl.buffElder == 0)
                         {
-                            gameInformation.Chaos.HelderKill = false;
+                            gameInformation.Chaos.ElderKill = false;
                         }
                     }
 
@@ -208,11 +215,11 @@ namespace OSL_Web.DataProcessing
                         int countChampNotBuffed = 0;
                         foreach (var summoner in gameInformation.Order.Summoners)
                         {
-                            if (summoner.HelderBuff)
+                            if (summoner.BaronBuff)
                             {
                                 if (summoner.IsDead)
                                 {
-                                    summoner.HelderBuff = false;
+                                    summoner.BaronBuff = false;
                                     countChampNotBuffed++;
                                 }
                             }
@@ -237,11 +244,11 @@ namespace OSL_Web.DataProcessing
                         int countChampNotBuffed = 0;
                         foreach (var summoner in gameInformation.Chaos.Summoners)
                         {
-                            if (summoner.HelderBuff)
+                            if (summoner.BaronBuff)
                             {
                                 if (summoner.IsDead)
                                 {
-                                    summoner.HelderBuff = false;
+                                    summoner.BaronBuff= false;
                                     countChampNotBuffed++;
                                 }
                             }
@@ -263,6 +270,7 @@ namespace OSL_Web.DataProcessing
                     }
                     return true;
                 }
+                _logger.log(LoggingLevel.WARN, "LiveClientDataPlayerList()", "Not LiveClientDataPlayerList");
                 return false;
             }
             catch (Exception e)

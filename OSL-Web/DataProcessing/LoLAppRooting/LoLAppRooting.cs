@@ -2,6 +2,7 @@
 using OSL_CDragon;
 using OSL_Common.System.Logging;
 using OSL_Web.Configuration;
+using OSL_Web.Configuration.CDragon;
 using OSL_WebApiRiot.WebApiRiot;
 
 namespace OSL_Web.DataProcessing
@@ -39,6 +40,7 @@ namespace OSL_Web.DataProcessing
                 patch = patch.Remove(5);
                 CDragon.SetPatch(patch);
 
+                CDragonConfig.LoadDirectoryConfig();
                 CDragon.DownloadAsyncWithCheck(patch, locale);
                 Config.ReloadPagesView();
             }
@@ -48,6 +50,7 @@ namespace OSL_Web.DataProcessing
                 WebApiRiot.SetRegion("euw1");
                 CDragon.SetRegion("fr_fr");
                 CDragon.SetPatch("latest");
+                CDragonConfig.LoadDirectoryConfig();
                 CDragon.DownloadAsyncWithCheck("latest", "fr_fr");
                 Config.ReloadPagesView();
             }

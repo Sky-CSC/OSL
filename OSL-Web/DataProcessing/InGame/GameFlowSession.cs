@@ -14,6 +14,7 @@ namespace OSL_Web.DataProcessing
                     Runes.CreateSummonerPerksList(content);
                     return true;
                 }
+                _logger.log(LoggingLevel.WARN, "GameFlowSession()", "Not GameFlowSession");
                 return false;
             }
             catch (Exception e)

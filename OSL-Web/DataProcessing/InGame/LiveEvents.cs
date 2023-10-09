@@ -58,31 +58,31 @@ namespace OSL_Web.DataProcessing
                 string other = events.other;
                 if (other.Equals("SRU_Dragon_Elder"))
                 {
-                    //Run timer next helder
-                    Pages.InGame.TimerControl.nextHelder = 360;
-                    //Run timer buff helder
-                    Pages.InGame.TimerControl.buffHelder = 150;
+                    //Run timer next elder
+                    Pages.InGame.TimerControl.nextElder = 360;
+                    //Run timer buff elder
+                    Pages.InGame.TimerControl.buffElder = 150;
 
                     string sourceTeam = events.sourceTeam;
                     if (sourceTeam.Equals("order"))
                     {
-                        gameInformation.Order.HelderKill = true;
+                        gameInformation.Order.ElderKill = true;
                         foreach (var summoner in gameInformation.Order.Summoners)
                         {
-                            if (!summoner.IsDead)//Not dead he win helder dragon buff
+                            if (!summoner.IsDead)//Not dead he win elder dragon buff
                             {
-                                summoner.HelderBuff = true;
+                                summoner.ElderBuff = true;
                             }
                         }
                     }
                     else
                     {
-                        gameInformation.Chaos.HelderKill = true;
+                        gameInformation.Chaos.ElderKill = true;
                         foreach (var summoner in gameInformation.Chaos.Summoners)
                         {
-                            if (!summoner.IsDead)//Not dead he win helder dragon buff
+                            if (!summoner.IsDead)//Not dead he win elder dragon buff
                             {
-                                summoner.HelderBuff = true;
+                                summoner.ElderBuff = true;
                             }
                         }
                     }
@@ -104,7 +104,7 @@ namespace OSL_Web.DataProcessing
                     //Run timer next drake
                     if (gameInformation.Order.Drakes.Count == 4 || gameInformation.Chaos.Drakes.Count == 4)
                     {
-                        Pages.InGame.TimerControl.nextHelder = 360;
+                        Pages.InGame.TimerControl.nextElder = 360;
                     }
                     else
                     {
@@ -125,7 +125,7 @@ namespace OSL_Web.DataProcessing
                 //Run timer next baron
                 Pages.InGame.TimerControl.nextBaron = 360;
                 //Run timer buff
-                Pages.InGame.TimerControl.buffBaron = 210;
+                Pages.InGame.TimerControl.buffBaron = 180;
 
                 string sourceTeam = events.sourceTeam;
                 if (sourceTeam.Equals("order"))
@@ -167,14 +167,13 @@ namespace OSL_Web.DataProcessing
                     double gameTime = playBack.time; //voir pour récupérer le gameTime autre part
                     DateTime timeTemps = new DateTime(1970, 1, 1, 0, 0, 0, 0);
                     timeTemps = timeTemps.AddSeconds(gameTime);
-
-                    if (timeTemps.Minute >= 13 && timeTemps.Second >= 45)
+                    if ((timeTemps.Minute == 13 && timeTemps.Second >= 45) || timeTemps.Minute > 13)
                     {
-                        Pages.InGame.TimerControl.nextHerald = 0;
+                        Pages.InGame.TimerControl.nextHerald = -1;
                     }
                     else
                     {
-                        Pages.InGame.TimerControl.nextHerald = 480;
+                        Pages.InGame.TimerControl.nextHerald = 360;
                     }
 
                     string sourceTeam = events.sourceTeam;
@@ -186,8 +185,7 @@ namespace OSL_Web.DataProcessing
                     else
                     {
                         gameInformation.Chaos.Herald.Killed = true;
-                        gameInformation.Chaos.Herald
-                            .Take = false;
+                        gameInformation.Chaos.Herald.Take = false;
                     }
                 }
             }
@@ -245,47 +243,47 @@ namespace OSL_Web.DataProcessing
             }
         }
 
-        public static void OnDampenerDie(dynamic events)
-        {
-            try
-            {
-                string sourceTeam = events.sourceTeam;
-                string source = events.source;
-                if (sourceTeam.Equals("order"))
-                {
-                    if (source.Equals(""))
-                    {
-                        Pages.InGame.TimerControl.inhibOrderTop = 300;
-                    }
-                    else if (source.Equals(""))
-                    {
-                        Pages.InGame.TimerControl.inhibOrderMid = 300;
-                    }
-                    else if (source.Equals(""))
-                    {
-                        Pages.InGame.TimerControl.inhibOrderBot = 300;
-                    }
-                }
-                else
-                {
-                    if (source.Equals(""))
-                    {
-                        Pages.InGame.TimerControl.inhibChaosTop = 300;
-                    }
-                    else if (source.Equals(""))
-                    {
-                        Pages.InGame.TimerControl.inhibChaosMid = 300;
-                    }
-                    else if (source.Equals(""))
-                    {
-                        Pages.InGame.TimerControl.inhibChaosBot = 300;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                _logger.log(LoggingLevel.WARN, "OnDampenerDie()", "Error deserialize OnDampenerDie, possible not OnDampenerDie");
-            }
-        }
+        //public static void OnDampenerDie(dynamic events)
+        //{
+        //    try
+        //    {
+        //        string sourceTeam = events.sourceTeam;
+        //        string source = events.source;
+        //        if (sourceTeam.Equals("order"))
+        //        {
+        //            if (source.Equals(""))
+        //            {
+        //                Pages.InGame.TimerControl.inhibOrderTop = 300;
+        //            }
+        //            else if (source.Equals(""))
+        //            {
+        //                Pages.InGame.TimerControl.inhibOrderMid = 300;
+        //            }
+        //            else if (source.Equals(""))
+        //            {
+        //                Pages.InGame.TimerControl.inhibOrderBot = 300;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            if (source.Equals(""))
+        //            {
+        //                Pages.InGame.TimerControl.inhibChaosTop = 300;
+        //            }
+        //            else if (source.Equals(""))
+        //            {
+        //                Pages.InGame.TimerControl.inhibChaosMid = 300;
+        //            }
+        //            else if (source.Equals(""))
+        //            {
+        //                Pages.InGame.TimerControl.inhibChaosBot = 300;
+        //            }
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        _logger.log(LoggingLevel.WARN, "OnDampenerDie()", "Error deserialize OnDampenerDie, possible not OnDampenerDie");
+        //    }
+        //}
     }
 }

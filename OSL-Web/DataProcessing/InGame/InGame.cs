@@ -1,4 +1,5 @@
-﻿using OSL_Common.System.Logging;
+﻿using Newtonsoft.Json;
+using OSL_Common.System.Logging;
 
 
 namespace OSL_Web.DataProcessing
@@ -8,21 +9,47 @@ namespace OSL_Web.DataProcessing
         private static Logger _logger = new("InGame");
         public static bool initTimerGame = true;
         public static dynamic allPlayerList = null;
+        public static dynamic allEventData = null;
         public static dynamic playBack = null;
         public static dynamic liveEventContent = null;
         public static GameInformation gameInformation = new();
         public static void ReadData(string content)
         {
+            //content = CheckContent(content);
+
             if (!GameFlowSession(content))
             {
                 if (!LiveClientDataPlayerList(content))
                 {
-                    if (!ReplayPlayBack(content))
+                    if (!LiveClientDataEventData(content))
                     {
-                        LiveEvents(content);
+                        if (!ReplayPlayBack(content))
+                        {
+                            LiveEvents(content);
+                        }
                     }
                 }
             }
+        }
+
+        public static string CheckContent(string content)
+        {
+            try
+            {
+                dynamic checkContent = JsonConvert.DeserializeObject(content);
+                return content;
+            }
+            catch (Exception e)
+            {
+                string[] splitContent = content.Split("}{", StringSplitOptions.RemoveEmptyEntries);
+                foreach (string line in splitContent)
+                {
+                    Console.WriteLine(line + "}");
+                    //Console.WriteLine("}");
+                    Console.WriteLine();
+                }
+            }
+            return content;
         }
 
         public class GameInformation
@@ -41,7 +68,7 @@ namespace OSL_Web.DataProcessing
         {
             public List<Summoner> Summoners { get; set; }
             public List<string> Drakes { get; set; }
-            public bool HelderKill { get; set; }
+            public bool ElderKill { get; set; }
             public Herald Herald { get; set; }
             public bool BaronKill { get; set; }
             public Inhib Inhib { get; set; }
@@ -62,7 +89,7 @@ namespace OSL_Web.DataProcessing
             public Levels Levels { get; set; }
             public string SummonerName { get; set; }
             public int PositionIndice { get; set; } //Position in allgamedata for display in function of position
-            public bool HelderBuff { get; set; }
+            public bool ElderBuff { get; set; }
             public bool BaronBuff { get; set; }
             public Summoner()
             {
