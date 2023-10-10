@@ -64,7 +64,7 @@ namespace OSL_Web.DataProcessing
                     Pages.InGame.TimerControl.buffElder = 150;
 
                     string sourceTeam = events.sourceTeam;
-                    if (sourceTeam.Equals("order"))
+                    if (sourceTeam.Equals("Order"))
                     {
                         gameInformation.Order.ElderKill = true;
                         foreach (var summoner in gameInformation.Order.Summoners)
@@ -128,7 +128,7 @@ namespace OSL_Web.DataProcessing
                 Pages.InGame.TimerControl.buffBaron = 180;
 
                 string sourceTeam = events.sourceTeam;
-                if (sourceTeam.Equals("order"))
+                if (sourceTeam.Equals("Order"))
                 {
                     gameInformation.Order.BaronKill = true;
                     foreach (var summoner in gameInformation.Order.Summoners)
@@ -177,7 +177,7 @@ namespace OSL_Web.DataProcessing
                     }
 
                     string sourceTeam = events.sourceTeam;
-                    if (sourceTeam.Equals("order"))
+                    if (sourceTeam.Equals("Order"))
                     {
                         gameInformation.Order.Herald.Killed = true;
                         gameInformation.Order.Herald.Take = false;
@@ -206,7 +206,7 @@ namespace OSL_Web.DataProcessing
                     Pages.InGame.TimerControl.buffHerald = 240;
 
                     string sourceTeam = events.sourceTeam;
-                    if (sourceTeam.Equals("order"))
+                    if (sourceTeam.Equals("Order"))
                     {
                         gameInformation.Order.Herald.Take = true;
                     }
@@ -228,7 +228,7 @@ namespace OSL_Web.DataProcessing
             {
                 Pages.InGame.TimerControl.buffHerald = 0;
                 string sourceTeam = events.sourceTeam;
-                if (sourceTeam.Equals("order"))
+                if (sourceTeam.Equals("Order"))
                 {
                     gameInformation.Order.Herald.Killed = false;
                 }
