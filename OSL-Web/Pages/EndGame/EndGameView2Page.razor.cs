@@ -102,6 +102,75 @@ namespace OSL_Web.Pages.EndGame
             public string GoldDiffBarColor { get; set; }
             public string WinText { get; set; }
             public string LoseText { get; set; }
+            //For display more information Order vs Chaos
+            public bool ASSISTS { get; set; }
+            public string TextAssist { get; set; }
+            public bool BARRACKS_KILLED { get; set; }
+            public string TextBarracksKilled { get; set; }
+            public bool CHAMPIONS_KILLED { get; set; }
+            public string TextChampionsKilled { get; set; }
+            public bool GOLD_EARNED { get; set; }
+            public string TextGoldEarned { get; set; }
+            public bool LARGEST_CRITICAL_STRIKE { get; set; }
+            public string TextLargestCriticalStrike { get; set; }
+            public bool LARGEST_KILLING_SPREE { get; set; }
+            public string TextLargestKillingSpree { get; set; }
+            public bool LARGEST_MULTI_KILL { get; set; }
+            public string TextLargestMultiKill { get; set; }
+            public bool LEVEL { get; set; }
+            public string TextLevel { get; set; }
+            public bool MAGIC_DAMAGE_DEALT_PLAYER { get; set; }
+            public string TextMagicDamageDealtPlayer { get; set; }
+            public bool MAGIC_DAMAGE_DEALT_TO_CHAMPIONS { get; set; }
+            public string TextMagicDamageDealtToChampions { get; set; }
+            public bool MAGIC_DAMAGE_TAKEN { get; set; }
+            public string TextMagicDamageTaken { get; set; }
+            public bool MINIONS_KILLED { get; set; }
+            public string TextMinionsKilled { get; set; }
+            public bool NUM_DEATHS { get; set; }
+            public string TextNumDeaths { get; set; }
+            public bool PHYSICAL_DAMAGE_DEALT_PLAYER { get; set; }
+            public string TextPhysicalDamageDealtPlayer { get; set; }
+            public bool PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS { get; set; }
+            public string TextPhysicalDamageDealtToChampions { get; set; }
+            public bool PHYSICAL_DAMAGE_TAKEN { get; set; }
+            public string TextPhysicalDamageTaken { get; set; }
+            public bool TOTAL_DAMAGE_DEALT { get; set; }
+            public string TextTotalDamageDealt { get; set; }
+            public bool TOTAL_DAMAGE_DEALT_TO_BUILDINGS { get; set; }
+            public string TextTotalDamageDealtToBuildings { get; set; }
+            public bool TOTAL_DAMAGE_DEALT_TO_CHAMPIONS { get; set; }
+            public string TextTotalDamageDealtToChampions { get; set; }
+            public bool TOTAL_DAMAGE_DEALT_TO_OBJECTIVES { get; set; }
+            public string TextTotalDamageDealtToObjectives { get; set; }
+            public bool TOTAL_DAMAGE_DEALT_TO_TURRETS { get; set; }
+            public string TextTotalDamageDealtToTurrets { get; set; }
+            public bool TOTAL_DAMAGE_SELF_MITIGATED { get; set; }
+            public string TextTotalDamageSelfMitigated { get; set; }
+            public bool TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES { get; set; }
+            public string TextTotalDamageShieldedOnTeammates { get; set; }
+            public bool TOTAL_DAMAGE_TAKEN { get; set; }
+            public string TextTotalDamageTaken { get; set; }
+            public bool TOTAL_HEAL { get; set; }
+            public string TextTotalHeal { get; set; }
+            public bool TOTAL_HEAL_ON_TEAMMATES { get; set; }
+            public string TextTotalHealOnTeammates { get; set; }
+            public bool TOTAL_TIME_CROWD_CONTROL_DEALT { get; set; }
+            public string TextTotalTimeCrowdControlDealt { get; set; }
+            public bool TRUE_DAMAGE_DEALT_PLAYER { get; set; }
+            public string TextTrueDamageDealtPlayer { get; set; }
+            public bool TRUE_DAMAGE_DEALT_TO_CHAMPIONS { get; set; }
+            public string TextTrueDamageDealtToChampions { get; set; }
+            public bool TRUE_DAMAGE_TAKEN { get; set; }
+            public string TextTrueDamageTaken { get; set; }
+            public bool TURRETS_KILLED { get; set; }
+            public string TextTurretsKilled { get; set; }
+            public bool VISION_SCORE { get; set; }
+            public string TextVisionScore { get; set; }
+            public bool WARD_KILLED { get; set; }
+            public string TextWardKilled { get; set; }
+            public bool WARD_PLACED { get; set; }
+            public string TextWardPlaced { get; set; }
 
         }
 
@@ -169,9 +238,243 @@ namespace OSL_Web.Pages.EndGame
             {
                 foreach (var players in teams.players)
                 {
-                    if (Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS) > max)
+                    if (formatingData.ASSISTS)
                     {
-                        max = Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS);
+                        if (Convert.ToInt32(players.stats.ASSISTS) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.ASSISTS);
+                        }
+                    }
+                    else if (formatingData.BARRACKS_KILLED)
+                    {
+                        if (Convert.ToInt32(players.stats.BARRACKS_KILLED) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.BARRACKS_KILLED);
+                        }
+                    }
+                    else if (formatingData.CHAMPIONS_KILLED)
+                    {
+                        if (Convert.ToInt32(players.stats.CHAMPIONS_KILLED) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.CHAMPIONS_KILLED);
+                        }
+                    }
+                    else if (formatingData.GOLD_EARNED)
+                    {
+                        if (Convert.ToInt32(players.stats.GOLD_EARNED) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.GOLD_EARNED);
+                        }
+                    }
+                    else if (formatingData.LARGEST_CRITICAL_STRIKE)
+                    {
+                        if (Convert.ToInt32(players.stats.LARGEST_CRITICAL_STRIKE) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.LARGEST_CRITICAL_STRIKE);
+                        }
+                    }
+                    else if (formatingData.LARGEST_KILLING_SPREE)
+                    {
+                        if (Convert.ToInt32(players.stats.LARGEST_KILLING_SPREE) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.LARGEST_KILLING_SPREE);
+                        }
+                    }
+                    else if (formatingData.LARGEST_MULTI_KILL)
+                    {
+                        if (Convert.ToInt32(players.stats.LARGEST_MULTI_KILL) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.LARGEST_MULTI_KILL);
+                        }
+                    }
+                    else if (formatingData.LEVEL)
+                    {
+                        if (Convert.ToInt32(players.stats.LEVEL) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.LEVEL);
+                        }
+                    }
+                    else if (formatingData.MAGIC_DAMAGE_DEALT_PLAYER)
+                    {
+                        if (Convert.ToInt32(players.stats.MAGIC_DAMAGE_DEALT_PLAYER) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.MAGIC_DAMAGE_DEALT_PLAYER);
+                        }
+                    }
+                    else if (formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS)
+                    {
+                        if (Convert.ToInt32(players.stats.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS);
+                        }
+                    }
+                    else if (formatingData.MAGIC_DAMAGE_TAKEN)
+                    {
+                        if (Convert.ToInt32(players.stats.MAGIC_DAMAGE_TAKEN) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.MAGIC_DAMAGE_TAKEN);
+                        }
+                    }
+                    else if (formatingData.MINIONS_KILLED)
+                    {
+                        if (Convert.ToInt32(players.stats.MINIONS_KILLED) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.MINIONS_KILLED);
+                        }
+                    }
+                    else if (formatingData.NUM_DEATHS)
+                    {
+                        if (Convert.ToInt32(players.stats.NUM_DEATHS) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.NUM_DEATHS);
+                        }
+                    }
+                    else if (formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER)
+                    {
+                        if (Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_DEALT_PLAYER) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_DEALT_PLAYER);
+                        }
+                    }
+                    else if (formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                    {
+                        if (Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS);
+                        }
+                    }
+                    else if (formatingData.PHYSICAL_DAMAGE_TAKEN)
+                    {
+                        if (Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_TAKEN) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_TAKEN);
+                        }
+                    }
+                    else if (formatingData.TOTAL_DAMAGE_DEALT)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT);
+                        }
+                    }
+                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_BUILDINGS) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_BUILDINGS);
+                        }
+                    }
+                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS);
+                        }
+                    }
+                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES);
+                        }
+                    }
+                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_TURRETS) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_TURRETS);
+                        }
+                    }
+                    else if (formatingData.TOTAL_DAMAGE_SELF_MITIGATED)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_DAMAGE_SELF_MITIGATED) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_DAMAGE_SELF_MITIGATED);
+                        }
+                    }
+                    else if (formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES);
+                        }
+                    }
+                    else if (formatingData.TOTAL_DAMAGE_TAKEN)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_DAMAGE_TAKEN) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_DAMAGE_TAKEN);
+                        }
+                    }
+                    else if (formatingData.TOTAL_HEAL)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_HEAL) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_HEAL);
+                        }
+                    }
+                    else if (formatingData.TOTAL_HEAL_ON_TEAMMATES)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_HEAL_ON_TEAMMATES) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_HEAL_ON_TEAMMATES);
+                        }
+                    }
+                    else if (formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT)
+                    {
+                        if (Convert.ToInt32(players.stats.TOTAL_TIME_CROWD_CONTROL_DEALT) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TOTAL_TIME_CROWD_CONTROL_DEALT);
+                        }
+                    }
+                    else if (formatingData.TRUE_DAMAGE_DEALT_PLAYER)
+                    {
+                        if (Convert.ToInt32(players.stats.TRUE_DAMAGE_DEALT_PLAYER) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TRUE_DAMAGE_DEALT_PLAYER);
+                        }
+                    }
+                    else if (formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS)
+                    {
+                        if (Convert.ToInt32(players.stats.TRUE_DAMAGE_DEALT_TO_CHAMPIONS) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TRUE_DAMAGE_DEALT_TO_CHAMPIONS);
+                        }
+                    }
+                    else if (formatingData.TRUE_DAMAGE_TAKEN)
+                    {
+                        if (Convert.ToInt32(players.stats.TRUE_DAMAGE_TAKEN) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TRUE_DAMAGE_TAKEN);
+                        }
+                    }
+                    else if (formatingData.TURRETS_KILLED)
+                    {
+                        if (Convert.ToInt32(players.stats.TURRETS_KILLED) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.TURRETS_KILLED);
+                        }
+                    }
+                    else if (formatingData.VISION_SCORE)
+                    {
+                        if (Convert.ToInt32(players.stats.VISION_SCORE) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.VISION_SCORE);
+                        }
+                    }
+                    else if (formatingData.WARD_KILLED)
+                    {
+                        if (Convert.ToInt32(players.stats.WARD_KILLED) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.WARD_KILLED);
+                        }
+                    }
+                    else if (formatingData.WARD_PLACED)
+                    {
+                        if (Convert.ToInt32(players.stats.WARD_PLACED) > max)
+                        {
+                            max = Convert.ToInt32(players.stats.WARD_PLACED);
+                        }
                     }
                 }
             }
@@ -486,7 +789,7 @@ namespace OSL_Web.Pages.EndGame
             EndGamePage.textValueOverlayView2.BansBorderColor = 5;
             EndGamePage.textValueOverlayView2.GlobalStatsBorderColor = 5;
             EndGamePage.textValueOverlayView2.GoldDiffBorderColor = 5;
-
+            EndGamePage.textValueOverlayView2.ValueStats = "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS";
         }
 
         public static void CreateTabGold()

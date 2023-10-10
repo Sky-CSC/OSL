@@ -120,10 +120,314 @@
                                 </div>
                                 <div class="champion-info-stats-blue-group-info">
                                     <div class="champion-info-stats-blue-group-text" style="color: @formatingData.ChampionInfoBlueDegaTextColor">
-                                        @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS))
+
+                                        @if (formatingData.ASSISTS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.ASSISTS))
+                                        }
+                                        else if (formatingData.BARRACKS_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.BARRACKS_KILLED))
+                                        }
+                                        else if (formatingData.CHAMPIONS_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.CHAMPIONS_KILLED))
+                                        }
+                                        else if (formatingData.GOLD_EARNED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.GOLD_EARNED))
+                                        }
+                                        else if (formatingData.LARGEST_CRITICAL_STRIKE)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.LARGEST_CRITICAL_STRIKE))
+                                        }
+                                        else if (formatingData.LARGEST_KILLING_SPREE)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.LARGEST_KILLING_SPREE))
+                                        }
+                                        else if (formatingData.LARGEST_MULTI_KILL)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.LARGEST_MULTI_KILL))
+                                        }
+                                        else if (formatingData.LEVEL)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.LEVEL))
+                                        }
+                                        else if (formatingData.MAGIC_DAMAGE_DEALT_PLAYER)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.MAGIC_DAMAGE_DEALT_PLAYER))
+                                        }
+                                        else if (formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS))
+                                        }
+                                        else if (formatingData.MAGIC_DAMAGE_TAKEN)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.MAGIC_DAMAGE_TAKEN))
+                                        }
+                                        else if (formatingData.MINIONS_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.MINIONS_KILLED))
+                                        }
+                                        else if (formatingData.NUM_DEATHS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.NUM_DEATHS))
+                                        }
+                                        else if (formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.PHYSICAL_DAMAGE_DEALT_PLAYER))
+                                        }
+                                        else if (formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS))
+                                        }
+                                        else if (formatingData.PHYSICAL_DAMAGE_TAKEN)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.PHYSICAL_DAMAGE_TAKEN))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_BUILDINGS))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_TURRETS))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_SELF_MITIGATED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_SELF_MITIGATED))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_TAKEN)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_TAKEN))
+                                        }
+                                        else if (formatingData.TOTAL_HEAL)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_HEAL))
+                                        }
+                                        else if (formatingData.TOTAL_HEAL_ON_TEAMMATES)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_HEAL_ON_TEAMMATES))
+                                        }
+                                        else if (formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_TIME_CROWD_CONTROL_DEALT))
+                                        }
+                                        else if (formatingData.TRUE_DAMAGE_DEALT_PLAYER)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TRUE_DAMAGE_DEALT_PLAYER))
+                                        }
+                                        else if (formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TRUE_DAMAGE_DEALT_TO_CHAMPIONS))
+                                        }
+                                        else if (formatingData.TRUE_DAMAGE_TAKEN)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TRUE_DAMAGE_TAKEN))
+                                        }
+                                        else if (formatingData.TURRETS_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TURRETS_KILLED))
+                                        }
+                                        else if (formatingData.VISION_SCORE)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.VISION_SCORE))
+                                        }
+                                        else if (formatingData.WARD_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.WARD_KILLED))
+                                        }
+                                        else if (formatingData.WARD_PLACED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.WARD_PLACED))
+                                        }
                                     </div>
-                                    <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoBlueBarColor">
-                                    </div>
+                                    @if (formatingData.ASSISTS)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.ASSISTS)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.BARRACKS_KILLED)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.BARRACKS_KILLED)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.CHAMPIONS_KILLED)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.CHAMPIONS_KILLED)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.GOLD_EARNED)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.GOLD_EARNED)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.LARGEST_CRITICAL_STRIKE)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.LARGEST_CRITICAL_STRIKE)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.LARGEST_KILLING_SPREE)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.LARGEST_KILLING_SPREE)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.LARGEST_MULTI_KILL)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.LARGEST_MULTI_KILL)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.LEVEL)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.LEVEL)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.MAGIC_DAMAGE_DEALT_PLAYER)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.MAGIC_DAMAGE_DEALT_PLAYER)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.MAGIC_DAMAGE_TAKEN)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.MAGIC_DAMAGE_TAKEN)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.MINIONS_KILLED)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.MINIONS_KILLED)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.NUM_DEATHS)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.NUM_DEATHS)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_DEALT_PLAYER)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.PHYSICAL_DAMAGE_TAKEN)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_TAKEN)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_BUILDINGS)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_TURRETS)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_SELF_MITIGATED)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_SELF_MITIGATED)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_TAKEN)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_TAKEN)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_HEAL)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_HEAL)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_HEAL_ON_TEAMMATES)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_HEAL_ON_TEAMMATES)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_TIME_CROWD_CONTROL_DEALT)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TRUE_DAMAGE_DEALT_PLAYER)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TRUE_DAMAGE_DEALT_PLAYER)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TRUE_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TRUE_DAMAGE_TAKEN)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TRUE_DAMAGE_TAKEN)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TURRETS_KILLED)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TURRETS_KILLED)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.VISION_SCORE)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.VISION_SCORE)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.WARD_KILLED)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.WARD_KILLED)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.WARD_PLACED)
+                                    {
+                                        <div class="champion-info-stats-blue-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.WARD_PLACED)); background-color: @formatingData.ChampionInfoBlueBarColor">
+                                        </div>
+                                    }
                                 </div>
                             </div>
                         }
@@ -138,10 +442,313 @@
                                 </div>
                                 <div class="champion-info-stats-red-group-info">
                                     <div class="champion-info-stats-red-group-text" style="color: @formatingData.ChampionInfoRedDegaTextColor">
-                                        @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS))
+                                        @if (formatingData.ASSISTS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.ASSISTS))
+                                        }
+                                        else if (formatingData.BARRACKS_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.BARRACKS_KILLED))
+                                        }
+                                        else if (formatingData.CHAMPIONS_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.CHAMPIONS_KILLED))
+                                        }
+                                        else if (formatingData.GOLD_EARNED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.GOLD_EARNED))
+                                        }
+                                        else if (formatingData.LARGEST_CRITICAL_STRIKE)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.LARGEST_CRITICAL_STRIKE))
+                                        }
+                                        else if (formatingData.LARGEST_KILLING_SPREE)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.LARGEST_KILLING_SPREE))
+                                        }
+                                        else if (formatingData.LARGEST_MULTI_KILL)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.LARGEST_MULTI_KILL))
+                                        }
+                                        else if (formatingData.LEVEL)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.LEVEL))
+                                        }
+                                        else if (formatingData.MAGIC_DAMAGE_DEALT_PLAYER)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.MAGIC_DAMAGE_DEALT_PLAYER))
+                                        }
+                                        else if (formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS))
+                                        }
+                                        else if (formatingData.MAGIC_DAMAGE_TAKEN)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.MAGIC_DAMAGE_TAKEN))
+                                        }
+                                        else if (formatingData.MINIONS_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.MINIONS_KILLED))
+                                        }
+                                        else if (formatingData.NUM_DEATHS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.NUM_DEATHS))
+                                        }
+                                        else if (formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.PHYSICAL_DAMAGE_DEALT_PLAYER))
+                                        }
+                                        else if (formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS))
+                                        }
+                                        else if (formatingData.PHYSICAL_DAMAGE_TAKEN)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.PHYSICAL_DAMAGE_TAKEN))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_BUILDINGS))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_DEALT_TO_TURRETS))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_SELF_MITIGATED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_SELF_MITIGATED))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES))
+                                        }
+                                        else if (formatingData.TOTAL_DAMAGE_TAKEN)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_DAMAGE_TAKEN))
+                                        }
+                                        else if (formatingData.TOTAL_HEAL)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_HEAL))
+                                        }
+                                        else if (formatingData.TOTAL_HEAL_ON_TEAMMATES)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_HEAL_ON_TEAMMATES))
+                                        }
+                                        else if (formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TOTAL_TIME_CROWD_CONTROL_DEALT))
+                                        }
+                                        else if (formatingData.TRUE_DAMAGE_DEALT_PLAYER)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TRUE_DAMAGE_DEALT_PLAYER))
+                                        }
+                                        else if (formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TRUE_DAMAGE_DEALT_TO_CHAMPIONS))
+                                        }
+                                        else if (formatingData.TRUE_DAMAGE_TAKEN)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TRUE_DAMAGE_TAKEN))
+                                        }
+                                        else if (formatingData.TURRETS_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.TURRETS_KILLED))
+                                        }
+                                        else if (formatingData.VISION_SCORE)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.VISION_SCORE))
+                                        }
+                                        else if (formatingData.WARD_KILLED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.WARD_KILLED))
+                                        }
+                                        else if (formatingData.WARD_PLACED)
+                                        {
+                                            @ConvertToK(Convert.ToDouble(players.stats.WARD_PLACED))
+                                        }
                                     </div>
-                                    <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoRedBarColor">
-                                    </div>
+                                    @if (formatingData.ASSISTS)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.ASSISTS)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.BARRACKS_KILLED)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.BARRACKS_KILLED)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.CHAMPIONS_KILLED)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.CHAMPIONS_KILLED)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.GOLD_EARNED)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.GOLD_EARNED)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.LARGEST_CRITICAL_STRIKE)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.LARGEST_CRITICAL_STRIKE)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.LARGEST_KILLING_SPREE)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.LARGEST_KILLING_SPREE)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.LARGEST_MULTI_KILL)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.LARGEST_MULTI_KILL)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.LEVEL)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.LEVEL)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.MAGIC_DAMAGE_DEALT_PLAYER)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.MAGIC_DAMAGE_DEALT_PLAYER)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.MAGIC_DAMAGE_TAKEN)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.MAGIC_DAMAGE_TAKEN)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.MINIONS_KILLED)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.MINIONS_KILLED)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.NUM_DEATHS)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.NUM_DEATHS)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_DEALT_PLAYER)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.PHYSICAL_DAMAGE_TAKEN)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.PHYSICAL_DAMAGE_TAKEN)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_BUILDINGS)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_DEALT_TO_TURRETS)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_SELF_MITIGATED)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_SELF_MITIGATED)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_DAMAGE_TAKEN)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_DAMAGE_TAKEN)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_HEAL)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_HEAL)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_HEAL_ON_TEAMMATES)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_HEAL_ON_TEAMMATES)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TOTAL_TIME_CROWD_CONTROL_DEALT)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TRUE_DAMAGE_DEALT_PLAYER)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TRUE_DAMAGE_DEALT_PLAYER)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TRUE_DAMAGE_DEALT_TO_CHAMPIONS)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TRUE_DAMAGE_TAKEN)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TRUE_DAMAGE_TAKEN)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.TURRETS_KILLED)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.TURRETS_KILLED)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.VISION_SCORE)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.VISION_SCORE)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.WARD_KILLED)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.WARD_KILLED)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
+                                    else if (formatingData.WARD_PLACED)
+                                    {
+                                        <div class="champion-info-stats-red-group-bar" style="width: @ConvertToWidth(Convert.ToInt32(players.stats.WARD_PLACED)); background-color: @formatingData.ChampionInfoRedBarColor">
+                                        </div>
+                                    }
                                 </div>
                             </div>
                         }
@@ -299,7 +906,7 @@
                                 @for (int i = 0; i < goldDiff.Count - 1; i++)
                                 {
                                     int y = (goldDiff[i] * 100) / MaxGold();
-                                    
+
                                     double nexty = (goldDiff[i + 1] * 100) / MaxGold();
                                     int nextx = x + 1250 / goldDiff.Count();
                                     if (i == 0)
@@ -430,4 +1037,4 @@
     }
 
     public void Dispose() => timer.Dispose();
-    }
+}

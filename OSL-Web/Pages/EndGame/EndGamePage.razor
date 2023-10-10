@@ -10,10 +10,19 @@
                 Display end game information :
                 <br />- Time game
                 <br />- Win, loss team
-                <br />- Damages to champions
-                <br />- Damages ... (In progress to add other damages information (tower, magic, physic, ...))
-                <br />- Bans informations
-                <br />- KDA / Total gold / Tower, Dagon, Elder, Herald, Baron kill
+                <br />- Information from game stats :
+                <br /> ASSISTS, BARRACKS_KILLED, CHAMPIONS_KILLED, GOLD_EARNED, LARGEST_CRITICAL_STRIKE, 
+                <br /> LARGEST_KILLING_SPREE, LARGEST_MULTI_KILL, LEVEL, MAGIC_DAMAGE_DEALT_PLAYER, 
+                <br /> MAGIC_DAMAGE_DEALT_TO_CHAMPIONS, MAGIC_DAMAGE_TAKEN, MINIONS_KILLED, NUM_DEATHS, 
+                <br /> PHYSICAL_DAMAGE_DEALT_PLAYER, PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS, PHYSICAL_DAMAGE_TAKEN, 
+                <br /> TOTAL_DAMAGE_DEALT, TOTAL_DAMAGE_DEALT_TO_BUILDINGS, TOTAL_DAMAGE_DEALT_TO_CHAMPIONS, 
+                <br /> TOTAL_DAMAGE_DEALT_TO_OBJECTIVES, TOTAL_DAMAGE_DEALT_TO_TURRETS, TOTAL_DAMAGE_SELF_MITIGATED, 
+                <br /> TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES, TOTAL_DAMAGE_TAKEN, TOTAL_HEAL, TOTAL_HEAL_ON_TEAMMATES, 
+                <br /> TOTAL_TIME_CROWD_CONTROL_DEALT, TRUE_DAMAGE_DEALT_PLAYER, TRUE_DAMAGE_DEALT_TO_CHAMPIONS, 
+                <br /> TRUE_DAMAGE_TAKEN, TURRETS_KILLED, VISION_SCORE, WARD_KILLED, WARD_PLACED
+                <br /><br />- Bans informations
+                <br />- KDA, Gold, Tower, Dagon, Elder, Herald, Baron
+                <br />- Gold diff 
             </p>
 
             @*View1*@
@@ -255,6 +264,45 @@
                     <h4><b>Global Stats</b></h4>
                     <div class="global-stats">
                         <div>
+                            <div class="col-sm-10">
+                                <label style="font-weight: bold">Choose your game stat to display</label>
+                                <select id="patch-region" @bind="@textValueOverlayView1.ValueStats" class="form-control" @onclick="@TextValueOverlayView1.ValueStatsSubmit">
+                                    <option value="ASSISTS">ASSISTS</option>
+                                    <option value="BARRACKS_KILLED">BARRACKS_KILLED</option>
+                                    <option value="CHAMPIONS_KILLED">CHAMPIONS_KILLED</option>
+                                    <option value="GOLD_EARNED">GOLD_EARNED</option>
+                                    <option value="LARGEST_CRITICAL_STRIKE">LARGEST_CRITICAL_STRIKE</option>
+                                    <option value="LARGEST_KILLING_SPREE">LARGEST_KILLING_SPREE</option>
+                                    <option value="LARGEST_MULTI_KILL">LARGEST_MULTI_KILL</option>
+                                    <option value="LEVEL">LEVEL</option>
+                                    <option value="MAGIC_DAMAGE_DEALT_PLAYER">MAGIC_DAMAGE_DEALT_PLAYER</option>
+                                    <option value="MAGIC_DAMAGE_DEALT_TO_CHAMPIONS">MAGIC_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="MAGIC_DAMAGE_TAKEN">MAGIC_DAMAGE_TAKEN</option>
+                                    <option value="MINIONS_KILLED">MINIONS_KILLED</option>
+                                    <option value="NUM_DEATHS">NUM_DEATHS</option>
+                                    <option value="PHYSICAL_DAMAGE_DEALT_PLAYER">PHYSICAL_DAMAGE_DEALT_PLAYER</option>
+                                    <option value="PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS">PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="PHYSICAL_DAMAGE_TAKEN">PHYSICAL_DAMAGE_TAKEN</option>
+                                    <option value="TOTAL_DAMAGE_DEALT">TOTAL_DAMAGE_DEALT</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_BUILDINGS">TOTAL_DAMAGE_DEALT_TO_BUILDINGS</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_CHAMPIONS">TOTAL_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_OBJECTIVES">TOTAL_DAMAGE_DEALT_TO_OBJECTIVES</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_TURRETS">TOTAL_DAMAGE_DEALT_TO_TURRETS</option>
+                                    <option value="TOTAL_DAMAGE_SELF_MITIGATED">TOTAL_DAMAGE_SELF_MITIGATED</option>
+                                    <option value="TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES">TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES</option>
+                                    <option value="TOTAL_DAMAGE_TAKEN">TOTAL_DAMAGE_TAKEN</option>
+                                    <option value="TOTAL_HEAL">TOTAL_HEAL</option>
+                                    <option value="TOTAL_HEAL_ON_TEAMMATES">TOTAL_HEAL_ON_TEAMMATES</option>
+                                    <option value="TOTAL_TIME_CROWD_CONTROL_DEALT">TOTAL_TIME_CROWD_CONTROL_DEALT</option>
+                                    <option value="TRUE_DAMAGE_DEALT_PLAYER">TRUE_DAMAGE_DEALT_PLAYER</option>
+                                    <option value="TRUE_DAMAGE_DEALT_TO_CHAMPIONS">TRUE_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="TRUE_DAMAGE_TAKEN">TRUE_DAMAGE_TAKEN</option>
+                                    <option value="TURRETS_KILLED">TURRETS_KILLED</option>
+                                    <option value="VISION_SCORE">VISION_SCORE</option>
+                                    <option value="WARD_KILLED">WARD_KILLED</option>
+                                    <option value="WARD_PLACED">WARD_PLACED</option>
+                                </select>
+                            </div>
                             <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.GlobalStatsBackgroundColorSubmit">
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
@@ -284,6 +332,246 @@
                             <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GlobalStatsTextColor" @onclick="@TextValueOverlayView1.SetGlobalStatsTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GlobalStatsTextColor"> @EndGameView1Page.formatingData.GlobalStatsTextColor</spam>
                             <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GlobalStatsBlueTextColor" @onclick="@TextValueOverlayView1.SetGlobalStatsBlueTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GlobalStatsBlueTextColor"> @EndGameView1Page.formatingData.GlobalStatsBlueTextColor</spam>
                             <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView1Page.formatingData.GlobalStatsRedTextColor" @onclick="@TextValueOverlayView1.SetGlobalStatsRedTextColor"></button> <spam style="font-weight: bold; color: @EndGameView1Page.formatingData.GlobalStatsRedTextColor"> @EndGameView1Page.formatingData.GlobalStatsRedTextColor</spam>
+                            <br /><br />
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextAssistSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Assist ("@EndGameView1Page.formatingData.TextAssist") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextAssist" placeholder="@EndGameView1Page.formatingData.TextAssist" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextBarracksKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Barracks Killed ("@EndGameView1Page.formatingData.TextBarracksKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextBarracksKilled" placeholder="@EndGameView1Page.formatingData.TextBarracksKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextChampionsKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Champions Killed ("@EndGameView1Page.formatingData.TextChampionsKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextChampionsKilled" placeholder="@EndGameView1Page.formatingData.TextChampionsKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextGoldEarnedSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Gold Earned ("@EndGameView1Page.formatingData.TextGoldEarned") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextGoldEarned" placeholder="@EndGameView1Page.formatingData.TextGoldEarned" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextLargestCriticalStrikeSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Largest Critical Strike ("@EndGameView1Page.formatingData.TextLargestCriticalStrike") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextLargestCriticalStrike" placeholder="@EndGameView1Page.formatingData.TextLargestCriticalStrike" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextLargestKillingSpreeSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Largest Killing Spree ("@EndGameView1Page.formatingData.TextLargestKillingSpree") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextLargestKillingSpree" placeholder="@EndGameView1Page.formatingData.TextLargestKillingSpree" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextLargestMultiKillSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Largest Multi Kill ("@EndGameView1Page.formatingData.TextLargestMultiKill") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextLargestMultiKill" placeholder="@EndGameView1Page.formatingData.TextLargestMultiKill" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextLevelSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Level ("@EndGameView1Page.formatingData.TextLevel") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextLevel" placeholder="@EndGameView1Page.formatingData.TextLevel" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextMagicDamageDealtPlayerSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Magic Damage Dealt Player ("@EndGameView1Page.formatingData.TextMagicDamageDealtPlayer") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextMagicDamageDealtPlayer" placeholder="@EndGameView1Page.formatingData.TextMagicDamageDealtPlayer" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextMagicDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Magic Damage Dealt To Champions ("@EndGameView1Page.formatingData.TextMagicDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextMagicDamageDealtToChampions" placeholder="@EndGameView1Page.formatingData.TextMagicDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextMagicDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Magic Damage Taken ("@EndGameView1Page.formatingData.TextMagicDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextMagicDamageTaken" placeholder="@EndGameView1Page.formatingData.TextMagicDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextMinionsKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Minions Killed ("@EndGameView1Page.formatingData.TextMinionsKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextMinionsKilled" placeholder="@EndGameView1Page.formatingData.TextMinionsKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextNumDeathsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Num Deaths ("@EndGameView1Page.formatingData.TextNumDeaths") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextNumDeaths" placeholder="@EndGameView1Page.formatingData.TextNumDeaths" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextPhysicalDamageDealtPlayerSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Physical Damage Dealt Player ("@EndGameView1Page.formatingData.TextPhysicalDamageDealtPlayer") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextPhysicalDamageDealtPlayer" placeholder="@EndGameView1Page.formatingData.TextPhysicalDamageDealtPlayer" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextPhysicalDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Physical Damage Dealt To Champions ("@EndGameView1Page.formatingData.TextPhysicalDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextPhysicalDamageDealtToChampions" placeholder="@EndGameView1Page.formatingData.TextPhysicalDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextPhysicalDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Physical Damage Taken ("@EndGameView1Page.formatingData.TextPhysicalDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextPhysicalDamageTaken" placeholder="@EndGameView1Page.formatingData.TextPhysicalDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalDamageDealtSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Dealt ("@EndGameView1Page.formatingData.TextTotalDamageDealt") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalDamageDealt" placeholder="@EndGameView1Page.formatingData.TextTotalDamageDealt" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalDamageDealtToBuildingsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Dealt To Buildings ("@EndGameView1Page.formatingData.TextTotalDamageDealtToBuildings") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalDamageDealtToBuildings" placeholder="@EndGameView1Page.formatingData.TextTotalDamageDealtToBuildings" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text TotalDamageDealtToChampions ("@EndGameView1Page.formatingData.TextTotalDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalDamageDealtToChampions" placeholder="@EndGameView1Page.formatingData.TextTotalDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalDamageDealtToObjectivesSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Dealt To Objectives ("@EndGameView1Page.formatingData.TextTotalDamageDealtToObjectives") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalDamageDealtToObjectives" placeholder="@EndGameView1Page.formatingData.TextTotalDamageDealtToObjectives" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalDamageDealtToTurretsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text TotalDamage Dealt To Turrets ("@EndGameView1Page.formatingData.TextTotalDamageDealtToTurrets") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalDamageDealtToTurrets" placeholder="@EndGameView1Page.formatingData.TextTotalDamageDealtToTurrets" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalDamageSelfMitigatedSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Self Mitigated ("@EndGameView1Page.formatingData.TextTotalDamageSelfMitigated") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalDamageSelfMitigated" placeholder="@EndGameView1Page.formatingData.TextTotalDamageSelfMitigated" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalDamageShieldedOnTeammatesSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Shielded On Teammates ("@EndGameView1Page.formatingData.TextTotalDamageShieldedOnTeammates") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalDamageShieldedOnTeammates" placeholder="@EndGameView1Page.formatingData.TextTotalDamageShieldedOnTeammates" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Taken ("@EndGameView1Page.formatingData.TextTotalDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalDamageTaken" placeholder="@EndGameView1Page.formatingData.TextTotalDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalHealSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Heal ("@EndGameView1Page.formatingData.TextTotalHeal") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalHeal" placeholder="@EndGameView1Page.formatingData.TextTotalHeal" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalHealOnTeammatesSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Heal On Teammates ("@EndGameView1Page.formatingData.TextTotalHealOnTeammates") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalHealOnTeammates" placeholder="@EndGameView1Page.formatingData.TextTotalHealOnTeammates" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTotalTimeCrowdControlDealtSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Time Crowd Control Dealt ("@EndGameView1Page.formatingData.TextTotalTimeCrowdControlDealt") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTotalTimeCrowdControlDealt" placeholder="@EndGameView1Page.formatingData.TextTotalTimeCrowdControlDealt" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTrueDamageDealtPlayerSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text True Damage Dealt Player ("@EndGameView1Page.formatingData.TextTrueDamageDealtPlayer") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTrueDamageDealtPlayer" placeholder="@EndGameView1Page.formatingData.TextTrueDamageDealtPlayer" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTrueDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text True Damage Dealt To Champions ("@EndGameView1Page.formatingData.TextTrueDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTrueDamageDealtToChampions" placeholder="@EndGameView1Page.formatingData.TextTrueDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTrueDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text True Damage Taken ("@EndGameView1Page.formatingData.TextTrueDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTrueDamageTaken" placeholder="@EndGameView1Page.formatingData.TextTrueDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextTurretsKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Turrets Killed ("@EndGameView1Page.formatingData.TextTurretsKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextTurretsKilled" placeholder="@EndGameView1Page.formatingData.TextTurretsKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextVisionScoreSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Vision Score ("@EndGameView1Page.formatingData.TextVisionScore") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextVisionScore" placeholder="@EndGameView1Page.formatingData.TextVisionScore" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextWardKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Ward Killed ("@EndGameView1Page.formatingData.TextWardKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextWardKilled" placeholder="@EndGameView1Page.formatingData.TextWardKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1.TextWardPlacedSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Ward Placed ("@EndGameView1Page.formatingData.TextWardPlaced") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView1.TextWardPlaced" placeholder="@EndGameView1Page.formatingData.TextWardPlaced" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
 
                         </div>
                         <div class="color-picker" style="visibility: @colorPickerOverlay1GlobalStats">
@@ -602,6 +890,45 @@
                     <h4><b>Global Stats</b></h4>
                     <div class="global-stats">
                         <div>
+                            <div class="col-sm-10">
+                                <label style="font-weight: bold">Choose your game stat to display</label>
+                                <select id="patch-region" @bind="@textValueOverlayView2.ValueStats" class="form-control" @onclick="@TextValueOverlayView2.ValueStatsSubmit">
+                                    <option value="ASSISTS">ASSISTS</option>
+                                    <option value="BARRACKS_KILLED">BARRACKS_KILLED</option>
+                                    <option value="CHAMPIONS_KILLED">CHAMPIONS_KILLED</option>
+                                    <option value="GOLD_EARNED">GOLD_EARNED</option>
+                                    <option value="LARGEST_CRITICAL_STRIKE">LARGEST_CRITICAL_STRIKE</option>
+                                    <option value="LARGEST_KILLING_SPREE">LARGEST_KILLING_SPREE</option>
+                                    <option value="LARGEST_MULTI_KILL">LARGEST_MULTI_KILL</option>
+                                    <option value="LEVEL">LEVEL</option>
+                                    <option value="MAGIC_DAMAGE_DEALT_PLAYER">MAGIC_DAMAGE_DEALT_PLAYER</option>
+                                    <option value="MAGIC_DAMAGE_DEALT_TO_CHAMPIONS">MAGIC_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="MAGIC_DAMAGE_TAKEN">MAGIC_DAMAGE_TAKEN</option>
+                                    <option value="MINIONS_KILLED">MINIONS_KILLED</option>
+                                    <option value="NUM_DEATHS">NUM_DEATHS</option>
+                                    <option value="PHYSICAL_DAMAGE_DEALT_PLAYER">PHYSICAL_DAMAGE_DEALT_PLAYER</option>
+                                    <option value="PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS">PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="PHYSICAL_DAMAGE_TAKEN">PHYSICAL_DAMAGE_TAKEN</option>
+                                    <option value="TOTAL_DAMAGE_DEALT">TOTAL_DAMAGE_DEALT</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_BUILDINGS">TOTAL_DAMAGE_DEALT_TO_BUILDINGS</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_CHAMPIONS">TOTAL_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_OBJECTIVES">TOTAL_DAMAGE_DEALT_TO_OBJECTIVES</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_TURRETS">TOTAL_DAMAGE_DEALT_TO_TURRETS</option>
+                                    <option value="TOTAL_DAMAGE_SELF_MITIGATED">TOTAL_DAMAGE_SELF_MITIGATED</option>
+                                    <option value="TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES">TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES</option>
+                                    <option value="TOTAL_DAMAGE_TAKEN">TOTAL_DAMAGE_TAKEN</option>
+                                    <option value="TOTAL_HEAL">TOTAL_HEAL</option>
+                                    <option value="TOTAL_HEAL_ON_TEAMMATES">TOTAL_HEAL_ON_TEAMMATES</option>
+                                    <option value="TOTAL_TIME_CROWD_CONTROL_DEALT">TOTAL_TIME_CROWD_CONTROL_DEALT</option>
+                                    <option value="TRUE_DAMAGE_DEALT_PLAYER">TRUE_DAMAGE_DEALT_PLAYER</option>
+                                    <option value="TRUE_DAMAGE_DEALT_TO_CHAMPIONS">TRUE_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="TRUE_DAMAGE_TAKEN">TRUE_DAMAGE_TAKEN</option>
+                                    <option value="TURRETS_KILLED">TURRETS_KILLED</option>
+                                    <option value="VISION_SCORE">VISION_SCORE</option>
+                                    <option value="WARD_KILLED">WARD_KILLED</option>
+                                    <option value="WARD_PLACED">WARD_PLACED</option>
+                                </select>
+                            </div>
                             <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.GlobalStatsBackgroundColorSubmit">
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
@@ -631,7 +958,246 @@
                             <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GlobalStatsTextColor" @onclick="@TextValueOverlayView2.SetGlobalStatsTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GlobalStatsTextColor"> @EndGameView2Page.formatingData.GlobalStatsTextColor</spam>
                             <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GlobalStatsBlueTextColor" @onclick="@TextValueOverlayView2.SetGlobalStatsBlueTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GlobalStatsBlueTextColor"> @EndGameView2Page.formatingData.GlobalStatsBlueTextColor</spam>
                             <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView2Page.formatingData.GlobalStatsRedTextColor" @onclick="@TextValueOverlayView2.SetGlobalStatsRedTextColor"></button> <spam style="font-weight: bold; color: @EndGameView2Page.formatingData.GlobalStatsRedTextColor"> @EndGameView2Page.formatingData.GlobalStatsRedTextColor</spam>
+                            <br /><br />
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextAssistSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Assist ("@EndGameView2Page.formatingData.TextAssist") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextAssist" placeholder="@EndGameView2Page.formatingData.TextAssist" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
 
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextBarracksKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Barracks Killed ("@EndGameView2Page.formatingData.TextBarracksKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextBarracksKilled" placeholder="@EndGameView2Page.formatingData.TextBarracksKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextChampionsKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Champions Killed ("@EndGameView2Page.formatingData.TextChampionsKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextChampionsKilled" placeholder="@EndGameView2Page.formatingData.TextChampionsKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextGoldEarnedSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Gold Earned ("@EndGameView2Page.formatingData.TextGoldEarned") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextGoldEarned" placeholder="@EndGameView2Page.formatingData.TextGoldEarned" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextLargestCriticalStrikeSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Largest Critical Strike ("@EndGameView2Page.formatingData.TextLargestCriticalStrike") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextLargestCriticalStrike" placeholder="@EndGameView2Page.formatingData.TextLargestCriticalStrike" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextLargestKillingSpreeSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Largest Killing Spree ("@EndGameView2Page.formatingData.TextLargestKillingSpree") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextLargestKillingSpree" placeholder="@EndGameView2Page.formatingData.TextLargestKillingSpree" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextLargestMultiKillSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Largest Multi Kill ("@EndGameView2Page.formatingData.TextLargestMultiKill") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextLargestMultiKill" placeholder="@EndGameView2Page.formatingData.TextLargestMultiKill" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextLevelSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Level ("@EndGameView2Page.formatingData.TextLevel") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextLevel" placeholder="@EndGameView2Page.formatingData.TextLevel" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextMagicDamageDealtPlayerSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Magic Damage Dealt Player ("@EndGameView2Page.formatingData.TextMagicDamageDealtPlayer") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextMagicDamageDealtPlayer" placeholder="@EndGameView2Page.formatingData.TextMagicDamageDealtPlayer" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextMagicDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Magic Damage Dealt To Champions ("@EndGameView2Page.formatingData.TextMagicDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextMagicDamageDealtToChampions" placeholder="@EndGameView2Page.formatingData.TextMagicDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextMagicDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Magic Damage Taken ("@EndGameView2Page.formatingData.TextMagicDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextMagicDamageTaken" placeholder="@EndGameView2Page.formatingData.TextMagicDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextMinionsKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Minions Killed ("@EndGameView2Page.formatingData.TextMinionsKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextMinionsKilled" placeholder="@EndGameView2Page.formatingData.TextMinionsKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextNumDeathsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Num Deaths ("@EndGameView2Page.formatingData.TextNumDeaths") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextNumDeaths" placeholder="@EndGameView2Page.formatingData.TextNumDeaths" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextPhysicalDamageDealtPlayerSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Physical Damage Dealt Player ("@EndGameView2Page.formatingData.TextPhysicalDamageDealtPlayer") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextPhysicalDamageDealtPlayer" placeholder="@EndGameView2Page.formatingData.TextPhysicalDamageDealtPlayer" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextPhysicalDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Physical Damage Dealt To Champions ("@EndGameView2Page.formatingData.TextPhysicalDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextPhysicalDamageDealtToChampions" placeholder="@EndGameView2Page.formatingData.TextPhysicalDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextPhysicalDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Physical Damage Taken ("@EndGameView2Page.formatingData.TextPhysicalDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextPhysicalDamageTaken" placeholder="@EndGameView2Page.formatingData.TextPhysicalDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalDamageDealtSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Dealt ("@EndGameView2Page.formatingData.TextTotalDamageDealt") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalDamageDealt" placeholder="@EndGameView2Page.formatingData.TextTotalDamageDealt" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalDamageDealtToBuildingsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Dealt To Buildings ("@EndGameView2Page.formatingData.TextTotalDamageDealtToBuildings") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalDamageDealtToBuildings" placeholder="@EndGameView2Page.formatingData.TextTotalDamageDealtToBuildings" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text TotalDamageDealtToChampions ("@EndGameView2Page.formatingData.TextTotalDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalDamageDealtToChampions" placeholder="@EndGameView2Page.formatingData.TextTotalDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalDamageDealtToObjectivesSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Dealt To Objectives ("@EndGameView2Page.formatingData.TextTotalDamageDealtToObjectives") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalDamageDealtToObjectives" placeholder="@EndGameView2Page.formatingData.TextTotalDamageDealtToObjectives" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalDamageDealtToTurretsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text TotalDamage Dealt To Turrets ("@EndGameView2Page.formatingData.TextTotalDamageDealtToTurrets") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalDamageDealtToTurrets" placeholder="@EndGameView2Page.formatingData.TextTotalDamageDealtToTurrets" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalDamageSelfMitigatedSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Self Mitigated ("@EndGameView2Page.formatingData.TextTotalDamageSelfMitigated") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalDamageSelfMitigated" placeholder="@EndGameView2Page.formatingData.TextTotalDamageSelfMitigated" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalDamageShieldedOnTeammatesSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Shielded On Teammates ("@EndGameView2Page.formatingData.TextTotalDamageShieldedOnTeammates") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalDamageShieldedOnTeammates" placeholder="@EndGameView2Page.formatingData.TextTotalDamageShieldedOnTeammates" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Taken ("@EndGameView2Page.formatingData.TextTotalDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalDamageTaken" placeholder="@EndGameView2Page.formatingData.TextTotalDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalHealSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Heal ("@EndGameView2Page.formatingData.TextTotalHeal") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalHeal" placeholder="@EndGameView2Page.formatingData.TextTotalHeal" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalHealOnTeammatesSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Heal On Teammates ("@EndGameView2Page.formatingData.TextTotalHealOnTeammates") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalHealOnTeammates" placeholder="@EndGameView2Page.formatingData.TextTotalHealOnTeammates" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTotalTimeCrowdControlDealtSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Time Crowd Control Dealt ("@EndGameView2Page.formatingData.TextTotalTimeCrowdControlDealt") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTotalTimeCrowdControlDealt" placeholder="@EndGameView2Page.formatingData.TextTotalTimeCrowdControlDealt" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTrueDamageDealtPlayerSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text True Damage Dealt Player ("@EndGameView2Page.formatingData.TextTrueDamageDealtPlayer") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTrueDamageDealtPlayer" placeholder="@EndGameView2Page.formatingData.TextTrueDamageDealtPlayer" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTrueDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text True Damage Dealt To Champions ("@EndGameView2Page.formatingData.TextTrueDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTrueDamageDealtToChampions" placeholder="@EndGameView2Page.formatingData.TextTrueDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTrueDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text True Damage Taken ("@EndGameView2Page.formatingData.TextTrueDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTrueDamageTaken" placeholder="@EndGameView2Page.formatingData.TextTrueDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextTurretsKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Turrets Killed ("@EndGameView2Page.formatingData.TextTurretsKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextTurretsKilled" placeholder="@EndGameView2Page.formatingData.TextTurretsKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextVisionScoreSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Vision Score ("@EndGameView2Page.formatingData.TextVisionScore") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextVisionScore" placeholder="@EndGameView2Page.formatingData.TextVisionScore" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextWardKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Ward Killed ("@EndGameView2Page.formatingData.TextWardKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextWardKilled" placeholder="@EndGameView2Page.formatingData.TextWardKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView2" OnValidSubmit="@TextValueOverlayView2.TextWardPlacedSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Ward Placed ("@EndGameView2Page.formatingData.TextWardPlaced") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView2.TextWardPlaced" placeholder="@EndGameView2Page.formatingData.TextWardPlaced" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
                         </div>
                         <div class="color-picker" style="visibility: @colorPickerOverlay1GlobalStats">
                             <div class="color-picker-position">
@@ -969,6 +1535,45 @@
                     <h4><b>Global Stats</b></h4>
                     <div class="global-stats">
                         <div>
+                            <div class="col-sm-10">
+                                <label style="font-weight: bold">Choose your game stat to display</label>
+                                <select id="patch-region" @bind="@textValueOverlayView3.ValueStats" class="form-control" @onclick="@TextValueOverlayView3.ValueStatsSubmit">
+                                    <option value="ASSISTS">ASSISTS</option>
+                                    <option value="BARRACKS_KILLED">BARRACKS_KILLED</option>
+                                    <option value="CHAMPIONS_KILLED">CHAMPIONS_KILLED</option>
+                                    <option value="GOLD_EARNED">GOLD_EARNED</option>
+                                    <option value="LARGEST_CRITICAL_STRIKE">LARGEST_CRITICAL_STRIKE</option>
+                                    <option value="LARGEST_KILLING_SPREE">LARGEST_KILLING_SPREE</option>
+                                    <option value="LARGEST_MULTI_KILL">LARGEST_MULTI_KILL</option>
+                                    <option value="LEVEL">LEVEL</option>
+                                    <option value="MAGIC_DAMAGE_DEALT_PLAYER">MAGIC_DAMAGE_DEALT_PLAYER</option>
+                                    <option value="MAGIC_DAMAGE_DEALT_TO_CHAMPIONS">MAGIC_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="MAGIC_DAMAGE_TAKEN">MAGIC_DAMAGE_TAKEN</option>
+                                    <option value="MINIONS_KILLED">MINIONS_KILLED</option>
+                                    <option value="NUM_DEATHS">NUM_DEATHS</option>
+                                    <option value="PHYSICAL_DAMAGE_DEALT_PLAYER">PHYSICAL_DAMAGE_DEALT_PLAYER</option>
+                                    <option value="PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS">PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="PHYSICAL_DAMAGE_TAKEN">PHYSICAL_DAMAGE_TAKEN</option>
+                                    <option value="TOTAL_DAMAGE_DEALT">TOTAL_DAMAGE_DEALT</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_BUILDINGS">TOTAL_DAMAGE_DEALT_TO_BUILDINGS</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_CHAMPIONS">TOTAL_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_OBJECTIVES">TOTAL_DAMAGE_DEALT_TO_OBJECTIVES</option>
+                                    <option value="TOTAL_DAMAGE_DEALT_TO_TURRETS">TOTAL_DAMAGE_DEALT_TO_TURRETS</option>
+                                    <option value="TOTAL_DAMAGE_SELF_MITIGATED">TOTAL_DAMAGE_SELF_MITIGATED</option>
+                                    <option value="TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES">TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES</option>
+                                    <option value="TOTAL_DAMAGE_TAKEN">TOTAL_DAMAGE_TAKEN</option>
+                                    <option value="TOTAL_HEAL">TOTAL_HEAL</option>
+                                    <option value="TOTAL_HEAL_ON_TEAMMATES">TOTAL_HEAL_ON_TEAMMATES</option>
+                                    <option value="TOTAL_TIME_CROWD_CONTROL_DEALT">TOTAL_TIME_CROWD_CONTROL_DEALT</option>
+                                    <option value="TRUE_DAMAGE_DEALT_PLAYER">TRUE_DAMAGE_DEALT_PLAYER</option>
+                                    <option value="TRUE_DAMAGE_DEALT_TO_CHAMPIONS">TRUE_DAMAGE_DEALT_TO_CHAMPIONS</option>
+                                    <option value="TRUE_DAMAGE_TAKEN">TRUE_DAMAGE_TAKEN</option>
+                                    <option value="TURRETS_KILLED">TURRETS_KILLED</option>
+                                    <option value="VISION_SCORE">VISION_SCORE</option>
+                                    <option value="WARD_KILLED">WARD_KILLED</option>
+                                    <option value="WARD_PLACED">WARD_PLACED</option>
+                                </select>
+                            </div>
                             <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.GlobalStatsBackgroundColorSubmit">
                                 <DataAnnotationsValidator />
                                 <ValidationSummary />
@@ -1010,7 +1615,246 @@
                             <spam style="font-weight: bold"> Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GlobalStatsTextColor" @onclick="@TextValueOverlayView3.SetGlobalStatsTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GlobalStatsTextColor"> @EndGameView3Page.formatingData.GlobalStatsTextColor</spam>
                             <br /><spam style="font-weight: bold"> Blue Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GlobalStatsBlueTextColor" @onclick="@TextValueOverlayView3.SetGlobalStatsBlueTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GlobalStatsBlueTextColor"> @EndGameView3Page.formatingData.GlobalStatsBlueTextColor</spam>
                             <br /><spam style="font-weight: bold"> Red Text Color</spam> <button class="btn btn-primary button-form button-color" style="background-color: @EndGameView3Page.formatingData.GlobalStatsRedTextColor" @onclick="@TextValueOverlayView3.SetGlobalStatsRedTextColor"></button> <spam style="font-weight: bold; color: @EndGameView3Page.formatingData.GlobalStatsRedTextColor"> @EndGameView3Page.formatingData.GlobalStatsRedTextColor</spam>
+                            <br /><br />
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextAssistSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Assist ("@EndGameView3Page.formatingData.TextAssist") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextAssist" placeholder="@EndGameView3Page.formatingData.TextAssist" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
 
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextBarracksKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Barracks Killed ("@EndGameView3Page.formatingData.TextBarracksKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextBarracksKilled" placeholder="@EndGameView3Page.formatingData.TextBarracksKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextChampionsKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Champions Killed ("@EndGameView3Page.formatingData.TextChampionsKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextChampionsKilled" placeholder="@EndGameView3Page.formatingData.TextChampionsKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextGoldEarnedSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Gold Earned ("@EndGameView3Page.formatingData.TextGoldEarned") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextGoldEarned" placeholder="@EndGameView3Page.formatingData.TextGoldEarned" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextLargestCriticalStrikeSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Largest Critical Strike ("@EndGameView3Page.formatingData.TextLargestCriticalStrike") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextLargestCriticalStrike" placeholder="@EndGameView3Page.formatingData.TextLargestCriticalStrike" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextLargestKillingSpreeSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Largest Killing Spree ("@EndGameView3Page.formatingData.TextLargestKillingSpree") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextLargestKillingSpree" placeholder="@EndGameView3Page.formatingData.TextLargestKillingSpree" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextLargestMultiKillSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Largest Multi Kill ("@EndGameView3Page.formatingData.TextLargestMultiKill") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextLargestMultiKill" placeholder="@EndGameView3Page.formatingData.TextLargestMultiKill" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextLevelSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Level ("@EndGameView3Page.formatingData.TextLevel") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextLevel" placeholder="@EndGameView3Page.formatingData.TextLevel" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextMagicDamageDealtPlayerSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Magic Damage Dealt Player ("@EndGameView3Page.formatingData.TextMagicDamageDealtPlayer") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextMagicDamageDealtPlayer" placeholder="@EndGameView3Page.formatingData.TextMagicDamageDealtPlayer" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextMagicDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Magic Damage Dealt To Champions ("@EndGameView3Page.formatingData.TextMagicDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextMagicDamageDealtToChampions" placeholder="@EndGameView3Page.formatingData.TextMagicDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextMagicDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Magic Damage Taken ("@EndGameView3Page.formatingData.TextMagicDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextMagicDamageTaken" placeholder="@EndGameView3Page.formatingData.TextMagicDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextMinionsKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Minions Killed ("@EndGameView3Page.formatingData.TextMinionsKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextMinionsKilled" placeholder="@EndGameView3Page.formatingData.TextMinionsKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextNumDeathsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Num Deaths ("@EndGameView3Page.formatingData.TextNumDeaths") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextNumDeaths" placeholder="@EndGameView3Page.formatingData.TextNumDeaths" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextPhysicalDamageDealtPlayerSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Physical Damage Dealt Player ("@EndGameView3Page.formatingData.TextPhysicalDamageDealtPlayer") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextPhysicalDamageDealtPlayer" placeholder="@EndGameView3Page.formatingData.TextPhysicalDamageDealtPlayer" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextPhysicalDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Physical Damage Dealt To Champions ("@EndGameView3Page.formatingData.TextPhysicalDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextPhysicalDamageDealtToChampions" placeholder="@EndGameView3Page.formatingData.TextPhysicalDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextPhysicalDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Physical Damage Taken ("@EndGameView3Page.formatingData.TextPhysicalDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextPhysicalDamageTaken" placeholder="@EndGameView3Page.formatingData.TextPhysicalDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalDamageDealtSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Dealt ("@EndGameView3Page.formatingData.TextTotalDamageDealt") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalDamageDealt" placeholder="@EndGameView3Page.formatingData.TextTotalDamageDealt" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalDamageDealtToBuildingsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Dealt To Buildings ("@EndGameView3Page.formatingData.TextTotalDamageDealtToBuildings") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalDamageDealtToBuildings" placeholder="@EndGameView3Page.formatingData.TextTotalDamageDealtToBuildings" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text TotalDamageDealtToChampions ("@EndGameView3Page.formatingData.TextTotalDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalDamageDealtToChampions" placeholder="@EndGameView3Page.formatingData.TextTotalDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalDamageDealtToObjectivesSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Dealt To Objectives ("@EndGameView3Page.formatingData.TextTotalDamageDealtToObjectives") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalDamageDealtToObjectives" placeholder="@EndGameView3Page.formatingData.TextTotalDamageDealtToObjectives" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalDamageDealtToTurretsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text TotalDamage Dealt To Turrets ("@EndGameView3Page.formatingData.TextTotalDamageDealtToTurrets") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalDamageDealtToTurrets" placeholder="@EndGameView3Page.formatingData.TextTotalDamageDealtToTurrets" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalDamageSelfMitigatedSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Self Mitigated ("@EndGameView3Page.formatingData.TextTotalDamageSelfMitigated") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalDamageSelfMitigated" placeholder="@EndGameView3Page.formatingData.TextTotalDamageSelfMitigated" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalDamageShieldedOnTeammatesSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Shielded On Teammates ("@EndGameView3Page.formatingData.TextTotalDamageShieldedOnTeammates") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalDamageShieldedOnTeammates" placeholder="@EndGameView3Page.formatingData.TextTotalDamageShieldedOnTeammates" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Damage Taken ("@EndGameView3Page.formatingData.TextTotalDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalDamageTaken" placeholder="@EndGameView3Page.formatingData.TextTotalDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalHealSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Heal ("@EndGameView3Page.formatingData.TextTotalHeal") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalHeal" placeholder="@EndGameView3Page.formatingData.TextTotalHeal" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalHealOnTeammatesSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Heal On Teammates ("@EndGameView3Page.formatingData.TextTotalHealOnTeammates") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalHealOnTeammates" placeholder="@EndGameView3Page.formatingData.TextTotalHealOnTeammates" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTotalTimeCrowdControlDealtSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Total Time Crowd Control Dealt ("@EndGameView3Page.formatingData.TextTotalTimeCrowdControlDealt") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTotalTimeCrowdControlDealt" placeholder="@EndGameView3Page.formatingData.TextTotalTimeCrowdControlDealt" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTrueDamageDealtPlayerSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text True Damage Dealt Player ("@EndGameView3Page.formatingData.TextTrueDamageDealtPlayer") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTrueDamageDealtPlayer" placeholder="@EndGameView3Page.formatingData.TextTrueDamageDealtPlayer" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTrueDamageDealtToChampionsSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text True Damage Dealt To Champions ("@EndGameView3Page.formatingData.TextTrueDamageDealtToChampions") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTrueDamageDealtToChampions" placeholder="@EndGameView3Page.formatingData.TextTrueDamageDealtToChampions" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTrueDamageTakenSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text True Damage Taken ("@EndGameView3Page.formatingData.TextTrueDamageTaken") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTrueDamageTaken" placeholder="@EndGameView3Page.formatingData.TextTrueDamageTaken" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextTurretsKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Turrets Killed ("@EndGameView3Page.formatingData.TextTurretsKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextTurretsKilled" placeholder="@EndGameView3Page.formatingData.TextTurretsKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextVisionScoreSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Vision Score ("@EndGameView3Page.formatingData.TextVisionScore") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextVisionScore" placeholder="@EndGameView3Page.formatingData.TextVisionScore" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextWardKilledSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Ward Killed ("@EndGameView3Page.formatingData.TextWardKilled") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextWardKilled" placeholder="@EndGameView3Page.formatingData.TextWardKilled" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
+                            <EditForm Model="@textValueOverlayView3" OnValidSubmit="@TextValueOverlayView3.TextWardPlacedSubmit">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <label style="font-weight: bold">Stats Text Ward Placed ("@EndGameView3Page.formatingData.TextWardPlaced") : </label>
+                                <InputText id="name" @bind-Value="textValueOverlayView3.TextWardPlaced" placeholder="@EndGameView3Page.formatingData.TextWardPlaced" />
+                                <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                            </EditForm>
                         </div>
                         <div class="color-picker" style="visibility: @colorPickerOverlay1GlobalStats">
                             <div class="color-picker-position">
