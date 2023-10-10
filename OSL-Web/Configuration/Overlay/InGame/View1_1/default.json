@@ -28,5 +28,10 @@
   "ColorBlueTeamScoreText": "#0b849e",
   "ColorBlueTeamText": "#0b849e",
   "ColorRedTeamScoreText": "#be1e37",
-  "ColorRedTeamText": "#be1e37"
+  "ColorRedTeamText": "#be1e37",
+  "DisplayItems" : true,
+  "DisplayLevels" : true,
+  "DisplayDragonKill" : true,
+  "DisplayInhibKill" : true,
+  "DisplayBaronElderBuff" : true
 }

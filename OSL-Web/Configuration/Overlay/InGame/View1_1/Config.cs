@@ -44,7 +44,7 @@ namespace OSL_Web.Configuration.Overlay.InGame.View1_1
         /// </summary>
         public static void LoadFormatingDataConfig()
         {
-            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/InGame/View1/default.json");
+            string content = FileManagerLocal.ReadInFile("./Configuration/Overlay/InGame/View1_1/default.json");
             dynamic jsonContent = JsonConvert.DeserializeObject(content);
             //InGameView1_1Page.formatingData.DefaultPatch = jsonContent.DefaultPatch;
             //InGameView1_1Page.formatingData.DefaultRegion = jsonContent.DefaultRegion;
@@ -76,6 +76,11 @@ namespace OSL_Web.Configuration.Overlay.InGame.View1_1
             InGameView1_1Page.formatingData.ColorBlueTeamText = jsonContent.ColorBlueTeamText;
             InGameView1_1Page.formatingData.ColorRedTeamScoreText = jsonContent.ColorRedTeamScoreText;
             InGameView1_1Page.formatingData.ColorRedTeamText = jsonContent.ColorRedTeamText;
+            InGameView1_1Page.formatingData.DisplayItems = jsonContent.DisplayItems;
+            InGameView1_1Page.formatingData.DisplayLevels = jsonContent.DisplayLevels;
+            InGameView1_1Page.formatingData.DisplayDragonKill = jsonContent.DisplayDragonKill;
+            InGameView1_1Page.formatingData.DisplayInhibKill = jsonContent.DisplayInhibKill;
+            InGameView1_1Page.formatingData.DisplayBaronElderBuff = jsonContent.DisplayBaronElderBuff;
         }
     }
 }
