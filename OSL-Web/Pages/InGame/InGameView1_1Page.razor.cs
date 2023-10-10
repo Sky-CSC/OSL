@@ -44,6 +44,13 @@ namespace OSL_Web.Pages.InGame
             public string ColorBlueTeamText { get; set; }
             public string ColorRedTeamScoreText { get; set; }
             public string ColorRedTeamText { get; set; }
+
+            //New
+            public bool DisplayItems { get; set; }
+            public bool DisplayLevels { get; set; }
+            public bool DisplayDragonKill { get; set; }
+            public bool DisplayInhibKill { get; set; }
+            public bool DisplayBaronElderBuff { get; set; }
         }
 
         /// <summary>

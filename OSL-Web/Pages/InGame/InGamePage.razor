@@ -269,13 +269,153 @@
             </div>
 
             <br /><br />
+            <h2 class="title">With riot overlay and data</h2>
+            <p>
+                User riot overlay and more information from api
+                <br />- Team, dragon and baron frame
+                <br />- Name of the teams and their number of victory
+                <br />- Frame for video/logo/...
+                <br />- Custom display herald timer, baron timer, baron buff, elder timer, elder buff, level up, itemps buy, inhib respown timer
+            </p>
+            @*View1_1*@
+            <br /><div class="in-game-overlay-1_1">
+                <h3 class="title">In Game Overlay 1_1 <button class="btn btn-primary button-form" style="background-color: darkred" @onclick="@InGameView1_1Page.ResetColor">Reset color and text</button></h3>
+                <a class="btn btn-primary button-form" href="ingame/view1_1" target="_blank">Link Overlay 1_1</a>
+                <button class="btn btn-primary button-form" style="background-color: @displayContentView1_1Button.color" @onclick="@HideOrDisplayContentView1_1">
+                    Clic to @displayContentView1_1Button.text customization
+                </button>
+                <div style="display: @displayContentView1_1">
+                    <EditForm Model="@textValueOverlayView1_1" OnValidSubmit="@TextValueOverlayView1_1.BlueTeamTextSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label style="font-weight: bold">Blue Side Team Name ("@InGameView1_1Page.formatingData.BlueTeamText") : </label>
+                        <InputText id="name" @bind-Value="textValueOverlayView1_1.BlueTeamText" placeholder="Skynet" />
+
+                        <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1_1" OnValidSubmit="@TextValueOverlayView1_1.BlueTeamScoreTextSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label style="font-weight: bold">Blue Side Subtext ("@InGameView1_1Page.formatingData.BlueTeamScoreText") : </label>
+                        <InputText id="name" @bind-Value="textValueOverlayView1_1.BlueTeamScoreText" placeholder="2-1" />
+
+                        <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1_1" OnValidSubmit="@TextValueOverlayView1_1.RedTeamTextSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label style="font-weight: bold">Red Side Team Name ("@InGameView1_1Page.formatingData.RedTeamText") : </label>
+                        <InputText id="name" @bind-Value="textValueOverlayView1_1.RedTeamText" placeholder="Cyberdyne Systems" />
+
+                        <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1_1" OnValidSubmit="@TextValueOverlayView1_1.RedTeamScoreTextSubmit">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+                        <label style="font-weight: bold">Red Side Subtext ("@InGameView1_1Page.formatingData.RedTeamScoreText") : </label>
+                        <InputText id="name" @bind-Value="textValueOverlayView1_1.RedTeamScoreText" placeholder="1-2" />
+
+                        <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Submit</button>
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.SwitchSideRedBlue">
+                        <button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit">Switch side</button>
+                    </EditForm>
+                    <br />
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Dragon Timer : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayDragonTimer" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Herald Baron Timer : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayHeraldBaronTimer" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Blue Team : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayBlueTeam" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Blue Team Score : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayBlueTeamScore" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Blue Team Text : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayBlueTeamText" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Red Team : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayRedTeam" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Red Team Score : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayRedTeamScore" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Red Team Text : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayRedTeamText" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Blue Player Frame : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayBluePlayerFrame" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Red Player Frame : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayRedPlayerFrame" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Left Info : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayLeftInfo" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Right Info : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayRightInfo" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Players Items : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayItems" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Players Levels : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayLevels" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Dragons Kills : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayDragonKill" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Inhibs Kills : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayInhibKill" />
+                    </EditForm>
+                    <EditForm Model="@textValueOverlayView1" OnValidSubmit="@TextValueOverlayView1_1.InputCheckboxSubmit">
+                        <label style="font-weight: bold">Display Baron and Elder Buff : </label>
+                        <InputCheckbox id="name" @bind-Value="InGameView1_1Page.formatingData.DisplayBaronElderBuff" />
+                    </EditForm>
+
+                    <br /><spam style="font-weight: bold"> Color Blue Team Text</spam> <button class="btn btn-primary button-form button-color" style="background-color: @InGameView1_1Page.formatingData.ColorBlueTeamText" @onclick="@TextValueOverlayView1_1.SetColorBlueTeamText"></button> <spam style="font-weight: bold; color: @InGameView1_1Page.formatingData.ColorBlueTeamText"> @InGameView1_1Page.formatingData.ColorBlueTeamText</spam>
+                    <br /><spam style="font-weight: bold"> Color Blue Team Score Text</spam> <button class="btn btn-primary button-form button-color" style="background-color: @InGameView1_1Page.formatingData.ColorBlueTeamScoreText" @onclick="@TextValueOverlayView1_1.SetColorBlueTeamScoreText"></button> <spam style="font-weight: bold; color: @InGameView1_1Page.formatingData.ColorBlueTeamScoreText"> @InGameView1_1Page.formatingData.ColorBlueTeamScoreText</spam>
+                    <br /><spam style="font-weight: bold"> Color Red Team Text</spam> <button class="btn btn-primary button-form button-color" style="background-color: @InGameView1_1Page.formatingData.ColorRedTeamText" @onclick="@TextValueOverlayView1_1.SetColorRedTeamText"></button> <spam style="font-weight: bold; color: @InGameView1_1Page.formatingData.ColorRedTeamText"> @InGameView1_1Page.formatingData.ColorRedTeamText</spam>
+                    <br /><spam style="font-weight: bold"> Color Red Team Score Text</spam> <button class="btn btn-primary button-form button-color" style="background-color: @InGameView1_1Page.formatingData.ColorRedTeamScoreText" @onclick="@TextValueOverlayView1_1.SetColorRedTeamScoreText"></button> <spam style="font-weight: bold; color: @InGameView1_1Page.formatingData.ColorRedTeamScoreText"> @InGameView1_1Page.formatingData.ColorRedTeamScoreText</spam>
+
+                </div>
+                <div class="color-picker" style="visibility: @colorPickerOverlay1_1">
+                    <div class="color-picker-position">
+                        <MudGrid>
+                            <MudColorPicker Value="colorValue" @bind-Text="colorValue" Style="@($"color: {colorValue};")" DisableToolbar="false" DisableAlpha="false" DisableColorField="false" DisablePreview="false" DisableSliders="false" DisableInputs="false" DisableModeSwitch="false" ColorPickerMode="ColorPickerMode.HEX" PickerVariant="PickerVariant.Static" />
+                        </MudGrid>
+                    </div>
+                </div>
+            </div>
+            <br />In progress
+            <br />
+            <br />
+
+            <br /><br />
             <h2 class="title">Without riot overlay</h2>
             <p>
                 Disable riot overlay to add more information
                 <br />- Team, dragon and baron frame
                 <br />- Name of the teams and their number of victory
                 <br />- Frame for video/logo/...
-                <br />- Custom display dragon, herald, baron, herald, level up, itemps buy, kill, tower, timer, gold
+                <br />- Custom display dragon, herald, baron, elder, level up, itemps buy, kill, tower, timer, gold
             </p>
             In progress
             <br />
@@ -290,6 +430,7 @@
 
 @code {
     public static TextValueOverlayView1 textValueOverlayView1 = new();
+    public static TextValueOverlayView1_1 textValueOverlayView1_1 = new();
     public static TextValueOverlayView2 textValueOverlayView2 = new();
     public static TextValueOverlayView3 textValueOverlayView3 = new();
 
