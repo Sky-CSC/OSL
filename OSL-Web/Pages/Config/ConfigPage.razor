@@ -104,6 +104,14 @@
                         </a>
                     </div>
                     <div>
+                        <h3 class="title"><u>View 1_1 :</u></h3>
+                        Load configuration file
+                        <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileInGameView1_1">Submit</button>
+                        <a class="btn btn-primary button-form" style="background-color: #008000" href="@GenerateConfigFileInGameView1_1()" download>
+                            Generate a configuration file
+                        </a>
+                    </div>
+                    <div>
                         <h3 class="title">View 2 :</h3>
                         Load configuration file
                         <InputFile OnChange=LoadFiles /><button class="btn btn-primary button-form" style="background-color: darkgreen" type="submit" @onclick="@LoadFileInGameView2">Submit</button>
