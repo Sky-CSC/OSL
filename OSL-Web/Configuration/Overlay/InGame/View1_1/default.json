@@ -29,9 +29,38 @@
   "ColorBlueTeamText": "#0b849e",
   "ColorRedTeamScoreText": "#be1e37",
   "ColorRedTeamText": "#be1e37",
-  "DisplayItems" : true,
-  "DisplayLevels" : true,
-  "DisplayDragonKill" : true,
-  "DisplayInhibKill" : true,
-  "DisplayBaronElderBuff" : true
+  "DisplayItems": true,
+  "DisplayLevels": true,
+  "DisplayDragonKill": true,
+  "DisplayInhibKill": true,
+  "DisplayBaronElderBuff": true,
+
+
+  "ColorBaronDragonBackgroundTimerFrame": "#0f1d1f",
+  "ColorOrderBackgroundItems": "#0b849e",
+  "ColorChaosBackgroundItems": "#be1e37",
+  "ColorOrderBackgroundScoreItems": "linear-gradient(90deg, #081110 0%, #07161b 100%)",
+  "ColorChaosBackgroundScoreItems": "linear-gradient(90deg, #1a100d 0%, #08100f 100%)",
+  "ColorOrderAnimationBorderScoreItems": "#0b849e",
+  "ColorChaosAnimationBorderScoreItems": "#be1e37",
+
+
+  "PictureOrderDragonBanner": "../assets/ingame/banner/dragon_banner.png",
+  "PictureChaosDragonBanner": "../assets/ingame/banner/dragon_banner.png",
+  "ElderDragonIcon": "../assets/ingame/dragon/elder_dragon_icon.png",
+  "HeraldIcon": "../assets/ingame/herald/herald_icon.png",
+  "BaronIcon": "../assets/ingame/baron/baron_icon.png",
+  "PositionOrderTop ": "../assets/ingame/position/position_top.png",
+  "PositionChaosTop ": "../assets/ingame/position/position_top.png",
+  "PositionOrderJungle ": "../assets/ingame/position/position_jungle.png",
+  "PositionChaosJungle ": "../assets/ingame/position/position_jungle.png",
+  "PositionOrderMid": "../assets/ingame/position/position_mid.png",
+  "PositionChaosMid": "../assets/ingame/position/position_mid.png",
+  "PositionOrderBottom": "../assets/ingame/position/position_bottom.png",
+  "PositionChaosBottom": "../assets/ingame/position/position_bottom.png",
+  "PositionOrderSupport": "../assets/ingame/position/position_support.png",
+  "PositionChaosSupport": "../assets/ingame/position/position_support.png",
+  "InhibIcon": "../assets/ingame/inhib/inhib_icon.png",
+  "BaronBuffIcon": "../assets/ingame/baron/baron_buff_icon.png",
+  "ElderBuffIcon": "../assets/ingame/dragon/elder_dragon_buff_icon.png"
 }

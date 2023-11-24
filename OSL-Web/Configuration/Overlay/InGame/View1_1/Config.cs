@@ -81,6 +81,25 @@ namespace OSL_Web.Configuration.Overlay.InGame.View1_1
             InGameView1_1Page.formatingData.DisplayDragonKill = jsonContent.DisplayDragonKill;
             InGameView1_1Page.formatingData.DisplayInhibKill = jsonContent.DisplayInhibKill;
             InGameView1_1Page.formatingData.DisplayBaronElderBuff = jsonContent.DisplayBaronElderBuff;
+
+            InGameView1_1Page.formatingData.PictureOrderDragonBanner = jsonContent.PictureOrderDragonBanner;
+            InGameView1_1Page.formatingData.PictureChaosDragonBanner = jsonContent.PictureChaosDragonBanner;
+            InGameView1_1Page.formatingData.ElderDragonIcon = jsonContent.ElderDragonIcon;
+            InGameView1_1Page.formatingData.HeraldIcon = jsonContent.HeraldIcon;
+            InGameView1_1Page.formatingData.BaronIcon = jsonContent.BaronIcon;
+            InGameView1_1Page.formatingData.PositionOrderTop = jsonContent.PositionOrderTop;
+            InGameView1_1Page.formatingData.PositionChaosTop = jsonContent.PositionChaosTop;
+            InGameView1_1Page.formatingData.PositionOrderJungle = jsonContent.PositionOrderJungle;
+            InGameView1_1Page.formatingData.PositionChaosJungle = jsonContent.PositionChaosJungle;
+            InGameView1_1Page.formatingData.PositionOrderMid = jsonContent.PositionOrderMid;
+            InGameView1_1Page.formatingData.PositionChaosMid = jsonContent.PositionChaosMid;
+            InGameView1_1Page.formatingData.PositionOrderBottom = jsonContent.PositionOrderBottom;
+            InGameView1_1Page.formatingData.PositionChaosBottom = jsonContent.PositionChaosBottom;
+            InGameView1_1Page.formatingData.PositionOrderSupport = jsonContent.PositionOrderSupport;
+            InGameView1_1Page.formatingData.PositionChaosSupport = jsonContent.PositionChaosSupport;
+            InGameView1_1Page.formatingData.InhibIcon = jsonContent.InhibIcon;
+            InGameView1_1Page.formatingData.BaronBuffIcon = jsonContent.BaronBuffIcon;
+            InGameView1_1Page.formatingData.ElderBuffIcon = jsonContent.ElderBuffIcon;
         }
     }
 }
