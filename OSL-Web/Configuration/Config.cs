@@ -37,6 +37,7 @@ namespace OSL_Web.Configuration
             Overlay.InGame.View1.Config.LoadConfig();
             Overlay.InGame.View1_1.Config.LoadConfig();
             Overlay.InGame.View2.Config.LoadConfig();
+            //Overlay.InGame.View2_1.Config.LoadConfig();
             Overlay.InGame.View3.Config.LoadConfig();
 
             //Load configurations end game
