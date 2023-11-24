@@ -377,6 +377,25 @@ namespace OSL_Web.Pages.Config
                     InGameView1_1Page.formatingData.DisplayInhibKill = jsonContent.DisplayInhibKill;
                     InGameView1_1Page.formatingData.DisplayBaronElderBuff = jsonContent.DisplayBaronElderBuff;
 
+                    InGameView1_1Page.formatingData.PictureOrderDragonBanner = jsonContent.PictureOrderDragonBanner;
+                    InGameView1_1Page.formatingData.PictureChaosDragonBanner = jsonContent.PictureChaosDragonBanner ;
+                    InGameView1_1Page.formatingData.ElderDragonIcon = jsonContent.ElderDragonIcon ;
+                    InGameView1_1Page.formatingData.HeraldIcon = jsonContent.HeraldIcon ;
+                    InGameView1_1Page.formatingData.BaronIcon = jsonContent.BaronIcon ;
+                    InGameView1_1Page.formatingData.PositionOrderTop = jsonContent.PositionOrderTop ;
+                    InGameView1_1Page.formatingData.PositionChaosTop = jsonContent.PositionChaosTop ;
+                    InGameView1_1Page.formatingData.PositionOrderJungle = jsonContent.PositionOrderJungle ;
+                    InGameView1_1Page.formatingData.PositionChaosJungle = jsonContent.PositionChaosJungle ;
+                    InGameView1_1Page.formatingData.PositionOrderMid = jsonContent.PositionOrderMid ;
+                    InGameView1_1Page.formatingData.PositionChaosMid = jsonContent.PositionChaosMid ;
+                    InGameView1_1Page.formatingData.PositionOrderBottom = jsonContent.PositionOrderBottom ;
+                    InGameView1_1Page.formatingData.PositionChaosBottom = jsonContent.PositionChaosBottom ;
+                    InGameView1_1Page.formatingData.PositionOrderSupport = jsonContent.PositionOrderSupport ;
+                    InGameView1_1Page.formatingData.PositionChaosSupport = jsonContent.PositionChaosSupport ;
+                    InGameView1_1Page.formatingData.InhibIcon = jsonContent.InhibIcon ;
+                    InGameView1_1Page.formatingData.BaronBuffIcon = jsonContent.BaronBuffIcon ;
+                    InGameView1_1Page.formatingData.ElderBuffIcon = jsonContent.ElderBuffIcon ;
+
                     fileSelected = null;
                     StateHasChanged();
                     _logger.log(LoggingLevel.INFO, "LoadFileInGameView1_1()", "Configuration View1_1 Loaded");
@@ -1490,6 +1509,25 @@ namespace OSL_Web.Pages.Config
                     DisplayDragonKill = InGameView1_1Page.formatingData.DisplayDragonKill,
                     DisplayInhibKill = InGameView1_1Page.formatingData.DisplayInhibKill,
                     DisplayBaronElderBuff = InGameView1_1Page.formatingData.DisplayBaronElderBuff,
+
+                    PictureOrderDragonBanner = InGameView1_1Page.formatingData.PictureOrderDragonBanner,
+                    PictureChaosDragonBanner = InGameView1_1Page.formatingData.PictureChaosDragonBanner ,
+                    ElderDragonIcon = InGameView1_1Page.formatingData.ElderDragonIcon ,
+                    HeraldIcon = InGameView1_1Page.formatingData.HeraldIcon ,
+                    BaronIcon = InGameView1_1Page.formatingData.BaronIcon ,
+                    PositionOrderTop = InGameView1_1Page.formatingData.PositionOrderTop ,
+                    PositionChaosTop = InGameView1_1Page.formatingData.PositionChaosTop ,
+                    PositionOrderJungle = InGameView1_1Page.formatingData.PositionOrderJungle ,
+                    PositionChaosJungle = InGameView1_1Page.formatingData.PositionChaosJungle ,
+                    PositionOrderMid = InGameView1_1Page.formatingData.PositionOrderMid ,
+                    PositionChaosMid = InGameView1_1Page.formatingData.PositionChaosMid ,
+                    PositionOrderBottom = InGameView1_1Page.formatingData.PositionOrderBottom ,
+                    PositionChaosBottom = InGameView1_1Page.formatingData.PositionChaosBottom ,
+                    PositionOrderSupport = InGameView1_1Page.formatingData.PositionOrderSupport ,
+                    PositionChaosSupport = InGameView1_1Page.formatingData.PositionChaosSupport ,
+                    InhibIcon = InGameView1_1Page.formatingData.InhibIcon ,
+                    BaronBuffIcon = InGameView1_1Page.formatingData.BaronBuffIcon ,
+                    ElderBuffIcon = InGameView1_1Page.formatingData.ElderBuffIcon ,
                 };
                 string jsonString = JsonConvert.SerializeObject(data);
                 FileManagerLocal.WriteInFile("./wwwroot/assets/ingame/configInGameView1_1.json", jsonString);
