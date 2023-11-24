@@ -31,7 +31,7 @@ div {
     position: absolute;
     top: 19px;
     right: 24px;
-    background: #0f1d1f;
+    /*background: #0f1d1f;*/
 }
 
 .herald-frame {
@@ -499,7 +499,7 @@ div {
 .order-item-wrapper-frame .order-item-info {
     height: 74px;
     width: 0px;
-    background-color: #0b849e;
+    /*background-color: #0b849e;*/
     animation: item-slide-background 4.30s 1 linear;
     overflow: hidden;
     display: table-cell;
@@ -510,7 +510,7 @@ div {
 .chaos-item-wrapper-frame .chaos-item-info {
     height: 74px;
     width: 0px;
-    background-color: #be1e37;
+    /*background-color: #be1e37;*/
     animation: item-slide-background 4.30s 1 linear;
     overflow: hidden;
     display: table-cell;
@@ -653,9 +653,9 @@ div {
     /*height: 43px;*/
     height: 0px;
     width: 354px;
-    background: linear-gradient(90deg, #081110 0%, #07161b 100%);
+    /*background: linear-gradient(90deg, #081110 0%, #07161b 100%);*/
     /*border: 2px solid #0b849e;*/
-    border: 0px solid #0b849e;
+    border: 0px solid;
     animation: order-item-slide-score 7s 1 linear;
     overflow: hidden;
 }
@@ -677,7 +677,7 @@ div {
     display: flex;
 }
 
-@keyframes order-item-slide-score {
+/*@keyframes order-item-slide-score {
     0% {
         border: 2px solid #0b849e;
         height: 0px;
@@ -697,7 +697,7 @@ div {
         border: 2px solid #0b849e;
         height: 0px;
     }
-}
+}*/
 
 .chaos-items-score-display-0 {
     position: absolute;
@@ -739,9 +739,9 @@ div {
     /*height: 43px;*/
     height: 0px;
     width: 354px;
-    background: linear-gradient(90deg, #1a100d 0%, #08100f 100%);
+    /*background: linear-gradient(90deg, #1a100d 0%, #08100f 100%);*/
     /*border: 2px solid #be1e37;*/
-    border: 0px solid #be1e37;
+    border: 0px solid;
     animation: chaos-item-slide-score 7s 1 linear;
     overflow: hidden;
 }
@@ -764,7 +764,7 @@ div {
     display: flex;
 }
 
-@keyframes chaos-item-slide-score {
+/*@keyframes chaos-item-slide-score {
     0% {
         border: 2px solid #be1e37;
         height: 0px;
@@ -784,7 +784,7 @@ div {
         border: 2px solid #be1e37;
         height: 0px;
     }
-}
+}*/
 
 /*##########################################################*/
 /*######################### Level ##########################*/

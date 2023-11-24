@@ -51,6 +51,41 @@ namespace OSL_Web.Pages.InGame
             public bool DisplayDragonKill { get; set; }
             public bool DisplayInhibKill { get; set; }
             public bool DisplayBaronElderBuff { get; set; }
+
+            //Color/anim/backround
+            public string ColorBaronDragonBackgroundTimerFrame { get; set; }
+            public string ColorOrderBackgroundItems { get; set; }
+            //public string ColorOrderAnimationBackgroundItems { get; set; }
+            //public string ColorOrderAnimationItems { get; set; }
+            public string ColorOrderBackgroundScoreItems { get; set; }
+            //public string ColorOrderAnimationBackgroundScoreItems { get; set; }
+            public string ColorOrderAnimationBorderScoreItems { get; set; }
+            public string ColorChaosBackgroundItems { get; set; }
+            //public string ColorChaosAnimationBackgroundItems { get; set; }
+            //public string ColorChaosAnimationItems { get; set; }
+            public string ColorChaosBackgroundScoreItems { get; set; }
+            //public string ColorChaosAnimationBackgroundScoreItems { get; set; }
+            public string ColorChaosAnimationBorderScoreItems { get; set; }
+
+            //Picture
+            public string PictureOrderDragonBanner { get; set; }
+            public string PictureChaosDragonBanner { get; set; }
+            public string ElderDragonIcon { get; set; }
+            public string HeraldIcon { get; set; }
+            public string BaronIcon { get; set; }
+            public string PositionOrderTop { get; set; }
+            public string PositionChaosTop { get; set; }
+            public string PositionOrderJungle { get; set; }
+            public string PositionChaosJungle { get; set; }
+            public string PositionOrderMid { get; set; }
+            public string PositionChaosMid { get; set; }
+            public string PositionOrderBottom { get; set; }
+            public string PositionChaosBottom { get; set; }
+            public string PositionOrderSupport { get; set; }
+            public string PositionChaosSupport { get; set; }
+            public string InhibIcon { get; set; }
+            public string BaronBuffIcon { get; set; }
+            public string ElderBuffIcon { get; set; }
         }
 
         /// <summary>
@@ -63,7 +98,7 @@ namespace OSL_Web.Pages.InGame
 
         public static bool ItemToDisplay(int idItem)
         {
-            var itemsNotDisplay = new List<int> { 1001, 1004, 1006, 1011, 1018, 1026, 1027, 1028, 1029, 1031, 1033, 1035, 1036, 1037, 1038, 1039, 1040, 1042, 1043, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1082, 1083, 1104, 1500, 1501, 1502, 1503, 1504, 1506, 1507, 1508, 1509, 1540, 1511, 1512, 1515, 1516, 1516, 1517, 1518, 15119, 1520, 1521, 1522, 2001, 2003, 2007, 2008, 2010, 2015, 2019, 2031, 2033, 2049, 2050, 2051, 2052, 2055, 2141, 2142, 2143, 2144, 2403, 2421, 2422, 2424, 3012, 3023, 3024, 3035, 3039, 3051, 3057, 3067, 3070, 3076, 3077, 3082, 3086, 3105, 3108, 3112, 3113, 3114, 3123, 3128, 3133, 3134, 3140, 3145, 3155, 3177, 3184, 3191, 3211, 3330, 3340, 3348, 3349, 3363, 3364, 3400, 3130, 3599, 3600, 3801, 3802, 3803, 3850, 3851, 3853, 3854, 3855, 3858, 3859, 3860, 3862, 3863, 3864, 3901, 3902, 3903, 3916, 4004, 4010, 4403, 4630, 4632, 4635, 4638, 4641, 6029, 6670, 6677, 222051, 223112, 223177, 223184, 223185, 224403 };
+            var itemsNotDisplay = new List<int> { 1001, 1004, 1006, 1011, 1018, 1026, 1027, 1028, 1029, 1031, 1033, 1035, 1036, 1037, 1038, 1039, 1040, 1042, 1043, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1082, 1083, 1104, 1500, 1501, 1502, 1503, 1504, 1506, 1507, 1508, 1509, 1540, 1511, 1512, 1515, 1516, 1516, 1517, 1518, 15119, 1520, 1521, 1522, 2001, 2003, 2007, 2008, 2010, 2015, 2019, 2031, 2033, 2049, 2050, 2051, 2052, 2055, 2141, 2142, 2143, 2144, 2403, 2421, 2422, 2424, 3012, 3023, 3024, 3035, 3039, 3051, 3057, 3067, 3070, 3076, 3077, 3082, 3086, 3105, 3108, 3112, 3113, 3114, 3123, 3128, 3133, 3134, 3140, 3145, 3155, 3177, 3184, 3191, 3211, 3330, 3340, 3348, 3349, 3363, 3364, 3400, 3130, 3599, 3600, 3801, 3802, 3803, 3850, 3851, 3853, 3854, 3855, 3858, 3859, 3860, 3862, 3863, 3864, 3901, 3902, 3903, 3916, 4004, 4010, 4403, 4630, 4632, 4635, 4638, 4641, 6029, 6660, 6670, 6677, 222051, 223112, 223177, 223184, 223185, 224403 };
             //var starterItems = new List<int> { 1101, 1102, 1103 };
             //var potionsConsumables = new List<int> { 2138, 2139, 2140 };
             //var distributedItems = new List<int> { 3513 };
