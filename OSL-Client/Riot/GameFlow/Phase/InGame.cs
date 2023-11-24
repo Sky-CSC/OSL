@@ -46,7 +46,7 @@ namespace OSL_Client.Riot.GameFlow.Phase
 
 
             //Connexion to LiveEvents
-            for (int i = 0; LiveEvents.Connect(Config.localIpHttp, Config.leagueClientLiveEventsPort) == false && i < 20; i++)
+            for (int i = 0; LiveEvents.Connect(Config.localIpHttp, Config.leagueClientLiveEventsPort) == false && i < 180; i++)
             {
                 _logger.log(LoggingLevel.INFO, "Progress()", "Wainting LiveEvents Connection");
                 Thread.Sleep(1000);
@@ -72,7 +72,7 @@ namespace OSL_Client.Riot.GameFlow.Phase
                         if (replayApiContentPlayerList != null)
                         {
                             AsyncClient.Send(replayApiContentPlayerList + "#00#");
-                            Thread.Sleep(333);
+                            //Thread.Sleep(333);
                         }
                     }
                     else
@@ -87,7 +87,7 @@ namespace OSL_Client.Riot.GameFlow.Phase
                         if (replayApiContentEventData != null)
                         {
                             AsyncClient.Send(replayApiContentEventData + "#00#");
-                            Thread.Sleep(333);
+                            //Thread.Sleep(333);
                         }
                     }
                     else
@@ -98,14 +98,15 @@ namespace OSL_Client.Riot.GameFlow.Phase
                     string playBackContent = ReplayApi.Request(ReplayApi.Url.replayplayback, Config.riotPort);
                     //Console.WriteLine(playBackContent);
                     AsyncClient.Send(playBackContent + "#00#");
-                    Thread.Sleep(333);
+                    //Thread.Sleep(333);
 
                     string liveEventsContent = LiveEvents.Read();
                     if (liveEventsContent != null)
                     {
                         AsyncClient.Send(liveEventsContent + "#00#");
-                        Thread.Sleep(333);
+                        //Thread.Sleep(333);
                     }
+                    Thread.Sleep(1000);
                 }
             }
             catch (Exception e)
