@@ -130,6 +130,76 @@ namespace OSL_Web.Pages.EndGame
             [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
             public int GoldDiffBarColor { get; set; } = 1;
 
+            public string? TextAssist { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextBarracksKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextChampionsKilled {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextGoldEarned {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLargestCriticalStrike {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLargestKillingSpree {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLargestMultiKill {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLevel {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMagicDamageDealtPlayer {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMagicDamageDealtToChampions {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMagicDamageTaken {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMinionsKilled {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextNumDeaths {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextPhysicalDamageDealtPlayer {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextPhysicalDamageDealtToChampions {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextPhysicalDamageTaken {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealt {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToBuildings {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToChampions {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToObjectives {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToTurrets {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageSelfMitigated {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageShieldedOnTeammates {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageTaken {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalHeal {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalHealOnTeammates {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalTimeCrowdControlDealt {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTrueDamageDealtPlayer {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTrueDamageDealtToChampions {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTrueDamageTaken {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTurretsKilled {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextVisionScore {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextWardKilled {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextWardPlaced {get;set;}
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string ValueStats { get; set; } = "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS";
+
             public static void TopBarBlueTeamNameSubmit()
             {
                 EndGameView1Page.formatingData.TopBarBlueTeamName = textValueOverlayView1.TopBarBlueTeamName;
@@ -750,8 +820,1438 @@ namespace OSL_Web.Pages.EndGame
                 }
             }
 
+            public static void ValueStatsSubmit()
+            {
+                if (textValueOverlayView1.ValueStats.Equals("ASSISTS"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextAssist;
+                    EndGameView1Page.formatingData.ASSISTS = true;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("BARRACKS_KILLED"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextBarracksKilled;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("CHAMPIONS_KILLED"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextChampionsKilled;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("GOLD_EARNED"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextGoldEarned;
+                    EndGameView1Page.formatingData.GOLD_EARNED = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("LARGEST_CRITICAL_STRIKE"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextLargestCriticalStrike;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("LARGEST_KILLING_SPREE"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextLargestKillingSpree;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("LARGEST_MULTI_KILL"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextLargestMultiKill;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("LEVEL"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextLevel;
+                    EndGameView1Page.formatingData.LEVEL = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("MAGIC_DAMAGE_DEALT_PLAYER"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextMagicDamageDealtPlayer;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("MAGIC_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextMagicDamageDealtToChampions;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("MAGIC_DAMAGE_TAKEN"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextMagicDamageTaken;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("MINIONS_KILLED"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextMinionsKilled;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("NUM_DEATHS"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextNumDeaths;
+                    EndGameView1Page.formatingData.NUM_DEATHS = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("PHYSICAL_DAMAGE_DEALT_PLAYER"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextPhysicalDamageDealtPlayer;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextPhysicalDamageDealtToChampions;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("PHYSICAL_DAMAGE_TAKEN"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextPhysicalDamageTaken;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_DAMAGE_DEALT"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalDamageDealt;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_BUILDINGS"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalDamageDealtToBuildings;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalDamageDealtToChampions;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_OBJECTIVES"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalDamageDealtToObjectives;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_TURRETS"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalDamageDealtToTurrets;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_DAMAGE_SELF_MITIGATED"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalDamageSelfMitigated;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalDamageShieldedOnTeammates;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_DAMAGE_TAKEN"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalDamageTaken;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_HEAL"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalHeal;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_HEAL_ON_TEAMMATES"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalHealOnTeammates;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TOTAL_TIME_CROWD_CONTROL_DEALT"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTotalTimeCrowdControlDealt;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TRUE_DAMAGE_DEALT_PLAYER"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTrueDamageDealtPlayer;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TRUE_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTrueDamageDealtToChampions;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TRUE_DAMAGE_TAKEN"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTrueDamageTaken;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("TURRETS_KILLED"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextTurretsKilled;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("VISION_SCORE"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextVisionScore;
+                    EndGameView1Page.formatingData.VISION_SCORE = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("WARD_KILLED"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextWardKilled;
+                    EndGameView1Page.formatingData.WARD_KILLED = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView1.ValueStats.Equals("WARD_PLACED"))
+                {
+                    EndGameView1Page.formatingData.ChampionInfoText = EndGameView1Page.formatingData.TextWardPlaced;
+                    EndGameView1Page.formatingData.WARD_PLACED = true;
+                    EndGameView1Page.formatingData.ASSISTS = false;
+                    EndGameView1Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView1Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView1Page.formatingData.GOLD_EARNED = false;
+                    EndGameView1Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView1Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView1Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView1Page.formatingData.LEVEL = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView1Page.formatingData.NUM_DEATHS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView1Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView1Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView1Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView1Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView1Page.formatingData.VISION_SCORE = false;
+                    EndGameView1Page.formatingData.WARD_KILLED = false;
+                }
+            }
+            public static void TextAssistSubmit()
+            {
+                EndGameView1Page.formatingData.TextAssist = textValueOverlayView1.TextAssist;
+            }
 
-
+            public static void TextBarracksKilledSubmit()
+            {
+                EndGameView1Page.formatingData.TextBarracksKilled = textValueOverlayView1.TextBarracksKilled;
+            }
+            public static void TextChampionsKilledSubmit()
+            {
+                EndGameView1Page.formatingData.TextChampionsKilled = textValueOverlayView1.TextChampionsKilled;
+            }
+            public static void TextGoldEarnedSubmit()
+            {
+                EndGameView1Page.formatingData.TextGoldEarned = textValueOverlayView1.TextGoldEarned;
+            }
+            public static void TextLargestCriticalStrikeSubmit()
+            {
+                EndGameView1Page.formatingData.TextLargestCriticalStrike = textValueOverlayView1.TextLargestCriticalStrike;
+            }
+            public static void TextLargestKillingSpreeSubmit()
+            {
+                EndGameView1Page.formatingData.TextLargestKillingSpree = textValueOverlayView1.TextLargestKillingSpree;
+            }
+            public static void TextLargestMultiKillSubmit()
+            {
+                EndGameView1Page.formatingData.TextLargestMultiKill = textValueOverlayView1.TextLargestMultiKill;
+            }
+            public static void TextLevelSubmit()
+            {
+                EndGameView1Page.formatingData.TextLevel = textValueOverlayView1.TextLevel;
+            }
+            public static void TextMagicDamageDealtPlayerSubmit()
+            {
+                EndGameView1Page.formatingData.TextMagicDamageDealtPlayer = textValueOverlayView1.TextMagicDamageDealtPlayer;
+            }
+            public static void TextMagicDamageDealtToChampionsSubmit()
+            {
+                EndGameView1Page.formatingData.TextMagicDamageDealtToChampions = textValueOverlayView1.TextMagicDamageDealtToChampions;
+            }
+            public static void TextMagicDamageTakenSubmit()
+            {
+                EndGameView1Page.formatingData.TextMagicDamageTaken = textValueOverlayView1.TextMagicDamageTaken;
+            }
+            public static void TextMinionsKilledSubmit()
+            {
+                EndGameView1Page.formatingData.TextMinionsKilled = textValueOverlayView1.TextMinionsKilled;
+            }
+            public static void TextNumDeathsSubmit()
+            {
+                EndGameView1Page.formatingData.TextNumDeaths = textValueOverlayView1.TextNumDeaths;
+            }
+            public static void TextPhysicalDamageDealtPlayerSubmit()
+            {
+                EndGameView1Page.formatingData.TextPhysicalDamageDealtPlayer = textValueOverlayView1.TextPhysicalDamageDealtPlayer;
+            }
+            public static void TextPhysicalDamageDealtToChampionsSubmit()
+            {
+                EndGameView1Page.formatingData.TextPhysicalDamageDealtToChampions = textValueOverlayView1.TextPhysicalDamageDealtToChampions;
+            }
+            public static void TextPhysicalDamageTakenSubmit()
+            {
+                EndGameView1Page.formatingData.TextPhysicalDamageTaken = textValueOverlayView1.TextPhysicalDamageTaken;
+            }
+            public static void TextTotalDamageDealtSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalDamageDealt = textValueOverlayView1.TextTotalDamageDealt;
+            }
+            public static void TextTotalDamageDealtToBuildingsSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalDamageDealtToBuildings = textValueOverlayView1.TextTotalDamageDealtToBuildings;
+            }
+            public static void TextTotalDamageDealtToChampionsSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalDamageDealtToChampions = textValueOverlayView1.TextTotalDamageDealtToChampions;
+            }
+            public static void TextTotalDamageDealtToObjectivesSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalDamageDealtToObjectives = textValueOverlayView1.TextTotalDamageDealtToObjectives;
+            }
+            public static void TextTotalDamageDealtToTurretsSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalDamageDealtToTurrets = textValueOverlayView1.TextTotalDamageDealtToTurrets;
+            }
+            public static void TextTotalDamageSelfMitigatedSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalDamageSelfMitigated = textValueOverlayView1.TextTotalDamageSelfMitigated;
+            }
+            public static void TextTotalDamageShieldedOnTeammatesSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalDamageShieldedOnTeammates = textValueOverlayView1.TextTotalDamageShieldedOnTeammates;
+            }
+            public static void TextTotalDamageTakenSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalDamageTaken = textValueOverlayView1.TextTotalDamageTaken;
+            }
+            public static void TextTotalHealSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalHeal = textValueOverlayView1.TextTotalHeal;
+            }
+            public static void TextTotalHealOnTeammatesSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalHealOnTeammates = textValueOverlayView1.TextTotalHealOnTeammates;
+            }
+            public static void TextTotalTimeCrowdControlDealtSubmit()
+            {
+                EndGameView1Page.formatingData.TextTotalTimeCrowdControlDealt = textValueOverlayView1.TextTotalTimeCrowdControlDealt;
+            }
+            public static void TextTrueDamageDealtPlayerSubmit()
+            {
+                EndGameView1Page.formatingData.TextTrueDamageDealtPlayer = textValueOverlayView1.TextTrueDamageDealtPlayer;
+            }
+            public static void TextTrueDamageDealtToChampionsSubmit()
+            {
+                EndGameView1Page.formatingData.TextTrueDamageDealtToChampions = textValueOverlayView1.TextTrueDamageDealtToChampions;
+            }
+            public static void TextTrueDamageTakenSubmit()
+            {
+                EndGameView1Page.formatingData.TextTrueDamageTaken = textValueOverlayView1.TextTrueDamageTaken;
+            }
+            public static void TextTurretsKilledSubmit()
+            {
+                EndGameView1Page.formatingData.TextTurretsKilled = textValueOverlayView1.TextTurretsKilled;
+            }
+            public static void TextVisionScoreSubmit()
+            {
+                EndGameView1Page.formatingData.TextVisionScore = textValueOverlayView1.TextVisionScore;
+            }
+            public static void TextWardKilledSubmit()
+            {
+                EndGameView1Page.formatingData.TextWardKilled = textValueOverlayView1.TextWardKilled;
+            }
+            public static void TextWardPlacedSubmit()
+            {
+                EndGameView1Page.formatingData.TextWardPlaced = textValueOverlayView1.TextWardPlaced;
+            }
 
 
 
@@ -815,7 +2315,7 @@ namespace OSL_Web.Pages.EndGame
                     colorPickerOverlay1GoldDiff = "hidden";
                     GoldDiffBorderColorNotSet = colorValue;
                 }
-            } 
+            }
             public static void GoldDiffBarColorSubmit()
             {
                 EndGameView1Page.formatingData.GoldDiffBarColor = textValueOverlayView1.GoldDiffBarColor.ToString() + "px dashed " + GoldDiffBarColorNotSet;
@@ -1074,6 +2574,75 @@ namespace OSL_Web.Pages.EndGame
             [Required]
             [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
             public int GoldDiffBarColor { get; set; } = 1;
+            public string? TextAssist { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextBarracksKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextChampionsKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextGoldEarned { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLargestCriticalStrike { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLargestKillingSpree { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLargestMultiKill { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLevel { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMagicDamageDealtPlayer { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMagicDamageDealtToChampions { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMagicDamageTaken { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMinionsKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextNumDeaths { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextPhysicalDamageDealtPlayer { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextPhysicalDamageDealtToChampions { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextPhysicalDamageTaken { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealt { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToBuildings { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToChampions { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToObjectives { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToTurrets { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageSelfMitigated { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageShieldedOnTeammates { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageTaken { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalHeal { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalHealOnTeammates { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalTimeCrowdControlDealt { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTrueDamageDealtPlayer { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTrueDamageDealtToChampions { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTrueDamageTaken { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTurretsKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextVisionScore { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextWardKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextWardPlaced { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string ValueStats { get; set; } = "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS";
 
             public static void TopBarBlueTeamNameSubmit()
             {
@@ -1696,7 +3265,1438 @@ namespace OSL_Web.Pages.EndGame
             }
 
 
+            public static void ValueStatsSubmit()
+            {
+                if (textValueOverlayView2.ValueStats.Equals("ASSISTS"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextAssist;
+                    EndGameView2Page.formatingData.ASSISTS = true;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("BARRACKS_KILLED"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextBarracksKilled;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("CHAMPIONS_KILLED"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextChampionsKilled;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("GOLD_EARNED"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextGoldEarned;
+                    EndGameView2Page.formatingData.GOLD_EARNED = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("LARGEST_CRITICAL_STRIKE"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextLargestCriticalStrike;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("LARGEST_KILLING_SPREE"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextLargestKillingSpree;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("LARGEST_MULTI_KILL"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextLargestMultiKill;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("LEVEL"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextLevel;
+                    EndGameView2Page.formatingData.LEVEL = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("MAGIC_DAMAGE_DEALT_PLAYER"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextMagicDamageDealtPlayer;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("MAGIC_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextMagicDamageDealtToChampions;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("MAGIC_DAMAGE_TAKEN"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextMagicDamageTaken;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("MINIONS_KILLED"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextMinionsKilled;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("NUM_DEATHS"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextNumDeaths;
+                    EndGameView2Page.formatingData.NUM_DEATHS = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("PHYSICAL_DAMAGE_DEALT_PLAYER"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextPhysicalDamageDealtPlayer;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextPhysicalDamageDealtToChampions;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("PHYSICAL_DAMAGE_TAKEN"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextPhysicalDamageTaken;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_DAMAGE_DEALT"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalDamageDealt;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_BUILDINGS"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalDamageDealtToBuildings;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalDamageDealtToChampions;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_OBJECTIVES"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalDamageDealtToObjectives;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_TURRETS"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalDamageDealtToTurrets;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_DAMAGE_SELF_MITIGATED"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalDamageSelfMitigated;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalDamageShieldedOnTeammates;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_DAMAGE_TAKEN"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalDamageTaken;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_HEAL"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalHeal;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_HEAL_ON_TEAMMATES"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalHealOnTeammates;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TOTAL_TIME_CROWD_CONTROL_DEALT"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTotalTimeCrowdControlDealt;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TRUE_DAMAGE_DEALT_PLAYER"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTrueDamageDealtPlayer;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TRUE_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTrueDamageDealtToChampions;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TRUE_DAMAGE_TAKEN"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTrueDamageTaken;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("TURRETS_KILLED"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextTurretsKilled;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("VISION_SCORE"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextVisionScore;
+                    EndGameView2Page.formatingData.VISION_SCORE = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("WARD_KILLED"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextWardKilled;
+                    EndGameView2Page.formatingData.WARD_KILLED = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView2.ValueStats.Equals("WARD_PLACED"))
+                {
+                    EndGameView2Page.formatingData.ChampionInfoText = EndGameView2Page.formatingData.TextWardPlaced;
+                    EndGameView2Page.formatingData.WARD_PLACED = true;
+                    EndGameView2Page.formatingData.ASSISTS = false;
+                    EndGameView2Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView2Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView2Page.formatingData.GOLD_EARNED = false;
+                    EndGameView2Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView2Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView2Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView2Page.formatingData.LEVEL = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView2Page.formatingData.NUM_DEATHS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView2Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView2Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView2Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView2Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView2Page.formatingData.VISION_SCORE = false;
+                    EndGameView2Page.formatingData.WARD_KILLED = false;
+                }
+            }
+            public static void TextAssistSubmit()
+            {
+                EndGameView2Page.formatingData.TextAssist = textValueOverlayView2.TextAssist;
+            }
 
+            public static void TextBarracksKilledSubmit()
+            {
+                EndGameView2Page.formatingData.TextBarracksKilled = textValueOverlayView2.TextBarracksKilled;
+            }
+            public static void TextChampionsKilledSubmit()
+            {
+                EndGameView2Page.formatingData.TextChampionsKilled = textValueOverlayView2.TextChampionsKilled;
+            }
+            public static void TextGoldEarnedSubmit()
+            {
+                EndGameView2Page.formatingData.TextGoldEarned = textValueOverlayView2.TextGoldEarned;
+            }
+            public static void TextLargestCriticalStrikeSubmit()
+            {
+                EndGameView2Page.formatingData.TextLargestCriticalStrike = textValueOverlayView2.TextLargestCriticalStrike;
+            }
+            public static void TextLargestKillingSpreeSubmit()
+            {
+                EndGameView2Page.formatingData.TextLargestKillingSpree = textValueOverlayView2.TextLargestKillingSpree;
+            }
+            public static void TextLargestMultiKillSubmit()
+            {
+                EndGameView2Page.formatingData.TextLargestMultiKill = textValueOverlayView2.TextLargestMultiKill;
+            }
+            public static void TextLevelSubmit()
+            {
+                EndGameView2Page.formatingData.TextLevel = textValueOverlayView2.TextLevel;
+            }
+            public static void TextMagicDamageDealtPlayerSubmit()
+            {
+                EndGameView2Page.formatingData.TextMagicDamageDealtPlayer = textValueOverlayView2.TextMagicDamageDealtPlayer;
+            }
+            public static void TextMagicDamageDealtToChampionsSubmit()
+            {
+                EndGameView2Page.formatingData.TextMagicDamageDealtToChampions = textValueOverlayView2.TextMagicDamageDealtToChampions;
+            }
+            public static void TextMagicDamageTakenSubmit()
+            {
+                EndGameView2Page.formatingData.TextMagicDamageTaken = textValueOverlayView2.TextMagicDamageTaken;
+            }
+            public static void TextMinionsKilledSubmit()
+            {
+                EndGameView2Page.formatingData.TextMinionsKilled = textValueOverlayView2.TextMinionsKilled;
+            }
+            public static void TextNumDeathsSubmit()
+            {
+                EndGameView2Page.formatingData.TextNumDeaths = textValueOverlayView2.TextNumDeaths;
+            }
+            public static void TextPhysicalDamageDealtPlayerSubmit()
+            {
+                EndGameView2Page.formatingData.TextPhysicalDamageDealtPlayer = textValueOverlayView2.TextPhysicalDamageDealtPlayer;
+            }
+            public static void TextPhysicalDamageDealtToChampionsSubmit()
+            {
+                EndGameView2Page.formatingData.TextPhysicalDamageDealtToChampions = textValueOverlayView2.TextPhysicalDamageDealtToChampions;
+            }
+            public static void TextPhysicalDamageTakenSubmit()
+            {
+                EndGameView2Page.formatingData.TextPhysicalDamageTaken = textValueOverlayView2.TextPhysicalDamageTaken;
+            }
+            public static void TextTotalDamageDealtSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalDamageDealt = textValueOverlayView2.TextTotalDamageDealt;
+            }
+            public static void TextTotalDamageDealtToBuildingsSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalDamageDealtToBuildings = textValueOverlayView2.TextTotalDamageDealtToBuildings;
+            }
+            public static void TextTotalDamageDealtToChampionsSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalDamageDealtToChampions = textValueOverlayView2.TextTotalDamageDealtToChampions;
+            }
+            public static void TextTotalDamageDealtToObjectivesSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalDamageDealtToObjectives = textValueOverlayView2.TextTotalDamageDealtToObjectives;
+            }
+            public static void TextTotalDamageDealtToTurretsSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalDamageDealtToTurrets = textValueOverlayView2.TextTotalDamageDealtToTurrets;
+            }
+            public static void TextTotalDamageSelfMitigatedSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalDamageSelfMitigated = textValueOverlayView2.TextTotalDamageSelfMitigated;
+            }
+            public static void TextTotalDamageShieldedOnTeammatesSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalDamageShieldedOnTeammates = textValueOverlayView2.TextTotalDamageShieldedOnTeammates;
+            }
+            public static void TextTotalDamageTakenSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalDamageTaken = textValueOverlayView2.TextTotalDamageTaken;
+            }
+            public static void TextTotalHealSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalHeal = textValueOverlayView2.TextTotalHeal;
+            }
+            public static void TextTotalHealOnTeammatesSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalHealOnTeammates = textValueOverlayView2.TextTotalHealOnTeammates;
+            }
+            public static void TextTotalTimeCrowdControlDealtSubmit()
+            {
+                EndGameView2Page.formatingData.TextTotalTimeCrowdControlDealt = textValueOverlayView2.TextTotalTimeCrowdControlDealt;
+            }
+            public static void TextTrueDamageDealtPlayerSubmit()
+            {
+                EndGameView2Page.formatingData.TextTrueDamageDealtPlayer = textValueOverlayView2.TextTrueDamageDealtPlayer;
+            }
+            public static void TextTrueDamageDealtToChampionsSubmit()
+            {
+                EndGameView2Page.formatingData.TextTrueDamageDealtToChampions = textValueOverlayView2.TextTrueDamageDealtToChampions;
+            }
+            public static void TextTrueDamageTakenSubmit()
+            {
+                EndGameView2Page.formatingData.TextTrueDamageTaken = textValueOverlayView2.TextTrueDamageTaken;
+            }
+            public static void TextTurretsKilledSubmit()
+            {
+                EndGameView2Page.formatingData.TextTurretsKilled = textValueOverlayView2.TextTurretsKilled;
+            }
+            public static void TextVisionScoreSubmit()
+            {
+                EndGameView2Page.formatingData.TextVisionScore = textValueOverlayView2.TextVisionScore;
+            }
+            public static void TextWardKilledSubmit()
+            {
+                EndGameView2Page.formatingData.TextWardKilled = textValueOverlayView2.TextWardKilled;
+            }
+            public static void TextWardPlacedSubmit()
+            {
+                EndGameView2Page.formatingData.TextWardPlaced = textValueOverlayView2.TextWardPlaced;
+            }
 
 
 
@@ -2028,6 +5028,75 @@ namespace OSL_Web.Pages.EndGame
             [Required]
             [Range(0, 10, ErrorMessage = "Accommodation invalid (1-10).")]
             public int GoldDiffBarColor { get; set; } = 1;
+            public string? TextAssist { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextBarracksKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextChampionsKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextGoldEarned { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLargestCriticalStrike { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLargestKillingSpree { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLargestMultiKill { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextLevel { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMagicDamageDealtPlayer { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMagicDamageDealtToChampions { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMagicDamageTaken { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextMinionsKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextNumDeaths { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextPhysicalDamageDealtPlayer { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextPhysicalDamageDealtToChampions { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextPhysicalDamageTaken { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealt { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToBuildings { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToChampions { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToObjectives { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageDealtToTurrets { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageSelfMitigated { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageShieldedOnTeammates { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalDamageTaken { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalHeal { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalHealOnTeammates { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTotalTimeCrowdControlDealt { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTrueDamageDealtPlayer { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTrueDamageDealtToChampions { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTrueDamageTaken { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextTurretsKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextVisionScore { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextWardKilled { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string? TextWardPlaced { get; set; }
+            [StringLength(40, ErrorMessage = "Text is too long (40 character limit).")]
+            public string ValueStats { get; set; } = "TOTAL_DAMAGE_DEALT_TO_CHAMPIONS";
 
 
             public static void TopBarBlueTeamNameSubmit()
@@ -2690,6 +5759,1438 @@ namespace OSL_Web.Pages.EndGame
                 }
             }
 
+            public static void ValueStatsSubmit()
+            {
+                if (textValueOverlayView3.ValueStats.Equals("ASSISTS"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextAssist;
+                    EndGameView3Page.formatingData.ASSISTS = true;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("BARRACKS_KILLED"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextBarracksKilled;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("CHAMPIONS_KILLED"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextChampionsKilled;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("GOLD_EARNED"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextGoldEarned;
+                    EndGameView3Page.formatingData.GOLD_EARNED = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("LARGEST_CRITICAL_STRIKE"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextLargestCriticalStrike;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("LARGEST_KILLING_SPREE"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextLargestKillingSpree;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("LARGEST_MULTI_KILL"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextLargestMultiKill;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("LEVEL"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextLevel;
+                    EndGameView3Page.formatingData.LEVEL = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("MAGIC_DAMAGE_DEALT_PLAYER"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextMagicDamageDealtPlayer;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("MAGIC_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextMagicDamageDealtToChampions;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("MAGIC_DAMAGE_TAKEN"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextMagicDamageTaken;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("MINIONS_KILLED"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextMinionsKilled;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("NUM_DEATHS"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextNumDeaths;
+                    EndGameView3Page.formatingData.NUM_DEATHS = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("PHYSICAL_DAMAGE_DEALT_PLAYER"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextPhysicalDamageDealtPlayer;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextPhysicalDamageDealtToChampions;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("PHYSICAL_DAMAGE_TAKEN"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextPhysicalDamageTaken;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_DAMAGE_DEALT"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalDamageDealt;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_BUILDINGS"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalDamageDealtToBuildings;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalDamageDealtToChampions;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_OBJECTIVES"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalDamageDealtToObjectives;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_DAMAGE_DEALT_TO_TURRETS"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalDamageDealtToTurrets;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_DAMAGE_SELF_MITIGATED"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalDamageSelfMitigated;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalDamageShieldedOnTeammates;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_DAMAGE_TAKEN"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalDamageTaken;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_HEAL"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalHeal;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_HEAL_ON_TEAMMATES"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalHealOnTeammates;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TOTAL_TIME_CROWD_CONTROL_DEALT"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTotalTimeCrowdControlDealt;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TRUE_DAMAGE_DEALT_PLAYER"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTrueDamageDealtPlayer;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TRUE_DAMAGE_DEALT_TO_CHAMPIONS"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTrueDamageDealtToChampions;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TRUE_DAMAGE_TAKEN"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTrueDamageTaken;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("TURRETS_KILLED"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextTurretsKilled;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("VISION_SCORE"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextVisionScore;
+                    EndGameView3Page.formatingData.VISION_SCORE = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("WARD_KILLED"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextWardKilled;
+                    EndGameView3Page.formatingData.WARD_KILLED = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_PLACED = false;
+                }
+                else if (textValueOverlayView3.ValueStats.Equals("WARD_PLACED"))
+                {
+                    EndGameView3Page.formatingData.ChampionInfoText = EndGameView3Page.formatingData.TextWardPlaced;
+                    EndGameView3Page.formatingData.WARD_PLACED = true;
+                    EndGameView3Page.formatingData.ASSISTS = false;
+                    EndGameView3Page.formatingData.BARRACKS_KILLED = false;
+                    EndGameView3Page.formatingData.CHAMPIONS_KILLED = false;
+                    EndGameView3Page.formatingData.GOLD_EARNED = false;
+                    EndGameView3Page.formatingData.LARGEST_CRITICAL_STRIKE = false;
+                    EndGameView3Page.formatingData.LARGEST_KILLING_SPREE = false;
+                    EndGameView3Page.formatingData.LARGEST_MULTI_KILL = false;
+                    EndGameView3Page.formatingData.LEVEL = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.MAGIC_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.MINIONS_KILLED = false;
+                    EndGameView3Page.formatingData.NUM_DEATHS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.PHYSICAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_BUILDINGS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_OBJECTIVES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_DEALT_TO_TURRETS = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SELF_MITIGATED = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_SHIELDED_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL = false;
+                    EndGameView3Page.formatingData.TOTAL_HEAL_ON_TEAMMATES = false;
+                    EndGameView3Page.formatingData.TOTAL_TIME_CROWD_CONTROL_DEALT = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_PLAYER = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_DEALT_TO_CHAMPIONS = false;
+                    EndGameView3Page.formatingData.TRUE_DAMAGE_TAKEN = false;
+                    EndGameView3Page.formatingData.TURRETS_KILLED = false;
+                    EndGameView3Page.formatingData.VISION_SCORE = false;
+                    EndGameView3Page.formatingData.WARD_KILLED = false;
+                }
+            }
+            public static void TextAssistSubmit()
+            {
+                EndGameView3Page.formatingData.TextAssist = textValueOverlayView3.TextAssist;
+            }
+
+            public static void TextBarracksKilledSubmit()
+            {
+                EndGameView3Page.formatingData.TextBarracksKilled = textValueOverlayView3.TextBarracksKilled;
+            }
+            public static void TextChampionsKilledSubmit()
+            {
+                EndGameView3Page.formatingData.TextChampionsKilled = textValueOverlayView3.TextChampionsKilled;
+            }
+            public static void TextGoldEarnedSubmit()
+            {
+                EndGameView3Page.formatingData.TextGoldEarned = textValueOverlayView3.TextGoldEarned;
+            }
+            public static void TextLargestCriticalStrikeSubmit()
+            {
+                EndGameView3Page.formatingData.TextLargestCriticalStrike = textValueOverlayView3.TextLargestCriticalStrike;
+            }
+            public static void TextLargestKillingSpreeSubmit()
+            {
+                EndGameView3Page.formatingData.TextLargestKillingSpree = textValueOverlayView3.TextLargestKillingSpree;
+            }
+            public static void TextLargestMultiKillSubmit()
+            {
+                EndGameView3Page.formatingData.TextLargestMultiKill = textValueOverlayView3.TextLargestMultiKill;
+            }
+            public static void TextLevelSubmit()
+            {
+                EndGameView3Page.formatingData.TextLevel = textValueOverlayView3.TextLevel;
+            }
+            public static void TextMagicDamageDealtPlayerSubmit()
+            {
+                EndGameView3Page.formatingData.TextMagicDamageDealtPlayer = textValueOverlayView3.TextMagicDamageDealtPlayer;
+            }
+            public static void TextMagicDamageDealtToChampionsSubmit()
+            {
+                EndGameView3Page.formatingData.TextMagicDamageDealtToChampions = textValueOverlayView3.TextMagicDamageDealtToChampions;
+            }
+            public static void TextMagicDamageTakenSubmit()
+            {
+                EndGameView3Page.formatingData.TextMagicDamageTaken = textValueOverlayView3.TextMagicDamageTaken;
+            }
+            public static void TextMinionsKilledSubmit()
+            {
+                EndGameView3Page.formatingData.TextMinionsKilled = textValueOverlayView3.TextMinionsKilled;
+            }
+            public static void TextNumDeathsSubmit()
+            {
+                EndGameView3Page.formatingData.TextNumDeaths = textValueOverlayView3.TextNumDeaths;
+            }
+            public static void TextPhysicalDamageDealtPlayerSubmit()
+            {
+                EndGameView3Page.formatingData.TextPhysicalDamageDealtPlayer = textValueOverlayView3.TextPhysicalDamageDealtPlayer;
+            }
+            public static void TextPhysicalDamageDealtToChampionsSubmit()
+            {
+                EndGameView3Page.formatingData.TextPhysicalDamageDealtToChampions = textValueOverlayView3.TextPhysicalDamageDealtToChampions;
+            }
+            public static void TextPhysicalDamageTakenSubmit()
+            {
+                EndGameView3Page.formatingData.TextPhysicalDamageTaken = textValueOverlayView3.TextPhysicalDamageTaken;
+            }
+            public static void TextTotalDamageDealtSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalDamageDealt = textValueOverlayView3.TextTotalDamageDealt;
+            }
+            public static void TextTotalDamageDealtToBuildingsSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalDamageDealtToBuildings = textValueOverlayView3.TextTotalDamageDealtToBuildings;
+            }
+            public static void TextTotalDamageDealtToChampionsSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalDamageDealtToChampions = textValueOverlayView3.TextTotalDamageDealtToChampions;
+            }
+            public static void TextTotalDamageDealtToObjectivesSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalDamageDealtToObjectives = textValueOverlayView3.TextTotalDamageDealtToObjectives;
+            }
+            public static void TextTotalDamageDealtToTurretsSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalDamageDealtToTurrets = textValueOverlayView3.TextTotalDamageDealtToTurrets;
+            }
+            public static void TextTotalDamageSelfMitigatedSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalDamageSelfMitigated = textValueOverlayView3.TextTotalDamageSelfMitigated;
+            }
+            public static void TextTotalDamageShieldedOnTeammatesSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalDamageShieldedOnTeammates = textValueOverlayView3.TextTotalDamageShieldedOnTeammates;
+            }
+            public static void TextTotalDamageTakenSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalDamageTaken = textValueOverlayView3.TextTotalDamageTaken;
+            }
+            public static void TextTotalHealSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalHeal = textValueOverlayView3.TextTotalHeal;
+            }
+            public static void TextTotalHealOnTeammatesSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalHealOnTeammates = textValueOverlayView3.TextTotalHealOnTeammates;
+            }
+            public static void TextTotalTimeCrowdControlDealtSubmit()
+            {
+                EndGameView3Page.formatingData.TextTotalTimeCrowdControlDealt = textValueOverlayView3.TextTotalTimeCrowdControlDealt;
+            }
+            public static void TextTrueDamageDealtPlayerSubmit()
+            {
+                EndGameView3Page.formatingData.TextTrueDamageDealtPlayer = textValueOverlayView3.TextTrueDamageDealtPlayer;
+            }
+            public static void TextTrueDamageDealtToChampionsSubmit()
+            {
+                EndGameView3Page.formatingData.TextTrueDamageDealtToChampions = textValueOverlayView3.TextTrueDamageDealtToChampions;
+            }
+            public static void TextTrueDamageTakenSubmit()
+            {
+                EndGameView3Page.formatingData.TextTrueDamageTaken = textValueOverlayView3.TextTrueDamageTaken;
+            }
+            public static void TextTurretsKilledSubmit()
+            {
+                EndGameView3Page.formatingData.TextTurretsKilled = textValueOverlayView3.TextTurretsKilled;
+            }
+            public static void TextVisionScoreSubmit()
+            {
+                EndGameView3Page.formatingData.TextVisionScore = textValueOverlayView3.TextVisionScore;
+            }
+            public static void TextWardKilledSubmit()
+            {
+                EndGameView3Page.formatingData.TextWardKilled = textValueOverlayView3.TextWardKilled;
+            }
+            public static void TextWardPlacedSubmit()
+            {
+                EndGameView3Page.formatingData.TextWardPlaced = textValueOverlayView3.TextWardPlaced;
+            }
 
 
 

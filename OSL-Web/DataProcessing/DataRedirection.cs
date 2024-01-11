@@ -18,6 +18,9 @@ namespace OSL_Web.DataProcessing
         {
             try
             {
+                Console.WriteLine("######################################################################");
+                //Console.WriteLine(content);
+                Console.WriteLine("######################################################################");
                 GameFlowPhaseStatus dataJsonRecive = JsonConvert.DeserializeObject<GameFlowPhaseStatus>(content);
                 if (dataJsonRecive.Phase != null && dataJsonRecive.Status != null && dataJsonRecive.Date != null)
                 {
@@ -43,9 +46,9 @@ namespace OSL_Web.DataProcessing
                             InGame.initTimerGame = true; //Reset information
                             InGame.allPlayerList = null; //Reset information
                             InGame.playBack = null; //Reset information
-                            InGame.liveEvent = false; //Reset information
                             InGame.liveEventContent = null; //Reset information
                             InGame.gameInformation = new(); //Reset information
+                            InGame.eventID = 0; //Reset information
                         }
                         else
                         {

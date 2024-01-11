@@ -102,7 +102,16 @@ namespace OSL_Web.Sockets
                     if (bytesRead > 0)
                     {
                         content = Encoding.UTF8.GetString(client.buffer, 0, bytesRead);
-                        DataProcessing.DataRedirection.RedirectData(content);
+                        
+                        //Change for split multiple message recive
+                        
+                        Console.WriteLine("-------------------------------------------------------------------------");
+                        //Console.WriteLine(content);
+                        Console.WriteLine("-------------------------------------------------------------------------");
+                        foreach (var message in SplitMessage(content))
+                        {
+                            DataProcessing.DataRedirection.RedirectData(message);
+                        }
                     }
                 }
             }
@@ -110,6 +119,12 @@ namespace OSL_Web.Sockets
             {
                 _logger.log(LoggingLevel.ERROR, "AcceptCallback()", "Error while accepting a connection: " + e.Message);
             }
+        }
+
+        private static string[] SplitMessage(string content)
+        {
+            string[] parts = content.Split("#00#", StringSplitOptions.RemoveEmptyEntries);
+            return parts;
         }
     }
 }

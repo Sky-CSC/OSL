@@ -45,6 +45,7 @@ namespace OSL_ReplayApi
             public static readonly string replaygame = "/replay/game"; //Information about the game client process.
             public static readonly string liveclientdataallgamedata = "/liveclientdata/allgamedata"; //All game data
             public static readonly string liveclientdataplayerlist = "/liveclientdata/playerlist"; //Information about summoners
+            public static readonly string liveclientdataeventdata = "/liveclientdata/eventdata"; //Information about summoners
             public static readonly string replayplayback = "/replay/playback"; //Time, Pause information
 
         }

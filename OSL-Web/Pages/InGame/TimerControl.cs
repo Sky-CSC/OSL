@@ -8,11 +8,11 @@ namespace OSL_Web.Pages.InGame
         public static int nextDrake = 300; //Spawn at 5:00, respaw 5:00
         //public static System.Timers.Timer drakeTimer;
         public static int nextHerald = 480; //8:00 to spawn respaw 6:00 (once if killed before 13:45)
-        public static int nextHelder = 360; //Spawn 6:00 after team kill 4 drake, respawn 6:00
+        public static int nextElder = 360; //Spawn 6:00 after team kill 4 drake, respawn 6:00
         public static int nextBaron = 1200; //Spawn 20:00, respawn 6:00
         public static int buffHerald = 240; //Duration 240
-        public static int buffHelder = 150; //150 seconds for the first buff; 300 seconds for subsequent buffs 
-        public static int buffBaron = 210; //3.30 min
+        public static int buffElder = 150; //150 seconds for the first buff; 300 seconds for subsequent buffs 
+        public static int buffBaron = 180; //3 min
         public static int inhibOrderTop = 0; //5 min respawn
         public static int inhibOrderMid = 0; //5 min respawn
         public static int inhibOrderBot = 0; //5 min respawn
@@ -20,19 +20,18 @@ namespace OSL_Web.Pages.InGame
         public static int inhibChaosMid = 0; //5 min respawn
         public static int inhibChaosBot = 0; //5 min respawn
         public static int gameTimer = 0;
-
         //Count down with timer of game
 
         //When game start run timer :
         //nextDrake
-        //nextHelder
+        //nextElder
         //nextBaron
 
         //When drake kill run timer :
         //nextDrake
 
         //When herald kill run timer :
-        //nextHelder
+        //nextElder
         //if timer 13.45min no respawn
 
         private static void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -48,7 +47,11 @@ namespace OSL_Web.Pages.InGame
                 nextDrake--;
             }
 
-            if (nextHerald <= 0)
+            if (nextHerald == -1)
+            {
+                nextHerald = -1;
+            }
+            else if (nextHerald <= 0)
             {
                 nextHerald = 0;
             }
@@ -57,13 +60,13 @@ namespace OSL_Web.Pages.InGame
                 nextHerald--;
             }
 
-            if (nextHelder <= 0)
+            if (nextElder <= 0)
             {
-                nextHelder = 0;
+                nextElder = 0;
             }
             else
             {
-                nextHelder--;
+                nextElder--;
             }
 
             if (nextBaron <= 0)
@@ -84,18 +87,34 @@ namespace OSL_Web.Pages.InGame
                 buffHerald--;
             }
 
-            if (buffHelder <= 0)
+            if (buffElder <= 0)
             {
-                buffHelder = 0;
+                buffElder = 0;
+                foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
+                {
+                    summoner.ElderBuff = false;
+                }
+                foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+                {
+                    summoner.ElderBuff = false;
+                }
             }
             else
             {
-                buffHelder--;
+                buffElder--;
             }
 
             if (buffBaron <= 0)
             {
                 buffBaron = 0;
+                foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
+                {
+                    summoner.BaronBuff = false;
+                }
+                foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+                {
+                    summoner.BaronBuff = false;
+                }
             }
             else
             {
@@ -190,6 +209,31 @@ namespace OSL_Web.Pages.InGame
         public static void Interval(double interval)
         {
             generalTimer.Interval = interval;
+        }
+
+        public static string ConvertToMinute(int timer)
+        {
+            TimeSpan result = TimeSpan.FromSeconds(timer);
+            string fromTimeString = result.ToString(@"m\:ss");
+            return fromTimeString;
+        }
+
+        public static void SyncTimers(int min, int sec)
+        {
+            int second = min * 60 + sec;
+            nextHerald -= second;
+            nextElder -= second;
+            nextBaron -= second;
+            buffHerald -= second;
+            buffElder -= second;
+            buffBaron -= second;
+            inhibOrderTop -= second;
+            inhibOrderMid -= second;
+            inhibOrderBot -= second;
+            inhibChaosTop -= second;
+            inhibChaosMid -= second;
+            inhibChaosBot -= second;
+            gameTimer -= second;
         }
 
     }

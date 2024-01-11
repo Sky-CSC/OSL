@@ -10,167 +10,463 @@
     @{
 
         <div>
-            nextDrake : @TimerControl.nextDrake
 
-            <br>nextHerald : @TimerControl.nextHerald
-            <br>nextHelder : @TimerControl.nextHelder
-            <br>nextBaron : @TimerControl.nextBaron
-            <br>buffHerald : @TimerControl.buffHerald
-            <br>buffHelder : @TimerControl.buffHelder
-            <br>buffBaron : @TimerControl.buffBaron
-            <br>gameTimer : @TimerControl.gameTimer
-            @*</div>*@
-            <br />
-            @*<div>*@
-
-            @foreach (var drakeOrder in DataProcessing.InGame.gameInformation.Order.Drakes)
+            @if (formatingData.DisplayItems)
             {
-                <div>
-                    drake Order : @drakeOrder
-                </div>
-            }
-            @foreach (var drakeChaos in DataProcessing.InGame.gameInformation.Chaos.Drakes)
-            {
-                <div>
-                    drake Chaos : @drakeChaos
-                </div>
-            }
-
-            @*</div>*@
-            <br>
-            @*<div>*@
-            @if (DataProcessing.InGame.gameInformation.Order.HelderKill)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Order.HelderKill
-                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Order.Summoners)
-                    {
-                        <div>
-                            ChampionBuff SummonerName : @championBuff.SummonerName
-                            ChampionBuff Buffed : @championBuff.HelderBuff
-                        </div>
-                    }
-                </div>
-            }
-            else if (DataProcessing.InGame.gameInformation.Chaos.HelderKill)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Chaos.HelderKill
-                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Chaos.Summoners)
-                    {
-                        <div>
-                            ChampionBuff SummonerName : @championBuff.SummonerName
-                            ChampionBuff Buffed : @championBuff.HelderBuff
-                        </div>
-                    }
-                </div>
-            }
-            @*</div>*@
-            <br>
-            @*<div>*@
-            @if (DataProcessing.InGame.gameInformation.Order.BaronKill)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Order.BaronKill
-                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Order.Summoners)
-                    {
-                        <div>
-                            ChampionBuff SummonerName : @championBuff.SummonerName
-                            ChampionBuff Buffed : @championBuff.BaronBuff
-                        </div>
-                    }
-                </div>
-            }
-            else if (DataProcessing.InGame.gameInformation.Chaos.BaronKill)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Chaos.BaronKill
-                    @foreach (var championBuff in DataProcessing.InGame.gameInformation.Chaos.Summoners)
-                    {
-                        <div>
-                            ChampionBuff SummonerName : @championBuff.SummonerName
-                            ChampionBuff Buffed : @championBuff.BaronBuff
-                        </div>
-                    }
-                </div>
-            }
-            @*</div>*@
-            <br>
-            @*<div>*@
-            @if (DataProcessing.InGame.gameInformation.Order.Herald.Killed)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Order.Herald.Killed
-                    @DataProcessing.InGame.gameInformation.Order.Herald.Take
-                </div>
-            }
-            else if (DataProcessing.InGame.gameInformation.Chaos.Herald.Killed)
-            {
-                <div>
-                    @DataProcessing.InGame.gameInformation.Chaos.Herald.Killed
-                    @DataProcessing.InGame.gameInformation.Chaos.Herald.Take
-                </div>
-            }
-
-            @foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
-            {
-                @foreach (var items in summoner.Items)
+                @*Display order items*@
+                @foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
                 {
-                    int idItem = items.ItemID;
-                    int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
-                    int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
-                    int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
-                    string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
-
-                    @if (OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].To.Count() == 0)
+                    @foreach (var items in summoner.Items)
                     {
-                        <div class="perks-wrapper">
-                            <div class="perks-wrapper-frame">
-                                <img class="perks-img" src="@iconPath" />
-                            </div>
-                        </div>
+                        int idItem = items.ItemID;
+                        if (ItemToDisplay(idItem))
+                        {
+                            int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
+                            int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
+                            int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
+                            string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
+                            string inconText = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].Name;
+
+                            if (summoner.PositionIndice == 0)
+                            {
+                                <div class="order-item-wrapper-0">
+                                    <div class="order-item-wrapper-frame">
+                                        <div class="order-item-info" style="background-color: @formatingData.ColorOrderBackgroundItems">
+                                            <img class="order-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="order-items-score-display-0">
+                                    <div class="order-items-score-display" style="background: @formatingData.ColorOrderBackgroundScoreItems">
+                                        <div class="order-item-score-info">
+                                            <div class="order-item-score-text">
+                                                @inconText
+                                            </div>
+                                            <img class="order-item-score-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            if (summoner.PositionIndice == 1)
+                            {
+                                <div class="order-item-wrapper-1">
+                                    <div class="order-item-wrapper-frame">
+                                        <div class="order-item-info" style="background-color: @formatingData.ColorOrderBackgroundItems">
+                                            <img class="order-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-items-score-display-1">
+                                    <div class="order-items-score-display" style="background: @formatingData.ColorOrderBackgroundScoreItems">
+                                        <div class="order-item-score-info">
+                                            <div class="order-item-score-text">
+                                                @inconText
+                                            </div>
+                                            <img class="order-item-score-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            if (summoner.PositionIndice == 2)
+                            {
+                                <div class="order-item-wrapper-2">
+                                    <div class="order-item-wrapper-frame">
+                                        <div class="order-item-info" style="background-color: @formatingData.ColorOrderBackgroundItems">
+                                            <img class="order-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-items-score-display-2">
+                                    <div class="order-items-score-display" style="background: @formatingData.ColorOrderBackgroundScoreItems">
+                                        <div class="order-item-score-info">
+                                            <div class="order-item-score-text">
+                                                @inconText
+                                            </div>
+                                            <img class="order-item-score-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            if (summoner.PositionIndice == 3)
+                            {
+                                <div class="order-item-wrapper-3">
+                                    <div class="order-item-wrapper-frame">
+                                        <div class="order-item-info" style="background-color: @formatingData.ColorOrderBackgroundItems">
+                                            <img class="order-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-items-score-display-3">
+                                    <div class="order-items-score-display" style="background: @formatingData.ColorOrderBackgroundScoreItems">
+                                        <div class="order-item-score-info">
+                                            <div class="order-item-score-text">
+                                                @inconText
+                                            </div>
+                                            <img class="order-item-score-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            if (summoner.PositionIndice == 4)
+                            {
+                                <div class="order-item-wrapper-4">
+                                    <div class="order-item-wrapper-frame">
+                                        <div class="order-item-info" style="background-color: @formatingData.ColorOrderBackgroundItems">
+                                            <img class="order-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-items-score-display-4">
+                                    <div class="order-items-score-display" style="background: @formatingData.ColorOrderBackgroundScoreItems">
+                                        <div class="order-item-score-info">
+                                            <div class="order-item-score-text">
+                                                @inconText
+                                            </div>
+                                            <img class="order-item-score-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    }
+                }
+
+
+                @*Display chaos items*@
+                @foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+                {
+                    @foreach (var items in summoner.Items)
+                    {
+                        int idItem = items.ItemID;
+                        if (ItemToDisplay(idItem))
+                        {
+                            int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
+                            int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
+                            int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
+                            string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
+                            string inconText = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].Name;
+
+                            if (summoner.PositionIndice == 5)
+                            {
+                                <div class="chaos-item-wrapper-0">
+                                    <div class="chaos-item-wrapper-frame">
+                                        <div class="chaos-item-info" style="background-color: @formatingData.ColorChaosBackgroundItems">
+                                            <img class="chaos-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chaos-items-score-display-0">
+                                    <div class="chaos-items-score-display" style="background: @formatingData.ColorChaosBackgroundScoreItems">
+                                        <div class="chaos-item-score-info">
+                                            <img class="chaos-item-score-img" src="@iconPath" />
+                                            <div class="chaos-item-score-text">
+                                                @inconText
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            if (summoner.PositionIndice == 6)
+                            {
+                                <div class="chaos-item-wrapper-1">
+                                    <div class="chaos-item-wrapper-frame">
+                                        <div class="chaos-item-info" style="background-color: @formatingData.ColorChaosBackgroundItems">
+                                            <img class="chaos-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chaos-items-score-display-1">
+                                    <div class="chaos-items-score-display" style="background: @formatingData.ColorChaosBackgroundScoreItems">
+                                        <div class="chaos-item-score-info">
+                                            <img class="chaos-item-score-img" src="@iconPath" />
+                                            <div class="chaos-item-score-text">
+                                                @inconText
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            if (summoner.PositionIndice == 7)
+                            {
+                                <div class="chaos-item-wrapper-2">
+                                    <div class="chaos-item-wrapper-frame">
+                                        <div class="chaos-item-info" style="background-color: @formatingData.ColorChaosBackgroundItems">
+                                            <img class="chaos-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chaos-items-score-display-2">
+                                    <div class="chaos-items-score-display" style="background: @formatingData.ColorChaosBackgroundScoreItems">
+                                        <div class="chaos-item-score-info">
+                                            <img class="chaos-item-score-img" src="@iconPath" />
+                                            <div class="chaos-item-score-text">
+                                                @inconText
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            if (summoner.PositionIndice == 8)
+                            {
+                                <div class="chaos-item-wrapper-3">
+                                    <div class="chaos-item-wrapper-frame">
+                                        <div class="chaos-item-info" style="background-color: @formatingData.ColorChaosBackgroundItems">
+                                            <img class="chaos-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chaos-items-score-display-3">
+                                    <div class="chaos-items-score-display" style="background: @formatingData.ColorChaosBackgroundScoreItems">
+                                        <div class="chaos-item-score-info">
+                                            <img class="chaos-item-score-img" src="@iconPath" />
+                                            <div class="chaos-item-score-text">
+                                                @inconText
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            if (summoner.PositionIndice == 9)
+                            {
+                                <div class="chaos-item-wrapper-4">
+                                    <div class="chaos-item-wrapper-frame">
+                                        <div class="chaos-item-info" style="background-color: @formatingData.ColorChaosBackgroundItems">
+                                            <img class="chaos-item-img" src="@iconPath" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chaos-items-score-display-4">
+                                    <div class="chaos-items-score-display" style="background: @formatingData.ColorChaosBackgroundScoreItems">
+                                        <div class="chaos-item-score-info">
+                                            <img class="chaos-item-score-img" src="@iconPath" />
+                                            <div class="chaos-item-score-text">
+                                                @inconText
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
                     }
                 }
             }
-            @foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
-            {
-                @foreach (var items in summoner.Items)
-                {
-                    int idItem = items.ItemID;
-                    int indexPatch = OSL_CDragon.CDragon.dataCDragon.Patch.FindIndex(obj => obj.Name == formatingData.DefaultPatch);
-                    int indexRegion = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region.FindIndex(obj => obj.Name == formatingData.DefaultRegion);
-                    int indexPerks = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items.FindIndex(obj => obj.Id == idItem);
-                    string iconPath = OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].IconPath;
 
-                    @if (OSL_CDragon.CDragon.dataCDragon.Patch[indexPatch].Region[indexRegion].RegionContent.Items[indexPerks].To.Count() == 0)
+            @if (formatingData.DisplayLevels)
+            {
+                @*Display order level*@
+                @foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
+                {
+                    @if (summoner.Levels.Level == 6 || summoner.Levels.Level == 11 || summoner.Levels.Level == 16 || summoner.Levels.Level == 18)
                     {
-                        <div class="perks-wrapper">
-                            <div class="perks-wrapper-frame">
-                                <img class="perks-img" src="@iconPath" />
+                        if (summoner.PositionIndice == 0)
+                        {
+                            <div class="order-level-wrapper-0">
+                                <div class="order-level-wrapper-frame">
+                                    <div class="order-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        }
+                        if (summoner.PositionIndice == 1)
+                        {
+                            <div class="order-level-wrapper-1">
+                                <div class="order-level-wrapper-frame">
+                                    <div class="order-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 2)
+                        {
+                            <div class="order-level-wrapper-2">
+                                <div class="order-level-wrapper-frame">
+                                    <div class="order-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 3)
+                        {
+                            <div class="order-level-wrapper-3">
+                                <div class="order-level-wrapper-frame">
+                                    <div class="order-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 4)
+                        {
+                            <div class="order-level-wrapper-4">
+                                <div class="order-level-wrapper-frame">
+                                    <div class="order-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+                @*Display chaos level*@
+                @foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+                {
+                    @if (summoner.Levels.Level == 6 || summoner.Levels.Level == 11 || summoner.Levels.Level == 16 || summoner.Levels.Level == 18)
+                    {
+                        if (summoner.PositionIndice == 5)
+                        {
+                            <div class="chaos-level-wrapper-0">
+                                <div class="chaos-level-wrapper-frame">
+                                    <div class="chaos-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 6)
+                        {
+                            <div class="chaos-level-wrapper-1">
+                                <div class="chaos-level-wrapper-frame">
+                                    <div class="chaos-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 7)
+                        {
+                            <div class="chaos-level-wrapper-2">
+                                <div class="chaos-level-wrapper-frame">
+                                    <div class="chaos-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 8)
+                        {
+                            <div class="chaos-level-wrapper-3">
+                                <div class="chaos-level-wrapper-frame">
+                                    <div class="chaos-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        if (summoner.PositionIndice == 9)
+                        {
+                            <div class="chaos-level-wrapper-4">
+                                <div class="chaos-level-wrapper-frame">
+                                    <div class="chaos-level-text">
+                                        @summoner.Levels.Level
+                                    </div>
+                                </div>
+                            </div>
+                        }
                     }
                 }
             }
 
         </div>
 
+        // <img style="position: absolute" src="/assets/lolspritefile/testInGame.png" />
 
-
-
-
-
-
-
-
-
-        if (formatingData.DisplayDragonTimer)
+        //Display killed dragon
+        if (formatingData.DisplayDragonKill)
         {
-            <div class="dragon-timer">
-                <img class="dragon-timer-frame" src="@formatingData.DragonTimerFrame">
+            <div class="dragon-banner-kill">
+                <div class="dragon-banner-kill-order">
+                    <div>
+                        <img class="dragon-banner-kill-order-banner" src=@formatingData.PictureOrderDragonBanner>
+                    </div>
+                    <div>
+                        @foreach (string dragon in DataProcessing.InGame.gameInformation.Order.Drakes)
+                        {
+                            <img class="dragon-banner-kill-order-icon" src="@GetDragonPath(dragon)">
+                        }
+                        @if (DataProcessing.InGame.gameInformation.Chaos.Drakes.Count() == 4)
+                        {
+                            for (int i = 0; i < DataProcessing.InGame.gameInformation.Order.Drakes.Count() - 4; i++)
+                            {
+                                <img class="dragon-banner-kill-order-icon" src="@GetDragonPath("no_dragon")">
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="dragon-banner-kill-chaos">
+                    <div>
+                        <img class="dragon-banner-kill-chaos-banner" src=@formatingData.PictureChaosDragonBanner>
+                    </div>
+                    <div>
+                        @foreach (string dragon in DataProcessing.InGame.gameInformation.Chaos.Drakes)
+                        {
+                            <img class="dragon-banner-kill-chaos-icon" src="@GetDragonPath(dragon)">
+                        }
+                        @if (DataProcessing.InGame.gameInformation.Order.Drakes.Count() == 4)
+                        {
+                            for (int i = 0; i < 4 - DataProcessing.InGame.gameInformation.Chaos.Drakes.Count(); i++)
+                            {
+                                <img class="dragon-banner-kill-chaos-icon" src="@GetDragonPath("no_dragon")">
+                            }
+                        }
+                    </div>
+                </div>
             </div>
         }
 
+
+
+
+        //Display dragon and elder timer, just elder for the moment
+        if (formatingData.DisplayDragonTimer)
+        {
+            @if (DataProcessing.InGame.gameInformation.Order.Drakes.Count() != 4 && DataProcessing.InGame.gameInformation.Chaos.Drakes.Count() != 4)
+            {
+                <div class="dragon-timer">
+                    <img class="dragon-timer-frame" src="@formatingData.DragonTimerFrame">
+                </div>
+            }
+            else if (DataProcessing.InGame.gameInformation.Order.Drakes.Count() == 4 || DataProcessing.InGame.gameInformation.Chaos.Drakes.Count() == 4)
+            {
+                <div class="dragon-timer">
+                    <img class="dragon-timer-frame" style="background: @formatingData.ColorBaronDragonBackgroundTimerFrame" src="@formatingData.DragonTimerFrame">
+
+                    @if (TimerControl.buffElder != 0)
+                    {
+                        <div class="elder-frame">
+                            <img class="elder-frame elder-frame-blink" src=@formatingData.ElderDragonIcon>
+                        </div>
+                        <div class="elder-timer">
+                            @TimerControl.ConvertToMinute(TimerControl.buffElder)
+                        </div>
+                    }
+                    else if (TimerControl.nextElder > 0)
+                    {
+
+                        <div class="elder-frame">
+                            <img class="elder-frame" src=@formatingData.ElderDragonIcon>
+                        </div>
+                        <div class="elder-timer">
+                            @TimerControl.ConvertToMinute(TimerControl.nextElder)
+                        </div>
+                    }
+                    else if (TimerControl.nextElder == 0)
+                    {
+                        <div class="elder-frame-center">
+                            <img class="elder-frame-center" src=@formatingData.ElderDragonIcon>
+                        </div>
+                    }
+                </div>
+            }
+        }
+
+        //Order Text and score information top
         if (formatingData.DisplayBlueTeam)
         {
             <div class="blue-team">
@@ -185,7 +481,6 @@
                 }
                 @if (formatingData.DisplayBlueTeamText)
                 {
-                    @*<div class="blue-team-banner" style="background-image: url(@formatingData.TeamBanner)"></div>*@
                     <img class="blue-team-banner" src="@formatingData.TeamBanner">
                     <div class="blue-team-text">
                         <div class="blue-team-text-display" style="color: @formatingData.ColorBlueTeamText">
@@ -195,10 +490,8 @@
                 }
             </div>
         }
-        //<div class="red-team-text">
-        //    <img class="red-team-text-banner" src="@formatingData.TeamBanner">
-        //    @formatingData.RedTeamText
-        //</div>
+
+        //Chaos Text and score information top
         if (formatingData.DisplayRedTeam)
         {
             <div class="red-team">
@@ -211,7 +504,6 @@
                         </div>
                     </div>
                 }
-                @*<div class="blue-team-banner" style="background-image: url(@formatingData.TeamBanner)"></div>*@
                 @if (formatingData.DisplayRedTeamText)
                 {
                     <img class="red-team-banner" src="@formatingData.TeamBanner">
@@ -224,14 +516,205 @@
             </div>
         }
 
+        //Display Herald and baron timer
         if (formatingData.DisplayHeraldBaronTimer)
         {
 
             <div class="herald-baron-timer">
-                <img class="herald-baron-timer-frame" src="@formatingData.HeraldBaronTimerFrame">
+                <img class="herald-baron-timer-frame" style="background: @formatingData.ColorBaronDragonBackgroundTimerFrame" src="@formatingData.HeraldBaronTimerFrame">
+
+                @if (TimerControl.nextHerald > 0)
+                {
+
+                    <div class="herald-frame">
+                        <img class="herald-frame" src=@formatingData.HeraldIcon>
+                    </div>
+                    <div class="herald-timer">
+                        @TimerControl.ConvertToMinute(TimerControl.nextHerald)
+                    </div>
+                }
+                else if (TimerControl.nextHerald == 0)
+                {
+                    <div class="herald-frame-center">
+                        <img class="herald-frame-center" src=@formatingData.HeraldIcon>
+                    </div>
+                }
+
+                else if (TimerControl.buffBaron != 0)
+                {
+                    <div class="baron-frame">
+                        <img class="baron-frame baron-frame-blink" src=@formatingData.BaronIcon>
+                    </div>
+                    <div class="baron-timer">
+                        @TimerControl.ConvertToMinute(TimerControl.buffBaron)
+                    </div>
+                }
+                else if (TimerControl.nextBaron > 0)
+                {
+                    <div class="baron-frame">
+                        <img class="baron-frame" src=@formatingData.BaronIcon>
+                    </div>
+                    <div class="baron-timer">
+                        @TimerControl.ConvertToMinute(TimerControl.nextBaron)
+                    </div>
+                }
+                else if (TimerControl.nextBaron == 0)
+                {
+                    <div class="baron-frame-center">
+                        <img class="baron-frame-center" src=@formatingData.BaronIcon>
+                    </div>
+                }
             </div>
         }
 
+        // Display inhibitor
+        if (formatingData.DisplayInhibKill)
+        {
+            if (TimerControl.inhibOrderTop != 0 || TimerControl.inhibOrderMid != 0 || TimerControl.inhibOrderBot != 0 || TimerControl.inhibChaosTop != 0 || TimerControl.inhibChaosMid != 0 || TimerControl.inhibChaosBot != 0)
+            {
+                <div class="inhib-frame">
+                    <div class="inhib-background-gradiant" style="background-image: linear-gradient(180deg, #0b849e 0%, #be1e37 100%)">
+                        <div class="inhib-background-color" style="background-image: linear-gradient( to right, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.72) 50%, rgba(0, 0, 0, 0.83) 100% )">
+                        </div>
+                        <div class="inhib-border" style="border: 2px solid #c99d53"></div>
+                    </div>
+                    @* Order inhibitor *@
+                    <div class="order-inhib-frame">
+                        <div class="order-inhib-frame-picture">
+                            @if (TimerControl.inhibOrderTop == 0)
+                            {
+                                <img class="order-inhib-frame-picture-top" src=@formatingData.PositionOrderTop>
+                            }
+                            else
+                            {
+                                <img class="order-inhib-frame-picture-top" style="opacity: 0.5" src=@formatingData.PositionOrderTop>
+                            }
+                            @if (TimerControl.inhibOrderMid == 0)
+                            {
+                                <img class="order-inhib-frame-picture-mid" src=@formatingData.PositionOrderMid>
+                            }
+                            else
+                            {
+                                <img class="order-inhib-frame-picture-mid" style="opacity: 0.5" src=@formatingData.PositionOrderMid>
+                            }
+                            @if (TimerControl.inhibOrderBot == 0)
+                            {
+                                <img class="order-inhib-frame-picture-bot" src=@formatingData.PositionOrderBottom>
+                            }
+                            else
+                            {
+                                <img class="order-inhib-frame-picture-bot" style="opacity: 0.5" src=@formatingData.PositionOrderBottom>
+                            }
+                        </div>
+                        <div class="order-inhib-frame-timer">
+                            <div class="order-inhib-frame-timer-top">
+                                @if (TimerControl.inhibOrderTop != 0)
+                                {
+                                    @TimerControl.ConvertToMinute(TimerControl.inhibOrderTop)
+                                }
+                                else
+                                {
+                                    string displayForZero = "-";
+                                    @displayForZero
+                                }
+                            </div>
+                            <div class="order-inhib-frame-timer-mid">
+                                @if (TimerControl.inhibOrderMid != 0)
+                                {
+                                    @TimerControl.ConvertToMinute(TimerControl.inhibOrderMid)
+                                }
+                                else
+                                {
+                                    string displayForZero = "-";
+                                    @displayForZero
+                                }
+                            </div>
+                            <div class="order-inhib-frame-timer-bot">
+                                @if (TimerControl.inhibOrderBot != 0)
+                                {
+                                    @TimerControl.ConvertToMinute(TimerControl.inhibOrderBot)
+                                }
+                                else
+                                {
+                                    string displayForZero = "-";
+                                    @displayForZero
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    @* Picture inhibitor *@
+                    <img class="center-inhib-picture" src=@formatingData.InhibIcon>
+
+                    @* Chaos inhibitor *@
+                    <div class="chaos-inhib-frame">
+                        <div class="chaos-inhib-frame-picture">
+                            @if (TimerControl.inhibChaosTop == 0)
+                            {
+                                <img class="chaos-inhib-frame-picture-top" src=@formatingData.PositionChaosTop>
+                            }
+                            else
+                            {
+                                <img class="chaos-inhib-frame-picture-top" style="opacity: 0.5" src=@formatingData.PositionChaosTop>
+                            }
+                            @if (TimerControl.inhibChaosMid == 0)
+                            {
+                                <img class="chaos-inhib-frame-picture-mid" src=@formatingData.PositionChaosMid>
+                            }
+                            else
+                            {
+                                <img class="chaos-inhib-frame-picture-mid" style="opacity: 0.5" src=@formatingData.PositionChaosMid>
+                            }
+                            @if (TimerControl.inhibChaosBot == 0)
+                            {
+                                <img class="chaos-inhib-frame-picture-bot" src=@formatingData.PositionChaosBottom>
+                            }
+                            else
+                            {
+                                <img class="chaos-inhib-frame-picture-bot" style="opacity: 0.5" src=@formatingData.PositionChaosBottom>
+                            }
+                        </div>
+                        <div class="chaos-inhib-frame-timer">
+                            <div class="chaos-inhib-frame-timer-top">
+                                @if (TimerControl.inhibChaosTop != 0)
+                                {
+                                    @TimerControl.ConvertToMinute(TimerControl.inhibChaosTop)
+                                }
+                                else
+                                {
+                                    string displayForZero = "-";
+                                    @displayForZero
+                                }
+                            </div>
+                            <div class="chaos-inhib-frame-timer-mid">
+                                @if (TimerControl.inhibChaosMid != 0)
+                                {
+                                    @TimerControl.ConvertToMinute(TimerControl.inhibChaosMid)
+                                }
+                                else
+                                {
+                                    string displayForZero = "-";
+                                    @displayForZero
+                                }
+                            </div>
+                            <div class="chaos-inhib-frame-timer-bot">
+                                @if (TimerControl.inhibChaosBot != 0)
+                                {
+                                    @TimerControl.ConvertToMinute(TimerControl.inhibChaosBot)
+                                }
+                                else
+                                {
+                                    string displayForZero = "-";
+                                    @displayForZero
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+
+        //Order player frame behind hp/mana/...
         if (formatingData.DisplayBluePlayerFrame)
         {
 
@@ -247,6 +730,161 @@
             </div>
         }
 
+
+        if (formatingData.DisplayBaronElderBuff)
+        {
+            //Baron and elder Buff display Order
+            <div class="order-buff">
+                <div class="order-buff">
+                    @foreach (var summoner in DataProcessing.InGame.gameInformation.Order.Summoners)
+                    {
+                        if (summoner.BaronBuff)
+                        {
+                            if (summoner.PositionIndice == 0)
+                            {
+                                <div class="order-baron-elder-buff-animation-0">
+                                    <img class="order-baron-buff" src="@formatingData.BaronBuffIcon>
+                </div>
+                }
+                else if (summoner.PositionIndice == 1)
+                {
+                <div class="order-baron-elder-buff-animation-1">
+                                    <img class="order-baron-buff" src=@formatingData.BaronBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 2)
+                            {
+                                <div class="order-baron-elder-buff-animation-2">
+                                    <img class="order-baron-buff" src=@formatingData.BaronBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 3)
+                            {
+                                <div class="order-baron-elder-buff-animation-3">
+                                    <img class="order-baron-buff" src=@formatingData.BaronBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 4)
+                            {
+                                <div class="order-baron-elder-buff-animation-4">
+                                    <img class="order-baron-buff" src=@formatingData.BaronBuffIcon>
+                                </div>
+                            }
+                        }
+                        if (summoner.ElderBuff)
+                        {
+                            if (summoner.PositionIndice == 0)
+                            {
+                                <div class="order-baron-elder-buff-animation-0">
+                                    <img class="order-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 1)
+                            {
+                                <div class="order-baron-elder-buff-animation-1">
+                                    <img class="order-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 2)
+                            {
+                                <div class="order-baron-elder-buff-animation-2">
+                                    <img class="order-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 3)
+                            {
+                                <div class="order-baron-elder-buff-animation-3">
+                                    <img class="order-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 4)
+                            {
+                                <div class="order-baron-elder-buff-animation-4">
+                                    <img class="order-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+            //Baron and elder Buff display Chaos
+            <div class="chaos-buff">
+                <div class="chaos-buff">
+                    @foreach (var summoner in DataProcessing.InGame.gameInformation.Chaos.Summoners)
+                    {
+                        if (summoner.BaronBuff)
+                        {
+                            if (summoner.PositionIndice == 5)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-0">
+                                    <img class="chaos-baron-buff" src=@formatingData.BaronBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 6)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-1">
+                                    <img class="chaos-baron-buff" src=@formatingData.BaronBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 7)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-2">
+                                    <img class="chaos-baron-buff" src=@formatingData.BaronBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 8)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-3">
+                                    <img class="chaos-baron-buff" src=@formatingData.BaronBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 9)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-4">
+                                    <img class="chaos-baron-buff" src=@formatingData.BaronBuffIcon>
+                                </div>
+                            }
+                        }
+                        if (summoner.ElderBuff)
+                        {
+                            if (summoner.PositionIndice == 5)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-0">
+                                    <img class="chaos-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 6)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-1">
+                                    <img class="chaos-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 7)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-2">
+                                    <img class="chaos-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 8)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-3">
+                                    <img class="chaos-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                            else if (summoner.PositionIndice == 9)
+                            {
+                                <div class="chaos-baron-elder-buff-animation-4">
+                                    <img class="chaos-elder-buff" src=@formatingData.ElderBuffIcon>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        }
+
+
+        //Chaos player frame behind hp/mana/...
         if (formatingData.DisplayRedPlayerFrame)
         {
             <div class="red-player">
@@ -260,12 +898,16 @@
                 }
             </div>
         }
+
+        //Bottom frame for display logo/cam/...
         if (formatingData.DisplayLeftInfo)
         {
             <div class="left-info">
                 <img class="left-info-all" src="@formatingData.LeftInfoFrame">
             </div>
         }
+
+        //Bottom frame for display logo/cam/...
         if (formatingData.DisplayRightInfo)
         {
             <div class="right-info">
@@ -275,6 +917,53 @@
     }
 
 </div>
+
+
+<style>
+    @@keyframes order-item-slide-score {
+        0% {
+            border: 2px solid @formatingData.ColorOrderAnimationBorderScoreItems;
+            height: 0px;
+        }
+
+        7% {
+            border: 2px solid @formatingData.ColorOrderAnimationBorderScoreItems;
+            height: 43px;
+        }
+
+        93% {
+            border: 2px solid @formatingData.ColorOrderAnimationBorderScoreItems;
+            height: 43px;
+        }
+
+        99% {
+            border: 2px solid @formatingData.ColorOrderAnimationBorderScoreItems;
+            height: 0px;
+        }
+    }
+
+    @@keyframes chaos-item-slide-score {
+        0% {
+            border: 2px solid @formatingData.ColorChaosAnimationBorderScoreItems;
+            height: 0px;
+        }
+
+        7% {
+            border: 2px solid @formatingData.ColorChaosAnimationBorderScoreItems;
+            height: 43px;
+        }
+
+        93% {
+            border: 2px solid @formatingData.ColorChaosAnimationBorderScoreItems;
+            height: 43px;
+        }
+
+        99% {
+            border: 2px solid @formatingData.ColorChaosAnimationBorderScoreItems;
+            height: 0px;
+        }
+    }
+</style>
 
 @code {
     private System.Timers.Timer timer = new(1000);

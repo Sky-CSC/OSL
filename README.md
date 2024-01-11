@@ -37,7 +37,7 @@ Applications use various APIs to collect information about the game, champions, 
 **[In Game :](https://sky-csc.github.io/OSL/web/index.html#information-display-with-overlay-in-game)**
 
 [With riot overlay :](https://sky-csc.github.io/OSL/web/index.html#with-riot-overlay-)
-- 3 view
+- 4 view
 - Team/Dragon/Baron frame
 - Team name
 - Number of victory/lose teams
