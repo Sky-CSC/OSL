@@ -38,17 +38,19 @@ Applications use various APIs to collect information about the game, champions, 
 
 [With riot overlay :](https://sky-csc.github.io/OSL/web/index.html#with-riot-overlay-)
 - 4 view
-- Team/Dragon/Baron frame
+- Team/Dragon/Baron/Elder frame
 - Team name
 - Number of victory/lose teams
 - Frame for video/logo/player picture ...
+- Items buy
+- Dragon kill
 
 **[End Game :](https://sky-csc.github.io/OSL/web/index.html#information-display-with-overlay-in-end-game)**
 - 3 view
 - Team name
 - Team score
 - Team win loose
-- Damage to champion
+- Général information : assists, barracks killed, champions killed, gold earned, largest critical strike, largest killing spree, largest multi kill, level, magic damage dealt player, magic damage dealt to champions, magic damage taken, minions killed, num deaths, physical damage dealt player, physical damage dealt to champions, physical damage taken, total damage dealt, total damage dealt to buildings, total damage dealt to champions, total damage dealt to objectives, total damage dealt to turrets, total damage self mitigated, total damage shielded on teammates, total damage taken, total heal, total heal on teammates, total time crowd control dealt, true damage dealt player, true damage dealt to champions, true damage taken, turrets killed, vision score, ward killed, ward placed
 - Bans
 - KDA/Gold/Tower/Dragon/Elder Dragon/Herald/Baron
 - Gold Diff
@@ -117,21 +119,97 @@ http://ip:4141/champselect/view3 and/or http://ip:4141/champselect/view4 as a br
 13. Have fun
 
 # **Roadmap**
+**2.0.0** version are planned for April 2024 (end Q1 beginning Q2)
 
-**In Game**
-- Read in memory 
-- Get game information (items, events ...) without reading in memory  **(In progress !!)**
-- Improved customization
+### **OSL-CDragon**
+- Refactoring code (planned for 2.0.0)
+- Fix bugs, download and display errors (planned for 2.0.0)
+- No other features planned yet
 
-**Champ Select :**
-- Improved customization
+### **OSL-Client**
+- Refactoring code (planned for 2.0.0)
+- No other features planned yet
 
-**End Game**
-- Improved customization
+### **OSL-Common**
+- Refactoring code (planned for 2.0.0)
+- No other features planned yet
 
-**Runes**
-- Create view 2
-- Improved customization
+### **OSL-Docfx**
+- Write and enhanced documentation for 2.0.0
+
+### **OSL-LcuApi**
+- Refactoring code (planned for 2.0.0)
+- Cover all LcuApi request (not planned yet)
+
+### **OSL-LiveEvents**
+- Refactoring code (planned for 2.0.0)
+- No other features planned yet
+
+### **OSL-ReplayApi**
+- Refactoring code (planned for 2.0.0)
+- Cover all ReplayApi request (not planned yet)
+
+### **OSL-Web**
+- Refactoring code (planned for 2.0.0)
+- Enhanced web interface (planned for 2.0.0)
+
+- **CDragon**
+    - Manuel download patch and language (planned for 2.0.0)
+    - Manual select patch and language (planned for 2.0.0)
+    - Enhanced web interface (planned for 2.0.0)
+
+- **Champ Select**
+    - Enhanced customization web interface (planned for 2.0.0)
+    - Display team logo (planned for 2.0.0)
+    - Fix bugs, square, splash art not display (planned for 2.0.0)
+    - Enhancing existing views (planned for 2.0.0)
+    - Display stat winrate and pick champ (not planned yet)
+    - New view (not planned yet)
+
+- **Config**
+    - Enhanced web interface (planned for 2.0.0)
+
+- **End Game**
+    - Enhanced customization web interface (planned for 2.0.0)
+    - Display team logo on overlay (planned for 2.0.0)
+    - Number of Voidgrubs killed (planned for 2.0.0)
+    - Enhancing existing views (planned for 2.0.0)
+
+- **In Game**
+    - Read information in memory (not planned yet, wait Riot Vanguard information)
+        - HP/Mana/Dragon/Gold/Dega in fight/Champion stacks/XP/Level ...
+    - Enhanced customization web interface (planned for 2.0.0)
+    - Enhancing existing views (planned for 2.0.0)
+        - Voidgrubs
+            - Timer (planned for 2.0.0)
+            - Number killed per team (planned for 2.0.0)
+            - Logo (planned for 2.0.0)
+            - Add your own logo (not planned yet)
+        - Herald
+            - Change timer (planned for 2.0.0)
+            - Change default logo (planned for 2.0.0)
+            - Add your own logo (not planned yet)
+        - Baron
+            - Change default logo for each baron (planned for 2.0.0)
+            - Add your own logo (not planned yet)
+        - Dragon
+            - For fire add ash (planned for 2.0.0)
+            - Add your own logos (not planned yet)
+        - Items
+            - Update list and fix bugs (planned for 2.0.0)
+        - Display team logo (planned for 2.0.0)
+        - Win lose display (planned for 2.0.0)
+    - Add multiple overlay types (planned for 2.0.0)
+
+- **Runes**
+    - Enhanced customization web interface (planned for 2.0.0) 
+    - Enhancing existing views (planned for 2.0.0)
+    - Add multiple overlay types (not planned yet)
+
+### **OSL-WebApiRiot**
+- Refactoring code (planned for 2.0.0)
+- Cover all WebApiRiot request (not planned yet)
+
 
 # Thanks to these projets and community
 ### [Floh22](https://github.com/floh22)
