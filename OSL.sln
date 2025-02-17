@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-Overlay", "OSL-Overlay\OSL-Overlay.csproj", "{276E0A66-DB49-40D2-81E6-24653DA83EFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-Server", "OSL-Server\OSL-Server.csproj", "{95920E30-B28D-45C7-BD28-7748B7C840AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-CDragon", "OSL-CDragon\OSL-CDragon.csproj", "{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-Utils", "OSL-Utils\OSL-Utils.csproj", "{9DC25959-5215-48AE-955D-E302859A3960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-RGDP", "OSL-RGDP\OSL-RGDP.csproj", "{F574D5AA-A11E-4813-81CD-7784776BEEA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-Lcu", "OSL-Lcu\OSL-Lcu.csproj", "{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-ReplayApi", "OSL-ReplayApi\OSL-ReplayApi.csproj", "{FA4C4F87-29BB-4DB4-B038-B42A1F763F03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{276E0A66-DB49-40D2-81E6-24653DA83EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276E0A66-DB49-40D2-81E6-24653DA83EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276E0A66-DB49-40D2-81E6-24653DA83EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276E0A66-DB49-40D2-81E6-24653DA83EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95920E30-B28D-45C7-BD28-7748B7C840AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95920E30-B28D-45C7-BD28-7748B7C840AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95920E30-B28D-45C7-BD28-7748B7C840AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95920E30-B28D-45C7-BD28-7748B7C840AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC25959-5215-48AE-955D-E302859A3960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC25959-5215-48AE-955D-E302859A3960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC25959-5215-48AE-955D-E302859A3960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC25959-5215-48AE-955D-E302859A3960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F574D5AA-A11E-4813-81CD-7784776BEEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F574D5AA-A11E-4813-81CD-7784776BEEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F574D5AA-A11E-4813-81CD-7784776BEEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F574D5AA-A11E-4813-81CD-7784776BEEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA4C4F87-29BB-4DB4-B038-B42A1F763F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4C4F87-29BB-4DB4-B038-B42A1F763F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4C4F87-29BB-4DB4-B038-B42A1F763F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4C4F87-29BB-4DB4-B038-B42A1F763F03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
