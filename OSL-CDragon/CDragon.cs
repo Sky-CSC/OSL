@@ -45,9 +45,10 @@ namespace OSL_CDragon
                 _data.Patchs[_indexPatch].Regions[_indexRegion].Champions = champion.Download();
                 Items items = new(_info);
                 _data.Patchs[_indexPatch].Regions[_indexRegion].Items = items.Download();
-                //SummonerSpells Download
-                //Perks Download
-                //PerkStyles Download
+                Perks perks = new(_info);
+                _data.Patchs[_indexPatch].Regions[_indexRegion].Perks = perks.Download();
+                SummonerSpells summonerSpell = new(_info);
+                _data.Patchs[_indexPatch].Regions[_indexRegion].SummonerSpells = summonerSpell.Download();
 
                 // Save data in local file
                 string saveData = JsonConvert.SerializeObject(_data, Formatting.Indented);
@@ -69,7 +70,7 @@ namespace OSL_CDragon
             string? data = OSL_Utils.File.Read("./wwwroot/assets/_data.json");
             if (data != null)
             {
-                _data = JsonConvert.DeserializeObject<Data>(data);
+                _data = JsonConvert.DeserializeObject<Data>(data) ?? new Data();
                 _logger.Log(LoggingLevel.INFO, "LoadData()", "Data loaded");
                 return true;
             }
@@ -127,6 +128,10 @@ namespace OSL_CDragon
                         }
                         _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Region {pathRegionName} are already downloaded");
                         // Check all champions directory
+                        if (region.Champions.Count == 0)
+                        {
+                            return false;
+                        }
                         foreach (var champion in region.Champions)
                         {
                             if (champion.Id != -1)
@@ -148,6 +153,11 @@ namespace OSL_CDragon
                                 }
                             }
                         }
+
+                        if (region.Items.Count == 0)
+                        {
+                            return false;
+                        }
                         foreach (var item in region.Items)
                         {
                             if (!OSL_Utils.File.Exist(item.IconPath))
@@ -156,6 +166,33 @@ namespace OSL_CDragon
                                 return false;
                             }
                             _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Item {item.IconPath} exist");
+                        }
+
+                        if (region.Perks.Count == 0)
+                        {
+                            return false;
+                        }
+                        foreach (var perk in region.Perks)
+                        {
+                            if (!OSL_Utils.File.Exist(perk.IconPath))
+                            {
+                                _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Perk {perk.IconPath} not exist");
+                                return false;
+                            }
+                            _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Perk {perk.IconPath} exist");
+                        }
+                        if (region.SummonerSpells.Count == 0)
+                        {
+                            return false;
+                        }
+                        foreach (var summonerSpell in region.SummonerSpells)
+                        {
+                            if (!OSL_Utils.File.Exist(summonerSpell.IconPath))
+                            {
+                                _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Summoner spell {summonerSpell.IconPath} not exist");
+                                return false;
+                            }
+                            _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Summoner spell {summonerSpell.IconPath} exist");
                         }
                     }
                     _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Latest patch {patch.Number} are already downloaded");
@@ -252,7 +289,7 @@ namespace OSL_CDragon
         {
             try
             {
-                _info.AssetsDir = OSL_Utils.Path.Combine("./wwwroot/assets/", _info.PatchShort, _info.Region);
+                _info.AssetsDir = OSL_Utils.Path.Combine("./wwwroot/assets/", _info.ShortPatch, _info.Region);
                 OSL_Utils.Directory.Create(_info.AssetsDir);
                 OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(_info.AssetsDir, "champions"));
                 OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(_info.AssetsDir, "items"));
@@ -279,8 +316,8 @@ namespace OSL_CDragon
             FindIndexRegion();
             if (_indexRegion != -1)
             {
-                _logger.Log(LoggingLevel.WARN, "CheckPatchRegion()", $"Patch {_info.PatchShort} and {_info.Region} already exist");
-                return false;
+                _logger.Log(LoggingLevel.WARN, "CheckPatchRegion()", $"Patch {_info.ShortPatch} and {_info.Region} already exist");
+                return true;
             }
 
             if (DownloadPatchNumber())
@@ -303,7 +340,7 @@ namespace OSL_CDragon
         /// <returns>True if patch number is downloaded</returns>
         private bool DownloadPatchNumber()
         {
-            Uri urlPatchContentMetadata = new($"https://raw.communitydragon.org/{_info.Patch}/{_info.ContentMetadata}.json");
+            Uri urlPatchContentMetadata = new($"https://raw.communitydragon.org/{_info.Patch}/content-metadata.json");
             try
             {
                 // Download the patch content metadata
@@ -322,7 +359,7 @@ namespace OSL_CDragon
                     _info.Patch = version.Version;
                     string[] shortPatch = _info.Patch.Split(".");
                     // Update the short patch number
-                    _info.PatchShort = shortPatch[0] + "." + shortPatch[1];
+                    _info.ShortPatch = shortPatch[0] + "." + shortPatch[1];
                     // Update the date
                     _info.Date = DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss");
                     _logger.Log(LoggingLevel.INFO, "DownloadPatchNumber()", $"New patch number is : {_info.Patch}");
@@ -348,12 +385,12 @@ namespace OSL_CDragon
             _indexPatch = -1;
             try
             {
-                _indexPatch = _data.Patchs.FindIndex(x => x.ShortNumber == _info.PatchShort);
-                _logger.Log(LoggingLevel.INFO, "FindIndexPatch()", $"Index of patch {_info.PatchShort} is {_indexPatch}");
+                _indexPatch = _data.Patchs.FindIndex(x => x.ShortNumber == _info.ShortPatch);
+                _logger.Log(LoggingLevel.INFO, "FindIndexPatch()", $"Index of patch {_info.ShortPatch} is {_indexPatch}");
             }
             catch
             {
-                _logger.Log(LoggingLevel.WARN, "FindIndexPatch()", $"Patch {_info.PatchShort} not found");
+                _logger.Log(LoggingLevel.WARN, "FindIndexPatch()", $"Patch {_info.ShortPatch} not found");
             }
         }
 
@@ -370,7 +407,7 @@ namespace OSL_CDragon
             }
             catch
             {
-                _logger.Log(LoggingLevel.WARN, "FindIndexRegion()", $"Region {_info.PatchShort} in Patch {_info.Patch} not found");
+                _logger.Log(LoggingLevel.WARN, "FindIndexRegion()", $"Region {_info.ShortPatch} in Patch {_info.Patch} not found");
             }
         }
 
@@ -402,14 +439,14 @@ namespace OSL_CDragon
         {
             try
             {
-                _data.Patchs.Add(new Patch(_info.Patch, _info.PatchShort));
-                _logger.Log(LoggingLevel.INFO, "AddPatch()", $"Patch {_info.Patch}, {_info.PatchShort} added");
+                _data.Patchs.Add(new Patch(_info.Patch, _info.ShortPatch));
+                _logger.Log(LoggingLevel.INFO, "AddPatch()", $"Patch {_info.Patch}, {_info.ShortPatch} added");
                 FindIndexPatch();
                 return true;
             }
             catch
             {
-                _logger.Log(LoggingLevel.ERROR, "AddPatch()", $"Patch {_info.PatchShort} not added");
+                _logger.Log(LoggingLevel.ERROR, "AddPatch()", $"Patch {_info.ShortPatch} not added");
                 return false;
             }
         }
