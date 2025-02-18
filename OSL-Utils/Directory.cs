@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OSL_Utils
+﻿namespace OSL_Utils
 {
+    /// <summary>
+    /// Provides methods for manipulating directories.
+    /// </summary>
     public static class Directory
     {
+        /// <summary>
+        /// Logger for the class.
+        /// </summary>
         private static readonly Logger _logger = new("Directory");
 
+        /// <summary>
+        /// Create a directory.
+        /// </summary>
+        /// <param name="path">Path</param>
+        /// <returns>True if direcotry is created</returns>
         public static bool Create(string path)
         {
             try
@@ -25,6 +30,11 @@ namespace OSL_Utils
             }
         }
 
+        /// <summary>
+        /// Check if a directory exist.
+        /// </summary>
+        /// <param name="path">Path</param>
+        /// <returns>True if directory exist</returns>
         public static bool Exist(string path)
         {
             try
