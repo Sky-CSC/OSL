@@ -24,8 +24,8 @@ namespace OSL_Utils
         /// <summary>
         /// Download a string from a URL.
         /// </summary>
-        /// <param name="url"></param>
-        /// <returns></returns>
+        /// <param name="url">Url</param>
+        /// <returns>String read</returns>
         public async Task<string?> StringAsync(Uri url)
         {
             try
@@ -41,6 +41,11 @@ namespace OSL_Utils
             }
         }
 
+        /// <summary>
+        /// Download a byte array from a URL.
+        /// </summary>
+        /// <param name="url">Url</param>
+        /// <returns>Bytes read</returns>
         public async Task<byte[]?> FileAsync(Uri url)
         {
             try
