@@ -12,7 +12,7 @@
         /// <summary>
         /// The short version of the patch current used.
         /// </summary>
-        public string PatchShort { get; set; }
+        public string ShortPatch { get; set; }
         /// <summary>
         /// A value indicating whether the patch is the latest.
         /// </summary>
@@ -25,30 +25,6 @@
         /// The date of the last update.
         /// </summary>
         public string Date { get; set; }
-        /// <summary>
-        /// The url info of champion summary.
-        /// </summary>
-        public string ChampionSummary { get; set; }
-        /// <summary>
-        /// The url info of items.
-        /// </summary>
-        public string Items { get; set; }
-        /// <summary>
-        /// The url info of summoner spells.
-        /// </summary>
-        public string SummonerSpells { get; set; }
-        /// <summary>
-        /// The url info of perks.
-        /// </summary>
-        public string Perks { get; set; }
-        /// <summary>
-        /// The url info of perkstyles.
-        /// </summary>
-        public string Perkstyles { get; set; }
-        /// <summary>
-        /// The url info of content metadata.
-        /// </summary>
-        public string ContentMetadata { get; set; }
         /// <summary>
         /// A value indicating whether download all skin.
         /// </summary>
@@ -63,16 +39,10 @@
         public Info()
         {
             Patch = "latest";
-            PatchShort = "";
+            ShortPatch = "";
             IsLatest = true;
             Region = "fr_fr";
             Date = DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss");
-            ChampionSummary = "champion-summary";
-            Items = "items";
-            SummonerSpells = "summoner-spells";
-            Perks = "perks";
-            Perkstyles = "perkstyles";
-            ContentMetadata = "content-metadata";
             DownloadAllSkin = false;
             AssetsDir = "";
         }
