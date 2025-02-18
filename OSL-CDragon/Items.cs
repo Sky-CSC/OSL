@@ -31,10 +31,10 @@ namespace OSL_CDragon
         /// <summary>
         /// Download items data.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>list of items</returns>
         internal List<Item> Download()
         {
-            Uri urlItems = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/{_info.Items}.json");
+            Uri urlItems = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/items.json");
             string? items = _download.StringAsync(urlItems).Result;
             if (items != null)
             {
@@ -62,14 +62,14 @@ namespace OSL_CDragon
         }
 
         /// <summary>
-        /// Download item icons2d asset.
+        /// Download item icons2d assets.
         /// </summary>
-        /// <param name="itemCDragon"></param>
-        /// <returns></returns>
+        /// <param name="itemCDragon">CDragon item info</param>
+        /// <returns>Item</returns>
         private Item ItemAssets(Schema.CDragon.Item itemCDragon)
         {
             string itemName = itemCDragon.IconPath.Split("/Icons2D/")[^1].ToLower();
-            Uri urlItem = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/{itemName}");
+            Uri urlItem = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/{itemName}");
             Item item = new(itemCDragon.Id, itemCDragon.Name, DownloadFile(urlItem, itemCDragon.Id, "items"), itemCDragon.From, itemCDragon.To);
             return item;
         }
@@ -80,7 +80,7 @@ namespace OSL_CDragon
         /// <param name="url">url</param>
         /// <param name="id">item id</param>
         /// <param name="directory">directory how to save files</param>
-        /// <returns></returns>
+        /// <returns>Item file path</returns>
         private string DownloadFile(Uri url, int id, string directory)
         {
             byte[]? data = _download.FileAsync(url).Result;
