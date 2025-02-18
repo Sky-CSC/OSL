@@ -6,10 +6,22 @@ using System.Threading.Tasks;
 
 namespace OSL_Utils
 {
+    /// <summary>
+    /// Provides methods for manipulating files.
+    /// </summary>
     public static class File
     {
+        /// <summary>
+        /// Logger for the class.
+        /// </summary>
         private static readonly Logger _logger = new("File");
 
+        /// <summary>
+        /// Write string content to a file.
+        /// </summary>
+        /// <param name="filePath">File path</param>
+        /// <param name="content">String to write</param>
+        /// <returns>True if write is ok</returns>
         public static bool Write(string filePath, string content)
         {
             try
@@ -25,6 +37,12 @@ namespace OSL_Utils
             return false;
         }
 
+        /// <summary>
+        /// Write byte content to a file.
+        /// </summary>
+        /// <param name="filePath">File Path</param>
+        /// <param name="content">Byte to write</param>
+        /// <returns>True if write is ok</returns>
         public static bool Write(string filePath, byte[] content)
         {
             try
@@ -40,6 +58,11 @@ namespace OSL_Utils
             return false;
         }
 
+        /// <summary>
+        /// Read data from a file.
+        /// </summary>
+        /// <param name="filePath">File path</param>
+        /// <returns>Content</returns>
         public static string? Read(string filePath)
         {
             try
@@ -55,6 +78,11 @@ namespace OSL_Utils
             return null;
         }
 
+        /// <summary>
+        /// Check if a file exist.
+        /// </summary>
+        /// <param name="filePath">File path</param>
+        /// <returns>True if file exist</returns>
         public static bool Exist(string filePath)
         {
             try
