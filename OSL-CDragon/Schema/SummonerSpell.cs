@@ -8,7 +8,7 @@
         /// <summary>
         /// The unique identifier of the summoner spell.
         /// </summary>
-        public int Id { get; set; }
+        public uint Id { get; set; }
         /// <summary>
         /// The name of the summoner spell.
         /// </summary>
@@ -22,9 +22,18 @@
         /// </summary>
         public SummonerSpell()
         {
-            Id = -42;
+            Id = 0;
             Name = string.Empty;
             IconPath = string.Empty;
+        }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SummonerSpell"/> struct with id, name and icon path.
+        /// </summary>
+        public SummonerSpell(uint id, string name, string iconPath)
+        {
+            Id = id;
+            Name = name;
+            IconPath = iconPath;
         }
     }
 }
