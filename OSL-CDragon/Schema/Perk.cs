@@ -26,5 +26,11 @@
             Name = string.Empty;
             IconPath = string.Empty;
         }
+        public Perk(int id, string name, string iconPath)
+        {
+            Id = id;
+            Name = name;
+            IconPath = iconPath;
+        }
     }
 }
