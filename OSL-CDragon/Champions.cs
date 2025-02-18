@@ -39,7 +39,7 @@ namespace OSL_CDragon
         /// <returns>List of champion</returns>
         internal List<Schema.Champion> Download()
         {
-            Uri urlChampions = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/{_info.ChampionSummary}.json");
+            Uri urlChampions = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champion-summary.json");
             string? champions = _download.StringAsync(urlChampions).Result;
             if (champions != null)
             {
@@ -98,7 +98,7 @@ namespace OSL_CDragon
                 Sound();
             }
 
-            Uri urlChampion = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champions/{_champion.Id}.json");
+            Uri urlChampion = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champions/{_champion.Id}.json");
             string? champ = _download.StringAsync(urlChampion).Result;
             if (champ != null)
             {
@@ -130,7 +130,7 @@ namespace OSL_CDragon
         /// </summary>
         private void SquarePortrait()
         {
-            Uri squarePortrait = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/{_champion.Id}.png");
+            Uri squarePortrait = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/{_champion.Id}.png");
             _champion.SquarePortraitPath = DownloadFile(squarePortrait, _champion.Id, $"champions/{_champion.Id}", "default-square.png");
         }
 
@@ -139,9 +139,9 @@ namespace OSL_CDragon
         /// </summary>
         private void Sound()
         {
-            Uri soundChoose = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champion-choose-vo/{_champion.Id}.ogg");
-            Uri soundBan = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champion-ban-vo/{_champion.Id}.ogg");
-            Uri soundSfx = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/default/v1/champion-sfx-audios/{_champion.Id}.ogg");
+            Uri soundChoose = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champion-choose-vo/{_champion.Id}.ogg");
+            Uri soundBan = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champion-ban-vo/{_champion.Id}.ogg");
+            Uri soundSfx = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/v1/champion-sfx-audios/{_champion.Id}.ogg");
 
             Sound sound = new();
             try
@@ -164,10 +164,10 @@ namespace OSL_CDragon
         /// <param name="skinCD">CDragon information of skin</param>
         private void Skin(Schema.CDragon.Skin skinCD)
         {
-            Uri splashe = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.SplashPath)}");
-            Uri splasheUncentered = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.UncenteredSplashPath)}");
-            Uri tile = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.TilePath)}");
-            Uri loadScreen = new($"https://raw.communitydragon.org/{_info.PatchShort}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.LoadScreenPath)}");
+            Uri splashe = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.SplashPath)}");
+            Uri splasheUncentered = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.UncenteredSplashPath)}");
+            Uri tile = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.TilePath)}");
+            Uri loadScreen = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.LoadScreenPath)}");
 
             Schema.Skin skin = new(skinCD.Id, skinCD.IsBase);
             try
