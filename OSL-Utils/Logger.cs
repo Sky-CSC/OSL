@@ -1,5 +1,8 @@
 ﻿namespace OSL_Utils
 {
+    /// <summary>
+    /// Logger class for logging messages
+    /// </summary>
     public class Logger
     {
         private static readonly Mutex mut = new();
