@@ -27,12 +27,12 @@ namespace OSL_Utils
             try
             {
                 System.IO.File.WriteAllText(filePath, content);
-                _logger.Log(LoggingLevel.INFO, "Write()", $"Data write un file {filePath} successfully");
+                _logger.Log(LoggingLevel.INFO, "Write()", $"Data write in file {filePath} successfully");
                 return true;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Write()", $"Data not write un file {filePath}, {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, "Write()", $"Data not write in file {filePath}, {e.Message}");
             }
             return false;
         }
