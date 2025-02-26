@@ -49,7 +49,7 @@ namespace OSL_CDragon
                     if (championSummary == null)
                     {
                         _logger.Log(LoggingLevel.ERROR, "Download()", "Champions not downloaded");
-                        return _champions;
+                        return [];
                     }
                     foreach (ChampionSummary champion in championSummary)
                     {
@@ -59,18 +59,19 @@ namespace OSL_CDragon
                         ChampionAssets();
                         _champions.Add(_champion);
                     }
+                    return _champions;
                 }
                 catch (Exception e)
                 {
                     _logger.Log(LoggingLevel.ERROR, "Download()", $"Champions not downloaded : {e.Message}");
-                    return _champions;
+                    return [];
                 }
             }
             else
             {
                 _logger.Log(LoggingLevel.ERROR, "Download()", "Champions not downloaded");
+                return [];
             }
-            return _champions;
         }
 
         /// <summary>
