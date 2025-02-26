@@ -1,6 +1,7 @@
 ﻿using OSL_CDragon.Schema;
 using OSL_Utils;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace OSL_CDragon
 {
@@ -111,47 +112,21 @@ namespace OSL_CDragon
             string perkPathName = perkCDragon.IconPath;
             perkPathName = perkPathName.Split("/perk-images/")[^1].ToLower();
             Uri urlPerk = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/v1/perk-images/{perkPathName}");
-            Perk perk = new(perkCDragon.Id, perkCDragon.Name, DownloadFile(urlPerk, perkCDragon.Id, $"perks/{perkPathName}"));
-            return perk;
-        }
 
-        /// <summary>
-        /// Download a file.
-        /// </summary>
-        /// <param name="url">url</param>
-        /// <param name="id">perk id</param>
-        /// <param name="path">perk path</param>
-        /// <returns>perk file path</returns>
-        private string DownloadFile(Uri url, int id, string path)
-        {
-            byte[]? file = _download.FileAsync(url).Result;
-            if (file != null)
+            string dir = OSL_Utils.Path.GetDirectoryName($"perks/{perkPathName}");
+            //Folder to concerve, remove last folder if not in the list
+            string[] lastFolders = { "inspiration", "precision", "resolve", "sorcery", "domination", "statmods" };
+            if (!lastFolders.Contains(dir.Split("/")[^1]))
             {
-                try
-                {
-                    string dir = OSL_Utils.Path.GetDirectoryName(path);
-                    //Folder to concerve, remove last folder if not in the list
-                    string[] lastFolders = { "inspiration", "precision", "resolve", "sorcery", "domination", "statmods" };
-                    if (!lastFolders.Contains(dir.Split("/")[^1]))
-                    {
-                        dir = dir.Replace(dir.Split("/")[^1], "");
-                        Console.WriteLine($"new : {dir}");
-                    }
-
-                    string fullPerkDir = OSL_Utils.Path.Combine(_info.AssetsDir, dir);
-                    OSL_Utils.Directory.Create(fullPerkDir);
-                    string filePath = OSL_Utils.Path.Combine(fullPerkDir, $"{id}.png");
-                    OSL_Utils.File.Write(filePath, file);
-                    _logger.Log(LoggingLevel.INFO, "DownloadFile()", $"File {filePath} downloaded successfully");
-                    return filePath;
-                }
-                catch (Exception ex)
-                {
-                    _logger.Log(LoggingLevel.ERROR, "DownloadFile()", $"File {id} not downloaded : {ex.Message}");
-                }
+                dir = dir.Replace(dir.Split("/")[^1], "");
+                Console.WriteLine($"new : {dir}");
             }
-            _logger.Log(LoggingLevel.ERROR, "DownloadFile()", $"File {id} not downloaded");
-            return "";
+
+            string fullPerkDir = OSL_Utils.Path.Combine(_info.AssetsDir, dir);
+            OSL_Utils.Directory.Create(fullPerkDir);
+
+            Perk perk = new(perkCDragon.Id, perkCDragon.Name, _download.DownloadFile(urlPerk, fullPerkDir, $"{perkCDragon.Id}.png"));
+            return perk;
         }
     }
 }
