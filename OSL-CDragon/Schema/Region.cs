@@ -39,7 +39,7 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="Region"/> struct with region name.
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">Name of region</param>
         public Region(string name)
         {
             Name = name;
