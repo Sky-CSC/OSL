@@ -70,37 +70,8 @@ namespace OSL_CDragon
         {
             string itemName = itemCDragon.IconPath.Split("/Icons2D/")[^1].ToLower();
             Uri urlItem = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/{itemName}");
-            Item item = new(itemCDragon.Id, itemCDragon.Name, DownloadFile(urlItem, itemCDragon.Id, "items"), itemCDragon.From, itemCDragon.To);
+            Item item = new(itemCDragon.Id, itemCDragon.Name, _download.DownloadFile(urlItem, $"{_info.AssetsDir}/items", $"{itemCDragon.Id}.png"), itemCDragon.From, itemCDragon.To);
             return item;
-        }
-
-        /// <summary>
-        /// Download a file.
-        /// </summary>
-        /// <param name="url">url</param>
-        /// <param name="id">item id</param>
-        /// <param name="directory">directory how to save files</param>
-        /// <returns>Item file path</returns>
-        private string DownloadFile(Uri url, int id, string directory)
-        {
-            byte[]? data = _download.FileAsync(url).Result;
-            if (data != null)
-            {
-                try
-                {
-                    string filePath = OSL_Utils.Path.Combine(_info.AssetsDir, directory, $"{id}.png");
-                    OSL_Utils.File.Write(filePath, data);
-                    _logger.Log(LoggingLevel.INFO, "DownloadFile()", $"File {id} downloaded");
-                    return filePath;
-
-                }
-                catch (Exception e)
-                {
-                    _logger.Log(LoggingLevel.ERROR, "DownloadFile()", $"File {id} not downloaded : {e.Message}");
-                }
-            }
-            _logger.Log(LoggingLevel.ERROR, "DownloadFile()", $"File {id} not downloaded");
-            return "";
         }
     }
 }
