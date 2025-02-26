@@ -60,5 +60,34 @@ namespace OSL_Utils
                 return null;
             }
         }
+
+        /// <summary>
+        /// Download and save a file from a URL.
+        /// </summary>
+        /// <param name="url">Url</param>
+        /// <param name="directory">Path to save file</param>
+        /// <param name="fileName">File name</param>
+        /// <returns>Path of downloaded file</returns>
+        public string DownloadFile(Uri url, string directory, string fileName)
+        {
+            byte[]? data = FileAsync(url).Result;
+            if (data != null)
+            {
+                try
+                {
+                    string filePath = Path.Combine(directory, $"{fileName}");
+                    File.Write(filePath, data);
+                    _logger.Log(LoggingLevel.INFO, "DownloadFile()", $"File {fileName} downloaded");
+                    return filePath;
+
+                }
+                catch (Exception e)
+                {
+                    _logger.Log(LoggingLevel.ERROR, "DownloadFile()", $"File {fileName} not downloaded : {e.Message}");
+                }
+            }
+            _logger.Log(LoggingLevel.ERROR, "DownloadFile()", $"File {fileName} not downloaded");
+            return "";
+        }
     }
 }
