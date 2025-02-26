@@ -39,7 +39,7 @@
         public Info()
         {
             Patch = "latest";
-            ShortPatch = "";
+            ShortPatch = "latest";
             IsLatest = true;
             Region = "fr_fr";
             Date = DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss");
