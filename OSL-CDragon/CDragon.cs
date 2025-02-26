@@ -1,13 +1,14 @@
 ﻿using Newtonsoft.Json;
 using OSL_CDragon.Schema;
 using OSL_Utils;
+using static OSL_CDragon.Schema.Asset;
 
 namespace OSL_CDragon
 {
     /// <summary>
     /// Manage download of League of Legends assets
     /// </summary>
-    public class CDragon
+    public partial class CDragon
     {
         /// <summary>
         /// The logger
@@ -23,6 +24,11 @@ namespace OSL_CDragon
         /// Save data of all assets
         /// </summary>
         private Data _data = new();
+
+        /// <summary>
+        /// The download manager.
+        /// </summary>
+        private static readonly Download _download = new();
 
         /// <summary>
         /// The index of the patch current used
@@ -41,21 +47,41 @@ namespace OSL_CDragon
         {
             if (CheckPatchRegion() && CreateDirectories())
             {
-                Champions champion = new(_info);
-                _data.Patchs[_indexPatch].Regions[_indexRegion].Champions = champion.Download();
-                Items items = new(_info);
-                _data.Patchs[_indexPatch].Regions[_indexRegion].Items = items.Download();
-                Perks perks = new(_info);
-                _data.Patchs[_indexPatch].Regions[_indexRegion].Perks = perks.Download();
-                SummonerSpells summonerSpell = new(_info);
-                _data.Patchs[_indexPatch].Regions[_indexRegion].SummonerSpells = summonerSpell.Download();
+                DownloadAllData();
+
+                DownloadPositionsData();
+                DownloadEpicMonstersData();
 
                 // Save data in local file
-                string saveData = JsonConvert.SerializeObject(_data, Formatting.Indented);
-                OSL_Utils.File.Write("./wwwroot/assets/_data.json", saveData);
+                SaveData();
                 // Save info in local file
-                string saveInfo = JsonConvert.SerializeObject(_info, Formatting.Indented);
-                OSL_Utils.File.Write("./wwwroot/assets/_info.json", saveInfo);
+                SaveInfo();
+
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Download assets and check if all assets in file are downloaded
+        /// </summary>
+        /// <returns></returns>
+        public bool DownloadAssetsWithCheck()
+        {
+            if (CheckPatchRegion() && CreateDirectories())
+            {
+                // Check if champion, itemps, perks and summoner spells of spécific région and patch are downloaded
+                CheckPatchsData();
+
+                // Check if positions and epic monsters are downloaded
+                CheckPositionsData();
+                CheckEpicMonstersData();
+
+                // Save data in local file
+                SaveData();
+                // Save info in local file
+                SaveInfo();
+
                 return true;
             }
             return false;
@@ -79,6 +105,15 @@ namespace OSL_CDragon
         }
 
         /// <summary>
+        /// Save data in local file
+        /// </summary>
+        public void SaveData()
+        {
+            string saveData = JsonConvert.SerializeObject(_data, Formatting.Indented);
+            OSL_Utils.File.Write("./wwwroot/assets/_data.json", saveData);
+        }
+
+        /// <summary>
         /// Load info from local file
         /// </summary>
         /// <returns>True if info file are loaded</returns>
@@ -96,189 +131,138 @@ namespace OSL_CDragon
         }
 
         /// <summary>
+        /// Save info in local file
+        /// </summary>
+        private void SaveInfo()
+        {
+            string saveInfo = JsonConvert.SerializeObject(_info, Formatting.Indented);
+            OSL_Utils.File.Write("./wwwroot/assets/_info.json", saveInfo);
+        }
+
+        /// <summary>
+        /// Check if all assets in _data file are downloaded
+        /// </summary>
+        public void CheckPatchsData()
+        {
+            // Check if the latets patch is already downloaded
+            if (!CheckDataLatest())
+            {
+                //Download latest patch
+                DownloadAllData();
+            }
+            // Check all paths assets in file
+            Patchs();
+        }
+
+        /// <summary>
+        /// Download all assets
+        /// </summary>
+        private void DownloadAllData()
+        {
+            DownloadChampionsData();
+            DownloadItemsData();
+            DownloadPerksData();
+            DownloadSummonerSpellsData();
+        }
+
+        /// <summary>
+        /// Check if positions data are downloaded
+        /// </summary>
+        public void CheckPositionsData()
+        {
+            // If positions are not downloaded, download it
+            if (!Position(_data.Positions))
+            {
+                DownloadPositionsData();
+            }
+        }
+
+        /// <summary>
+        /// Check if epic monsters data are downloaded
+        /// </summary>
+        public void CheckEpicMonstersData()
+        {
+            // If epic monsters are not downloaded, download it
+            if (!EpicMonster(_data.EpicMonsters))
+            {
+                DownloadEpicMonstersData();
+            }
+        }
+
+        /// <summary>
+        /// Download positions data
+        /// </summary>
+        private void DownloadPositionsData()
+        {
+            Positions positions = new();
+            _data.Positions = positions.Download();
+        }
+
+        /// <summary>
+        /// Download epic monsters data
+        /// </summary>
+        private void DownloadEpicMonstersData()
+        {
+            EpicMonsters epicMonsters = new();
+            _data.EpicMonsters = epicMonsters.Download();
+        }
+
+        /// <summary>
+        /// Download champions data
+        /// </summary>
+        private void DownloadChampionsData()
+        {
+            Champions champion = new(_info);
+            _data.Patchs[_indexPatch].Regions[_indexRegion].Champions = champion.Download();
+        }
+
+        /// <summary>
+        /// Download items data
+        /// </summary>
+        private void DownloadItemsData()
+        {
+            Items items = new(_info);
+            _data.Patchs[_indexPatch].Regions[_indexRegion].Items = items.Download();
+        }
+
+        /// <summary>
+        /// Download perks data
+        /// </summary>
+        private void DownloadPerksData()
+        {
+            Perks perks = new(_info);
+            _data.Patchs[_indexPatch].Regions[_indexRegion].Perks = perks.Download();
+        }
+
+        /// <summary>
+        /// Download summoner spells data
+        /// </summary>
+        private void DownloadSummonerSpellsData()
+        {
+            SummonerSpells summonerSpells = new(_info);
+            _data.Patchs[_indexPatch].Regions[_indexRegion].SummonerSpells = summonerSpells.Download();
+        }
+
+        /// <summary>
         /// Check if data loaded are the latest and all assets are downloaded
         /// </summary>
         /// <returns>True if assets of last patch are present</returns>
-        public bool CheckDataLatest()
+        private bool CheckDataLatest()
         {
+            // Load data from file and download patch number
             if (!LoadData() || !DownloadPatchNumber())
             {
                 return false;
             }
-
-            foreach (var patch in _data.Patchs)
+            // Check in _data if the latest patch is already downloaded, check just the Number
+            var patch = _data.Patchs.Find(p => p.Number == _info.Patch);
+            if (patch != null)
             {
-                if (patch.Number == _info.Patch)
-                {
-                    // Check patch directory
-                    string patchShortNumber = $"./wwwroot/assets/{patch.ShortNumber}";
-                    if (!OSL_Utils.Directory.Exist(patchShortNumber))
-                    {
-                        return false;
-                    }
-                    _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Patch {patchShortNumber} are already downloaded");
-                    // Check all regions
-                    foreach (var region in patch.Regions)
-                    {
-                        //Check region directory
-                        string pathRegionName = $"{patchShortNumber}/{region.Name}";
-                        if (!OSL_Utils.Directory.Exist(pathRegionName))
-                        {
-                            return false;
-                        }
-                        _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Region {pathRegionName} are already downloaded");
-                        // Check all champions directory
-                        if (region.Champions.Count == 0)
-                        {
-                            return false;
-                        }
-                        foreach (var champion in region.Champions)
-                        {
-                            if (champion.Id != -1)
-                            {
-                                if (!CheckChampion(champion))
-                                {
-                                    return false;
-                                }
-                                if (!CheckSound(champion.Sounds))
-                                {
-                                    return false;
-                                }
-                                foreach (var skin in champion.Skins)
-                                {
-                                    if (!CheckSkin(skin))
-                                    {
-                                        return false;
-                                    }
-                                }
-                            }
-                        }
-
-                        if (region.Items.Count == 0)
-                        {
-                            return false;
-                        }
-                        foreach (var item in region.Items)
-                        {
-                            if (!OSL_Utils.File.Exist(item.IconPath))
-                            {
-                                _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Item {item.IconPath} not exist");
-                                return false;
-                            }
-                            _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Item {item.IconPath} exist");
-                        }
-
-                        if (region.Perks.Count == 0)
-                        {
-                            return false;
-                        }
-                        foreach (var perk in region.Perks)
-                        {
-                            if (!OSL_Utils.File.Exist(perk.IconPath))
-                            {
-                                _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Perk {perk.IconPath} not exist");
-                                return false;
-                            }
-                            _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Perk {perk.IconPath} exist");
-                        }
-                        if (region.SummonerSpells.Count == 0)
-                        {
-                            return false;
-                        }
-                        foreach (var summonerSpell in region.SummonerSpells)
-                        {
-                            if (!OSL_Utils.File.Exist(summonerSpell.IconPath))
-                            {
-                                _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Summoner spell {summonerSpell.IconPath} not exist");
-                                return false;
-                            }
-                            _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Summoner spell {summonerSpell.IconPath} exist");
-                        }
-                    }
-                    _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Latest patch {patch.Number} are already downloaded");
-                    return true;
-                }
+                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Latest patch {patch.Number} are already downloaded");
+                return true;
             }
             _logger.Log(LoggingLevel.WARN, "CheckDataLatest()", $"Latest patch {_info.Patch} not found in data");
             return false;
-        }
-
-        /// <summary>
-        /// Check if the champion assets are downloaded
-        /// </summary>
-        /// <param name="champion"></param>
-        /// <returns>True if champion assets are present</returns>
-        private static bool CheckChampion(Schema.Champion champion)
-        {
-            if (!OSL_Utils.File.Exist(champion.SquarePortraitPath))
-            {
-                _logger.Log(LoggingLevel.ERROR, "CheckChampion()", $"Champion {champion.SquarePortraitPath} portrait not exist");
-                return false;
-            }
-            _logger.Log(LoggingLevel.INFO, "CheckChampion()", $"Champion {champion.SquarePortraitPath} portrait exist");
-            return true;
-        }
-
-        /// <summary>
-        /// Check if the sound assets are downloaded
-        /// </summary>
-        /// <param name="sound">Sound information</param>
-        /// <returns>True if all assets of sound are present</returns>
-        private static bool CheckSound(Sound sound)
-        {
-            if (!OSL_Utils.File.Exist(sound.ChoosePath) && sound.ChoosePath != "")
-            {
-                _logger.Log(LoggingLevel.ERROR, "CheckSound()", $"Sound {sound.ChoosePath} not exist");
-                return false;
-            }
-            _logger.Log(LoggingLevel.INFO, "CheckSound()", $"Sound {sound.ChoosePath} exist");
-            if (!OSL_Utils.File.Exist(sound.BanPath) && sound.BanPath != "")
-            {
-                _logger.Log(LoggingLevel.ERROR, "CheckSound()", $"Sound {sound.BanPath} not exist");
-                return false;
-            }
-            _logger.Log(LoggingLevel.INFO, "CheckSound()", $"Sound {sound.BanPath} exist");
-            if (!OSL_Utils.File.Exist(sound.SfxPath) && sound.SfxPath != "")
-            {
-                _logger.Log(LoggingLevel.ERROR, "CheckSound()", $"Sound {sound.SfxPath} not exist");
-                return false;
-            }
-            _logger.Log(LoggingLevel.INFO, "CheckSound()", $"Sound {sound.SfxPath} exist");
-            return true;
-        }
-
-        /// <summary>
-        /// Check if the skin assets are downloaded
-        /// </summary>
-        /// <param name="skin">Skin information</param>
-        /// <returns>True if all assets of skin are present</returns>
-        private static bool CheckSkin(Schema.Skin skin)
-        {
-            if (!OSL_Utils.File.Exist(skin.Splashe))
-            {
-                _logger.Log(LoggingLevel.ERROR, "CheckSkin()", $"Skin {skin.Splashe} not exist");
-                return false;
-            }
-            _logger.Log(LoggingLevel.INFO, "CheckSkin()", $"Skin {skin.Splashe} exist");
-            if (!OSL_Utils.File.Exist(skin.SplasheUncentered))
-            {
-                _logger.Log(LoggingLevel.ERROR, "CheckSkin()", $"Skin {skin.SplasheUncentered} not exist");
-                return false;
-            }
-            _logger.Log(LoggingLevel.INFO, "CheckSkin()", $"Skin {skin.SplasheUncentered} exist");
-            if (!OSL_Utils.File.Exist(skin.Tile))
-            {
-                _logger.Log(LoggingLevel.ERROR, "CheckSkin()", $"Skin {skin.Tile} not exist");
-                return false;
-            }
-            _logger.Log(LoggingLevel.INFO, "CheckSkin()", $"Skin {skin.Tile} exist");
-            if (!OSL_Utils.File.Exist(skin.LoadScreen))
-            {
-                _logger.Log(LoggingLevel.ERROR, "CheckSkin()", $"Skin {skin.LoadScreen} not exist");
-                return false;
-            }
-            _logger.Log(LoggingLevel.INFO, "CheckSkin()", $"Skin {skin.LoadScreen} exist");
-            return true;
         }
 
         /// <summary>
@@ -290,11 +274,32 @@ namespace OSL_CDragon
             try
             {
                 _info.AssetsDir = OSL_Utils.Path.Combine("./wwwroot/assets/", _info.ShortPatch, _info.Region);
+                // Create patch and region directories with champion, items, summoner spells, perks sub directories 
                 OSL_Utils.Directory.Create(_info.AssetsDir);
                 OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(_info.AssetsDir, "champions"));
                 OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(_info.AssetsDir, "items"));
                 OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(_info.AssetsDir, "summonerspells"));
                 OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(_info.AssetsDir, "perks"));
+                // Create positions directories
+                OSL_Utils.Directory.Create("./wwwroot/assets/positions/top");
+                OSL_Utils.Directory.Create("./wwwroot/assets/positions/jungle");
+                OSL_Utils.Directory.Create("./wwwroot/assets/positions/mid");
+                OSL_Utils.Directory.Create("./wwwroot/assets/positions/adc");
+                OSL_Utils.Directory.Create("./wwwroot/assets/positions/support");
+                // Create epic monsters directories
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/atakhan");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/baron");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/dragons/cloud");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/dragons/chemtech");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/dragons/mountain");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/dragons/infernal");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/dragons/hextech");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/dragons/ocean");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/dragons/elder");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/herald");
+                OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/voidgrub");
+                // Create runes directories
+                OSL_Utils.Directory.Create("./wwwroot/assets/runes");
 
                 _logger.Log(LoggingLevel.INFO, "CreateDirectories()", "Directories created");
                 return true;
@@ -312,21 +317,27 @@ namespace OSL_CDragon
         /// <returns>True if patch not present</returns>
         private bool CheckPatchRegion()
         {
+            // Set global index of patch and region
             FindIndexPatch();
             FindIndexRegion();
+
+            // If region already exist
             if (_indexRegion != -1)
             {
                 _logger.Log(LoggingLevel.WARN, "CheckPatchRegion()", $"Patch {_info.ShortPatch} and {_info.Region} already exist");
                 return true;
             }
-
+            // Download patch number and add patch and region if not exist
             if (DownloadPatchNumber())
             {
-                if (_indexPatch != -1 && AddRegion())
+                // Add patch if path not exist
+                if (_indexPatch == -1 && !AddPatch())
                 {
-                    return true;
+                    return false;
                 }
-                else if (AddPatch() && AddRegion())
+
+                // Add region
+                if (AddRegion())
                 {
                     return true;
                 }
@@ -340,7 +351,7 @@ namespace OSL_CDragon
         /// <returns>True if patch number is downloaded</returns>
         private bool DownloadPatchNumber()
         {
-            Uri urlPatchContentMetadata = new($"https://raw.communitydragon.org/{_info.Patch}/content-metadata.json");
+            Uri urlPatchContentMetadata = new($"https://raw.communitydragon.org/{_info.ShortPatch}/content-metadata.json");
             try
             {
                 // Download the patch content metadata
@@ -448,6 +459,31 @@ namespace OSL_CDragon
             {
                 _logger.Log(LoggingLevel.ERROR, "AddPatch()", $"Patch {_info.ShortPatch} not added");
                 return false;
+            }
+        }
+
+        /// <summary>
+        /// Create the assets info for download and save
+        /// </summary>
+        /// <param name="url">Url to download</param>
+        /// <param name="name">File name for save</param>
+        /// <param name="subPath">Path for save file</param>
+        /// <param name="description">Description</param>
+        /// <param name="extension">File extension</param>
+        /// <param name="type">Type of asset</param>
+        /// <param name="addAssetAction">Action for add asset to list</param>
+        internal static void CreateAssetInfo(Uri url, string id, string name, string subPath, string description, string extension, List<AssetType> type, Action<Asset> addAssetAction)
+        {
+            if (string.IsNullOrEmpty(id))
+            {
+                id = Generator.GenerateSha1Id();
+            }
+            string filePath = _download.DownloadFile(url, subPath, $"{name}{extension}");
+            Asset asset = new(id, name, description, filePath, type);
+
+            if (!string.IsNullOrEmpty(asset.Path))
+            {
+                addAssetAction(asset);
             }
         }
     }
