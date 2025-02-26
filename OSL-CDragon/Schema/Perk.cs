@@ -26,6 +26,12 @@
             Name = string.Empty;
             IconPath = string.Empty;
         }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Perk"/> struct.
+        /// </summary>
+        /// <param name="id">Id of perk</param>
+        /// <param name="name">Name of perk</param>
+        /// <param name="iconPath">Icone path of perk</param>
         public Perk(int id, string name, string iconPath)
         {
             Id = id;
