@@ -44,8 +44,8 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="Skin"/> struct with skin id and if is a base skin.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="isBase"></param>
+        /// <param name="id">Id of skin</param>
+        /// <param name="isBase">If skin is base skin</param>
         public Skin(int id, bool isBase)
         {
             Id = id;
