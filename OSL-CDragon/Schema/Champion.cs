@@ -54,7 +54,7 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="Champion"/> struct with id.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">Id of champion</param>
         public Champion(int id)
         {
             Id = id;
