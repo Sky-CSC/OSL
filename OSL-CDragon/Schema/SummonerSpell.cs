@@ -29,6 +29,9 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="SummonerSpell"/> struct with id, name and icon path.
         /// </summary>
+        /// <param name="id">Id of summoner spell</param>
+        /// <param name="name">Name of summoner spell</param>
+        /// <param name="iconPath">Icone path of summoner spell</param>
         public SummonerSpell(uint id, string name, string iconPath)
         {
             Id = id;
