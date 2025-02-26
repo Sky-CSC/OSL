@@ -29,8 +29,8 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="Patch"/> struct with patch number and short number.
         /// </summary>
-        /// <param name="number"></param>
-        /// <param name="shortNumber"></param>
+        /// <param name="number">Patch number</param>
+        /// <param name="shortNumber">Patch short number</param>
         public Patch(string number, string shortNumber)
         {
             Number = number;
