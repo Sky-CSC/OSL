@@ -73,9 +73,14 @@ namespace OSL_CDragon
                 // Check if champion, itemps, perks and summoner spells of spécific région and patch are downloaded
                 CheckPatchsData();
 
-                // Check if positions and epic monsters are downloaded
+                // Check if positions are downloaded
                 CheckPositionsData();
+                // Check if epic monsters are downloaded
                 CheckEpicMonstersData();
+                // Check if fonts are downloaded
+                CheckFontsData();
+
+                //Rajouter le télécharmenet des assets des runes, font, ban, logo et images pour l'affichage de l'application et des autres assets
 
                 // Save data in local file
                 SaveData();
@@ -189,6 +194,15 @@ namespace OSL_CDragon
             }
         }
 
+        public void CheckFontsData()
+        {
+            // If epic monsters are not downloaded, download it
+            if (!Font(_data.Fonts))
+            {
+                DownloadFontsData();
+            }
+        }
+
         /// <summary>
         /// Download positions data
         /// </summary>
@@ -205,6 +219,15 @@ namespace OSL_CDragon
         {
             EpicMonsters epicMonsters = new();
             _data.EpicMonsters = epicMonsters.Download();
+        }
+
+        /// <summary>
+        /// Download epic monsters data
+        /// </summary>
+        private void DownloadFontsData()
+        {
+            Fonts fonts = new();
+            _data.Fonts = fonts.Download();
         }
 
         /// <summary>
@@ -298,8 +321,10 @@ namespace OSL_CDragon
                 OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/dragons/elder");
                 OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/herald");
                 OSL_Utils.Directory.Create("./wwwroot/assets/epicmonsters/voidgrub");
-                // Create runes directories
+                // Create runes directorie
                 OSL_Utils.Directory.Create("./wwwroot/assets/runes");
+                // Create font directiorie
+                OSL_Utils.Directory.Create("./wwwroot/assets/fonts");
 
                 _logger.Log(LoggingLevel.INFO, "CreateDirectories()", "Directories created");
                 return true;
