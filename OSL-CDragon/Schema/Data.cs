@@ -20,6 +20,8 @@
         /// </summary>
         public EpicMonster EpicMonsters { get; set; }
 
+        public List<Asset> Fonts { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Data"/> struct.
         /// </summary>
@@ -28,6 +30,7 @@
             Patchs = [];
             Positions = new();
             EpicMonsters = new();
+            Fonts = [];
         }
     }
 }
