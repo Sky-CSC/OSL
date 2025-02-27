@@ -33,48 +33,6 @@ namespace OSL_CDragon.Schema
         public List<AssetType> Type { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PositionInfo"/> struct.
-        /// </summary>
-        public Asset()
-        {
-            Id = string.Empty;
-            Name = string.Empty;
-            Description = string.Empty;
-            Path = string.Empty;
-            Type = [AssetType.NotSet];
-
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PositionInfo"/> struct.
-        /// </summary>
-        /// <param name="id">Id of asset</param>
-        public Asset(string id)
-        {
-            Id = id;
-            Name = string.Empty;
-            Description = string.Empty;
-            Path = string.Empty;
-            Type = [AssetType.NotSet];
-
-        }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PositionInfo"/> struct. 
-        /// </summary>
-        /// <param name="id">Id of asset</param>
-        /// <param name="name">Name of asset</param>
-        /// <param name="description">Description of asset</param>
-        /// <param name="path">Path of asset</param>
-        public Asset(string id, string name, string description, string path)
-        {
-            Id = id;
-            Name = name;
-            Description = description;
-            Path = path;
-            Type = [AssetType.NotSet];
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="PositionInfo"/> struct. 
         /// </summary>
         /// <param name="id">Id of asset</param>
@@ -103,6 +61,7 @@ namespace OSL_CDragon.Schema
             InGameAnnoucement,
             InGameScoreBoard,
             EndGame,
+            Font,
         }
     }
 }
