@@ -369,5 +369,24 @@ namespace OSL_CDragon
             }
             return true;
         }
+
+        internal static bool Font(List<Asset> fonts)
+        {
+            if (fonts.Count == 0)
+            {
+                return false;
+            }
+
+            foreach (Asset font in fonts)
+            {
+                if (!OSL_Utils.File.Exist(font.Path))
+                {
+                    _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Font {font.Path} not exist");
+                    return false;
+                }
+                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Font {font.Path} exist");
+            }
+            return true;
+        }
     }
 }
