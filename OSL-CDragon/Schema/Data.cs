@@ -20,7 +20,12 @@
         /// </summary>
         public EpicMonster EpicMonsters { get; set; }
 
+        /// <summary>
+        /// List of fonts
+        /// </summary>
         public List<Asset> Fonts { get; set; }
+
+        public Ux Ux { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Data"/> struct.
