@@ -3,7 +3,6 @@ using OSL_Utils;
 using static OSL_CDragon.Schema.Asset;
 using static OSL_CDragon.CDragon;
 using Newtonsoft.Json;
-using static System.Net.WebRequestMethods;
 
 namespace OSL_CDragon
 {
