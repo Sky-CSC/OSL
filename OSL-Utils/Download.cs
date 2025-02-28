@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OSL_Utils
+﻿namespace OSL_Utils
 {
     /// <summary>
     /// Download data from the internet.
@@ -76,6 +70,8 @@ namespace OSL_Utils
                 try
                 {
                     string filePath = Path.Combine(directory, $"{fileName}");
+                    // Create directory if not exist, if already exist, do nothing
+                    Directory.Create(directory);
                     File.Write(filePath, data);
                     _logger.Log(LoggingLevel.INFO, "DownloadFile()", $"File {fileName} downloaded");
                     return filePath;
