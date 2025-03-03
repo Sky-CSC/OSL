@@ -85,5 +85,26 @@
             _logger.Log(LoggingLevel.ERROR, "DownloadFile()", $"File {fileName} not downloaded");
             return "";
         }
+
+        /// <summary>
+        /// Get the response from a request.
+        /// </summary>
+        /// <param name="httpRequestMessage">Http resquest</param>
+        /// <returns>Response or null if no response evalable</returns>
+        public async Task<string?> GetResponse(HttpRequestMessage httpRequestMessage)
+        {
+            try
+            {
+                HttpResponseMessage httpResponseMessage = await _httpClient.SendAsync(httpRequestMessage);
+                string content = await httpResponseMessage.Content.ReadAsStringAsync();
+                _logger.Log(LoggingLevel.INFO, "GetResponse()", $"Response : {httpRequestMessage.RequestUri} succesful");
+                return content;
+            }
+            catch (Exception e)
+            {
+                _logger.Log(LoggingLevel.ERROR, "GetResponse()", $"Error : {e.Message}");
+                return null;
+            }
+        }
     }
 }
