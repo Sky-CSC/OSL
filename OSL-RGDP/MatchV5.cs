@@ -73,18 +73,33 @@ namespace OSL_RGDP
         }
 
         /// <summary>
-        /// Get the match information by match id. The timeline give all information of the match.
+        /// Get the match information by match id.
         /// </summary>
         /// <param name="matchId">Id of match</param>
         /// <returns>Match information</returns>
-        public MatchDto Timeline(Int64 matchId)
+        public MatchDto Match(string matchId)
         {
-            string? data = Request(_info, $"/lol/match/v5/matches/{_info.Region.ToUpper()}_{matchId}");
+            string? data = Request(_info, $"/lol/match/v5/matches/{matchId}");
             if (data == null)
             {
                 return new MatchDto();
             }
             return JsonConvert.DeserializeObject<MatchDto>(data);
+        }
+        
+        /// <summary>
+        /// Get the match information by match id. The timeline give all information of the match.
+        /// </summary>
+        /// <param name="matchId">Id of match</param>
+        /// <returns>Match information</returns>
+        public TimelineDto Timeline(string matchId)
+        {
+            string? data = Request(_info, $"/lol/match/v5/matches/{matchId}/timeline");
+            if (data == null)
+            {
+                return new TimelineDto();
+            }
+            return JsonConvert.DeserializeObject<TimelineDto>(data);
         }
     }
 }
