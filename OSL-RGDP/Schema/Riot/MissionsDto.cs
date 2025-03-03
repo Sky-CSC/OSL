@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a missions data transfer object.
     /// </summary>
-    internal struct MissionsDto
+    public struct MissionsDto
     {
         /// <summary>
         /// Player 0 score

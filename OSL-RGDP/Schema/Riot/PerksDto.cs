@@ -6,7 +6,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a perks data transfer object.
     /// </summary>
-    internal struct PerksDto
+    public struct PerksDto
     {
         /// <summary>
         /// The stats perks selected.

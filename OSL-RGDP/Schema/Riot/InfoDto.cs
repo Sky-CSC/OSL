@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents the info DTO.
     /// </summary>
-    internal struct InfoDto
+    public struct InfoDto
     {
         /// <summary>
         /// Refer to indicate if the game ended in termination.

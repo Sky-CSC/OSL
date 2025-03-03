@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a damage stats data transfer object.
     /// </summary>
-    internal struct DamageStatsDto
+    public struct DamageStatsDto
     {
         /// <summary>
         /// The magic damage done.

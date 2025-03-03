@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents an objectives data transfer object.
     /// </summary>
-    internal struct ObjectivesDto
+    public struct ObjectivesDto
     {
         /// <summary>
         /// The Baron Nashor objective.

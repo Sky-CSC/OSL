@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a champion stats data transfer object.
     /// </summary>
-    internal struct ChampionStatsDto
+    public struct ChampionStatsDto
     {
         /// <summary>
         /// The ability haste of the champion.

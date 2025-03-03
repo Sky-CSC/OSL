@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a perk style selection data transfer object.
     /// </summary>
-    internal struct PerkStyleSelectionDto
+    public struct PerkStyleSelectionDto
     {
         /// <summary>
         /// The perk.

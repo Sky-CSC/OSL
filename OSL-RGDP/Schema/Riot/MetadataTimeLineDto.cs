@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a metadata timeline data transfer object.
     /// </summary>
-    internal class MetadataTimeLineDto
+    public struct MetadataTimeLineDto
     {
         /// <summary>
         /// Match data version.

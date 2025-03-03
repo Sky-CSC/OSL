@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a participant frames data transfer object.
     /// </summary>
-    internal struct ParticipantFramesDto
+    public struct ParticipantFramesDto
     {
         /// <summary>
         /// Key value mapping for each participant 

@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a match metadata data transfer object.
     /// </summary>
-    internal struct MetadataDto
+    public struct MetadataDto
     {
         /// <summary>
         /// Match data version.

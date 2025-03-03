@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents an objective data transfer object.
     /// </summary>
-    internal struct ObjectiveDto
+    public struct ObjectiveDto
     {
         /// <summary>
         /// Flag indicating whether the team scored the first objective.

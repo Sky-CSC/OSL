@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a perk stats data transfer object.
     /// </summary>
-    internal struct PerkStatsDto
+    public struct PerkStatsDto
     {
         /// <summary>
         /// The defense stat.

@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// This object contains ban information.
     /// </summary>
-    internal struct BanDto
+    public struct BanDto
     {
         /// <summary>
         /// The ID of the banned champion.

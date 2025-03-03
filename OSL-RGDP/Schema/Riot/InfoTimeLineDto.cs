@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a info timeline data transfer object.
     /// </summary>
-    internal struct InfoTimeLineDto
+    public struct InfoTimeLineDto
     {
         /// <summary>
         /// Indicates if the game ended in termination.

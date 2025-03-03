@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a participant frame data transfer object.
     /// </summary>
-    internal struct ParticipantFrameDto
+    public struct ParticipantFrameDto
     {
         /// <summary>
         /// The champion stats.

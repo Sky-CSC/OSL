@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a participant data transfer object.
     /// </summary>
-    internal struct ParticipantDto
+    public struct ParticipantDto
     {
         /// <summary>
         /// Yellow crossed swords

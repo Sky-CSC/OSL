@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a position data transfer object.
     /// </summary>
-    internal struct PositionDto
+    public struct PositionDto
     {
         /// <summary>
         /// The x coordinate of the position.

@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a participant timeline data transfer object.
     /// </summary>
-    internal struct ParticipantTimeLineDto
+    public struct ParticipantTimeLineDto
     {
         /// <summary>
         /// The participant id.

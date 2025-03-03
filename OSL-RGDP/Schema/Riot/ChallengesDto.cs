@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Challenges DTO.
     /// </summary>
-    internal struct ChallengesDto
+    public struct ChallengesDto
     {
         /// <summary>
         /// 12 Assist Streak Count
@@ -21,22 +21,22 @@ namespace OSL_RGDP.Schema.Riot
         /// Control Ward Time Coverage In River Or Enemy Half
         /// </summary>
         [JsonProperty("controlWardTimeCoverageInRiverOrEnemyHalf")]
-        public float ControlWardTimeCoverageInRiverOrEnemyHalf { get; set; }
+        public double ControlWardTimeCoverageInRiverOrEnemyHalf { get; set; }
         /// <summary>
         /// Earliest Baron
         /// </summary>
         [JsonProperty("earliestBaron")]
-        public int EarliestBaron { get; set; }
+        public double EarliestBaron { get; set; }
         /// <summary>
         /// Earliest Dragon Takedown
         /// </summary>
         [JsonProperty("earliestDragonTakedown")]
-        public int EarliestDragonTakedown { get; set; }
+        public double EarliestDragonTakedown { get; set; }
         /// <summary>
         /// Earliest Elder Dragon
         /// </summary>
         [JsonProperty("earliestElderDragon")]
-        public int EarliestElderDragon { get; set; }
+        public double EarliestElderDragon { get; set; }
         /// <summary>
         /// Early Laning Phase Gold Exp Advantage
         /// </summary>
@@ -51,7 +51,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Fastest Legendary
         /// </summary>
         [JsonProperty("fastestLegendary")]
-        public int FastestLegendary { get; set; }
+        public double FastestLegendary { get; set; }
         /// <summary>
         /// Had Afk Teammate
         /// </summary>
@@ -96,7 +96,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Max Cs Advantage On Lane Opponent
         /// </summary>
         [JsonProperty("maxCsAdvantageOnLaneOpponent")]
-        public float MaxCsAdvantageOnLaneOpponent { get; set; }
+        public double MaxCsAdvantageOnLaneOpponent { get; set; }
         /// <summary>
         /// Max Level Lead Lane Opponent
         /// </summary>
@@ -146,7 +146,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Vision Score Advantage Lane Opponent
         /// </summary>
         [JsonProperty("visionScoreAdvantageLaneOpponent")]
-        public float VisionScoreAdvantageLaneOpponent { get; set; }
+        public double VisionScoreAdvantageLaneOpponent { get; set; }
         /// <summary>
         /// Infernal Scale Pickup
         /// </summary>
@@ -176,7 +176,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Allied Jungle Monster Kills
         /// </summary>
         [JsonProperty("alliedJungleMonsterKills")]
-        public float AlliedJungleMonsterKills { get; set; }
+        public double AlliedJungleMonsterKills { get; set; }
         /// <summary>
         /// Baron Takedowns
         /// </summary>
@@ -191,7 +191,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Bounty Gold
         /// </summary>
         [JsonProperty("bountyGold")]
-        public int BountyGold { get; set; }
+        public double BountyGold { get; set; }
         /// <summary>
         /// Buffs Stolen
         /// </summary>
@@ -211,12 +211,12 @@ namespace OSL_RGDP.Schema.Riot
         /// Damage Per Minute
         /// </summary>
         [JsonProperty("damagePerMinute")]
-        public float DamagePerMinute { get; set; }
+        public double DamagePerMinute { get; set; }
         /// <summary>
         /// Damage Taken On Team Percentage
         /// </summary>
         [JsonProperty("damageTakenOnTeamPercentage")]
-        public float DamageTakenOnTeamPercentage { get; set; }
+        public double DamageTakenOnTeamPercentage { get; set; }
         /// <summary>
         /// Danced With Rift Herald
         /// </summary>
@@ -251,7 +251,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Effective Heal And Shielding
         /// </summary>
         [JsonProperty("effectiveHealAndShielding")]
-        public float EffectiveHealAndShielding { get; set; }
+        public double EffectiveHealAndShielding { get; set; }
         /// <summary>
         /// Elder Dragon Kills With Opposing Soul
         /// </summary>
@@ -271,7 +271,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Enemy Jungle Monster Kills
         /// </summary>
         [JsonProperty("enemyJungleMonsterKills")]
-        public float EnemyJungleMonsterKills { get; set; }
+        public double EnemyJungleMonsterKills { get; set; }
         /// <summary>
         /// Epic Monster Kills Near Enemy Jungler
         /// </summary>
@@ -301,7 +301,7 @@ namespace OSL_RGDP.Schema.Riot
         /// First Turret Killed Time
         /// </summary>
         [JsonProperty("firstTurretKilledTime")]
-        public float FirstTurretKilledTime { get; set; }
+        public double FirstTurretKilledTime { get; set; }
         /// <summary>
         /// Flawless Aces
         /// </summary>
@@ -316,7 +316,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Game Length
         /// </summary>
         [JsonProperty("gameLength")]
-        public float GameLength { get; set; }
+        public double GameLength { get; set; }
         /// <summary>
         /// Get Takedowns In All Lanes Early Jungle As Laner
         /// </summary>
@@ -326,7 +326,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Gold Per Minute
         /// </summary>
         [JsonProperty("goldPerMinute")]
-        public float GoldPerMinute { get; set; }
+        public double GoldPerMinute { get; set; }
         /// <summary>
         /// Had Open Nexus
         /// </summary>
@@ -351,7 +351,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Jungle Cs Before 10 Minutes
         /// </summary>
         [JsonProperty("jungleCsBefore10Minutes")]
-        public float JungleCsBefore10Minutes { get; set; }
+        public double JungleCsBefore10Minutes { get; set; }
         /// <summary>
         /// Jungler Takedowns Near Damaged Epic Monster
         /// </summary>
@@ -361,7 +361,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Kda
         /// </summary>
         [JsonProperty("kda")]
-        public float Kda { get; set; }
+        public double Kda { get; set; }
         /// <summary>
         /// Kill After Hidden With Ally
         /// </summary>
@@ -381,7 +381,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Kill Participation
         /// </summary>
         [JsonProperty("killParticipation")]
-        public float KillParticipation { get; set; }
+        public double KillParticipation { get; set; }
         /// <summary>
         /// Kills Near Enemy Turret
         /// </summary>
@@ -446,7 +446,7 @@ namespace OSL_RGDP.Schema.Riot
         /// More Enemy Jungle Than Opponent
         /// </summary>
         [JsonProperty("moreEnemyJungleThanOpponent")]
-        public float MoreEnemyJungleThanOpponent { get; set; }
+        public double MoreEnemyJungleThanOpponent { get; set; }
         /// <summary>
         /// Multi Kill One Spell
         /// </summary>
@@ -536,7 +536,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Shortest Time To Ace From First Takedown
         /// </summary>
         [JsonProperty("shortestTimeToAceFromFirstTakedown")]
-        public float ShortestTimeToAceFromFirstTakedown { get; set; }
+        public double ShortestTimeToAceFromFirstTakedown { get; set; }
         /// <summary>
         /// Skillshots Dodged
         /// </summary>
@@ -591,7 +591,7 @@ namespace OSL_RGDP.Schema.Riot
         /// SWARM Pickup Gold
         /// </summary>
         [JsonProperty("SWARM_PickupGold")]
-        public float SWARM_PickupGold { get; set; }
+        public double SWARM_PickupGold { get; set; }
         /// <summary>
         /// SWARM Reach Level 50
         /// </summary>
@@ -671,7 +671,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Team Damage Percentage
         /// </summary>
         [JsonProperty("teamDamagePercentage")]
-        public float TeamDamagePercentage { get; set; }
+        public double TeamDamagePercentage { get; set; }
         /// <summary>
         /// Team Elder Dragon Kills
         /// </summary>
@@ -721,7 +721,7 @@ namespace OSL_RGDP.Schema.Riot
         /// Vision Score Per Minute
         /// </summary>
         [JsonProperty("visionScorePerMinute")]
-        public float VisionScorePerMinute { get; set; }
+        public double VisionScorePerMinute { get; set; }
         /// <summary>
         /// Wards Guarded
         /// </summary>

@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a team data transfer object.
     /// </summary>
-    internal struct TeamDto
+    public struct TeamDto
     {
         /// <summary>
         /// The bans of the team.

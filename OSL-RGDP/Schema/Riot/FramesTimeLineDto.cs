@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a frames timeline data transfer object.
     /// </summary>
-    internal struct FramesTimeLineDto
+    public struct FramesTimeLineDto
     {
         /// <summary>
         /// The events of the game.

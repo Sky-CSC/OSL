@@ -5,7 +5,7 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents an events timeline data transfer object.
     /// </summary>
-    internal struct EventsTimeLineDto
+    public struct EventsTimeLineDto
     {
         /// <summary>
         /// The timestamp of the event.
