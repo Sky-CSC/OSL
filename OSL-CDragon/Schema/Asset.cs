@@ -18,6 +18,10 @@
         /// </summary>
         public string Description { get; set; }
         /// <summary>
+        /// Url to the asset
+        /// </summary>
+        public Uri Url { get; set; }
+        /// <summary>
         /// Path to the asset
         /// </summary>
         public string Path { get; set; }
@@ -34,11 +38,12 @@
         /// <param name="description">Description of asset</param>
         /// <param name="path">Path of asset</param>
         /// <param name="type">List of type of asset</param>
-        public Asset(string id, string name, string description, string path, List<AssetType> type)
+        public Asset(string id, string name, string description, Uri url, string path, List<AssetType> type)
         {
             Id = id;
             Name = name;
             Description = description;
+            Url = url;
             Path = path;
             Type = type;
         }

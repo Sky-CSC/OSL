@@ -80,7 +80,7 @@ namespace OSL_CDragon
                 // Check if fonts are downloaded
                 CheckFontsData();
 
-                //Rajouter le télécharmenet des assets des runes, font, ban, logo et images pour l'affichage de l'application et des autres assets
+                //Rajouter le télécharmenet des assets des runes, ban, logo et images pour l'affichage de l'application et des autres assets
 
                 // Save data in local file
                 SaveData();
@@ -504,7 +504,7 @@ namespace OSL_CDragon
                 id = Generator.GenerateSha1Id();
             }
             string filePath = _download.DownloadFile(url, subPath, $"{name}{extension}");
-            Asset asset = new(id, name, description, filePath, type);
+            Asset asset = new(id, name, description, url, filePath, type);
 
             if (!string.IsNullOrEmpty(asset.Path))
             {
