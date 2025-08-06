@@ -1,4 +1,5 @@
-﻿using OSL_RGDP.Schema;
+﻿using Newtonsoft.Json;
+using OSL_RGDP.Schema;
 using OSL_Utils;
 
 namespace OSL_RGDP
@@ -61,6 +62,47 @@ namespace OSL_RGDP
                 _logger.Log(LoggingLevel.ERROR, "Request()", $"Error request {urlRequest} : {e.Message}");
                 return null;
             }
+        }
+
+        /// <summary>
+        /// Load info from a file.
+        /// </summary>
+        /// <param name="path">Path</param>
+        /// <returns>Info</returns>
+        public static Info? LoadInfo(string path)
+        {
+            string? content = OSL_Utils.File.Read(path);
+            if (content == null)
+            {
+                _logger.Log(LoggingLevel.ERROR, "LoadInfo()", $"Error loading info from {path}");
+                return null;
+            }
+
+            Info? info = JsonConvert.DeserializeObject<Info>(content);
+            if (info == null)
+            {
+                _logger.Log(LoggingLevel.ERROR, "LoadInfo()", $"Error loading info from {path}");
+                return null;
+            }
+
+            return info;
+        }
+
+        /// <summary>
+        /// Save info to a file.
+        /// </summary>
+        /// <param name="path">Path</param>
+        /// <param name="info">Info</param>
+        /// <returns>True if save is completed</returns>
+        public static bool SaveInfo(string path, Info info)
+        {
+            string content = JsonConvert.SerializeObject(info);
+            if (!OSL_Utils.File.Write(path, content))
+            {
+                _logger.Log(LoggingLevel.ERROR, "SaveInfo()", $"Error saving info to {path}");
+                return false;
+            }
+            return true;
         }
     }
 }
