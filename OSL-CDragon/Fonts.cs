@@ -22,21 +22,25 @@ namespace OSL_CDragon
         internal List<Asset> Download()
         {
             Uri url = new("https://osl.sky-csc.fr/fonts/fonts.json");
-            string? fonts = _download.StringAsync(url).Result;
-            if (fonts != null)
+            string? fontsOnServer = _download.StringAsync(url).Result;
+            string? fontsOnLocal = OSL_Utils.File.Read("./EndpointsJson/font.json");
+            if (fontsOnServer != null && fontsOnLocal != null)
             {
                 try
                 {
-                    List<Asset>? fontSummary = JsonConvert.DeserializeObject<List<Asset>>(fonts);
-                    if (fontSummary == null)
+                    List<Asset>? fontSummaryServer = JsonConvert.DeserializeObject<List<Asset>>(fontsOnServer);
+                    List<Asset>? fontSummaryLocal = JsonConvert.DeserializeObject<List<Asset>>(fontsOnLocal);
+                    if (fontSummaryServer == null || fontSummaryLocal == null)
                     {
                         _logger.Log(LoggingLevel.ERROR, "Download()", "Fonts not downloaded");
                         return _fonts;
                     }
-                    string server = "https://osl.sky-csc.fr/";
+                    List<Asset>? fontSummary = [];
+                    fontSummary.AddRange(fontSummaryServer);
+                    fontSummary.AddRange(fontSummaryLocal);
                     foreach (Asset font in fontSummary)
                     {
-                        CreateAssetInfo(new($"{server}{font.Path}"), font.Id, font.Name, $"./wwwroot/assets/{OSL_Utils.Path.GetDirectoryName(font.Path)}", font.Description, System.IO.Path.GetExtension(font.Path), font.Type, (asset) => _fonts.Add(asset));
+                        CreateAssetInfo(new($"{font.Url}"), font.Id, font.Name, $"./wwwroot/assets/{OSL_Utils.Path.GetDirectoryName(font.Path)}", font.Description, System.IO.Path.GetExtension(font.Path), font.Type, (asset) => _fonts.Add(asset));
                     }
                 }
                 catch (Exception e)
