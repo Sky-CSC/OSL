@@ -73,6 +73,28 @@
         }
 
         /// <summary>
+        /// Read data from a file same is used by an other application.
+        /// </summary>
+        /// <param name="filePath">File path</param>
+        /// <returns>Content</returns>
+        public static string? ReadIfRestricted(string filePath)
+        {
+            try
+            {
+                var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                var reader = new StreamReader(fileStream);
+                string? content = reader.ReadLine();
+                _logger.Log(LoggingLevel.INFO, "Read()", $"Data read from file {filePath} successfully");
+                return content;
+            }
+            catch (Exception e)
+            {
+                _logger.Log(LoggingLevel.ERROR, "Read()", $"Data not read from file {filePath}, {e.Message}");
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Check if a file exist.
         /// </summary>
         /// <param name="filePath">File path</param>

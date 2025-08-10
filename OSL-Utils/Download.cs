@@ -106,5 +106,38 @@
                 return null;
             }
         }
+
+        /// <summary>
+        /// Get the response from a request, accepting self-signed SSL certificates (e.g., LeagueClient API).
+        /// </summary>
+        /// <param name="httpRequestMessage">Http request</param>
+        /// <returns>Response content or null if an error occurred</returns>
+        public static async Task<string?> GetResponseSelfSigned(HttpRequestMessage httpRequestMessage)
+        {
+            try
+            {
+                var handler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+                };
+
+                using var httpClient = new HttpClient(handler);
+
+                HttpResponseMessage httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
+                string content = await httpResponseMessage.Content.ReadAsStringAsync();
+
+                _logger.Log(LoggingLevel.INFO, "GetResponse()", $"Response: {httpRequestMessage.RequestUri} successful");
+
+                _logger.Log(LoggingLevel.ERROR, "GetResponse()", $"StatusCode: {httpResponseMessage.StatusCode}");
+                _logger.Log(LoggingLevel.ERROR, "GetResponse()", $"Headers: {httpResponseMessage.Headers}");
+
+                return content;
+            }
+            catch (Exception e)
+            {
+                _logger.Log(LoggingLevel.ERROR, "GetResponse()", $"Error: {e.Message}");
+                return null;
+            }
+        }
     }
 }
