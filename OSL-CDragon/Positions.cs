@@ -1,12 +1,16 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using OSL_CDragon.Schema;
 using OSL_Utils;
-using System.IO;
 using static OSL_CDragon.CDragon;
-using static OSL_CDragon.Schema.Asset;
 
 namespace OSL_CDragon
 {
+    /// <summary>
+    /// Represents a collection of position-related assets and provides functionality to download and manage them.
+    /// </summary>
+    /// <remarks>The <see cref="Positions"/> class is responsible for handling position assets such as Top,
+    /// Jungle, Mid, ADC, and Support. It provides a method to download position data from a remote server and merge it
+    /// with local data.</remarks>
     internal class Positions()
     {
         /// <summary>
@@ -24,6 +28,15 @@ namespace OSL_CDragon
         /// </summary>
         private readonly Position _positions = new();
 
+        /// <summary>
+        /// Downloads and processes position data from a remote server and local storage.
+        /// </summary>
+        /// <remarks>This method retrieves position data from a predefined remote server and a local file,
+        /// deserializes the data, and processes it to populate categorized position paths. If an error occurs during
+        /// the download or processing, the method logs the error and returns the current state of the
+        /// positions.</remarks>
+        /// <returns>A <see cref="Position"/> object containing the categorized position data. The returned object reflects the
+        /// current state of the positions, including any successfully processed data.</returns>
         internal Position Download()
         {
             //gérer des customs, on regarde si certains sont en local et on récupérer les infos

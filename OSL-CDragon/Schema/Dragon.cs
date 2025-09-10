@@ -1,4 +1,4 @@
-﻿namespace OSL_CDragon.Schema
+namespace OSL_CDragon.Schema
 {
     /// <summary>
     /// List of assets for each dragon

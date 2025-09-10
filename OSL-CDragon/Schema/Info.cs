@@ -1,4 +1,4 @@
-﻿namespace OSL_CDragon.Schema
+namespace OSL_CDragon.Schema
 {
     /// <summary>
     /// Information used for download assets and manage version and region current used.

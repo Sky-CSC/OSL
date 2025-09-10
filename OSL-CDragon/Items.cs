@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using OSL_CDragon.Schema;
 using OSL_Utils;
 

@@ -1,4 +1,4 @@
-﻿namespace OSL_CDragon.Schema
+namespace OSL_CDragon.Schema
 {
     /// <summary>
     /// Data structure for patch data

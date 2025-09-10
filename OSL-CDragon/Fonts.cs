@@ -1,10 +1,13 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using OSL_CDragon.Schema;
 using OSL_Utils;
 using static OSL_CDragon.CDragon;
 
 namespace OSL_CDragon
 {
+    /// <summary>
+    /// Download and manage fonts assets.
+    /// </summary>
     internal class Fonts
     {
         /// <summary>
@@ -17,8 +20,15 @@ namespace OSL_CDragon
         /// </summary>
         private static readonly Download _download = new();
 
+        /// <summary>
+        /// Fonts assets list.
+        /// </summary>
         private readonly List<Asset> _fonts = [];
 
+        /// <summary>
+        /// Download fonts data from the server and local files.
+        /// </summary>
+        /// <returns></returns>
         internal List<Asset> Download()
         {
             Uri url = new("https://osl.sky-csc.fr/fonts/fonts.json");

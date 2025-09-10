@@ -1,4 +1,4 @@
-﻿namespace OSL_CDragon.Schema
+namespace OSL_CDragon.Schema
 {
     /// <summary>
     /// Data composed of a champion's id, name, alias, square portrait path, sounds, roles, skins, and stats.

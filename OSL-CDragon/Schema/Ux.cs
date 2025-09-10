@@ -1,4 +1,4 @@
-﻿namespace OSL_CDragon.Schema
+namespace OSL_CDragon.Schema
 {
     /// <summary>
     /// Assets used for the user interface (UX)

@@ -1,4 +1,4 @@
-﻿using OSL_CDragon.Schema;
+using OSL_CDragon.Schema;
 using OSL_Utils;
 
 namespace OSL_CDragon
@@ -370,6 +370,11 @@ namespace OSL_CDragon
             return true;
         }
 
+        /// <summary>
+        /// Check if all fonts assets are downloaded
+        /// </summary>
+        /// <param name="fonts"></param>
+        /// <returns></returns>
         internal static bool Font(List<Asset> fonts)
         {
             if (fonts.Count == 0)
@@ -377,14 +382,16 @@ namespace OSL_CDragon
                 return false;
             }
 
-            foreach (Asset font in fonts)
+            var fontPaths = fonts.Select(font => font.Path);
+
+            foreach (string path in fontPaths)
             {
-                if (!OSL_Utils.File.Exist(font.Path))
+                if (!OSL_Utils.File.Exist(path))
                 {
-                    _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Font {font.Path} not exist");
+                    _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Font {path} not exist");
                     return false;
                 }
-                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Font {font.Path} exist");
+                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Font {path} exist");
             }
             return true;
         }

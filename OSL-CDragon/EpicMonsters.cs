@@ -1,11 +1,13 @@
-﻿using OSL_CDragon.Schema;
-using OSL_Utils;
-using static OSL_CDragon.Schema.Asset;
-using static OSL_CDragon.CDragon;
 using Newtonsoft.Json;
+using OSL_CDragon.Schema;
+using OSL_Utils;
+using static OSL_CDragon.CDragon;
 
 namespace OSL_CDragon
 {
+    /// <summary>
+    /// Download epic monsters assets such as dragons, baron, herald, voidgrub and atakhan.
+    /// </summary>
     internal class EpicMonsters
     {
         /// <summary>
@@ -48,7 +50,7 @@ namespace OSL_CDragon
                     epicMonsterSummary.AddRange(epicMonsterSummaryServer);
                     epicMonsterSummary.AddRange(epicMonsterSummaryLocal);
 
-                    // Process each dragon
+                    // Process each epic monster
                     foreach (Asset epicMonster in epicMonsterSummary)
                     {
                         if (OSL_Utils.Path.GetDirectoryName(epicMonster.Path).Contains("chemtech"))
