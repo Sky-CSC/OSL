@@ -1,0 +1,56 @@
+# Indique que c’est le fichier racine
+root = true
+
+# Paramètres globaux par défaut
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+# C# files
+[*.cs]
+indent_style = space
+indent_size = 4
+
+# C++ files
+[*.{h,hpp,c,cpp}]
+indent_style = space
+indent_size = 4
+
+# JSON files
+[*.json]
+indent_style = space
+indent_size = 2
+
+# XML files (config, csproj, etc.)
+[*.{xml,config,csproj,props,resx}]
+indent_style = space
+indent_size = 2
+
+# Markdown (ne pas supprimer les espaces à la fin car utiles en MD)
+[*.md]
+trim_trailing_whitespace = false
+end_of_line = lf
+
+# Scripts shell
+[*.sh]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+
+# PowerShell
+[*.ps1]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+
+# Batch
+[*.bat]
+end_of_line = crlf
+
+# Text files
+[*.txt]
+end_of_line = lf
