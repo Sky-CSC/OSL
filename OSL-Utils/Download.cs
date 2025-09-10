@@ -126,11 +126,13 @@
                 HttpResponseMessage httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
                 string content = await httpResponseMessage.Content.ReadAsStringAsync();
 
+                if (!httpResponseMessage.IsSuccessStatusCode)
+                {
+                    _logger.Log(LoggingLevel.ERROR, "GetResponse()", $"Error: {httpResponseMessage.ReasonPhrase}");
+                    return null;
+                }
+
                 _logger.Log(LoggingLevel.INFO, "GetResponse()", $"Response: {httpRequestMessage.RequestUri} successful");
-
-                _logger.Log(LoggingLevel.ERROR, "GetResponse()", $"StatusCode: {httpResponseMessage.StatusCode}");
-                _logger.Log(LoggingLevel.ERROR, "GetResponse()", $"Headers: {httpResponseMessage.Headers}");
-
                 return content;
             }
             catch (Exception e)

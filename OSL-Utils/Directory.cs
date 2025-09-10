@@ -1,7 +1,7 @@
 ﻿namespace OSL_Utils
 {
     /// <summary>
-    /// Provides methods for manipulating directories.
+    /// Provides methods for directory operations.
     /// </summary>
     public static class Directory
     {

@@ -1,126 +1,139 @@
 ﻿namespace OSL_Utils
 {
     /// <summary>
-    /// Logger class for logging messages
+    /// Logger class for logging messages, supports automatic emojis
     /// </summary>
     public class Logger
     {
+        /// <summary>
+        /// Mutex
+        /// </summary>
         private static readonly Mutex mut = new();
 
-        public LoggingLevel LogLevel;
-        public string contextPrefix;
-
-        public static LoggingLevel DefaultLoggingLevel = DefaultInit();
+        /// <summary>
+        /// Log level
+        /// </summary>
+        public LoggingLevel LogLevel { get; set; }
 
         /// <summary>
-        /// DefaultInit - Initialize the default logging level from the appsettings.json file
+        /// Prefix context
         /// </summary>
-        /// <returns> default logging level </returns>
-        private static LoggingLevel DefaultInit()
+        public string ContextPrefix { get; set; }
+
+        /// <summary>
+        /// Default logging level
+        /// </summary>
+        public static LoggingLevel DefaultLoggingLevel { get; } = LoggingLevel.INFO;
+
+        /// <summary>
+        /// Static constructor for configurer UTF-8
+        /// </summary>
+        static Logger()
         {
-            return LoggingLevel.INFO;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Logger"/> class.
+        /// Constructor
         /// </summary>
-        /// <param name="logLevel"></param>
-        /// <param name="contextPrefix"></param>
+        /// <param name="contextPrefix">Prefixe context</param>
+        /// <param name="logLevel">Log level</param>
         public Logger(string contextPrefix = "", LoggingLevel? logLevel = null)
         {
             LogLevel = logLevel ?? DefaultLoggingLevel;
-            this.contextPrefix = contextPrefix + ".";
+            ContextPrefix = string.IsNullOrEmpty(contextPrefix) ? "" : contextPrefix + ".";
         }
 
         /// <summary>
-        /// Logs the specified message.
+        /// Logs a message with level and context.
         /// </summary>
-        /// <param name="level"></param>
-        /// <param name="context"></param>
-        /// <param name="message"></param>
         public void Log(LoggingLevel level, string context, object message)
         {
             if (level <= LogLevel && level != LoggingLevel.OFF)
             {
                 mut.WaitOne();
-                Console.Out?.Flush();
-                Console.Write(String.Format("{0,-16} | ", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
-                WriteLevel(level);
-                WriteCaller($"{contextPrefix}{context}");
-                Console.Write(": ");
-                Console.WriteLine(String.Format("{1}", context, message));
-                Console.ResetColor();
-                mut.ReleaseMutex();
+                try
+                {
+                    Console.Out?.Flush();
+                    Console.Write($"{DateTime.Now:yyyy-MM-dd HH:mm:ss} | ");
+                    WriteLevel(level);          // Emoji + level
+                    WriteCaller($"{ContextPrefix}{context}");
+                    Console.Write(": ");
+
+                    string msg = message?.ToString() ?? "null";
+                    Console.WriteLine(msg);
+                    Console.ResetColor();
+                }
+                finally
+                {
+                    mut.ReleaseMutex();
+                }
             }
         }
 
         /// <summary>
-        /// Formatting for writing in the console
+        /// Get emoji for each log level
+        /// </summary>
+        /// <param name="level">log level</param>
+        /// <returns>emoji</returns>
+        private static string GetEmojiForLevel(LoggingLevel level) => level switch
+        {
+            LoggingLevel.DEBUG => "🐛",
+            LoggingLevel.INFO => "ℹ️",
+            LoggingLevel.WARN => "⚠️",
+            LoggingLevel.ERROR => "❌",
+            _ => ""
+        };
+
+        /// <summary>
+        /// Write data
         /// </summary>
         /// <param name="caller"></param>
         private static void WriteCaller(string caller)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-            int n = Allign(caller);
-            string allign = caller + (new string(' ', n));
-            Console.Write(String.Format($"[{allign}] "));
+            int n = Align(caller);
+            string aligned = caller + new string(' ', n);
+            Console.Write($"[{aligned}] ");
             Console.ResetColor();
         }
 
         /// <summary>
-        /// Formatting alignement for writing in the console
+        /// Align text
         /// </summary>
-        /// <param name="text">Text to format</param>
-        /// <returns></returns>
-        private static int Allign(string text)
+        /// <param name="text">text</param>
+        /// <returns>Number for align</returns>
+        private static int Align(string text)
         {
-            if (text.Length <= 24)
-            {
-                return 25 - text.Length;
-            }
-            else if (text.Length <= 32)
-            {
-                return 32 - text.Length;
-            }
-            else if (text.Length <= 40)
-            {
-                return 45 - text.Length;
-            }
+            if (text.Length <= 24) return 25 - text.Length;
+            if (text.Length <= 32) return 32 - text.Length;
+            if (text.Length <= 40) return 45 - text.Length;
             return 0;
         }
 
         /// <summary>
-        /// Level formatting for writing in the console
+        /// Write level log
         /// </summary>
         /// <param name="level"></param>
         private static void WriteLevel(LoggingLevel level)
         {
-            switch (level)
+            string emoji = GetEmojiForLevel(level);
+            Console.ForegroundColor = level switch
             {
-                case LoggingLevel.DEBUG:
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    break;
-                case LoggingLevel.INFO:
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    break;
-                case LoggingLevel.WARN:
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    break;
-                case LoggingLevel.ERROR:
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    break;
+                LoggingLevel.DEBUG => ConsoleColor.Blue,
+                LoggingLevel.INFO => ConsoleColor.Green,
+                LoggingLevel.WARN => ConsoleColor.Yellow,
+                LoggingLevel.ERROR => ConsoleColor.Red,
+                _ => Console.ForegroundColor
+            };
 
-                default:
-                    break;
-            }
-
-            Console.Write(String.Format("[{0,-5}] ", level.ToString()));
+            Console.Write($"[{level,-5}] "); // Emoji devant le niveau
             Console.ResetColor();
         }
     }
 
     /// <summary>
-    /// Level of logging
+    /// Loggings levels
     /// </summary>
     public enum LoggingLevel
     {
@@ -128,6 +141,6 @@
         ERROR = 1,
         WARN = 2,
         INFO = 3,
-        DEBUG = 4,
+        DEBUG = 4
     }
 }
