@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a frames timeline data transfer object.
     /// </summary>
-    public struct FramesTimeLineDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class FramesTimeLineDto
     {
         /// <summary>
         /// The events of the game.

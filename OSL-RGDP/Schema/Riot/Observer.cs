@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents an observer of a game.
     /// </summary>
-    public struct Observer
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class Observer
     {
         /// <summary>
         /// Key used to decrypt the spectator grid game data for playback

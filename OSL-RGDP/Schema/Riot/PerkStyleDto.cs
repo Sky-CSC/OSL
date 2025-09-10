@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a perk style data transfer object.
     /// </summary>
-    public struct PerkStyleDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class PerkStyleDto
     {
         /// <summary>
         /// The description of the perk style.

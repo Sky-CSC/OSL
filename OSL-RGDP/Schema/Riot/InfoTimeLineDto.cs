@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a info timeline data transfer object.
     /// </summary>
-    public struct InfoTimeLineDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class InfoTimeLineDto
     {
         /// <summary>
         /// Indicates if the game ended in termination.

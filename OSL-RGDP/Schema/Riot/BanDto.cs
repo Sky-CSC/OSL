@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// This object contains ban information.
     /// </summary>
-    public struct BanDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class BanDto
     {
         /// <summary>
         /// The ID of the banned champion.

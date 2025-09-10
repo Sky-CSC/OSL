@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a banned champion in a game.
     /// </summary>
-    public struct BannedChampion
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class BannedChampion
     {
         /// <summary>
         /// The turn during which the champion was banned.

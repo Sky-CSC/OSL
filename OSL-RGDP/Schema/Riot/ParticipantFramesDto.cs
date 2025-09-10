@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a participant frames data transfer object.
     /// </summary>
-    public struct ParticipantFramesDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class ParticipantFramesDto
     {
         /// <summary>
         /// Key value mapping for each participant 

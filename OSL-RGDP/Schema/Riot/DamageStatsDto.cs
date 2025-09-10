@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a damage stats data transfer object.
     /// </summary>
-    public struct DamageStatsDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class DamageStatsDto
     {
         /// <summary>
         /// The magic damage done.

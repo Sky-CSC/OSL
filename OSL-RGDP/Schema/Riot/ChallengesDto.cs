@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Challenges DTO.
     /// </summary>
-    public struct ChallengesDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class ChallengesDto
     {
         /// <summary>
         /// 12 Assist Streak Count

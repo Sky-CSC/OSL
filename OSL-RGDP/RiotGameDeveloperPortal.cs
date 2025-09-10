@@ -1,58 +1,63 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using OSL_RGDP.Schema;
 using OSL_Utils;
 
 namespace OSL_RGDP
 {
     /// <summary>
-    /// Riot Game Developer Portal api. Account, Match and Spectator information.
+    /// Provide access to Riot Games Developer Portal API.
     /// </summary>
-    /// <param name="info">Info for download informations</param>
-    public class RiotGameDeveloperPortal(Info info)
+    /// <remarks>The API is documented at https://developer.riotgames.com/docs/lol</remarks>
+    /// <param name="config">Information for connect to API</param>
+    public class RiotGameDeveloperPortal(RiotGameDeveloperPortalConfig config)
     {
         /// <summary>
         /// Account information.
         /// </summary>
-        public AccountV1 Account { get; } = new AccountV1(info);
+        public AccountV1 Account { get; } = new AccountV1(config);
         /// <summary>
         /// Match information.
         /// </summary>
-        public MatchV5 Match { get; } = new MatchV5(info);
+        public MatchV5 Match { get; } = new MatchV5(config);
         /// <summary>
         /// Spectator game information.
         /// </summary>
-        public SpectatorV5 Spectator { get; } = new SpectatorV5(info);
+        public SpectatorV5 Spectator { get; } = new SpectatorV5(config);
     }
 
     /// <summary>
-    /// Request data from the API.
+    /// Managements of request for connect to Riot Games Developer Portal API
     /// </summary>
+    /// <remarks>The API is documented at https://developer.riotgames.com/docs/lol</remarks>
     internal static class RgdpApi
     {
         /// <summary>
-        /// The logger.
+        /// A static instance of the <see cref="Logger"/> class used for logging messages related to the
+        /// <c>WebSocketClient</c>.
         /// </summary>
+        /// <remarks>This logger is initialized with the name "ApiRequest" to categorize log
+        /// messages. It is intended for internal use within the class and is not exposed to external
+        /// consumers.</remarks>
         private static readonly Logger _logger = new("ApiRequest");
 
         /// <summary>
-        /// The download manager.
+        /// Manages downloading data from the internet.
         /// </summary>
         private static readonly Download _download = new();
 
         /// <summary>
-        /// Request data from the API.
+        /// Request to Riot Games Developer Portal API.
         /// </summary>
-        /// <param name="region">Region or rooting used</param>
-        /// <param name="urlRequest">Url</param>
-        /// <param name="info">Info used for complete the request</param>
-        /// <returns>Data returned by request</returns>
-        internal static string? Request(Info info, string urlRequest)
+        /// <param name="config">Configuration setings</param>
+        /// <param name="urlRequest">Url to retrieve data</param>
+        /// <returns>Response data</returns>
+        internal static string? Request(RiotGameDeveloperPortalConfig config, string urlRequest)
         {
             try
             {
-                urlRequest = $"{info.Https}{info.Routing}{info.Domain}{urlRequest}";
+                urlRequest = $"{config.Https}{config.Routing}{config.Domain}{urlRequest}";
                 var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlRequest);
-                httpRequest.Headers.Add("X-Riot-Token", info.ApiKey);
+                httpRequest.Headers.Add("X-Riot-Token", config.ApiKey);
                 var response = _download.GetResponse(httpRequest).Result;
                 _logger.Log(LoggingLevel.INFO, "Request()", $"Request {urlRequest} succesful");
                 return response;
@@ -62,47 +67,6 @@ namespace OSL_RGDP
                 _logger.Log(LoggingLevel.ERROR, "Request()", $"Error request {urlRequest} : {e.Message}");
                 return null;
             }
-        }
-
-        /// <summary>
-        /// Load info from a file.
-        /// </summary>
-        /// <param name="path">Path</param>
-        /// <returns>Info</returns>
-        public static Info? LoadInfo(string path)
-        {
-            string? content = OSL_Utils.File.Read(path);
-            if (content == null)
-            {
-                _logger.Log(LoggingLevel.ERROR, "LoadInfo()", $"Error loading info from {path}");
-                return null;
-            }
-
-            Info? info = JsonConvert.DeserializeObject<Info>(content);
-            if (info == null)
-            {
-                _logger.Log(LoggingLevel.ERROR, "LoadInfo()", $"Error loading info from {path}");
-                return null;
-            }
-
-            return info;
-        }
-
-        /// <summary>
-        /// Save info to a file.
-        /// </summary>
-        /// <param name="path">Path</param>
-        /// <param name="info">Info</param>
-        /// <returns>True if save is completed</returns>
-        public static bool SaveInfo(string path, Info info)
-        {
-            string content = JsonConvert.SerializeObject(info);
-            if (!OSL_Utils.File.Write(path, content))
-            {
-                _logger.Log(LoggingLevel.ERROR, "SaveInfo()", $"Error saving info to {path}");
-                return false;
-            }
-            return true;
         }
     }
 }

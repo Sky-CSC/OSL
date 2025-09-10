@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a missions data transfer object.
     /// </summary>
-    public struct MissionsDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class MissionsDto
     {
         /// <summary>
         /// Player 0 score

@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a champion stats data transfer object.
     /// </summary>
-    public struct ChampionStatsDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class ChampionStatsDto
     {
         /// <summary>
         /// The ability haste of the champion.

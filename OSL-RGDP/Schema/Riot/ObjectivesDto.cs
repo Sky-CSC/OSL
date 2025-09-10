@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents an objectives data transfer object.
     /// </summary>
-    public struct ObjectivesDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class ObjectivesDto
     {
         /// <summary>
         /// The Baron Nashor objective.

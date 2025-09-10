@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents the info DTO.
     /// </summary>
-    public struct InfoDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class InfoDto
     {
         /// <summary>
         /// Refer to indicate if the game ended in termination.

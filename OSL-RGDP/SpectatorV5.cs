@@ -6,27 +6,31 @@ using static OSL_RGDP.RgdpApi;
 namespace OSL_RGDP
 {
     /// <summary>
-    /// Game information see by a spectator
+    /// Provides methods to interact with the Spectator V5 API of Riot Games Developer Portal.
     /// </summary>
-    /// <param name="info"></param>
-    public class SpectatorV5(Info info)
+    /// <remarks>This class allows you to retrieve current game information for a given summoner ID.</remarks>
+    /// <param name="config">Information for connect to API</param>
+    public class SpectatorV5(RiotGameDeveloperPortalConfig config)
     {
         /// <summary>
-        /// Information for make request to Riot Game Developer Portal
+        /// Represents the information associated with this instance.
         /// </summary>
-        private readonly Info _info = info;
+        /// <remarks>This field is read-only and is intended to store metadata or configuration details
+        /// relevant to the containing class. It cannot be modified after initialization.</remarks>
+        private readonly RiotGameDeveloperPortalConfig _config = config;
 
         /// <summary>
-        /// Get the current game information for the given summoner ID.
+        /// Retrieves current game information for a given summoner ID.
         /// </summary>
-        /// <param name="encryptedPuuid">Encrypted puuid</param>
-        /// <returns><see cref="CurrentGameInfo"/> info</returns>
-        public CurrentGameInfo BySummoner(string encryptedPuuid)
+        /// <remarks>This method sends a request to the Spectator V5 API endpoint to fetch details about the current game <see cref="CurrentGameInfo"/> associated with the specified summoner ID."</remarks>
+        /// <param name="encryptedPuuid">The encrypted PUUID (Player Universal Unique Identifier) of the account to retrieve.</param>
+        /// <returns>An instance of <see cref="CurrentGameInfo"/> containing details about the current game. If no data is found, an empty <see cref="CurrentGameInfo"/> object is returned.</returns>
+        public CurrentGameInfo? BySummoner(string encryptedPuuid)
         {
-            string? data = Request(_info, $"/lol/spectator/v5/active-games/by-summoner/{encryptedPuuid}");
+            string? data = Request(_config, $"/lol/spectator/v5/active-games/by-summoner/{encryptedPuuid}");
             if (data == null)
             {
-                return new CurrentGameInfo();
+                return null;
             }
             return JsonConvert.DeserializeObject<CurrentGameInfo>(data);
         }

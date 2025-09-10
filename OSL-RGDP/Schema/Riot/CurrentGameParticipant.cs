@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a participant in a current game.
     /// </summary>
-    public struct CurrentGameParticipant
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class CurrentGameParticipant
     {
         /// <summary>
         /// The ID of the champion played by this participant.

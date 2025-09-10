@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents the perks/runes assigned to a player.
     /// </summary>
-    public struct Perks
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class Perks
     {
         /// <summary>
         /// IDs of the perks/runes assigned.

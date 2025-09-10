@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a match data transfer object.
     /// </summary>
-    public struct MatchDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class MatchDto
     {
         /// <summary>
         /// Match metadata.

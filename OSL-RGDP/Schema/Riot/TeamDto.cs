@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a team data transfer object.
     /// </summary>
-    public struct TeamDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class TeamDto
     {
         /// <summary>
         /// The bans of the team.

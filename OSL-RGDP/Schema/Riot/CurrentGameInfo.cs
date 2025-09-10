@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represent a game information
     /// </summary>
-    public struct CurrentGameInfo
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class CurrentGameInfo
     { 
         /// <summary>
         /// The ID of the game.

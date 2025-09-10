@@ -1,4 +1,4 @@
-﻿
+
 using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
@@ -6,7 +6,8 @@ namespace OSL_RGDP.Schema.Riot
     /// <summary>
     /// Represents a perks data transfer object.
     /// </summary>
-    public struct PerksDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class PerksDto
     {
         /// <summary>
         /// The stats perks selected.

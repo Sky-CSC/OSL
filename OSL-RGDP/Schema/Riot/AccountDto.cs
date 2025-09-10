@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Information about an account.
     /// </summary>
-    public struct AccountDto
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class AccountDto
     {
         /// <summary>
         /// The unique identifier of the account.

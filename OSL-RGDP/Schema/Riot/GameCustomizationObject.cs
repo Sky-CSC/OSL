@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace OSL_RGDP.Schema.Riot
 {
     /// <summary>
     /// Represents a game customization object.
     /// </summary>
-    public struct GameCustomizationObject
+    /// <remarks>Class generated from the Riot Games API documentation.</remarks>
+    public class GameCustomizationObject
     {
         /// <summary>
         /// Category identifier for Game Customization
