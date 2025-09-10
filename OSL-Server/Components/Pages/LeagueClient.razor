@@ -1,0 +1,35 @@
+﻿@page "/leagueclient"
+@rendermode InteractiveServer
+@inject OSL_Server.Services.LeagueClient Watcher
+@implements IDisposable
+
+<PageTitle>OSL-Server : League Client</PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">League Client</MudText>
+<MudText Class="mb-8">Information about League Client</MudText>
+
+<MudText Typo="Typo.body2">
+    League of Legends process status :
+    <strong>@(isRunning ? "UP ✅" : "DOWN ❌")</strong>
+</MudText>
+
+@code {
+    private bool isRunning;
+
+    protected override void OnInitialized()
+    {
+        isRunning = Watcher.IsRunning;
+        Watcher.OnChanged += HandleChanged;
+    }
+
+    private void HandleChanged()
+    {
+        isRunning = Watcher.IsRunning;
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        Watcher.OnChanged -= HandleChanged;
+    }
+}
