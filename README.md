@@ -127,9 +127,17 @@ Applications, riot api and installation documentation. **[Link documentation](ht
 coming soon
 
 # Thanks to these projets and community
+### [BlossomiShymae](https://github.com/BlossomiShymae)
+
+[Needlework.Net](https://github.com/BlossomiShymae/Needlework.Net) (A .NET helper development tool for the LCU and Game Client!)
+
+### [dysolix](https://github.com/dysolix)
+
+[hasagi-types](https://github.com/dysolix/hasagi-types) (This repo hosts the auto-generated swagger.json and TypeScript types for the LCU API)
+
 ### [Floh22](https://github.com/floh22)
 
-[LeagueBroadcast](https://github.com/floh22/LeagueBroadcast) (League of Legends Spectate Overlay Tools )
+[LeagueBroadcast](https://github.com/floh22/LeagueBroadcast) (League of Legends Spectate Overlay Tools)
 
 ### [Riot Community Volunteers ](https://github.com/RCVolus)
 
