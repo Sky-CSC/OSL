@@ -1,0 +1,59 @@
+using MudBlazor.Services;
+using OSL_Overlay.Components;
+using OSL_Overlay.WebSocketClient;
+using OSL_Overlay.WebSocketClient.Handlers;
+using OSL_Utils.WebSocket;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add MudBlazor services
+builder.Services.AddMudServices();
+
+// Configure Web socket server from appsettings.json
+builder.Services.Configure<WebSocketConfig>(
+    builder.Configuration.GetSection("WebSocketServerConfig"));
+
+// Register the WebSocketClient as a singleton service
+builder.Services.AddSingleton<WebSocketClient>();
+
+// Handlers
+builder.Services.AddSingleton<IMessageHandler, RegionLocaleHandler>();
+builder.Services.AddSingleton<IMessageHandler, EndGameHandler>();
+builder.Services.AddSingleton<IMessageHandler, EndGameMatchHandler>();
+builder.Services.AddSingleton<IMessageHandler, EndGameTimelineHandler>();
+
+// WebSocketClient en singleton
+builder.Services.AddSingleton<WebSocketClient>();
+
+// Add services to the container.
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error", createScopeForErrors: true);
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+
+app.UseAntiforgery();
+
+app.MapStaticAssets();
+app.MapRazorComponents<App>()
+    .AddInteractiveServerRenderMode();
+
+// Before running the app, download assets (Champions, Items, Runes, EpicMonsters, Position, Font.)
+
+// Connect to the WebSocket server
+using (var scope = app.Services.CreateScope())
+{
+    var client = scope.ServiceProvider.GetRequiredService<WebSocketClient>();
+    await client.ConnectAsync();
+}
+
+app.Run();

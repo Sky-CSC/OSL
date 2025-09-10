@@ -1,0 +1,38 @@
+﻿@page "/ws-test"
+@using OSL_Overlay.WebSocketClient
+@inject WebSocketClient WsClient
+
+<h3>WebSocket Test</h3>
+
+<input @bind="MessageToSend" placeholder="Message à envoyer" />
+<button @onclick="SendMessage">Envoyer</button>
+
+<ul>
+    @foreach (var msg in Messages)
+    {
+        <li>@msg</li>
+    }
+</ul>
+
+@code {
+    private List<string> Messages = new();
+    private string MessageToSend = "";
+
+    protected override void OnInitialized()
+    {
+        WsClient.OnMessageReceived += async (msg) =>
+        {
+            await InvokeAsync(() =>
+            {
+                Messages.Add(msg);
+                StateHasChanged();
+            });
+        };
+    }
+
+    private async Task SendMessage()
+    {
+        var payload = new { type = "skynet", data = MessageToSend };
+        await WsClient.SendAsync(payload);
+    }
+}
