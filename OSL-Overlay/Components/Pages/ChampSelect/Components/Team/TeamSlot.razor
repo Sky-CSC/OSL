@@ -1,0 +1,25 @@
+@using OSL_Overlay.Phase.ChampSelect
+<div class="team @Side">
+    @if (Team.ShowLogo)
+    {
+        <Image ImageUrl="@Team.Logo" />
+    }
+    @if (Team.ShowName)
+    {
+        <Txt Text="@Team.Name" />
+    }
+    @if (Team.ShowTag)
+    {
+        <Txt Text="@Team.Tag" />
+    }
+    @if (Team.BoGraphic.Show)
+    {
+        <BoGraphicSlot Team="@Side" Bo="@Team.BoGraphic" />
+    }
+</div>
+
+@code {
+    [Parameter] public string Side { get; set; } = string.Empty;
+    [Parameter] required public Team Team { get; set; }
+
+}

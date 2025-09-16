@@ -1,0 +1,11 @@
+@using OSL_Overlay.Phase.ChampSelect
+<div class="coach @Team" style="background:@Coach.Info.Background; border:@Coach.Info.Border">
+    @* Display Coach *@
+    <Txt Txt="@Coach.Info.Txt" Font="@Coach.Info.Font" Color="@Coach.Info.Color" />
+</div>
+
+
+@code {
+    [Parameter] public string Team { get; set; } = string.Empty;
+    [Parameter] required public Coach Coach { get; set; }
+}

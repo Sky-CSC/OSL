@@ -1,0 +1,41 @@
+@using MudBlazor
+@implements IDisposable
+@using OSL_Overlay.Phase.ChampSelect
+
+<div class="timer-bar @Timer.Direction" style="background:@Timer.FillColor;">
+    <div class="timer-fill" style="background:@Timer.BarColor; --progress:@((Progress / 100.0).ToString(System.Globalization.CultureInfo.InvariantCulture));"></div>
+</div>
+
+@code {
+
+    [Parameter] required public Timer Timer { get; set; }
+
+    private double Progress { get; set; } = 100;
+    private System.Timers.Timer? _timer;
+    private DateTime _start;
+
+    protected override void OnInitialized()
+    {
+        _start = DateTime.Now;
+        Progress = 100;
+
+        _timer = new System.Timers.Timer(16); // ~60 fps
+        _timer.Elapsed += (s, e) =>
+        {
+            var elapsed = (DateTime.Now - _start).TotalSeconds;
+            var remaining = Math.Max(0, Timer.Duration - elapsed);
+            Progress = (remaining / Timer.Duration) * 100;
+
+            InvokeAsync(StateHasChanged);
+
+            if (remaining <= 0)
+                _timer?.Stop();
+        };
+        _timer.Start();
+    }
+
+    public void Dispose()
+    {
+        _timer?.Dispose();
+    }
+}

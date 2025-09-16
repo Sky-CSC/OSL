@@ -1,0 +1,10 @@
+@using OSL_Overlay.Phase.ChampSelect
+<div class="patch" style="background:@Patch.BackgroundColor">
+    <Txt Text="@Patch.PatchInfo" />
+    <Txt Text="@Patch.Version" />
+</div>
+
+
+@code {
+    [Parameter] required public Patch Patch { get; set; }
+}
