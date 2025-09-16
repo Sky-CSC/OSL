@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Data composed of a champion's id, name, alias, square portrait path, sounds, roles, skins, and stats.
     /// </summary>
-    internal class Champion
+    public class Champion
     {
         /// <summary>
         /// The champion's id.

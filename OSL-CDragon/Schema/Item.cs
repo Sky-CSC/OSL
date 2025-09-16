@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Data composed of an item's id, name, icon path, and lists of items it can be built from and into.
     /// </summary>
-    internal class Item
+    public class Item
     {
         /// <summary>
         /// The item's unique identifier.

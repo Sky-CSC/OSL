@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Represents a perk in the game.
     /// </summary>
-    internal class Perk
+    public class Perk
     {
         /// <summary>
         /// The unique identifier of the perk.

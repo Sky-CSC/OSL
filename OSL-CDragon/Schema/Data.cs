@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Data structure for patch data
     /// </summary>
-    internal class Data
+    public class Data
     {
         /// <summary>
         /// List of patches

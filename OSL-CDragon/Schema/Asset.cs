@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Data structure for assets
     /// </summary>
-    internal class Asset
+    public class Asset
     {
         /// <summary>
         /// Unique identifier for the asset

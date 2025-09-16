@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// List of assets for each dragon
     /// </summary>
-    internal class Dragon
+    public class Dragon
     {
         /// <summary>
         /// List of assets for the Cloud dragon

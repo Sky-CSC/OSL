@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// List of assets for epics monsters
     /// </summary>
-    internal class EpicMonster
+    public class EpicMonster
     {
         /// <summary>
         /// Assets for dragons

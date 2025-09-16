@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Represents a skin.
     /// </summary>
-    internal class Skin
+    public class Skin
     {
         /// <summary>
         /// The unique identifier of the Skin.

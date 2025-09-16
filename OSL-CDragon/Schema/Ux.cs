@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Assets used for the user interface (UX)
     /// </summary>
-    internal class Ux
+    public class Ux
     {
         /// <summary>
         /// List of assets for runes

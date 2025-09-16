@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Represents a sound of champion.
     /// </summary>
-    internal class Sound
+    public class Sound
     {
         /// <summary>
         /// The path to the sound of champion's choose.

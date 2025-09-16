@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Represents a patch.
     /// </summary>
-    internal class Patch
+    public class Patch
     {
         /// <summary>
         /// The patch number. ex : 15.3.6540407+branch.releases-15-3.content.release

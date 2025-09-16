@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Represents a stat of champion.
     /// </summary>
-    internal class Stat
+    public class Stat
     {
         /// <summary>
         /// The percent of pick.

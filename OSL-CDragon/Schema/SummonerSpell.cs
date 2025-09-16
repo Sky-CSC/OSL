@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Represents a summoner spell in the game.
     /// </summary>
-    internal class SummonerSpell
+    public class SummonerSpell
     {
         /// <summary>
         /// The unique identifier of the summoner spell.

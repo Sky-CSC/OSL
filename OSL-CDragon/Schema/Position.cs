@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Represents a position in the game.
     /// </summary>
-    internal class Position
+    public class Position
     {
         /// <summary>
         /// List of top lane position assets

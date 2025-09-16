@@ -3,7 +3,7 @@ namespace OSL_CDragon.Schema
     /// <summary>
     /// Represents a region in the game.
     /// </summary>
-    internal class Region
+    public class Region
     {
         /// <summary>
         /// The name of the region.
