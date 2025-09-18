@@ -12,9 +12,40 @@ namespace OSL_CDragon
         /// </summary>
         /// <param name="id">Champion id</param>
         /// <returns>A <see cref="Schema.Champion"/> object if found; otherwise, null.</returns>
-        public Champion? GetChampion(int id)
+        public Champion? GetChampion(Int64 id)
         {
             return _data.Patchs[_indexPatch].Regions[_indexRegion].Champions.FirstOrDefault(champ => champ.Id == id) ?? null;
+        }
+
+        public string GetChampionSplash(Int64 championId)
+        {
+            if (championId == 0)
+                return string.Empty;
+
+            var champion = GetChampion(championId);
+            if (champion == null)
+                return string.Empty;
+
+            var skin = champion.Skins.FirstOrDefault(skin => skin.IsBase);
+            if (skin == null)
+                return string.Empty;
+
+            string[] path = skin.Splashe.Split("/wwwroot");
+            string filePath = path[0] + path[1];
+            return filePath;
+        }
+
+        public string GetChampionSquare(int championId)
+        {
+            if (championId == 0)
+                return string.Empty;
+            var champion = GetChampion(championId);
+            if (champion == null)
+                return string.Empty;
+
+            string[] path = champion.SquarePortraitPath.Split("/wwwroot");
+            string filePath = path[0] + path[1];
+            return filePath;
         }
 
         /// <summary>
