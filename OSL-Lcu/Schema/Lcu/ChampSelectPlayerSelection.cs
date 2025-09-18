@@ -38,7 +38,7 @@ namespace OSL_Lcu.Schema.Lcu
         public string PlayerType { get; set; }
 
         [JsonProperty("summonerId")]
-        public int SummonerId { get; set; }
+        public Int64 SummonerId { get; set; }
 
         [JsonProperty("gameName")]
         public string GameName { get; set; }

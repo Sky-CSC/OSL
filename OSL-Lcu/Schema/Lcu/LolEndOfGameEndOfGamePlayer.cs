@@ -29,7 +29,7 @@ namespace OSL_Lcu.Schema.Lcu
         public int ChampionId { get; set; }
 
         [JsonProperty("gameId")]
-        public int GameId { get; set; }
+        public Int64 GameId { get; set; }
 
         [JsonProperty("leaver")]
         public bool Leaver { get; set; }

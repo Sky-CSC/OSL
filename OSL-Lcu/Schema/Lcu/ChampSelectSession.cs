@@ -11,7 +11,7 @@ namespace OSL_Lcu.Schema.Lcu
         public string Id { get; set; }
 
         [JsonProperty("gameId")]
-        public int GameId { get; set; }
+        public Int64 GameId { get; set; }
 
         [JsonProperty("queueId")]
         public int QueueId { get; set; }
@@ -38,7 +38,7 @@ namespace OSL_Lcu.Schema.Lcu
         public List<ChampSelectSwapContract> PositionSwaps { get; set; }
 
         [JsonProperty("actions")]
-        public List<object> Actions { get; set; }
+        public List<List<ChampSelectAction>> Actions { get; set; }
 
         [JsonProperty("bans")]
         public ChampSelectBannedChampions Bans { get; set; }
@@ -102,5 +102,30 @@ namespace OSL_Lcu.Schema.Lcu
 
         [JsonProperty("isCustomGame")]
         public bool IsCustomGame { get; set; }
+
+        public bool Equals(ChampSelectSession? other)
+        {
+            if (other is null) return false;
+
+            var jsonA = JsonConvert.SerializeObject(this);
+            var jsonB = JsonConvert.SerializeObject(other);
+
+            return jsonA == jsonB;
+        }
+
+        public override bool Equals(object? obj) => Equals(obj as ChampSelectSession);
+
+        public override int GetHashCode()
+        {
+            // Hash basé sur le JSON complet
+            var json = JsonConvert.SerializeObject(this);
+            return json.GetHashCode();
+        }
+
+        public static bool operator ==(ChampSelectSession? left, ChampSelectSession? right) =>
+            EqualityComparer<ChampSelectSession>.Default.Equals(left, right);
+
+        public static bool operator !=(ChampSelectSession? left, ChampSelectSession? right) =>
+            !(left == right);
     }
 }
