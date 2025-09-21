@@ -209,8 +209,11 @@ namespace OSL_Server.WebSocket
         /// <summary>Updates champ select state and broadcasts it.</summary>
         public async Task SetChampSelectAsync(ChampSelectSession? data)
         {
-            _champSelect = data;
-            await BroadcastAsync("champSelect", data);
+            if (_champSelect != data)
+            {
+                _champSelect = data;
+                await BroadcastAsync("champSelect", data);
+            }
         }
 
         /// <summary>Updates endgame stats and broadcasts them.</summary>
