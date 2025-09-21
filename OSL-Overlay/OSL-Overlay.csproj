@@ -5,7 +5,8 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<RootNamespace>OSL_Overlay</RootNamespace>
-		<AssemblyName>`$(AssemblyName.Replace(' ', '_'))</AssemblyName>
+		<AssemblyName>$(AssemblyName.Replace(' ', '_'))</AssemblyName>
+    <ScopedCssEnabled>true</ScopedCssEnabled>
 	</PropertyGroup>
 
 
@@ -20,10 +21,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Phase\ChampSelect\" />
+	  <Folder Include="Components\Pages\EndGame\" />
+	  <Folder Include="Components\Pages\InGame\" />
+	  <Folder Include="Components\Pages\Team\" />
 	  <Folder Include="Phase\EndGame\" />
 	  <Folder Include="Phase\InGame\" />
 	  <Folder Include="Schema\" />
 	  <Folder Include="Services\" />
+	  <Folder Include="wwwroot\data\" />
+	  <Folder Include="wwwroot\styles\champselect\view1\" />
 	</ItemGroup>
+
 </Project>
