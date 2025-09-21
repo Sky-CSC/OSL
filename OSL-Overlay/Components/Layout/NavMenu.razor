@@ -2,6 +2,9 @@
 <MudNavMenu>
     <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
     <MudNavLink Href="ws-test" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Web socket test</MudNavLink>
-    <MudNavLink Href="champselect/view1" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Timer test</MudNavLink>
-
+    <MudNavGroup Title="Champ Select" Icon="@Icons.Material.Filled.FactCheck" Expanded="false">
+        <MudNavGroup Title="View1" Icon="@Icons.Material.Filled.FactCheck" Expanded="true">
+            <MudNavLink Href="champselect/view1/custom" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Customize</MudNavLink>
+        </MudNavGroup>
+    </MudNavGroup>
 </MudNavMenu>

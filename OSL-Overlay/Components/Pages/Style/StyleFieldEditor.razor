@@ -1,0 +1,99 @@
+@using MudBlazor
+@using System.Text.Json
+@using System.Threading.Tasks
+@using MudBlazor.Utilities
+@using OSL_Utils
+
+@* ---------------- Style field editor component ---------------- *@
+<MudPaper Class="p-3 mb-3" Elevation="1">
+    <MudText Typo="Typo.subtitle2">@Label</MudText>
+
+    @* ---------------- Font ---------------- *@
+    @if (Type == "font")
+    {
+        <MudSelect T="string"
+                   Label="Font"
+                   Value="Value"
+                   ValueChanged="OnFontChanged"
+                   Variant="Variant.Filled">
+            @foreach (var font in AvailableFonts)
+            {
+                <MudSelectItem Value="@font">@font</MudSelectItem>
+            }
+        </MudSelect>
+
+    }
+
+    @* ---------------- Color ---------------- *@
+    else if (Type == "color")
+    {
+        <ColorPicker Label="@Label"
+                     Value="@Value.AsMudColor()"
+                     ValueChanged="OnColorChanged" />
+    }
+
+    @* ---------------- Background ---------------- *@
+    else if (Type == "background")
+    {
+        <MudSelect T="string" Label="Background Type" Value="_backgroundType" Variant="Variant.Filled" ValueChanged="OnBackgroundTypeChanged">
+            <MudSelectItem Value="@("solid")">Solid</MudSelectItem>
+            <MudSelectItem Value="@("linear")">Linear Gradient</MudSelectItem>
+            <MudSelectItem Value="@("radial")">Radial Gradient</MudSelectItem>
+        </MudSelect>
+
+        @* Hexa color *@
+        @if (_backgroundType == "solid")
+        {
+            <ColorPicker Label="Background Color"
+                         Value="@_bgColor.AsMudColor()"
+                         ValueChanged="OnBgColorChanged" />
+        }
+
+        @* Linear background *@
+        else if (_backgroundType == "linear")
+        {
+            <MudNumericField T="int"
+                             Value="_linearAngle"
+                             ValueChanged="OnLinearAngleChanged"
+                             Label="Angle (deg)"
+                             Min="0"
+                             Max="360" />
+            <ColorPicker Label="Start"
+                         Value="@_bgStart.AsMudColor()"
+                         ValueChanged="OnBgStartChanged" />
+            <ColorPicker Label="End"
+                         Value="@_bgEnd.AsMudColor()"
+                         ValueChanged="OnBgEndChanged" />
+        }
+
+        @* Radial background *@
+        else if (_backgroundType == "radial")
+        {
+            <ColorPicker Label="Inner"
+                         Value="@_bgStart.AsMudColor()"
+                         ValueChanged="OnBgStartChanged" />
+            <ColorPicker Label="Outer"
+                         Value="@_bgEnd.AsMudColor()"
+                         ValueChanged="OnBgEndChanged" />
+        }
+    }
+
+    @* ---------------- BORDER ---------------- *@
+    else if (Type == "border")
+    {
+        <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
+            <MudNumericField T="int" Value="_borderWidth" Label="Width (px)" Min="0" Max="50" ValueChanged="OnBorderWidthChanged" />
+            <MudSelect T="string" Label="Style" Value="_borderStyle" ValueChanged="OnBorderStyleChanged">
+                <MudSelectItem Value="@("solid")">Solid</MudSelectItem>
+                <MudSelectItem Value="@("dashed")">Dashed</MudSelectItem>
+                <MudSelectItem Value="@("dotted")">Dotted</MudSelectItem>
+                <MudSelectItem Value="@("double")">Double</MudSelectItem>
+                <MudSelectItem Value="@("none")">None</MudSelectItem>
+            </MudSelect>
+        </MudStack>
+
+        <ColorPicker Label="Border Color"
+                     Value="@_borderColor.AsMudColor()"
+                     ValueChanged="OnBorderColorChanged" />
+    }
+</MudPaper>

@@ -1,0 +1,108 @@
+@page "/champselect/view1/custom"
+
+@using OSL_Overlay.Phase.ChampSelect
+@inject ChampSelectState ChampState
+@inject ChampSelect ChampSelect
+@using MudBlazor
+
+<PageTitle>ChampSelect - View1 - Customize</PageTitle>
+
+@* ---------------- View1 link ---------------- *@
+<MudButton Color="Color.Primary"
+           Style="@($"background:{Colors.BlueGray.Darken4};")"
+           Href="champselect/view1"
+           Target="_blank">
+    Link to view1
+</MudButton>
+
+@* ---------------- Choose file style to use ---------------- *@
+<StyleManager RelativePath="styles/champselect/view1"
+              CurrentFile="@_currentFile"
+              OnSave="HandleSave"
+              OnFileSelected="HandleFileSelected" />
+
+@* ---------------- Customize field ---------------- *@
+<MudStack Row="false" Spacing="3">
+    <StyleFieldEditor Label="Patch Font"
+                      Type="font"
+                      Value="@Info.Patch.PatchInfo.Font"
+                      ValueChanged="v => OnStyleChanged(val => Info.Patch.PatchInfo.Font = val, v)" />
+
+    <StyleFieldEditor Label="Patch Text Color"
+                      Type="color"
+                      Value="@Info.Patch.PatchInfo.Color"
+                      ValueChanged="v => OnStyleChanged(val => Info.Patch.PatchInfo.Color = val, v)" />
+
+    <StyleFieldEditor Label="Patch Background"
+                      Type="background"
+                      Value="@Info.Patch.BackgroundColor"
+                      ValueChanged="v => OnStyleChanged(val => Info.Patch.BackgroundColor = val, v)" />
+
+    <StyleFieldEditor Label="Patch Border"
+                      Type="border"
+                      Value="@Info.Patch.PatchInfo.Border"
+                      ValueChanged="v => OnStyleChanged(val => Info.Patch.PatchInfo.Border = val, v)" />
+
+    <StyleFieldEditor Label="Blue Team Name Font"
+                      Type="font"
+                      Value="@Info.BlueTeam.Name.Font"
+                      ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Name.Font = val, v)" />
+
+    <StyleFieldEditor Label="Blue Team Name Color"
+                      Type="color"
+                      Value="@Info.BlueTeam.Name.Color"
+                      ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Name.Color = val, v)" />
+</MudStack>
+
+@code {
+    // Champ select information css, text and assets path
+    private ChampSelectInfo Info => ChampState.Info;
+
+    // Current file used
+    private string? _currentFile;
+
+    protected override void OnInitialized()
+    {
+        _currentFile = ChampState.FileStyle;
+    }
+
+    /// <summary>
+    /// When css is update notifie Champ state
+    /// </summary>
+    /// <param name="setter"></param>
+    /// <param name="newValue"></param>
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+        ChampState.CssChange();
+    }
+
+    /// <summary>
+    /// Save file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleSave(string filePath)
+    {
+        // Sauvegarde dans un NOUVEAU fichier
+        ChampSelect.SaveStyle(filePath);
+        _currentFile = filePath;
+        ChampState.FileStyle = _currentFile;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Select file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleFileSelected(string filePath)
+    {
+        // Chargement du style existant
+        ChampSelect.LoadStyle(filePath);
+        _currentFile = filePath;
+        ChampState.FileStyle = _currentFile;
+        await InvokeAsync(StateHasChanged);
+    }
+
+}

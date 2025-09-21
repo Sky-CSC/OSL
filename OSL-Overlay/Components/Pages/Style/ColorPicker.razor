@@ -1,0 +1,49 @@
+@using MudBlazor
+@using System.Globalization
+
+@* ---------------- Color picker component ---------------- *@
+<div class="d-flex align-items-center my-2" style="gap:12px;">
+    <MudText Typo="Typo.body1" Style="min-width:220px;">@Label</MudText>
+
+    @* ---------------- Button display color and for display color picker ---------------- *@
+    <MudButton Variant="Variant.Filled"
+               Style="@($"background:{_cssColor}; min-width:36px; height:32px; padding:0; border-radius:6px; border:2px solid rgba(0,0,0,0.12);")"
+               OnClick="TogglePicker">
+    </MudButton>
+
+    @* ---------------- Color picker ---------------- *@
+    <MudPopover Open="@_open"
+                AnchorOrigin="Origin.BottomCenter"
+                TransformOrigin="Origin.TopCenter"
+                Elevation="8"
+                Fixed="false">
+        <MudPaper Class="p-2">
+            <MudItem md="8" Class="d-flex justify-center">
+                <MudColorPicker Value="@_color"
+                                ValueChanged="OnPickerValueChanged"
+                                DisableAlpha="false"
+                                PickerVariant="PickerVariant.Static"
+                                ShowToolbar="true"
+                                ShowAlpha="true"
+                                ShowColorField="true"
+                                ShowPreview="true"
+                                ShowSliders="true"
+                                ShowInputs="true"
+                                ShowModeSwitch="true" />
+            </MudItem>
+
+            @* Close button *@
+            <MudStack Row="false" Spacing="1" Class="mt-2">
+                <MudButton Variant="Variant.Text" OnClick="() => _open = false">Close</MudButton>
+            </MudStack>
+        </MudPaper>
+    </MudPopover>
+
+    @* ---------------- hexa or rgba code ---------------- *@
+    <MudText Typo="Typo.body2" Class="font-mono" Style="margin-left:0px;">@_displayCode</MudText>
+
+    @if (!string.IsNullOrWhiteSpace(HelperText))
+    {
+        <MudText Typo="Typo.caption" Class="ml-2" Style="color:var(--mud-palette-text-secondary);">@HelperText</MudText>
+    }
+</div>

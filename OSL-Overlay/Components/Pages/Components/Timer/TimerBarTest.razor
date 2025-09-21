@@ -1,0 +1,118 @@
+
+
+
+@* <div class="timer @Team">
+    @if (Direction == TimerDirection.Both)
+    {
+        <div class="timer-progress-bar timer-progress-left"></div>
+        <div class="timer-progress-bar timer-progress-right"></div>
+    }
+    else if (Direction == TimerDirection.LeftToRight)
+    {
+        <div class="timer-progress-bar timer-progress-left"></div>
+    }
+    else if (Direction == TimerDirection.RightToLeft)
+    {
+        <div class="timer-progress-bar timer-progress-right"></div>
+    }
+</div>
+
+@code {
+    [Parameter] public string Team { get; set; } = "blue";
+    [Parameter] public TimeSpan Time { get; set; } = TimeSpan.FromSeconds(30);
+    [Parameter] public TimerDirection Direction { get; set; } = TimerDirection.Both;
+
+    public enum TimerDirection
+    {
+        Both,
+        LeftToRight,
+        RightToLeft
+    }
+}
+ *@
+
+@* <link rel="stylesheet" href="css/timerbarslot.css">
+ *@
+
+<p class="text-test">Bar 1</p>
+<div class="timer-bar @Direction">
+    @* <div class="timer-fill" style="--progress:@Progress%;"></div> *@
+    <div class="timer-fill" style="width:@Progress%"></div>
+</div>
+
+<p class="text-test">Bar 2</p>
+<div style="width:100%; height:20px; background:red;">
+    <div style="height:100%; background:blue; width:@Progress%;"></div>
+</div>
+
+<p class="text-test">Bar 3</p>
+<div style="width:100%; height:20px; background:red; overflow:hidden; border-radius:5px;">
+    <div class="timer-fill" style="height:100%; background:blue; width:@Progress%"></div>
+</div>
+
+<p class="text-test">Progress: @Progress %</p>
+
+@code {
+    /// Durée totale du timer (en secondes)
+    [Parameter] public int Duration { get; set; } = 30;
+
+    /// Direction de la progression : "ltr", "rtl", "center-in", "center-out"
+    [Parameter] public string Direction { get; set; } = "ltr";
+
+    /// Progression interne (0 → 100)
+    private double Progress { get; set; } = 100;
+
+    private System.Timers.Timer? _timer;
+    private DateTime _startTime;
+    private bool _running;
+
+    protected override void OnInitialized()
+    {
+        StartTimer();
+    }
+
+    private void StartTimer()
+    {
+        _startTime = DateTime.Now;
+        Progress = 100;
+        _running = true;
+
+        _timer = new System.Timers.Timer(100); // mise à jour toutes les 100ms
+        _timer.Elapsed += (s, e) =>
+        {
+            var elapsed = (DateTime.Now - _startTime).TotalSeconds;
+            var ratio = Math.Max(0, 1 - elapsed / Duration);
+            Progress = ratio * 100;
+
+            if (Progress <= 0)
+            {
+                _timer?.Stop();
+                _running = false;
+            }
+
+            InvokeAsync(StateHasChanged); // mise à jour UI
+        };
+
+        _timer.Start();
+    }
+
+    public void Restart(int? newDuration = null)
+    {
+        if (newDuration.HasValue)
+            Duration = newDuration.Value;
+
+        _timer?.Stop();
+        StartTimer();
+    }
+
+    public void Stop()
+    {
+        _timer?.Stop();
+        _running = false;
+    }
+
+    public void Dispose()
+    {
+        _timer?.Dispose();
+    }
+}

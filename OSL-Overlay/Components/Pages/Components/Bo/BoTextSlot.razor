@@ -1,0 +1,9 @@
+@* ---------------- Display BO Text ---------------- *@
+<div class="bo-text @Team">
+    <Txt Txt="@BoText" />
+</div>
+
+@code {
+    [Parameter] public string Team { get; set; } = string.Empty;
+    [Parameter] public string BoText { get; set; } = string.Empty;
+}

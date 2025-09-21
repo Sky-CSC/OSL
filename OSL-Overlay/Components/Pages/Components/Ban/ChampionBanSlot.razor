@@ -1,20 +1,21 @@
 @using OSL_Overlay.Phase.ChampSelect
+
+@* ---------------- Bans ---------------- *@
 <div class="champion-ban @Team">
-    @* Background image ban *@
+    @* ---------------- Background image ban ---------------- *@
     <Image ImageUrl="@Ban.BackgroundImage" Background="@Ban.BackgroundColor" />
 
-    @* Is Banning *@
+    @* ---------------- Is Banning ---------------- *@
     @if (Ban.IsBanning)
     {
         <Blink Color="@Ban.BlinkColor" />
     }
 
-    @* Cross picture if ban completed *@
+    @* ---------------- Cross picture if ban completed ---------------- *@
     @if (Ban.IsCompleted)
     {
         <Image ImageUrl="@Ban.CrossImage" />
     }
-
 </div>
 
 @code {

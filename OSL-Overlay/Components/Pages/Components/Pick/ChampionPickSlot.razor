@@ -1,40 +1,40 @@
 @using OSL_Overlay.Phase.ChampSelect
 
+@* ---------------- Champion pick ---------------- *@
 <div class="champion-pick @Team">
-    @* Player or champion picture *@
+    @* ---------------- Player or champion picture ---------------- *@
     <Image ImageUrl="@Pick.BackgroundImage" />
 
-    @* Lane *@
+    @* ---------------- Lane ---------------- *@
     @if (Pick.ShowLane)
     {
         <Image ImageUrl="@Pick.LaneImage" />
     }
 
-    @* Summoner Spells *@
+    @* ---------------- Summoner Spells ---------------- *@
     @if (Pick.ShowSummonerSpells)
     {
         <SummonerSpells Spell1="@Pick.Spell1" Spell2="@Pick.Spell2" />
     }
 
-    @* Piking or banning *@
+    @* ---------------- Piking or banning ---------------- *@
     @if (Pick.IsPicking)
     {
         <Blink Color="@Pick.BlinkColor" />
     }
 
-    @* Summoner Name *@
+    @* ---------------- Summoner Name ---------------- *@
     <div style="background:@Pick.Name.Background; border:@Pick.Name.Border">
         <Txt Text="@Pick.Name" />
     </div>
 
-    @* Summoner Action *@
+    @* ---------------- Summoner Action ---------------- *@
     <Txt Text="@Pick.Action" />
 
-    @* Champion Stats *@
+    @* ---------------- Champion Stats ---------------- *@
     @* <ChampionStats PickText="@PickText" BanText="@BanText" WinText="@WinText" ChampionName="@ChampionName" /> *@
 
 </div>
-
 
 @code {
     [Parameter] public string Team { get; set; } = "blue";
