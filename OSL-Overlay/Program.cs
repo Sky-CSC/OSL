@@ -1,5 +1,7 @@
 using MudBlazor.Services;
+using OSL_CDragon;
 using OSL_Overlay.Components;
+using OSL_Overlay.Phase.ChampSelect;
 using OSL_Overlay.WebSocketClient;
 using OSL_Overlay.WebSocketClient.Handlers;
 using OSL_Utils.WebSocket;
@@ -22,8 +24,18 @@ builder.Services.AddSingleton<IMessageHandler, EndGameHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameMatchHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameTimelineHandler>();
 
-// WebSocketClient en singleton
-builder.Services.AddSingleton<WebSocketClient>();
+// Initialize CDragon and download assets if necessary
+var cdragon = new CDragon();
+cdragon.DownloadAssetsWithCheck();
+
+// Register CDragon as a singleton service
+builder.Services.AddSingleton(cdragon);
+
+// Champ Select
+builder.Services.AddSingleton<ChampSelect>();
+builder.Services.AddSingleton<ChampSelectState>();
+builder.Services.AddTransient<ChampSelectHandler>();
+builder.Services.AddTransient<IMessageHandler, ChampSelectHandler>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -48,6 +60,7 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 // Before running the app, download assets (Champions, Items, Runes, EpicMonsters, Position, Font.)
+
 
 // Connect to the WebSocket server
 using (var scope = app.Services.CreateScope())
