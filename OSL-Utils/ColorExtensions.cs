@@ -1,15 +1,21 @@
 using MudBlazor.Utilities;
-using System.Globalization;
 
 namespace OSL_Utils
 {
-
+    /// <summary>
+    /// Color extension for manage color type to set it in hexa
+    /// </summary>
     public static class ColorExtensions
     {
-        // string -> MudColor (sécurisé)
+        /// <summary>
+        /// String to mud color
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static MudColor AsMudColor(this string? s)
         {
-            if (string.IsNullOrWhiteSpace(s)) return new MudColor("#ffffff");
+            if (string.IsNullOrWhiteSpace(s))
+                return new MudColor("#ffffff");
             try
             {
                 return new MudColor(s!);
@@ -20,39 +26,58 @@ namespace OSL_Utils
             }
         }
 
-        // MudColor -> css string: "#RRGGBB" ou "rgba(r,g,b,a)"
+        /// <summary>
+        /// MudColor to css string "#RRGGBB" or "#RRGGBBAA"
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static string ToCssString(this MudColor c)
         {
+            // Not alpha
             if (c.A >= 255)
                 return $"#{c.R:X2}{c.G:X2}{c.B:X2}";
 
-            double alpha = c.A / 255.0;
-            string a = alpha.ToString("0.###", CultureInfo.InvariantCulture);
-            return $"rgba({c.R},{c.G},{c.B},{a})";
+            // With alpha
+            return $"#{c.R:X2}{c.G:X2}{c.B:X2}{c.A:X2}";
         }
 
-        // retourne "#RRGGBB"
+        /// <summary>
+        /// Mud color to hexa
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
         public static string MudColorToHex(MudColor c)
         {
             return $"#{c.R:X2}{c.G:X2}{c.B:X2}";
         }
 
-        // retourne "rgba(r,g,b,a)" où a est en 0..1 (format invariant)
-        public static string MudColorToRgba(MudColor c)
+        /// <summary>
+        /// MudColor to hewa with alpha
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        public static string MudColorToHexaWithAlpha(MudColor c)
         {
-            double alpha = c.A / 255.0;
-            string alphaStr = alpha.ToString("0.###", CultureInfo.InvariantCulture);
-            return $"rgba({c.R},{c.G},{c.B},{alphaStr})";
+            return $"#{c.R:X2}{c.G:X2}{c.B:X2}{c.A:X2}";
         }
 
-        // optionnel : parse sécurisé (renvoie true si possible)
-        public static bool TryParseMudColor(string? input, out MudColor result)
+        /// <summary>
+        /// Parse color and return hexa color
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="hex"></param>
+        /// <returns></returns>
+        public static bool TryParseMudColor(string? input, out string hex)
         {
-            result = new MudColor("#063742");
+            hex = "#FFFFFF";
             if (string.IsNullOrWhiteSpace(input)) return false;
+
             try
             {
-                result = new MudColor(input);
+                var mc = new MudColor(input);
+
+                // Return hexa with alpha if need
+                hex = mc.ToCssString();
                 return true;
             }
             catch
@@ -61,5 +86,4 @@ namespace OSL_Utils
             }
         }
     }
-
 }
