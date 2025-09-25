@@ -2,9 +2,10 @@ namespace OSL_Overlay.Phase.ChampSelect
 {
     public class ChampSelectInfo
     {
+        public string Background { get; set; }
+        public string TeamsBackground { get; set; }
         public Team BlueTeam { get; set; }
         public Team RedTeam { get; set; }
-        public string TeamsBackground { get; set; }
         public Patch Patch { get; set; }
         public Timer CommonTimer { get; set; }
         public Text Phase { get; set; }
@@ -14,27 +15,39 @@ namespace OSL_Overlay.Phase.ChampSelect
         {
             BlueTeam = new(nbBluePlayers, nbBlueBans);
             RedTeam = new(nbRedPlayers, nbRedBans);
+            Background = string.Empty;
             TeamsBackground = string.Empty;
             Patch = new();
             CommonTimer = new();
             Phase = new();
             Vs = new();
         }
+
         public ChampSelectInfo()
         {
-            BlueTeam = new(5, 5);
-            RedTeam = new(5, 5);
-            TeamsBackground = string.Empty;
-            Patch = new();
-            CommonTimer = new();
-            Phase = new();
-            Vs = new();
+            
+        }
+
+        public ChampSelectInfo(bool init)
+        {
+            if (init)
+            {
+                BlueTeam = new(5, 5);
+                RedTeam = new(5, 5);
+                Background = string.Empty;
+                TeamsBackground = string.Empty;
+                Patch = new();
+                CommonTimer = new();
+                Phase = new();
+                Vs = new();
+            }
         }
     }
 
     public class Team
     {
         public string Side { get; set; }
+        public string Background { get; set; }
         public List<Ban> Bans { get; set; }
         public Coach Coach { get; set; }
         public Timer Timer { get; set; }
@@ -49,6 +62,7 @@ namespace OSL_Overlay.Phase.ChampSelect
         public Team(int nbPlayers, int nbBans)
         {
             Side = string.Empty;
+            Background = string.Empty;
             Bans = new(nbBans);
             Bans = [];
             for (int i = 0; i < nbBans; i++)
@@ -105,11 +119,13 @@ namespace OSL_Overlay.Phase.ChampSelect
     public class Patch
     {
         public string BackgroundColor { get; set; }
+        public string BorderColor { get; set; }
         public Text PatchInfo { get; set; }
         public Text Version { get; set; }
         public Patch()
         {
             BackgroundColor = string.Empty;
+            BorderColor = string.Empty;
             PatchInfo = new();
             Version = new();
         }
@@ -135,6 +151,7 @@ namespace OSL_Overlay.Phase.ChampSelect
     public class Pick
     {
         public string BackgroundImage { get; set; }
+        public string BorderImage { get; set; }
         public bool ShowLane { get; set; }
         public string LaneImage { get; set; }
         public bool ShowSummonerSpells { get; set; }
@@ -147,6 +164,7 @@ namespace OSL_Overlay.Phase.ChampSelect
 
         public Pick()
         {
+            BorderImage = string.Empty;
             BackgroundImage = string.Empty;
             ShowLane = true;
             LaneImage = string.Empty;

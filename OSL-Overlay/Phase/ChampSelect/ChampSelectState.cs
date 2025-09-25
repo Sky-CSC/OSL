@@ -5,7 +5,7 @@ namespace OSL_Overlay.Phase.ChampSelect
 {
     public class ChampSelectState
     {
-        public ChampSelectInfo Info { get; private set; } = new();
+        public ChampSelectInfo Info { get; private set; } = new(true);
         public string FileStyle { get; set; } = string.Empty;
 
         private readonly CDragon _cdragon;
