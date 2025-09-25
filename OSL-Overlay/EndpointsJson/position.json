@@ -1,0 +1,322 @@
+[
+  {
+    "Id": "1000",
+    "Name": "adc-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-bottom-blue-hover.png",
+    "Path": "positions/adc/icon-position-bottom-blue-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1001",
+    "Name": "adc-blue",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-bottom-blue.png",
+    "Path": "positions/adc/icon-position-bottom-blue.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1002",
+    "Name": "adc-disabled",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-bottom-disabled.png",
+    "Path": "positions/adc/icon-position-bottom-disabled.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1003",
+    "Name": "adc-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-bottom-hover.png",
+    "Path": "positions/adc/icon-position-bottom-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1004",
+    "Name": "adc",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-bottom.png",
+    "Path": "positions/adc/icon-position-bottom.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1005",
+    "Name": "jungle-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-jungle-blue-hover.png",
+    "Path": "positions/jungle/icon-position-jungle-blue-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1006",
+    "Name": "jungle-blue",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-jungle-blue.png",
+    "Path": "positions/jungle/icon-position-jungle-blue.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1007",
+    "Name": "jungle-disabled",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-jungle-disabled.png",
+    "Path": "positions/jungle/icon-position-jungle-disabled.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1008",
+    "Name": "jungle-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-jungle-hover.png",
+    "Path": "positions/jungle/icon-position-jungle-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1009",
+    "Name": "jungle",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-jungle.png",
+    "Path": "positions/jungle/icon-position-jungle.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1010",
+    "Name": "mid-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-middle-blue-hover.png",
+    "Path": "positions/mid/icon-position-middle-blue-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1011",
+    "Name": "mid-blue",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-middle-blue.png",
+    "Path": "positions/mid/icon-position-middle-blue.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1012",
+    "Name": "mid-disabled",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-middle-disabled.png",
+    "Path": "positions/mid/icon-position-middle-disabled.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1013",
+    "Name": "mid-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-middle-hover.png",
+    "Path": "positions/mid/icon-position-middle-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1014",
+    "Name": "mid",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-middle.png",
+    "Path": "positions/mid/icon-position-middle.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1015",
+    "Name": "top-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-top-blue-hover.png",
+    "Path": "positions/top/icon-position-top-blue-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1016",
+    "Name": "top-blue",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-top-blue.png",
+    "Path": "positions/top/icon-position-top-blue.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1017",
+    "Name": "top-disabled",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-top-disabled.png",
+    "Path": "positions/top/icon-position-top-disabled.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1018",
+    "Name": "top-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-top-hover.png",
+    "Path": "positions/top/icon-position-top-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1019",
+    "Name": "top",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-top.png",
+    "Path": "positions/top/icon-position-top.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1020",
+    "Name": "supp-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-utility-blue-hover.png",
+    "Path": "positions/support/icon-position-utility-blue-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1021",
+    "Name": "supp-blue",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-utility-blue.png",
+    "Path": "positions/support/icon-position-utility-blue.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1022",
+    "Name": "supp-disabled",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-utility-disabled.png",
+    "Path": "positions/support/icon-position-utility-disabled.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1023",
+    "Name": "supp-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-utility-hover.png",
+    "Path": "positions/support/icon-position-utility-hover.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1024",
+    "Name": "supp",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/assets/images/position-selector/positions/icon-position-utility.png",
+    "Path": "positions/support/icon-position-utility.png",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1025",
+    "Name": "adc-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-bottom-light.svg",
+    "Path": "positions/adc/position-bottom-light.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1026",
+    "Name": "adc-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-bottom-red.svg",
+    "Path": "positions/adc/position-bottom-red.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1027",
+    "Name": "adc-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-bottom.svg",
+    "Path": "positions/adc/position-bottom.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1028",
+    "Name": "jungle-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-jungle-light.svg",
+    "Path": "positions/jungle/position-jungle-light.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1029",
+    "Name": "jungle-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-jungle-red.svg",
+    "Path": "positions/jungle/position-jungle-red.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1030",
+    "Name": "jungle-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-jungle.svg",
+    "Path": "positions/jungle/position-jungle.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1031",
+    "Name": "mid-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-middle-light.svg",
+    "Path": "positions/mid/position-middle-light.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1032",
+    "Name": "mid-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-middle-red.svg",
+    "Path": "positions/mid/position-middle-red.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1033",
+    "Name": "mid-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-middle.svg",
+    "Path": "positions/mid/position-middle.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1034",
+    "Name": "top-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-top-light.svg",
+    "Path": "positions/top/position-top-light.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1035",
+    "Name": "top-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-top-red.svg",
+    "Path": "positions/top/position-top-red.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1036",
+    "Name": "top-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-top.svg",
+    "Path": "positions/top/position-top.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1037",
+    "Name": "supp-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-utility-light.svg",
+    "Path": "positions/support/position-utility-light.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1038",
+    "Name": "supp-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-utility-red.svg",
+    "Path": "positions/support/position-utility-red.svg",
+    "Type": [ "NotSet" ]
+  },
+  {
+    "Id": "1039",
+    "Name": "supp-blue-hover",
+    "Description": "",
+    "Url": "https://raw.communitydragon.org/pbe/plugins/rcp-fe-lol-static-assets/global/default/svg/position-utility.svg",
+    "Path": "positions/support/position-utility.svg",
+    "Type": [ "NotSet" ]
+  }
+]
