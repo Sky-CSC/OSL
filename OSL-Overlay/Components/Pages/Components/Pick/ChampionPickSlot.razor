@@ -1,35 +1,34 @@
 @using OSL_Overlay.Phase.ChampSelect
 
 @* ---------------- Champion pick ---------------- *@
-<div class="champion-pick @Team">
+<div class="champion" style="@Pick.BorderImage;">
     @* ---------------- Player or champion picture ---------------- *@
-    <Image ImageUrl="@Pick.BackgroundImage" />
+    <div class="image-wrapper">
+        <Image Class="background" ImageUrl="@Pick.BackgroundImage" />
+        @* ---------------- Piking or banning ---------------- *@
+        @if (Pick.IsPicking)
+        {
+            <Blink class="blink" Color="@Pick.BlinkColor" />
+        }
 
-    @* ---------------- Lane ---------------- *@
-    @if (Pick.ShowLane)
-    {
-        <Image ImageUrl="@Pick.LaneImage" />
-    }
+        @* ---------------- Lane ---------------- *@
+        @if (Pick.ShowLane)
+        {
+            <Image Class="overlay lane" ImageUrl="@Pick.LaneImage" />
+        }
+    </div>
 
     @* ---------------- Summoner Spells ---------------- *@
     @if (Pick.ShowSummonerSpells)
     {
-        <SummonerSpells Spell1="@Pick.Spell1" Spell2="@Pick.Spell2" />
-    }
-
-    @* ---------------- Piking or banning ---------------- *@
-    @if (Pick.IsPicking)
-    {
-        <Blink Color="@Pick.BlinkColor" />
+        <SummonerSpells Class="overlay spells" Spell1="@Pick.Spell1" Spell2="@Pick.Spell2" />
     }
 
     @* ---------------- Summoner Name ---------------- *@
-    <div style="background:@Pick.Name.Background; border:@Pick.Name.Border">
-        <Txt Text="@Pick.Name" />
-    </div>
+    <Txt Class="summoner-name" Text="@Pick.Name" />
 
     @* ---------------- Summoner Action ---------------- *@
-    <Txt Text="@Pick.Action" />
+    <Txt Class="overlay action" Text="@Pick.Action" />
 
     @* ---------------- Champion Stats ---------------- *@
     @* <ChampionStats PickText="@PickText" BanText="@BanText" WinText="@WinText" ChampionName="@ChampionName" /> *@
@@ -37,6 +36,5 @@
 </div>
 
 @code {
-    [Parameter] public string Team { get; set; } = "blue";
     [Parameter] required public Pick Pick { get; set; }
 }

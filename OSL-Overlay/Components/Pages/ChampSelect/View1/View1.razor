@@ -4,7 +4,9 @@
 @inject ChampSelectState ChampState
 <link rel="stylesheet" href="@Assets["css/champSelect/View1.css"]" />
 
-<div class="champ-select">
+<div class="champ-select" style="background:@Info.Background">
+    @Info.BlueTeam.Bans.Count
+    @Info.RedTeam.Bans.Count
     @* ---------------- Blue Ban ---------------- *@
     @foreach (var ban in Info.BlueTeam.Bans)
     {
@@ -53,20 +55,12 @@
         <TimerBarSlot Timer="@Info.CommonTimer" />
     }
 
-    @* ---------------- Teams ---------------- *@
-    <div class="teams" style="background:@Info.TeamsBackground;">
+    @* ---------------- Picks ---------------- *@
+    <div class="picks" style="background:@Info.TeamsBackground;">
         @* Blue Team *@
-        @foreach (var player in Info.BlueTeam.Picks)
-        {
-            <ChampionPickSlot Team="@Info.BlueTeam.Side"
-                              Pick="@player" />
-        }
+        <PlayersSlot Team="@Info.BlueTeam" />
         @* Red Team *@
-        @foreach (var player in Info.RedTeam.Picks)
-        {
-            <ChampionPickSlot Team="@Info.RedTeam.Side"
-                              Pick="@player" />
-        }
+        <PlayersSlot Team="@Info.RedTeam" />
     </div>
 
     @* ---------------- Blue Team Info ---------------- *@

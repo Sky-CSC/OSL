@@ -1,9 +1,10 @@
 @* ---------------- Image ----------------*@
-<div class="image" style="background:@Background">
-    <img class="image-img" src="@ImageUrl" style="border:@Border" />
+<div class="@Class image" style="background:@Background; border:@Border;">
+    <img class="image-img" src="@ImageUrl"/>
 </div>
 
 @code {
+    [Parameter] public string Class { get; set; } = string.Empty;
     [Parameter] public string ImageUrl { get; set; } = string.Empty;
     [Parameter] public string Background { get; set; } = string.Empty;
     [Parameter] public string Border { get; set; } = string.Empty;

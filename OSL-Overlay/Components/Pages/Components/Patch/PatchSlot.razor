@@ -1,9 +1,9 @@
 @using OSL_Overlay.Phase.ChampSelect
 
 @* ---------------- Patch Info ---------------- *@
-<div class="patch" style="background:@Patch.BackgroundColor">
-    <Txt Text="@Patch.PatchInfo" />
-    <Txt Text="@Patch.Version" />
+<div class="patch" style="background:@Patch.BackgroundColor; @Patch.BorderColor">
+    <Txt Class="patch-text" Text="@Patch.PatchInfo" />
+    <Txt Class="version" Text="@Patch.Version" />
 </div>
 
 @code {

@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Components.Web;
 using MudBlazor.Utilities;
 using OSL_Utils;
+using System.Text.RegularExpressions;
 
 namespace OSL_Overlay.Components.Pages.Style
 {
@@ -9,29 +12,11 @@ namespace OSL_Overlay.Components.Pages.Style
     /// </summary>
     public partial class StyleFieldEditor
     {
-        /// <summary>
-        /// Label
-        /// </summary>
         [Parameter] public string Label { get; set; } = "";
-
-        /// <summary>
-        /// Value
-        /// </summary>
         [Parameter] public string Value { get; set; } = "";
-
-        /// <summary>
-        /// Value change
-        /// </summary>
         [Parameter] public EventCallback<string> ValueChanged { get; set; }
-
-        /// <summary>
-        /// Type, color, font, border, background
-        /// </summary>
         [Parameter] public string Type { get; set; } = "color";
 
-        /// <summary>
-        /// Default font avalable
-        /// </summary>
         private readonly string[] AvailableFonts =
         [
             "BeaufortforLOL-Bold",
@@ -41,45 +26,160 @@ namespace OSL_Overlay.Components.Pages.Style
             "Times New Roman"
         ];
 
+        private readonly string[] AvailableTimerDirection =
+        [
+            "right-to-left",
+            "left-to-right",
+            "center",
+            "center-outside",
+        ];
+
+        // Regex cache (compiled for perf)
+        private static readonly Regex LinearGradientRegex =
+            new(@"linear-gradient\((?<angle>-?\d+)deg,\s*(?<stops>.+)\)", RegexOptions.Compiled);
+
+        private static readonly Regex RadialGradientRegex =
+            new(@"radial-gradient\(circle,\s*(?<stops>.+)\)", RegexOptions.Compiled);
+
+        private static readonly Regex BorderRegex =
+            new(@"^(?<prop>border(?:-(left|right|top|bottom))?)\s*:\s*(?<val>.+)$",
+                RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+        private static readonly Regex WidthRegex =
+            new(@"(?<w>\d+)px", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+        private static readonly Regex StyleRegex =
+            new(@"\b(solid|dashed|dotted|double|none|hidden|groove|ridge|inset|outset)\b",
+                RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+        private static readonly Regex ColorRegex =
+            new(@"(#([0-9a-fA-F]{3,8})|\brgba?\([^\)]+\)|hsla?\([^\)]+\)|var\([^\)]+\)|\b[a-zA-Z]+\b)",
+                RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
         // Background
         private string _backgroundType = "solid";
         private string _bgColor = "#010A13";
-        private string _bgStart = "#010A13";
-        private string _bgEnd = "#063742";
         private int _linearAngle = 150;
+        private List<GradientStop> _gradientStops =
+        [
+            new GradientStop { Color = "#010A13", Position = 0 },
+            new GradientStop { Color = "#063742", Position = 100 }
+        ];
+
+        private string _bgImageUrl = "";
+        private string _bgImageSize = "cover";
+        private string _bgImageRepeat = "no-repeat";
+        private string _bgImagePosition = "center";
 
         // Border
         private int _borderWidth = 5;
         private string _borderStyle = "solid";
         private string _borderColor = "#0b849e";
+        private bool _borderAll = true;
+        private bool _borderLeft;
+        private bool _borderRight;
+        private bool _borderTop;
+        private bool _borderBottom;
 
-        protected override void OnInitialized()
+        private class GradientStop
+        {
+            public string Color { get; set; } = "#000000";
+            public int Position { get; set; } = 0;
+        }
+
+        /// <summary>
+        /// Hydrate internal state from Value when parent changes
+        /// </summary>
+        protected override void OnParametersSet()
         {
             if (Type == "background" && !string.IsNullOrWhiteSpace(Value))
             {
-                if (Value.StartsWith("linear")) _backgroundType = "linear";
-                else if (Value.StartsWith("radial")) _backgroundType = "radial";
-                else _backgroundType = "solid";
-                _bgColor = Value;
+                if (Value.StartsWith("linear-gradient"))
+                {
+                    _backgroundType = "linear";
+                    var match = LinearGradientRegex.Match(Value);
+                    if (match.Success)
+                    {
+                        if (int.TryParse(match.Groups["angle"].Value, out var angle))
+                            _linearAngle = angle;
+
+                        _gradientStops = match.Groups["stops"].Value
+                            .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                            .Select(ParseGradientStop)
+                            .ToList();
+                    }
+                }
+                else if (Value.StartsWith("radial-gradient"))
+                {
+                    _backgroundType = "radial";
+                    var match = RadialGradientRegex.Match(Value);
+                    if (match.Success)
+                    {
+                        _gradientStops = match.Groups["stops"].Value
+                            .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                            .Select(ParseGradientStop)
+                            .ToList();
+                    }
+                }
+                else if (Value.StartsWith("url"))
+                {
+                    _backgroundType = "image";
+                    var urlMatch = Regex.Match(Value, @"url\(['""]?(?<url>[^'""\)]+)['""]?\)");
+                    if (urlMatch.Success)
+                        _bgImageUrl = urlMatch.Groups["url"].Value;
+
+                    if (Value.Contains("cover")) _bgImageSize = "cover";
+                    else if (Value.Contains("contain")) _bgImageSize = "contain";
+                    else _bgImageSize = "auto";
+
+                    if (Value.Contains("no-repeat")) _bgImageRepeat = "no-repeat";
+                    else if (Value.Contains("repeat-x")) _bgImageRepeat = "repeat-x";
+                    else if (Value.Contains("repeat-y")) _bgImageRepeat = "repeat-y";
+                    else if (Value.Contains("repeat")) _bgImageRepeat = "repeat";
+
+                    if (Value.Contains("top")) _bgImagePosition = "top";
+                    else if (Value.Contains("bottom")) _bgImagePosition = "bottom";
+                    else if (Value.Contains("left")) _bgImagePosition = "left";
+                    else if (Value.Contains("right")) _bgImagePosition = "right";
+                    else _bgImagePosition = "center";
+                }
+                else if (Value == "none")
+                {
+                    _backgroundType = "none";
+                }
+                else
+                {
+                    _backgroundType = "solid";
+                    _bgColor = Value.AsMudColor().ToCssString();
+                }
             }
 
             if (Type == "border" && !string.IsNullOrWhiteSpace(Value))
             {
-                var parts = Value.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                if (parts.Length == 3)
-                {
-                    if (int.TryParse(parts[0].Replace("px", ""), out var px))
-                        _borderWidth = px;
-                    _borderStyle = parts[1];
-                    _borderColor = parts[2];
-                }
+                ParseBorderFromCss(Value);
             }
         }
 
         /// <summary>
+        /// Parse gradiant color
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        private static GradientStop ParseGradientStop(string s)
+        {
+            var parts = s.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            return new GradientStop
+            {
+                Color = parts[0].AsMudColor().ToCssString(),
+                Position = parts.Length > 1 && int.TryParse(parts[1].Replace("%", ""), out var pos) ? pos : 0
+            };
+        }
+
+        // ------------------- FONT -------------------
+        /// <summary>
         /// When font change
         /// </summary>
-        /// <param name="font">Font name</param>
+        /// <param name="font"></param>
         /// <returns></returns>
         private async Task OnFontChanged(string font)
         {
@@ -87,10 +187,23 @@ namespace OSL_Overlay.Components.Pages.Style
             await ValueChanged.InvokeAsync(Value);
         }
 
+        // ------------------- Timer Direction -------------------
+        /// <summary>
+        /// When font change
+        /// </summary>
+        /// <param name="font"></param>
+        /// <returns></returns>
+        private async Task OnTimerDirectionChanged(string direction)
+        {
+            Value = direction;
+            await ValueChanged.InvokeAsync(Value);
+        }
+
+        // ------------------- COLOR -------------------
         /// <summary>
         /// When color change
         /// </summary>
-        /// <param name="c">Color</param>
+        /// <param name="c"></param>
         /// <returns></returns>
         private async Task OnColorChanged(MudColor c)
         {
@@ -98,21 +211,22 @@ namespace OSL_Overlay.Components.Pages.Style
             await ValueChanged.InvokeAsync(Value);
         }
 
+        // ------------------- BACKGROUND -------------------
         /// <summary>
-        /// When background change
+        /// When type of background change
         /// </summary>
-        /// <param name="value">Background</param>
+        /// <param name="value"></param>
         /// <returns></returns>
         private async Task OnBackgroundTypeChanged(string value)
         {
             _backgroundType = value;
-            await UpdateBackground(); // déclenche la mise à jour immédiate
+            await UpdateBackground();
         }
 
         /// <summary>
         /// When background color change
         /// </summary>
-        /// <param name="c">Color</param>
+        /// <param name="c"></param>
         /// <returns></returns>
         private async Task OnBgColorChanged(MudColor c)
         {
@@ -121,28 +235,7 @@ namespace OSL_Overlay.Components.Pages.Style
         }
 
         /// <summary>
-        /// When background color change for linear or radial
-        /// </summary>
-        /// <param name="c">Color</param>
-        /// <returns></returns>
-        private async Task OnBgStartChanged(MudColor c)
-        {
-            _bgStart = c.ToCssString();
-            await UpdateBackground();
-        }
-
-        /// <summary>
-        /// When background color change for linear or radial
-        /// </summary>
-        /// <param name="c">Color</param>
-        /// <returns></returns>
-        private async Task OnBgEndChanged(MudColor c)
-        {
-            _bgEnd = c.ToCssString();
-            await UpdateBackground();
-        }
-        /// <summary>
-        /// When background linear change
+        /// When angle of background change
         /// </summary>
         /// <param name="angle"></param>
         /// <returns></returns>
@@ -153,23 +246,159 @@ namespace OSL_Overlay.Components.Pages.Style
         }
 
         /// <summary>
-        /// Update background
+        /// Add color
+        /// </summary>
+        private void AddGradientStop()
+        {
+            _gradientStops.Add(new GradientStop { Color = "#FFFFFF", Position = 50 });
+            _ = UpdateBackground();
+        }
+
+        /// <summary>
+        /// Remove color
+        /// </summary>
+        /// <param name="stop"></param>
+        private void RemoveGradientStop(GradientStop stop)
+        {
+            if (_gradientStops.Count > 2)
+            {
+                _gradientStops.Remove(stop);
+                _ = UpdateBackground();
+            }
+        }
+
+        /// <summary>
+        /// When color change
+        /// </summary>
+        /// <param name="stop"></param>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        private async Task OnGradientStopColorChanged(GradientStop stop, MudColor c)
+        {
+            stop.Color = c.ToCssString();
+            await UpdateBackground();
+        }
+
+        /// <summary>
+        /// When % of color change
+        /// </summary>
+        /// <param name="stop"></param>
+        /// <param name="pos"></param>
+        /// <returns></returns>
+        private async Task OnGradientStopPositionChanged(GradientStop stop, int pos)
+        {
+            stop.Position = pos;
+            await UpdateBackground();
+        }
+
+        /// <summary>
+        /// When background image change
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
+        private async Task OnBgImageChanged(FocusEventArgs args) => await UpdateBackground();
+
+        /// <summary>
+        /// When size of background image change
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private async Task OnBgImageSizeChanged(string value) { _bgImageSize = value; await UpdateBackground(); }
+
+        /// <summary>
+        /// When style of background image change
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private async Task OnBgImageRepeatChanged(string value) { _bgImageRepeat = value; await UpdateBackground(); }
+
+        /// <summary>
+        /// When position of background image change
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private async Task OnBgImagePositionChanged(string value) { _bgImagePosition = value; await UpdateBackground(); }
+
+        /// <summary>
+        /// For user wwwroot path
+        /// </summary>
+        [Inject] private IWebHostEnvironment Env { get; set; } = default!;
+
+        /// <summary>
+        /// When file is selected
+        /// </summary>
+        /// <param name="e"></param>
+        /// <returns></returns>
+        private async Task OnFileSelected(InputFileChangeEventArgs e)
+        {
+            var file = e.File;
+            if (file == null) return;
+
+            var allowedExt = new[] { ".png", ".jpg", ".jpeg", ".webp" };
+            var ext = System.IO.Path.GetExtension(file.Name).ToLowerInvariant();
+            if (!allowedExt.Contains(ext)) return;
+
+            var uploads = System.IO.Path.Combine(Env.WebRootPath, "data/backgrounds");
+            if (!System.IO.Directory.Exists(uploads))
+                System.IO.Directory.CreateDirectory(uploads);
+
+            var fileName = $"{Guid.NewGuid()}{ext}";
+            var filePath = System.IO.Path.Combine(uploads, fileName);
+
+            try
+            {
+                using var stream = System.IO.File.Create(filePath);
+                await file.OpenReadStream(maxAllowedSize: 10 * 1024 * 1024).CopyToAsync(stream);
+
+                _bgImageUrl = $"data/backgrounds/{fileName}";
+                await UpdateBackground();
+            }
+            catch
+            {
+                // Optional: log error
+            }
+        }
+
+        /// <summary>
+        /// Update background css
         /// </summary>
         /// <returns></returns>
         private async Task UpdateBackground()
         {
-            if (_backgroundType == "solid")
-                await ValueChanged.InvokeAsync(_bgColor);
-            else if (_backgroundType == "linear")
-                await ValueChanged.InvokeAsync($"linear-gradient({_linearAngle}deg, {_bgStart} 0%, {_bgEnd} 100%)");
-            else if (_backgroundType == "radial")
-                await ValueChanged.InvokeAsync($"radial-gradient(circle, {_bgStart} 0%, {_bgEnd} 100%)");
+            string css = _backgroundType switch
+            {
+                "solid" => _bgColor,
+                "linear" => $"linear-gradient({_linearAngle}deg, {string.Join(", ", _gradientStops.Select(s => $"{s.Color} {s.Position}%"))})",
+                "radial" => $"radial-gradient(circle, {string.Join(", ", _gradientStops.Select(s => $"{s.Color} {s.Position}%"))})",
+                "image" when !string.IsNullOrEmpty(_bgImageUrl) => BuildImageBackgroundCss(),
+                "none" => "none",
+                _ => ""
+            };
+
+            await ValueChanged.InvokeAsync(css);
         }
 
         /// <summary>
+        /// Build css background image
+        /// </summary>
+        /// <returns></returns>
+        private string BuildImageBackgroundCss()
+        {
+            var css = $"url('{_bgImageUrl}') {_bgImageRepeat} {_bgImagePosition}";
+            css += _bgImageSize switch
+            {
+                "cover" => " / cover",
+                "contain" => " / contain",
+                _ => ""
+            };
+            return css;
+        }
+
+        // ------------------- BORDER -------------------
+        /// <summary>
         /// When border width change
         /// </summary>
-        /// <param name="w">Width</param>
+        /// <param name="w"></param>
         /// <returns></returns>
         private async Task OnBorderWidthChanged(int w)
         {
@@ -180,7 +409,7 @@ namespace OSL_Overlay.Components.Pages.Style
         /// <summary>
         /// When border style change
         /// </summary>
-        /// <param name="style">Style</param>
+        /// <param name="style"></param>
         /// <returns></returns>
         private async Task OnBorderStyleChanged(string style)
         {
@@ -191,7 +420,7 @@ namespace OSL_Overlay.Components.Pages.Style
         /// <summary>
         /// When border color change
         /// </summary>
-        /// <param name="c">Color</param>
+        /// <param name="c"></param>
         /// <returns></returns>
         private async Task OnBorderColorChanged(MudColor c)
         {
@@ -200,12 +429,108 @@ namespace OSL_Overlay.Components.Pages.Style
         }
 
         /// <summary>
-        /// Update border
+        /// Update css border 
         /// </summary>
         /// <returns></returns>
         private async Task UpdateBorder()
         {
-            await ValueChanged.InvokeAsync($"{_borderWidth}px {_borderStyle} {_borderColor}");
+            var css = "";
+
+            if (_borderAll)
+            {
+                css = $"border: {_borderWidth}px {_borderStyle} {_borderColor};";
+            }
+            else
+            {
+                if (_borderLeft) css += $"border-left: {_borderWidth}px {_borderStyle} {_borderColor}; ";
+                if (_borderRight) css += $"border-right: {_borderWidth}px {_borderStyle} {_borderColor}; ";
+                if (_borderTop) css += $"border-top: {_borderWidth}px {_borderStyle} {_borderColor}; ";
+                if (_borderBottom) css += $"border-bottom: {_borderWidth}px {_borderStyle} {_borderColor}; ";
+            }
+
+            await ValueChanged.InvokeAsync(css.Trim());
+        }
+
+        /// <summary>
+        /// When side all change
+        /// </summary>
+        /// <param name="all"></param>
+        /// <returns></returns>
+        private async Task OnBorderAllChanged(bool all)
+        {
+            _borderAll = all;
+            if (all)
+            {
+                _borderLeft = _borderRight = _borderTop = _borderBottom = false;
+            }
+            await UpdateBorder();
+        }
+
+        /// <summary>
+        /// When side change
+        /// </summary>
+        /// <param name="side"></param>
+        /// <param name="isChecked"></param>
+        /// <returns></returns>
+        private async Task OnBorderSideChanged(string side, bool isChecked)
+        {
+            switch (side)
+            {
+                case "left": _borderLeft = isChecked; break;
+                case "right": _borderRight = isChecked; break;
+                case "top": _borderTop = isChecked; break;
+                case "bottom": _borderBottom = isChecked; break;
+            }
+
+            if (_borderLeft || _borderRight || _borderTop || _borderBottom)
+                _borderAll = false;
+
+            await UpdateBorder();
+        }
+
+        /// <summary>
+        /// Parse border from css
+        /// </summary>
+        /// <param name="css"></param>
+        private void ParseBorderFromCss(string css)
+        {
+            _borderAll = true;
+            _borderLeft = _borderRight = _borderTop = _borderBottom = false;
+
+            if (string.IsNullOrWhiteSpace(css)) return;
+
+            var decls = css.Split(';', StringSplitOptions.RemoveEmptyEntries)
+                           .Select(d => d.Trim())
+                           .Where(d => !string.IsNullOrEmpty(d));
+
+            foreach (var d in decls)
+            {
+                var m = BorderRegex.Match(d);
+                if (!m.Success) continue;
+
+                var prop = m.Groups["prop"].Value.ToLowerInvariant();
+                var val = m.Groups["val"].Value.Trim();
+
+                var widthMatch = WidthRegex.Match(val);
+                if (widthMatch.Success && int.TryParse(widthMatch.Groups["w"].Value, out var px))
+                    _borderWidth = px;
+
+                var styleMatch = StyleRegex.Match(val);
+                if (styleMatch.Success) _borderStyle = styleMatch.Value;
+
+                var colorMatch = ColorRegex.Match(val);
+                if (colorMatch.Success)
+                    _borderColor = colorMatch.Value.AsMudColor().ToCssString();
+
+                switch (prop)
+                {
+                    case "border": _borderAll = true; break;
+                    case "border-left": _borderLeft = true; _borderAll = false; break;
+                    case "border-right": _borderRight = true; _borderAll = false; break;
+                    case "border-top": _borderTop = true; _borderAll = false; break;
+                    case "border-bottom": _borderBottom = true; _borderAll = false; break;
+                }
+            }
         }
     }
 }

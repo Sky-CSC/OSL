@@ -1,0 +1,12 @@
+@using OSL_Overlay.Phase.ChampSelect
+
+<div class="@Team.Side" style="background:@Team.Background;">
+    @foreach (var player in Team.Picks)
+    {
+        <ChampionPickSlot Pick="@player" />
+    }
+</div>
+
+@code {
+    [Parameter] required public Team Team { get; set; }
+}

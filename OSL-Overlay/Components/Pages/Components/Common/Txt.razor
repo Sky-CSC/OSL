@@ -1,10 +1,11 @@
 @using OSL_Overlay.Phase.ChampSelect
 
 @* ---------------- Text ----------------*@
-<div class="text" style="font-family:@Text.Font; color:@Text.Color;">
+<div class="@Class text" style="font-family:@Text.Font; color:@Text.Color; background:@Text.Background; @Text.Border">
     <span>@Text.Txt</span>
 </div>
 
 @code {
+    [Parameter] public string Class { get; set; } = string.Empty;
     [Parameter] required public Text Text { get; set; }
 }

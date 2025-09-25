@@ -1,6 +1,7 @@
 @* ---------------- Blink ---------------- *@
-<div class="blink" style="background:@Color;"></div>
+<div class="@Class blink" style="background:@Color;"></div>
 
 @code{
+    [Parameter] public string Class { get; set; } = string.Empty;
     [Parameter] public string Color { get; set; } = "radial-gradient(ellipse, #00000000 25%, #0b849e 100%)";
 }

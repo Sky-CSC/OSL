@@ -29,31 +29,16 @@ namespace OSL_Overlay.Components.Pages.Style
         /// </summary>
         [Parameter] public string? HelperText { get; set; }
 
-        private MudColor _color = new MudColor("#063742");
-        private string _cssColor = "#063742";
-        private string _displayCode = "#063742";
+        // Css color get from Value
+        private string CssColor => ColorExtensions.ToCssString(Value);
+
+        // Color display
+        private string DisplayCode => Value.A < 255
+            ? ColorExtensions.ToCssString(Value)
+            : ColorExtensions.MudColorToHex(Value);
+
+        // Open or close color picker
         private bool _open = false;
-
-        /// <summary>
-        /// If value don't have color set it
-        /// </summary>
-        protected override void OnInitialized()
-        {
-            _color = Value ?? new MudColor("#063742");
-            UpdateCodes();
-        }
-
-        /// <summary>
-        /// Set color
-        /// </summary>
-        protected override void OnParametersSet()
-        {
-            if (Value is not null && Value.ToString() != _color.ToString())
-            {
-                _color = Value;
-                UpdateCodes();
-            }
-        }
 
         /// <summary>
         /// When color change
@@ -62,9 +47,6 @@ namespace OSL_Overlay.Components.Pages.Style
         /// <returns></returns>
         private async Task OnPickerValueChanged(MudColor newColor)
         {
-            _color = newColor;
-            UpdateCodes();
-
             if (ValueChanged.HasDelegate)
                 await ValueChanged.InvokeAsync(newColor);
         }
@@ -75,17 +57,6 @@ namespace OSL_Overlay.Components.Pages.Style
         private void TogglePicker()
         {
             _open = !_open; // toggle simple open/close
-        }
-
-        /// <summary>
-        /// Update color
-        /// </summary>
-        private void UpdateCodes()
-        {
-            _cssColor = ColorExtensions.MudColorToRgba(_color);
-            _displayCode = _color.A < 255
-                ? ColorExtensions.MudColorToRgba(_color)
-                : ColorExtensions.MudColorToHex(_color);
         }
     }
 }

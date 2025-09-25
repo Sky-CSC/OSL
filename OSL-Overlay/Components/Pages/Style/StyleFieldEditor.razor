@@ -5,7 +5,7 @@
 @using OSL_Utils
 
 @* ---------------- Style field editor component ---------------- *@
-<MudPaper Class="p-3 mb-3" Elevation="1">
+<MudPaper Class="pa-2" Elevation="3">
     <MudText Typo="Typo.subtitle2">@Label</MudText>
 
     @* ---------------- Font ---------------- *@
@@ -19,6 +19,22 @@
             @foreach (var font in AvailableFonts)
             {
                 <MudSelectItem Value="@font">@font</MudSelectItem>
+            }
+        </MudSelect>
+
+    }
+
+    @* ---------------- Timer Direction ---------------- *@
+    @if (Type == "timer")
+    {
+        <MudSelect T="string"
+                   Label="Timer direction"
+                   Value="Value"
+                   ValueChanged="OnTimerDirectionChanged"
+                   Variant="Variant.Filled">
+            @foreach (var direction in AvailableTimerDirection)
+            {
+                <MudSelectItem Value="@direction">@direction</MudSelectItem>
             }
         </MudSelect>
 
@@ -39,42 +55,102 @@
             <MudSelectItem Value="@("solid")">Solid</MudSelectItem>
             <MudSelectItem Value="@("linear")">Linear Gradient</MudSelectItem>
             <MudSelectItem Value="@("radial")">Radial Gradient</MudSelectItem>
+            <MudSelectItem Value="@("image")">Image</MudSelectItem>
+            <MudSelectItem Value="@("none")">None</MudSelectItem>
         </MudSelect>
 
         @* Hexa color *@
         @if (_backgroundType == "solid")
         {
             <ColorPicker Label="Background Color"
-                         Value="@_bgColor.AsMudColor()"
+                         Value="@Value.AsMudColor()"
                          ValueChanged="OnBgColorChanged" />
         }
 
-        @* Linear background *@
-        else if (_backgroundType == "linear")
+        @* Linear or Radial *@
+        else if (_backgroundType == "linear" || _backgroundType == "radial")
         {
-            <MudNumericField T="int"
-                             Value="_linearAngle"
-                             ValueChanged="OnLinearAngleChanged"
-                             Label="Angle (deg)"
-                             Min="0"
-                             Max="360" />
-            <ColorPicker Label="Start"
-                         Value="@_bgStart.AsMudColor()"
-                         ValueChanged="OnBgStartChanged" />
-            <ColorPicker Label="End"
-                         Value="@_bgEnd.AsMudColor()"
-                         ValueChanged="OnBgEndChanged" />
+            @if (_backgroundType == "linear")
+            {
+                <MudNumericField T="int"
+                                 Value="_linearAngle"
+                                 ValueChanged="OnLinearAngleChanged"
+                                 Label="Angle (deg)" Min="-360" Max="360" />
+            }
+
+            <MudStack Row="false" Spacing="2">
+                @foreach (var stop in _gradientStops)
+                {
+                    <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
+                        <ColorPicker Label="Color"
+                                     Value="@stop.Color.AsMudColor()"
+                                     ValueChanged="c => OnGradientStopColorChanged(stop, c)" />
+                        <MudNumericField T="int"
+                                         Value="stop.Position"
+                                         ValueChanged="pos => OnGradientStopPositionChanged(stop, pos)"
+                                         Label="%" Min="0" Max="100" />
+
+                        @if (_gradientStops.Count > 2)
+                        {
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                           Color="Color.Error"
+                                           OnClick="() => RemoveGradientStop(stop)" />
+                        }
+                    </MudStack>
+                }
+
+                <MudButton Variant="Variant.Outlined" StartIcon="@Icons.Material.Filled.Add" OnClick="AddGradientStop">
+                    Add Color
+
+                </MudButton>
+            </MudStack>
         }
 
-        @* Radial background *@
-        else if (_backgroundType == "radial")
+        @* Image background *@
+        else if (_backgroundType == "image")
         {
-            <ColorPicker Label="Inner"
-                         Value="@_bgStart.AsMudColor()"
-                         ValueChanged="OnBgStartChanged" />
-            <ColorPicker Label="Outer"
-                         Value="@_bgEnd.AsMudColor()"
-                         ValueChanged="OnBgEndChanged" />
+            <MudText Typo="Typo.subtitle2">Image URL</MudText>
+            <MudTextField Value="_bgImageUrl" Label="Url" Variant="Variant.Filled" Immediate="true" OnBlur="OnBgImageChanged" />
+
+            @* <MudText Typo="Typo.subtitle2" Class="mt-2">Import from computeur</MudText>
+            <InputFile OnChange="OnFileSelected" /> *@
+
+            <MudText Typo="Typo.subtitle2">Import image</MudText>
+            <InputFile OnChange="OnFileSelected" />
+
+            @if (!string.IsNullOrEmpty(_bgImageUrl))
+            {
+                <MudText Typo="Typo.caption" Class="mt-2">Prévisualisation :</MudText>
+                <img src="@_bgImageUrl" alt="Background preview" style="max-width:200px; max-height:150px; display:block; margin-top:5px;" />
+            }
+
+            <MudSelect T="string" Label="Size" Value="_bgImageSize" ValueChanged="OnBgImageSizeChanged">
+                <MudSelectItem Value="@("auto")">Auto</MudSelectItem>
+                <MudSelectItem Value="@("cover")">Cover</MudSelectItem>
+                <MudSelectItem Value="@("contain")">Contain</MudSelectItem>
+            </MudSelect>
+
+            <MudSelect T="string" Label="Repeat" Value="_bgImageRepeat" ValueChanged="OnBgImageRepeatChanged">
+                <MudSelectItem Value="@("no-repeat")">No Repeat</MudSelectItem>
+                <MudSelectItem Value="@("repeat")">Repeat</MudSelectItem>
+                <MudSelectItem Value="@("repeat-x")">Repeat X</MudSelectItem>
+                <MudSelectItem Value="@("repeat-y")">Repeat Y</MudSelectItem>
+            </MudSelect>
+
+            <MudSelect T="string" Label="Position" Value="_bgImagePosition" ValueChanged="OnBgImagePositionChanged">
+                <MudSelectItem Value="@("center")">Center</MudSelectItem>
+                <MudSelectItem Value="@("top")">Top</MudSelectItem>
+                <MudSelectItem Value="@("bottom")">Bottom</MudSelectItem>
+                <MudSelectItem Value="@("left")">Left</MudSelectItem>
+                <MudSelectItem Value="@("right")">Right</MudSelectItem>
+            </MudSelect>
+        }
+
+
+        @* None background *@
+        else if (_backgroundType == "none")
+        {
+            <MudText Typo="Typo.caption" Class="text-secondary">No background applied</MudText>
         }
     }
 
@@ -82,7 +158,7 @@
     else if (Type == "border")
     {
         <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
-            <MudNumericField T="int" Value="_borderWidth" Label="Width (px)" Min="0" Max="50" ValueChanged="OnBorderWidthChanged" />
+            <MudNumericField T="int" Value="_borderWidth" Label="Width (px)" Min="0" Max="40" ValueChanged="OnBorderWidthChanged" />
             <MudSelect T="string" Label="Style" Value="_borderStyle" ValueChanged="OnBorderStyleChanged">
                 <MudSelectItem Value="@("solid")">Solid</MudSelectItem>
                 <MudSelectItem Value="@("dashed")">Dashed</MudSelectItem>
@@ -93,7 +169,15 @@
         </MudStack>
 
         <ColorPicker Label="Border Color"
-                     Value="@_borderColor.AsMudColor()"
+                     Value="@Value.AsMudColor()"
                      ValueChanged="OnBorderColorChanged" />
+
+        <MudStack Row="false" Spacing="1" AlignItems="AlignItems.Start" Class="mt-2">
+            <MudCheckBox T="bool" Label="All" Value="_borderAll" ValueChanged="OnBorderAllChanged" />
+            <MudCheckBox T="bool" Label="Left" Value="_borderLeft" ValueChanged='val => OnBorderSideChanged("left", val)' />
+            <MudCheckBox T="bool" Label="Right" Value="_borderRight" ValueChanged='val => OnBorderSideChanged("right", val)' />
+            <MudCheckBox T="bool" Label="Top" Value="_borderTop" ValueChanged='val => OnBorderSideChanged("top", val)' />
+            <MudCheckBox T="bool" Label="Bottom" Value="_borderBottom" ValueChanged='val => OnBorderSideChanged("bottom", val)' />
+        </MudStack>
     }
 </MudPaper>
