@@ -1,4 +1,4 @@
-﻿namespace OSL_Utils
+namespace OSL_Utils
 {
     /// <summary>
     /// Provides methods for manipulating paths.
@@ -32,6 +32,21 @@
                 }
             }
             return "";
+        }
+
+        public static string ToWebPath(string path, string wwwRootPath)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+                return "";
+            if (string.IsNullOrWhiteSpace(wwwRootPath))
+                return path;
+
+            string fullAbsolute = System.IO.Path.GetFullPath(path);
+            string fullRoot = System.IO.Path.GetFullPath(wwwRootPath);
+
+            string relative = System.IO.Path.GetRelativePath(fullRoot, fullAbsolute);
+
+            return relative.Replace("\\", "/").TrimStart('/');
         }
     }
 }
