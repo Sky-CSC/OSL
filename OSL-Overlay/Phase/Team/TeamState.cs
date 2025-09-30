@@ -163,10 +163,10 @@ namespace OSL_Overlay.Phase.Team
             if (sourceFile != destFile)
             {
                 string file = OSL_Utils.File.Copy(sourceFile, destFile, true);
-                return OSL_Utils.Path.ToWebpath(file, Env.WebRootPath);
+                return OSL_Utils.Path.ToWebPath(file, Env.WebRootPath);
             }
 
-            return OSL_Utils.Path.ToWebpath(destFile, Env.WebRootPath);
+            return OSL_Utils.Path.ToWebPath(destFile, Env.WebRootPath);
         }
     }
 }
