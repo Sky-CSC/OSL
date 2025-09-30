@@ -1,4 +1,7 @@
-﻿namespace OSL_Utils
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Hosting;
+
+namespace OSL_Utils
 {
     /// <summary>
     /// Provides methods for manipulating files.
@@ -115,6 +118,28 @@
                 _logger.Log(LoggingLevel.ERROR, "Exist()", $"File {filePath} not exist, {e.Message}");
             }
             return false;
+        }
+
+        /// <summary>
+        /// Copy a file and return the destination file path.
+        /// </summary>
+        /// <param name="sourceFile"></param>
+        /// <param name="destFile"></param>
+        /// <param name="overwrite"></param>
+        /// <returns></returns>
+        public static string Copy(string sourceFile, string destFile, bool overwrite = false)
+        {
+            try
+            {
+                System.IO.File.Copy(sourceFile, destFile, overwrite);
+                _logger.Log(LoggingLevel.INFO, "Copy()", $"File {sourceFile} copy to {destFile}");
+                return destFile;
+            }
+            catch (Exception e)
+            {
+                _logger.Log(LoggingLevel.ERROR, "Copy()", $"File {sourceFile} not copy to {destFile}, {e.Message}");
+                return "";
+            }
         }
     }
 }
