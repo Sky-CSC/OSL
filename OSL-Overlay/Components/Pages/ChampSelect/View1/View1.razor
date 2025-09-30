@@ -5,36 +5,32 @@
 <link rel="stylesheet" href="@Assets["css/champSelect/View1.css"]" />
 
 <div class="champ-select" style="background:@Info.Background">
-    @Info.BlueTeam.Bans.Count
-    @Info.RedTeam.Bans.Count
     @* ---------------- Blue Ban ---------------- *@
-    @foreach (var ban in Info.BlueTeam.Bans)
-    {
-        <ChampionBanSlot Team="@Info.BlueTeam.Side"
-                         Ban="@ban" />
-    }
+    <BanSlot Class="@Info.BlueTeam.Side"
+             Team="@Info.BlueTeam" />
 
     @* ---------------- Red Ban ---------------- *@
-    @foreach (var ban in Info.RedTeam.Bans)
-    {
-        <ChampionBanSlot Team="@Info.RedTeam.Side"
-                         Ban="@ban" />
-    }
+    <BanSlot Class="@Info.RedTeam.Side"
+             Team="@Info.RedTeam" />
+
     @* ---------------- Patch ---------------- *@
-    <PatchSlot Patch="@Info.Patch" />
+    @if (Info.Patch.Show)
+    {
+        <PatchSlot Patch="@Info.Patch" />
+    }
 
     @* ---------------- Blue Coach ---------------- *@
     @if (Info.BlueTeam.Coach.Show)
     {
-        <CoachSlot Team="@Info.BlueTeam.Side"
+        <CoachSlot Class="@Info.BlueTeam.Side"
                    Coach="@Info.BlueTeam.Coach" />
     }
 
     @* ---------------- Red Coach ---------------- *@
     @if (Info.RedTeam.Coach.Show)
     {
-        <CoachSlot Team="@Info.RedTeam.Side"
-                   Coach="@Info.BlueTeam.Coach" />
+        <CoachSlot Class="@Info.RedTeam.Side"
+                   Coach="@Info.RedTeam.Coach" />
     }
 
     @* ---------------- Blue Timer ---------------- *@
@@ -66,20 +62,16 @@
     @* ---------------- Blue Team Info ---------------- *@
     <TeamSlot Side="@Info.BlueTeam.Side"
               Team="@Info.BlueTeam" />
-    <BoGraphicSlot Team="@Info.BlueTeam.Side"
-                   Bo="@Info.BlueTeam.BoGraphic" />
 
     @* ---------------- Red Team Info ---------------- *@
     <TeamSlot Side="@Info.RedTeam.Side"
               Team="@Info.RedTeam" />
-    <BoGraphicSlot Team="@Info.RedTeam.Side"
-                   Bo="@Info.RedTeam.BoGraphic" />
 
     @* ---------------- Phase ---------------- *@
-    <Txt Text="@Info.Phase" />
+    <Txt Class="phase" Text="@Info.Phase" />
 
     @* ---------------- Vs ---------------- *@
-    <Txt Text="@Info.Vs" />
+    <Txt Class="vs" Text="@Info.Vs" />
 </div>
 
 @code {

@@ -1,0 +1,14 @@
+@using OSL_Overlay.Phase.ChampSelect
+
+@* ---------------- Bans ---------------- *@
+<div class="ban @Class">
+    @foreach (var ban in Team.Bans)
+    {
+        <ChampionBanSlot Ban="@ban" />
+    }
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = "blue";
+    [Parameter] required public Team Team { get; set; }
+}

@@ -1,6 +1,9 @@
 @* ---------------- Image ----------------*@
-<div class="@Class image" style="background:@Background; border:@Border;">
-    <img class="image-img" src="@ImageUrl"/>
+<div class="@Class image" style="background:@Background; @Border">
+    @if (!string.IsNullOrEmpty(ImageUrl))
+    {
+        <img class="image-img" src="@ImageUrl"/>
+    }
 </div>
 
 @code {

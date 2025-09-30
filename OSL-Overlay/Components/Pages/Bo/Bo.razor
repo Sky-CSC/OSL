@@ -1,0 +1,104 @@
+@page "/bo/"
+@using Newtonsoft.Json
+@using OSL_Overlay.Phase.ChampSelect
+@using OSL_Overlay.Phase.Team
+@using OSL_Overlay.Phase.Bo
+@inject ChampSelectState ChampSelectState
+@inject BoState BoState
+
+<PageTitle>Best Of</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Best Of management</b></MudText>
+<br />
+
+<SwitchButton Text="Swap Bo"
+              Icon="@Icons.Material.Filled.SwapHoriz"
+              BackgroundColor="@Colors.BlueGray.Darken4"
+              HoverBackgroundColor="@Colors.Red.Darken2"
+              TextColor="#ffffff"
+              OnClick="@BoState.SwapBo" />
+<br />
+
+<MudText Id="blue-side" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Blue Team</MudText>
+<MudStack Row="true">
+    <StyleFieldEditor Label="Text"
+                      Type="text"
+                      Value="@BoState.BlueInfo.Text"
+                      ValueChanged="v => OnStyleChanged(val => BoState.BlueInfo.Text = val, v)" />
+    <StyleFieldEditor Label="Number of games"
+                      Type="int0to5"
+                      Value="@BoState.BlueInfo.NbGames.ToString()"
+                      ValueChanged="v => OnStyleChanged(val => BoState.BlueInfo.NbGames = val, v)" />
+    <StyleFieldEditor Label="Number of games win"
+                      Type="int0to5"
+                      Value="@BoState.BlueInfo.Win.ToString()"
+                      ValueChanged="v => OnStyleChanged(val => BoState.BlueInfo.Win = val, v)" />
+    <MudButton OnClick="BoState.UpdateBlueBo" Variant="Variant.Outlined" Color="Color.Success">
+        Validate
+    </MudButton>
+    <MudButton OnClick="BoState.ResetBlueBo" Variant="Variant.Outlined" Color="Color.Error">
+        Reset
+    </MudButton>
+</MudStack>
+<br />
+<MudText Id="red-side" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Red Team</MudText>
+<MudStack Row="true">
+    <StyleFieldEditor Label="Text"
+                      Type="text"
+                      Value="@BoState.RedInfo.Text"
+                      ValueChanged="v => OnStyleChanged(val => BoState.RedInfo.Text = val, v)" />
+    <StyleFieldEditor Label="Number of games"
+                      Type="int0to5"
+                      Value="@BoState.RedInfo.NbGames.ToString()"
+                      ValueChanged="v => OnStyleChanged(val => BoState.RedInfo.NbGames = val, v)" />
+    <StyleFieldEditor Label="Number of games win"
+                      Type="int0to5"
+                      Value="@BoState.RedInfo.Win.ToString()"
+                      ValueChanged="v => OnStyleChanged(val => BoState.RedInfo.Win = val, v)" />
+    <MudButton OnClick="BoState.UpdateRedBo" Variant="Variant.Outlined" Color="Color.Success">
+        Validate
+    </MudButton>
+    <MudButton OnClick="BoState.ResetRedBo" Variant="Variant.Outlined" Color="Color.Error">
+        Reset
+    </MudButton>
+</MudStack>
+
+@code {
+    /// <summary>
+    /// When css is update notifie Champ state
+    /// </summary>
+    /// <param name="setter"></param>
+    /// <param name="newValue"></param>
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+    }
+
+    private void OnStyleChanged(Action<int> setter, string newValue)
+    {
+        setter(Convert.ToInt32(newValue));
+    }
+
+    protected override void OnInitialized()
+    {
+        // 🔔 Abonnement aux notifications globales
+        BoState.OnChange += RefreshUI;
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        BoState.OnChange -= RefreshUI;
+    }
+}
+

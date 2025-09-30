@@ -1,23 +1,23 @@
 @using OSL_Overlay.Phase.ChampSelect
 
 @* ---------------- Display BO graphic ---------------- *@
-<div class="bo-graphic @Team">
+<div class="@Class">
     @for (int i = 0; i < Bo.NbMatchForWin; i++)
     {
         @* ---------------- Win ---------------- *@
         if (i < Bo.NbWin)
         {
-            <div class="bo-graphic-slot" style="background:@Bo.Win.Color; border:@Bo.Win.Border;"></div>
+            <div class="bo-graphic-slot" style="background:@Bo.Win.Background; border:@Bo.Win.Border;"></div>
         }
         @* ---------------- Undef ---------------- *@
         else
         {
-            <div class="bo-graphic-slot" style="background:@Bo.Undef.Color; border:@Bo.Undef.Border;"></div>
+            <div class="bo-graphic-slot" style="background:@Bo.Undef.Background; border:@Bo.Undef.Border;"></div>
         }
     }
 </div>
 
 @code {
-    [Parameter] public string Team { get; set; } = string.Empty;
+    [Parameter] public string Class { get; set; } = string.Empty;
     [Parameter] required public BoGraphic Bo { get; set; }
 }

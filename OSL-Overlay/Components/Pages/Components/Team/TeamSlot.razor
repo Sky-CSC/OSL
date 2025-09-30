@@ -2,19 +2,19 @@
 <div class="team @Side">
     @if (Team.ShowLogo)
     {
-        <Image ImageUrl="@Team.Logo" />
+        <Image Class="team-logo" ImageUrl="@Team.Logo" />
     }
     @if (Team.ShowName)
     {
-        <Txt Text="@Team.Name" />
+        <Txt Class="team-name" Text="@Team.Name" />
     }
     @if (Team.ShowTag)
     {
-        <Txt Text="@Team.Tag" />
+        <Txt Class="team-tag" Text="@Team.Tag" />
     }
     @if (Team.BoGraphic.Show)
     {
-        <BoGraphicSlot Team="@Side" Bo="@Team.BoGraphic" />
+        <BoGraphicSlot Class="bo-graphic" Bo="@Team.BoGraphic" />
     }
 </div>
 

@@ -2,9 +2,36 @@
 <MudNavMenu>
     <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
     <MudNavLink Href="ws-test" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Web socket test</MudNavLink>
+    <MudNavGroup Title="Teams" Icon="@Icons.Material.Filled.Diversity3" Expanded="false">
+        <MudNavLink Href="team" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Teams Config</MudNavLink>
+        <MudNavLink Href="team#blue-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Blue Team</MudNavLink>
+        <MudNavLink Href="team#red-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Red Team</MudNavLink>
+    </MudNavGroup>
+    <MudNavGroup Title="Best Of" Icon="@Icons.Material.Filled.EmojiEvents" Expanded="false">
+        <MudNavLink Href="bo" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Bo Config</MudNavLink>
+        <MudNavLink Href="bo#blue-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Blue Team</MudNavLink>
+        <MudNavLink Href="bo#red-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Red Team</MudNavLink>
+    </MudNavGroup>
     <MudNavGroup Title="Champ Select" Icon="@Icons.Material.Filled.FactCheck" Expanded="false">
-        <MudNavGroup Title="View1" Icon="@Icons.Material.Filled.FactCheck" Expanded="true">
-            <MudNavLink Href="champselect/view1/custom" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Customize</MudNavLink>
+        <MudNavGroup Title="View1" Icon="@Icons.Material.Filled.Preview" Expanded="true">
+            <MudNavGroup Title="Customize" Icon="@Icons.Material.Filled.Brush" Expanded="true">
+                <MudNavLink Href="champselect/view1/custom" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Customize Config</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#background" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Background</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#pick-background" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Pick Background</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#pick-champion-background" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Pick champion background</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#pick-blink" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Pick blink</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#pick-border" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Champion border</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#summoner-name" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Summoner name</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#summoner-spell" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Summoner Spell</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#lane" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Lane</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#timer" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Timer</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#patch" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Patch</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#coach" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Coach</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#ban" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Bans</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#teams" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Teams</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#phase" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Phase</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#vs" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Vs</MudNavLink>
+            </MudNavGroup>
         </MudNavGroup>
     </MudNavGroup>
 </MudNavMenu>

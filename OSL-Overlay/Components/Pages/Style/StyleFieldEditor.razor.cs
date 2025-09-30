@@ -16,6 +16,8 @@ namespace OSL_Overlay.Components.Pages.Style
         [Parameter] public string Value { get; set; } = "";
         [Parameter] public EventCallback<string> ValueChanged { get; set; }
         [Parameter] public string Type { get; set; } = "color";
+        [Parameter] public string DirectoryPath { get; set; } = string.Empty;
+        [Parameter] public string HelperText { get; set; } = string.Empty;
 
         private readonly string[] AvailableFonts =
         [
@@ -52,9 +54,18 @@ namespace OSL_Overlay.Components.Pages.Style
             new(@"\b(solid|dashed|dotted|double|none|hidden|groove|ridge|inset|outset)\b",
                 RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
-        private static readonly Regex ColorRegex =
-            new(@"(#([0-9a-fA-F]{3,8})|\brgba?\([^\)]+\)|hsla?\([^\)]+\)|var\([^\)]+\)|\b[a-zA-Z]+\b)",
+        //private static readonly Regex ColorRegex =
+        //    new(@"(#([0-9a-fA-F]{3,8})|\brgba?\([^\)]+\)|hsla?\([^\)]+\)|var\([^\)]+\)|\b[a-zA-Z]+\b)",
+        //        RegexOptions.IgnoreCase | RegexOptions.Compiled);
+        private static readonly Regex ColorRegex = new(
+            @"(#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})\b" +
+            @"|rgba?\([^)]+\)" +
+            @"|hsla?\([^)]+\)" +
+            @"|var\([^)]+\)" +
+            @"|\b(?:aliceblue|antiquewhite|aqua|aquamarine|azure|beige|bisque|black|blanchedalmond|blue|blueviolet|brown|burlywood|cadetblue|chartreuse|chocolate|coral|cornflowerblue|cornsilk|crimson|cyan|darkblue|darkcyan|darkgoldenrod|darkgray|darkgreen|darkgrey|darkkhaki|darkmagenta|darkolivegreen|darkorange|darkorchid|darkred|darksalmon|darkseagreen|darkslateblue|darkslategray|darkslategrey|darkturquoise|darkviolet|deeppink|deepskyblue|dimgray|dimgrey|dodgerblue|firebrick|floralwhite|forestgreen|fuchsia|gainsboro|ghostwhite|gold|goldenrod|gray|green|greenyellow|grey|honeydew|hotpink|indianred|indigo|ivory|khaki|lavender|lavenderblush|lawngreen|lemonchiffon|lightblue|lightcoral|lightcyan|lightgoldenrodyellow|lightgray|lightgreen|lightgrey|lightpink|lightsalmon|lightseagreen|lightskyblue|lightslategray|lightslategrey|lightsteelblue|lightyellow|lime|limegreen|linen|magenta|maroon|mediumaquamarine|mediumblue|mediumorchid|mediumpurple|mediumseagreen|mediumslateblue|mediumspringgreen|mediumturquoise|mediumvioletred|midnightblue|mintcream|mistyrose|moccasin|navajowhite|navy|oldlace|olive|olivedrab|orange|orangered|orchid|palegoldenrod|palegreen|paleturquoise|palevioletred|papayawhip|peachpuff|peru|pink|plum|powderblue|purple|rebeccapurple|red|rosybrown|royalblue|saddlebrown|salmon|sandybrown|seagreen|seashell|sienna|silver|skyblue|slateblue|slategray|slategrey|snow|springgreen|steelblue|tan|teal|thistle|tomato|transparent|turquoise|violet|wheat|white|whitesmoke|yellow|yellowgreen|currentcolor)\b)",
                 RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+
 
         // Background
         private string _backgroundType = "solid";
@@ -158,6 +169,11 @@ namespace OSL_Overlay.Components.Pages.Style
             {
                 ParseBorderFromCss(Value);
             }
+
+            if (Type == "image" && !string.IsNullOrWhiteSpace(Value))
+            {
+                _selectedImage = Value;
+            }
         }
 
         /// <summary>
@@ -208,6 +224,112 @@ namespace OSL_Overlay.Components.Pages.Style
         private async Task OnColorChanged(MudColor c)
         {
             Value = c.ToCssString();
+            await ValueChanged.InvokeAsync(Value);
+        }
+
+        // ------------------- TEXT -------------------
+        /// <summary>
+        /// When text change
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        private async Task OnTextChanged(string newValue)
+        {
+            Value = newValue;
+            await ValueChanged.InvokeAsync(Value);
+        }
+
+        // ------------------- Integer (0-5) -------------------
+        /// <summary>
+        /// When text change
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        private async Task OnIntChanged(int newValue)
+        {
+            Value = newValue.ToString();
+            await ValueChanged.InvokeAsync(Value);
+        }
+
+        // ------------------- Chackbox -------------------
+        /// <summary>
+        /// When checkbox change
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        private async Task OnCheckboxChange(bool check)
+        {
+            Value = check.ToString();
+            await ValueChanged.InvokeAsync(Value);
+        }
+
+        // ------------------- IMAGE -------------------
+        private string _selectedImage = "";
+
+        private class ImageInfo
+        {
+            public string FileName { get; set; } = "";
+            public string Path { get; set; } = "";
+        }
+
+        private List<ImageInfo> LoadDirectoryImage(string path)
+        {
+            List<ImageInfo> imageInfos = [];
+            var folder = System.IO.Path.Combine(Env.WebRootPath, path);
+            if (System.IO.Directory.Exists(folder))
+            {
+                var files = System.IO.Directory.GetFiles(folder)
+                    .Where(f =>
+                    {
+                        var ext = System.IO.Path.GetExtension(f).ToLowerInvariant();
+                        return ext == ".png" || ext == ".jpg" || ext == ".jpeg" || ext == ".svg";
+                    });
+                foreach (var file in files)
+                {
+                    imageInfos.Add(new ImageInfo
+                    {
+                        FileName = System.IO.Path.GetFileName(file),
+                        Path = $"{path}/{System.IO.Path.GetFileName(file)}"
+                    });
+                }
+            }
+            return imageInfos;
+
+            //imageInfos. = System.IO.Directory.GetFiles(path);
+        }
+
+        private async Task OnImageSelected(string img)
+        {
+            _selectedImage = img;
+            // ici tu peux mettre à jour ton background
+            await ValueChanged.InvokeAsync(img);
+            //await UpdateImageFromSelection(img);
+        }
+
+        /// <summary>
+        /// Lorsqu'une image est sélectionnée
+        /// </summary>
+        private async Task OnImageFileSelected(InputFileChangeEventArgs e)
+        {
+            var file = e.File;
+            if (file == null) return;
+
+            var ext = System.IO.Path.GetExtension(file.Name).ToLowerInvariant();
+
+            // Dossier temporaire
+            var tempDir = System.IO.Path.Combine(Env.WebRootPath, "temp");
+            if (!System.IO.Directory.Exists(tempDir))
+                System.IO.Directory.CreateDirectory(tempDir);
+
+            // Nom unique
+            var fileName = $"{Guid.NewGuid()}{ext}";
+            var tempPath = System.IO.Path.Combine(tempDir, fileName);
+
+            using var stream = System.IO.File.Create(tempPath);
+            await file.OpenReadStream(maxAllowedSize: 10 * 1024 * 1024).CopyToAsync(stream);
+
+            // Stocke le chemin relatif
+            Value = $"temp/{fileName}";
             await ValueChanged.InvokeAsync(Value);
         }
 
@@ -342,7 +464,9 @@ namespace OSL_Overlay.Components.Pages.Style
             if (!System.IO.Directory.Exists(uploads))
                 System.IO.Directory.CreateDirectory(uploads);
 
-            var fileName = $"{Guid.NewGuid()}{ext}";
+            //OSL_Utils.File.Write(System.IO.Path.Combine(uploads, file.Name), await file.GetBytesAsync());
+
+            var fileName = file.Name;
             var filePath = System.IO.Path.Combine(uploads, fileName);
 
             try
@@ -512,10 +636,12 @@ namespace OSL_Overlay.Components.Pages.Style
                 var val = m.Groups["val"].Value.Trim();
 
                 var widthMatch = WidthRegex.Match(val);
+                //Console.WriteLine(widthMatch);
                 if (widthMatch.Success && int.TryParse(widthMatch.Groups["w"].Value, out var px))
                     _borderWidth = px;
 
                 var styleMatch = StyleRegex.Match(val);
+                //Console.WriteLine(styleMatch);
                 if (styleMatch.Success) _borderStyle = styleMatch.Value;
 
                 var colorMatch = ColorRegex.Match(val);

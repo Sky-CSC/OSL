@@ -2,12 +2,12 @@
 @using System.Globalization
 
 @* ---------------- Color picker component ---------------- *@
-<div class="d-flex align-items-center my-2" style="gap:12px;">
-    <MudText Typo="Typo.body1" Style="min-width:220px;">@Label</MudText>
+<div class="d-flex align-items-center my-2" style="gap:8px; display:flex; align-items:center;">
+    <MudText Typo="Typo.body1">@Label</MudText>
 
     @* ---------------- Button display color and for display color picker ---------------- *@
     <MudButton Variant="Variant.Filled"
-               Style="@($"background:{CssColor}; min-width:36px; height:32px; padding:0; border-radius:6px; border:2px solid rgba(0,0,0,0.12);")"
+               Style="@($"background:{CssColor}; min-width:36px; height:36px; border-radius:6px; border:2px solid #ffffff;")"
                OnClick="TogglePicker">
     </MudButton>
 
@@ -16,9 +16,9 @@
                 AnchorOrigin="Origin.BottomCenter"
                 TransformOrigin="Origin.TopCenter"
                 Elevation="8"
-                Fixed="false">
+                >
         <MudPaper Class="p-2">
-            <MudItem md="8" Class="d-flex justify-center">
+            <MudItem md="12" Class="d-flex justify-center">
                 <MudColorPicker Value="@Value"
                                 ValueChanged="OnPickerValueChanged"
                                 DisableAlpha="false"
@@ -29,7 +29,8 @@
                                 ShowPreview="true"
                                 ShowSliders="true"
                                 ShowInputs="true"
-                                ShowModeSwitch="true" />
+                                ShowModeSwitch="true"
+                                ColorPickerMode="ColorPickerMode.HEX" />
             </MudItem>
 
             @* Close button *@
@@ -40,7 +41,7 @@
     </MudPopover>
 
     @* ---------------- hexa or rgba code ---------------- *@
-    <MudText Typo="Typo.body2" Class="font-mono" Style="margin-left:0px;">@DisplayCode</MudText>
+    <MudText Typo="Typo.body2" Class="font-mono" Style="margin-right:2px;">@DisplayCode</MudText>
 
     @if (!string.IsNullOrWhiteSpace(HelperText))
     {

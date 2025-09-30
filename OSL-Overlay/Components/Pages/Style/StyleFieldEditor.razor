@@ -5,7 +5,7 @@
 @using OSL_Utils
 
 @* ---------------- Style field editor component ---------------- *@
-<MudPaper Class="pa-2" Elevation="3">
+<MudPaper Class="pa-2 ma-1" Elevation="3">
     <MudText Typo="Typo.subtitle2">@Label</MudText>
 
     @* ---------------- Font ---------------- *@
@@ -43,9 +43,75 @@
     @* ---------------- Color ---------------- *@
     else if (Type == "color")
     {
-        <ColorPicker Label="@Label"
+        <ColorPicker Label="Color"
                      Value="@Value.AsMudColor()"
                      ValueChanged="OnColorChanged" />
+    }
+
+    @* ---------------- Text ---------------- *@
+    else if (Type == "text")
+    {
+        <MudTextField T="string"
+                      Value="@Value"
+                      ValueChanged="OnTextChanged"
+                      Variant="Variant.Outlined"
+                      HelperText="@HelperText" />
+    }
+
+    @* ---------------- Integer (0-5) ---------------- *@
+    else if (Type == "int0to5")
+    {
+        <MudNumericField T="int"
+                         Value="@Convert.ToInt32(Value)"
+                         ValueChanged="OnIntChanged"
+                         Min="0"
+                         Max="5"
+                         Variant="Variant.Outlined"
+                         HelperText="@HelperText" />
+    }
+
+    @* ---------------- Checkbox ---------------- *@
+    else if (Type == "checkbox")
+    {
+        <MudCheckBox T="bool"
+                     Value="@Convert.ToBoolean(Value)"
+                     ValueChanged="OnCheckboxChange"
+                     Color="Color.Primary" />
+    }
+
+    @* ---------------- Image ---------------- *@
+    else if (Type == "image")
+    {
+        <MudSelect T="string"
+                   Label="Images"
+                   Value="_selectedImage"
+                   ValueChanged="OnImageSelected"
+                   Variant="Variant.Filled"
+                   Style="min-width:200px;">
+            @foreach (var img in LoadDirectoryImage(DirectoryPath))
+            {
+                <MudSelectItem Value="@img.Path">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <img src="@img.Path" alt="@img.FileName" style="width:30px; height:30px; object-fit:cover; border-radius:4px;" />
+                        <span>@img.FileName</span>
+                    </div>
+                </MudSelectItem>
+            }
+        </MudSelect>
+    }
+
+    @* ---------------- Import Image ---------------- *@
+    else if (Type == "import-image")
+    {
+        <InputFile OnChange="OnImageFileSelected" />
+
+        @if (!string.IsNullOrEmpty(Value))
+        {
+            <br />
+            <MudText Typo="Typo.caption" Class="mt-2">Selected :</MudText>
+            <br />
+            <span>@Value</span>
+        }
     }
 
     @* ---------------- Background ---------------- *@
@@ -62,7 +128,7 @@
         @* Hexa color *@
         @if (_backgroundType == "solid")
         {
-            <ColorPicker Label="Background Color"
+            <ColorPicker Label="Color"
                          Value="@Value.AsMudColor()"
                          ValueChanged="OnBgColorChanged" />
         }
@@ -88,7 +154,7 @@
                         <MudNumericField T="int"
                                          Value="stop.Position"
                                          ValueChanged="pos => OnGradientStopPositionChanged(stop, pos)"
-                                         Label="%" Min="0" Max="100" />
+                                         Label="%" Min="0" Max="100" Style="width:60px;" />
 
                         @if (_gradientStops.Count > 2)
                         {
@@ -167,15 +233,16 @@
                 <MudSelectItem Value="@("none")">None</MudSelectItem>
             </MudSelect>
         </MudStack>
-
-        <ColorPicker Label="Border Color"
-                     Value="@Value.AsMudColor()"
+        <ColorPicker Label="Color"
+                     Value="@_borderColor.AsMudColor()"
                      ValueChanged="OnBorderColorChanged" />
 
-        <MudStack Row="false" Spacing="1" AlignItems="AlignItems.Start" Class="mt-2">
+        <MudStack Row="true" Spacing="1" AlignItems="AlignItems.Start" Class="mt-2">
             <MudCheckBox T="bool" Label="All" Value="_borderAll" ValueChanged="OnBorderAllChanged" />
             <MudCheckBox T="bool" Label="Left" Value="_borderLeft" ValueChanged='val => OnBorderSideChanged("left", val)' />
             <MudCheckBox T="bool" Label="Right" Value="_borderRight" ValueChanged='val => OnBorderSideChanged("right", val)' />
+        </MudStack>
+        <MudStack Row="true" Spacing="1" AlignItems="AlignItems.Start" Class="mt-2">
             <MudCheckBox T="bool" Label="Top" Value="_borderTop" ValueChanged='val => OnBorderSideChanged("top", val)' />
             <MudCheckBox T="bool" Label="Bottom" Value="_borderBottom" ValueChanged='val => OnBorderSideChanged("bottom", val)' />
         </MudStack>

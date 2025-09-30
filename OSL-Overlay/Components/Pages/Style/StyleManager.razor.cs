@@ -9,6 +9,7 @@ namespace OSL_Overlay.Components.Pages.Style
     public partial class StyleManager
     {
         /// <summary>Fichier actuellement sélectionné (chemin complet)</summary>
+        [Parameter] public string Label { get; set; } = "Save style on new file";
         [Parameter] public string RelativePath { get; set; } = string.Empty;
 
         /// <summary>
@@ -25,12 +26,18 @@ namespace OSL_Overlay.Components.Pages.Style
         /// Select file
         /// </summary>
         [Parameter] public EventCallback<string> OnFileSelected { get; set; }
+        [Parameter] public string FilePrefix { get; set; } = "style";
+        [Parameter] public bool ShowRename { get; set; } = false;
+        [Parameter] public bool ShowDelete { get; set; } = false;
+        [Parameter] public bool ShowSelect { get; set; } = false;
+        [Parameter] public bool ShowDuplicate { get; set; } = false;
+        [Parameter] public bool ShowSave { get; set; } = false;
 
         private List<string> _files = new();
         private Dictionary<string, string> _fileRenameMap = new();
 
         // Path of wwwroot
-        private string FullPath => Path.Combine(Env.WebRootPath, RelativePath);
+        private string FullPath => OSL_Utils.Path.Combine(Env.WebRootPath, RelativePath);
 
         protected override void OnParametersSet() => LoadFiles();
 
@@ -52,7 +59,7 @@ namespace OSL_Overlay.Components.Pages.Style
                 if (_files.Count > 0 && string.IsNullOrEmpty(CurrentFile))
                 {
                     var lastFile = _files[0];
-                    CurrentFile = Path.Combine(FullPath, lastFile);
+                    CurrentFile = OSL_Utils.Path.Combine(FullPath, lastFile);
 
                     _ = OnFileSelected.InvokeAsync(CurrentFile);
                 }
@@ -65,8 +72,8 @@ namespace OSL_Overlay.Components.Pages.Style
         /// <returns></returns>
         private async Task SaveFile()
         {
-            var fileName = $"style-{DateTime.Now:yyyyMMdd-HHmmss}.json";
-            var filePath = Path.Combine(FullPath, fileName);
+            var fileName = $"{FilePrefix}-{DateTime.Now:yyyyMMdd-HHmmss}.json";
+            var filePath = OSL_Utils.Path.Combine(FullPath, fileName);
 
             await OnSave.InvokeAsync(filePath);
             CurrentFile = filePath;
@@ -81,7 +88,7 @@ namespace OSL_Overlay.Components.Pages.Style
         /// <returns></returns>
         private async Task SaveChanges(string fileName)
         {
-            var filePath = Path.Combine(FullPath, fileName);
+            var filePath = OSL_Utils.Path.Combine(FullPath, fileName);
             await OnSave.InvokeAsync(filePath);
             CurrentFile = filePath;
         }
@@ -106,7 +113,7 @@ namespace OSL_Overlay.Components.Pages.Style
         /// <returns></returns>
         private async Task SelectFile(string fileName)
         {
-            var fullPath = Path.Combine(FullPath, fileName);
+            var fullPath = OSL_Utils.Path.Combine(FullPath, fileName);
             CurrentFile = fullPath;
             await OnFileSelected.InvokeAsync(fullPath);
         }
@@ -125,7 +132,7 @@ namespace OSL_Overlay.Components.Pages.Style
 
             if (result == true)
             {
-                var filePath = Path.Combine(FullPath, fileName);
+                var filePath = OSL_Utils.Path.Combine(FullPath, fileName);
                 if (File.Exists(filePath))
                 {
                     File.Delete(filePath);
@@ -165,8 +172,8 @@ namespace OSL_Overlay.Components.Pages.Style
             if (string.IsNullOrWhiteSpace(newName) || newName == oldName)
                 return;
 
-            var oldPath = Path.Combine(FullPath, oldName);
-            var newPath = Path.Combine(FullPath, newName);
+            var oldPath = OSL_Utils.Path.Combine(FullPath, oldName);
+            var newPath = OSL_Utils.Path.Combine(FullPath, newName);
 
             if (File.Exists(newPath))
             {
@@ -205,19 +212,19 @@ namespace OSL_Overlay.Components.Pages.Style
         /// <returns></returns>
         private async Task DuplicateFile(string fileName)
         {
-            var sourcePath = Path.Combine(FullPath, fileName);
+            var sourcePath = OSL_Utils.Path.Combine(FullPath, fileName);
             if (!File.Exists(sourcePath)) return;
 
             var nameWithoutExt = Path.GetFileNameWithoutExtension(fileName);
             var ext = Path.GetExtension(fileName);
             var newName = $"{nameWithoutExt}-copy{ext}";
-            var destPath = Path.Combine(FullPath, newName);
+            var destPath = OSL_Utils.Path.Combine(FullPath, newName);
 
             int counter = 1;
             while (File.Exists(destPath))
             {
                 newName = $"{nameWithoutExt}-copy{counter}{ext}";
-                destPath = Path.Combine(FullPath, newName);
+                destPath = OSL_Utils.Path.Combine(FullPath, newName);
                 counter++;
             }
 
