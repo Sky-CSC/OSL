@@ -1,7 +1,9 @@
 using MudBlazor.Services;
 using OSL_CDragon;
 using OSL_Overlay.Components;
+using OSL_Overlay.Phase.Bo;
 using OSL_Overlay.Phase.ChampSelect;
+using OSL_Overlay.Phase.Team;
 using OSL_Overlay.WebSocketClient;
 using OSL_Overlay.WebSocketClient.Handlers;
 using OSL_Utils.WebSocket;
@@ -23,6 +25,7 @@ builder.Services.AddSingleton<IMessageHandler, RegionLocaleHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameMatchHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameTimelineHandler>();
+builder.Services.AddSingleton<IMessageHandler, ChampSelectHandler>();
 
 // Initialize CDragon and download assets if necessary
 var cdragon = new CDragon();
@@ -32,10 +35,13 @@ cdragon.DownloadAssetsWithCheck();
 builder.Services.AddSingleton(cdragon);
 
 // Champ Select
-builder.Services.AddSingleton<ChampSelect>();
 builder.Services.AddSingleton<ChampSelectState>();
-builder.Services.AddTransient<ChampSelectHandler>();
-builder.Services.AddTransient<IMessageHandler, ChampSelectHandler>();
+
+// Teams
+builder.Services.AddSingleton<TeamState>();
+
+// Bo
+builder.Services.AddSingleton<BoState>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -67,6 +73,10 @@ using (var scope = app.Services.CreateScope())
 {
     var client = scope.ServiceProvider.GetRequiredService<WebSocketClient>();
     await client.ConnectAsync();
+
+    var env = scope.ServiceProvider.GetRequiredService<IWebHostEnvironment>();
+    var teamState = scope.ServiceProvider.GetRequiredService<TeamState>();
+    teamState.LoadDefault(env);
 }
 
 app.Run();
