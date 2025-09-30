@@ -88,43 +88,63 @@ namespace OSL_Overlay.Phase.ChampSelect
     }
     public class Ban
     {
-        public string BackgroundImage { get; set; }
+        public string BanImage { get; set; }
+        public string ChampionImage { get; set; }
         public string BackgroundColor { get; set; }
         public bool IsBanning { get; set; }
         public string BlinkColor { get; set; }
+        public string BorderBanning { get; set; }
         public bool IsCompleted { get; set; }
+        public string Greyscale { get; set; }
+        public string BorderCompleted{ get; set; }
         public string CrossImage { get; set; }
+        public string LineCustom { get; set; }
+        public string CrossCustom { get; set; }
         public Ban()
         {
-            BackgroundImage = string.Empty;
+            BanImage = string.Empty;
+            ChampionImage = string.Empty;
             BackgroundColor = string.Empty;
             IsBanning = false;
+            BorderBanning = string.Empty;
             BlinkColor = string.Empty;
             IsCompleted = false;
+            BorderCompleted = string.Empty;
+            Greyscale = string.Empty;
             CrossImage = string.Empty;
+            LineCustom = string.Empty;
+            CrossCustom = string.Empty;
         }
     }
 
     public class Coach
     {
         public bool Show { get; set; }
-        public Text Info { get; set; }
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public Text Text { get; set; }
+        public Text Name { get; set; }
         public Coach()
         {
             Show = false;
-            Info = new();
+            Background = string.Empty;
+            Border = string.Empty;
+            Text = new();
+            Name = new();
         }
     }
 
     public class Patch
     {
+        public bool Show { get; set; }
         public string BackgroundColor { get; set; }
         public string BorderColor { get; set; }
         public Text PatchInfo { get; set; }
         public Text Version { get; set; }
         public Patch()
         {
-            BackgroundColor = string.Empty;
+            Show = true;
+            BackgroundColor = string.Empty;     
             BorderColor = string.Empty;
             PatchInfo = new();
             Version = new();
@@ -150,7 +170,8 @@ namespace OSL_Overlay.Phase.ChampSelect
 
     public class Pick
     {
-        public string BackgroundImage { get; set; }
+        public string PlayerImage { get; set; }
+        public string ChampionImage { get; set; }
         public string BorderImage { get; set; }
         public bool ShowLane { get; set; }
         public string LaneImage { get; set; }
@@ -164,8 +185,9 @@ namespace OSL_Overlay.Phase.ChampSelect
 
         public Pick()
         {
+            PlayerImage = string.Empty;
+            ChampionImage = string.Empty;
             BorderImage = string.Empty;
-            BackgroundImage = string.Empty;
             ShowLane = true;
             LaneImage = string.Empty;
             ShowSummonerSpells = false;

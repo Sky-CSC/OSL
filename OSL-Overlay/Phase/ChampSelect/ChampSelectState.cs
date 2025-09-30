@@ -1,5 +1,9 @@
+using Newtonsoft.Json;
 using OSL_CDragon;
+using OSL_CDragon.Schema;
 using OSL_Lcu.Schema.Lcu;
+using OSL_Overlay.Phase.Bo;
+using OSL_Overlay.Phase.Team;
 
 namespace OSL_Overlay.Phase.ChampSelect
 {
@@ -25,7 +29,8 @@ namespace OSL_Overlay.Phase.ChampSelect
         {
             _session = session;
 
-            if (IsFirstRun) {
+            if (IsFirstRun)
+            {
                 InitInfo(session);
                 IsFirstRun = false;
             }
@@ -87,7 +92,7 @@ namespace OSL_Overlay.Phase.ChampSelect
             {
                 if (player.ChampionId != 0)
                 {
-                    Info.BlueTeam.Picks[index].BackgroundImage = _cdragon.GetChampionSplash(player.ChampionId);
+                    Info.BlueTeam.Picks[index].ChampionImage = _cdragon.GetChampionSplash(player.ChampionId);
                     Info.BlueTeam.Picks[index].IsPicking = false;
                 }
             }
@@ -96,7 +101,7 @@ namespace OSL_Overlay.Phase.ChampSelect
             {
                 if (player.ChampionId != 0)
                 {
-                    Info.RedTeam.Picks[index].BackgroundImage = _cdragon.GetChampionSplash(player.ChampionId);
+                    Info.RedTeam.Picks[index].ChampionImage = _cdragon.GetChampionSplash(player.ChampionId);
                     Info.RedTeam.Picks[index].IsPicking = false;
                 }
             }
@@ -112,13 +117,13 @@ namespace OSL_Overlay.Phase.ChampSelect
                     {
                         if (action.IsAllyAction)
                         {
-                            Info.BlueTeam.Picks[(int)action.ActorCellId].BackgroundImage = _cdragon.GetChampionSplash(action.ChampionId);
+                            Info.BlueTeam.Picks[(int)action.ActorCellId].ChampionImage = _cdragon.GetChampionSplash(action.ChampionId);
                             Info.BlueTeam.Picks[(int)action.ActorCellId].IsPicking = true;
                             UpdateTimer("blue", 25);
                         }
                         else if (!action.IsAllyAction)
                         {
-                            Info.RedTeam.Picks[(int)action.ActorCellId - 5].BackgroundImage = _cdragon.GetChampionSplash(action.ChampionId);
+                            Info.RedTeam.Picks[(int)action.ActorCellId - 5].ChampionImage = _cdragon.GetChampionSplash(action.ChampionId);
                             Info.RedTeam.Picks[(int)action.ActorCellId - 5].IsPicking = true;
                             UpdateTimer("red", 25);
                         }
@@ -131,13 +136,13 @@ namespace OSL_Overlay.Phase.ChampSelect
         {
             foreach (var (ban, index) in session.Bans.MyTeamBans.Select((value, idx) => (value, idx)))
             {
-                Info.BlueTeam.Bans[index].BackgroundImage = _cdragon.GetChampionSquare(ban);
+                Info.BlueTeam.Bans[index].ChampionImage = _cdragon.GetChampionSquare(ban);
                 Info.BlueTeam.Bans[index].IsCompleted = true;
                 Info.BlueTeam.Bans[index].IsBanning = false;
             }
             foreach (var (ban, index) in session.Bans.TheirTeamBans.Select((value, idx) => (value, idx)))
             {
-                Info.RedTeam.Bans[index].BackgroundImage = _cdragon.GetChampionSquare(ban);
+                Info.RedTeam.Bans[index].ChampionImage = _cdragon.GetChampionSquare(ban);
                 Info.RedTeam.Bans[index].IsCompleted = true;
                 Info.RedTeam.Bans[index].IsBanning = false;
             }
@@ -153,13 +158,13 @@ namespace OSL_Overlay.Phase.ChampSelect
                     {
                         if (action.IsAllyAction)
                         {
-                            Info.BlueTeam.Bans[(int)action.ActorCellId].BackgroundImage = _cdragon.GetChampionSquare(action.ChampionId);
+                            Info.BlueTeam.Bans[(int)action.ActorCellId].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
                             Info.BlueTeam.Bans[(int)action.ActorCellId].IsBanning = true;
                             UpdateTimer("blue", 25);
                         }
                         else if (!action.IsAllyAction)
                         {
-                            Info.RedTeam.Bans[(int)action.ActorCellId - 5].BackgroundImage = _cdragon.GetChampionSquare(action.ChampionId);
+                            Info.RedTeam.Bans[(int)action.ActorCellId - 5].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
                             Info.RedTeam.Bans[(int)action.ActorCellId - 5].IsBanning = true;
                             UpdateTimer("red", 25);
                         }
@@ -230,6 +235,110 @@ namespace OSL_Overlay.Phase.ChampSelect
             if (_session != null)
                 ManageSession(_session);
             NotifyStateChanged();
+        }
+
+        public void UpdateInfoTeam(TeamInfo info, string side)
+        {
+            if (side == "blue-side")
+            {
+                Info.BlueTeam.Name.Txt = info.Name;
+                Info.BlueTeam.Tag.Txt = info.Tag;
+                Info.BlueTeam.Coach.Name.Txt = info.Coach;
+                Info.BlueTeam.Logo = info.Logo;
+                if (Info.BlueTeam.Picks.Count > 0)
+                {
+                    Info.BlueTeam.Picks[0].Name.Txt = info.Top.Name;
+                    Info.BlueTeam.Picks[0].PlayerImage = info.Top.Image;
+                }
+                if (Info.BlueTeam.Picks.Count > 1)
+                {
+                    Info.BlueTeam.Picks[1].Name.Txt = info.Jungle.Name;
+                    Info.BlueTeam.Picks[1].PlayerImage = info.Jungle.Image;
+                }
+                if (Info.BlueTeam.Picks.Count > 2)
+                {
+                    Info.BlueTeam.Picks[2].Name.Txt = info.Mid.Name;
+                    Info.BlueTeam.Picks[2].PlayerImage = info.Mid.Image;
+                }
+                if (Info.BlueTeam.Picks.Count > 3)
+                {
+                    Info.BlueTeam.Picks[3].Name.Txt = info.Adc.Name;
+                    Info.BlueTeam.Picks[3].PlayerImage = info.Adc.Image;
+                }
+                if (Info.BlueTeam.Picks.Count > 4)
+                {
+                    Info.BlueTeam.Picks[4].Name.Txt = info.Supp.Name;
+                    Info.BlueTeam.Picks[4].PlayerImage = info.Supp.Image;
+                }
+            }
+            else if (side == "red-side")
+            {
+                Info.RedTeam.Name.Txt = info.Name;
+                Info.RedTeam.Tag.Txt = info.Tag;
+                Info.RedTeam.Coach.Name.Txt = info.Coach;
+                Info.RedTeam.Logo = info.Logo;
+                if (Info.RedTeam.Picks.Count > 0)
+                {
+                    Info.RedTeam.Picks[0].Name.Txt = info.Top.Name;
+                    Info.RedTeam.Picks[0].PlayerImage = info.Top.Image;
+                }
+                if (Info.RedTeam.Picks.Count > 1)
+                {
+                    Info.RedTeam.Picks[1].Name.Txt = info.Jungle.Name;
+                    Info.RedTeam.Picks[1].PlayerImage = info.Jungle.Image;
+                }
+                if (Info.RedTeam.Picks.Count > 2)
+                {
+                    Info.RedTeam.Picks[2].Name.Txt = info.Mid.Name;
+                    Info.RedTeam.Picks[2].PlayerImage = info.Mid.Image;
+                }
+                if (Info.RedTeam.Picks.Count > 3)
+                {
+                    Info.RedTeam.Picks[3].Name.Txt = info.Adc.Name;
+                    Info.RedTeam.Picks[3].PlayerImage = info.Adc.Image;
+                }
+                if (Info.RedTeam.Picks.Count > 4)
+                {
+                    Info.RedTeam.Picks[4].Name.Txt = info.Supp.Name;
+                    Info.RedTeam.Picks[4].PlayerImage = info.Supp.Image;
+                }
+            }
+            NotifyStateChanged();
+        }
+
+        public void UpdateInfoBo(BoInfo bo, string side)
+        {
+            if (side == "blue-side")
+            {
+                Info.BlueTeam.BoGraphic.NbMatchForWin = bo.NbGames;
+                Info.BlueTeam.BoGraphic.NbWin = bo.Win;
+                Info.BlueTeam.BoGraphic.Win.Txt = bo.Text;
+            }
+            if (side == "red-side")
+            {
+                Info.RedTeam.BoGraphic.NbMatchForWin = bo.NbGames;
+                Info.RedTeam.BoGraphic.NbWin = bo.Win;
+                Info.RedTeam.BoGraphic.Win.Txt = bo.Text;
+            }
+            NotifyStateChanged();
+        }
+
+        public void LoadStyle(string path)
+        {
+            // TODO: Load style
+            string json = OSL_Utils.File.Read(path);
+            var info = JsonConvert.DeserializeObject<ChampSelectInfo>(json);
+            if (info != null)
+            {
+                UpdateInfoCss(info);
+            }
+        }
+
+        public void SaveStyle(string path)
+        {
+            // TODO: Save style
+            string json = JsonConvert.SerializeObject(Info, Formatting.Indented);
+            OSL_Utils.File.Write(path, json);
         }
 
         public void CssChange()
