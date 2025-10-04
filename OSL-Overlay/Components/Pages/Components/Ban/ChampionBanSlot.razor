@@ -16,9 +16,9 @@
     @if (Ban.IsCompleted)
     {
         <div class="champion-grey" style="background:@Ban.Greyscale"></div>
-        <Image Class="champion-completed-image" ImageUrl="@Ban.CrossImage" />
-        <div class="champion-completed-line" style="color:@Ban.LineCustom; @Ban.BorderCompleted" />
-        <div class="champion-completed-cross" style="color:@Ban.CrossCustom; @Ban.BorderCompleted" />
+        <Image Class="champion-completed-image" ImageUrl="@Ban.Cross.Image" />
+        <div class="champion-completed-line" style="color:@Ban.Cross.GraphicLineColor; @Ban.BorderCompleted; --cross-line-width:@Ban.Cross.Width; --cross-line-height:@Ban.Cross.Height; --cross-line-rotate:@Ban.Cross.Rotate" />
+        <div class="champion-completed-cross" style="color:@Ban.Cross.GraphicCrossColor; @Ban.BorderCompleted; --cross-line-width:@Ban.Cross.Width; --cross-line-height:@Ban.Cross.Height; --cross-line-rotate:@Ban.Cross.Rotate" />
     }
 </div>
 

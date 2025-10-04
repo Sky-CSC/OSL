@@ -22,7 +22,7 @@
                   CurrentFile="@TeamState.BlueFile"
                   OnSave="TeamState.SaveBlue"
                   OnFileSelected="TeamState.FileSelectedBlue"
-                  ShowDuplicate=true
+                  HideDuplicate=true
                   FilePrefix="team" />
     <br />
     <StyleManager Label="Save config (default for red)"
@@ -30,7 +30,7 @@
                   CurrentFile="@TeamState.RedFile"
                   OnSave="TeamState.SaveRed"
                   OnFileSelected="TeamState.FileSelectedRed"
-                  ShowDuplicate=true
+                  HideDuplicate=true
                   FilePrefix="team" />
 </MudStack>
 <br />
@@ -51,21 +51,25 @@
             <StyleFieldEditor Label="Name"
                               Type="text"
                               Value="@TeamState.BlueInfo.Name"
-                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Name = val, v)" />
+                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Name = val, v)"
+                              BorderColor="#0B849E" />
             <StyleFieldEditor Label="Tag"
                               Type="text"
                               Value="@TeamState.BlueInfo.Tag"
-                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Tag = val, v)" />
+                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Tag = val, v)"
+                              BorderColor="#0B849E" />
             <StyleFieldEditor Label="Coach"
                               Type="text"
                               Value="@TeamState.BlueInfo.Coach"
-                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Coach = val, v)" />
+                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Coach = val, v)"
+                              BorderColor="#0B849E" />
         </MudStack>
         <MudStack Row="true">
             <StyleFieldEditor Label="Logo"
                               Type="import-image"
                               Value="@TeamState.BlueInfo.Logo"
-                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Logo = val, v)" />
+                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Logo = val, v)"
+                              BorderColor="#0B849E" />
             @if (TeamState.BlueInfo.Logo != "")
             {
                 <div style="width:100px; height:105px">
@@ -78,11 +82,13 @@
                 <StyleFieldEditor Label="Top name"
                                   Type="text"
                                   Value="@TeamState.BlueInfo.Top.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Top.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Top.Name = val, v)"
+                                  BorderColor="#0B849E" />
                 <StyleFieldEditor Label="Top image"
                                   Type="import-image"
                                   Value="@TeamState.BlueInfo.Top.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Top.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Top.Image = val, v)"
+                                  BorderColor="#0B849E" />
             </MudStack>
             @if (TeamState.BlueInfo.Top.Image != "")
             {
@@ -96,11 +102,13 @@
                 <StyleFieldEditor Label="Jungle name"
                                   Type="text"
                                   Value="@TeamState.BlueInfo.Jungle.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Jungle.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Jungle.Name = val, v)"
+                                  BorderColor="#0B849E" />
                 <StyleFieldEditor Label="Jungle image"
                                   Type="import-image"
                                   Value="@TeamState.BlueInfo.Jungle.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Jungle.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Jungle.Image = val, v)"
+                                  BorderColor="#0B849E" />
             </MudStack>
             @if (TeamState.BlueInfo.Jungle.Image != "")
             {
@@ -114,11 +122,13 @@
                 <StyleFieldEditor Label="Mid name"
                                   Type="text"
                                   Value="@TeamState.BlueInfo.Mid.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Mid.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Mid.Name = val, v)"
+                                  BorderColor="#0B849E" />
                 <StyleFieldEditor Label="Mid image"
                                   Type="import-image"
                                   Value="@TeamState.BlueInfo.Mid.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Mid.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Mid.Image = val, v)"
+                                  BorderColor="#0B849E" />
             </MudStack>
             @if (TeamState.BlueInfo.Mid.Image != "")
             {
@@ -132,11 +142,13 @@
                 <StyleFieldEditor Label="Adc name"
                                   Type="text"
                                   Value="@TeamState.BlueInfo.Adc.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Adc.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Adc.Name = val, v)"
+                                  BorderColor="#0B849E" />
                 <StyleFieldEditor Label="Adc image"
                                   Type="import-image"
                                   Value="@TeamState.BlueInfo.Adc.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Adc.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Adc.Image = val, v)"
+                                  BorderColor="#0B849E" />
             </MudStack>
             @if (TeamState.BlueInfo.Adc.Image != "")
             {
@@ -150,11 +162,13 @@
                 <StyleFieldEditor Label="Supp name"
                                   Type="text"
                                   Value="@TeamState.BlueInfo.Supp.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Supp.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Supp.Name = val, v)"
+                                  BorderColor="#0B849E" />
                 <StyleFieldEditor Label="Supp image"
                                   Type="import-image"
                                   Value="@TeamState.BlueInfo.Supp.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Supp.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Supp.Image = val, v)"
+                                  BorderColor="#0B849E" />
             </MudStack>
             @if (TeamState.BlueInfo.Supp.Image != "")
             {
@@ -171,21 +185,25 @@
             <StyleFieldEditor Label="Name"
                               Type="text"
                               Value="@TeamState.RedInfo.Name"
-                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Name = val, v)" />
+                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Name = val, v)"
+                              BorderColor="#BE1E37" />
             <StyleFieldEditor Label="Tag"
                               Type="text"
                               Value="@TeamState.RedInfo.Tag"
-                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Tag = val, v)" />
+                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Tag = val, v)"
+                              BorderColor="#BE1E37" />
             <StyleFieldEditor Label="Coach"
                               Type="text"
                               Value="@TeamState.RedInfo.Coach"
-                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Coach = val, v)" />
+                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Coach = val, v)"
+                              BorderColor="#BE1E37" />
         </MudStack>
         <MudStack Row="true">
             <StyleFieldEditor Label="Logo"
                               Type="import-image"
                               Value="@TeamState.RedInfo.Logo"
-                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Logo = val, v)" />
+                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Logo = val, v)"
+                              BorderColor="#BE1E37" />
             @if (TeamState.RedInfo.Logo != "")
             {
                 <div style="width:100px; height:105px">
@@ -198,11 +216,13 @@
                 <StyleFieldEditor Label="Top name"
                                   Type="text"
                                   Value="@TeamState.RedInfo.Top.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Top.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Top.Name = val, v)"
+                                  BorderColor="#BE1E37" />
                 <StyleFieldEditor Label="Top image"
                                   Type="import-image"
                                   Value="@TeamState.RedInfo.Top.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Top.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Top.Image = val, v)"
+                                  BorderColor="#BE1E37" />
             </MudStack>
             @if (TeamState.RedInfo.Top.Image != "")
             {
@@ -216,11 +236,13 @@
                 <StyleFieldEditor Label="Jungle name"
                                   Type="text"
                                   Value="@TeamState.RedInfo.Jungle.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Jungle.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Jungle.Name = val, v)"
+                                  BorderColor="#BE1E37" />
                 <StyleFieldEditor Label="Jungle image"
                                   Type="import-image"
                                   Value="@TeamState.RedInfo.Jungle.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Jungle.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Jungle.Image = val, v)"
+                                  BorderColor="#BE1E37" />
             </MudStack>
             @if (TeamState.RedInfo.Jungle.Image != "")
             {
@@ -234,11 +256,13 @@
                 <StyleFieldEditor Label="Mid name"
                                   Type="text"
                                   Value="@TeamState.RedInfo.Mid.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Mid.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Mid.Name = val, v)"
+                                  BorderColor="#BE1E37" />
                 <StyleFieldEditor Label="Mid image"
                                   Type="import-image"
                                   Value="@TeamState.RedInfo.Mid.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Mid.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Mid.Image = val, v)"
+                                  BorderColor="#BE1E37" />
             </MudStack>
             @if (TeamState.RedInfo.Mid.Image != "")
             {
@@ -252,11 +276,13 @@
                 <StyleFieldEditor Label="Adc name"
                                   Type="text"
                                   Value="@TeamState.RedInfo.Adc.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Adc.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Adc.Name = val, v)"
+                                  BorderColor="#BE1E37" />
                 <StyleFieldEditor Label="Adc image"
                                   Type="import-image"
                                   Value="@TeamState.RedInfo.Adc.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Adc.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Adc.Image = val, v)"
+                                  BorderColor="#BE1E37" />
             </MudStack>
             @if (TeamState.RedInfo.Adc.Image != "")
             {
@@ -270,11 +296,13 @@
                 <StyleFieldEditor Label="Supp name"
                                   Type="text"
                                   Value="@TeamState.RedInfo.Supp.Name"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Supp.Name = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Supp.Name = val, v)"
+                                  BorderColor="#BE1E37" />
                 <StyleFieldEditor Label="Supp image"
                                   Type="import-image"
                                   Value="@TeamState.RedInfo.Supp.Image"
-                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Supp.Image = val, v)" />
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Supp.Image = val, v)"
+                                  BorderColor="#BE1E37" />
             </MudStack>
             @if (TeamState.RedInfo.Supp.Image != "")
             {

@@ -1,0 +1,301 @@
+@page "/fearless/"
+@using OSL_Overlay.Phase.Fearless
+@inject FearlessState FearlessState
+
+<PageTitle>Fearless</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Fearless</b></MudText>
+<br />
+
+@* ---------------- Choose file style to use ---------------- *@
+<StyleManager RelativePath="styles/fearless/view1"
+              CurrentFile="@_currentFile"
+              OnSave="HandleSave"
+              OnFileSelected="HandleFileSelected"
+              FilePrefix="fearless"/>
+
+<br />
+<MudStack Row="true">
+    <StyleFieldEditor Label="Match Id"
+                      Type="text"
+                      Value="@_idMatch"
+                      ValueChanged="v => OnStyleChanged(val => _idMatch = val, v)"
+                      HelperText="Just Id not region prefix" />
+
+    <StyleFieldEditor Label="Match index"
+                      Type="intxtoy"
+                      Value="@($"{(_index).ToString()}")"
+                      ValueChanged="v => OnStyleChanged(val => _index = val, v)"
+                      NumericMin="0"
+                      NumericMax="FearlessState.FearlessList.Count"
+                      HelperText="@($"Index of match start at 0, number of match set : {FearlessState.FearlessList.Count}")" />
+    <MudStack Row="false">
+        <SwitchButton Icon="@Icons.Material.Filled.AddBox"
+                      Text="@($"Set match {_index + 1}")"
+                      OnClick="AddMatchOne"
+                      BackgroundColor="@Colors.Teal.Darken4"
+                      HoverBackgroundColor="@Colors.Teal.Darken2"
+                      TextColor="#ffffff"
+                      MaxWidth="200px"
+                      MaxHeight="40px"
+                      BorderRadius="8px"
+                      FontSize="16px" />
+        <SwitchButton Icon="@Icons.Material.Filled.Delete"
+                      Text="@($"Delete match {_index + 1}")"
+                      OnClick="DeleteFearlessIndex"
+                      BackgroundColor="@Colors.Red.Darken4"
+                      HoverBackgroundColor="@Colors.Red.Darken2"
+                      TextColor="#ffffff"
+                      MaxWidth="230px"
+                      MaxHeight="40px"
+                      BorderRadius="8px"
+                      FontSize="16px" />
+        <SwitchButton Icon="@Icons.Material.Filled.SettingsBackupRestore"
+                      Text="Reset"
+                      OnClick="ResetFearlessList"
+                      BackgroundColor="@Colors.Red.Darken4"
+                      HoverBackgroundColor="@Colors.Red.Darken2"
+                      TextColor="#ffffff"
+                      MaxWidth="150px"
+                      MaxHeight="40px"
+                      BorderRadius="8px"
+                      FontSize="16px" />
+    </MudStack>
+</MudStack>
+
+<br />
+<MudText Id="link" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Fearless link list</MudText>
+
+<MudStack Row="true">
+    @for (int i = 0; i < FearlessState.FearlessList.Count; i++)
+    {
+        int index = i;
+        <MudStack Row="false">
+            @for (int j = 0; j < FearlessState.FearlessList[index].Count; j++)
+            {
+                int match = index + 1;
+                string side = "";
+                string background = "";
+                string hover = "";
+                string color = "";
+                if (j == 0)
+                {
+                    side = "blue";
+                    background = Colors.BlueGray.Darken4;
+                    hover = Colors.BlueGray.Darken2;
+                    color = Colors.Blue.Default;
+
+                }
+                else if (j == 1)
+                {
+                    side = "red";
+                    background = Colors.BlueGray.Darken4;
+                    hover = Colors.BlueGray.Darken2;
+                    color = Colors.Red.Default;
+                }
+                <SwitchButton Text="@($"Match {match} {side}")"
+                              Icon="@Icons.Material.Filled.InsertLink"
+                              BackgroundColor="@background"
+                              HoverBackgroundColor="@hover"
+                              TextColor="@color"
+                              FontSize="15px"
+                              MaxHeight="40px"
+                              MaxWidth="200px"
+                              Href="@($"/fearless/list/{index}/{j}")"
+                              Target="_blank" />
+            }
+        </MudStack>
+    }
+</MudStack>
+
+<br />
+<MudText Id="custom" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Fearless customize</MudText>
+
+@for (int i = 0; i < FearlessState.FearlessList.Count; i++)
+{
+    int indexi = i;
+    @for (int j = 0; j < FearlessState.FearlessList[i].Count; j++)
+    {
+        int match = i + 1;
+        int indexj = j;
+        string side = "";
+        string borderColor = "";
+        string background = "";
+        string hover = "";
+        string color = "";
+        if (j == 0)
+        {
+            side = "blue";
+            background = Colors.BlueGray.Darken4;
+            hover = Colors.BlueGray.Darken2;
+            color = Colors.Blue.Default;
+            borderColor = "#0B849E";
+
+        }
+        else if (j == 1)
+        {
+            side = "red";
+            background = Colors.BlueGray.Darken4;
+            hover = Colors.BlueGray.Darken2;
+            color = Colors.Red.Default;
+            borderColor = "#BE1E37";
+        }
+        <SwitchButton Text="@($"Match {match} {side}")"
+                      Icon="@Icons.Material.Filled.InsertLink"
+                      BackgroundColor="@background"
+                      HoverBackgroundColor="@hover"
+                      TextColor="@color"
+                      FontSize="15px"
+                      MaxHeight="40px"
+                      MaxWidth="320px"
+                      Href="@($"/fearless/list/{i}/{j}")"
+                      Target="_blank" />
+        <MudStack Row="true">
+            <StyleFieldEditor Label="Text"
+                              Type="text"
+                              Value="@FearlessList[indexi][indexj].Text.Txt"
+                              ValueChanged="v => OnStyleChanged(val => FearlessList[indexi][indexj].Text.Txt = val, v)"
+                              BorderColor="@borderColor" />
+            <StyleFieldEditor Label="Text font"
+                              Type="font"
+                              Value="@FearlessList[indexi][indexj].Text.Font"
+                              ValueChanged="v => OnStyleChanged(val => FearlessList[indexi][indexj].Text.Font = val, v)"
+                              BorderColor="@borderColor" />
+            <StyleFieldEditor Label="Text align"
+                              Type="text-align"
+                              Value="@FearlessList[indexi][indexj].Text.Align"
+                              ValueChanged="v => OnStyleChanged(val => FearlessList[indexi][indexj].Text.Align = val, v)"
+                              BorderColor="@borderColor" />
+            <StyleFieldEditor Label="Text color"
+                              Type="color"
+                              Value="@FearlessList[indexi][indexj].Text.Color"
+                              ValueChanged="v => OnStyleChanged(val => FearlessList[indexi][indexj].Text.Color = val, v)"
+                              BorderColor="@borderColor" />
+            <StyleFieldEditor Label="Line color"
+                              Type="background"
+                              Value="@FearlessList[indexi][indexj].Line.Background"
+                              ValueChanged="v => OnStyleChanged(val => FearlessList[indexi][indexj].Line.Background = val, v)"
+                              BorderColor="@borderColor" />
+        </MudStack>
+
+        @foreach (var champion in FearlessState.FearlessList[indexi][indexj].Champions)
+        {
+            <MudStack Row="true">
+                <StyleFieldEditor Label="Grey scale color"
+                                  Type="background"
+                                  Value="@champion.Greyscale"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Greyscale = val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Cross color"
+                                  Type="color"
+                                  Value="@champion.Cross.GraphicLineColor"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.GraphicLineColor= val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Double cross color"
+                                  Type="color"
+                                  Value="@champion.Cross.GraphicCrossColor"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.GraphicCrossColor= val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Cross width"
+                                  Type="text"
+                                  Value="@champion.Cross.Width"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.Width = val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Cross height"
+                                  Type="text"
+                                  Value="@champion.Cross.Height"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.Height = val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Cross height"
+                                  Type="text"
+                                  Value="@champion.Cross.Rotate"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.Rotate = val, v)"
+                                  BorderColor="@borderColor" />
+            </MudStack>
+        }
+
+        <br />
+    }
+}
+
+@code {
+    private List<List<FearlessInfo>> FearlessList => FearlessState.FearlessList;
+    private int _index = 0;
+    private string _idMatch = "7550999924";
+    private string? _currentFile;
+
+    public async Task AddMatchOne()
+    {
+        await FearlessState.MatchIdModeAsync(Convert.ToInt64(_idMatch), _index);
+    }
+
+    public void DeleteFearlessIndex()
+    {
+        FearlessState.DeleteFearlessIndex(_index);
+    }
+
+    public void ResetFearlessList()
+    {
+        _index = 0;
+        FearlessState.ResetFearlessList();
+    }
+
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+        RefreshUI();
+    }
+    private void OnStyleChanged(Action<int> setter, string newValue)
+    {
+        setter(Convert.ToInt32(newValue));
+        RefreshUI();
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+        FearlessState.NotifyStateChanged();
+    }
+
+    protected override void OnInitialized()
+    {
+        FearlessState.OnChange += async () => await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        FearlessState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Save file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleSave(string filePath)
+    {
+        // Sauvegarde dans un NOUVEAU fichier
+        FearlessState.SaveStyle(filePath);
+        _currentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Select file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleFileSelected(string filePath)
+    {
+        // Chargement du style existant
+        FearlessState.LoadStyle(filePath);
+        _currentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
+}

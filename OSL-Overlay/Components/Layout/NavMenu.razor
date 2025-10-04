@@ -1,7 +1,6 @@
 
 <MudNavMenu>
     <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
-    <MudNavLink Href="ws-test" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Web socket test</MudNavLink>
     <MudNavGroup Title="Teams" Icon="@Icons.Material.Filled.Diversity3" Expanded="false">
         <MudNavLink Href="team" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Teams Config</MudNavLink>
         <MudNavLink Href="team#blue-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Blue Team</MudNavLink>
@@ -11,6 +10,11 @@
         <MudNavLink Href="bo" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Bo Config</MudNavLink>
         <MudNavLink Href="bo#blue-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Blue Team</MudNavLink>
         <MudNavLink Href="bo#red-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Red Team</MudNavLink>
+    </MudNavGroup>
+    <MudNavGroup Title="Fearless" Icon="@Icons.Material.Filled.BrowserNotSupported" Expanded="false">
+        <MudNavLink Href="fearless" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Fearless Config</MudNavLink>
+        <MudNavLink Href="fearless#link" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Links</MudNavLink>
+        <MudNavLink Href="fearless#custom" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Customize</MudNavLink>
     </MudNavGroup>
     <MudNavGroup Title="Champ Select" Icon="@Icons.Material.Filled.FactCheck" Expanded="false">
         <MudNavGroup Title="View1" Icon="@Icons.Material.Filled.Preview" Expanded="true">
@@ -29,9 +33,11 @@
                 <MudNavLink Href="champselect/view1/custom#coach" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Coach</MudNavLink>
                 <MudNavLink Href="champselect/view1/custom#ban" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Bans</MudNavLink>
                 <MudNavLink Href="champselect/view1/custom#teams" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Teams</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#bo" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Bo</MudNavLink>
                 <MudNavLink Href="champselect/view1/custom#phase" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Phase</MudNavLink>
                 <MudNavLink Href="champselect/view1/custom#vs" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Vs</MudNavLink>
             </MudNavGroup>
         </MudNavGroup>
     </MudNavGroup>
+    <MudNavLink Href="ws-test" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Web socket test</MudNavLink>
 </MudNavMenu>

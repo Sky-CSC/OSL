@@ -23,7 +23,6 @@
         <RowTemplate>
             <MudTr Style="@GetRowBackgroundStyle(context)">
                 <MudTd Style="@GetRowColorStyle(context)" DataLabel="Name">@context</MudTd>
-
                 <MudTd>
                     @* Text for rename file *@
                     <MudTextField T="string"
@@ -36,13 +35,13 @@
                         <MudIconButton Icon="@Icons.Material.Filled.Edit"
                                        Style="@($"color:{Colors.Orange.Default};")"
                                        OnClick="@(() => RenameFile(context))"
-                                       Disabled="ShowRename" />
+                                       Disabled="IsDefaultFile(HideRename, context)" />
 
                         @* Button for delete file *@
                         <MudIconButton Icon="@Icons.Material.Filled.Delete"
                                        Style="@($"color:{Colors.Red.Darken4};")"
                                        OnClick="@(() => ConfirmDelete(context))"
-                                       Disabled="ShowDelete" />
+                                       Disabled="IsDefaultFile(HideDelete, context)" />
 
                         @* Button for select file *@
                         <SwitchButton Text="@(IsSelected(context) ? "Selected" : "Select")"
@@ -55,7 +54,7 @@
                                       FontSize="15px"
                                       MaxHeight="40px"
                                       MaxWidth="120px"
-                                      Disabled="ShowSelect" />
+                                      Disabled="HideSelect" />
 
                         @* Button for duplicate file *@
                         <SwitchButton Text="Duplicate"
@@ -68,7 +67,7 @@
                                       FontSize="15px"
                                       MaxHeight="40px"
                                       MaxWidth="130px"
-                                      Disabled="ShowDuplicate" />
+                                      Disabled="HideDuplicate" />
 
                         @* Button for save changes on file *@
                         <SwitchButton Text="Save Changes"
@@ -81,7 +80,7 @@
                                       FontSize="15px"
                                       MaxHeight="40px"
                                       MaxWidth="210px"
-                                      Disabled="ShowSave" />
+                                      Disabled="IsDefaultFile(HideSave, context)" />
                     </MudStack>
                 </MudTd>
             </MudTr>

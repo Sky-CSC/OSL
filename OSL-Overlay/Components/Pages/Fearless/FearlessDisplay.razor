@@ -1,0 +1,58 @@
+@page "/fearless/list/{outerIndex:int}/{innerIndex:int}"
+@using OSL_Overlay.Phase.Fearless
+@layout Layout.EmptyLayout
+@inject NavigationManager Nav
+@inject FearlessState FearlessState
+
+@if (currentFearless is not null)
+{
+    <FearlessBan Fearless="currentFearless" />
+}
+else
+{
+    <p>No Fearless for {outerIndex}/{innerIndex}.</p>
+}
+
+
+@code {
+    [Parameter] public int outerIndex { get; set; }
+    [Parameter] public int innerIndex { get; set; }
+
+    private FearlessInfo? currentFearless;
+
+    protected override void OnParametersSet()
+    {
+        LoadFearless();
+    }
+
+    private void LoadFearless()
+    {
+        if (outerIndex >= 0 && outerIndex < FearlessState.FearlessList.Count)
+        {
+            var subList = FearlessState.FearlessList[outerIndex];
+            if (innerIndex >= 0 && innerIndex < subList.Count)
+            {
+                currentFearless = subList[innerIndex];
+                return;
+            }
+        }
+        currentFearless = null;
+    }
+
+    protected override void OnInitialized()
+    {
+        FearlessState.OnChange += StateHasChangedSafe;
+    }
+
+    public void Dispose()
+    {
+        FearlessState.OnChange -= StateHasChangedSafe;
+    }
+
+    private void StateHasChangedSafe()
+    {
+        // recharge la donnée puis rafraîchit l’UI
+        LoadFearless();
+        InvokeAsync(StateHasChanged);
+    }
+}

@@ -5,7 +5,7 @@
 @using OSL_Utils
 
 @* ---------------- Style field editor component ---------------- *@
-<MudPaper Class="pa-2 ma-1" Elevation="3">
+<MudPaper Class="pa-2 ma-1" Elevation="3" Style="@($"border: 5px solid {BorderColor}")">
     <MudText Typo="Typo.subtitle2">@Label</MudText>
 
     @* ---------------- Font ---------------- *@
@@ -39,6 +39,20 @@
         </MudSelect>
 
     }
+    @* ---------------- Text Align ---------------- *@
+    @if (Type == "text-align")
+    {
+        <MudSelect T="string"
+                   Value="Value"
+                   ValueChanged="OnTextAlignDirectionChanged"
+                   Variant="Variant.Filled">
+            @foreach (var direction in AvailableTextAlignDirection)
+            {
+                <MudSelectItem Value="@direction">@direction</MudSelectItem>
+            }
+        </MudSelect>
+
+    }
 
     @* ---------------- Color ---------------- *@
     else if (Type == "color")
@@ -58,6 +72,73 @@
                       HelperText="@HelperText" />
     }
 
+    @* ---------------- Text / Slider ---------------- *@
+    else if (Type == "slider")
+    {
+        if (Value?.Contains("px") == true || Value?.Contains("%") == true || Value?.Contains("deg") == true)
+        {
+
+            var unit = Value.EndsWith("px") ? "px"
+            : Value.EndsWith("%") ? "%"
+            : "deg";
+
+            double parsedValue = 0;
+            double.TryParse(Value.Replace(unit, ""), out parsedValue);
+
+            // Bornes dynamiques selon le type d’unité
+            double min = unit switch
+            {
+                "%" => 0,
+                "deg" => -360,
+                "px" => 0,
+                _ => 0
+            };
+
+            double max = unit switch
+            {
+                "%" => 500,
+                "deg" => 360,
+                "px" => 1000,
+                _ => 100
+            };
+
+            double step = unit switch
+            {
+                "deg" => 0.1,
+                _ => 0.5
+            };
+
+
+            <div style="display:flex; align-items:center; gap:12px;">
+                <MudSlider T="double"
+                           Value="@parsedValue"
+                           Min="@min"
+                           Max="@max"
+                           Step="@step"
+                           Color="Color.Primary"
+                           Style="width:200px;"
+                           ValueChanged="v => OnSliderChanged(v, unit)" />
+
+                <MudNumericField T="double"
+                                 Value="@parsedValue"
+                                 Immediate="true"
+                                 Variant="Variant.Outlined"
+                                 Style="width:80px;"
+                                 ValueChanged="v => OnSliderChanged(v, unit)" />
+
+                <span>@unit</span>
+            </div>
+        }
+        else
+        {
+            <MudTextField T="string"
+                          Value="@Value"
+                          ValueChanged="OnTextChanged"
+                          Variant="Variant.Outlined"
+                          HelperText="@HelperText" />
+        }
+    }
+
     @* ---------------- Integer (0-5) ---------------- *@
     else if (Type == "int0to5")
     {
@@ -66,6 +147,16 @@
                          ValueChanged="OnIntChanged"
                          Min="0"
                          Max="5"
+                         Variant="Variant.Outlined"
+                         HelperText="@HelperText" />
+    }
+    else if (Type == "intxtoy")
+    {
+        <MudNumericField T="int"
+                         Value="@Convert.ToInt32(Value)"
+                         ValueChanged="OnIntChanged"
+                         Min="@NumericMin"
+                         Max="@NumericMax"
                          Variant="Variant.Outlined"
                          HelperText="@HelperText" />
     }
@@ -88,6 +179,7 @@
                    ValueChanged="OnImageSelected"
                    Variant="Variant.Filled"
                    Style="min-width:200px;">
+            <MudSelectItem Value="@string.Empty">None</MudSelectItem>
             @foreach (var img in LoadDirectoryImage(DirectoryPath))
             {
                 <MudSelectItem Value="@img.Path">

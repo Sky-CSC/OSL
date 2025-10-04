@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
+using MudBlazor;
 using MudBlazor.Utilities;
 using OSL_Utils;
 using System.Text.RegularExpressions;
@@ -18,6 +19,9 @@ namespace OSL_Overlay.Components.Pages.Style
         [Parameter] public string Type { get; set; } = "color";
         [Parameter] public string DirectoryPath { get; set; } = string.Empty;
         [Parameter] public string HelperText { get; set; } = string.Empty;
+        [Parameter] public string BorderColor { get; set; } = "#010A13";
+        [Parameter] public int NumericMin { get; set; } = 0;
+        [Parameter] public int NumericMax { get; set; } = 5;
 
         private readonly string[] AvailableFonts =
         [
@@ -34,6 +38,18 @@ namespace OSL_Overlay.Components.Pages.Style
             "left-to-right",
             "center",
             "center-outside",
+        ];
+
+        private readonly string[] AvailableTextAlignDirection =
+        [
+             "left",
+         "right",
+ "center",
+ "justify",
+ "justify-all",
+ "start",
+ "end",
+ "match-parent",
         ];
 
         // Regex cache (compiled for perf)
@@ -215,6 +231,18 @@ namespace OSL_Overlay.Components.Pages.Style
             await ValueChanged.InvokeAsync(Value);
         }
 
+        // ------------------- Text Align -------------------
+        /// <summary>
+        /// When font change
+        /// </summary>
+        /// <param name="font"></param>
+        /// <returns></returns>
+        private async Task OnTextAlignDirectionChanged(string direction)
+        {
+            Value = direction;
+            await ValueChanged.InvokeAsync(Value);
+        }
+
         // ------------------- COLOR -------------------
         /// <summary>
         /// When color change
@@ -238,6 +266,19 @@ namespace OSL_Overlay.Components.Pages.Style
             Value = newValue;
             await ValueChanged.InvokeAsync(Value);
         }
+
+        // ------------------- SLIDER -------------------
+        /// <summary>
+        /// When slide change
+        /// </summary>
+        /// <param name="c"></param>
+        /// <returns></returns>
+        private async Task OnSliderChanged(double newValue, string unit)
+        {
+            var formatted = $"{newValue}{unit}";
+            await OnTextChanged(formatted);
+        }
+
 
         // ------------------- Integer (0-5) -------------------
         /// <summary>
@@ -298,7 +339,7 @@ namespace OSL_Overlay.Components.Pages.Style
             //imageInfos. = System.IO.Directory.GetFiles(path);
         }
 
-        private async Task OnImageSelected(string img)
+        private async Task OnImageSelected(string? img)
         {
             _selectedImage = img;
             // ici tu peux mettre à jour ton background

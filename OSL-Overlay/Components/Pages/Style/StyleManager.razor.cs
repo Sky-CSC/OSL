@@ -27,11 +27,11 @@ namespace OSL_Overlay.Components.Pages.Style
         /// </summary>
         [Parameter] public EventCallback<string> OnFileSelected { get; set; }
         [Parameter] public string FilePrefix { get; set; } = "style";
-        [Parameter] public bool ShowRename { get; set; } = false;
-        [Parameter] public bool ShowDelete { get; set; } = false;
-        [Parameter] public bool ShowSelect { get; set; } = false;
-        [Parameter] public bool ShowDuplicate { get; set; } = false;
-        [Parameter] public bool ShowSave { get; set; } = false;
+        [Parameter] public bool HideRename { get; set; } = false;
+        [Parameter] public bool HideDelete { get; set; } = false;
+        [Parameter] public bool HideSelect { get; set; } = false;
+        [Parameter] public bool HideDuplicate { get; set; } = false;
+        [Parameter] public bool HideSave { get; set; } = false;
 
         private List<string> _files = new();
         private Dictionary<string, string> _fileRenameMap = new();
@@ -49,7 +49,7 @@ namespace OSL_Overlay.Components.Pages.Style
             if (Directory.Exists(FullPath))
             {
                 _files = Directory.GetFiles(FullPath)
-                                  .OrderByDescending(f => File.GetLastWriteTime(f)) // most recent in first
+                                  .OrderByDescending(f => File.GetLastWriteTime(f))
                                   .Select(Path.GetFileName)
                                   .Where(f => f != null)
                                   .ToList()!;
@@ -58,8 +58,12 @@ namespace OSL_Overlay.Components.Pages.Style
 
                 if (_files.Count > 0 && string.IsNullOrEmpty(CurrentFile))
                 {
-                    var lastFile = _files[0];
-                    CurrentFile = OSL_Utils.Path.Combine(FullPath, lastFile);
+                    var defaultFile = _files.FirstOrDefault(f =>
+                        string.Equals(f, "default.json", StringComparison.OrdinalIgnoreCase));
+
+                    string selectedFile = defaultFile ?? _files[0]; // sinon le plus récent
+
+                    CurrentFile = OSL_Utils.Path.Combine(FullPath, selectedFile);
 
                     _ = OnFileSelected.InvokeAsync(CurrentFile);
                 }
@@ -230,6 +234,15 @@ namespace OSL_Overlay.Components.Pages.Style
 
             File.Copy(sourcePath, destPath);
             LoadFiles();
+        }
+
+        private bool IsDefaultFile(bool hide, string fileName)
+        {
+            if (hide || fileName == "default.json")
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
