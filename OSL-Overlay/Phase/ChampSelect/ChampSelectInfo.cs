@@ -1,3 +1,6 @@
+using OSL_Overlay.Phase.Bo;
+using OSL_Overlay.Phase.Common;
+
 namespace OSL_Overlay.Phase.ChampSelect
 {
     public class ChampSelectInfo
@@ -97,9 +100,10 @@ namespace OSL_Overlay.Phase.ChampSelect
         public bool IsCompleted { get; set; }
         public string Greyscale { get; set; }
         public string BorderCompleted{ get; set; }
-        public string CrossImage { get; set; }
-        public string LineCustom { get; set; }
-        public string CrossCustom { get; set; }
+        public Cross Cross { get; set; }
+        //public string CrossImage { get; set; }
+        //public string LineCustom { get; set; }
+        //public string CrossCustom { get; set; }
         public Ban()
         {
             BanImage = string.Empty;
@@ -111,9 +115,10 @@ namespace OSL_Overlay.Phase.ChampSelect
             IsCompleted = false;
             BorderCompleted = string.Empty;
             Greyscale = string.Empty;
-            CrossImage = string.Empty;
-            LineCustom = string.Empty;
-            CrossCustom = string.Empty;
+            Cross = new();
+            //CrossImage = string.Empty;
+            //LineCustom = string.Empty;
+            //CrossCustom = string.Empty;
         }
     }
 
@@ -200,69 +205,10 @@ namespace OSL_Overlay.Phase.ChampSelect
         }
     }
 
-    public class Text
-    {
-        public string Txt { get; set; }
-        public string Font { get; set; }
-        public string Color { get; set; }
-        public string Background { get; set; }
-        public string Border { get; set; }
-
-        public Text(string text, string font, string color)
-        {
-            Txt = text;
-            Font = font;
-            Color = color;
-            Background = string.Empty;
-            Border = string.Empty;
-        }
-
-        public Text(string text, string font, string color, string background, string border)
-        {
-            Txt = text;
-            Font = font;
-            Color = color;
-            Background = background;
-            Border = border;
-        }
-        public Text(string background, string border)
-        {
-            Txt = string.Empty;
-            Font = string.Empty;
-            Color = string.Empty;
-            Background = background;
-            Border = border;
-        }
-        public Text()
-        {
-            Txt = string.Empty;
-            Font = string.Empty;
-            Color = string.Empty;
-            Background = string.Empty;
-            Border = string.Empty;
-        }
-    }
-
-    public class BoGraphic
-    {
-        public bool Show { get; set; }
-        public int NbMatchForWin { get; set; }
-        public int NbWin { get; set; }
-        public Text Win { get; set; }
-        public Text Undef { get; set; }
-        public BoGraphic()
-        {
-            Show = false;
-            NbMatchForWin = 0;
-            NbWin = 0;
-            Win = new();
-            Undef = new();
-        }
-    }
-
     public class Display
     {
         public bool Show { get; set; }
         public string Info { get; set; }
     }
+
 }

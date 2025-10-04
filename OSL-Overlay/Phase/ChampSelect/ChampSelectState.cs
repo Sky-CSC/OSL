@@ -1,9 +1,11 @@
+using MudBlazor.Charts;
 using Newtonsoft.Json;
 using OSL_CDragon;
 using OSL_CDragon.Schema;
 using OSL_Lcu.Schema.Lcu;
 using OSL_Overlay.Phase.Bo;
 using OSL_Overlay.Phase.Team;
+using System;
 
 namespace OSL_Overlay.Phase.ChampSelect
 {
@@ -90,20 +92,14 @@ namespace OSL_Overlay.Phase.ChampSelect
         {
             foreach (var (player, index) in session.MyTeam.Select((value, idx) => (value, idx)))
             {
-                if (player.ChampionId != 0)
-                {
-                    Info.BlueTeam.Picks[index].ChampionImage = _cdragon.GetChampionSplash(player.ChampionId);
-                    Info.BlueTeam.Picks[index].IsPicking = false;
-                }
+                Info.BlueTeam.Picks[index].ChampionImage = _cdragon.GetChampionSplash(player.ChampionId);
+                Info.BlueTeam.Picks[index].IsPicking = false;
             }
 
             foreach (var (player, index) in session.TheirTeam.Select((value, idx) => (value, idx)))
             {
-                if (player.ChampionId != 0)
-                {
-                    Info.RedTeam.Picks[index].ChampionImage = _cdragon.GetChampionSplash(player.ChampionId);
-                    Info.RedTeam.Picks[index].IsPicking = false;
-                }
+                Info.RedTeam.Picks[index].ChampionImage = _cdragon.GetChampionSplash(player.ChampionId);
+                Info.RedTeam.Picks[index].IsPicking = false;
             }
         }
 
@@ -134,17 +130,33 @@ namespace OSL_Overlay.Phase.ChampSelect
 
         private void UpdateChampionBans(ChampSelectSession session)
         {
+            int nbBlueBan = 0;
             foreach (var (ban, index) in session.Bans.MyTeamBans.Select((value, idx) => (value, idx)))
             {
                 Info.BlueTeam.Bans[index].ChampionImage = _cdragon.GetChampionSquare(ban);
                 Info.BlueTeam.Bans[index].IsCompleted = true;
                 Info.BlueTeam.Bans[index].IsBanning = false;
+                nbBlueBan++;
             }
+            for (int i = nbBlueBan; i < 5; i++)
+            {
+                Info.BlueTeam.Bans[i].ChampionImage = _cdragon.GetChampionSquare(0);
+                Info.BlueTeam.Bans[i].IsCompleted = false;
+                Info.BlueTeam.Bans[i].IsBanning = false;
+            }
+            int nbRedBan = 0;
             foreach (var (ban, index) in session.Bans.TheirTeamBans.Select((value, idx) => (value, idx)))
             {
                 Info.RedTeam.Bans[index].ChampionImage = _cdragon.GetChampionSquare(ban);
                 Info.RedTeam.Bans[index].IsCompleted = true;
                 Info.RedTeam.Bans[index].IsBanning = false;
+                nbRedBan++;
+            }
+            for (int i = nbRedBan; i < 5; i++)
+            {
+                Info.RedTeam.Bans[i].ChampionImage = _cdragon.GetChampionSquare(0);
+                Info.RedTeam.Bans[i].IsCompleted = false;
+                Info.RedTeam.Bans[i].IsBanning = false;
             }
         }
 
@@ -154,24 +166,63 @@ namespace OSL_Overlay.Phase.ChampSelect
             {
                 foreach (var action in contain)
                 {
-                    if (action.Type == "ban" && action.IsInProgress)
+                    if (action.Type == "ban")
                     {
-                        if (action.IsAllyAction)
+                        if (action.IsInProgress)
                         {
-                            Info.BlueTeam.Bans[(int)action.ActorCellId].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
-                            Info.BlueTeam.Bans[(int)action.ActorCellId].IsBanning = true;
-                            UpdateTimer("blue", 25);
+
+                            if (action.IsAllyAction) // 1 3 5 8 10
+                            {
+                                Info.BlueTeam.Bans[BluePickTurn.GetValueOrDefault(action.PickTurn)].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
+                                Info.BlueTeam.Bans[BluePickTurn.GetValueOrDefault(action.PickTurn)].IsBanning = true;
+                                UpdateTimer("blue", 25);
+                            }
+                            else // 2 4 6 7 9
+                            {
+                                Info.RedTeam.Bans[RedPickTurn.GetValueOrDefault(action.PickTurn)].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
+                                Info.RedTeam.Bans[RedPickTurn.GetValueOrDefault(action.PickTurn)].IsBanning = true;
+                                UpdateTimer("red", 25);
+                            }
                         }
-                        else if (!action.IsAllyAction)
+                        else if (action.Completed)
                         {
-                            Info.RedTeam.Bans[(int)action.ActorCellId - 5].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
-                            Info.RedTeam.Bans[(int)action.ActorCellId - 5].IsBanning = true;
-                            UpdateTimer("red", 25);
+                            if (action.IsAllyAction)
+                            {
+                                Info.BlueTeam.Bans[BluePickTurn.GetValueOrDefault(action.PickTurn)].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
+                                Info.BlueTeam.Bans[BluePickTurn.GetValueOrDefault(action.PickTurn)].IsCompleted = true;
+                                Info.BlueTeam.Bans[BluePickTurn.GetValueOrDefault(action.PickTurn)].IsBanning = false;
+                            }
+                            else
+                            {
+                                Info.RedTeam.Bans[RedPickTurn.GetValueOrDefault(action.PickTurn)].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
+                                Info.RedTeam.Bans[RedPickTurn.GetValueOrDefault(action.PickTurn)].IsCompleted = true;
+                                Info.RedTeam.Bans[RedPickTurn.GetValueOrDefault(action.PickTurn)].IsBanning = false;
+                            }
                         }
                     }
                 }
             }
         }
+
+        // Mapping des tours de ban vers l’index pour chaque équipe
+        private static readonly Dictionary<int, int> BluePickTurn = new()
+        {
+            { 1, 0 },
+            { 3, 1 },
+            { 5, 2 },
+            { 8, 3 },
+            { 10, 4 }
+        };
+
+        private static readonly Dictionary<int, int> RedPickTurn = new()
+        {
+            { 2, 0 },
+            { 4, 1 },
+            { 6, 2 },
+            { 7, 3 },
+            { 9, 4 }
+        };
+
 
         private void TimerPhase(ChampSelectSession session)
         {

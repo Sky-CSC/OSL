@@ -1,3 +1,5 @@
+using OSL_Overlay.Phase.Common;
+
 namespace OSL_Overlay.Phase.Bo
 {
     public class BoInfo
@@ -10,6 +12,23 @@ namespace OSL_Overlay.Phase.Bo
             NbGames = 0;
             Text = string.Empty;
             Win = 0;
+        }
+    }
+
+    public class BoGraphic
+    {
+        public bool Show { get; set; }
+        public int NbMatchForWin { get; set; }
+        public int NbWin { get; set; }
+        public Text Win { get; set; }
+        public Text Undef { get; set; }
+        public BoGraphic()
+        {
+            Show = false;
+            NbMatchForWin = 0;
+            NbWin = 0;
+            Win = new();
+            Undef = new();
         }
     }
 }
