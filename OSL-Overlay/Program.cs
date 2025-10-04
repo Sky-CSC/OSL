@@ -3,6 +3,7 @@ using OSL_CDragon;
 using OSL_Overlay.Components;
 using OSL_Overlay.Phase.Bo;
 using OSL_Overlay.Phase.ChampSelect;
+using OSL_Overlay.Phase.Fearless;
 using OSL_Overlay.Phase.Team;
 using OSL_Overlay.WebSocketClient;
 using OSL_Overlay.WebSocketClient.Handlers;
@@ -26,6 +27,7 @@ builder.Services.AddSingleton<IMessageHandler, EndGameHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameMatchHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameTimelineHandler>();
 builder.Services.AddSingleton<IMessageHandler, ChampSelectHandler>();
+builder.Services.AddSingleton<IMessageHandler, FearlessMatchHandler>();
 
 // Initialize CDragon and download assets if necessary
 var cdragon = new CDragon();
@@ -42,6 +44,9 @@ builder.Services.AddSingleton<TeamState>();
 
 // Bo
 builder.Services.AddSingleton<BoState>();
+
+// Fearless
+builder.Services.AddSingleton<FearlessState>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
