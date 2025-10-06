@@ -11,7 +11,7 @@ namespace OSL_Server.WebSocket.Handlers
     /// </remarks>
     public class TerminatorHandler : IMessageHandler
     {
-        private static readonly Logger _logger = new("RegionLocaleHandler");
+        private static readonly Logger _logger = new("TerminatorHandler");
 
         /// <inheritdoc />
         public string Type => "skynet";

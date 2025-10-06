@@ -20,6 +20,7 @@ namespace OSL_Server.Services
         private readonly LeagueClientConfig _leagueClientConfig;
         private readonly RiotDevelopementPortalConfig _riotDevelopementPortalConfig;
         private readonly WebSocketServer _wsServer;
+        public RiotGameDeveloperPortal rgdp;
         private bool _isRunning;
 
         public event Action? OnChanged;
@@ -83,7 +84,7 @@ namespace OSL_Server.Services
 
                         // Initialize OSL-RGDP
                         OSL_RGDP.Schema.RiotGameDeveloperPortalConfig info = new(_riotDevelopementPortalConfig.ApiKey, regionLocaleData.AppContext.UserRegion.ToLower());
-                        var rgdp = new RiotGameDeveloperPortal(info);
+                        rgdp = new RiotGameDeveloperPortal(info);
 
                         // Sync Gameflow Phase
                         var gameFlowPhase = new GameFlow(lcuEndpoints, _wsServer);
