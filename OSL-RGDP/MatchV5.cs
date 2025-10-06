@@ -91,7 +91,7 @@ namespace OSL_RGDP
         /// <returns>An <see cref="MatchDto"/> object containing detailed information about the match, or null if the match could not be found or an error occurred during the request.</returns>
         public MatchDto? Match(Int64 matchId)
         {
-            string? data = Request(_config, $"/lol/match/v5/matches/{matchId}");
+            string? data = Request(_config, $"/lol/match/v5/matches/{_config.Region.ToUpper()}_{matchId}");
             if (data == null)
             {
                 return null;
@@ -107,7 +107,7 @@ namespace OSL_RGDP
         /// <returns>An <see cref="TimelineDto"/> object containing the timeline of the match, or null if the timeline could not be found or an error occurred during the request.</returns>
         public TimelineDto? Timeline(Int64 matchId)
         {
-            string? data = Request(_config, $"/lol/match/v5/matches/{matchId}/timeline");
+            string? data = Request(_config, $"/lol/match/v5/matches/{_config.Region.ToUpper()}_{matchId}/timeline");
             if (data == null)
             {
                 return null;
