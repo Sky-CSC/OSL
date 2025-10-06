@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using OSL_Overlay.WebSocketClient.Handlers;
@@ -77,7 +77,7 @@ namespace OSL_Overlay.WebSocketClient
 
             await _webSocket.SendAsync(new ArraySegment<byte>(buffer), WebSocketMessageType.Text, true, _cts.Token);
 
-            _logger.Log(LoggingLevel.DEBUG, nameof(SendAsync), $"📤 Sent: {payload}");
+            _logger.Log(LoggingLevel.INFO, nameof(SendAsync), $"📤 Sent: {payload}");
         }
 
         /// <summary>
