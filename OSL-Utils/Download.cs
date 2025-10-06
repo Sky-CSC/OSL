@@ -1,4 +1,4 @@
-﻿namespace OSL_Utils
+namespace OSL_Utils
 {
     /// <summary>
     /// Download data from the internet.
@@ -96,6 +96,11 @@
             try
             {
                 HttpResponseMessage httpResponseMessage = await _httpClient.SendAsync(httpRequestMessage);
+                if (!httpResponseMessage.IsSuccessStatusCode)
+                {
+                    _logger.Log(LoggingLevel.ERROR, "GetResponse()", $"Error : {httpResponseMessage.ReasonPhrase}");
+                    return null;
+                }
                 string content = await httpResponseMessage.Content.ReadAsStringAsync();
                 _logger.Log(LoggingLevel.INFO, "GetResponse()", $"Response : {httpRequestMessage.RequestUri} succesful");
                 return content;

@@ -34,6 +34,12 @@ namespace OSL_Utils
             return "";
         }
 
+        /// <summary>
+        /// Remove a prefix path to a path, and remove / if is th first caracter
+        /// </summary>
+        /// <param name="path">The full path</param>
+        /// <param name="wwwRootPath">Path to remove</param>
+        /// <returns></returns>
         public static string ToWebPath(string path, string wwwRootPath)
         {
             if (string.IsNullOrWhiteSpace(path))
