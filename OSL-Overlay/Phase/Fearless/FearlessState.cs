@@ -12,7 +12,6 @@ namespace OSL_Overlay.Phase.Fearless
         private readonly CDragon _cdragon;
 
         public List<List<FearlessInfo>> FearlessList = [];
-        public List<List<FearlessInfo>> FearlessStyle = [];
 
         public event Action? OnChange;
 
@@ -32,7 +31,7 @@ namespace OSL_Overlay.Phase.Fearless
         /// <param name="matchId"></param>
         /// <param name="index"></param>
         /// <returns></returns>
-        public async Task MatchIdModeAsync(Int64 matchId, int index)
+        public async Task MatchIdModeAsync(long matchId, int index)
         {
             // Send message to websocket to get match data
             FearlessMatchId fearlessMatchId = new(matchId, index);
@@ -57,6 +56,9 @@ namespace OSL_Overlay.Phase.Fearless
                 ResetFearlessIndex(fearlessMatchDto.Index);
             }
 
+            FearlessList[fearlessMatchDto.Index][0].IdMatch = fearlessMatchDto.Match.Info.GameId.ToString();
+            FearlessList[fearlessMatchDto.Index][1].IdMatch = fearlessMatchDto.Match.Info.GameId.ToString();
+
             foreach (var player in fearlessMatchDto.Match.Info.Participants)
             {
                 Champion champion = new(_cdragon.GetChampionSquare(player.ChampionId));
@@ -67,52 +69,6 @@ namespace OSL_Overlay.Phase.Fearless
                 else
                 {
                     FearlessList[fearlessMatchDto.Index][1].Champions.Add(champion);
-                }
-            }
-            UpdateInfoCss(fearlessMatchDto.Index);
-            NotifyStateChanged();
-        }
-
-        public void UpdateInfoCss(int index)
-        {
-            FearlessList[index][0].Text.Txt = $"Game {index + 1}";
-            FearlessList[index][1].Text.Txt = $"Game {index + 1}";
-            UpdateInfoCss(FearlessStyle);
-        }
-
-        public void UpdateInfoCss(List<List<FearlessInfo>> info)
-        {
-            for (int i = 0; i < info.Count; i++)
-            {
-                for (int j = 0; j < info[i].Count; j++)
-                {
-                    if (FearlessList.Count > i && FearlessList[i].Count > j)
-                    {
-                        FearlessList[i][j].Text.Txt = info[i][j].Text.Txt;
-                        FearlessList[i][j].Text.Color = info[i][j].Text.Color;
-                        FearlessList[i][j].Text.Font = info[i][j].Text.Font;
-                        FearlessList[i][j].Text.Background = info[i][j].Text.Background;
-                        FearlessList[i][j].Text.Border = info[i][j].Text.Border;
-                        FearlessList[i][j].Text.Align = info[i][j].Text.Align;
-                        FearlessList[i][j].Background = info[i][j].Background;
-                        FearlessList[i][j].Line.Background = info[i][j].Line.Background;
-                        FearlessList[i][j].Border = info[i][j].Border;
-                        for (int k = 0; k < info[i][j].Champions.Count; k++)
-                        {
-                            if (FearlessList[i][j].Champions.Count > k)
-                            {
-                                FearlessList[i][j].Champions[k].Border = info[i][j].Champions[k].Border;
-                                FearlessList[i][j].Champions[k].Lane.Border = info[i][j].Champions[k].Lane.Border;
-                                FearlessList[i][j].Champions[k].Greyscale = info[i][j].Champions[k].Greyscale;
-                                FearlessList[i][j].Champions[k].Cross.Image = info[i][j].Champions[k].Cross.Image;
-                                FearlessList[i][j].Champions[k].Cross.GraphicLineColor = info[i][j].Champions[k].Cross.GraphicLineColor;
-                                FearlessList[i][j].Champions[k].Cross.GraphicCrossColor = info[i][j].Champions[k].Cross.GraphicCrossColor;
-                                FearlessList[i][j].Champions[k].Cross.Width = info[i][j].Champions[k].Cross.Width;
-                                FearlessList[i][j].Champions[k].Cross.Height = info[i][j].Champions[k].Cross.Height;
-                                FearlessList[i][j].Champions[k].Cross.Rotate = info[i][j].Champions[k].Cross.Rotate;
-                            }
-                        }
-                    }
                 }
             }
             NotifyStateChanged();
@@ -141,62 +97,13 @@ namespace OSL_Overlay.Phase.Fearless
                 NotifyStateChanged();
             }
         }
+    }
 
-        public void LoadStyle(string path)
+    public static class FearlessStateExtensions
+    {
+        public static List<List<FearlessInfo>> CloneFirelessList(this List<List<FearlessInfo>> source)
         {
-            // TODO: Load style
-            string? json = OSL_Utils.File.Read(path);
-            if (json == null)
-                return;
-            var info = JsonConvert.DeserializeObject<List<List<FearlessInfo>>>(json);
-            if (info != null)
-            {
-                FearlessStyle = info;
-                UpdateInfoCss(info);
-            }
-            NotifyStateChanged();
-        }
-
-        public void SaveStyle(string path)
-        {
-            if (FearlessList.Count > 0)
-            {
-                FearlessStyle = [];
-                foreach (var elem in FearlessList)
-                {
-                    FearlessStyle.Add([.. elem]);
-                }
-
-                foreach (var item in FearlessStyle)
-                {
-                    foreach (var champ in item[0].Champions)
-                    {
-                        champ.Image = string.Empty;
-                    }
-                    foreach (var champ in item[1].Champions)
-                    {
-                        champ.Image = string.Empty;
-                    }
-                }
-            }
-
-            if (FearlessStyle.Count == 0)
-            {
-                // TODO : no save
-            }
-            else if (FearlessStyle.Count == 1)
-            {
-                FearlessStyle.Add(FearlessStyle[0]);
-                FearlessStyle.Add(FearlessStyle[0]);
-            }
-            else if (FearlessStyle.Count == 2)
-            {
-                FearlessStyle.Add(FearlessStyle[1]);
-            }
-
-            string json = JsonConvert.SerializeObject(FearlessStyle, Formatting.Indented);
-            OSL_Utils.File.Write(path, json);
-            NotifyStateChanged();
+            return source.Select(team => team.Select(info => info.Clone()).ToList()).ToList();
         }
     }
 }

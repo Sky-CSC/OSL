@@ -1,10 +1,10 @@
 using OSL_Overlay.Phase.Common;
-using OSL_RGDP.Schema.Riot;
 
 namespace OSL_Overlay.Phase.Fearless
 {
     public class FearlessInfo
     {
+        public string IdMatch { get; set; }
         public Text Text { get; set; }
         public string Background { get; set; }
         public Line Line { get; set; }
@@ -12,11 +12,25 @@ namespace OSL_Overlay.Phase.Fearless
         public List<Champion> Champions { get; set; }
         public FearlessInfo()
         {
+            IdMatch = string.Empty;
             Text = new Text();
             Background = string.Empty;
             Line = new Line();
             Border = string.Empty;
             Champions = [];
+        }
+
+        public FearlessInfo Clone()
+        {
+            return new FearlessInfo
+            {
+                IdMatch = this.IdMatch,
+                Text = this.Text.CLone(),
+                Background = this.Background,
+                Line = this.Line.Clone(),
+                Border = this.Border,
+                Champions = this.Champions
+            };
         }
     }
 
@@ -28,6 +42,15 @@ namespace OSL_Overlay.Phase.Fearless
         {
             Background = string.Empty;
             Border = string.Empty;
+        }
+
+        public Line Clone()
+        {
+            return new Line
+            {
+                Background = this.Background,
+                Border = this.Border
+            };
         }
     }
 
@@ -54,6 +77,17 @@ namespace OSL_Overlay.Phase.Fearless
             Greyscale = string.Empty;
             Cross = new Cross();
         }
+        public Champion Clone()
+        {
+            return new Champion
+            {
+                Image = this.Image,
+                Border = this.Border,
+                Lane = this.Lane.Clone(),
+                Greyscale = this.Greyscale,
+                Cross = this.Cross.Clone()
+            };
+        }
     }
 
     public class Lane {
@@ -65,6 +99,16 @@ namespace OSL_Overlay.Phase.Fearless
             Name = string.Empty;
             Image = string.Empty;
             Border = string.Empty;
+        }
+
+        public Lane Clone()
+        {
+            return new Lane
+            {
+                Name = this.Name,
+                Image = this.Image,
+                Border = this.Border
+            };
         }
     }
 }
