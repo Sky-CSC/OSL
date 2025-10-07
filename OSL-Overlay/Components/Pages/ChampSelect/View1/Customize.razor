@@ -278,7 +278,7 @@
     @* ---------------- Timer ---------------- *@
     <MudText Id="timer" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Timer</MudText>
     @* ---------------- Blue Timer ---------------- *@
-    <MudStack Row="true" Style="overflow-y:auto;">
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
         @* ---------------- Background ---------------- *@
         <StyleFieldEditor Label="Blue background"
                           Type="background"
@@ -299,7 +299,7 @@
                           BorderColor="#0B849E" />
     </MudStack>
     @* ---------------- Red Timer ---------------- *@
-    <MudStack Row="true" Style="overflow-y:auto;">
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
         @* ---------------- Background ---------------- *@
         <StyleFieldEditor Label="Red background"
                           Type="background"
@@ -320,7 +320,7 @@
                           BorderColor="#BE1E37" />
     </MudStack>
     @* ---------------- Common Timer ---------------- *@
-    <MudStack Row="true" Style="overflow-y:auto;">
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
         @* ---------------- Background ---------------- *@
         <StyleFieldEditor Label="Common background"
                           Type="background"
@@ -340,7 +340,7 @@
     <br />
     @* ---------------- Patch ---------------- *@
     <MudText Id="patch" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Patch</MudText>
-    <MudStack Row="true" Style="overflow-y:auto;">
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
         <MudStack Row="false">
             @* ---------------- Show patch ? ---------------- *@
             <StyleFieldEditor Label="Show patch ?"
@@ -388,7 +388,7 @@
     <br />
     @* ---------------- Coach ---------------- *@
     <MudText Id="coach" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Coach</MudText>
-    <MudStack Row="true" Style="overflow-y:auto;">
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
         @* ---------------- Blue Coach ---------------- *@
         <MudStack Row="false">
             @* ---------------- Show coach ? ---------------- *@
@@ -692,14 +692,13 @@
     @* ---------------- Bo ---------------- *@
     <MudText Id="bo" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Best Of</MudText>
     @* ---------------- Blue Bo ---------------- *@
-    <MudStack Row="true">
+    <MudStack Row="true" AlignItems="AlignItems.Center">
         @* ---------------- Show bo ---------------- *@
         <StyleFieldEditor Label="Show blue bo ?"
                           Type="checkbox"
                           Value="@Info.BlueTeam.BoGraphic.Show.ToString()"
                           ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Show = val, v)"
                           BorderColor="#0B849E" />
-        <MudStack Row="true">
             @* ---------------- Background win ---------------- *@
             <StyleFieldEditor Label="Blue bo background win"
                               Type="background"
@@ -712,9 +711,7 @@
                               Value="@Info.BlueTeam.BoGraphic.Win.Border"
                               ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Win.Border = val, v)"
                               BorderColor="#0B849E" />
-        </MudStack>
         @* ---------------- Background undef ---------------- *@
-        <MudStack Row="true">
             <StyleFieldEditor Label="Blue bo background undef"
                               Type="background"
                               Value="@Info.BlueTeam.BoGraphic.Undef.Background"
@@ -726,17 +723,15 @@
                               Value="@Info.BlueTeam.BoGraphic.Undef.Border"
                               ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Undef.Border = val, v)"
                               BorderColor="#0B849E" />
-        </MudStack>
     </MudStack>
     @* ---------------- Red Bo ---------------- *@
-    <MudStack Row="true">
+    <MudStack Row="true" AlignItems="AlignItems.Center">
         @* ---------------- Show bo ? ---------------- *@
         <StyleFieldEditor Label="Show red bo ?"
                           Type="checkbox"
                           Value="@Info.RedTeam.BoGraphic.Show.ToString()"
                           ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Show = val, v)"
                           BorderColor="#BE1E37" />
-        <MudStack Row="true">
             @* ---------------- Background win ---------------- *@
             <StyleFieldEditor Label="Red bo background win"
                               Type="background"
@@ -749,8 +744,6 @@
                               Value="@Info.RedTeam.BoGraphic.Win.Border"
                               ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Win.Border = val, v)"
                               BorderColor="#BE1E37" />
-        </MudStack>
-        <MudStack Row="true">
             @* ---------------- Background undef ---------------- *@
             <StyleFieldEditor Label="Red bo background undef"
                               Type="background"
@@ -763,7 +756,6 @@
                               Value="@Info.RedTeam.BoGraphic.Undef.Border"
                               ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Undef.Border = val, v)"
                               BorderColor="#BE1E37" />
-        </MudStack>
     </MudStack>
 
     <br />
