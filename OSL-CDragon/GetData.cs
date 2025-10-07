@@ -48,6 +48,22 @@ namespace OSL_CDragon
             return filePath;
         }
 
+        public List<Champion> GetAllChampions()
+        {
+            return _data.Patchs[_indexPatch].Regions[_indexRegion].Champions;
+        }
+
+        public string GetDefaultImage()
+        {
+            SummonerSpell? item = GetSummonerSpell(54);
+            if (item == null)
+            {
+                return "";
+            }
+            Console.WriteLine(item.IconPath);
+            return item.IconPath;
+        }
+
         /// <summary>
         /// Get a item by its ID.
         /// </summary>
