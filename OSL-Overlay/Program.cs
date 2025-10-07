@@ -47,6 +47,7 @@ builder.Services.AddSingleton<BoState>();
 
 // Fearless
 builder.Services.AddSingleton<FearlessState>();
+builder.Services.AddSingleton<FearlessView1State>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
