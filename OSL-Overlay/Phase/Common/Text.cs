@@ -46,5 +46,18 @@ namespace OSL_Overlay.Phase.Common
             Border = string.Empty;
             Align = string.Empty;
         }
+
+        public Text CLone()
+        {
+            return new Text
+            {
+                Txt = this.Txt,
+                Font = this.Font,
+                Color = this.Color,
+                Background = this.Background,
+                Border = this.Border,
+                Align = this.Align
+            };
+        }
     }
 }

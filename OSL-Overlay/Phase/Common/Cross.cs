@@ -17,5 +17,18 @@ namespace OSL_Overlay.Phase.Common
             Height = string.Empty;
             Rotate = string.Empty;
         }
+
+        public Cross Clone()
+        {
+            return new Cross
+            {
+                Image = this.Image,
+                GraphicLineColor = this.GraphicLineColor,
+                GraphicCrossColor = this.GraphicCrossColor,
+                Width = this.Width,
+                Height = this.Height,
+                Rotate = this.Rotate
+            };
+        }
     }
 }
