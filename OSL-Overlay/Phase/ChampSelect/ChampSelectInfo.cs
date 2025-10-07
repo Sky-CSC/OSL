@@ -101,9 +101,6 @@ namespace OSL_Overlay.Phase.ChampSelect
         public string Greyscale { get; set; }
         public string BorderCompleted{ get; set; }
         public Cross Cross { get; set; }
-        //public string CrossImage { get; set; }
-        //public string LineCustom { get; set; }
-        //public string CrossCustom { get; set; }
         public Ban()
         {
             BanImage = string.Empty;
@@ -116,9 +113,6 @@ namespace OSL_Overlay.Phase.ChampSelect
             BorderCompleted = string.Empty;
             Greyscale = string.Empty;
             Cross = new();
-            //CrossImage = string.Empty;
-            //LineCustom = string.Empty;
-            //CrossCustom = string.Empty;
         }
     }
 
