@@ -70,7 +70,11 @@ namespace OSL_Overlay.WebSocketClient
         public async Task SendAsync(object message)
         {
             if (_webSocket.State != WebSocketState.Open)
-                throw new InvalidOperationException("WebSocket is not connected.");
+            {
+                //throw new InvalidOperationException("WebSocket is not connected.");
+                _logger.Log(LoggingLevel.ERROR, "SendAsync()", "⚠️ WebSocket is not connected.");
+                return;
+            }
 
             var payload = JsonConvert.SerializeObject(message);
             var buffer = Encoding.UTF8.GetBytes(payload);
