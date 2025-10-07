@@ -1,0 +1,233 @@
+@page "/fearless/view1/customize"
+@using OSL_Overlay.Phase.Fearless
+@inject FearlessView1State ViewState
+
+<PageTitle>Fearless - View1 - Customize</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Fearless View1 Customize</b></MudText>
+<br />
+
+@* ---------------- Choose file style to use ---------------- *@
+<StyleManager RelativePath="styles/fearless/view1"
+              CurrentFile="@ViewState.CurrentFile"
+              OnSave="HandleSave"
+              OnFileSelected="HandleFileSelected"
+              FilePrefix="fearless" />
+
+<br />
+<MudText Id="link" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Fearless link list</MudText>
+
+<MudStack Row="true">
+    @for (int i = 0; i < LocalFearlessList.Count; i++)
+    {
+        int index = i;
+        <MudStack Row="false">
+            @for (int j = 0; j < LocalFearlessList[index].Count; j++)
+            {
+                int match = index + 1;
+                string side = "";
+                string background = "";
+                string hover = "";
+                string color = "";
+                if (j == 0)
+                {
+                    side = "blue";
+                    background = Colors.BlueGray.Darken4;
+                    hover = Colors.BlueGray.Darken2;
+                    color = Colors.Blue.Default;
+
+                }
+                else if (j == 1)
+                {
+                    side = "red";
+                    background = Colors.BlueGray.Darken4;
+                    hover = Colors.BlueGray.Darken2;
+                    color = Colors.Red.Default;
+                }
+                <SwitchButton Text="@($"Match {match} {side}")"
+                              Icon="@Icons.Material.Filled.InsertLink"
+                              BackgroundColor="@background"
+                              HoverBackgroundColor="@hover"
+                              TextColor="@color"
+                              FontSize="15px"
+                              MaxHeight="40px"
+                              MaxWidth="200px"
+                              Href="@($"/fearless/view1/{index}/{j}")"
+                              Target="_blank" />
+            }
+        </MudStack>
+    }
+</MudStack>
+
+<br />
+<MudText Id="custom" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Fearless customize</MudText>
+
+@for (int i = 0; i < LocalFearlessList.Count; i++)
+{
+    int indexi = i;
+    @for (int j = 0; j < LocalFearlessList[i].Count; j++)
+    {
+        int match = i + 1;
+        int indexj = j;
+        string side = "";
+        string borderColor = "";
+        string background = "";
+        string hover = "";
+        string color = "";
+        if (j == 0)
+        {
+            side = "blue";
+            background = Colors.BlueGray.Darken4;
+            hover = Colors.BlueGray.Darken2;
+            color = Colors.Blue.Default;
+            borderColor = "#0B849E";
+
+        }
+        else if (j == 1)
+        {
+            side = "red";
+            background = Colors.BlueGray.Darken4;
+            hover = Colors.BlueGray.Darken2;
+            color = Colors.Red.Default;
+            borderColor = "#BE1E37";
+        }
+        <SwitchButton Text="@($"Match {match} {side}")"
+                      Icon="@Icons.Material.Filled.InsertLink"
+                      BackgroundColor="@background"
+                      HoverBackgroundColor="@hover"
+                      TextColor="@color"
+                      FontSize="15px"
+                      MaxHeight="40px"
+                      MaxWidth="320px"
+                      Href="@($"/fearless/view1/{i}/{j}")"
+                      Target="_blank" />
+        <MudStack Row="true" AlignItems="AlignItems.Center">
+            <StyleFieldEditor Label="Text"
+                              Type="text"
+                              Value="@LocalFearlessList[indexi][indexj].Text.Txt"
+                              ValueChanged="v => OnStyleChanged(val => LocalFearlessList[indexi][indexj].Text.Txt = val, v)"
+                              BorderColor="@borderColor" />
+            <StyleFieldEditor Label="Text font"
+                              Type="font"
+                              Value="@LocalFearlessList[indexi][indexj].Text.Font"
+                              ValueChanged="v => OnStyleChanged(val => LocalFearlessList[indexi][indexj].Text.Font = val, v)"
+                              BorderColor="@borderColor" />
+            <StyleFieldEditor Label="Text align"
+                              Type="text-align"
+                              Value="@LocalFearlessList[indexi][indexj].Text.Align"
+                              ValueChanged="v => OnStyleChanged(val => LocalFearlessList[indexi][indexj].Text.Align = val, v)"
+                              BorderColor="@borderColor" />
+            <StyleFieldEditor Label="Text color"
+                              Type="color"
+                              Value="@LocalFearlessList[indexi][indexj].Text.Color"
+                              ValueChanged="v => OnStyleChanged(val => LocalFearlessList[indexi][indexj].Text.Color = val, v)"
+                              BorderColor="@borderColor" />
+            <StyleFieldEditor Label="Line color"
+                              Type="background"
+                              Value="@LocalFearlessList[indexi][indexj].Line.Background"
+                              ValueChanged="v => OnStyleChanged(val => LocalFearlessList[indexi][indexj].Line.Background = val, v)"
+                              BorderColor="@borderColor" />
+        </MudStack>
+
+        @foreach (var champion in LocalFearlessList[indexi][indexj].Champions)
+        {
+            <MudStack Row="true" AlignItems="AlignItems.Center">
+                <StyleFieldEditor Label="Grey scale color"
+                                  Type="background"
+                                  Value="@champion.Greyscale"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Greyscale = val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Cross color"
+                                  Type="color"
+                                  Value="@champion.Cross.GraphicLineColor"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.GraphicLineColor= val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Double cross color"
+                                  Type="color"
+                                  Value="@champion.Cross.GraphicCrossColor"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.GraphicCrossColor= val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Cross width"
+                                  Type="text"
+                                  Value="@champion.Cross.Width"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.Width = val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Cross height"
+                                  Type="text"
+                                  Value="@champion.Cross.Height"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.Height = val, v)"
+                                  BorderColor="@borderColor" />
+                <StyleFieldEditor Label="Cross height"
+                                  Type="text"
+                                  Value="@champion.Cross.Rotate"
+                                  ValueChanged="v => OnStyleChanged(val => champion.Cross.Rotate = val, v)"
+                                  BorderColor="@borderColor" />
+            </MudStack>
+        }
+    }
+}
+
+@code {
+
+
+
+    private List<List<FearlessInfo>> LocalFearlessList => ViewState.LocalFearlessList;
+
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+        RefreshUI();
+    }
+    private void OnStyleChanged(Action<int> setter, string newValue)
+    {
+        setter(Convert.ToInt32(newValue));
+        RefreshUI();
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+        ViewState.NotifyStateChanged();
+    }
+
+    protected override void OnInitialized()
+    {
+        ViewState.OnChange += async () => await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        ViewState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Save file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleSave(string filePath)
+    {
+        ViewState.SaveStyle(filePath);
+        ViewState.CurrentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Select file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleFileSelected(string filePath)
+    {
+        // Chargement du style existant
+        ViewState.LoadStyle(filePath);
+        ViewState.CurrentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
+}

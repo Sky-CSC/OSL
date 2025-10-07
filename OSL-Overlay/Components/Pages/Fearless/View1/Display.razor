@@ -1,8 +1,10 @@
-@page "/fearless/list/{outerIndex:int}/{innerIndex:int}"
+@page "/fearless/view1/{outerIndex:int}/{innerIndex:int}"
 @using OSL_Overlay.Phase.Fearless
 @layout Layout.EmptyLayout
 @inject NavigationManager Nav
-@inject FearlessState FearlessState
+@inject FearlessView1State ViewState
+
+<PageTitle>Fearless - View1 - @outerIndex:int/@innerIndex:int</PageTitle>
 
 @if (currentFearless is not null)
 {
@@ -22,9 +24,9 @@
 
     private void LoadFearless()
     {
-        if (outerIndex >= 0 && outerIndex < FearlessState.FearlessList.Count)
+        if (outerIndex >= 0 && outerIndex < ViewState.LocalFearlessList.Count)
         {
-            var subList = FearlessState.FearlessList[outerIndex];
+            var subList = ViewState.LocalFearlessList[outerIndex];
             if (innerIndex >= 0 && innerIndex < subList.Count)
             {
                 currentFearless = subList[innerIndex];
@@ -36,12 +38,12 @@
 
     protected override void OnInitialized()
     {
-        FearlessState.OnChange += StateHasChangedSafe;
+        ViewState.OnChange += StateHasChangedSafe;
     }
 
     public void Dispose()
     {
-        FearlessState.OnChange -= StateHasChangedSafe;
+        ViewState.OnChange -= StateHasChangedSafe;
     }
 
     private void StateHasChangedSafe()

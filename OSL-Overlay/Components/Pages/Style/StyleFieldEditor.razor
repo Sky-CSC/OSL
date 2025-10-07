@@ -206,6 +206,53 @@
         }
     }
 
+    @* ---------------- List of champion square portrait image with name ---------------- *@
+    else if (Type == "champion-square-portrait-image")
+    {
+        <div style="display:flex; align-items:center; gap:8px;">
+            <!-- Image du champion sélectionné ou image par défaut -->
+            <img src="@GetChampionPath()"
+                 alt="@(_selectedChampion?.Name ?? "default")"
+                 style="width:48px; height:48px; object-fit:cover; cursor:pointer; box-shadow:0 0 6px rgba(0,0,0,0.2);"
+                 @onclick="OpenSelector" />
+
+            <MudAutocomplete T="OSL_CDragon.Schema.Champion"
+                             @ref="_auto"
+                             Value="@_selectedChampion"
+                             ValueChanged="OnChampionChanged"
+                             ToStringFunc="@(c => c?.Name ?? string.Empty)"
+                             SearchFunc="SearchChampionsAsync"
+                             Dense="true"
+                             Variant="Variant.Filled"
+                             MinCharacters="0"
+                             Clearable="true"
+                             MaxHeight="500"
+                             ResetValueOnEmptyText="false"
+                             MaxItems="int.MaxValue" >
+
+                <!-- Template des éléments de la liste -->
+                <ItemTemplate Context="champ">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <img src="@OSL_Utils.Path.ToWebPath(champ.SquarePortraitPath, "wwwroot")"
+                             alt="@champ.Name"
+                             style="width:30px; height:30px; object-fit:cover; border-radius:4px;" />
+                        <span>@champ.Name</span>
+                    </div>
+                </ItemTemplate>
+
+                <!-- Template du texte affiché quand un item est sélectionné -->
+                <ItemSelectedTemplate Context="champ">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <img src="@OSL_Utils.Path.ToWebPath(champ.SquarePortraitPath, "wwwroot")"
+                             alt="@champ.Name"
+                             style="width:24px; height:24px; object-fit:cover; border-radius:4px;" />
+                        <span>@champ.Name</span>
+                    </div>
+                </ItemSelectedTemplate>
+            </MudAutocomplete>
+        </div>
+    }
+
     @* ---------------- Background ---------------- *@
     else if (Type == "background")
     {

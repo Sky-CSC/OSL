@@ -22,6 +22,9 @@ namespace OSL_Overlay.Components.Pages.Style
         [Parameter] public string BorderColor { get; set; } = "#010A13";
         [Parameter] public int NumericMin { get; set; } = 0;
         [Parameter] public int NumericMax { get; set; } = 5;
+        [Parameter] public List<OSL_CDragon.Schema.Champion> Champions { get; set; } = new();
+        [Parameter] public EventCallback<OSL_CDragon.Schema.Champion> OnChampionSelected { get; set; }
+        [Parameter] public string DefaultImage { get; set; } = string.Empty;
 
         private readonly string[] AvailableFonts =
         [
@@ -43,13 +46,13 @@ namespace OSL_Overlay.Components.Pages.Style
         private readonly string[] AvailableTextAlignDirection =
         [
              "left",
-         "right",
- "center",
- "justify",
- "justify-all",
- "start",
- "end",
- "match-parent",
+             "right",
+             "center",
+             "justify",
+             "justify-all",
+             "start",
+             "end",
+             "match-parent",
         ];
 
         // Regex cache (compiled for perf)
@@ -107,6 +110,10 @@ namespace OSL_Overlay.Components.Pages.Style
         private bool _borderRight;
         private bool _borderTop;
         private bool _borderBottom;
+
+        // Champion square portrait
+        private OSL_CDragon.Schema.Champion? _selectedChampion;
+        private MudAutocomplete<OSL_CDragon.Schema.Champion>? _auto;
 
         private class GradientStop
         {
@@ -342,7 +349,6 @@ namespace OSL_Overlay.Components.Pages.Style
         private async Task OnImageSelected(string? img)
         {
             _selectedImage = img;
-            // ici tu peux mettre à jour ton background
             await ValueChanged.InvokeAsync(img);
             //await UpdateImageFromSelection(img);
         }
@@ -372,6 +378,61 @@ namespace OSL_Overlay.Components.Pages.Style
             // Stocke le chemin relatif
             Value = $"temp/{fileName}";
             await ValueChanged.InvokeAsync(Value);
+        }
+
+        // ------------------- champion-square-portrait-image -------------------
+        private async Task OpenSelector()
+        {
+            if (_auto is not null)
+                await _auto.ToggleMenuAsync();
+        }
+
+        private string GetChampionPath()
+        {
+            if (_selectedChampion == null)
+            {
+                Console.WriteLine(OSL_Utils.Path.ToWebPath(DefaultImage, "wwwroot"));
+                return OSL_Utils.Path.ToWebPath(DefaultImage, "wwwroot");
+            }
+            Console.WriteLine(OSL_Utils.Path.ToWebPath(_selectedChampion.SquarePortraitPath, "wwwroot"));
+            return OSL_Utils.Path.ToWebPath(_selectedChampion.SquarePortraitPath, "wwwroot");
+        }
+
+        private Task<IEnumerable<OSL_CDragon.Schema.Champion>> SearchChampionsAsync(string value, CancellationToken ct)
+        {
+            var list = Champions ?? Enumerable.Empty<OSL_CDragon.Schema.Champion>();
+            if (string.IsNullOrWhiteSpace(value))
+                return Task.FromResult(list.OrderBy(c => c.Name).AsEnumerable());
+
+            var filtered = list
+                .Where(c => c.Name.Contains(value, System.StringComparison.OrdinalIgnoreCase))
+                .OrderBy(c => c.Name);
+
+            return Task.FromResult(filtered.AsEnumerable());
+        }
+
+        // Quand un champion est choisi
+        private async Task OnChampionChanged(OSL_CDragon.Schema.Champion champ)
+        {
+            if (_auto is not null)
+            {
+                // Réinitialise le texte de recherche
+                await _auto.ClearAsync();
+                // Ferme le menu
+                await _auto.CloseMenuAsync();
+            }
+
+            bool sameChampion = _selectedChampion?.Name == champ?.Name;
+            _selectedChampion = champ;
+
+            if (champ != null)
+            {
+                if (OnChampionSelected.HasDelegate)
+                    await OnChampionSelected.InvokeAsync(champ);
+            }
+
+            if (sameChampion)
+                await InvokeAsync(StateHasChanged);
         }
 
         // ------------------- BACKGROUND -------------------
