@@ -391,10 +391,8 @@ namespace OSL_Overlay.Components.Pages.Style
         {
             if (_selectedChampion == null)
             {
-                Console.WriteLine(OSL_Utils.Path.ToWebPath(DefaultImage, "wwwroot"));
                 return OSL_Utils.Path.ToWebPath(DefaultImage, "wwwroot");
             }
-            Console.WriteLine(OSL_Utils.Path.ToWebPath(_selectedChampion.SquarePortraitPath, "wwwroot"));
             return OSL_Utils.Path.ToWebPath(_selectedChampion.SquarePortraitPath, "wwwroot");
         }
 
@@ -738,12 +736,10 @@ namespace OSL_Overlay.Components.Pages.Style
                 var val = m.Groups["val"].Value.Trim();
 
                 var widthMatch = WidthRegex.Match(val);
-                //Console.WriteLine(widthMatch);
                 if (widthMatch.Success && int.TryParse(widthMatch.Groups["w"].Value, out var px))
                     _borderWidth = px;
 
                 var styleMatch = StyleRegex.Match(val);
-                //Console.WriteLine(styleMatch);
                 if (styleMatch.Success) _borderStyle = styleMatch.Value;
 
                 var colorMatch = ColorRegex.Match(val);
