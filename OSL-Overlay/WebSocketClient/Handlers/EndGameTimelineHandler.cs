@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq;
+using OSL_Overlay.GameFlow.EndGame;
 using OSL_RGDP.Schema.Riot;
 using OSL_Utils;
 
@@ -14,12 +15,20 @@ namespace OSL_Overlay.WebSocketClient.Handlers
         /// <inheritdoc />
         public string Type => "endGameTimeline";
 
+        private readonly EndGameState _state;
+
+        public EndGameTimelineHandler(EndGameState state)
+        {
+            _state = state;
+        }
+
         /// <inheritdoc />
         public Task HandleAsync(JToken jsonData)
         {
             var data = jsonData.ToObject<TimelineDto>();
             _logger.Log(LoggingLevel.INFO, "HandleAsync()", $"🎯 EndGame timeline management");
-            // TODO: Process the TimelineDto data as needed
+            //if (data != null)
+            //    _state.SetTimeline(data);
             return Task.CompletedTask;
         }
     }

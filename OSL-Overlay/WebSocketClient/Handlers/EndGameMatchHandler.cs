@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq;
+using OSL_Overlay.GameFlow.ChampSelect;
+using OSL_Overlay.GameFlow.EndGame;
 using OSL_RGDP.Schema.Riot;
 using OSL_Utils;
 
@@ -14,12 +16,21 @@ namespace OSL_Overlay.WebSocketClient.Handlers
         /// <inheritdoc />
         public string Type => "endGameMatch";
 
+        private readonly EndGameState _state;
+
+        public EndGameMatchHandler(EndGameState state)
+        {
+            _state = state;
+        }
+
         /// <inheritdoc />
         public Task HandleAsync(JToken jsonData)
         {
             var data = jsonData.ToObject<MatchDto>();
             _logger.Log(LoggingLevel.INFO, "HandleAsync()", $"🎯 EndGame match management");
-            // TODO: Process the MatchDto data as needed
+            if (data != null)
+                _state.SetMatch(data);
+
             return Task.CompletedTask;
         }
     }
