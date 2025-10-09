@@ -21,10 +21,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Components\Pages\EndGame\" />
 	  <Folder Include="Components\Pages\InGame\" />
-	  <Folder Include="Phase\EndGame\" />
-	  <Folder Include="Phase\InGame\" />
+	  <Folder Include="GameFlow\InGame\" />
 	  <Folder Include="Schema\" />
 	  <Folder Include="Services\" />
 	  <Folder Include="wwwroot\data\" />
