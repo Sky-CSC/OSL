@@ -1,5 +1,5 @@
 using Newtonsoft.Json.Linq;
-using OSL_Overlay.Phase.Fearless;
+using OSL_Overlay.GameFlow.Fearless;
 using OSL_RGDP.WebSocketResponse;
 using OSL_Utils;
 

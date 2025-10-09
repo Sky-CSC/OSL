@@ -1,4 +1,4 @@
-namespace OSL_Overlay.Phase.Common
+namespace OSL_Overlay.GameFlow.Common
 {
     public class Text
     {

@@ -1,6 +1,7 @@
-using OSL_Overlay.Phase.ChampSelect;
+using OSL_Overlay.GameFlow.ChampSelect;
+using OSL_Overlay.GameFlow.EndGame;
 
-namespace OSL_Overlay.Phase.Bo
+namespace OSL_Overlay.GameFlow.Bo
 {
     public class BoState
     {
@@ -8,10 +9,12 @@ namespace OSL_Overlay.Phase.Bo
         public BoInfo RedInfo { get; set; } = new();
 
         private readonly ChampSelectState ChampState;
+        private readonly EndGameState EndGameState;
 
-        public BoState(ChampSelectState state)
+        public BoState(ChampSelectState champSelectState, EndGameState endGameState)
         {
-            ChampState = state;
+            ChampState = champSelectState;
+            EndGameState = endGameState;
         }
 
         private IWebHostEnvironment Env { get; set; } = default!;
@@ -24,11 +27,13 @@ namespace OSL_Overlay.Phase.Bo
         public void UpdateBlueBo()
         {
             ChampState.UpdateInfoBo(BlueInfo, "blue-side");
+            EndGameState.UpdateInfoBo(BlueInfo, "blue-side");
             NotifyChanged();
         }
         public void UpdateRedBo()
         {
             ChampState.UpdateInfoBo(RedInfo, "red-side");
+            EndGameState.UpdateInfoBo(RedInfo, "red-side");
             NotifyChanged();
         }
 
@@ -38,6 +43,7 @@ namespace OSL_Overlay.Phase.Bo
             BlueInfo.NbGames = 0;
             BlueInfo.Win = 0;
             ChampState.UpdateInfoBo(BlueInfo, "blue-side");
+            EndGameState.UpdateInfoBo(BlueInfo, "blue-side");
             NotifyChanged();
         }
 
@@ -47,6 +53,7 @@ namespace OSL_Overlay.Phase.Bo
             RedInfo.NbGames = 0;
             RedInfo.Win = 0;
             ChampState.UpdateInfoBo(RedInfo, "red-side");
+            EndGameState.UpdateInfoBo(RedInfo, "red-side");
             NotifyChanged();
         }
 

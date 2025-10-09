@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace OSL_Overlay.Phase.Fearless
+namespace OSL_Overlay.GameFlow.Fearless
 {
     public class FearlessView1State
     {
@@ -20,7 +20,6 @@ namespace OSL_Overlay.Phase.Fearless
 
         public void SyncFromGlobal()
         {
-            Console.WriteLine("Info");
             LocalFearlessList = _fearlessState.FearlessList.CloneFirelessList();
             LoadStyle(CurrentFile);
             NotifyStateChanged();

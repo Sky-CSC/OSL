@@ -1,7 +1,7 @@
-using OSL_Overlay.Phase.Bo;
-using OSL_Overlay.Phase.Common;
+using OSL_Overlay.GameFlow.Bo;
+using OSL_Overlay.GameFlow.Common;
 
-namespace OSL_Overlay.Phase.ChampSelect
+namespace OSL_Overlay.GameFlow.ChampSelect
 {
     public class ChampSelectInfo
     {

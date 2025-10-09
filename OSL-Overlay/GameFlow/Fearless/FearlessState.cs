@@ -3,7 +3,7 @@ using OSL_CDragon;
 using OSL_RGDP.WebSocketResponse;
 using WebSocket = OSL_Overlay.WebSocketClient.WebSocketClient;
 
-namespace OSL_Overlay.Phase.Fearless
+namespace OSL_Overlay.GameFlow.Fearless
 {
     public class FearlessState
     {

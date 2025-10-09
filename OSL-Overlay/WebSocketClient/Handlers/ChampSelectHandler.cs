@@ -1,7 +1,7 @@
 using Newtonsoft.Json.Linq;
 using OSL_Lcu.Schema.Lcu;
 using OSL_Utils;
-using OSL_Overlay.Phase.ChampSelect;
+using OSL_Overlay.GameFlow.ChampSelect;
 
 namespace OSL_Overlay.WebSocketClient.Handlers
 {

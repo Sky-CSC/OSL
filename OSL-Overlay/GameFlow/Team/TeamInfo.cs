@@ -1,4 +1,4 @@
-namespace OSL_Overlay.Phase.Team
+namespace OSL_Overlay.GameFlow.Team
 {
     public class TeamInfo
     {

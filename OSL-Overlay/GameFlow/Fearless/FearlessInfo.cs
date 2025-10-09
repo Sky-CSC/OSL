@@ -1,6 +1,6 @@
-using OSL_Overlay.Phase.Common;
+using OSL_Overlay.GameFlow.Common;
 
-namespace OSL_Overlay.Phase.Fearless
+namespace OSL_Overlay.GameFlow.Fearless
 {
     public class FearlessInfo
     {

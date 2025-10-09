@@ -1,6 +1,6 @@
 @page "/fearless"
 @using OSL_CDragon
-@using OSL_Overlay.Phase.Fearless
+@using OSL_Overlay.GameFlow.Fearless
 @using OSL_RGDP.Schema.Riot
 @using OSL_RGDP.WebSocketResponse
 @inject FearlessState FearlessState
@@ -148,7 +148,6 @@
     private void GetChampionSquare(int index, OSL_CDragon.Schema.Champion champ)
     {
         _selectedChampions[index] = champ;
-        Console.WriteLine($"Slot {index} → {champ.Name}");
     }
 
     public async Task AddIdMatch(int index)
@@ -226,10 +225,5 @@
     public void Dispose()
     {
         FearlessState.OnChange -= async () => await InvokeAsync(StateHasChanged);
-    }
-
-    private void ChampionSelected(OSL_CDragon.Schema.Champion champion)
-    {
-        Console.WriteLine($"Champion selected: {champion.Name}");
     }
 }

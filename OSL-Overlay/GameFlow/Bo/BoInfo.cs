@@ -1,6 +1,6 @@
-using OSL_Overlay.Phase.Common;
+using OSL_Overlay.GameFlow.Common;
 
-namespace OSL_Overlay.Phase.Bo
+namespace OSL_Overlay.GameFlow.Bo
 {
     public class BoInfo
     {

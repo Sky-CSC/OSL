@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
-using OSL_Overlay.Phase.ChampSelect;
+using OSL_Overlay.GameFlow.ChampSelect;
 
-namespace OSL_Overlay.Phase.Team
+namespace OSL_Overlay.GameFlow.Team
 {
     public class TeamState
     {

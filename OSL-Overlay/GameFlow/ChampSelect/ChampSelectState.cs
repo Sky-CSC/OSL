@@ -3,11 +3,11 @@ using Newtonsoft.Json;
 using OSL_CDragon;
 using OSL_CDragon.Schema;
 using OSL_Lcu.Schema.Lcu;
-using OSL_Overlay.Phase.Bo;
-using OSL_Overlay.Phase.Team;
+using OSL_Overlay.GameFlow.Bo;
+using OSL_Overlay.GameFlow.Team;
 using System;
 
-namespace OSL_Overlay.Phase.ChampSelect
+namespace OSL_Overlay.GameFlow.ChampSelect
 {
     public class ChampSelectState
     {
