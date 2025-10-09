@@ -1,10 +1,11 @@
 using MudBlazor.Services;
 using OSL_CDragon;
 using OSL_Overlay.Components;
-using OSL_Overlay.Phase.Bo;
-using OSL_Overlay.Phase.ChampSelect;
-using OSL_Overlay.Phase.Fearless;
-using OSL_Overlay.Phase.Team;
+using OSL_Overlay.GameFlow.Bo;
+using OSL_Overlay.GameFlow.ChampSelect;
+using OSL_Overlay.GameFlow.EndGame;
+using OSL_Overlay.GameFlow.Fearless;
+using OSL_Overlay.GameFlow.Team;
 using OSL_Overlay.WebSocketClient;
 using OSL_Overlay.WebSocketClient.Handlers;
 using OSL_Utils.WebSocket;
@@ -48,6 +49,9 @@ builder.Services.AddSingleton<BoState>();
 // Fearless
 builder.Services.AddSingleton<FearlessState>();
 builder.Services.AddSingleton<FearlessView1State>();
+
+// EndGame
+builder.Services.AddSingleton<EndGameState>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
