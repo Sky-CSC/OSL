@@ -118,7 +118,6 @@ namespace OSL_CDragon
             if (!lastFolders.Contains(dir.Split("/")[^1]))
             {
                 dir = dir.Replace(dir.Split("/")[^1], "");
-                Console.WriteLine($"new : {dir}");
             }
 
             string fullPerkDir = OSL_Utils.Path.Combine(_info.AssetsDir, dir);

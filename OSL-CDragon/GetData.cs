@@ -60,7 +60,6 @@ namespace OSL_CDragon
             {
                 return "";
             }
-            Console.WriteLine(item.IconPath);
             return item.IconPath;
         }
 
