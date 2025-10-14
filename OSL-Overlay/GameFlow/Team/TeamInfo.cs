@@ -27,10 +27,12 @@ namespace OSL_Overlay.GameFlow.Team
 
     public class Lane
     {
+        public bool ShowCustomName { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
         public Lane()
         {
+            ShowCustomName = false;
             Name = string.Empty;
             Image = string.Empty;
         }

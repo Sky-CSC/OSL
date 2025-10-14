@@ -9,6 +9,8 @@ namespace OSL_Overlay.GameFlow.Team
         public TeamInfo RedInfo { get; set; } = new();
         public string? BlueFile { get; set; }
         public string? RedFile { get; set; }
+        public bool DisplayBlueCustomName { get; set; } = false;
+        public bool DisplayRedCustomName { get; set; } = false;
 
         private readonly ChampSelectState ChampState;
 
@@ -35,6 +37,25 @@ namespace OSL_Overlay.GameFlow.Team
 
         public void NotifyChanged() => OnChange?.Invoke();
 
+        public void DisplayCustomBlueName(bool display)
+        {
+            DisplayBlueCustomName = display;
+            BlueInfo.Top.ShowCustomName = display;
+            BlueInfo.Jungle.ShowCustomName = display;
+            BlueInfo.Mid.ShowCustomName = display;
+            BlueInfo.Adc.ShowCustomName = display;
+            BlueInfo.Supp.ShowCustomName = display;
+        }
+        public void DisplayCustomRedName(bool display)
+        {
+            DisplayRedCustomName = display;
+            RedInfo.Top.ShowCustomName = display;
+            RedInfo.Jungle.ShowCustomName = display;
+            RedInfo.Mid.ShowCustomName = display;
+            RedInfo.Adc.ShowCustomName = display;
+            RedInfo.Supp.ShowCustomName = display;
+        }
+
         public void FileSelectedBlue(string filePath)
         {
             string? json = OSL_Utils.File.Read(filePath);
@@ -45,7 +66,7 @@ namespace OSL_Overlay.GameFlow.Team
             if (info != null)
             {
                 // Update champ state
-                ChampState.UpdateInfoTeam(info, "blue-side");
+                ChampState.UpdateBlueTeamInfo(info);
                 BlueInfo = info;
             }
             BlueFile = filePath;
@@ -77,7 +98,7 @@ namespace OSL_Overlay.GameFlow.Team
                 BlueFile = filePath;
 
                 // Update champ state
-                ChampState.UpdateInfoTeam(BlueInfo, "blue-side");
+                ChampState.UpdateBlueTeamInfo(BlueInfo);
 
                 NotifyChanged();
             }
@@ -107,7 +128,7 @@ namespace OSL_Overlay.GameFlow.Team
                 RedFile = filePath;
 
                 // Update champ state
-                ChampState.UpdateInfoTeam(RedInfo, "red-side");
+                ChampState.UpdateRedTeamInfo(RedInfo);
 
                 NotifyChanged();
             }
@@ -123,7 +144,7 @@ namespace OSL_Overlay.GameFlow.Team
             if (info != null)
             {
                 // Update champ state
-                ChampState.UpdateInfoTeam(info, "red-side");
+                ChampState.UpdateRedTeamInfo(info);
                 RedInfo = info;
             }
             RedFile = filePath;
