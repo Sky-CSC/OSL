@@ -17,8 +17,6 @@ namespace OSL_Overlay.GameFlow.Bo
             EndGameState = endGameState;
         }
 
-        private IWebHostEnvironment Env { get; set; } = default!;
-
         public event Action? OnChange;
 
         public void NotifyChanged() => OnChange?.Invoke();
