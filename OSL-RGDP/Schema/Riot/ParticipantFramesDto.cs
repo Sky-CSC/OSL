@@ -53,5 +53,10 @@ namespace OSL_RGDP.Schema.Riot
         /// </summary>
         [JsonProperty("9")]
         public ParticipantFrameDto Participant9 { get; set; }
+        /// <summary>
+        /// Key value mapping for each participant
+        /// </summary>
+        [JsonProperty("10")]
+        public ParticipantFrameDto Participant10 { get; set; }
     }
 }

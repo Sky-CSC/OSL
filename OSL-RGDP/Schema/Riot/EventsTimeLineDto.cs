@@ -16,12 +16,19 @@ namespace OSL_RGDP.Schema.Riot
         /// <summary>
         /// The real timestamp of the event.
         /// </summary>
-        [JsonProperty("realTimestamp")]
-        public long RealTimestamp { get; set; }
+        //[JsonProperty("realTimestamp")]
+        //public long RealTimestamp { get; set; }
         /// <summary>
         /// The type of the event.
         /// </summary>
         [JsonProperty("type")]
         public string Type { get; set; }
+
+        [JsonProperty("monsterType")]
+        public string MonsterType { get; set; }
+
+        [JsonProperty("killerTeamId")]
+        public int KillerTeamId { get; set; }
+
     }
 }
