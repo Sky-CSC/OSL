@@ -2,10 +2,10 @@ using Newtonsoft.Json;
 using OSL_CDragon;
 using OSL_Overlay.GameFlow.Bo;
 using OSL_Overlay.GameFlow.Common;
-using OSL_Overlay.GameFlow.Fearless;
 using OSL_RGDP.Schema.Riot;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using static OSL_Overlay.GameFlow.EndGame.EndGameInfo;
 
 namespace OSL_Overlay.GameFlow.EndGame
 {
@@ -60,7 +60,7 @@ namespace OSL_Overlay.GameFlow.EndGame
             MatchDto = matchDto;
             UpdateTimer();
             UpdateWin();
-            UpdateGameStatsGameDto();
+            UpdateParticipantsStats();
             UpdateBans();
             UpdateTotalInfo("TotalDamageDealtToChampions");
         }
@@ -72,8 +72,8 @@ namespace OSL_Overlay.GameFlow.EndGame
         private void SetTimeline(TimelineDto timelineDto)
         {
             TimelineDto = timelineDto;
-            UpdateGameStatsTimelineDto();
             UpdateGolds();
+            UpdateEliteMonterStats();
         }
 
         /// <summary>
@@ -84,28 +84,10 @@ namespace OSL_Overlay.GameFlow.EndGame
             if (MatchDto.Info.GameDuration != 0)
             {
                 var ts = TimeSpan.FromSeconds(MatchDto.Info.GameDuration);
-                Info.Timer.Time.Txt = ts.ToString(@"mm\:ss");
+                Info.TimerTeamsHeadband.Timer.Txt = ts.ToString(@"mm\:ss");
             }
             else
-                Info.Timer.Time.Txt = "00:00";
-        }
-
-        /// <summary>
-        /// Update Game Stats from MatchDto
-        /// </summary>
-        private void UpdateGameStatsGameDto()
-        {
-            UpdateParticipantsStats();
-            UpdateGameStatsKda();
-        }
-
-        /// <summary>
-        /// Update Game Stats from TimelineDto
-        /// </summary>
-        private void UpdateGameStatsTimelineDto()
-        {
-            UpdateEliteMonterStats();
-            EliteMonsterDragon();
+                Info.TimerTeamsHeadband.Timer.Txt = "00:00";
         }
 
         /// <summary>
@@ -113,13 +95,16 @@ namespace OSL_Overlay.GameFlow.EndGame
         /// </summary>
         private void UpdateParticipantsStats()
         {
-            var baseStats = new Dictionary<string, (Stat stat, Func<ParticipantDto, int> selector)>
+            StatText kills = new();
+            StatText deaths = new();
+            StatText assists = new();
+            var baseStats = new Dictionary<string, (StatText statText, Func<ParticipantDto, int> selector)>
             {
-                ["Kills"] = (Info.GameData.GameStats.Kills, p => p.Kills),
-                ["Deaths"] = (Info.GameData.GameStats.Deaths, p => p.Deaths),
-                ["Assists"] = (Info.GameData.GameStats.Assists, p => p.Assists),
-                ["Golds"] = (Info.GameData.GameStats.Golds, p => p.GoldEarned),
-                ["Towers"] = (Info.GameData.GameStats.Towers, p => p.TurretKills)
+                ["Kills"] = (kills, p => p.Kills),
+                ["Deaths"] = (deaths, p => p.Deaths),
+                ["Assists"] = (assists, p => p.Assists),
+                ["Golds"] = (Info.GameStats.Golds, p => p.GoldEarned),
+                ["Towers"] = (Info.GameStats.Towers, p => p.TurretKills)
             };
 
             var blueTotals = baseStats.ToDictionary(x => x.Key, x => 0);
@@ -140,12 +125,11 @@ namespace OSL_Overlay.GameFlow.EndGame
 
             foreach (var (key, data) in baseStats)
             {
-                data.stat.Name.Txt = key;
-                data.stat.ShowText = true;
-                data.stat.ShowImages = false;
-                data.stat.BlueTeam.Txt = blueTotals[key].ToString();
-                data.stat.RedTeam.Txt = redTotals[key].ToString();
+                data.statText.Title.Txt = key;
+                data.statText.BlueTeam.Txt = blueTotals[key].ToString();
+                data.statText.RedTeam.Txt = redTotals[key].ToString();
             }
+            UpdateGameStatsKda(kills, deaths, assists);
         }
 
         /// <summary>
@@ -153,20 +137,19 @@ namespace OSL_Overlay.GameFlow.EndGame
         /// </summary>
         private void UpdateEliteMonterStats()
         {
-            Info.GameData.Events = [];
-            var eliteStats = new Dictionary<string, (Stat stat, string displayName)>
+            var eliteStats = new Dictionary<string, (StatImage statImage, string displayName)>
             {
-                ["HORDE"] = (Info.GameData.GameStats.VoidGrubs, "Void Grubs"),
-                ["RIFTHERALD"] = (Info.GameData.GameStats.Heralds, "Heralds"),
-                ["ATAKHAN"] = (Info.GameData.GameStats.Atakhan, "Atakhan"),
-                ["ELDER_DRAGON"] = (Info.GameData.GameStats.Elders, "Elders"),
-                ["BARON_NASHOR"] = (Info.GameData.GameStats.Barons, "Barons"),
-                ["AIR_DRAGON"] = (Info.GameData.GameStats.Air, "Air"),
-                ["CHEMTECH_DRAGON"] = (Info.GameData.GameStats.Chemtech, "Chemtech"),
-                ["EARTH_DRAGON"] = (Info.GameData.GameStats.Earth, "Earth"),
-                ["FIRE_DRAGON"] = (Info.GameData.GameStats.Fire, "Fire"),
-                ["HEXTECH_DRAGON"] = (Info.GameData.GameStats.Hextech, "Hextech"),
-                ["WATER_DRAGON"] = (Info.GameData.GameStats.Water, "Water")
+                ["HORDE"] = (Info.GameStats.VoidGrubs, "Void Grubs"),
+                ["RIFTHERALD"] = (Info.GameStats.Herald, "Heralds"),
+                ["ATAKHAN"] = (Info.GameStats.Atakhan, "Atakhan"),
+                ["ELDER_DRAGON"] = (Info.GameStats.Elders, "Elders"),
+                ["BARON_NASHOR"] = (Info.GameStats.Barons, "Barons"),
+                ["AIR_DRAGON"] = (Info.GameStats.Drakes.Air, "Air"),
+                ["CHEMTECH_DRAGON"] = (Info.GameStats.Drakes.Chemtech, "Chemtech"),
+                ["EARTH_DRAGON"] = (Info.GameStats.Drakes.Earth, "Earth"),
+                ["FIRE_DRAGON"] = (Info.GameStats.Drakes.Fire, "Fire"),
+                ["HEXTECH_DRAGON"] = (Info.GameStats.Drakes.Hextech, "Hextech"),
+                ["WATER_DRAGON"] = (Info.GameStats.Drakes.Water, "Water")
             };
 
             var blueMonsters = eliteStats.ToDictionary(x => x.Key, x => 0);
@@ -186,36 +169,29 @@ namespace OSL_Overlay.GameFlow.EndGame
                         else
                             redMonsters[ev.MonsterType]++;
 
-                        Info.GameData.Events.Add(new Events
-                        {
-                            Type = ev.MonsterType,
-                            Side = ev.KillerTeamId,
-                            Time = ev.Timestamp
-                        });
+                        Info.Golds.Events.Add(new(ev.MonsterType, ev.KillerTeamId,ev.Timestamp));
                     }
                 }
             }
 
             foreach (var (key, data) in eliteStats)
             {
-                data.stat.Name.Txt = data.displayName;
-                data.stat.ShowText = true;
-                data.stat.ShowImages = true;
-                data.stat.BlueTeam.Txt = blueMonsters[key].ToString();
-                data.stat.RedTeam.Txt = redMonsters[key].ToString();
+                data.statImage.Title.Txt = data.displayName;
+                data.statImage.NbBlueTeam = blueMonsters[key].ToString();
+                data.statImage.NbRedTeam = redMonsters[key].ToString();
             }
+
+            EliteMonsterDragon();
         }
 
         /// <summary>
         /// Update KDA stats
         /// </summary>
-        private void UpdateGameStatsKda()
+        private void UpdateGameStatsKda(StatText k, StatText d, StatText a)
         {
-            Info.GameData.GameStats.Kda.Name.Txt = "KDA";
-            Info.GameData.GameStats.Kda.ShowText = true;
-            Info.GameData.GameStats.Kda.ShowImages = false;
-            Info.GameData.GameStats.Kda.BlueTeam.Txt = $"{Info.GameData.GameStats.Kills.BlueTeam}/{Info.GameData.GameStats.Deaths.BlueTeam}/{Info.GameData.GameStats.Assists.BlueTeam}";
-            Info.GameData.GameStats.Kda.RedTeam.Txt = $"{Info.GameData.GameStats.Kills.RedTeam}/{Info.GameData.GameStats.Deaths.RedTeam}/{Info.GameData.GameStats.Assists.RedTeam}";
+            Info.GameStats.Kda.Title.Txt = "KDA";
+            Info.GameStats.Kda.BlueTeam.Txt = $"{k.BlueTeam}/{d.BlueTeam}/{a.BlueTeam}";
+            Info.GameStats.Kda.RedTeam.Txt = $"{k.RedTeam}/{d.RedTeam}/{a.RedTeam}";
         }
 
         /// <summary>
@@ -223,9 +199,7 @@ namespace OSL_Overlay.GameFlow.EndGame
         /// </summary>
         private void EliteMonsterDragon()
         {
-            Info.GameData.GameStats.Dragon.Name.Txt = "Dragon";
-            Info.GameData.GameStats.Dragon.ShowText = true;
-            Info.GameData.GameStats.Dragon.ShowImages = true;
+            Info.GameStats.Drakes.Title.Txt = "Drakes";
         }
 
         /// <summary>
@@ -236,9 +210,9 @@ namespace OSL_Overlay.GameFlow.EndGame
             foreach (var team in MatchDto.Info.Teams)
             {
                 if (team.TeamId == 100)
-                    Info.Timer.BlueSide.Win = team.Win;
+                    Info.TimerTeamsHeadband.BlueTeam.Win = team.Win;
                 else
-                    Info.Timer.RedSide.Win = team.Win;
+                    Info.TimerTeamsHeadband.RedTeam.Win = team.Win;
             }
         }
 
@@ -247,8 +221,8 @@ namespace OSL_Overlay.GameFlow.EndGame
         /// </summary>
         private void UpdateBans()
         {
-            Info.GameData.Bans.BlueTeam = [];
-            Info.GameData.Bans.RedTeam = [];
+            Info.Bans.BlueTeam = [];
+            Info.Bans.RedTeam = [];
             foreach (var team in MatchDto.Info.Teams)
             {
                 foreach (var ban in team.Bans)
@@ -259,11 +233,11 @@ namespace OSL_Overlay.GameFlow.EndGame
                     };
                     if (team.TeamId == 100)
                     {
-                        Info.GameData.Bans.BlueTeam.Add(image);
+                        Info.Bans.BlueTeam.Add(image);
                     }
                     else
                     {
-                        Info.GameData.Bans.RedTeam.Add(image);
+                        Info.Bans.RedTeam.Add(image);
                     }
                 }
             }
@@ -274,30 +248,23 @@ namespace OSL_Overlay.GameFlow.EndGame
         /// </summary>
         private void UpdateGolds()
         {
-            Info.GameData.Golds.GoldDifference = [];
-            foreach (var frames in TimelineDto.Info.Frames)
+            foreach (var frame in TimelineDto.Info.Frames)
             {
                 int blueGolds = 0;
                 int redGolds = 0;
-                blueGolds += frames.ParticipantFrames.Participant1.TotalGold;
-                blueGolds += frames.ParticipantFrames.Participant2.TotalGold;
-                blueGolds += frames.ParticipantFrames.Participant3.TotalGold;
-                blueGolds += frames.ParticipantFrames.Participant4.TotalGold;
-                blueGolds += frames.ParticipantFrames.Participant5.TotalGold;
+                blueGolds += frame.ParticipantFrames.Participant1.TotalGold;
+                blueGolds += frame.ParticipantFrames.Participant2.TotalGold;
+                blueGolds += frame.ParticipantFrames.Participant3.TotalGold;
+                blueGolds += frame.ParticipantFrames.Participant4.TotalGold;
+                blueGolds += frame.ParticipantFrames.Participant5.TotalGold;
 
-                redGolds += frames.ParticipantFrames.Participant6.TotalGold;
-                redGolds += frames.ParticipantFrames.Participant7.TotalGold;
-                redGolds += frames.ParticipantFrames.Participant8.TotalGold;
-                redGolds += frames.ParticipantFrames.Participant9.TotalGold;
-                redGolds += frames.ParticipantFrames.Participant10.TotalGold;
+                redGolds += frame.ParticipantFrames.Participant6.TotalGold;
+                redGolds += frame.ParticipantFrames.Participant7.TotalGold;
+                redGolds += frame.ParticipantFrames.Participant8.TotalGold;
+                redGolds += frame.ParticipantFrames.Participant9.TotalGold;
+                redGolds += frame.ParticipantFrames.Participant10.TotalGold;
 
-                GoldDifference goldDiff = new()
-                {
-                    Gold = blueGolds - redGolds,
-                    Time = frames.Timestamp
-                };
-
-                Info.GameData.Golds.GoldDifference.Add(goldDiff);
+                Info.Golds.Events.Add(new("Gold", 0, frame.Timestamp, blueGolds - redGolds));
             }
         }
 
@@ -334,7 +301,7 @@ namespace OSL_Overlay.GameFlow.EndGame
             int indexBlue = 0;
             int indexRed = 0;
 
-            Info.GameData.Total.Title.Txt = ToTitleCase(propertyName);
+            Info.ChampionStats.Title.Txt = ToTitleCase(propertyName);
 
             foreach (var player in MatchDto.Info.Participants)
             {
@@ -342,12 +309,12 @@ namespace OSL_Overlay.GameFlow.EndGame
 
                 if (player.TeamId == 100)
                 {
-                    Info.GameData.Total.BlueTeam[indexBlue].Value.Txt = value;
+                    Info.ChampionStats.BlueTeam[indexBlue].Stat.Txt = value;
                     indexBlue++;
                 }
                 else
                 {
-                    Info.GameData.Total.RedTeam[indexRed].Value.Txt = value;
+                    Info.ChampionStats.RedTeam[indexRed].Stat.Txt = value;
                     indexRed++;
                 }
             }
@@ -404,18 +371,20 @@ namespace OSL_Overlay.GameFlow.EndGame
         {
             if (side == "blue-side")
             {
-                Info.Timer.BlueSide.BoGraphic.NbMatchForWin = bo.NbGames;
-                Info.Timer.BlueSide.BoGraphic.NbWin = bo.Win;
-                Info.Timer.BlueSide.BoGraphic.Win.Txt = bo.Text;
+                Info.TimerTeamsHeadband.BlueTeam.BoGraphic.NbMatchForWin = bo.NbGames;
+                Info.TimerTeamsHeadband.BlueTeam.BoGraphic.NbWin = bo.Win;
+                Info.TimerTeamsHeadband.BlueTeam.BoGraphic.Win.Txt = bo.Text;
             }
             if (side == "red-side")
             {
-                Info.Timer.RedSide.BoGraphic.NbMatchForWin = bo.NbGames;
-                Info.Timer.RedSide.BoGraphic.NbWin = bo.Win;
-                Info.Timer.RedSide.BoGraphic.Win.Txt = bo.Text;
+                Info.TimerTeamsHeadband.RedTeam.BoGraphic.NbMatchForWin = bo.NbGames;
+                Info.TimerTeamsHeadband.RedTeam.BoGraphic.NbWin = bo.Win;
+                Info.TimerTeamsHeadband.RedTeam.BoGraphic.Win.Txt = bo.Text;
             }
             NotifyStateChanged();
         }
+
+        //Convert value to px 
     }
 
     public static class EndGameStateExtensions
