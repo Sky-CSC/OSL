@@ -1,41 +1,47 @@
-using MudBlazor.Charts;
 using Newtonsoft.Json;
 using OSL_CDragon;
-using OSL_CDragon.Schema;
 using OSL_Lcu.Schema.Lcu;
 using OSL_Overlay.GameFlow.Bo;
+using OSL_Overlay.GameFlow.Patch;
+using OSL_Overlay.GameFlow.Phase;
 using OSL_Overlay.GameFlow.Team;
-using System;
+using OSL_Overlay.GameFlow.Vs;
 
 namespace OSL_Overlay.GameFlow.ChampSelect
 {
     public class ChampSelectState
     {
         public ChampSelectInfo Info { get; private set; } = new(true);
-        public string FileStyle { get; set; } = string.Empty;
+
+        public List<GameFlow.Team.Lane> BlueTeamNames = [];
+        public List<GameFlow.Team.Lane> RedTeamNames = [];
+        public List<string> SavedBlueTeamNames = Enumerable.Repeat<string?>(null, 5).ToList();
+        public List<string> SavedRedTeamNames = Enumerable.Repeat<string?>(null, 5).ToList();
 
         private readonly CDragon _cdragon;
 
         public event Action? OnChange;
 
-        private ChampSelectSession _session;
-        private bool IsFirstRun { get; set; } = true;
         public bool CustomPlayerName { get; set; } = false;
 
         public ChampSelectState(CDragon cdragon)
         {
             _cdragon = cdragon;
+            // Load file for testing
+            ChampSelectSession session = null;
+            string filePathMatch = "./GameFlow/ChampSelect/Session.json";
+            if (File.Exists(filePathMatch))
+            {
+                string json = File.ReadAllText(filePathMatch);
+                session = JsonConvert.DeserializeObject<ChampSelectSession>(json);
+            }
+
+            if (session != null)
+                ManageSession(session);
         }
 
         public void ManageSession(ChampSelectSession session)
         {
-            _session = session;
-
-            if (IsFirstRun)
-            {
-                InitInfo(session);
-                IsFirstRun = false;
-            }
             // Update player names
             UpdatePlayerNames(session);
 
@@ -57,34 +63,28 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             NotifyStateChanged();
         }
 
-        private void InitInfo(ChampSelectSession session)
-        {
-            int nbBluePlayers = session.MyTeam.Count;
-            int nbRedPlayers = session.TheirTeam.Count;
-            int nbBlueBans = 5;
-            int nbRedBans = 5;
-
-            Info = new ChampSelectInfo(nbBluePlayers, nbRedPlayers, nbBlueBans, nbRedBans);
-
-            // TODO: Get css default information
-        }
-
         private void UpdatePlayerNames(ChampSelectSession session)
         {
-            if (CustomPlayerName)
+            foreach (var (player, index) in session.MyTeam.Select((value, idx) => (value, idx)))
             {
-                //TODO: Get player names from config
-            }
-            else
-            {
-                foreach (var (player, index) in session.MyTeam.Select((value, idx) => (value, idx)))
+                if (BlueTeamNames.Count > index && BlueTeamNames[index].ShowCustomName)
                 {
+                    Info.BlueTeam.Picks[index].Name.Txt = BlueTeamNames[index].Name;
+                }
+                else
                     Info.BlueTeam.Picks[index].Name.Txt = player.GameName;
-                }
-                foreach (var (player, index) in session.TheirTeam.Select((value, idx) => (value, idx)))
+                SavedBlueTeamNames[index] = player.GameName;
+            }
+
+            foreach (var (player, index) in session.TheirTeam.Select((value, idx) => (value, idx)))
+            {
+                if (RedTeamNames.Count > index && RedTeamNames[index].ShowCustomName)
                 {
-                    Info.RedTeam.Picks[index].Name.Txt = player.GameName;
+                    Info.RedTeam.Picks[index].Name.Txt = RedTeamNames[index].Name;
                 }
+                else
+                    Info.RedTeam.Picks[index].Name.Txt = player.GameName;
+                SavedRedTeamNames[index] = player.GameName;
             }
         }
 
@@ -229,22 +229,22 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             switch (session.Timer.Phase)
             {
                 case "PLANNING":
-                    Info.Phase.Txt = "Planning";
+                    //Info.Phase.Txt = "Planning";
                     UpdateTimer("common", 30);
                     break;
                 case "BAN_PICK":
-                    Info.Phase.Txt = "Ban & Pick";
+                    //Info.Phase.Txt = "Ban & Pick";
                     break;
                 case "FINALIZATION":
-                    Info.Phase.Txt = "Finalization";
+                    //Info.Phase.Txt = "Finalization";
                     UpdateTimer("common", 60);
                     break;
                 case "GAME_STARTING":
-                    Info.Phase.Txt = "Game Starting";
+                    //Info.Phase.Txt = "Game Starting";
                     UpdateTimer("common", 130);
                     break;
                 default:
-                    Info.Phase.Txt = "Unknown Phase";
+                    //Info.Phase.Txt = "Unknown Phase";
                     UpdateTimer("common", 0);
                     break;
             }
@@ -280,79 +280,60 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             }
         }
 
-        public void UpdateInfoCss(ChampSelectInfo info)
+        public void UpdateBlueTeamInfo(TeamInfo info)
         {
-            Info = info;
-            if (_session != null)
-                ManageSession(_session);
+            Info.BlueTeam.Name.Txt = info.Name;
+            Info.BlueTeam.Tag.Txt = info.Tag;
+            Info.BlueTeam.Coach.Name.Txt = info.Coach;
+            Info.BlueTeam.Logo = new(info.Logo);
+
+            List<Lane> lanes = new List<Lane>
+            {
+                info.Top,
+                info.Jungle,
+                info.Mid,
+                info.Adc,
+                info.Supp
+            };
+
+            BlueTeamNames = lanes;
+
+            for (int i = 0; i < Info.BlueTeam.Picks.Count && i < lanes.Count && i < SavedBlueTeamNames.Count; i++)
+            {
+                if (lanes[i].ShowCustomName)
+                    Info.BlueTeam.Picks[i].Name.Txt = lanes[i].Name;
+                else
+                    Info.BlueTeam.Picks[i].Name.Txt = SavedBlueTeamNames[i];
+                Info.BlueTeam.Picks[i].PlayerImage = lanes[i].Image;
+            }
             NotifyStateChanged();
         }
 
-        public void UpdateInfoTeam(TeamInfo info, string side)
+        public void UpdateRedTeamInfo(TeamInfo info)
         {
-            if (side == "blue-side")
+            Info.RedTeam.Name.Txt = info.Name;
+            Info.RedTeam.Tag.Txt = info.Tag;
+            Info.RedTeam.Coach.Name.Txt = info.Coach;
+            Info.RedTeam.Logo = new(info.Logo);
+
+            List<Lane> lanes = new List<Lane>
             {
-                Info.BlueTeam.Name.Txt = info.Name;
-                Info.BlueTeam.Tag.Txt = info.Tag;
-                Info.BlueTeam.Coach.Name.Txt = info.Coach;
-                Info.BlueTeam.Logo = info.Logo;
-                if (Info.BlueTeam.Picks.Count > 0)
-                {
-                    Info.BlueTeam.Picks[0].Name.Txt = info.Top.Name;
-                    Info.BlueTeam.Picks[0].PlayerImage = info.Top.Image;
-                }
-                if (Info.BlueTeam.Picks.Count > 1)
-                {
-                    Info.BlueTeam.Picks[1].Name.Txt = info.Jungle.Name;
-                    Info.BlueTeam.Picks[1].PlayerImage = info.Jungle.Image;
-                }
-                if (Info.BlueTeam.Picks.Count > 2)
-                {
-                    Info.BlueTeam.Picks[2].Name.Txt = info.Mid.Name;
-                    Info.BlueTeam.Picks[2].PlayerImage = info.Mid.Image;
-                }
-                if (Info.BlueTeam.Picks.Count > 3)
-                {
-                    Info.BlueTeam.Picks[3].Name.Txt = info.Adc.Name;
-                    Info.BlueTeam.Picks[3].PlayerImage = info.Adc.Image;
-                }
-                if (Info.BlueTeam.Picks.Count > 4)
-                {
-                    Info.BlueTeam.Picks[4].Name.Txt = info.Supp.Name;
-                    Info.BlueTeam.Picks[4].PlayerImage = info.Supp.Image;
-                }
-            }
-            else if (side == "red-side")
+                info.Top,
+                info.Jungle,
+                info.Mid,
+                info.Adc,
+                info.Supp
+            };
+
+            RedTeamNames = lanes;
+
+            for (int i = 0; i < Info.RedTeam.Picks.Count && i < lanes.Count && i < SavedRedTeamNames.Count; i++)
             {
-                Info.RedTeam.Name.Txt = info.Name;
-                Info.RedTeam.Tag.Txt = info.Tag;
-                Info.RedTeam.Coach.Name.Txt = info.Coach;
-                Info.RedTeam.Logo = info.Logo;
-                if (Info.RedTeam.Picks.Count > 0)
-                {
-                    Info.RedTeam.Picks[0].Name.Txt = info.Top.Name;
-                    Info.RedTeam.Picks[0].PlayerImage = info.Top.Image;
-                }
-                if (Info.RedTeam.Picks.Count > 1)
-                {
-                    Info.RedTeam.Picks[1].Name.Txt = info.Jungle.Name;
-                    Info.RedTeam.Picks[1].PlayerImage = info.Jungle.Image;
-                }
-                if (Info.RedTeam.Picks.Count > 2)
-                {
-                    Info.RedTeam.Picks[2].Name.Txt = info.Mid.Name;
-                    Info.RedTeam.Picks[2].PlayerImage = info.Mid.Image;
-                }
-                if (Info.RedTeam.Picks.Count > 3)
-                {
-                    Info.RedTeam.Picks[3].Name.Txt = info.Adc.Name;
-                    Info.RedTeam.Picks[3].PlayerImage = info.Adc.Image;
-                }
-                if (Info.RedTeam.Picks.Count > 4)
-                {
-                    Info.RedTeam.Picks[4].Name.Txt = info.Supp.Name;
-                    Info.RedTeam.Picks[4].PlayerImage = info.Supp.Image;
-                }
+                if (lanes[i].ShowCustomName)
+                    Info.RedTeam.Picks[i].Name.Txt = lanes[i].Name;
+                else
+                    Info.RedTeam.Picks[i].Name.Txt = SavedRedTeamNames[i];
+                Info.RedTeam.Picks[i].PlayerImage = lanes[i].Image;
             }
             NotifyStateChanged();
         }
@@ -374,29 +355,34 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             NotifyStateChanged();
         }
 
-        public void LoadStyle(string path)
+        public void UpdateInfoPatch(PatchInfo patch)
         {
-            // TODO: Load style
-            string json = OSL_Utils.File.Read(path);
-            var info = JsonConvert.DeserializeObject<ChampSelectInfo>(json);
-            if (info != null)
-            {
-                UpdateInfoCss(info);
-            }
-        }
-
-        public void SaveStyle(string path)
-        {
-            // TODO: Save style
-            string json = JsonConvert.SerializeObject(Info, Formatting.Indented);
-            OSL_Utils.File.Write(path, json);
-        }
-
-        public void CssChange()
-        {
+            Info.Patch.PatchInfo.Txt = patch.Text;
+            Info.Patch.Version.Txt = patch.Version;
             NotifyStateChanged();
         }
 
-        private void NotifyStateChanged() => OnChange?.Invoke();
+        public void UpdateInfoPhase(PhaseInfo phase)
+        {
+            Info.Phase.Txt = phase.Text;
+            NotifyStateChanged();
+        }
+
+        public void UpdateInfoVs(VsInfo phase)
+        {
+            Info.Vs.Txt = phase.Text;
+            NotifyStateChanged();
+        }
+
+        public void NotifyStateChanged() => OnChange?.Invoke();
+    }
+
+    public static class ChampSelectStateExtensions
+    {
+        public static ChampSelectInfo CloneInfo(this ChampSelectInfo source)
+        {
+            var json = JsonConvert.SerializeObject(source);
+            return JsonConvert.DeserializeObject<ChampSelectInfo>(json) ?? new ChampSelectInfo();
+        }
     }
 }

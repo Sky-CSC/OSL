@@ -7,8 +7,8 @@ namespace OSL_Overlay.GameFlow.ChampSelect
     {
         public string Background { get; set; }
         public string TeamsBackground { get; set; }
-        public Team BlueTeam { get; set; }
-        public Team RedTeam { get; set; }
+        public ChampSelect.Team BlueTeam { get; set; }
+        public ChampSelect.Team RedTeam { get; set; }
         public Patch Patch { get; set; }
         public Timer CommonTimer { get; set; }
         public Text Phase { get; set; }
@@ -28,7 +28,14 @@ namespace OSL_Overlay.GameFlow.ChampSelect
 
         public ChampSelectInfo()
         {
-            
+            Background = string.Empty;
+            TeamsBackground = string.Empty;
+            BlueTeam = new();
+            RedTeam = new();
+            Patch = new();
+            CommonTimer = new();
+            Phase = new();
+            Vs = new();
         }
 
         public ChampSelectInfo(bool init)
@@ -47,26 +54,24 @@ namespace OSL_Overlay.GameFlow.ChampSelect
         }
     }
 
-    public class Team
+    public class Team : Common.Team
     {
-        public string Side { get; set; }
         public string Background { get; set; }
         public List<Ban> Bans { get; set; }
         public Coach Coach { get; set; }
         public Timer Timer { get; set; }
         public List<Pick> Picks { get; set; }
-        public bool ShowLogo { get; set; }
-        public string Logo { get; set; }
-        public bool ShowName { get; set; }
-        public Text Name { get; set; }
-        public bool ShowTag { get; set; }
-        public Text Tag { get; set; }
-        public BoGraphic BoGraphic { get; set; }
+        public Team()
+        {
+            Background = string.Empty;
+            Bans = [];
+            Coach = new();
+            Timer = new();
+            Picks = [];
+        }
         public Team(int nbPlayers, int nbBans)
         {
-            Side = string.Empty;
             Background = string.Empty;
-            Bans = new(nbBans);
             Bans = [];
             for (int i = 0; i < nbBans; i++)
             {
@@ -79,15 +84,7 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             {
                 Picks.Add(new());
             }
-            ShowLogo = false;
-            Logo = string.Empty;
-            ShowName = false;
-            Name = new();
-            ShowTag = false;
-            Tag = new();
-            BoGraphic = new();
         }
-
     }
     public class Ban
     {
