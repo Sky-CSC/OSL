@@ -5,7 +5,10 @@ using OSL_Overlay.GameFlow.Bo;
 using OSL_Overlay.GameFlow.ChampSelect;
 using OSL_Overlay.GameFlow.EndGame;
 using OSL_Overlay.GameFlow.Fearless;
+using OSL_Overlay.GameFlow.Patch;
+using OSL_Overlay.GameFlow.Phase;
 using OSL_Overlay.GameFlow.Team;
+using OSL_Overlay.GameFlow.Vs;
 using OSL_Overlay.WebSocketClient;
 using OSL_Overlay.WebSocketClient.Handlers;
 using OSL_Utils.WebSocket;
@@ -37,9 +40,6 @@ cdragon.DownloadAssetsWithCheck();
 // Register CDragon as a singleton service
 builder.Services.AddSingleton(cdragon);
 
-// Champ Select
-builder.Services.AddSingleton<ChampSelectState>();
-
 // Teams
 builder.Services.AddSingleton<TeamState>();
 
@@ -50,8 +50,22 @@ builder.Services.AddSingleton<BoState>();
 builder.Services.AddSingleton<FearlessState>();
 builder.Services.AddSingleton<FearlessView1State>();
 
+// Patch
+builder.Services.AddSingleton<PatchState>();
+
+// Phase
+builder.Services.AddSingleton<PhaseState>();
+
+// VS
+builder.Services.AddSingleton<VsState>();
+
+// Champ Select
+builder.Services.AddSingleton<ChampSelectState>();
+builder.Services.AddSingleton<ChampSelectView1State>();
+
 // EndGame
 builder.Services.AddSingleton<EndGameState>();
+builder.Services.AddSingleton<EndGameView1State>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -67,7 +81,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAntiforgery();
 
@@ -87,6 +101,14 @@ using (var scope = app.Services.CreateScope())
     var env = scope.ServiceProvider.GetRequiredService<IWebHostEnvironment>();
     var teamState = scope.ServiceProvider.GetRequiredService<TeamState>();
     teamState.LoadDefault(env);
+    var bestOfState = scope.ServiceProvider.GetRequiredService<BoState>();
+    var fearlessState = scope.ServiceProvider.GetRequiredService<FearlessState>();
+    var patchState = scope.ServiceProvider.GetRequiredService<PatchState>();
+    var phaseState = scope.ServiceProvider.GetRequiredService<PhaseState>();
+    var vsState = scope.ServiceProvider.GetRequiredService<VsState>();
+    var champSelectState = scope.ServiceProvider.GetRequiredService<ChampSelectState>();
+    var champSelectView1State = scope.ServiceProvider.GetRequiredService<ChampSelectView1State>();
+    champSelectView1State.SyncFromGlobal();
 }
 
 app.Run();
