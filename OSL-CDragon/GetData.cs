@@ -63,6 +63,11 @@ namespace OSL_CDragon
             return item.IconPath;
         }
 
+        public string GetPatchVersion()
+        {
+            return _data.Patchs[_indexPatch].ShortNumber;
+        }
+
         /// <summary>
         /// Get a item by its ID.
         /// </summary>
