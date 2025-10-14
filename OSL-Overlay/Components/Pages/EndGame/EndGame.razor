@@ -1,0 +1,52 @@
+@page "/endgame"
+@using OSL_Overlay.GameFlow.EndGame
+@inject EndGameState EndGameState
+
+<select @onchange="OnSelectChange" class="border rounded p-1">
+    <option value="">-- Sélectionne une statistique --</option>
+    @foreach (var prop in EndGameState.ParticipantProperties)
+    {
+        <option value="@prop">@prop</option>
+    }
+</select>
+
+<h3>@EndGameState.Info.ChampionStats.Title.Txt</h3>
+
+<div class="grid grid-cols-2 gap-4 mt-2">
+    <div>
+        <h4>Blue Team</h4>
+        @foreach (var player in EndGameState.Info.ChampionStats.BlueTeam)
+        {
+            <div>@player.Stat.Txt</div>
+        }
+    </div>
+    <div>
+        <h4>Red Team</h4>
+        @foreach (var player in EndGameState.Info.ChampionStats.RedTeam)
+        {
+            <div>@player.Stat.Txt</div>
+        }
+    </div>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        EndGameState.OnChange += async () => await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        EndGameState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+    }
+
+    private void OnSelectChange(ChangeEventArgs e)
+    {
+        var selected = e.Value?.ToString();
+        if (!string.IsNullOrEmpty(selected))
+        {
+            EndGameState.UpdateTotalInfo(selected);
+            StateHasChanged();
+        }
+    }
+}

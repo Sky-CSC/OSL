@@ -25,6 +25,7 @@ namespace OSL_Overlay.Components.Pages.Style
         [Parameter] public List<OSL_CDragon.Schema.Champion> Champions { get; set; } = new();
         [Parameter] public EventCallback<OSL_CDragon.Schema.Champion> OnChampionSelected { get; set; }
         [Parameter] public string DefaultImage { get; set; } = string.Empty;
+        [Parameter] public string Placeholder { get; set; } = string.Empty;
 
         private readonly string[] AvailableFonts =
         [

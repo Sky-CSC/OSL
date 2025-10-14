@@ -1,7 +1,7 @@
 @page "/champselect/view1"
 @layout Layout.EmptyLayout
 @using OSL_Overlay.GameFlow.ChampSelect
-@inject ChampSelectState ChampState
+@inject ChampSelectView1State ChampState
 <link rel="stylesheet" href="@Assets["css/champSelect/View1.css"]" />
 
 @* ---------------- Champ select view1 ---------------- *@
@@ -62,11 +62,11 @@
     </div>
 
     @* ---------------- Blue Team Info ---------------- *@
-    <TeamSlot Side="@Info.BlueTeam.Side"
+    <TeamSlot Class="@Info.BlueTeam.Side"
               Team="@Info.BlueTeam" />
 
     @* ---------------- Red Team Info ---------------- *@
-    <TeamSlot Side="@Info.RedTeam.Side"
+    <TeamSlot Class="@Info.RedTeam.Side"
               Team="@Info.RedTeam" />
 
     @* ---------------- Phase ---------------- *@
@@ -77,7 +77,7 @@
 </div>
 
 @code {
-    private ChampSelectInfo Info => ChampState.Info;
+    private ChampSelectInfo Info => ChampState.LocalInfo;
 
     protected override void OnInitialized()
     {

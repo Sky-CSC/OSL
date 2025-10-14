@@ -1,0 +1,49 @@
+@page "/phase/"
+@using Newtonsoft.Json
+@using OSL_Overlay.GameFlow.Phase
+@inject PhaseState PhaseState
+
+@* ---------------- Phase managament ---------------- *@
+<PageTitle>Phase</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Phase management</b></MudText>
+<br />
+
+<MudText Id="text" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Phase text</MudText>
+<MudStack Row="true">
+    @* ---------------- Text ---------------- *@
+    <StyleFieldEditor Label=""
+                      Type="text"
+                      Value="@PhaseState.Info.Text"
+                      ValueChanged="v => PhaseState.UpdateText(v)"
+                      BorderColor="#0B849E"
+                      Placeholder="Swiss Group - Round 1" />
+</MudStack>
+
+@code{
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+    }
+
+    protected override void OnInitialized()
+    {
+        PhaseState.OnChange += RefreshUI;
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        PhaseState.OnChange -= RefreshUI;
+    }
+}

@@ -1,6 +1,6 @@
 @page "/champselect/view1/custom"
 @using OSL_Overlay.GameFlow.ChampSelect
-@inject ChampSelectState ChampSelectState
+@inject ChampSelectView1State ViewState
 
 @* ---------------- Champ select View1 management ---------------- *@
 <PageTitle>ChampSelect - View1 - Customize</PageTitle>
@@ -26,7 +26,7 @@
 <br />
 @* ---------------- Choose file style to use ---------------- *@
 <StyleManager RelativePath="styles/champselect/view1"
-              CurrentFile="@_currentFile"
+              CurrentFile="@ViewState.CurrentFile"
               OnSave="HandleSave"
               OnFileSelected="HandleFileSelected" />
 <br />
@@ -540,8 +540,8 @@
                 <StyleFieldEditor Label="@($"Blue ban {index + 1} cross image")"
                                   Type="image"
                                   DirectoryPath="assets/bans"
-                                  Value="@Info.BlueTeam.Bans[index].Cross.Image"
-                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].Cross.Image = val, v)"
+                                  Value="@Info.BlueTeam.Bans[index].Cross.Image.Path"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].Cross.Image.Path = val, v)"
                                   BorderColor="#0B849E" />
                 @* ---------------- Color line ban ---------------- *@
                 <StyleFieldEditor Label="@($"Blue ban {index + 1} line color")"
@@ -698,30 +698,30 @@
                           Value="@Info.BlueTeam.BoGraphic.Show.ToString()"
                           ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Show = val, v)"
                           BorderColor="#0B849E" />
-            @* ---------------- Background win ---------------- *@
-            <StyleFieldEditor Label="Blue bo background win"
-                              Type="background"
-                              Value="@Info.BlueTeam.BoGraphic.Win.Background"
-                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Win.Background = val, v)"
-                              BorderColor="#0B849E" />
-            @* ---------------- Border win ---------------- *@
-            <StyleFieldEditor Label="Blue bo border win"
-                              Type="border"
-                              Value="@Info.BlueTeam.BoGraphic.Win.Border"
-                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Win.Border = val, v)"
-                              BorderColor="#0B849E" />
+        @* ---------------- Background win ---------------- *@
+        <StyleFieldEditor Label="Blue bo background win"
+                          Type="background"
+                          Value="@Info.BlueTeam.BoGraphic.Win.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Win.Background = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Border win ---------------- *@
+        <StyleFieldEditor Label="Blue bo border win"
+                          Type="border"
+                          Value="@Info.BlueTeam.BoGraphic.Win.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Win.Border = val, v)"
+                          BorderColor="#0B849E" />
         @* ---------------- Background undef ---------------- *@
-            <StyleFieldEditor Label="Blue bo background undef"
-                              Type="background"
-                              Value="@Info.BlueTeam.BoGraphic.Undef.Background"
-                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Undef.Background = val, v)"
-                              BorderColor="#0B849E" />
-            @* ---------------- Border undef ---------------- *@
-            <StyleFieldEditor Label="Blue bo border undef"
-                              Type="border"
-                              Value="@Info.BlueTeam.BoGraphic.Undef.Border"
-                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Undef.Border = val, v)"
-                              BorderColor="#0B849E" />
+        <StyleFieldEditor Label="Blue bo background undef"
+                          Type="background"
+                          Value="@Info.BlueTeam.BoGraphic.Undef.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Undef.Background = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Border undef ---------------- *@
+        <StyleFieldEditor Label="Blue bo border undef"
+                          Type="border"
+                          Value="@Info.BlueTeam.BoGraphic.Undef.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Undef.Border = val, v)"
+                          BorderColor="#0B849E" />
     </MudStack>
     @* ---------------- Red Bo ---------------- *@
     <MudStack Row="true" AlignItems="AlignItems.Center">
@@ -731,30 +731,30 @@
                           Value="@Info.RedTeam.BoGraphic.Show.ToString()"
                           ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Show = val, v)"
                           BorderColor="#BE1E37" />
-            @* ---------------- Background win ---------------- *@
-            <StyleFieldEditor Label="Red bo background win"
-                              Type="background"
-                              Value="@Info.RedTeam.BoGraphic.Win.Background"
-                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Win.Background = val, v)"
-                              BorderColor="#BE1E37" />
-            @* ---------------- Border win ---------------- *@
-            <StyleFieldEditor Label="Red bo border win"
-                              Type="border"
-                              Value="@Info.RedTeam.BoGraphic.Win.Border"
-                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Win.Border = val, v)"
-                              BorderColor="#BE1E37" />
-            @* ---------------- Background undef ---------------- *@
-            <StyleFieldEditor Label="Red bo background undef"
-                              Type="background"
-                              Value="@Info.RedTeam.BoGraphic.Undef.Background"
-                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Undef.Background = val, v)"
-                              BorderColor="#BE1E37" />
-            @* ---------------- Border undef ---------------- *@
-            <StyleFieldEditor Label="Red bo background undef"
-                              Type="border"
-                              Value="@Info.RedTeam.BoGraphic.Undef.Border"
-                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Undef.Border = val, v)"
-                              BorderColor="#BE1E37" />
+        @* ---------------- Background win ---------------- *@
+        <StyleFieldEditor Label="Red bo background win"
+                          Type="background"
+                          Value="@Info.RedTeam.BoGraphic.Win.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Win.Background = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Border win ---------------- *@
+        <StyleFieldEditor Label="Red bo border win"
+                          Type="border"
+                          Value="@Info.RedTeam.BoGraphic.Win.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Win.Border = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Background undef ---------------- *@
+        <StyleFieldEditor Label="Red bo background undef"
+                          Type="background"
+                          Value="@Info.RedTeam.BoGraphic.Undef.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Undef.Background = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Border undef ---------------- *@
+        <StyleFieldEditor Label="Red bo background undef"
+                          Type="border"
+                          Value="@Info.RedTeam.BoGraphic.Undef.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Undef.Border = val, v)"
+                          BorderColor="#BE1E37" />
     </MudStack>
 
     <br />
@@ -791,15 +791,7 @@
 </MudStack>
 
 @code {
-    private ChampSelectInfo Info => ChampSelectState.Info;
-
-    // Current file used
-    private string? _currentFile;
-
-    protected override void OnInitialized()
-    {
-        _currentFile = ChampSelectState.FileStyle;
-    }
+    private ChampSelectInfo Info => ViewState.LocalInfo;
 
     /// <summary>
     /// When css is update notifie Champ state
@@ -809,7 +801,7 @@
     private void OnStyleChanged(Action<string> setter, string newValue)
     {
         setter(newValue);
-        ChampSelectState.CssChange();
+        RefreshUI();
     }
 
     /// <summary>
@@ -820,7 +812,24 @@
     private void OnStyleChanged(Action<bool> setter, string newValue)
     {
         setter(Convert.ToBoolean(newValue));
-        ChampSelectState.CssChange();
+        RefreshUI();
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+        ViewState.NotifyStateChanged();
+    }
+
+    protected override void OnInitialized()
+    {
+        ViewState.OnChange += async () => await InvokeAsync(StateHasChanged);
+        ViewState.SyncFromGlobal();
+    }
+
+    public void Dispose()
+    {
+        ViewState.OnChange -= async () => await InvokeAsync(StateHasChanged);
     }
 
     /// <summary>
@@ -831,9 +840,8 @@
     private async Task HandleSave(string filePath)
     {
         // Sauvegarde dans un NOUVEAU fichier
-        ChampSelectState.SaveStyle(filePath);
-        _currentFile = filePath;
-        ChampSelectState.FileStyle = _currentFile;
+        ViewState.SaveStyle(filePath);
+        ViewState.CurrentFile = filePath;
         await InvokeAsync(StateHasChanged);
     }
 
@@ -845,9 +853,8 @@
     private async Task HandleFileSelected(string filePath)
     {
         // Chargement du style existant
-        ChampSelectState.LoadStyle(filePath);
-        _currentFile = filePath;
-        ChampSelectState.FileStyle = _currentFile;
+        ViewState.LoadStyle(filePath);
+        ViewState.CurrentFile = filePath;
         await InvokeAsync(StateHasChanged);
     }
 

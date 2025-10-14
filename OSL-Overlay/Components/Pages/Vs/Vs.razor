@@ -1,0 +1,49 @@
+@page "/vs/"
+@using Newtonsoft.Json
+@using OSL_Overlay.GameFlow.Vs
+@inject VsState VsState
+
+@* ---------------- Phase managament ---------------- *@
+<PageTitle>Phase</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Phase management</b></MudText>
+<br />
+
+<MudText Id="text" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Phase text</MudText>
+<MudStack Row="true">
+    @* ---------------- Text ---------------- *@
+    <StyleFieldEditor Label=""
+                      Type="text"
+                      Value="@VsState.Info.Text"
+                      ValueChanged="v => VsState.UpdateText(v)"
+                      BorderColor="#0B849E"
+                      Placeholder="VS"/>
+</MudStack>
+
+@code {
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+    }
+
+    protected override void OnInitialized()
+    {
+        VsState.OnChange += RefreshUI;
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        VsState.OnChange -= RefreshUI;
+    }
+}

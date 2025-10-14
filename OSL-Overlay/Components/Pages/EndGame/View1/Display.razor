@@ -1,0 +1,36 @@
+@using OSL_Overlay.GameFlow.EndGame
+@inject EndGameState EndGameState
+
+<div class="end-game" style="background:@Info.Background; @Info.Border">
+    <div class="end-game timer" style="background:@Info.Background; @Info.Border">
+        <div class="end-game timer time">
+
+        </div>
+        <div class="end-game timer win">
+
+        </div>
+        <div class="end-game timer loss">
+
+        </div>
+        @* ---------------- Blue Team Info ---------------- *@
+        <TeamSlot Class="@Info.TimerTeamsHeadband.BlueTeam.Side"
+                  Team="@Info.TimerTeamsHeadband.BlueTeam" />
+
+        @* ---------------- Red Team Info ---------------- *@
+        <TeamSlot Class="@Info.TimerTeamsHeadband.RedTeam.Side"
+                  Team="@Info.TimerTeamsHeadband.RedTeam" />
+    </div>
+</div>
+
+
+@code {
+    private EndGameInfo Info => EndGameState.Info;
+    protected override void OnInitialized()
+    {
+        EndGameState.OnChange += async () => await InvokeAsync(StateHasChanged);
+    }
+    public void Dispose()
+    {
+        EndGameState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+    }
+}

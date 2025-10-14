@@ -4,8 +4,8 @@
 <div class="champion" style="@Pick.BorderImage;">
     @* ---------------- Player or champion picture ---------------- *@
     <div class="image-wrapper">
-        <Image Class="background" ImageUrl="@Pick.PlayerImage" />
-        <Image Class="background" ImageUrl="@Pick.ChampionImage" />
+        <Image Class="background" Img="new(Pick.PlayerImage)" />
+        <Image Class="background" Img="new(Pick.ChampionImage)" />
         @* ---------------- Piking or banning ---------------- *@
         @if (Pick.IsPicking)
         {
@@ -15,7 +15,7 @@
         @* ---------------- Lane ---------------- *@
         @if (Pick.ShowLane)
         {
-            <Image Class="overlay lane" ImageUrl="@Pick.LaneImage" />
+            <Image Class="overlay lane" Img="new(Pick.LaneImage)" />
         }
     </div>
 
