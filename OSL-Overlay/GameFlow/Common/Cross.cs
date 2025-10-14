@@ -2,7 +2,7 @@ namespace OSL_Overlay.GameFlow.Common
 {
     public class Cross
     {
-        public string Image { get; set; }
+        public Image Image { get; set; }
         public string GraphicLineColor { get; set; }
         public string GraphicCrossColor { get; set; }
         public string Width { get; set; }
@@ -10,7 +10,7 @@ namespace OSL_Overlay.GameFlow.Common
         public string Rotate { get; set; }
         public Cross()
         {
-            Image = string.Empty;
+            Image = new();
             GraphicLineColor = string.Empty;
             GraphicCrossColor = string.Empty;
             Width = string.Empty;
