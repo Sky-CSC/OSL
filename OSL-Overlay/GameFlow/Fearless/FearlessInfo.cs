@@ -56,14 +56,14 @@ namespace OSL_Overlay.GameFlow.Fearless
 
     public class Champion
     {
-        public string Image { get; set; }
+        public Image Image { get; set; }
         public string Border { get; set; }
         public Lane Lane { get; set; }
         public string Greyscale { get; set; }
         public Cross Cross { get; set; }
         public Champion()
         {
-            Image = string.Empty;
+            Image = new();
             Border = string.Empty;
             Lane = new Lane();
             Greyscale = string.Empty;
@@ -71,7 +71,7 @@ namespace OSL_Overlay.GameFlow.Fearless
         }
         public Champion(string image)
         {
-            Image = image;
+            Image = new(image);
             Border = string.Empty;
             Lane = new Lane();
             Greyscale = string.Empty;

@@ -50,11 +50,11 @@ namespace OSL_Overlay.GameFlow.Fearless
                 {
                     foreach (var champ in item[0].Champions)
                     {
-                        champ.Image = string.Empty;
+                        champ.Image.Path = string.Empty;
                     }
                     foreach (var champ in item[1].Champions)
                     {
-                        champ.Image = string.Empty;
+                        champ.Image.Path = string.Empty;
                     }
                 }
             }
