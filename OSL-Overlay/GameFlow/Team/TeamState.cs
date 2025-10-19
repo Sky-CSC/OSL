@@ -1,28 +1,63 @@
 using Newtonsoft.Json;
 using OSL_Overlay.GameFlow.ChampSelect;
+using OSL_Overlay.GameFlow.EndGame;
 
 namespace OSL_Overlay.GameFlow.Team
 {
+    /// <summary>
+    /// Team managements
+    /// </summary>
     public class TeamState
     {
+        /// <summary>
+        /// Blue team info
+        /// </summary>
         public TeamInfo BlueInfo { get; set; } = new();
+        /// <summary>
+        /// Red team info
+        /// </summary>
         public TeamInfo RedInfo { get; set; } = new();
+        /// <summary>
+        /// Blue team file
+        /// </summary>
         public string? BlueFile { get; set; }
+        /// <summary>
+        /// Red team file
+        /// </summary>
         public string? RedFile { get; set; }
+        /// <summary>
+        /// Display blue team custom names
+        /// </summary>
         public bool DisplayBlueCustomName { get; set; } = false;
+        /// <summary>
+        /// Display red team custom names
+        /// </summary>
         public bool DisplayRedCustomName { get; set; } = false;
 
+        /// <summary>
+        /// Champ select state for update team info
+        /// </summary>
         private readonly ChampSelectState ChampState;
+        private readonly EndGameState EndGameState;
 
-        public TeamState(ChampSelectState state)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="champSelectState"></param>
+        public TeamState(ChampSelectState champSelectState, EndGameState endGameState)
         {
-            ChampState = state;
+            ChampState = champSelectState;
+            EndGameState = endGameState;
         }
 
         private IWebHostEnvironment Env { get; set; } = default!;
 
         public event Action? OnChange;
 
+        /// <summary>
+        /// Load default teams information
+        /// </summary>
+        /// <param name="env"></param>
         public void LoadDefault(IWebHostEnvironment env)
         {
             Env = env;
@@ -37,6 +72,10 @@ namespace OSL_Overlay.GameFlow.Team
 
         public void NotifyChanged() => OnChange?.Invoke();
 
+        /// <summary>
+        /// Display or hide custom names for blue team
+        /// </summary>
+        /// <param name="display"></param>
         public void DisplayCustomBlueName(bool display)
         {
             DisplayBlueCustomName = display;
@@ -46,6 +85,11 @@ namespace OSL_Overlay.GameFlow.Team
             BlueInfo.Adc.ShowCustomName = display;
             BlueInfo.Supp.ShowCustomName = display;
         }
+
+        /// <summary>
+        /// Display or hide custom names for red team
+        /// </summary>
+        /// <param name="display"></param>
         public void DisplayCustomRedName(bool display)
         {
             DisplayRedCustomName = display;
@@ -56,6 +100,10 @@ namespace OSL_Overlay.GameFlow.Team
             RedInfo.Supp.ShowCustomName = display;
         }
 
+        /// <summary>
+        /// Select a file for blue team
+        /// </summary>
+        /// <param name="filePath"></param>
         public void FileSelectedBlue(string filePath)
         {
             string? json = OSL_Utils.File.Read(filePath);
@@ -67,6 +115,7 @@ namespace OSL_Overlay.GameFlow.Team
             {
                 // Update champ state
                 ChampState.UpdateBlueTeamInfo(info);
+                EndGameState.UpdateBlueTeamInfo(info);
                 BlueInfo = info;
             }
             BlueFile = filePath;
@@ -74,6 +123,33 @@ namespace OSL_Overlay.GameFlow.Team
             NotifyChanged();
         }
 
+        /// <summary>
+        /// Select a file for red team
+        /// </summary>
+        /// <param name="filePath"></param>
+        public void FileSelectedRed(string filePath)
+        {
+            string? json = OSL_Utils.File.Read(filePath);
+            if (json == null)
+                return;
+
+            var info = JsonConvert.DeserializeObject<TeamInfo>(json);
+            if (info != null)
+            {
+                // Update champ state
+                ChampState.UpdateRedTeamInfo(info);
+                EndGameState.UpdateRedTeamInfo(info);
+                RedInfo = info;
+            }
+            RedFile = filePath;
+
+            NotifyChanged();
+        }
+
+        /// <summary>
+        /// Save blue team info to a file
+        /// </summary>
+        /// <param name="filePath"></param>
         public void SaveBlue(string filePath)
         {
             if (!string.IsNullOrWhiteSpace(BlueInfo.Name))
@@ -99,11 +175,16 @@ namespace OSL_Overlay.GameFlow.Team
 
                 // Update champ state
                 ChampState.UpdateBlueTeamInfo(BlueInfo);
+                EndGameState.UpdateBlueTeamInfo(BlueInfo);
 
                 NotifyChanged();
             }
         }
 
+        /// <summary>
+        /// Save red team info to a file
+        /// </summary>
+        /// <param name="filePath"></param>
         public void SaveRed(string filePath)
         {
             if (!string.IsNullOrWhiteSpace(RedInfo.Name))
@@ -129,29 +210,15 @@ namespace OSL_Overlay.GameFlow.Team
 
                 // Update champ state
                 ChampState.UpdateRedTeamInfo(RedInfo);
+                EndGameState.UpdateRedTeamInfo(RedInfo);
 
                 NotifyChanged();
             }
         }
 
-        public void FileSelectedRed(string filePath)
-        {
-            string? json = OSL_Utils.File.Read(filePath);
-            if (json == null)
-                return;
-
-            var info = JsonConvert.DeserializeObject<TeamInfo>(json);
-            if (info != null)
-            {
-                // Update champ state
-                ChampState.UpdateRedTeamInfo(info);
-                RedInfo = info;
-            }
-            RedFile = filePath;
-
-            NotifyChanged();
-        }
-
+        /// <summary>
+        /// Swap blue and red teams
+        /// </summary>
         public void SwapTeams()
         {
             string? blue = BlueFile;
@@ -163,6 +230,13 @@ namespace OSL_Overlay.GameFlow.Team
             }
         }
 
+        /// <summary>
+        /// Copy a file from temp to the right directory
+        /// </summary>
+        /// <param name="relativeSourceFile"></param>
+        /// <param name="relativeDestDir"></param>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         private string CopyFromTemp(string relativeSourceFile, string relativeDestDir, string fileName)
         {
             if (string.IsNullOrWhiteSpace(relativeSourceFile))

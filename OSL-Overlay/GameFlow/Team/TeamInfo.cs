@@ -1,5 +1,8 @@
 namespace OSL_Overlay.GameFlow.Team
 {
+    /// <summary>
+    /// Team schema
+    /// </summary>
     public class TeamInfo
     {
         public string Name { get; set; }
@@ -25,6 +28,9 @@ namespace OSL_Overlay.GameFlow.Team
         }
     }
 
+    /// <summary>
+    /// Lane schema
+    /// </summary>
     public class Lane
     {
         public bool ShowCustomName { get; set; }
