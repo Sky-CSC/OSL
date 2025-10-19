@@ -1,5 +1,4 @@
 @page "/phase/"
-@using Newtonsoft.Json
 @using OSL_Overlay.GameFlow.Phase
 @inject PhaseState PhaseState
 
@@ -20,10 +19,32 @@
     @* ---------------- Text ---------------- *@
     <StyleFieldEditor Label=""
                       Type="text"
-                      Value="@PhaseState.Info.Text"
-                      ValueChanged="v => PhaseState.UpdateText(v)"
+                      Value="@PhaseState.Info.Phase.Txt"
+                      ValueChanged="v => PhaseState.UpdatePhaseText(v)"
                       BorderColor="#0B849E"
                       Placeholder="Swiss Group - Round 1" />
+</MudStack>
+<br />
+<MudText Id="text" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Event text</MudText>
+<MudStack Row="true">
+    @* ---------------- Text ---------------- *@
+    <StyleFieldEditor Label=""
+                      Type="text"
+                      Value="@PhaseState.Info.Event.Txt"
+                      ValueChanged="v => PhaseState.UpdateEventText(v)"
+                      BorderColor="#0B849E"
+                      Placeholder="2025 OcciLan" />
+</MudStack>
+<br />
+<MudText Id="text" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Date text</MudText>
+<MudStack Row="true">
+    @* ---------------- Text ---------------- *@
+    <StyleFieldEditor Label=""
+                      Type="text"
+                      Value="@PhaseState.Info.Date.Txt"
+                      ValueChanged="v => PhaseState.UpdateDateText(v)"
+                      BorderColor="#0B849E"
+                      Placeholder="24 Oct" />
 </MudStack>
 
 @code{
