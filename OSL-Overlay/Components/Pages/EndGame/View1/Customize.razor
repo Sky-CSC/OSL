@@ -1,5 +1,82 @@
-<h3>Customize</h3>
+@page "/endgame/view1/custom"
+@using OSL_Overlay.GameFlow.EndGame
+@inject EndGameView1State ViewState
+<link rel="stylesheet" href="@Assets["css/endGame/View1.css"]" />
 
-@code {
 
+@* ---------------- End game View1 management ---------------- *@
+<PageTitle>EndGame - View1 - Customize</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>End Game management</b></MudText>
+<br />
+
+@* ---------------- View1 link ---------------- *@
+<SwitchButton Text="Link to view1"
+              Icon="@Icons.Material.Filled.InsertLink"
+              BackgroundColor="@Colors.BlueGray.Darken4"
+              HoverBackgroundColor="@Colors.BlueGray.Darken2"
+              TextColor="#FF0000"
+              Href="endgame/view1"
+              Target="_blank" />
+<br />
+@* ---------------- Choose file style to use ---------------- *@
+<StyleManager RelativePath="styles/endgame/view1"
+              CurrentFile="@ViewState.CurrentFile"
+              OnSave="HandleSave"
+              OnFileSelected="HandleFileSelected" />
+<br />
+
+
+
+
+
+@code{
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+        ViewState.NotifyStateChanged();
+    }
+
+    protected override void OnInitialized()
+    {
+        ViewState.OnChange += async () => await InvokeAsync(StateHasChanged);
+        ViewState.SyncFromGlobal();
+    }
+
+    public void Dispose()
+    {
+        ViewState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Save file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleSave(string filePath)
+    {
+        // Sauvegarde dans un NOUVEAU fichier
+        ViewState.SaveStyle(filePath);
+        ViewState.CurrentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Select file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleFileSelected(string filePath)
+    {
+        // Chargement du style existant
+        ViewState.LoadStyle(filePath);
+        ViewState.CurrentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
 }

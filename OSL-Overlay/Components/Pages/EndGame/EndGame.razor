@@ -2,6 +2,24 @@
 @using OSL_Overlay.GameFlow.EndGame
 @inject EndGameState EndGameState
 
+
+<StyleFieldEditor Label="Match Id"
+                  Type="text"
+                  Value="@_idMatch"
+                  ValueChanged="v => OnStyleChanged(val => _idMatch = val, v)"
+                  HelperText="Just Id not region prefix" />
+
+<SwitchButton Icon="@Icons.Material.Filled.AddBox"
+              Text="@($"Set match {_idMatch}")"
+              OnClick="() => SetIdMatch()"
+              BackgroundColor="@Colors.Teal.Darken4"
+              HoverBackgroundColor="@Colors.Teal.Darken2"
+              TextColor="#ffffff"
+              MaxWidth="200px"
+              MaxHeight="60px"
+              BorderRadius="8px"
+              FontSize="16px" />
+
 <select @onchange="OnSelectChange" class="border rounded p-1">
     <option value="">-- Sélectionne une statistique --</option>
     @foreach (var prop in EndGameState.ParticipantProperties)
@@ -29,7 +47,10 @@
     </div>
 </div>
 
+
 @code {
+    private string _idMatch = "7550999924";
+
     protected override void OnInitialized()
     {
         EndGameState.OnChange += async () => await InvokeAsync(StateHasChanged);
@@ -48,5 +69,24 @@
             EndGameState.UpdateTotalInfo(selected);
             StateHasChanged();
         }
+    }
+
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+        RefreshUI();
+    }
+
+    public async Task SetIdMatch()
+    {
+        await EndGameState.CustomSetMatch(Convert.ToInt64(_idMatch));
+        await EndGameState.CustomSetTimeline(Convert.ToInt64(_idMatch));
+
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+        EndGameState.NotifyStateChanged();
     }
 }

@@ -1,30 +1,81 @@
+@page "/endgame/view1"
+@layout Layout.EmptyLayout
 @using OSL_Overlay.GameFlow.EndGame
-@inject EndGameState EndGameState
+@inject EndGameView1State EndGameState
+<link rel="stylesheet" href="@Assets["css/endgame/View1.css"]" />
 
-<div class="end-game" style="background:@Info.Background; @Info.Border">
-    <div class="end-game timer" style="background:@Info.Background; @Info.Border">
-        <div class="end-game timer time">
 
-        </div>
-        <div class="end-game timer win">
-
-        </div>
-        <div class="end-game timer loss">
-
-        </div>
+<div class="end-game" style="background:@Info.Background; @Info.Border;">
+    <div class="headband-timer" style="background:@Info.TimerTeamsHeadband.Background; @Info.TimerTeamsHeadband.Border;">
         @* ---------------- Blue Team Info ---------------- *@
         <TeamSlot Class="@Info.TimerTeamsHeadband.BlueTeam.Side"
                   Team="@Info.TimerTeamsHeadband.BlueTeam" />
+        @if (Info.TimerTeamsHeadband.BlueTeam.Win)
+        {
+            @* ---------------- Win text ---------------- *@
+            <Txt Class="headband win" Text="@Info.TimerTeamsHeadband.WinText" />
+        }
+        else {
+             @* ---------------- Loss text ---------------- *@
+            <Txt Class="headband win" Text="@Info.TimerTeamsHeadband.LossText" />
+        }
+        
+
+        @* ---------------- Game time ---------------- *@
+        <GameTime Class="timer-text"
+                  Title="@Info.TimerTeamsHeadband.Title"
+                  Timer="@Info.TimerTeamsHeadband.Timer" />
+
+       @if (Info.TimerTeamsHeadband.RedTeam.Win)
+        {
+            @* ---------------- Win text ---------------- *@
+            <Txt Class="headband win" Text="@Info.TimerTeamsHeadband.WinText" />
+        }
+        else {
+             @* ---------------- Loss text ---------------- *@
+            <Txt Class="headband win" Text="@Info.TimerTeamsHeadband.LossText" />
+        }
 
         @* ---------------- Red Team Info ---------------- *@
         <TeamSlot Class="@Info.TimerTeamsHeadband.RedTeam.Side"
                   Team="@Info.TimerTeamsHeadband.RedTeam" />
     </div>
+    <div class="game-info" style="background:@Info.StatsBackground; @Info.StatsBorder">
+        <div class="game-stats">
+            <Txt Class="game-stats-title" Text="@Info.GameStats.Title" />
+            <StatTextSlot Class="stat-text-slot kda" Stat="@Info.GameStats.Kda" />
+            <StatTextSlot Class="stat-text-slot golds" Stat="@Info.GameStats.Golds" />
+            <StatTextSlot Class="stat-text-slot towers" Stat="@Info.GameStats.Towers" />
+            <StatImageSlot Class="stat-image-slot voidgrubs" Stat="@Info.GameStats.VoidGrubs" />
+            <StatImageSlot Class="stat-image-slot herald" Stat="@Info.GameStats.Herald" />
+            <StatImageSlot Class="stat-image-slot atakhan" Stat="@Info.GameStats.Atakhan" />
+            <StatDragonSlot Class="stat-image-slot dragons" Stat="@Info.GameStats.Drakes" Events="@Info.Golds.Events" />
+            <StatImageSlot Class="stat-image-slot elders" Stat="@Info.GameStats.Elders" />
+            <StatImageSlot Class="stat-image-slot barons" Stat="@Info.GameStats.Barons" />
+            <BanEndGameSlot Class="stat-image-slot bans" Ban="@Info.Bans" />
+        </div>
+        <div class="game-champion-stats" style="background:@Info.ChampionStats.Background; @Info.ChampionStats.Border;">
+            <Txt Class="champion-stat-title" Text="@Info.ChampionStats.Title" />
+            <div class="game-champion-stats-content">
+                <StatChampionSlot Class="champion-stat blue-team" ChampionStat="@Info.ChampionStats.BlueTeam" ForMax="@Info.ChampionStats.RedTeam" />
+                <StatChampionSlot Class="champion-stat red-team" ChampionStat="@Info.ChampionStats.RedTeam" ForMax="@Info.ChampionStats.BlueTeam" />
+            </div>
+        </div>
+        <div class="game-golds">
+            <Txt Class="game-golds-title" Text="@Info.Golds.Title" />
+            <GoldsEndGameSlot Class="game-golds-info" Golds="@Info.Golds" Time="@Info.TimerTeamsHeadband.Timer.Txt" />
+        </div>
+    </div>
+    <div class="game-event-info" style="background:@Info.EventInfo.Background; @Info.EventInfo.Border">
+        <Txt Class="game-event-info-event" Text="@Info.EventInfo.Event" />
+        <Txt Class="game-event-info-phase" Text="@Info.EventInfo.Phase" />
+        <Txt Class="game-event-info-date" Text="@Info.EventInfo.Date" />
+    </div>
 </div>
 
 
 @code {
-    private EndGameInfo Info => EndGameState.Info;
+    private EndGameInfo Info => EndGameState.LocalInfo;
     protected override void OnInitialized()
     {
         EndGameState.OnChange += async () => await InvokeAsync(StateHasChanged);
