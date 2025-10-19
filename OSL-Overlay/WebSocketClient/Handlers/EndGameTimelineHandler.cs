@@ -12,23 +12,25 @@ namespace OSL_Overlay.WebSocketClient.Handlers
     {
         private static readonly Logger _logger = new("EndGameTimelineHandler");
 
+        private readonly IServiceProvider _serviceProvider;
+
+        public EndGameTimelineHandler(IServiceProvider serviceProvider)
+        {
+            _serviceProvider = serviceProvider;
+        }
+
         /// <inheritdoc />
         public string Type => "endGameTimeline";
-
-        private readonly EndGameState _state;
-
-        public EndGameTimelineHandler(EndGameState state)
-        {
-            _state = state;
-        }
 
         /// <inheritdoc />
         public Task HandleAsync(JToken jsonData)
         {
+            var endGameState = _serviceProvider.GetRequiredService<EndGameState>();
+
             var data = jsonData.ToObject<TimelineDto>();
             _logger.Log(LoggingLevel.INFO, "HandleAsync()", $"🎯 EndGame timeline management");
-            //if (data != null)
-            //    _state.SetTimeline(data);
+            if (data != null)
+                endGameState.SetTimeline(data);
             return Task.CompletedTask;
         }
     }
