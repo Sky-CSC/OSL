@@ -1,5 +1,8 @@
 namespace OSL_Overlay.GameFlow.Common
 {
+    /// <summary>
+    /// Text schema
+    /// </summary>
     public class Text
     {
         public string Txt { get; set; }
@@ -46,8 +49,17 @@ namespace OSL_Overlay.GameFlow.Common
             Border = string.Empty;
             Align = string.Empty;
         }
+        public Text(string txt)
+        {
+            Txt = txt;
+            Font = string.Empty;
+            Color = string.Empty;
+            Background = string.Empty;
+            Border = string.Empty;
+            Align = string.Empty;
+        }
 
-        public Text CLone()
+        public Text Clone()
         {
             return new Text
             {

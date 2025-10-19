@@ -1,5 +1,8 @@
 namespace OSL_Overlay.GameFlow.Common
 {
+    /// <summary>
+    /// Cross schema
+    /// </summary>
     public class Cross
     {
         public Image Image { get; set; }

@@ -2,6 +2,9 @@ using OSL_Overlay.GameFlow.Bo;
 
 namespace OSL_Overlay.GameFlow.Common
 {
+    /// <summary>
+    /// Team schema
+    /// </summary>
     public class Team
     {
         public string Side { get; set; }

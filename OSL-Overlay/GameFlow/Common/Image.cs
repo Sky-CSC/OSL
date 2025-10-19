@@ -1,5 +1,8 @@
 namespace OSL_Overlay.GameFlow.Common
 {
+    /// <summary>
+    /// Image schema
+    /// </summary>
     public class Image
     {
         public string Path { get; set; }
