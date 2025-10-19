@@ -48,6 +48,27 @@ namespace OSL_CDragon
             return filePath;
         }
 
+        public string GetChampionTile(int championId) // A faire
+        {
+            if (championId == 0)
+                return string.Empty;
+            var champion = GetChampion(championId);
+            if (champion == null)
+                return string.Empty;
+            var skin = GetBaseSkin(champion);
+            string[] path = skin.Tile.Split("/wwwroot");
+            string filePath = path[0] + path[1];
+            return filePath;
+        }
+
+        public Skin GetBaseSkin(Champion champion)
+        {
+            var skin = champion.Skins.FirstOrDefault(skin => skin.IsBase);
+            if (skin == null)
+                return new Skin();
+            return skin;
+        }
+
         public List<Champion> GetAllChampions()
         {
             return _data.Patchs[_indexPatch].Regions[_indexRegion].Champions;
