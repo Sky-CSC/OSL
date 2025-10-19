@@ -1,8 +1,12 @@
 using OSL_Overlay.GameFlow.Bo;
 using OSL_Overlay.GameFlow.Common;
+using OSL_Overlay.GameFlow.Phase;
 
 namespace OSL_Overlay.GameFlow.ChampSelect
 {
+    /// <summary>
+    /// Champ select schema
+    /// </summary>
     public class ChampSelectInfo
     {
         public string Background { get; set; }
@@ -11,7 +15,7 @@ namespace OSL_Overlay.GameFlow.ChampSelect
         public ChampSelect.Team RedTeam { get; set; }
         public Patch Patch { get; set; }
         public Timer CommonTimer { get; set; }
-        public Text Phase { get; set; }
+        public PhaseInfo PhaseInfo { get; set; }
         public Text Vs { get; set; }
 
         public ChampSelectInfo(int nbBluePlayers, int nbRedPlayers, int nbBlueBans, int nbRedBans)
@@ -22,7 +26,7 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             TeamsBackground = string.Empty;
             Patch = new();
             CommonTimer = new();
-            Phase = new();
+            PhaseInfo = new();
             Vs = new();
         }
 
@@ -34,7 +38,7 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             RedTeam = new();
             Patch = new();
             CommonTimer = new();
-            Phase = new();
+            PhaseInfo = new();
             Vs = new();
         }
 
@@ -48,7 +52,7 @@ namespace OSL_Overlay.GameFlow.ChampSelect
                 TeamsBackground = string.Empty;
                 Patch = new();
                 CommonTimer = new();
-                Phase = new();
+                PhaseInfo = new();
                 Vs = new();
             }
         }
