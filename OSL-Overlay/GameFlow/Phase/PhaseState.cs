@@ -1,26 +1,65 @@
 using OSL_Overlay.GameFlow.ChampSelect;
+using OSL_Overlay.GameFlow.EndGame;
 
 namespace OSL_Overlay.GameFlow.Phase
 {
+    /// <summary>
+    /// Phase management
+    /// </summary>
     public class PhaseState
     {
+        /// <summary>
+        /// Phase information
+        /// </summary>
         public PhaseInfo Info { get; private set; } = new();
+        /// <summary>
+        /// Champ select state
+        /// </summary>
         private readonly ChampSelectState _champSelectState;
+        private readonly EndGameState _endGameState;
 
         public event Action? OnChange;
-        public PhaseState(ChampSelectState champSelectState)
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="champSelectState"></param>
+        public PhaseState(ChampSelectState champSelectState, EndGameState endGameState)
         {
             _champSelectState = champSelectState;
-            Info.Text = "Swiss Group - Round 1";
+            _endGameState = endGameState;
+            Info.Phase.Txt = "Swiss Group - Round 1";
+            Info.Event.Txt = "2025 OcciLan#7";
+            Info.Date.Txt = "24 Oct";
             _champSelectState.UpdateInfoPhase(Info);
+            _endGameState.UpdateInfoPhase(Info);
         }
 
         public void NotifyChanged() => OnChange?.Invoke();
 
-        public void UpdateText(string text)
+        /// <summary>
+        /// Update phase text
+        /// </summary>
+        /// <param name="text"></param>
+        public void UpdatePhaseText(string text)
         {
-            Info.Text = text;
+            Info.Phase.Txt = text;
             _champSelectState.UpdateInfoPhase(Info);
+            _endGameState.UpdateInfoPhase(Info);
+            NotifyChanged();
+        }
+        public void UpdateEventText(string text)
+        {
+            Info.Event.Txt = text;
+            _champSelectState.UpdateInfoPhase(Info);
+            _endGameState.UpdateInfoPhase(Info);
+            NotifyChanged();
+        }
+        public void UpdateDateText(string text)
+        {
+            Info.Date.Txt = text;
+            _champSelectState.UpdateInfoPhase(Info);
+            _endGameState.UpdateInfoPhase(Info);
             NotifyChanged();
         }
     }

@@ -1,5 +1,8 @@
 namespace OSL_Overlay.GameFlow.Patch
 {
+    /// <summary>
+    /// Patch information
+    /// </summary>
     public class PatchInfo
     {
         public string Text { get; set; }

@@ -1,11 +1,21 @@
+using OSL_Overlay.GameFlow.Common;
+
 namespace OSL_Overlay.GameFlow.Phase
 {
+    /// <summary>
+    /// Phase information
+    /// </summary>
     public class PhaseInfo
     {
-        public string Text { get; set; }
+        public Text Event { get; set; }
+        public Text Phase { get; set; }
+        public Text Date { get; set; }
+
         public PhaseInfo()
         {
-            Text = string.Empty;
+            Event = new();
+            Phase = new();
+            Date = new();
         }
     }
 }
