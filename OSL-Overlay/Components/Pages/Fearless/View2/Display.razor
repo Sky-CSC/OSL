@@ -1,0 +1,106 @@
+@page "/fearless/view2"
+@using OSL_Overlay.GameFlow.Fearless
+@layout Layout.EmptyLayout
+@inject FearlessView2State ViewState
+
+<link rel="stylesheet" href="@Assets["css/fearless/View2.css"]" />
+
+<PageTitle>Fearless - View2</PageTitle>
+
+@if (Info.Count > 0)
+{
+    <div class="fearless">
+        <Txt Class="fearless-text" Text="new(FearlessText)" />
+        <div class="fearless-content">
+            <div class="fearless-image">
+                <Image Class="image-lane" Img="new(TopLaneImage)"/>
+                @foreach (var match in Info)
+                {
+                    <div class="images">
+                        <Image Class="image-top" Img="@match[0].Champions[0].Image"/>
+                        <Image Class="image-top" Img="@match[1].Champions[0].Image"/>
+                    </div>
+                }
+            </div>
+            <div class="fearless-image">
+                <Image Class="image-lane" Img="new(JungleLaneImage)"/>
+                @foreach (var match in Info)
+                {
+                    <div class="images">
+                        <Image Class="image-jungle" Img="@match[0].Champions[1].Image"/>
+                        <Image Class="image-jungle" Img="@match[1].Champions[1].Image"/>
+                    </div>
+                }
+            </div>
+            <div class="fearless-image">
+                <Image Class="image-lane" Img="new(MidLaneImage)"/>
+                @foreach (var match in Info)
+                {
+                    <div class="images">
+                        <Image Class="image-mid" Img="@match[0].Champions[2].Image"/>
+                        <Image Class="image-mid" Img="@match[1].Champions[2].Image"/>
+                    </div>
+                }
+            </div>
+            <div class="fearless-image">
+                <Image Class="image-lane" Img="new(AdcLaneImage)"/>
+                @foreach (var match in Info)
+                {
+                    <div class="images">
+                        <Image Class="image-adc" Img="@match[0].Champions[3].Image"/>
+                        <Image Class="image-adc" Img="@match[1].Champions[3].Image"/>
+                    </div>
+                }
+            </div>
+            <div class="fearless-image">
+                <Image Class="image-lane" Img="new(SuppLaneImage)"/>
+                @foreach (var match in Info)
+                {
+                    <div class="images">
+                        <Image Class="image-supp" Img="@match[0].Champions[4].Image"/>
+                        <Image Class="image-supp" Img="@match[1].Champions[4].Image"/>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<List<FearlessInfo>> Info => ViewState.LocalFearlessList;
+
+    private string TopLaneImage = "assets/positions/top/top_hover_white_white.png";
+    private string JungleLaneImage = "assets/positions/jungle/jungle_white.png";
+    private string MidLaneImage = "assets/positions/mid/mid_hover_white_white.png";
+    private string AdcLaneImage = "assets/positions/adc/adc_hover_white_white.png";
+    private string SuppLaneImage = "assets/positions/support/supp_white.png";
+
+    private string FearlessText = "Series Ban";
+
+    protected override void OnParametersSet()
+    {
+        LoadFearless();
+    }
+
+    private void LoadFearless()
+    {
+        
+    }
+
+    protected override void OnInitialized()
+    {
+        ViewState.OnChange += StateHasChangedSafe;
+    }
+
+    public void Dispose()
+    {
+        ViewState.OnChange -= StateHasChangedSafe;
+    }
+
+    private void StateHasChangedSafe()
+    {
+        // recharge la donnée puis rafraîchit l’UI
+        LoadFearless();
+        InvokeAsync(StateHasChanged);
+    }
+}

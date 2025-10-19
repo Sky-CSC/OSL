@@ -1,0 +1,89 @@
+@page "/fearless/view2/customize"
+@using OSL_Overlay.GameFlow.Fearless
+@inject FearlessView2State ViewState
+
+<PageTitle>Fearless - View2 - Customize</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Fearless View1 Customize</b></MudText>
+<br />
+
+<SwitchButton Text="@($"View 2")"
+              Icon="@Icons.Material.Filled.InsertLink"
+              BackgroundColor="@Colors.BlueGray.Darken4"
+              HoverBackgroundColor="@Colors.BlueGray.Darken2"
+              TextColor="#FF0000"
+              Href="@($"/fearless/view2")"
+              Target="_blank" />
+
+@* ---------------- Choose file style to use ---------------- *@
+<StyleManager RelativePath="styles/fearless/view2"
+              CurrentFile="@ViewState.CurrentFile"
+              OnSave="HandleSave"
+              OnFileSelected="HandleFileSelected"
+              FilePrefix="fearless" />
+
+
+<br />
+<MudText Id="custom" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Fearless customize</MudText>
+
+@code {
+    private List<List<FearlessInfo>> LocalFearlessList => ViewState.LocalFearlessList;
+
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+        RefreshUI();
+    }
+    private void OnStyleChanged(Action<int> setter, string newValue)
+    {
+        setter(Convert.ToInt32(newValue));
+        RefreshUI();
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+        ViewState.NotifyStateChanged();
+    }
+
+    protected override void OnInitialized()
+    {
+        ViewState.OnChange += async () => await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        ViewState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Save file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleSave(string filePath)
+    {
+        ViewState.SaveStyle(filePath);
+        ViewState.CurrentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Select file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleFileSelected(string filePath)
+    {
+        // Chargement du style existant
+        ViewState.LoadStyle(filePath);
+        ViewState.CurrentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
+}
