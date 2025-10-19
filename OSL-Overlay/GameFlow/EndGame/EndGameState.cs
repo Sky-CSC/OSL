@@ -1,32 +1,65 @@
+using MudBlazor;
 using Newtonsoft.Json;
 using OSL_CDragon;
 using OSL_Overlay.GameFlow.Bo;
 using OSL_Overlay.GameFlow.Common;
+using OSL_Overlay.GameFlow.Phase;
+using OSL_Overlay.GameFlow.Team;
 using OSL_RGDP.Schema.Riot;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using static OSL_Overlay.GameFlow.EndGame.EndGameInfo;
+using static OSL_Overlay.GameFlow.EndGame.EndGameStateExtensions;
+using WebSocket = OSL_Overlay.WebSocketClient.WebSocketClient;
 
 namespace OSL_Overlay.GameFlow.EndGame
 {
+    /// <summary>
+    /// End game management
+    /// </summary>
     public class EndGameState
     {
+        /// <summary>
+        /// End game info to display
+        /// </summary>
         public EndGameInfo Info { get; private set; } = new();
+        /// <summary>
+        /// Match data from Riot API
+        /// </summary>
         private MatchDto MatchDto { get; set; } = new();
+        /// <summary>
+        /// Timeline data from Riot API
+        /// </summary>
         private TimelineDto TimelineDto { get; set; } = new();
-
+        /// <summary>
+        /// Properties of ParticipantDto that can be displayed in Total Info
+        /// </summary>
         public List<string> ParticipantProperties { get; private set; } = new();
-
+        /// <summary>
+        /// Cache of PropertyInfo for ParticipantDto to improve performance
+        /// </summary>
         private readonly Dictionary<string, PropertyInfo> _propertyCache = new();
 
+        /// <summary>
+        /// WebSocket client to communicate with the WebSocket server
+        /// </summary>
+        private readonly WebSocket _client;
+        /// <summary>
+        /// CDragon instance to get static data
+        /// </summary>
         private readonly CDragon _cdragon;
+
         public event Action? OnChange;
 
-        public EndGameState(CDragon cdragon)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="cdragon"></param>
+        public EndGameState(WebSocket client, CDragon cdragon)
         {
+            _client = client;
             _cdragon = cdragon;
             LoadParticipantProperties();
-            // Load file for testing
+            // Load default data from local files for initialization
             MatchDto matchDto = null;
             TimelineDto timelineDto = null;
             string filePathMatch = "./GameFlow/EndGame/MatchDto.json";
@@ -57,23 +90,28 @@ namespace OSL_Overlay.GameFlow.EndGame
         /// <param name="matchDto"></param>
         public void SetMatch(MatchDto matchDto)
         {
+            MatchDto = new();
             MatchDto = matchDto;
             UpdateTimer();
             UpdateWin();
             UpdateParticipantsStats();
             UpdateBans();
             UpdateTotalInfo("TotalDamageDealtToChampions");
+            NotifyStateChanged();
         }
 
         /// <summary>
         /// Update curent timeline and update game stats and golds
         /// </summary>
         /// <param name="timelineDto"></param>
-        private void SetTimeline(TimelineDto timelineDto)
+        public void SetTimeline(TimelineDto timelineDto)
         {
+            TimelineDto = new();
             TimelineDto = timelineDto;
             UpdateGolds();
             UpdateEliteMonterStats();
+            SortEventsByTimestamp();
+            NotifyStateChanged();
         }
 
         /// <summary>
@@ -126,8 +164,8 @@ namespace OSL_Overlay.GameFlow.EndGame
             foreach (var (key, data) in baseStats)
             {
                 data.statText.Title.Txt = key;
-                data.statText.BlueTeam.Txt = blueTotals[key].ToString();
-                data.statText.RedTeam.Txt = redTotals[key].ToString();
+                data.statText.BlueTeam.Txt = CalculateStat(blueTotals[key].ToString());
+                data.statText.RedTeam.Txt = CalculateStat(redTotals[key].ToString());
             }
             UpdateGameStatsKda(kills, deaths, assists);
         }
@@ -140,7 +178,7 @@ namespace OSL_Overlay.GameFlow.EndGame
             var eliteStats = new Dictionary<string, (StatImage statImage, string displayName)>
             {
                 ["HORDE"] = (Info.GameStats.VoidGrubs, "Void Grubs"),
-                ["RIFTHERALD"] = (Info.GameStats.Herald, "Heralds"),
+                ["RIFTHERALD"] = (Info.GameStats.Herald, "Herald"),
                 ["ATAKHAN"] = (Info.GameStats.Atakhan, "Atakhan"),
                 ["ELDER_DRAGON"] = (Info.GameStats.Elders, "Elders"),
                 ["BARON_NASHOR"] = (Info.GameStats.Barons, "Barons"),
@@ -162,14 +200,19 @@ namespace OSL_Overlay.GameFlow.EndGame
                 {
                     if (ev.Type != "ELITE_MONSTER_KILL") continue;
 
-                    if (eliteStats.ContainsKey(ev.MonsterType))
+                    string key = ev.MonsterType;
+
+                    if (ev.MonsterType == "DRAGON")
+                        key = ev.MonsterSubType;
+
+                     if (eliteStats.ContainsKey(key))
                     {
                         if (ev.KillerTeamId == 100)
-                            blueMonsters[ev.MonsterType]++;
+                            blueMonsters[key]++;
                         else
-                            redMonsters[ev.MonsterType]++;
+                            redMonsters[key]++;
 
-                        Info.Golds.Events.Add(new(ev.MonsterType, ev.KillerTeamId,ev.Timestamp));
+                        Info.Golds.Events.Add(new(key, ev.KillerTeamId,ev.Timestamp));
                     }
                 }
             }
@@ -177,11 +220,16 @@ namespace OSL_Overlay.GameFlow.EndGame
             foreach (var (key, data) in eliteStats)
             {
                 data.statImage.Title.Txt = data.displayName;
-                data.statImage.NbBlueTeam = blueMonsters[key].ToString();
-                data.statImage.NbRedTeam = redMonsters[key].ToString();
+                data.statImage.NbBlueTeam = blueMonsters[key];
+                data.statImage.NbRedTeam = redMonsters[key];
             }
 
             EliteMonsterDragon();
+        }
+
+        public void SortEventsByTimestamp()
+        {
+            Info.Golds.Events = [.. Info.Golds.Events.OrderByDescending(e => e.Timetamps)];
         }
 
         /// <summary>
@@ -190,8 +238,8 @@ namespace OSL_Overlay.GameFlow.EndGame
         private void UpdateGameStatsKda(StatText k, StatText d, StatText a)
         {
             Info.GameStats.Kda.Title.Txt = "KDA";
-            Info.GameStats.Kda.BlueTeam.Txt = $"{k.BlueTeam}/{d.BlueTeam}/{a.BlueTeam}";
-            Info.GameStats.Kda.RedTeam.Txt = $"{k.RedTeam}/{d.RedTeam}/{a.RedTeam}";
+            Info.GameStats.Kda.BlueTeam.Txt = $"{k.BlueTeam.Txt}/{d.BlueTeam.Txt}/{a.BlueTeam.Txt}";
+            Info.GameStats.Kda.RedTeam.Txt = $"{k.RedTeam.Txt}/{d.RedTeam.Txt}/{a.RedTeam.Txt}";
         }
 
         /// <summary>
@@ -248,6 +296,7 @@ namespace OSL_Overlay.GameFlow.EndGame
         /// </summary>
         private void UpdateGolds()
         {
+            Info.Golds.Events = [];
             foreach (var frame in TimelineDto.Info.Frames)
             {
                 int blueGolds = 0;
@@ -309,11 +358,15 @@ namespace OSL_Overlay.GameFlow.EndGame
 
                 if (player.TeamId == 100)
                 {
+                    Info.ChampionStats.BlueTeam[indexBlue].Image.Path = _cdragon.GetChampionTile(player.ChampionId);
+                    Info.ChampionStats.BlueTeam[indexBlue].Name.Txt = player.RiotIdGameName;
                     Info.ChampionStats.BlueTeam[indexBlue].Stat.Txt = value;
                     indexBlue++;
                 }
                 else
                 {
+                    Info.ChampionStats.RedTeam[indexRed].Image.Path = _cdragon.GetChampionTile(player.ChampionId);
+                    Info.ChampionStats.RedTeam[indexRed].Name.Txt = player.RiotIdGameName;
                     Info.ChampionStats.RedTeam[indexRed].Stat.Txt = value;
                     indexRed++;
                 }
@@ -384,15 +437,98 @@ namespace OSL_Overlay.GameFlow.EndGame
             NotifyStateChanged();
         }
 
-        //Convert value to px 
+        public void UpdateBlueTeamInfo(TeamInfo info)
+        {
+            Info.TimerTeamsHeadband.BlueTeam.Name.Txt = info.Name;
+            Info.TimerTeamsHeadband.BlueTeam.Tag.Txt = info.Tag;
+            Info.TimerTeamsHeadband.BlueTeam.Logo = new(info.Logo);
+            NotifyStateChanged();
+        }
+
+        public void UpdateRedTeamInfo(TeamInfo info)
+        {
+            Info.TimerTeamsHeadband.RedTeam.Name.Txt = info.Name;
+            Info.TimerTeamsHeadband.RedTeam.Tag.Txt = info.Tag;
+            Info.TimerTeamsHeadband.RedTeam.Logo = new(info.Logo);
+            NotifyStateChanged();
+        }
+
+        public async Task CustomSetMatch(Int64 matchDtoId)
+        {
+            var payload = new { type = "endGameMatch", data = matchDtoId };
+            await _client.SendAsync(payload);
+        }
+        public async Task CustomSetTimeline(Int64 timelineDtoId)
+        {
+            var payload = new { type = "endGameTimeline", data = timelineDtoId };
+            await _client.SendAsync(payload);
+        }
+
+        public void UpdateInfoPhase(PhaseInfo phase)
+        {
+            Info.EventInfo.Phase.Txt = phase.Phase.Txt;
+            Info.EventInfo.Event.Txt = phase.Event.Txt;
+            Info.EventInfo.Date.Txt = phase.Date.Txt;
+            NotifyStateChanged();
+        }
     }
 
+    /// <summary>
+    /// Extension methods for EndGameState
+    /// </summary>
     public static class EndGameStateExtensions
     {
+        /// <summary>
+        /// Clone EndGameInfo object by serializing and deserializing it
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
         public static EndGameInfo CloneInfo(this EndGameInfo source)
         {
+            Console.WriteLine(source.ChampionStats.RedTeam[0].Bar.Background);
             var json = JsonConvert.SerializeObject(source);
-            return JsonConvert.DeserializeObject<EndGameInfo>(json) ?? new EndGameInfo();
+            var settings = new JsonSerializerSettings
+            {
+                ObjectCreationHandling = ObjectCreationHandling.Replace
+            };
+            var clone = JsonConvert.DeserializeObject<EndGameInfo>(json, settings);
+            Console.WriteLine(clone.ChampionStats.RedTeam[0].Bar.Background);
+            return clone ?? new EndGameInfo();
+        }
+
+        public static Text CalculateStat(Text stat)
+        {
+            string text = stat.Txt;
+            if (stat.Txt != string.Empty && Convert.ToDouble(stat.Txt) > 1000000)
+            {
+                text = $"{Math.Round(Convert.ToDouble(text) / 1000000, 1)}M";
+            }
+            else if (stat.Txt != string.Empty && Convert.ToDouble(stat.Txt) > 1000)
+            {
+                text = $"{Math.Round(Convert.ToDouble(text) / 1000, 1)}K";
+            }
+            return new(text, stat.Font, stat.Color, stat.Background, stat.Border, stat.Align);
+        }
+
+        public static string CalculateStat(string stat)
+        {
+            try
+            {
+                double value = Convert.ToDouble(stat);
+                if (value > 1000000)
+                {
+                    return $"{Math.Round(value / 1000000, 1)}M";
+                }
+                else if (value > 1000)
+                {
+                    return $"{Math.Round(value / 1000, 1)}K";
+                }
+                return stat;
+            }
+            catch
+            {
+                return stat;
+            }
         }
     }
 }

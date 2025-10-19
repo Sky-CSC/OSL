@@ -1,293 +1,308 @@
-using OSL_Overlay.GameFlow.Bo;
 using OSL_Overlay.GameFlow.Common;
+using OSL_Overlay.GameFlow.Phase;
 
 namespace OSL_Overlay.GameFlow.EndGame
 {
-
+    /// <summary>
+    /// End game schema
+    /// </summary>
     public class EndGameInfo
     {
         public string Background { get; set; }
         public string Border { get; set; }
         public TimerTeamHeadband TimerTeamsHeadband { get; set; }
+        public string StatsBackground { get; set; }
+        public string StatsBorder { get; set; }
         public GameStat GameStats { get; set; }
         public ChampionStat ChampionStats { get; set; }
         public Ban Bans { get; set; }
         public Gold Golds { get; set; }
+        public EventInfo EventInfo { get; set; }
         public EndGameInfo()
         {
             Background = string.Empty;
             Border = string.Empty;
             TimerTeamsHeadband = new();
+            StatsBackground = string.Empty;
+            StatsBorder = string.Empty;
             GameStats = new();
             ChampionStats = new();
             Bans = new();
             Golds = new();
+            EventInfo = new();
+        }
+    }
+    public class TimerTeamHeadband
+    {
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public Text Title { get; set; }
+        public Text Timer { get; set; }
+        public Text WinText { get; set; }
+        public Text LossText { get; set; }
+        public Team BlueTeam { get; set; }
+        public Team RedTeam { get; set; }
+        public TimerTeamHeadband()
+        {
+            Background = string.Empty;
+            Border = string.Empty;
+            Title = new();
+            Timer = new();
+            WinText = new();
+            LossText = new();
+            BlueTeam = new();
+            RedTeam = new();
+        }
+    }
+
+    public class Team : Common.Team
+    {
+        public bool Win { get; set; }
+        public Team()
+        {
+            Win = false;
+        }
+    }
+
+    public class GameStat
+    {
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public Text Title { get; set; }
+        public StatText Kda { get; set; }
+        public StatText Golds { get; set; }
+        public StatText Towers { get; set; }
+        public StatImage VoidGrubs { get; set; }
+        public StatImage Herald { get; set; }
+        public StatImage Atakhan { get; set; }
+        public StatDrakeImage Drakes { get; set; }
+        public StatImage Elders { get; set; }
+        public StatImage Barons { get; set; }
+        public GameStat()
+        {
+            Background = string.Empty;
+            Border = string.Empty;
+            Title = new();
+            Kda = new();
+            Golds = new();
+            Towers = new();
+            VoidGrubs = new();
+            Herald = new();
+            Atakhan = new();
+            Drakes = new();
+            Elders = new();
+            Barons = new();
+        }
+    }
+
+    public class StatText
+    {
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public Text Title { get; set; }
+        public Text BlueTeam { get; set; }
+        public Text RedTeam { get; set; }
+        public StatText()
+        {
+            Background = string.Empty;
+            Border = string.Empty;
+            Title = new();
+            BlueTeam = new();
+            RedTeam = new();
         }
 
-        public class TimerTeamHeadband
+    }
+    public class StatImage
+    {
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public Text Title { get; set; }
+        public int NbBlueTeam { get; set; }
+        public int NbRedTeam { get; set; }
+        public Image Image { get; set; }
+        public StatImage()
         {
-            public string Background { get; set; }
-            public string Border { get; set; }
-            public Text Title { get; set; }
-            public Text Timer { get; set; }
-            public Text WinText { get; set; }
-            public Text LossText { get; set; }
-            public Team BlueTeam { get; set; }
-            public Team RedTeam { get; set; }
-            public TimerTeamHeadband()
-            {
-                Background = string.Empty;
-                Border = string.Empty;
-                Title = new();
-                Timer = new();
-                WinText = new();
-                LossText = new();
-                BlueTeam = new();
-                RedTeam = new();
-            }
+            Title = new();
+            NbBlueTeam = 0;
+            NbRedTeam = 0;
+            Image = new();
         }
 
-        public class Team : Common.Team
+    }
+
+    public class StatDrakeImage
+    {
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public Text Title { get; set; }
+        public StatImage Air { get; set; }
+        public StatImage Chemtech { get; set; }
+        public StatImage Earth { get; set; }
+        public StatImage Fire { get; set; }
+        public StatImage Hextech { get; set; }
+        public StatImage Water { get; set; }
+        public StatDrakeImage()
         {
-            public bool Win { get; set; }
-            public Team()
-            {
-                Win = false;
-            }
+            Title = new();
+            Air = new();
+            Chemtech = new();
+            Earth = new();
+            Fire = new();
+            Hextech = new();
+            Water = new();
         }
+    }
 
-        public class GameStat
+    public class ChampionStat
+    {
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public Text Title { get; set; }
+        public List<Player> BlueTeam { get; set; }
+        public List<Player> RedTeam { get; set; }
+        public ChampionStat()
         {
-            public string Background { get; set; }
-            public string Border { get; set; }
-            public Text Title { get; set; }
-            public StatText Kda { get; set; }
-            public StatText Golds { get; set; }
-            public StatText Towers { get; set; }
-            public StatImage VoidGrubs { get; set; }
-            public StatImage Herald { get; set; }
-            public StatImage Atakhan { get; set; }
-            public StatDrakeImage Drakes { get; set; }
-            public StatImage Elders { get; set; }
-            public StatImage Barons { get; set; }
-            public GameStat()
+            Background = string.Empty;
+            Border = string.Empty;
+            Title = new();
+            BlueTeam = [];
+            for (int i = 0; i < 5; i++)
             {
-                Background = string.Empty;
-                Border = string.Empty;
-                Title = new();
-                Kda = new();
-                Golds = new();
-                Towers = new();
-                VoidGrubs = new();
-                Herald = new();
-                Atakhan = new();
-                Drakes = new();
-                Elders = new();
-                Barons = new();
+                BlueTeam.Add(new());
             }
-        }
-
-        public class StatText
-        {
-            public string Background { get; set; }
-            public string Border { get; set; }
-            public Text Title { get; set; }
-            public Text BlueTeam { get; set; }
-            public Text RedTeam { get; set; }
-            public StatText()
+            RedTeam = [];
+            for (int i = 0; i < 5; i++)
             {
-                Background = string.Empty;
-                Border = string.Empty;
-                Title = new();
-                BlueTeam = new();
-                RedTeam = new();
-            }
-
-        }
-        public class StatImage
-        {
-            public string Background { get; set; }
-            public string Border { get; set; }
-            public Text Title { get; set; }
-            public string NbBlueTeam { get; set; }
-            public string NbRedTeam { get; set; }
-            public Image Image { get; set; }
-            public StatImage()
-            {
-                Title = new();
-                NbBlueTeam = string.Empty;
-                NbRedTeam = string.Empty;
-                Image = new();
-            }
-
-        }
-
-        public class StatDrakeImage
-        {
-            public string Background { get; set; }
-            public string Border { get; set; }
-            public Text Title { get; set; }
-            public StatImage Air { get; set; }
-            public StatImage Chemtech { get; set; }
-            public StatImage Earth { get; set; }
-            public StatImage Fire { get; set; }
-            public StatImage Hextech { get; set; }
-            public StatImage Water { get; set; }
-            public StatDrakeImage()
-            {
-                Title = new();
-                Air = new();
-                Chemtech = new();
-                Earth = new();
-                Fire = new();
-                Hextech = new();
-                Water = new();
-            }
-        }
-
-        public class ChampionStat
-        {
-            public string Background { get; set; }
-            public string Border { get; set; }
-            public Text Title { get; set; }
-            public List<Player> BlueTeam { get; set; }
-            public List<Player> RedTeam { get; set; }
-            public ChampionStat()
-            {
-                Background = string.Empty;
-                Border = string.Empty;
-                Title = new();
-                BlueTeam = [];
-                for (int i = 0; i < 5; i++)
-                {
-                    BlueTeam.Add(new());
-                }
-                RedTeam = [];
-                for (int i = 0; i < 5; i++)
-                {
-                    RedTeam.Add(new());
-                }
-            }
-        }
-
-        public class Player
-        {
-            public Image Image { get; set; }
-            public Text Name { get; set; }
-            public Text Stat { get; set; } // No forget to convert Stat.Txt is > 10000 with 1k
-            public Bar Bar { get; set; }
-            public Player()
-            {
-                Image = new();
-                Name = new();
-                Stat = new();
-                Bar = new();
-            }
-        }
-
-        public class Bar
-        {
-            public string Backgournd { get; set; }
-            public string Border { get; set; } //Size of bar is calculated by Stat.Txt
-            public Bar()
-            {
-                Backgournd = string.Empty;
-                Border = string.Empty;
-            }
-        }
-
-        public class Ban
-        {
-            public string Background { get; set; }
-            public string Border { get; set; }
-            public Text Title { get; set; }
-            public List<Image> BlueTeam { get; set; }
-            public List<Image> RedTeam { get; set; }
-            public Ban()
-            {
-                Background = string.Empty;
-                Border = string.Empty;
-                Title = new();
-                BlueTeam = [];
-                for (int i = 0; i < 5; i++)
-                {
-                    BlueTeam.Add(new());
-                }
-                RedTeam = [];
-                for (int i = 0; i < 5; i++)
-                {
-                    RedTeam.Add(new());
-                }
-            }
-        }
-
-        public class Gold
-        {
-            public string Background { get; set; }
-            public string Border { get; set; }
-            public Text Title { get; set; }
-            public string BlueGoldsColor { get; set; }
-            public Text BlueText { get; set; }
-            public string RedGoldsColor { get; set; }
-            public Text RedText { get; set; }
-            public string CommonGoldsColor { get; set; }
-            public Text CommonText { get; set; }
-            public string GoldLinkColor { get; set; }
-            public string BackgroundChartColor { get; set; }
-            public List<Event> Events { get; set; } // Gold, tower, inhib, drakes, herald, elder, baron, athakan 
-            public Gold()
-            {
-                Background = string.Empty;
-                Border = string.Empty ;
-                Title = new();
-                BlueGoldsColor = string.Empty;
-                BlueText = new();
-                RedGoldsColor = string.Empty;
-                RedText = new();
-                CommonGoldsColor = string.Empty;
-                CommonText = new();
-                GoldLinkColor = string.Empty;
-                BackgroundChartColor = string.Empty;
-                Events = [];
-            }
-        }
-
-        public class Event
-        {
-            public string Type { get; set; }
-            public int TeamId { get; set; }
-            public long Timetamps { get; set; }
-            public Image Image { get; set; }
-            public int Value{ get; set; }
-            public Event()
-            {
-                Type = string.Empty;
-                TeamId = 100;
-                Timetamps = 0;
-                Image = new();
-                Value = 0;
-            }
-            public Event(string type, int teamId, long timetamps)
-            {
-                Type = type;
-                TeamId = teamId;
-                Timetamps = timetamps;
-                Image = new();
-                Value = 0;
-            }
-            public Event(string type, int teamId, long timetamps, int value)
-            {
-                Type = type;
-                TeamId = teamId;
-                Timetamps = timetamps;
-                Image = new();
-                Value = value;
+                RedTeam.Add(new());
             }
         }
     }
 
+    public class Player
+    {
+        public Image Image { get; set; }
+        public Text Name { get; set; }
+        public Text Stat { get; set; } // No forget to convert Stat.Txt is > 10000 with 1k
+        public Bar Bar { get; set; }
+        public Player()
+        {
+            Image = new();
+            Name = new();
+            Stat = new();
+            Bar = new();
+        }
+    }
 
+    public class Bar
+    {
+        public string Background { get; set; }
+        public string Border { get; set; } //Size of bar is calculated by Stat.Txt
+        public Bar()
+        {
+            Background = string.Empty;
+            Border = string.Empty;
+        }
+    }
 
+    public class Ban
+    {
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public Text Title { get; set; }
+        public List<Image> BlueTeam { get; set; }
+        public List<Image> RedTeam { get; set; }
+        public Ban()
+        {
+            Background = string.Empty;
+            Border = string.Empty;
+            Title = new();
+            BlueTeam = [];
+            for (int i = 0; i < 5; i++)
+            {
+                BlueTeam.Add(new());
+            }
+            RedTeam = [];
+            for (int i = 0; i < 5; i++)
+            {
+                RedTeam.Add(new());
+            }
+        }
+    }
+
+    public class Gold
+    {
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public Text Title { get; set; }
+        public string BlueGoldsColor { get; set; }
+        public Text BlueText { get; set; }
+        public string RedGoldsColor { get; set; }
+        public Text RedText { get; set; }
+        public string CommonGoldsColor { get; set; }
+        public Text CommonText { get; set; }
+        public string GoldLinkColor { get; set; }
+        public string BackgroundChartColor { get; set; }
+        public List<Event> Events { get; set; } // Gold, tower, inhib, drakes, herald, elder, baron, athakan 
+        public Gold()
+        {
+            Background = string.Empty;
+            Border = string.Empty;
+            Title = new();
+            BlueGoldsColor = string.Empty;
+            BlueText = new();
+            RedGoldsColor = string.Empty;
+            RedText = new();
+            CommonGoldsColor = string.Empty;
+            CommonText = new();
+            GoldLinkColor = string.Empty;
+            BackgroundChartColor = string.Empty;
+            Events = [];
+        }
+    }
+
+    public class Event
+    {
+        public string Type { get; set; }
+        public int TeamId { get; set; }
+        public long Timetamps { get; set; }
+        public Image Image { get; set; }
+        public int Value { get; set; }
+        public Event()
+        {
+            Type = string.Empty;
+            TeamId = 100;
+            Timetamps = 0;
+            Image = new();
+            Value = 0;
+        }
+        public Event(string type, int teamId, long timetamps)
+        {
+            Type = type;
+            TeamId = teamId;
+            Timetamps = timetamps;
+            Image = new();
+            Value = 0;
+        }
+        public Event(string type, int teamId, long timetamps, int value)
+        {
+            Type = type;
+            TeamId = teamId;
+            Timetamps = timetamps;
+            Image = new();
+            Value = value;
+        }
+    }
+
+    public class EventInfo : PhaseInfo
+    {
+        public string Background { get; set; }
+        public string Border { get; set; }
+        public EventInfo()
+        {
+            Background = string.Empty;
+            Border = string.Empty;
+        }
+    }
 
     //public class EndGameInfo
     //{
