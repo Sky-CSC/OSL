@@ -26,6 +26,8 @@ namespace OSL_RGDP.Schema.Riot
 
         [JsonProperty("monsterType")]
         public string MonsterType { get; set; }
+        [JsonProperty("monsterSubType")]
+        public string MonsterSubType { get; set; }
 
         [JsonProperty("killerTeamId")]
         public int KillerTeamId { get; set; }
