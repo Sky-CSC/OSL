@@ -1,9 +1,8 @@
 @page "/team/"
-@using Newtonsoft.Json
-@using OSL_Overlay.GameFlow.ChampSelect
 @using OSL_Overlay.GameFlow.Team
 @inject TeamState TeamState
 
+@* ---------------- Team managament ---------------- *@
 <PageTitle>Team</PageTitle>
 
 <style>
@@ -16,6 +15,7 @@
 <br />
 
 <MudStack Row="true">
+    @* ---------------- Save blue team info ---------------- *@
     <StyleManager Label="Save config (default for blue)"
                   RelativePath="data/teams"
                   CurrentFile="@TeamState.BlueFile"
@@ -24,6 +24,7 @@
                   HideDuplicate=true
                   FilePrefix="team" />
     <br />
+    @* ---------------- Save red team info ---------------- *@
     <StyleManager Label="Save config (default for red)"
                   RelativePath="data/teams"
                   CurrentFile="@TeamState.RedFile"
@@ -35,6 +36,7 @@
 <br />
 <br />
 
+@* ---------------- Team swap ---------------- *@
 <SwitchButton Text="Swap Teams"
               Icon="@Icons.Material.Filled.SwapHoriz"
               BackgroundColor="@Colors.BlueGray.Darken4"
@@ -45,18 +47,22 @@
 
 <MudStack Row="true" Spacing="20">
     <MudStack Row="false">
+        @* ---------------- Blue team ---------------- *@
         <MudText Id="blue-side" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Blue Team</MudText>
         <MudStack Row="true">
+            @* ---------------- Blue team name ---------------- *@
             <StyleFieldEditor Label="Name"
                               Type="text"
                               Value="@TeamState.BlueInfo.Name"
                               ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Name = val, v)"
                               BorderColor="#0B849E" />
+            @* ---------------- Blue team tag ---------------- *@
             <StyleFieldEditor Label="Tag"
                               Type="text"
                               Value="@TeamState.BlueInfo.Tag"
                               ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Tag = val, v)"
                               BorderColor="#0B849E" />
+            @* ---------------- Blue team coach name ---------------- *@
             <StyleFieldEditor Label="Coach"
                               Type="text"
                               Value="@TeamState.BlueInfo.Coach"
@@ -64,6 +70,7 @@
                               BorderColor="#0B849E" />
         </MudStack>
         <MudStack Row="true">
+            @* ---------------- Blue team logo ---------------- *@
             <StyleFieldEditor Label="Logo"
                               Type="import-image"
                               Value="@TeamState.BlueInfo.Logo"
@@ -77,6 +84,7 @@
             }
         </MudStack>
         <MudStack Row="true">
+            @* ---------------- Blue team custom names ---------------- *@
             <StyleFieldEditor Label="Show all custom name"
                               Type="checkbox"
                               Value="@TeamState.DisplayBlueCustomName.ToString()"
@@ -86,17 +94,20 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Blue team top display custom names ---------------- *@
                     <StyleFieldEditor Label="Display custom top name"
                                       Type="checkbox"
                                       Value="@TeamState.BlueInfo.Top.ShowCustomName.ToString()"
                                       ValueChanged="v => OnStyleChanged(val =>TeamState.BlueInfo.Top.ShowCustomName = val, v)"
                                       BorderColor="#0B849E" />
+                    @* ---------------- Blue team top text custom names ---------------- *@
                     <StyleFieldEditor Label="Top name"
                                       Type="text"
                                       Value="@TeamState.BlueInfo.Top.Name"
                                       ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Top.Name = val, v)"
                                       BorderColor="#0B849E" />
                 </MudStack>
+                @* ---------------- Blue team top image ---------------- *@
                 <StyleFieldEditor Label="Top image"
                                   Type="import-image"
                                   Value="@TeamState.BlueInfo.Top.Image"
@@ -113,6 +124,7 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Blue team jungle info ---------------- *@
                     <StyleFieldEditor Label="Display custom jungle name"
                                       Type="checkbox"
                                       Value="@TeamState.BlueInfo.Jungle.ShowCustomName.ToString()"
@@ -140,6 +152,7 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Blue team mid info ---------------- *@
                     <StyleFieldEditor Label="Display custom mid name"
                                       Type="checkbox"
                                       Value="@TeamState.BlueInfo.Mid.ShowCustomName.ToString()"
@@ -167,6 +180,7 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Blue team adc info ---------------- *@
                     <StyleFieldEditor Label="Display custom adc name"
                                       Type="checkbox"
                                       Value="@TeamState.BlueInfo.Adc.ShowCustomName.ToString()"
@@ -194,6 +208,7 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Blue team supp info ---------------- *@
                     <StyleFieldEditor Label="Display custom support name"
                                       Type="checkbox"
                                       Value="@TeamState.BlueInfo.Supp.ShowCustomName.ToString()"
@@ -221,18 +236,22 @@
     </MudStack>
     <br />
     <MudStack Row="false">
+        @* ---------------- Red team ---------------- *@
         <MudText Id="red-side" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Red Team</MudText>
         <MudStack Row="true">
+            @* ---------------- Red team name ---------------- *@
             <StyleFieldEditor Label="Name"
                               Type="text"
                               Value="@TeamState.RedInfo.Name"
                               ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Name = val, v)"
                               BorderColor="#BE1E37" />
+            @* ---------------- Red team tag ---------------- *@
             <StyleFieldEditor Label="Tag"
                               Type="text"
                               Value="@TeamState.RedInfo.Tag"
                               ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Tag = val, v)"
                               BorderColor="#BE1E37" />
+            @* ---------------- Red team coach ---------------- *@
             <StyleFieldEditor Label="Coach"
                               Type="text"
                               Value="@TeamState.RedInfo.Coach"
@@ -240,6 +259,7 @@
                               BorderColor="#BE1E37" />
         </MudStack>
         <MudStack Row="true">
+            @* ---------------- Red team logo ---------------- *@
             <StyleFieldEditor Label="Logo"
                               Type="import-image"
                               Value="@TeamState.RedInfo.Logo"
@@ -253,6 +273,7 @@
             }
         </MudStack>
         <MudStack Row="true">
+            @* ---------------- Red team custom names ---------------- *@
             <StyleFieldEditor Label="Show all custom name"
                               Type="checkbox"
                               Value="@TeamState.DisplayRedCustomName.ToString()"
@@ -262,6 +283,7 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Red team top info ---------------- *@
                     <StyleFieldEditor Label="Display custom top name"
                                       Type="checkbox"
                                       Value="@TeamState.RedInfo.Top.ShowCustomName.ToString()"
@@ -289,6 +311,7 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Red team junbgle info ---------------- *@
                     <StyleFieldEditor Label="Display custom jungle name"
                                       Type="checkbox"
                                       Value="@TeamState.RedInfo.Jungle.ShowCustomName.ToString()"
@@ -316,6 +339,7 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Red team mid info ---------------- *@
                     <StyleFieldEditor Label="Display custom mid name"
                                       Type="checkbox"
                                       Value="@TeamState.RedInfo.Mid.ShowCustomName.ToString()"
@@ -343,6 +367,7 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Red team adc info ---------------- *@
                     <StyleFieldEditor Label="Display custom adc name"
                                       Type="checkbox"
                                       Value="@TeamState.RedInfo.Adc.ShowCustomName.ToString()"
@@ -370,6 +395,7 @@
         <MudStack Row="true">
             <MudStack Row="false">
                 <MudStack Row="true">
+                    @* ---------------- Red team supp info ---------------- *@
                     <StyleFieldEditor Label="Display custom support name"
                                       Type="checkbox"
                                       Value="@TeamState.RedInfo.Supp.ShowCustomName.ToString()"
@@ -417,7 +443,6 @@
 
     protected override void OnInitialized()
     {
-        // 🔔 Abonnement aux notifications globales
         TeamState.OnChange += RefreshUI;
     }
 
