@@ -1,13 +1,11 @@
 using Newtonsoft.Json;
-using OSL_Overlay.GameFlow.EndGame;
-using System.Collections.Generic;
 
 namespace OSL_Overlay.GameFlow.Fearless
 {
     /// <summary>
     /// Fearless View 1 management
     /// </summary>
-    public class FearlessView1State
+    public class FearlessView2State
     {
         /// <summary>
         /// Copy of fearless list from FearlessState
@@ -24,14 +22,14 @@ namespace OSL_Overlay.GameFlow.Fearless
         /// <summary>
         /// File path of the current style
         /// </summary>
-        public string CurrentFile = "wwwroot/styles/fearless/view1/default.json";
+        public string CurrentFile = "wwwroot/styles/fearless/view2/default.json";
         public event Action? OnChange;
 
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="fearlessState"></param>
-        public FearlessView1State(FearlessState fearlessState)
+        public FearlessView2State(FearlessState fearlessState)
         {
             _fearlessState = fearlessState;
             _fearlessState.OnChange += SyncFromGlobal;
@@ -77,13 +75,6 @@ namespace OSL_Overlay.GameFlow.Fearless
         /// <param name="path"></param>
         public void SaveStyle(string path)
         {
-            //var settings = new JsonSerializerSettings
-            //{
-            //    ObjectCreationHandling = ObjectCreationHandling.Replace
-            //};
-            //var info = JsonConvert.DeserializeObject<List<List<FearlessInfo>>>(LocalFearlessList, settings);
-
-            //List<List<FearlessInfo>> fearlessStyle = info;
             List<List<FearlessInfo>> fearlessStyle = LocalFearlessList.CloneFirelessList();
 
             if (LocalFearlessList.Count > 0)

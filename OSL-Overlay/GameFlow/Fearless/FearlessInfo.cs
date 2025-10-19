@@ -2,6 +2,9 @@ using OSL_Overlay.GameFlow.Common;
 
 namespace OSL_Overlay.GameFlow.Fearless
 {
+    /// <summary>
+    /// Fearless information
+    /// </summary>
     public class FearlessInfo
     {
         public string IdMatch { get; set; }
@@ -25,7 +28,7 @@ namespace OSL_Overlay.GameFlow.Fearless
             return new FearlessInfo
             {
                 IdMatch = this.IdMatch,
-                Text = this.Text.CLone(),
+                Text = this.Text.Clone(),
                 Background = this.Background,
                 Line = this.Line.Clone(),
                 Border = this.Border,

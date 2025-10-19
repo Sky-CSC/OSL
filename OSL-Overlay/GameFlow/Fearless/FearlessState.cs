@@ -1,20 +1,34 @@
-using Newtonsoft.Json;
 using OSL_CDragon;
 using OSL_RGDP.WebSocketResponse;
 using WebSocket = OSL_Overlay.WebSocketClient.WebSocketClient;
 
 namespace OSL_Overlay.GameFlow.Fearless
 {
+    /// <summary>
+    /// Fearless management
+    /// </summary>
     public class FearlessState
     {
+        /// <summary>
+        /// WebSocket client to communicate with the WebSocket server
+        /// </summary>
         private readonly WebSocket _client;
-
+        /// <summary>
+        /// CDragon instance to get champion data
+        /// </summary>
         private readonly CDragon _cdragon;
-
+        /// <summary>
+        /// Feraless info list
+        /// </summary>
         public List<List<FearlessInfo>> FearlessList = [];
 
         public event Action? OnChange;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="cDragon"></param>
         public FearlessState(WebSocket client, CDragon cDragon)
         {
             _client = client;
@@ -22,8 +36,6 @@ namespace OSL_Overlay.GameFlow.Fearless
         }
 
         public void NotifyStateChanged() => OnChange?.Invoke();
-
-        // TODO: manueal setup
 
         /// <summary>
         /// Get match data from matchId
@@ -74,21 +86,31 @@ namespace OSL_Overlay.GameFlow.Fearless
             NotifyStateChanged();
         }
 
+        /// <summary>
+        /// Reset the fearless info list
+        /// </summary>
         public void ResetFearlessList()
         {
             FearlessList.Clear();
             NotifyStateChanged();
         }
 
+        /// <summary>
+        /// Reset the fearless info at the index
+        /// </summary>
+        /// <param name="index"></param>
         public void ResetFearlessIndex(int index)
         {
             if (FearlessList.Count > index)
             {
                 FearlessList[index] = [new FearlessInfo(), new FearlessInfo()];
-                NotifyStateChanged();
             }
         }
 
+        /// <summary>
+        /// Delete the fearless info at the index
+        /// </summary>
+        /// <param name="index"></param>
         public void DeleteFearlessIndex(int index)
         {
             if (FearlessList.Count > index)
@@ -99,8 +121,16 @@ namespace OSL_Overlay.GameFlow.Fearless
         }
     }
 
+    /// <summary>
+    /// Fearless state extensions
+    /// </summary>
     public static class FearlessStateExtensions
     {
+        /// <summary>
+        /// Clone a list of list of FearlessInfo
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
         public static List<List<FearlessInfo>> CloneFirelessList(this List<List<FearlessInfo>> source)
         {
             return source.Select(team => team.Select(info => info.Clone()).ToList()).ToList();
