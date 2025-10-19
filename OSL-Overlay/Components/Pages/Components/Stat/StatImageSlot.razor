@@ -1,0 +1,21 @@
+@using OSL_Overlay.GameFlow.EndGame
+<div class="@Class" style="background:@Stat.Background; @Stat.Border">
+    <div class="blue-team">
+        @for (int i = 0; i < Stat.NbBlueTeam; i++)
+        {
+            <Image Class="blue-team-image" Img="@Stat.Image" />
+        }
+    </div>
+    <Txt Class="title" Text="@Stat.Title" />
+    <div class="red-team">
+        @for (int i = 0; i < Stat.NbRedTeam; i++)
+        {
+            <Image Class="red-team-image" Img="@Stat.Image" />
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public StatImage Stat { get; set; }
+}

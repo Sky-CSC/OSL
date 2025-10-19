@@ -1,0 +1,11 @@
+@using OSL_Overlay.GameFlow.EndGame
+<div class="@Class" style="background:@Stat.Background; @Stat.Border">
+    <Txt Class="blue-team" Text="@Stat.BlueTeam" />
+    <Txt Class="title" Text="@Stat.Title" />
+    <Txt Class="red-team" Text="@Stat.RedTeam" />
+</div>
+
+@code{
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public StatText Stat { get; set; }
+}
