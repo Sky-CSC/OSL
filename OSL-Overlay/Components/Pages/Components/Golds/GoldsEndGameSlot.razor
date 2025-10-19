@@ -1,0 +1,201 @@
+@using OSL_Overlay.GameFlow.EndGame
+@using System.Globalization
+@using OSL_Overlay.GameFlow.EndGame
+@inject EndGameView1State EndGameState
+
+@* ---------------- Display Golds graphic ---------------- *@
+<div class="@Class" style="background:@Golds.Background; @Golds.Border">
+    <div class="golds">
+        <div style="width:@WidthPx; height:@HeightPx;">
+            @((MarkupString)SvgContent)
+        </div>
+    </div>
+    <div class="events">
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public Gold Golds { get; set; }
+    [Parameter] required public string Time { get; set; }
+
+    private int Width = 1900;
+    private int Height = 500;
+    private string WidthPx => $"{Width}px";
+    private string HeightPx => $"{Height}px";
+
+    private int TotalMinutes = 31;
+    private int IntervalMinutes = 5;
+
+    private string SvgContent = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        EndGameState.OnChange += StateHasChangedSafe;
+        LoadEndGameGoldsData();
+        SvgContent = GenerateSvg(Values, Width, Height);
+    }
+
+    private void LoadEndGameGoldsData()
+    {
+        string[] parts = Time.Split(':');
+
+        if (parts.Length == 2 && int.TryParse(parts[0], out int minutes) && int.TryParse(parts[1], out int seconds))
+        {
+            TotalMinutes = minutes + seconds / 60;
+        }
+
+        Values = Golds.Events?
+                .Where(e => e.Type == "Gold")
+                .OrderBy(e => e.Timetamps)
+                .Select(e => e.Value)
+                .ToList() ?? new List<int>();
+    }
+
+     private void StateHasChangedSafe()
+    {
+        // recharge la donnée puis rafraîchit l’UI
+        LoadEndGameGoldsData();
+        SvgContent = GenerateSvg(Values, Width, Height);
+        InvokeAsync(StateHasChanged);
+    }
+
+     public void Dispose()
+    {
+        EndGameState.OnChange -= StateHasChangedSafe;
+    }
+
+    // ✅ Liste d'entiers maintenant
+    // private List<int> Values = new()
+    // {
+    //     0, 0, -23, 371, 180, 491, 529, 246, 1352, 770, -197, -485, -181, -34, -16,
+    //     -1032, -1558, -1910, -2210, -4197, -4439, -3286, -3702, -4377, -4911,
+    //     -8128, -5024, -3350, -4558, -5116
+    // };
+
+    private List<int> Values = new()
+    {
+        0, 0, 23, -371, -180, -491, -529, -246, -1352, -770, 197, 485, 181, 34, 16,
+        1032, 1558, 1910, 2210, 4197, 4439, 3286, 3702, 4377, 4911,
+        8128, 5024, 3350, 4558, 5116
+    };
+
+
+    string GetColorPoint(double v)
+    {
+        if (v == 0) return Golds.CommonGoldsColor;
+        return v > 0 ? Golds.BlueGoldsColor : Golds.RedGoldsColor;
+    }
+
+    string GetColorText(double v)
+    {
+        if (v == 0) return Golds.CommonText.Color;
+        return v > 0 ? Golds.BlueText.Color : Golds.RedText.Color;
+    }
+
+    // ✅ Signature mise à jour pour accepter List<int>
+    private string GenerateSvg(List<int> values, int width, int height)
+    {
+        if (values == null || values.Count == 0)
+            return "<svg></svg>";
+
+        // ✅ Convertit en double pour les calculs
+        var doubleValues = values.Select(v => (double)v).ToList();
+
+        double min = doubleValues.Min();
+        double max = doubleValues.Max();
+        double range = max - min;
+        if (range == 0) range = 1;
+
+        double padding = 60;
+        double graphWidth = width - 2 * padding;
+        double graphHeight = height - 2 * padding;
+
+        static string FormatGold(double value)
+        {
+            double abs = Math.Abs(value);
+            if (abs < 1000)
+                return $"{abs:0}";
+            double kValue = abs / 1000.0;
+            return $"{kValue:0.#}K";
+        }
+
+        var points = doubleValues.Select((v, i) =>
+        {
+            double x = padding + (i / (double)(doubleValues.Count - 1)) * graphWidth;
+            double y = padding + graphHeight - ((v - min) / range) * graphHeight;
+            return (x, y, v);
+        }).ToList();
+
+        string pathData = "M " + string.Join(" L ", points.Select(p =>
+            $"{p.x.ToString("0.##", CultureInfo.InvariantCulture)} {p.y.ToString("0.##", CultureInfo.InvariantCulture)}"));
+
+        int totalPoints = doubleValues.Count;
+        int totalSteps = TotalMinutes / IntervalMinutes;
+        double stepWidth = graphWidth / totalSteps;
+
+        var xLabels = Enumerable.Range(0, totalSteps + 1)
+            .Select(i =>
+            {
+                double minutes = i * IntervalMinutes;
+                string label = minutes == 0 ? "0" : minutes.ToString("0");
+                double x = padding + i * stepWidth;
+                return (x, label, minutes);
+            })
+            .ToList();
+
+        var yLabels = new List<(double value, double y)> { (max, padding) };
+
+        if (min <= 0 && max >= 0)
+        {
+            double zeroY = padding + graphHeight - ((0 - min) / range) * graphHeight;
+            yLabels.Add((0, zeroY));
+        }
+
+        yLabels.Add((min, padding + graphHeight));
+
+        string yLinesSvg = string.Join("\n",
+            yLabels.Select(l =>
+            {
+                string strokeWidth = l.value == 0 ? "4" : "2";
+                string labelColor = GetColorText(l.value);
+                return
+                    $"<path d='M {padding - 20} {l.y.ToString("0.##", CultureInfo.InvariantCulture)} L {width - padding} {l.y.ToString("0.##", CultureInfo.InvariantCulture)}' " +
+                    $"stroke='{Golds.BackgroundChartColor}' stroke-width='{strokeWidth}' />" +
+                    $"<text x='{(padding - 35).ToString("0.##", CultureInfo.InvariantCulture)}' y='{(l.y + 5).ToString("0.##", CultureInfo.InvariantCulture)}' " +
+                    $"fill='{labelColor}' font-size='35px' font-family='{Golds.CommonText.Font}' text-anchor='end'>{FormatGold(l.value)}</text>";
+            }));
+
+        string verticalLinesSvg = string.Join("\n",
+            xLabels.Where(l => l.minutes != -1).Select(l =>
+                $"<path d='M {l.x.ToString("0.##", CultureInfo.InvariantCulture)} {padding} L {l.x.ToString("0.##", CultureInfo.InvariantCulture)} {height - padding}' " +
+                $"stroke='white' stroke-width='2' stroke-dasharray='3,3' />"));
+
+        string pointsSvg = string.Join("\n",
+            points.Select(p =>
+                $"<circle cx='{p.x.ToString("0.##", CultureInfo.InvariantCulture)}' cy='{p.y.ToString("0.##", CultureInfo.InvariantCulture)}' r='4.5' " +
+                $"fill='{GetColorPoint(p.v)}' stroke='{GetColorPoint(p.v)}' stroke-width='10' />"));
+
+        string xLabelsSvg = string.Join("\n",
+            xLabels.Select(l =>
+                $"<text x='{l.x.ToString("0.##", CultureInfo.InvariantCulture)}' y='{(height - 10).ToString(CultureInfo.InvariantCulture)}' " +
+                $"fill='white' font-size='30px' font-family='{Golds.CommonText.Font}' text-anchor='middle'>{l.label}</text>"));
+
+        string svg = $@"
+        <svg width='{width + 100}px' height='{height}px' viewBox='0 0 {width} {height}' xmlns='http://www.w3.org/2000/svg'>
+          <rect width='100%' height='100%' fill='transparent' />
+          <!-- Lignes verticales X -->
+          {verticalLinesSvg}
+          <!-- Lignes horizontales Y -->
+          {yLinesSvg}
+          <!-- Ligne principale -->
+          <path d='{pathData}' fill='none' stroke='{Golds.GoldLinkColor}' stroke-width='6' />
+          <!-- Points -->
+          {pointsSvg}
+          <!-- Labels X -->
+          {xLabelsSvg}
+        </svg>";
+
+        return svg;
+    }
+}
