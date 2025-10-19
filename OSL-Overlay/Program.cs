@@ -49,6 +49,7 @@ builder.Services.AddSingleton<BoState>();
 // Fearless
 builder.Services.AddSingleton<FearlessState>();
 builder.Services.AddSingleton<FearlessView1State>();
+builder.Services.AddSingleton<FearlessView2State>();
 
 // Patch
 builder.Services.AddSingleton<PatchState>();
@@ -103,12 +104,16 @@ using (var scope = app.Services.CreateScope())
     teamState.LoadDefault(env);
     var bestOfState = scope.ServiceProvider.GetRequiredService<BoState>();
     var fearlessState = scope.ServiceProvider.GetRequiredService<FearlessState>();
+    var fearlessView1State = scope.ServiceProvider.GetRequiredService<FearlessView1State>();
+    var fearlessView2State = scope.ServiceProvider.GetRequiredService<FearlessView2State>();
     var patchState = scope.ServiceProvider.GetRequiredService<PatchState>();
     var phaseState = scope.ServiceProvider.GetRequiredService<PhaseState>();
     var vsState = scope.ServiceProvider.GetRequiredService<VsState>();
     var champSelectState = scope.ServiceProvider.GetRequiredService<ChampSelectState>();
     var champSelectView1State = scope.ServiceProvider.GetRequiredService<ChampSelectView1State>();
     champSelectView1State.SyncFromGlobal();
+    var endGameState = scope.ServiceProvider.GetRequiredService<EndGameState>();
+    var endGameView1State = scope.ServiceProvider.GetRequiredService<EndGameView1State>();
 }
 
 app.Run();
