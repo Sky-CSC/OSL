@@ -33,6 +33,8 @@ builder.Services.AddSingleton<WebSocketServer>();
 // Handler
 builder.Services.AddSingleton<IMessageHandler, TerminatorHandler>();
 builder.Services.AddSingleton<IMessageHandler, FearlessGameMatchHandler>();
+builder.Services.AddSingleton<IMessageHandler, EndGameMatchHandler>();
+builder.Services.AddSingleton<IMessageHandler, EndGameTimelineHandler>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
