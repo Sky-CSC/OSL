@@ -3,14 +3,33 @@ using OSL_Overlay.GameFlow.EndGame;
 
 namespace OSL_Overlay.GameFlow.Bo
 {
+    /// <summary>
+    /// Bo management
+    /// </summary>
     public class BoState
     {
+        /// <summary>
+        /// Blue side Bo info
+        /// </summary>
         public BoInfo BlueInfo { get; set; } = new();
+        /// <summary>
+        /// Red side Bo info
+        /// </summary>
         public BoInfo RedInfo { get; set; } = new();
-
+        /// <summary>
+        /// Champ select state to update Bo info
+        /// </summary>
         private readonly ChampSelectState ChampState;
+        /// <summary>
+        /// End game state to update Bo info
+        /// </summary>
         private readonly EndGameState EndGameState;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="champSelectState"></param>
+        /// <param name="endGameState"></param>
         public BoState(ChampSelectState champSelectState, EndGameState endGameState)
         {
             ChampState = champSelectState;
@@ -21,13 +40,19 @@ namespace OSL_Overlay.GameFlow.Bo
 
         public void NotifyChanged() => OnChange?.Invoke();
 
-        //public void
+        /// <summary>
+        /// Update Bo info in champ select and end game
+        /// </summary>
         public void UpdateBlueBo()
         {
             ChampState.UpdateInfoBo(BlueInfo, "blue-side");
             EndGameState.UpdateInfoBo(BlueInfo, "blue-side");
             NotifyChanged();
         }
+
+        /// <summary>
+        /// Update Bo info in champ select and end game
+        /// </summary>
         public void UpdateRedBo()
         {
             ChampState.UpdateInfoBo(RedInfo, "red-side");
@@ -35,6 +60,9 @@ namespace OSL_Overlay.GameFlow.Bo
             NotifyChanged();
         }
 
+        /// <summary>
+        /// Reset Blue Bo info in champ select and end game
+        /// </summary>
         public void ResetBlueBo()
         {
             BlueInfo.Text = "";
@@ -45,6 +73,9 @@ namespace OSL_Overlay.GameFlow.Bo
             NotifyChanged();
         }
 
+        /// <summary>
+        /// Reset Red Bo info in champ select and end game
+        /// </summary>
         public void ResetRedBo()
         {
             RedInfo.Text = "";
@@ -55,6 +86,9 @@ namespace OSL_Overlay.GameFlow.Bo
             NotifyChanged();
         }
 
+        /// <summary>
+        /// Swap Blue and Red Bo info in champ select and end game
+        /// </summary>
         public void SwapBo()
         {
             (RedInfo, BlueInfo) = (BlueInfo, RedInfo);

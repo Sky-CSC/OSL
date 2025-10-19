@@ -2,6 +2,9 @@ using OSL_Overlay.GameFlow.Common;
 
 namespace OSL_Overlay.GameFlow.Bo
 {
+    /// <summary>
+    /// Bo schema
+    /// </summary>
     public class BoInfo
     {
         public int NbGames { get; set; }
@@ -15,6 +18,9 @@ namespace OSL_Overlay.GameFlow.Bo
         }
     }
 
+    /// <summary>
+    /// Bo graphic schema
+    /// </summary>
     public class BoGraphic
     {
         public bool Show { get; set; }
