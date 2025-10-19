@@ -1,0 +1,11 @@
+@using OSL_Overlay.GameFlow.Common
+<div class="@Class">
+    <Txt Class="timer-title" Text="@Title" />
+    <Txt Class="timer-timer" Text="@Timer" />
+</div>
+
+@code{
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public Text Title { get; set; }
+    [Parameter] required public Text Timer { get; set; }
+}
