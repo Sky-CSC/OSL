@@ -13,7 +13,7 @@
         }
 
         @* ---------------- Lane ---------------- *@
-        @if (Pick.ShowLane)
+        @if (Pick.ShowLane && Pick.IsPicking)
         {
             <Image Class="overlay lane" Img="new(Pick.LaneImage)" />
         }
