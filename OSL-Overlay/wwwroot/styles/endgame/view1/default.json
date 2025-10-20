@@ -1,0 +1,1309 @@
+{
+  "Background": "",
+  "Border": "",
+  "TimerTeamsHeadband": {
+    "Background": "#00000055",
+    "Border": "border:10px solid #c99d53",
+    "Title": {
+      "Txt": "Game Timer",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "Timer": {
+      "Txt": "28:34",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "WinText": {
+      "Txt": "Win",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "LossText": {
+      "Txt": "Loss",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "BlueTeam": {
+      "Win": false,
+      "Side": "blue-side",
+      "ShowLogo": true,
+      "Logo": {
+        "Path": "",
+        "Background": "",
+        "Border": ""
+      },
+      "ShowName": false,
+      "Name": {
+        "Txt": "",
+        "Font": "Anton",
+        "Color": "",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "ShowTag": true,
+      "Tag": {
+        "Txt": "",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "BoGraphic": {
+        "Show": true,
+        "NbMatchForWin": 0,
+        "NbWin": 0,
+        "Win": {
+          "Txt": "",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "#063742",
+          "Border": "5px solid #0b849e",
+          "Align": ""
+        },
+        "Undef": {
+          "Txt": "",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "#ffffff",
+          "Border": "5px solid #0b849e",
+          "Align": ""
+        }
+      }
+    },
+    "RedTeam": {
+      "Win": true,
+      "Side": "red-side",
+      "ShowLogo": true,
+      "Logo": {
+        "Path": "",
+        "Background": "",
+        "Border": ""
+      },
+      "ShowName": false,
+      "Name": {
+        "Txt": "",
+        "Font": "Anton",
+        "Color": "",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "ShowTag": true,
+      "Tag": {
+        "Txt": "",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "BoGraphic": {
+        "Show": true,
+        "NbMatchForWin": 0,
+        "NbWin": 0,
+        "Win": {
+          "Txt": "",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "#410e16",
+          "Border": "5px solid #be1e37",
+          "Align": ""
+        },
+        "Undef": {
+          "Txt": "",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "#ffffff",
+          "Border": "5px solid #be1e37",
+          "Align": ""
+        }
+      }
+    }
+  },
+  "StatsBackground": "#00000055",
+  "StatsBorder": "border:10px solid #c99d53",
+  "GameStats": {
+    "Background": "",
+    "Border": "",
+    "Title": {
+      "Txt": "Game Stats",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "Kda": {
+      "Background": "",
+      "Border": "",
+      "Title": {
+        "Txt": "KDA",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "BlueTeam": {
+        "Txt": "19/32/25",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "RedTeam": {
+        "Txt": "32/19/54",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      }
+    },
+    "Golds": {
+      "Background": "",
+      "Border": "",
+      "Title": {
+        "Txt": "Golds",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "BlueTeam": {
+        "Txt": "53,6K",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "RedTeam": {
+        "Txt": "58,8K",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      }
+    },
+    "Towers": {
+      "Background": "",
+      "Border": "",
+      "Title": {
+        "Txt": "Towers",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "BlueTeam": {
+        "Txt": "5",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "RedTeam": {
+        "Txt": "8",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      }
+    },
+    "VoidGrubs": {
+      "Background": null,
+      "Border": null,
+      "Title": {
+        "Txt": "Void Grubs",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "NbBlueTeam": 0,
+      "NbRedTeam": 3,
+      "Image": {
+        "Path": "assets/epicmonsters/voidgrub/voidgrub_circle.png",
+        "Background": "",
+        "Border": ""
+      }
+    },
+    "Herald": {
+      "Background": null,
+      "Border": null,
+      "Title": {
+        "Txt": "Heralds",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "NbBlueTeam": 1,
+      "NbRedTeam": 0,
+      "Image": {
+        "Path": "assets/epicmonsters/herald/herald_circle.png",
+        "Background": "",
+        "Border": ""
+      }
+    },
+    "Atakhan": {
+      "Background": null,
+      "Border": null,
+      "Title": {
+        "Txt": "Atakhan",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "NbBlueTeam": 0,
+      "NbRedTeam": 1,
+      "Image": {
+        "Path": "assets/epicmonsters/atakhan/atakhan_circle.png",
+        "Background": "",
+        "Border": ""
+      }
+    },
+    "Drakes": {
+      "Background": null,
+      "Border": null,
+      "Title": {
+        "Txt": "Drakes",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "Air": {
+        "Background": null,
+        "Border": null,
+        "Title": {
+          "Txt": "Air",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "NbBlueTeam": 0,
+        "NbRedTeam": 0,
+        "Image": {
+          "Path": "assets/epicmonsters/dragons/cloud/cloud_scoreboard.png",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      "Chemtech": {
+        "Background": null,
+        "Border": null,
+        "Title": {
+          "Txt": "Chemtech",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "NbBlueTeam": 1,
+        "NbRedTeam": 0,
+        "Image": {
+          "Path": "assets/epicmonsters/dragons/chemtech/chemtech_scoreboard.png",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      "Earth": {
+        "Background": null,
+        "Border": null,
+        "Title": {
+          "Txt": "Earth",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "NbBlueTeam": 1,
+        "NbRedTeam": 0,
+        "Image": {
+          "Path": "assets/epicmonsters/dragons/mountain/mountain_scoreboard.png",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      "Fire": {
+        "Background": null,
+        "Border": null,
+        "Title": {
+          "Txt": "Fire",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "NbBlueTeam": 0,
+        "NbRedTeam": 0,
+        "Image": {
+          "Path": "assets/epicmonsters/dragons/infernal/infernal_scoreboard.png",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      "Hextech": {
+        "Background": null,
+        "Border": null,
+        "Title": {
+          "Txt": "Hextech",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "NbBlueTeam": 0,
+        "NbRedTeam": 0,
+        "Image": {
+          "Path": "assets/epicmonsters/dragons/hextech/hextech_scoreboard.png",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      "Water": {
+        "Background": null,
+        "Border": null,
+        "Title": {
+          "Txt": "Water",
+          "Font": "Anton",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "NbBlueTeam": 0,
+        "NbRedTeam": 1,
+        "Image": {
+          "Path": "assets/epicmonsters/dragons/ocean/ocean_scoreboard.png",
+          "Background": "",
+          "Border": ""
+        }
+      }
+    },
+    "Elders": {
+      "Background": null,
+      "Border": null,
+      "Title": {
+        "Txt": "Elders",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "NbBlueTeam": 0,
+      "NbRedTeam": 0,
+      "Image": {
+        "Path": "assets/epicmonsters/dragons/elder/elder_circle.png",
+        "Background": "",
+        "Border": ""
+      }
+    },
+    "Barons": {
+      "Background": null,
+      "Border": null,
+      "Title": {
+        "Txt": "Barons",
+        "Font": "Anton",
+        "Color": "#FFFFFF",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "NbBlueTeam": 1,
+      "NbRedTeam": 0,
+      "Image": {
+        "Path": "assets/epicmonsters/baron/baron_circle.png",
+        "Background": "",
+        "Border": ""
+      }
+    }
+  },
+  "ChampionStats": {
+    "Background": "",
+    "Border": "",
+    "Title": {
+      "Txt": "Damage Dealt To Champions",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "BlueTeam": [
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/420/skins/420000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "Kalwen",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "22376",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#2979FF",
+          "Border": ""
+        }
+      },
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/35/skins/35000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "BobbaKrull",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "19983",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#2979FF",
+          "Border": ""
+        }
+      },
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/7/skins/7000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "Ekosepi",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "17963",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#2979FF",
+          "Border": ""
+        }
+      },
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/145/skins/145000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "Mummelmüff",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "22184",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#2979FF",
+          "Border": ""
+        }
+      },
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/497/skins/497000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "blank gh",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "10619",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#2979FF",
+          "Border": ""
+        }
+      }
+    ],
+    "RedTeam": [
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/98/skins/98000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "ThatSynor",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "21643",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#FF0000",
+          "Border": ""
+        }
+      },
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/234/skins/234000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "ThomasPipou",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "24190",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#FF0000",
+          "Border": ""
+        }
+      },
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/161/skins/161000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "LunarInfinity",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "23321",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#FF0000",
+          "Border": ""
+        }
+      },
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/236/skins/236000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "Lokattor",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "24332",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#FF0000",
+          "Border": ""
+        }
+      },
+      {
+        "Image": {
+          "Path": "./assets/15.20/fr_fr/champions/37/skins/37000/tile.png",
+          "Background": "",
+          "Border": ""
+        },
+        "Name": {
+          "Txt": "Valar Morghulis",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Stat": {
+          "Txt": "13226",
+          "Font": "Anton",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Bar": {
+          "Background": "#FF0000",
+          "Border": ""
+        }
+      }
+    ]
+  },
+  "Bans": {
+    "Background": "",
+    "Border": "",
+    "Title": {
+      "Txt": "Bans",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "BlueTeam": [
+      {
+        "Path": "./assets/15.20/fr_fr/champions/141/default-square.png",
+        "Background": "",
+        "Border": ""
+      },
+      {
+        "Path": "./assets/15.20/fr_fr/champions/78/default-square.png",
+        "Background": "",
+        "Border": ""
+      },
+      {
+        "Path": "./assets/15.20/fr_fr/champions/233/default-square.png",
+        "Background": "",
+        "Border": ""
+      },
+      {
+        "Path": "./assets/15.20/fr_fr/champions/517/default-square.png",
+        "Background": "",
+        "Border": ""
+      },
+      {
+        "Path": "./assets/15.20/fr_fr/champions/711/default-square.png",
+        "Background": "",
+        "Border": ""
+      }
+    ],
+    "RedTeam": [
+      {
+        "Path": "./assets/15.20/fr_fr/champions/134/default-square.png",
+        "Background": "",
+        "Border": ""
+      },
+      {
+        "Path": "./assets/15.20/fr_fr/champions/99/default-square.png",
+        "Background": "",
+        "Border": ""
+      },
+      {
+        "Path": "./assets/15.20/fr_fr/champions/82/default-square.png",
+        "Background": "",
+        "Border": ""
+      },
+      {
+        "Path": "./assets/15.20/fr_fr/champions/11/default-square.png",
+        "Background": "",
+        "Border": ""
+      },
+      {
+        "Path": "./assets/15.20/fr_fr/champions/119/default-square.png",
+        "Background": "",
+        "Border": ""
+      }
+    ]
+  },
+  "Golds": {
+    "Background": "",
+    "Border": "",
+    "Title": {
+      "Txt": "Gold Difference",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "BlueGoldsColor": "#2979FF",
+    "BlueText": {
+      "Txt": "",
+      "Font": "Anton",
+      "Color": "#2979FF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "RedGoldsColor": "#FF0000",
+    "RedText": {
+      "Txt": "",
+      "Font": "Anton",
+      "Color": "#FF0000",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "CommonGoldsColor": "#FFFFFF",
+    "CommonText": {
+      "Txt": "",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "GoldLinkColor": "#c99d53",
+    "BackgroundChartColor": "#FFFFFF",
+    "Events": [
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1714114,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -5116
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1680591,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -4558
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1620578,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -3350
+      },
+      {
+        "Type": "BARON_NASHOR",
+        "TeamId": 100,
+        "Timetamps": 1565860,
+        "Image": {
+          "Path": "",
+          "Background": "#2979FF",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1560549,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -5024
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1500523,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -8128
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1440501,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -4911
+      },
+      {
+        "Type": "WATER_DRAGON",
+        "TeamId": 200,
+        "Timetamps": 1390928,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1380497,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -4377
+      },
+      {
+        "Type": "ATAKHAN",
+        "TeamId": 200,
+        "Timetamps": 1374867,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1320482,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -3702
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1260459,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -3286
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1200446,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -4439
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1140430,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -4197
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1080411,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -2210
+      },
+      {
+        "Type": "CHEMTECH_DRAGON",
+        "TeamId": 100,
+        "Timetamps": 1079638,
+        "Image": {
+          "Path": "",
+          "Background": "#2979FF",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 1020397,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -1910
+      },
+      {
+        "Type": "RIFTHERALD",
+        "TeamId": 100,
+        "Timetamps": 966678,
+        "Image": {
+          "Path": "",
+          "Background": "#2979FF",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 960364,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -1558
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 900360,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -1032
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 840354,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -16
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 780334,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -34
+      },
+      {
+        "Type": "EARTH_DRAGON",
+        "TeamId": 100,
+        "Timetamps": 758710,
+        "Image": {
+          "Path": "",
+          "Background": "#2979FF",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 720302,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -181
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 660284,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -485
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 600268,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -197
+      },
+      {
+        "Type": "HORDE",
+        "TeamId": 200,
+        "Timetamps": 564118,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 540243,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 770
+      },
+      {
+        "Type": "HORDE",
+        "TeamId": 200,
+        "Timetamps": 537608,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "HORDE",
+        "TeamId": 200,
+        "Timetamps": 531921,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 480230,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 1352
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 420227,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 246
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 360219,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 529
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 300206,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 491
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 240203,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 180
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 180186,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 371
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 120065,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": -23
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 60032,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 0
+      },
+      {
+        "Type": "Gold",
+        "TeamId": 0,
+        "Timetamps": 0,
+        "Image": {
+          "Path": "",
+          "Background": "#FF0000",
+          "Border": ""
+        },
+        "Value": 0
+      }
+    ]
+  },
+  "EventInfo": {
+    "Background": "#00000055",
+    "Border": "border:10px solid #c99d53",
+    "Event": {
+      "Txt": "2025 OcciLan",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "Phase": {
+      "Txt": "Swiss Group - Round 1",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "Date": {
+      "Txt": "24 oct",
+      "Font": "Anton",
+      "Color": "#FFFFFF",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    }
+  }
+}
