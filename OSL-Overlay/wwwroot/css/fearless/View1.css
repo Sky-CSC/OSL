@@ -1,0 +1,106 @@
+.fearless {
+    display: flex;
+    flex-direction: column; /* Texte au-dessus, puis ligne, puis images */
+    padding: 1rem;
+    width: 500px;
+}
+
+/* Texte */
+.fearless-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Ligne */
+.fearless-line {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 5px;
+}
+
+/* Conteneur des champions */
+.fearless-champions {
+    display: flex;
+    /*gap: 0.5rem;*/
+}
+
+/* Wrapper */
+.fearless-champ-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden; /* évite les débordements */
+}
+
+/* Image principale */
+.fearless-ban {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+    .fearless-ban .image-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+/* Superpositions */
+.fearless-grey {
+    position: absolute;
+    inset: 0;
+    /*background: rgba(0,0,0,0.6);*/ /* valeur par défaut si champ.Greyscale vide */
+    z-index: 2;
+}
+
+/* Image overlay supplémentaire (ex: croix image custom) */
+.fearless-ban-image {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+}
+
+/* Trait unique (optionnel) */
+.fearless-ban-line {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+}
+
+    .fearless-ban-line::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--cross-line-width);
+        height: var(--cross-line-height);
+        transform: translate(-50%, -50%) rotate(var(--cross-line-rotate));
+        background: currentColor; /* hérite de style inline "color:" */
+    }
+
+/* Croix */
+.fearless-ban-cross {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+}
+
+    .fearless-ban-cross::before,
+    .fearless-ban-cross::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--cross-line-width);
+        height: var(--cross-line-height);
+        background: currentColor; /* couleur injectée via Blazor */
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .fearless-ban-cross::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
