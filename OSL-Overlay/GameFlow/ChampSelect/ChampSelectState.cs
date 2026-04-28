@@ -88,6 +88,8 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             // Update timers phase
             TimerPhase(session);
 
+            // TODO : Try to get info for set runes
+
             NotifyStateChanged();
         }
 

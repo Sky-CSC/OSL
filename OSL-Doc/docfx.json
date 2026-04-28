@@ -1,0 +1,76 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../OSL-CDragon",
+          "files": [ "OSL-CDragon.csproj" ]
+        },
+        {
+          "src": "../OSL-Lcu",
+          "files": [ "OSL-Lcu.csproj" ]
+        },
+        {
+          "src": "../OSL-Overlay",
+          "files": [ "OSL-Overlay.csproj" ]
+        },
+        {
+          "src": "../OSL-ReplayApi",
+          "files": [ "OSL-ReplayApi.csproj" ]
+        },
+        {
+          "src": "../OSL-RGDP",
+          "files": [ "OSL-RGDP.csproj" ]
+        },
+        {
+          "src": "../OSL-Serveur",
+          "files": [ "OSL-Serveur.csproj" ]
+        },
+        {
+          "src": "../OSL-Utils",
+          "files": [ "OSL-Utils.csproj" ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "docs/**.md",
+          "docs/**.yml",
+
+          // READMEs des projets
+          "../OSL-CDragon/README.md",
+          "../OSL-Lcu/README.md",
+          "../OSL-Overlay/README.md",
+          "../OSL-ReplayApi/README.md",
+          "../OSL-RGDP/README.md",
+          "../OSL-Serveur/README.md",
+          "../OSL-Utils/README.md",
+
+          "api/**"
+        ],
+        "exclude": [
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [ "images/**" ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "templates/rtd"
+    ],
+    "globalMetadata": {
+      "_appName": "OSL",
+      "_appTitle": "OSL Documentation",
+      "_enableSearch": true
+    }
+  }
+}

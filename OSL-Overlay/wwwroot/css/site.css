@@ -1,0 +1,21 @@
+/* Base */
+.timer-bar {
+    height: 10px !important;
+    transition: width 0.1s linear !important;
+}
+
+    /* Droite → gauche */
+    .timer-bar.rtl .mud-progress-linear-bar {
+        transform-origin: right center !important;
+    }
+
+    /* Réduction depuis le centre */
+    .timer-bar.center-in .mud-progress-linear-bar {
+        transform-origin: center center !important;
+    }
+
+    /* Réduction vers le centre */
+    .timer-bar.center-out .mud-progress-linear-bar {
+        transform-origin: center center !important;
+        transform: scaleX(-1) !important;
+    }

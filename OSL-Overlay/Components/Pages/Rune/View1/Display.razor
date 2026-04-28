@@ -1,0 +1,31 @@
+@page "/rune/view1"
+@layout Layout.EmptyLayout
+@using OSL_Overlay.GameFlow.Rune
+@inject RuneView1State RuneState
+<link rel="stylesheet" href="@Assets["css/rune/View1.css"]" />
+
+
+@foreach (var player in Info.RedTeam)
+{
+    <div class="rune-player" style="background:@player.Background; @player.Border;">
+        <Txt Class="rune-player-name" Text="@player.Name" />
+        <Image Class="rune-player-champion" Img="@player.Avatar" />
+        <div class="rune-player-runes">
+            <Image Class="rune-player-champion" Img="@player.Runes.Keystone" />
+            <Image Class="rune-player-champion" Img="@player.Runes.Primary[0]" />
+            <Image Class="rune-player-champion" Img="@player.Runes.Secondary[0]" />
+        </div>
+    </div>
+}
+
+@code {
+    private RuneInfo Info => RuneState.LocalInfo;
+    protected override void OnInitialized()
+    {
+        RuneState.OnChange += async () => await InvokeAsync(StateHasChanged);
+    }
+    public void Dispose()
+    {
+        RuneState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+    }
+}

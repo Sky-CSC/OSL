@@ -18,12 +18,17 @@ namespace OSL_CDragon
         /// <summary>
         /// The général information used for download assets
         /// </summary>
-        private Info _info = new();
+        private Info? _info = new();
 
         /// <summary>
         /// Save data of all assets
         /// </summary>
-        private Data _data = new();
+        private Data? _data = new();
+
+        /// <summary>
+        /// Exposes all loaded CDragon data (read-only reference).
+        /// </summary>
+        //public Data AssetsData => _data;
 
         /// <summary>
         /// The download manager.
@@ -43,24 +48,24 @@ namespace OSL_CDragon
         /// Download champions, items, summoner spells, perks and perkstyles assets
         /// </summary>
         /// <returns>True if assets are downloaded</returns>
-        public bool DownloadAssets()
-        {
-            if (CheckPatchRegion() && CreateDirectories())
-            {
-                DownloadAllData();
+        //public bool DownloadAssets()
+        //{
+        //    if (CheckPatchRegion() && CreateDirectories())
+        //    {
+        //        DownloadAllData();
 
-                DownloadPositionsData();
-                DownloadEpicMonstersData();
+        //        DownloadPositionsData();
+        //        DownloadEpicMonstersData();
 
-                // Save data in local file
-                SaveData();
-                // Save info in local file
-                SaveInfo();
+        //        // Save data in local file
+        //        SaveData();
+        //        // Save info in local file
+        //        SaveInfo();
 
-                return true;
-            }
-            return false;
-        }
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
         /// <summary>
         /// Download assets and check if all assets in file are downloaded
@@ -68,6 +73,19 @@ namespace OSL_CDragon
         /// <returns></returns>
         public bool DownloadAssetsWithCheck()
         {
+            // Load data and info from file
+            
+            //if (LoadData())
+            //{
+
+            //}
+            //else
+            //{
+            //    // If file not loader or no exist, load default patch and region
+
+            //} 
+            // Check if is the last patch
+
             if (CheckPatchRegion() && CreateDirectories())
             {
                 // Check if champion, itemps, perks and summoner spells of spécific région and patch are downloaded
@@ -101,9 +119,12 @@ namespace OSL_CDragon
             string? data = OSL_Utils.File.Read("./wwwroot/assets/_data.json");
             if (data != null)
             {
-                _data = JsonConvert.DeserializeObject<Data>(data) ?? new Data();
-                _logger.Log(LoggingLevel.INFO, "LoadData()", "Data loaded");
-                return true;
+                _data = JsonConvert.DeserializeObject<Data>(data);
+                if (_data != null)
+                {
+                    _logger.Log(LoggingLevel.INFO, "LoadData()", "Data loaded");
+                    return true;
+                }
             }
             _logger.Log(LoggingLevel.ERROR, "LoadData()", "Data not loaded");
             return false;
@@ -128,8 +149,11 @@ namespace OSL_CDragon
             if (info != null)
             {
                 _info = JsonConvert.DeserializeObject<Info>(info);
-                _logger.Log(LoggingLevel.INFO, "LoadInfo()", "Info loaded");
-                return true;
+                if (_info != null)
+                {
+                    _logger.Log(LoggingLevel.INFO, "LoadInfo()", "Info loaded");
+                    return true;
+                }
             }
             _logger.Log(LoggingLevel.ERROR, "LoadInfo()", "Info not loaded");
             return false;

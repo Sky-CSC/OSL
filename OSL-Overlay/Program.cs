@@ -7,6 +7,7 @@ using OSL_Overlay.GameFlow.EndGame;
 using OSL_Overlay.GameFlow.Fearless;
 using OSL_Overlay.GameFlow.Patch;
 using OSL_Overlay.GameFlow.Phase;
+using OSL_Overlay.GameFlow.Rune;
 using OSL_Overlay.GameFlow.Team;
 using OSL_Overlay.GameFlow.Vs;
 using OSL_Overlay.WebSocketClient;
@@ -32,6 +33,7 @@ builder.Services.AddSingleton<IMessageHandler, EndGameMatchHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameTimelineHandler>();
 builder.Services.AddSingleton<IMessageHandler, ChampSelectHandler>();
 builder.Services.AddSingleton<IMessageHandler, FearlessMatchHandler>();
+builder.Services.AddSingleton<IMessageHandler, RuneSpectatorCurentGameInfoByRiotId>();
 
 // Initialize CDragon and download assets if necessary
 var cdragon = new CDragon();
@@ -67,6 +69,11 @@ builder.Services.AddSingleton<ChampSelectView1State>();
 // EndGame
 builder.Services.AddSingleton<EndGameState>();
 builder.Services.AddSingleton<EndGameView1State>();
+
+// Runes
+builder.Services.AddSingleton<RuneState>();
+builder.Services.AddSingleton<RuneView1State>();
+
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -114,6 +121,9 @@ using (var scope = app.Services.CreateScope())
     champSelectView1State.SyncFromGlobal();
     var endGameState = scope.ServiceProvider.GetRequiredService<EndGameState>();
     var endGameView1State = scope.ServiceProvider.GetRequiredService<EndGameView1State>();
+    var runeState = scope.ServiceProvider.GetRequiredService<RuneState>();
+    var runeView1State = scope.ServiceProvider.GetRequiredService<RuneView1State>();
+
 }
 
 app.Run();

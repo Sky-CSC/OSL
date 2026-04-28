@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ _appTitle }}</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    {{> header.tmpl}}
+    {{> sidebar.tmpl}}
+    <div class="main-content">
+        {{{ body }}}
+    </div>
+    {{> footer.tmpl}}
+</body>
+</html>

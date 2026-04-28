@@ -1,0 +1,27 @@
+- name: Présentation
+  href: docs/index.md
+
+- name: Documentation
+  href: docs/
+  homepage: docs/index.md
+
+- name: Modules
+  items:
+    - name: OSL-CDragon
+      href: ../OSL-CDragon/README.md
+    - name: OSL-Lcu
+      href: ../OSL-Lcu/README.md
+    - name: OSL-Overlay
+      href: ../OSL-Overlay/README.md
+    - name: OSL-ReplayApi
+      href: ../OSL-ReplayApi/README.md
+    - name: OSL-RGDP
+      href: ../OSL-RGDP/README.md
+    - name: OSL-Serveur
+      href: ../OSL-Serveur/README.md
+    - name: OSL-Utils
+      href: ../OSL-Utils/README.md
+
+- name: API
+  href: api/
+  homepage: api/index.html

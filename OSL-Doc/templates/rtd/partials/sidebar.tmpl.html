@@ -1,0 +1,18 @@
+<div class="sidebar">
+    {{#if toc}}
+    <ul>
+        {{#each toc}}
+        <li>
+            <a href="{{ href }}">{{ name }}</a>
+            {{#if items}}
+            <ul>
+                {{#each items}}
+                <li><a href="{{ href }}">{{ name }}</a></li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>

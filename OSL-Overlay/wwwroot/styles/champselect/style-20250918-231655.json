@@ -1,0 +1,484 @@
+
+{
+  "BlueTeam": {
+    "Side": "",
+    "Bans": [
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      },
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      },
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      },
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      },
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      }
+    ],
+    "Coach": {
+      "Show": false,
+      "Info": {
+        "Txt": "",
+        "Font": "",
+        "Color": "",
+        "Background": "",
+        "Border": ""
+      }
+    },
+    "Timer": {
+      "Show": false,
+      "Duration": 0,
+      "Direction": "",
+      "BarColor": "",
+      "FillColor": ""
+    },
+    "Picks": [
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      }
+    ],
+    "ShowLogo": false,
+    "Logo": "",
+    "ShowName": false,
+    "Name": {
+      "Txt": "",
+      "Font": "",
+      "Color": "",
+      "Background": "",
+      "Border": ""
+    },
+    "ShowTag": false,
+    "Tag": {
+      "Txt": "",
+      "Font": "",
+      "Color": "",
+      "Background": "",
+      "Border": ""
+    },
+    "BoGraphic": {
+      "Show": false,
+      "NbMatchForWin": 0,
+      "NbWin": 0,
+      "Win": {
+        "Txt": "",
+        "Font": "",
+        "Color": "",
+        "Background": "",
+        "Border": ""
+      },
+      "Undef": {
+        "Txt": "",
+        "Font": "",
+        "Color": "",
+        "Background": "",
+        "Border": ""
+      }
+    }
+  },
+  "RedTeam": {
+    "Side": "",
+    "Bans": [
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      },
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      },
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      },
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      },
+      {
+        "BackgroundImage": "",
+        "BackgroundColor": "",
+        "IsBanning": false,
+        "BlinkColor": "",
+        "IsCompleted": false,
+        "CrossImage": ""
+      }
+    ],
+    "Coach": {
+      "Show": false,
+      "Info": {
+        "Txt": "",
+        "Font": "",
+        "Color": "",
+        "Background": "",
+        "Border": ""
+      }
+    },
+    "Timer": {
+      "Show": false,
+      "Duration": 0,
+      "Direction": "",
+      "BarColor": "",
+      "FillColor": ""
+    },
+    "Picks": [
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      },
+      {
+        "BackgroundImage": "",
+        "ShowLane": true,
+        "LaneImage": "",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "",
+        "Name": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "",
+          "Color": "",
+          "Background": "",
+          "Border": ""
+        }
+      }
+    ],
+    "ShowLogo": false,
+    "Logo": "",
+    "ShowName": false,
+    "Name": {
+      "Txt": "",
+      "Font": "",
+      "Color": "",
+      "Background": "",
+      "Border": ""
+    },
+    "ShowTag": false,
+    "Tag": {
+      "Txt": "",
+      "Font": "",
+      "Color": "",
+      "Background": "",
+      "Border": ""
+    },
+    "BoGraphic": {
+      "Show": false,
+      "NbMatchForWin": 0,
+      "NbWin": 0,
+      "Win": {
+        "Txt": "",
+        "Font": "",
+        "Color": "",
+        "Background": "",
+        "Border": ""
+      },
+      "Undef": {
+        "Txt": "",
+        "Font": "",
+        "Color": "",
+        "Background": "",
+        "Border": ""
+      }
+    }
+  },
+  "TeamsBackground": "",
+  "Patch": {
+    "BackgroundColor": "",
+    "PatchInfo": {
+      "Txt": "Patch",
+      "Font": "",
+      "Color": "",
+      "Background": "",
+      "Border": ""
+    },
+    "Version": {
+      "Txt": "18.25",
+      "Font": "",
+      "Color": "",
+      "Background": "",
+      "Border": ""
+    }
+  },
+  "CommonTimer": {
+    "Show": false,
+    "Duration": 0,
+    "Direction": "",
+    "BarColor": "",
+    "FillColor": ""
+  },
+  "Phase": {
+    "Txt": "",
+    "Font": "",
+    "Color": "",
+    "Background": "",
+    "Border": ""
+  },
+  "Vs": {
+    "Txt": "",
+    "Font": "",
+    "Color": "",
+    "Background": "",
+    "Border": ""
+  }
+}
