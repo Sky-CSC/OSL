@@ -129,7 +129,7 @@ namespace OSL_Overlay.Components.Pages.Style
         /// <returns></returns>
         private async Task ConfirmDelete(string fileName)
         {
-            bool? result = await DialogService.ShowMessageBox(
+            bool? result = await DialogService.ShowMessageBoxAsync(
                 "Confirm",
                 $"Do you want to delete this file '{fileName}' ?",
                 yesText: "Delete", cancelText: "Cancel");
@@ -181,7 +181,7 @@ namespace OSL_Overlay.Components.Pages.Style
 
             if (File.Exists(newPath))
             {
-                await DialogService.ShowMessageBox("Error", "This file name already exist.");
+                await DialogService.ShowMessageBoxAsync("Error", "This file name already exist.");
                 return;
             }
 
