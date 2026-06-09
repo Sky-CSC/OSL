@@ -119,6 +119,16 @@ namespace OSL_CDragon
             return _data.Patchs[_indexPatch].Regions[_indexRegion].Perks.FirstOrDefault(perk => perk.Id == id) ?? null;
         }
 
+        public string GetPerkIconPath(int id)
+        {
+            var perk = GetPerk(id);
+            if (perk == null)
+                return string.Empty;
+            string[] path = perk.IconPath.Split("/wwwroot");
+            string filePath = path[0] + path[1];
+            return filePath;
+        }
+
         public List<Asset> GetPositionTop()
         {
             return _data.Positions.TopPath;
