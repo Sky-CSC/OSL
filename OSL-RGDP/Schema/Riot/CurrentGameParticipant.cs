@@ -39,6 +39,11 @@ namespace OSL_RGDP.Schema.Riot
         [JsonProperty("summonerId")]
         public string SummonerId { get; set; }
         /// <summary>
+        /// The Rito ID of this participant.
+        /// </summary>
+        [JsonProperty("riotId")]
+        public string RiotId { get; set; }
+        /// <summary>
         /// The encrypted puuid of this participant.
         /// </summary>
         [JsonProperty("puuid")]
