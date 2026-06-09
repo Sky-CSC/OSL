@@ -1,4 +1,4 @@
-﻿namespace OSL_Utils
+namespace OSL_Utils
 {
     /// <summary>
     /// Logger class for logging messages, supports automatic emojis
@@ -23,7 +23,7 @@
         /// <summary>
         /// Default logging level
         /// </summary>
-        public static LoggingLevel DefaultLoggingLevel { get; } = LoggingLevel.INFO;
+        public static LoggingLevel DefaultLoggingLevel { get; } = LoggingLevel.DEBUG;
 
         /// <summary>
         /// Static constructor for configurer UTF-8

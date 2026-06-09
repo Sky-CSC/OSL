@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Hosting;
-
 namespace OSL_Utils
 {
     /// <summary>
@@ -24,7 +21,7 @@ namespace OSL_Utils
             try
             {
                 System.IO.File.WriteAllText(filePath, content);
-                _logger.Log(LoggingLevel.INFO, "Write()", $"Data write in file {filePath} successfully");
+                _logger.Log(LoggingLevel.DEBUG, "Write()", $"Data write in file {filePath} successfully");
                 return true;
             }
             catch (Exception e)
@@ -45,7 +42,7 @@ namespace OSL_Utils
             try
             {
                 System.IO.File.WriteAllBytes(filePath, content);
-                _logger.Log(LoggingLevel.INFO, "Write()", $"Data write un file {filePath} successfully");
+                _logger.Log(LoggingLevel.DEBUG, "Write()", $"Data write un file {filePath} successfully");
                 return true;
             }
             catch (Exception e)
@@ -65,7 +62,7 @@ namespace OSL_Utils
             try
             {
                 string content = System.IO.File.ReadAllText(filePath);
-                _logger.Log(LoggingLevel.INFO, "Read()", $"Data read from file {filePath} successfully");
+                _logger.Log(LoggingLevel.DEBUG, "Read()", $"Data read from file {filePath} successfully");
                 return content;
             }
             catch (Exception e)
@@ -87,7 +84,7 @@ namespace OSL_Utils
                 var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 var reader = new StreamReader(fileStream);
                 string? content = reader.ReadLine();
-                _logger.Log(LoggingLevel.INFO, "Read()", $"Data read from file {filePath} successfully");
+                _logger.Log(LoggingLevel.DEBUG, "Read()", $"Data read from file {filePath} successfully");
                 return content;
             }
             catch (Exception e)
@@ -108,10 +105,10 @@ namespace OSL_Utils
             {
                 if (System.IO.File.Exists(filePath))
                 {
-                    _logger.Log(LoggingLevel.INFO, "Exist()", $"File {filePath} exist");
+                    _logger.Log(LoggingLevel.DEBUG, "Exist()", $"File {filePath} exist");
                     return true;
                 }
-                _logger.Log(LoggingLevel.INFO, "Exist()", $"File {filePath} not exist");
+                _logger.Log(LoggingLevel.DEBUG, "Exist()", $"File {filePath} not exist");
             }
             catch (Exception e)
             {
@@ -132,7 +129,7 @@ namespace OSL_Utils
             try
             {
                 System.IO.File.Copy(sourceFile, destFile, overwrite);
-                _logger.Log(LoggingLevel.INFO, "Copy()", $"File {sourceFile} copy to {destFile}");
+                _logger.Log(LoggingLevel.DEBUG, "Copy()", $"File {sourceFile} copy to {destFile}");
                 return destFile;
             }
             catch (Exception e)

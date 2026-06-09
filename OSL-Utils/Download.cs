@@ -25,7 +25,7 @@ namespace OSL_Utils
             try
             {
                 string response = await _httpClient.GetStringAsync(url);
-                _logger.Log(LoggingLevel.INFO, "StringAsync()", $"Data from {url} download successfully");
+                _logger.Log(LoggingLevel.DEBUG, "StringAsync()", $"Data from {url} download successfully");
                 return response;
             }
             catch (Exception e)
@@ -45,7 +45,7 @@ namespace OSL_Utils
             try
             {
                 byte[] response = await _httpClient.GetByteArrayAsync(url);
-                _logger.Log(LoggingLevel.INFO, "FileAsync()", $"Data from {url} download successfully");
+                _logger.Log(LoggingLevel.DEBUG, "FileAsync()", $"Data from {url} download successfully");
                 return response;
             }
             catch (Exception e)
@@ -73,7 +73,7 @@ namespace OSL_Utils
                     // Create directory if not exist, if already exist, do nothing
                     Directory.Create(directory);
                     File.Write(filePath, data);
-                    _logger.Log(LoggingLevel.INFO, "DownloadFile()", $"File {fileName} downloaded");
+                    _logger.Log(LoggingLevel.DEBUG, "DownloadFile()", $"File {fileName} downloaded");
                     return filePath;
 
                 }
@@ -102,7 +102,7 @@ namespace OSL_Utils
                     return null;
                 }
                 string content = await httpResponseMessage.Content.ReadAsStringAsync();
-                _logger.Log(LoggingLevel.INFO, "GetResponse()", $"Response : {httpRequestMessage.RequestUri} succesful");
+                _logger.Log(LoggingLevel.DEBUG, "GetResponse()", $"Response : {httpRequestMessage.RequestUri} succesful");
                 return content;
             }
             catch (Exception e)
@@ -137,7 +137,7 @@ namespace OSL_Utils
                     return null;
                 }
 
-                _logger.Log(LoggingLevel.INFO, "GetResponse()", $"Response: {httpRequestMessage.RequestUri} successful");
+                _logger.Log(LoggingLevel.DEBUG, "GetResponse()", $"Response: {httpRequestMessage.RequestUri} successful");
                 return content;
             }
             catch (Exception e)

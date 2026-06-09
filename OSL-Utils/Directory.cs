@@ -1,4 +1,4 @@
-﻿namespace OSL_Utils
+namespace OSL_Utils
 {
     /// <summary>
     /// Provides methods for directory operations.
@@ -20,7 +20,7 @@
             try
             {
                 System.IO.Directory.CreateDirectory(path);
-                _logger.Log(LoggingLevel.INFO, "Create()", $"Directory {path} created successfully");
+                _logger.Log(LoggingLevel.DEBUG, "Create()", $"Directory {path} created successfully");
                 return true;
             }
             catch (Exception e)
@@ -40,7 +40,7 @@
             try
             {
                 bool exist = System.IO.Directory.Exists(path);
-                _logger.Log(LoggingLevel.INFO, "Exist()", $"Directory {path} exist : {exist}");
+                _logger.Log(LoggingLevel.DEBUG, "Exist()", $"Directory {path} exist : {exist}");
                 return exist;
             }
             catch (Exception e)
