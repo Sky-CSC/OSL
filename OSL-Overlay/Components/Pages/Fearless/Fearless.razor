@@ -8,7 +8,7 @@
 
 <PageTitle>Fearless - Management</PageTitle>
 
-<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Fearless management</b></MudText>
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Fearless management</b></MudText>
 <MudStack Row="true" AlignItems="AlignItems.Center">
     <StyleFieldEditor Label="Number of fearless match to display"
                       Type="text"
@@ -84,8 +84,26 @@
 </MudStack>
 <br />
 
+<MudText Id="link" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Fearless links</MudText>
+<MudStack Row="false">
+    <SwitchButton Text="@($"View 1")"
+                  Icon="@Icons.Material.Filled.InsertLink"
+                  BackgroundColor="@Colors.BlueGray.Darken4"
+                  HoverBackgroundColor="@Colors.BlueGray.Darken2"
+                  TextColor="#FF0000"
+                  Href="@($"/fearless/view")"
+                  Target="_blank" />
+    <SwitchButton Text="@($"View 2")"
+                  Icon="@Icons.Material.Filled.InsertLink"
+                  BackgroundColor="@Colors.BlueGray.Darken4"
+                  HoverBackgroundColor="@Colors.BlueGray.Darken2"
+                  TextColor="#FF0000"
+                  Href="@($"/fearless/view2")"
+                  Target="_blank" />
+</MudStack>
+
 <br />
-<MudText Typo="Typo.h5" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>List of fearless</b></MudText>
+<MudText Typo="Typo.h6" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>List of fearless</b></MudText>
 @foreach (var match in FearlessState.FearlessList)
 {
     <MudStack Row="true" AlignItems="AlignItems.Center">
@@ -114,7 +132,7 @@
 }
 
 <br />
-<MudText Typo="Typo.h5" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>For set champ manually</b></MudText>
+<MudText Typo="Typo.h6" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>For set champ manually</b></MudText>
 
 <MudStack Row="true" AlignItems="AlignItems.Center">
     @for (int i = 0; i < _nbPlayer - 5; i++)
@@ -166,7 +184,8 @@
             {
                 player.ChampionId = _selectedChampions[i].Id;
             }
-            else {
+            else
+            {
                 player.ChampionId = 0;
             }
             if (i < 5)

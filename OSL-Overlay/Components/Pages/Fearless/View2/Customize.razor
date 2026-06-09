@@ -10,16 +10,8 @@
     }
 </style>
 
-<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Fearless View1 Customize</b></MudText>
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Fearless View1 Customize</b></MudText>
 <br />
-
-<SwitchButton Text="@($"View 2")"
-              Icon="@Icons.Material.Filled.InsertLink"
-              BackgroundColor="@Colors.BlueGray.Darken4"
-              HoverBackgroundColor="@Colors.BlueGray.Darken2"
-              TextColor="#FF0000"
-              Href="@($"/fearless/view2")"
-              Target="_blank" />
 
 @* ---------------- Choose file style to use ---------------- *@
 <StyleManager RelativePath="styles/fearless/view2"
@@ -30,7 +22,7 @@
 
 
 <br />
-<MudText Id="custom" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Fearless customize</MudText>
+<MudText Id="custom" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Fearless customize</MudText>
 
 @code {
     private List<List<FearlessInfo>> LocalFearlessList => ViewState.LocalFearlessList;
