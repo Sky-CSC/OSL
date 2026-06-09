@@ -1,53 +1,45 @@
-@page "/phase/"
 @using OSL_Overlay.GameFlow.Phase
 @inject PhaseState PhaseState
 
 @* ---------------- Phase managament ---------------- *@
-<PageTitle>Phase</PageTitle>
 
-<style>
-    .section {
-        scroll-margin-top: 10vh;
-    }
-</style>
-
-<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Phase management</b></MudText>
-<br />
-
-<MudText Id="text" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Phase text</MudText>
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Phase management</b></MudText>
 <MudStack Row="true">
-    @* ---------------- Text ---------------- *@
-    <StyleFieldEditor Label=""
-                      Type="text"
-                      Value="@PhaseState.Info.Phase.Txt"
-                      ValueChanged="v => PhaseState.UpdatePhaseText(v)"
-                      BorderColor="#0B849E"
-                      Placeholder="Swiss Group - Round 1" />
-</MudStack>
-<br />
-<MudText Id="text" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Event text</MudText>
-<MudStack Row="true">
-    @* ---------------- Text ---------------- *@
-    <StyleFieldEditor Label=""
-                      Type="text"
-                      Value="@PhaseState.Info.Event.Txt"
-                      ValueChanged="v => PhaseState.UpdateEventText(v)"
-                      BorderColor="#0B849E"
-                      Placeholder="2025 OcciLan" />
-</MudStack>
-<br />
-<MudText Id="text" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Date text</MudText>
-<MudStack Row="true">
-    @* ---------------- Text ---------------- *@
-    <StyleFieldEditor Label=""
-                      Type="text"
-                      Value="@PhaseState.Info.Date.Txt"
-                      ValueChanged="v => PhaseState.UpdateDateText(v)"
-                      BorderColor="#0B849E"
-                      Placeholder="24 Oct" />
+    <MudStack Row="false">
+        <MudText Id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Phase text</MudText>
+        @* ---------------- Text ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PhaseState.Info.Phase.Txt"
+                          ValueChanged="v => PhaseState.UpdatePhaseText(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="Swiss Group - Round 1" />
+    </MudStack>
+    <br />
+    <MudStack Row="false">
+        <MudText Id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Event text</MudText>
+        @* ---------------- Text ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PhaseState.Info.Event.Txt"
+                          ValueChanged="v => PhaseState.UpdateEventText(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="2025 OcciLan" />
+    </MudStack>
+    <br />
+    <MudStack Row="false">
+        <MudText Id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Date text</MudText>
+        @* ---------------- Text ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PhaseState.Info.Date.Txt"
+                          ValueChanged="v => PhaseState.UpdateDateText(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="24 Oct" />
+    </MudStack>
 </MudStack>
 
-@code{
+@code {
     private void OnStyleChanged(Action<string> setter, string newValue)
     {
         setter(newValue);

@@ -1,38 +1,31 @@
-@page "/patch/"
 @using OSL_Overlay.GameFlow.Patch
 @inject PatchState PatchState
 
 @* ---------------- Patch managament ---------------- *@
-<PageTitle>Patch</PageTitle>
 
-<style>
-    .section {
-        scroll-margin-top: 10vh;
-    }
-</style>
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Patch management</b></MudText>
 
-<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Patch management</b></MudText>
-<br />
-
-<MudText Id="text" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Patch text</MudText>
 <MudStack Row="true">
-    @* ---------------- Text ---------------- *@
-    <StyleFieldEditor Label=""
-                      Type="text"
-                      Value="@PatchState.Info.Text"
-                      ValueChanged="v => PatchState.UpdateText(v)"
-                      BorderColor="#0B849E"
-                      Placeholder="Patch"/>
-</MudStack>
-<MudText Id="version" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Patch version</MudText>
-<MudStack Row="true">
-    @* ---------------- Version ---------------- *@
-    <StyleFieldEditor Label=""
-                      Type="text"
-                      Value="@PatchState.Info.Version"
-                      ValueChanged="v => PatchState.UpdatePatch(v)"
-                      BorderColor="#0B849E"
-                      Placeholder="15.20"/>
+    <MudStack Row="false">
+        <MudText Id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Patch text</MudText>
+        @* ---------------- Text ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PatchState.Info.Text"
+                          ValueChanged="v => PatchState.UpdateText(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="Patch" />
+    </MudStack>
+    <MudStack Row="false">
+        <MudText Id="version" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Patch version</MudText>
+        @* ---------------- Version ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PatchState.Info.Version"
+                          ValueChanged="v => PatchState.UpdatePatch(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="15.20" />
+    </MudStack>
 </MudStack>
 
 @code {

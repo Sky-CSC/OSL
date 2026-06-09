@@ -1,20 +1,9 @@
-@page "/vs/"
 @using OSL_Overlay.GameFlow.Vs
 @inject VsState VsState
 
-@* ---------------- Phase managament ---------------- *@
-<PageTitle>Phase</PageTitle>
-
-<style>
-    .section {
-        scroll-margin-top: 10vh;
-    }
-</style>
-
-<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Phase management</b></MudText>
-<br />
-
-<MudText Id="text" Class="section" Typo="Typo.h5" Style="text-decoration-line: underline; font-weight:bold;">Phase text</MudText>
+@* ---------------- VS managament ---------------- *@
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>VS management</b></MudText>
+<MudText Id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">VS text</MudText>
 <MudStack Row="true">
     @* ---------------- Text ---------------- *@
     <StyleFieldEditor Label=""
