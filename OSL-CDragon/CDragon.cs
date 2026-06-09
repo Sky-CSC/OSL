@@ -18,12 +18,12 @@ namespace OSL_CDragon
         /// <summary>
         /// The général information used for download assets
         /// </summary>
-        private Info _info = new();
+        private Info? _info = new();
 
         /// <summary>
         /// Save data of all assets
         /// </summary>
-        private Data _data = new();
+        private Data? _data = new();
 
         /// <summary>
         /// The download manager.
@@ -40,34 +40,15 @@ namespace OSL_CDragon
         private int _indexRegion = -1;
 
         /// <summary>
-        /// Download champions, items, summoner spells, perks and perkstyles assets
-        /// </summary>
-        /// <returns>True if assets are downloaded</returns>
-        public bool DownloadAssets()
-        {
-            if (CheckPatchRegion() && CreateDirectories())
-            {
-                DownloadAllData();
-
-                DownloadPositionsData();
-                DownloadEpicMonstersData();
-
-                // Save data in local file
-                SaveData();
-                // Save info in local file
-                SaveInfo();
-
-                return true;
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Download assets and check if all assets in file are downloaded
+        /// Download champions, items, summoner spells, perks and perkstyles assets and check if all assets in file are downloaded
         /// </summary>
         /// <returns></returns>
         public bool DownloadAssetsWithCheck()
         {
+            // Load data and info from file
+            LoadData();
+            LoadInfo();
+
             if (CheckPatchRegion() && CreateDirectories())
             {
                 // Check if champion, itemps, perks and summoner spells of spécific région and patch are downloaded
@@ -102,8 +83,11 @@ namespace OSL_CDragon
             if (data != null)
             {
                 _data = JsonConvert.DeserializeObject<Data>(data) ?? new Data();
-                _logger.Log(LoggingLevel.INFO, "LoadData()", "Data loaded");
-                return true;
+                if (_data != null)
+                {
+                    _logger.Log(LoggingLevel.INFO, "LoadData()", "Data loaded");
+                    return true;
+                }
             }
             _logger.Log(LoggingLevel.ERROR, "LoadData()", "Data not loaded");
             return false;
@@ -128,8 +112,11 @@ namespace OSL_CDragon
             if (info != null)
             {
                 _info = JsonConvert.DeserializeObject<Info>(info);
-                _logger.Log(LoggingLevel.INFO, "LoadInfo()", "Info loaded");
-                return true;
+                if (_info != null)
+                {
+                    _logger.Log(LoggingLevel.INFO, "LoadInfo()", "Info loaded");
+                    return true;
+                }
             }
             _logger.Log(LoggingLevel.ERROR, "LoadInfo()", "Info not loaded");
             return false;
