@@ -6,6 +6,11 @@ namespace OSL_Utils
     public static class Path
     {
         /// <summary>
+        /// Logger for the class.
+        /// </summary>
+        private static readonly Logger _logger = new("File");
+
+        /// <summary>
         /// Combines two or more strings into a path and replace \ by /.
         /// </summary>
         /// <param name="paths">List of path</param>
@@ -28,9 +33,11 @@ namespace OSL_Utils
                 string? directoryName = System.IO.Path.GetDirectoryName(path);
                 if (directoryName != null)
                 {
+                    _logger.Log(LoggingLevel.DEBUG, "GetDirectoryName()", $"Directory name is valid for path: {path}");
                     return directoryName.Replace(System.IO.Path.DirectorySeparatorChar, '/');
                 }
             }
+            _logger.Log(LoggingLevel.DEBUG, "GetDirectoryName()", $"Directory name is empty for path: {path}");
             return "";
         }
 
