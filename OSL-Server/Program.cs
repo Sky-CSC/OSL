@@ -35,6 +35,7 @@ builder.Services.AddSingleton<IMessageHandler, TerminatorHandler>();
 builder.Services.AddSingleton<IMessageHandler, FearlessGameMatchHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameMatchHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameTimelineHandler>();
+builder.Services.AddSingleton<IMessageHandler, SpectatorCurentGameInfoByRiotId>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
