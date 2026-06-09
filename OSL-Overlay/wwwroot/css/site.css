@@ -1,0 +1,68 @@
+/* Base */
+.timer-bar {
+    height: 10px !important;
+    transition: width 0.1s linear !important;
+}
+
+    /* Droite → gauche */
+    .timer-bar.rtl .mud-progress-linear-bar {
+        transform-origin: right center !important;
+    }
+
+    /* Réduction depuis le centre */
+    .timer-bar.center-in .mud-progress-linear-bar {
+        transform-origin: center center !important;
+    }
+
+    /* Réduction vers le centre */
+    .timer-bar.center-out .mud-progress-linear-bar {
+        transform-origin: center center !important;
+        transform: scaleX(-1) !important;
+    }
+
+body {
+    background: linear-gradient( 180deg, #151A1A 0%, #202929 100%);
+}
+
+/* AppBar */
+
+.appbar-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(21,26,26,.78) !important;
+    border-bottom: 1px solid rgba(99,251,214,.10);
+}
+
+.osl-title {
+    color: #DDFCF6;
+    font-weight: 600;
+}
+
+/* Cartes */
+
+.mud-paper,
+.mud-card {
+    border-radius: 14px;
+    border: 1px solid rgba(99,251,214,.10);
+    backdrop-filter: blur(8px);
+}
+
+/* Boutons */
+
+.mud-button-root {
+    text-transform: none !important;
+    font-weight: 600;
+}
+
+/* Navigation */
+
+.mud-nav-link.active {
+    background: rgba(99,251,214,.12);
+    border-left: 3px solid #63FBD6;
+}
+
+/* Drawer */
+
+.mud-drawer {
+    border-right: 1px solid rgba(99,251,214,.08);
+}

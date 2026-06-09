@@ -1,0 +1,45 @@
+.timer-bar {
+    position: relative;
+    height: 10px;
+    /*background-color: red;*/
+    overflow: hidden;
+}
+
+    .timer-bar .timer-fill {
+        width: 100%; /* largeur fixe */
+        height: 100%;
+        background-color: blue;
+        border-radius: inherit;
+        transform: scaleX(var(--progress, 1));
+        transform-origin: left center;
+        transition: transform 0.16s linear;
+    }
+
+    /* RTL */
+    .timer-bar.rtl .timer-fill {
+        transform-origin: right center;
+    }
+
+    /* Centre → contraction */
+    .timer-bar.center-in .timer-fill,
+    .timer-bar.center-out .timer-fill {
+        transform-origin: center center;
+    }
+
+.bo-graphic {
+    position: absolute;
+    top: 370px;
+    width: 340px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+    .bo-graphic .bo-graphic-slot {
+        width: 70px;
+        height: 25px;
+        filter: grayscale(60%);
+        margin-right: 10px;
+    }
