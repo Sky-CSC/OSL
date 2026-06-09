@@ -4,22 +4,67 @@
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
-<MudLayout>
-    <MudAppBar Elevation="1">
-        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        <MudText Typo="Typo.h5" Class="ml-3">OSL-Overlay</MudText>
-        <MudSpacer />
-        <MudIconButton Icon="@(DarkLightModeButtonIcon)" Color="Color.Inherit" OnClick="@DarkModeToggle" />
-        <MudIconButton Icon="@Icons.Material.Filled.MoreVert" Color="Color.Inherit" Edge="Edge.End" />
-    </MudAppBar>
-    <MudDrawer id="nav-drawer" @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2">
-        <NavMenu />
-    </MudDrawer>
-    <MudMainContent Class="pt-16 pa-4">
-        @Body
-    </MudMainContent>
-</MudLayout>
 
+<MudLayout>
+
+    <MudAppBar Elevation="0"
+               Dense="true"
+               Class="appbar-blur">
+
+        <MudIconButton Icon="@Icons.Material.Filled.Menu"
+                       Color="Color.Inherit"
+                       Edge="Edge.Start"
+                       OnClick="DrawerToggle" />
+
+        <MudText Typo="Typo.h5"
+                 Class="ml-3 osl-title">
+
+            OSL-Overlay
+
+        </MudText>
+
+        <MudChip T="string"
+                 Size="Size.Small"
+                 Variant="Variant.Filled"
+                 Class="osl-version-chip">
+            v2.0.0
+        </MudChip>
+
+        <MudImage Src="favicon.ico"
+                  Alt="OSL Logo"
+                  Style="height:26px;width:auto;margin:0 10px;" />
+
+        <MudSpacer />
+
+        <MudIconButton Icon="@DarkLightModeButtonIcon"
+                       Color="Color.Inherit"
+                       OnClick="DarkModeToggle" />
+
+    </MudAppBar>
+
+    <MudDrawer id="nav-drawer"
+               @bind-Open="_drawerOpen"
+               Variant="DrawerVariant.Responsive"
+               ClipMode="DrawerClipMode.Always"
+               Elevation="0">
+
+        <NavMenu />
+         <MudDivider />
+        <div class="pa-3">
+            <MudText Typo="Typo.caption" Class="osl-version-text">
+                OSL © 2026
+            </MudText>
+        </div>
+
+    </MudDrawer>
+
+    <MudMainContent Class="pt-16 pa-4">
+
+        @Body
+
+    </MudMainContent>
+
+</MudLayout>
 
 <div id="blazor-error-ui" data-nosnippet>
     An unhandled error has occurred.
@@ -28,19 +73,27 @@
 </div>
 
 @code {
+
     private bool _drawerOpen = true;
-    private bool _isDarkMode = true;
-    private MudTheme? _theme = null;
+
+    private bool _isDarkMode = false;
+
+    private MudTheme? _theme;
 
     protected override void OnInitialized()
     {
-        base.OnInitialized();
-
-        _theme = new()
+        _theme = new MudTheme
         {
             PaletteLight = _lightPalette,
+
             PaletteDark = _darkPalette,
-            LayoutProperties = new LayoutProperties()
+
+            LayoutProperties = new LayoutProperties
+            {
+                DrawerWidthLeft = "240px",
+
+                AppbarHeight = "56px",
+            }
         };
     }
 
@@ -54,49 +107,86 @@
         _isDarkMode = !_isDarkMode;
     }
 
+    public string DarkLightModeButtonIcon =>
+        _isDarkMode
+            ? Icons.Material.Outlined.LightMode
+            : Icons.Material.Outlined.DarkMode;
+
     private readonly PaletteLight _lightPalette = new()
     {
-        Black = "#110e2d",
-        Primary = "#FF0000",
-        AppbarText = "#424242",
-        AppbarBackground = "rgba(255,255,255,0.8)",
-        DrawerBackground = "#ffffff",
-        GrayLight = "#e8e8e8",
-        GrayLighter = "#f9f9f9",
+        Primary = "#10B67B",
+        PrimaryContrastText = "#FFFFFF",
+
+        Secondary = "#63FBD6",
+        SecondaryContrastText = "#12302A",
+
+        Background = "#F4FCFA",
+        Surface = "#FFFFFF",
+
+        AppbarBackground = "#1E3733",
+        AppbarText = "#E9FFFA",
+
+        DrawerBackground = "#F9FDFC",
+        DrawerText = "#29423D",
+        DrawerIcon = "#10B67B",
+
+        TextPrimary = "#243433",
+        TextSecondary = "#5E7572",
+
+        Success = "#10B67B",
+        Warning = "#D6A73A",
+        Error = "#D65B5B",
+        Info = "#4DA6E7",
+
+        Divider = "#DCEBE7",
+
+        GrayLight = "#EDF6F4",
+        GrayLighter = "#F8FCFB",
+
+        ActionDefault = "#4B6762",
+        ActionDisabled = "#B2C3C0",
+        ActionDisabledBackground = "#E4EEEC",
     };
 
     private readonly PaletteDark _darkPalette = new()
     {
-        Primary = "#FF0000",
-        Surface = "#1e1e2d",
-        Background = "#1a1a27",
-        BackgroundGray = "#151521",
-        AppbarText = "#FFFFFF",
-        AppbarBackground = "rgba(26,26,39,0.8)",
-        DrawerBackground = "#1a1a27",
-        ActionDefault = "#74718e",
-        ActionDisabled = "#9999994d",
-        ActionDisabledBackground = "#605f6d4d",
-        TextPrimary = "#FFFFFF",
-        TextSecondary = "#FFFFFF",
-        TextDisabled = "#ffffff33",
-        DrawerIcon = "#92929f",
-        DrawerText = "#92929f",
-        GrayLight = "#2a2833",
-        GrayLighter = "#1e1e2d",
-        Info = "#4a86ff",
-        Success = "#3dcb6c",
-        Warning = "#ffb545",
-        Error = "#ff3f5f",
-        LinesDefault = "#33323e",
-        TableLines = "#33323e",
-        Divider = "#292838",
-        OverlayLight = "#1e1e2d80",
-    };
+        Primary = "#63FBD6",
+        PrimaryContrastText = "#0D1B19",
 
-    public string DarkLightModeButtonIcon => _isDarkMode switch
-    {
-        true => Icons.Material.Rounded.AutoMode,
-        false => Icons.Material.Outlined.DarkMode,
+        Secondary = "#10B67B",
+        SecondaryContrastText = "#FFFFFF",
+
+        Background = "#151A1A",
+        BackgroundGray = "#1C2323",
+        Surface = "#202929",
+
+        AppbarBackground = "rgba(21,26,26,0.92)",
+        AppbarText = "#DDFCF6",
+
+        DrawerBackground = "#1A2020",
+        DrawerText = "#C4E7DF",
+        DrawerIcon = "#63FBD6",
+
+        TextPrimary = "#F1FFFC",
+        TextSecondary = "#A7C5BF",
+        TextDisabled = "#6F8782",
+
+        ActionDefault = "#63FBD6",
+        ActionDisabled = "#546765",
+        ActionDisabledBackground = "#283030",
+
+        GrayLight = "#293232",
+        GrayLighter = "#202929",
+
+        Info = "#64B5F6",
+        Success = "#10B67B",
+        Warning = "#E0B45C",
+        Error = "#E37B7B",
+
+        LinesDefault = "#313B3B",
+        TableLines = "#313B3B",
+        Divider = "#394142",
+
+        OverlayLight = "rgba(0,0,0,0.75)",
     };
 }
