@@ -13,28 +13,14 @@
     }
 </style>
 
-<MudText Typo="Typo.h2" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>End Game management</b></MudText>
-<br />
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>End Game management</b></MudText>
 
-@* ---------------- View1 link ---------------- *@
-<SwitchButton Text="Link to view1"
-              Icon="@Icons.Material.Filled.InsertLink"
-              BackgroundColor="@Colors.BlueGray.Darken4"
-              HoverBackgroundColor="@Colors.BlueGray.Darken2"
-              TextColor="#FF0000"
-              Href="endgame/view1"
-              Target="_blank" />
-<br />
 @* ---------------- Choose file style to use ---------------- *@
 <StyleManager RelativePath="styles/endgame/view1"
               CurrentFile="@ViewState.CurrentFile"
               OnSave="HandleSave"
               OnFileSelected="HandleFileSelected" />
 <br />
-
-
-
-
 
 @code{
     private void RefreshUI()
