@@ -18,15 +18,53 @@
                   Alt="OSL Logo"
                   Style="height:26px;width:auto;margin:0 10px;" />
         <MudSpacer />
-        <MudIconButton Icon="@(DarkLightModeButtonIcon)" Color="Color.Inherit" OnClick="@DarkModeToggle" />
+        <MudTooltip Text="Light/Dark"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@DarkLightModeButtonIcon"
+                           Color="Color.Secondary"
+                           OnClick="DarkModeToggle" />
+        </MudTooltip>
+
+        <MudTooltip Text="GitHub"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub"
+                           Color="Color.Secondary"
+                           Href="https://github.com/Sky-CSC/OSL"
+                           Target="_blank" />
+        </MudTooltip>
+
+        <MudTooltip Text="Bug report"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Material.Filled.BugReport"
+                           Color="Color.Secondary"
+                           Href="https://github.com/Sky-CSC/OSL/issues"
+                           Target="_blank" />
+        </MudTooltip>
+        <MudTooltip Text="Documentation"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Material.Filled.HelpOutline"
+                           Color="Color.Secondary"
+                           Href="https://doc.osl.sky-csc.fr"
+                           Target="_blank" />
+        </MudTooltip>
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" Variant="DrawerVariant.Responsive" ClipMode="DrawerClipMode.Always" Elevation="1">
         <NavMenu />
         <MudDivider />
-        <div class="pa-3">
-            <MudText Typo="Typo.caption" Class="osl-version-text">
-                OSL © 2026
-            </MudText>
+        <div class="d-flex justify-center pa-3">
+            <MudLink Href="https://github.com/Sky-CSC/OSL/"
+                     Typo="Typo.caption"
+                     Target="_blank">
+                     OSL © 2026
+            </MudLink>
         </div>
     </MudDrawer>
     <MudMainContent Class="pt-20 px-6 pb-6">
