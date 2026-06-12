@@ -120,7 +120,7 @@ namespace OSL_Server.Services
             if (processes.Length > 0)
                 return true;
 
-            _logger.Log(LoggingLevel.ERROR, "LeagueClientUp()", $"Process : {_leagueClientConfig.LeagueClientProcess} not running");
+            _logger.Log(LoggingLevel.WARN, "LeagueClientUp()", $"Process : {_leagueClientConfig.LeagueClientProcess} not running");
             return false;
         }
     }
