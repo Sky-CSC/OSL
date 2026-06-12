@@ -61,7 +61,7 @@
     align-items: center; /* centrage vertical */
     justify-content: center; /* centrage horizontal global */
     width: 1400px;
-    height: 140px;
+    height: 160px;
     border-bottom: 5px solid white;
     text-transform: uppercase;
     color: white;
@@ -114,7 +114,7 @@
     /* Images côté équipe */
     .stat-image-slot .blue-team img,
     .stat-image-slot .red-team img {
-        height: 100px;
+        height: 105px;
         width: auto;
         object-fit: contain;
     }
