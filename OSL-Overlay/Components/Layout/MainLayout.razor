@@ -35,10 +35,43 @@
                   Style="height:26px;width:auto;margin:0 10px;" />
 
         <MudSpacer />
+        <MudTooltip Text="Light/Dark"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@DarkLightModeButtonIcon"
+                           Color="Color.Primary"
+                           OnClick="DarkModeToggle" />
+        </MudTooltip>
 
-        <MudIconButton Icon="@DarkLightModeButtonIcon"
-                       Color="Color.Inherit"
-                       OnClick="DarkModeToggle" />
+        <MudTooltip Text="GitHub"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub"
+                           Color="Color.Primary"
+                           Href="https://github.com/Sky-CSC/OSL"
+                           Target="_blank" />
+        </MudTooltip>
+
+        <MudTooltip Text="Bug report"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Material.Filled.BugReport"
+                           Color="Color.Primary"
+                           Href="https://github.com/Sky-CSC/OSL/issues"
+                           Target="_blank" />
+        </MudTooltip>
+        <MudTooltip Text="Documentation"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Material.Filled.HelpOutline"
+                           Color="Color.Primary"
+                           Href="https://doc.osl.sky-csc.fr"
+                           Target="_blank" />
+        </MudTooltip>
 
     </MudAppBar>
 
@@ -49,11 +82,13 @@
                Elevation="0">
 
         <NavMenu />
-         <MudDivider />
-        <div class="pa-3">
-            <MudText Typo="Typo.caption" Class="osl-version-text">
+        <MudDivider />
+        <div class="d-flex justify-center pa-3">
+            <MudLink Href="https://github.com/Sky-CSC/OSL/"
+                     Typo="Typo.caption"
+                     Target="_blank">
                 OSL © 2026
-            </MudText>
+            </MudLink>
         </div>
 
     </MudDrawer>
