@@ -22,6 +22,13 @@
 
 <br />
 
+@if (LocalFearlessList.Count < 1)
+{
+    <div style="padding:14px;border-left:5px solid #ff9800;background:#fff4e5;border-radius:6px;color:#663c00;">
+        <b>⚠️ Set up a match to customise it</b><br>
+    </div>
+}
+
 <MudStack Row="true">
     @for (int i = 0; i < LocalFearlessList.Count; i++)
     {
