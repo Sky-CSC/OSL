@@ -40,7 +40,7 @@ namespace OSL_CDragon
         internal Position Download()
         {
             //gérer des customs, on regarde si certains sont en local et on récupérer les infos
-            Uri url = new("https://osl.sky-csc.fr/positions/positions.json");
+            Uri url = new("https://asset.osl.sky-csc.fr/positions/positions.json");
             string? positionsOnServer = _download.StringAsync(url).Result;
             string? positionsOnLocal = OSL_Utils.File.Read("./EndpointsJson/position.json");
             if (positionsOnServer != null && positionsOnLocal != null)

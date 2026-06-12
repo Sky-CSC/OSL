@@ -32,7 +32,7 @@ namespace OSL_CDragon
         internal EpicMonster Download()
         {
             // Download dragons assets from OSL server
-            Uri url = new("https://osl.sky-csc.fr/epicmonsters/epicmonsters.json");
+            Uri url = new("https://asset.osl.sky-csc.fr/epicmonsters/epicmonsters.json");
             string? epicMonsterOnServer = _download.StringAsync(url).Result;
             string? epicMonsterOnLocal = OSL_Utils.File.Read("./EndpointsJson/epicmonster.json");
             if (epicMonsterOnServer != null && epicMonsterOnLocal != null)

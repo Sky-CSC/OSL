@@ -31,7 +31,7 @@ namespace OSL_CDragon
         /// <returns></returns>
         internal List<Asset> Download()
         {
-            Uri url = new("https://osl.sky-csc.fr/fonts/fonts.json");
+            Uri url = new("https://asset.osl.sky-csc.fr/fonts/fonts.json");
             string? fontsOnServer = _download.StringAsync(url).Result;
             string? fontsOnLocal = OSL_Utils.File.Read("./EndpointsJson/font.json");
             if (fontsOnServer != null && fontsOnLocal != null)
