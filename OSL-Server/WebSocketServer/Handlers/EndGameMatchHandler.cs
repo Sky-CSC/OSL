@@ -2,7 +2,7 @@ using OSL_RGDP.Schema.Riot;
 using OSL_Server.Services;
 using OSL_Utils;
 
-namespace OSL_Server.WebSocket.Handlers
+namespace OSL_Server.WebSocketServer.Handlers
 {
     /// <summary>
     /// Example handler for the "endGameMatch" message type.

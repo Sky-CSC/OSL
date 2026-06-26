@@ -1,4 +1,4 @@
-namespace OSL_Server.WebSocket.Handlers
+namespace OSL_Server.WebSocketServer.Handlers
 {
     /// <summary>
     /// Defines a contract for handling typed WebSocket messages.

@@ -1,7 +1,7 @@
 using OSL_Lcu;
 using OSL_Lcu.Schema.Lcu;
 using OSL_Server.Phases;
-using OSL_Server.WebSocket;
+using OSL_Server.WebSocketServer;
 using OSL_Utils;
 
 namespace OSL_Server.Services
@@ -11,12 +11,12 @@ namespace OSL_Server.Services
     /// </summary>
     /// <param name="lcuEndpoints"></param>
     /// <param name="wsServer"></param>
-    public class GameFlow(LcuEndpoints lcuEndpoints, WebSocketServer wsServer)
+    public class GameFlow(LcuEndpoints lcuEndpoints, WebSocketServer.WebSocketServer wsServer)
     {
         private static readonly Logger _logger = new("GameFlow");
 
         private readonly LcuEndpoints _lcuEndpoints = lcuEndpoints;
-        private readonly WebSocketServer _wsServer = wsServer;
+        private readonly WebSocketServer.WebSocketServer _wsServer = wsServer;
         private LolGameflowGameflowPhase? _phase;
         private bool _samePhase = false;
 

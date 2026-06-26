@@ -4,7 +4,7 @@ using OSL_Lcu.Schema.Lcu;
 using OSL_RGDP;
 using OSL_Server.Phases;
 using OSL_Server.Schema;
-using OSL_Server.WebSocket;
+using OSL_Server.WebSocketServer;
 using OSL_Utils;
 using System.Diagnostics;
 
@@ -19,7 +19,7 @@ namespace OSL_Server.Services
 
         private readonly LeagueClientConfig _leagueClientConfig;
         private readonly RiotDevelopementPortalConfig _riotDevelopementPortalConfig;
-        private readonly WebSocketServer _wsServer;
+        private readonly WebSocketServer.WebSocketServer _wsServer;
         public RiotGameDeveloperPortal rgdp;
         private bool _isRunning;
 
@@ -31,7 +31,7 @@ namespace OSL_Server.Services
         /// </summary>
         /// <param name="config">League client config</param>
         /// <param name="wsServer">Web socket server</param>
-        public LeagueClient(IOptions<LeagueClientConfig> leagueClientConfig, IOptions<RiotDevelopementPortalConfig> riotDevelopementPortalConfig, WebSocketServer wsServer)
+        public LeagueClient(IOptions<LeagueClientConfig> leagueClientConfig, IOptions<RiotDevelopementPortalConfig> riotDevelopementPortalConfig, WebSocketServer.WebSocketServer wsServer)
         {
             _leagueClientConfig = leagueClientConfig.Value;
             _riotDevelopementPortalConfig = riotDevelopementPortalConfig.Value;

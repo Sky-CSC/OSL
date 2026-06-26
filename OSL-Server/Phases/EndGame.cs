@@ -1,6 +1,5 @@
 using OSL_Lcu;
 using OSL_RGDP;
-using OSL_Server.WebSocket;
 using OSL_Utils;
 
 namespace OSL_Server.Phases
@@ -11,12 +10,12 @@ namespace OSL_Server.Phases
     /// <param name="lcuEndpoints">Endpoint</param>
     /// <param name="wsServer">Web socket server</param>
     /// <param name="rgdp">Riot Game Develeloper Portal</param>
-    public class EndGame(LcuEndpoints lcuEndpoints, WebSocketServer wsServer, RiotGameDeveloperPortal rgdp)
+    public class EndGame(LcuEndpoints lcuEndpoints, WebSocketServer.WebSocketServer wsServer, RiotGameDeveloperPortal rgdp)
     {
         private static readonly Logger _logger = new("GameFlow");
 
         private readonly LcuEndpoints _lcuEndpoints = lcuEndpoints;
-        private readonly WebSocketServer _wsServer = wsServer;
+        private readonly WebSocketServer.WebSocketServer _wsServer = wsServer;
         private readonly RiotGameDeveloperPortal _rgdp = rgdp;
 
         /// <summary>

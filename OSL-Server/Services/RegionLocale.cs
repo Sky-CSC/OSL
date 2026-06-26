@@ -1,15 +1,14 @@
 using OSL_Lcu;
 using OSL_Lcu.Schema.Lcu;
-using OSL_Server.WebSocket;
 using OSL_Utils;
 
 namespace OSL_Server.Services
 {
-    public class RegionLocale(LcuEndpoints lcuEndpoints, WebSocketServer wsServer)
+    public class RegionLocale(LcuEndpoints lcuEndpoints, WebSocketServer.WebSocketServer wsServer)
     {
         private static readonly Logger _logger = new("RegionLocaleService");
         private readonly LcuEndpoints _lcuEndpoints = lcuEndpoints;
-        private readonly WebSocketServer _wsServer = wsServer;
+        private readonly WebSocketServer.WebSocketServer _wsServer = wsServer;
 
         /// <summary>
         /// Updates the region locale and sends it to the WebSocket server.
