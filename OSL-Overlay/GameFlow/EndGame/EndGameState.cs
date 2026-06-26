@@ -205,14 +205,14 @@ namespace OSL_Overlay.GameFlow.EndGame
                     if (ev.MonsterType == "DRAGON")
                         key = ev.MonsterSubType;
 
-                     if (eliteStats.ContainsKey(key))
+                    if (eliteStats.ContainsKey(key))
                     {
                         if (ev.KillerTeamId == 100)
                             blueMonsters[key]++;
                         else
                             redMonsters[key]++;
 
-                        Info.Golds.Events.Add(new(key, ev.KillerTeamId,ev.Timestamp));
+                        Info.Golds.Events.Add(new(key, ev.KillerTeamId, ev.Timestamp));
                     }
                 }
             }
@@ -327,7 +327,7 @@ namespace OSL_Overlay.GameFlow.EndGame
                 .Where(p =>
                 {
                     var t = p.PropertyType;
-                    return t == typeof(int) || t == typeof(double) || t == typeof(bool) || t == typeof(string);
+                    return t == typeof(int) || t == typeof(double);
                 })
                 .Select(p =>
                 {
@@ -455,13 +455,11 @@ namespace OSL_Overlay.GameFlow.EndGame
 
         public async Task CustomSetMatch(Int64 matchDtoId)
         {
-            var payload = new { type = "endGameMatch", data = matchDtoId };
-            await _client.SendAsync(payload);
+            await _client.SendAsync("endGameMatch", matchDtoId);
         }
         public async Task CustomSetTimeline(Int64 timelineDtoId)
         {
-            var payload = new { type = "endGameTimeline", data = timelineDtoId };
-            await _client.SendAsync(payload);
+            await _client.SendAsync("endGameTimeline", timelineDtoId);
         }
 
         public void UpdateInfoPhase(PhaseInfo phase)
@@ -499,13 +497,28 @@ namespace OSL_Overlay.GameFlow.EndGame
         public static Text CalculateStat(Text stat)
         {
             string text = stat.Txt;
-            if (stat.Txt != string.Empty && Convert.ToDouble(stat.Txt) > 1000000)
+            try
             {
-                text = $"{Math.Round(Convert.ToDouble(text) / 1000000, 1)}M";
+                if (stat.Txt.Equals("False"))
+                {
+                    text = "0";
+                }
+                else if (stat.Txt.Equals("True"))
+                {
+                    text = "1";
+                }
+                else if (stat.Txt != string.Empty && Convert.ToDouble(stat.Txt) > 1000000)
+                {
+                    text = $"{Math.Round(Convert.ToDouble(text) / 1000000, 1)}M";
+                }
+                else if (stat.Txt != string.Empty && Convert.ToDouble(stat.Txt) > 1000)
+                {
+                    text = $"{Math.Round(Convert.ToDouble(text) / 1000, 1)}K";
+                }
             }
-            else if (stat.Txt != string.Empty && Convert.ToDouble(stat.Txt) > 1000)
+            catch
             {
-                text = $"{Math.Round(Convert.ToDouble(text) / 1000, 1)}K";
+                text = "0";
             }
             return new(text, stat.Font, stat.Color, stat.Background, stat.Border, stat.Align);
         }
