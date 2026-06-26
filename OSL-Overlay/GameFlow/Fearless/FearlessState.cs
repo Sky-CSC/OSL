@@ -47,8 +47,7 @@ namespace OSL_Overlay.GameFlow.Fearless
         {
             // Send message to websocket to get match data
             FearlessMatchId fearlessMatchId = new(matchId, index);
-            var payload = new { type = "fearlessGameMatch", data = fearlessMatchId };
-            await _client.SendAsync(payload);
+            await _client.SendAsync("fearlessGameMatch", fearlessMatchId);
         }
 
         /// <summary>
