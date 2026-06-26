@@ -24,20 +24,20 @@
 <MudStack Row="false" Spacing="3">
 
     @* ---------------- Background ---------------- *@
-    <MudText Id="background" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Background</MudText>
+    <MudText id="background" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Background</MudText>
     <StyleFieldEditor Label=""
                       Type="background"
                       Value="@Info.Background"
                       ValueChanged="v => OnStyleChanged(val => Info.Background = val, v)" />
     <br />
     @* ---------------- Picks bakground---------------- *@
-    <MudText Id="pick-background" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Picks background</MudText>
+    <MudText id="pick-background" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Picks background</MudText>
     <StyleFieldEditor Label=""
                       Type="background"
                       Value="@Info.TeamsBackground"
                       ValueChanged="v => OnStyleChanged(val => Info.TeamsBackground = val, v)" />
     <br />
-    <MudText Id="pick-champion-background" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Pick champion background</MudText>
+    <MudText id="pick-champion-background" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Pick champion background</MudText>
     @* ---------------- Teams bakground---------------- *@
     <MudStack Row="true">
         @* ---------------- Blue bakground---------------- *@
@@ -56,7 +56,7 @@
     </MudStack>
     <br />
     @* ---------------- Blink---------------- *@
-    <MudText Id="pick-blink" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Pick blink</MudText>
+    <MudText id="pick-blink" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Pick blink</MudText>
     @* ---------------- Blue blink ---------------- *@
     <MudStack Row="true" Style="overflow-y:auto;">
         @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
@@ -85,7 +85,7 @@
     </MudStack>
     <br />
     @* ---------------- Champ border ---------------- *@
-    <MudText Id="pick-border" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Champion border</MudText>
+    <MudText id="pick-border" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Champion border</MudText>
     @* ---------------- Blue border ---------------- *@
     <MudStack Row="true" Style="overflow-y:auto;">
         @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
@@ -114,7 +114,7 @@
     </MudStack>
     <br />
     @* ---------------- Summoner name ---------------- *@
-    <MudText Id="summoner-name" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Summoner name</MudText>
+    <MudText id="summoner-name" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Summoner name</MudText>
     @* ---------------- Blue name ---------------- *@
     <MudStack Row="true" Style="overflow-y:auto;">
         @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
@@ -171,7 +171,7 @@
     </MudStack>
     <br />
     @* ---------------- Summoner spell ---------------- *@
-    <MudText Id="summoner-spell" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Summoner spell</MudText>
+    <MudText id="summoner-spell" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Summoner spell</MudText>
     @* ---------------- Blue summoner spell ---------------- *@
     <MudStack Row="true" Style="overflow-y:auto;">
         @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
@@ -200,7 +200,7 @@
     </MudStack>
     <br />
     @* ---------------- Lanes ---------------- *@
-    <MudText Id="lane" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Lane</MudText>
+    <MudText id="lane" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Lane</MudText>
     @* ---------------- Blue Lanes ---------------- *@
     <MudStack Row="true" Style="overflow-y:auto;">
         @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
@@ -265,7 +265,7 @@
     </MudStack>
     <br />
     @* ---------------- Timer ---------------- *@
-    <MudText Id="timer" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Timer</MudText>
+    <MudText id="timer" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Timer</MudText>
     @* ---------------- Blue Timer ---------------- *@
     <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
         @* ---------------- Background ---------------- *@
@@ -328,7 +328,7 @@
     </MudStack>
     <br />
     @* ---------------- Patch ---------------- *@
-    <MudText Id="patch" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Patch</MudText>
+    <MudText id="patch" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Patch</MudText>
     <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
         <MudStack Row="false">
             @* ---------------- Show patch ? ---------------- *@
@@ -376,7 +376,7 @@
     </MudStack>
     <br />
     @* ---------------- Coach ---------------- *@
-    <MudText Id="coach" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Coach</MudText>
+    <MudText id="coach" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Coach</MudText>
     <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
         @* ---------------- Blue Coach ---------------- *@
         <MudStack Row="false">
@@ -482,7 +482,7 @@
 
     <br />
     @* ---------------- Bans ---------------- *@
-    <MudText Id="ban" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Bans</MudText>
+    <MudText id="ban" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Bans</MudText>
     @* ---------------- Blue Bans ---------------- *@
     <MudStack Row="true" Style="overflow-y:auto;">
         @for (int i = 0; i < Info.BlueTeam.Bans.Count; i++)
@@ -622,7 +622,7 @@
 
     <br />
     @* ---------------- Teams ---------------- *@
-    <MudText Id="teams" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Teams</MudText>
+    <MudText id="teams" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Teams</MudText>
     @* ---------------- Blue Team ---------------- *@
     <MudStack Row="true">
         @* ---------------- Show logo ? ---------------- *@
@@ -679,7 +679,7 @@
     </MudStack>
     <br />
     @* ---------------- Bo ---------------- *@
-    <MudText Id="bo" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Best Of</MudText>
+    <MudText id="bo" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Best Of</MudText>
     @* ---------------- Blue Bo ---------------- *@
     <MudStack Row="true" AlignItems="AlignItems.Center">
         @* ---------------- Show bo ---------------- *@
@@ -749,7 +749,7 @@
 
     <br />
     @* ---------------- Phase ---------------- *@
-    <MudText Id="phase" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Phase</MudText>
+    <MudText id="phase" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Phase</MudText>
     <MudStack Row="true">
         @* ---------------- Color ---------------- *@
         <StyleFieldEditor Label="Phase"
@@ -765,7 +765,7 @@
 
     <br />
     @* ---------------- Vs ---------------- *@
-    <MudText Id="vs" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">VS</MudText>
+    <MudText id="vs" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">VS</MudText>
     <MudStack Row="true">
         @* ---------------- Color ---------------- *@
         <StyleFieldEditor Label="Vs color"

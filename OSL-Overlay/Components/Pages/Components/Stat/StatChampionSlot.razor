@@ -32,7 +32,15 @@
         double max = 0;
         foreach (var player in teamBlue)
         {
-            if (player.Stat.Txt != string.Empty && Convert.ToDouble(player.Stat.Txt) > max)
+            if (player.Stat.Txt.Equals("False"))
+            {
+                max = 0;
+            }
+            else if (player.Stat.Txt.Equals("True"))
+            {
+                max = 1;
+            }
+            else if (player.Stat.Txt != string.Empty && Convert.ToDouble(player.Stat.Txt) > max)
             {
                 max = Convert.ToDouble(player.Stat.Txt);
             }
@@ -40,7 +48,15 @@
 
         foreach (var player in teamRed)
         {
-            if (player.Stat.Txt != string.Empty && Convert.ToDouble(player.Stat.Txt) > max)
+            if (player.Stat.Txt.Equals("False"))
+            {
+                max = 0;
+            }
+            else if (player.Stat.Txt.Equals("True"))
+            {
+                max = 1;
+            }
+            else if (player.Stat.Txt != string.Empty && Convert.ToDouble(player.Stat.Txt) > max)
             {
                 max = Convert.ToDouble(player.Stat.Txt);
             }
@@ -51,7 +67,19 @@
     private string CalculateWidth(string value)
     {
         maxStat = CalculateMax(ChampionStat, ForMax);
-        if (value != string.Empty)
+        if (value.Equals("False"))
+        {
+            double val = 0;
+            double width = (val / maxStat) * 100;
+            return $"{width}%".Replace(",", ".");
+        }
+        else if (value.Equals("True"))
+        {
+            double val = 1;
+            double width = (val / maxStat) * 100;
+            return $"{width}%".Replace(",", ".");
+        }
+        else if (value != string.Empty)
         {
             double val = Convert.ToDouble(value);
             double width = (val / maxStat) * 100;
