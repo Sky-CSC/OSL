@@ -40,8 +40,7 @@ namespace OSL_Overlay.GameFlow.Rune
 
         public async Task CustomSetRunesWithCurrentGameInfo(string riotId)
         {
-            var payload = new { type = "spectatorCurentGameInfoByRiotId", data = riotId };
-            await _client.SendAsync(payload);
+            await _client.SendAsync("spectatorCurentGameInfoByRiotId", riotId);
         }
 
         public void SetRunesSpectatorCurentGameInfo(CurrentGameInfo currentGameInfo)
@@ -166,8 +165,7 @@ namespace OSL_Overlay.GameFlow.Rune
 
         public async Task GetRunesWithMatchId(Int64 matchDtoId)
         {
-            var payload = new { type = "runesMatch", data = matchDtoId };
-            await _client.SendAsync(payload);
+            await _client.SendAsync("runesMatch", matchDtoId);
         }
     }
 
