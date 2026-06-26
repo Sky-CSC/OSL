@@ -12,16 +12,11 @@ using OSL_Overlay.GameFlow.Team;
 using OSL_Overlay.GameFlow.Vs;
 using OSL_Overlay.WebSocketClient;
 using OSL_Overlay.WebSocketClient.Handlers;
-using OSL_Utils.WebSocket;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add MudBlazor services
 builder.Services.AddMudServices();
-
-// Configure Web socket server from appsettings.json
-builder.Services.Configure<WebSocketConfig>(
-    builder.Configuration.GetSection("WebSocketServerConfig"));
 
 // Register the WebSocketClient as a singleton service
 builder.Services.AddSingleton<WebSocketClient>();
@@ -111,7 +106,9 @@ using (var scope = app.Services.CreateScope())
     var bestOfState = scope.ServiceProvider.GetRequiredService<BoState>();
     var fearlessState = scope.ServiceProvider.GetRequiredService<FearlessState>();
     var fearlessView1State = scope.ServiceProvider.GetRequiredService<FearlessView1State>();
+    fearlessView1State.SyncFromGlobal();
     var fearlessView2State = scope.ServiceProvider.GetRequiredService<FearlessView2State>();
+    fearlessView2State.SyncFromGlobal();
     var patchState = scope.ServiceProvider.GetRequiredService<PatchState>();
     var phaseState = scope.ServiceProvider.GetRequiredService<PhaseState>();
     var vsState = scope.ServiceProvider.GetRequiredService<VsState>();
@@ -120,8 +117,9 @@ using (var scope = app.Services.CreateScope())
     champSelectView1State.SyncFromGlobal();
     var endGameState = scope.ServiceProvider.GetRequiredService<EndGameState>();
     var endGameView1State = scope.ServiceProvider.GetRequiredService<EndGameView1State>();
+    endGameView1State.SyncFromGlobal();
     var runeState = scope.ServiceProvider.GetRequiredService<RuneState>();
     var runeView1State = scope.ServiceProvider.GetRequiredService<RuneView1State>();
 }
-
+    
 app.Run();
