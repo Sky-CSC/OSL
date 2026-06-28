@@ -33,11 +33,11 @@ namespace OSL_Utils
                 string? directoryName = System.IO.Path.GetDirectoryName(path);
                 if (directoryName != null)
                 {
-                    _logger.Log(LoggingLevel.DEBUG, "GetDirectoryName()", $"Directory name is valid for path: {path}");
+                    _logger.Log(LoggingLevel.DEBUG, nameof(GetDirectoryName), $"Directory name is valid for path: {path}");
                     return directoryName.Replace(System.IO.Path.DirectorySeparatorChar, '/');
                 }
             }
-            _logger.Log(LoggingLevel.DEBUG, "GetDirectoryName()", $"Directory name is empty for path: {path}");
+            _logger.Log(LoggingLevel.DEBUG, nameof(GetDirectoryName), $"Directory name is empty for path: {path}");
             return "";
         }
 

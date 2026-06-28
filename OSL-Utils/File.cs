@@ -21,12 +21,12 @@ namespace OSL_Utils
             try
             {
                 System.IO.File.WriteAllText(filePath, content);
-                _logger.Log(LoggingLevel.DEBUG, "Write()", $"Data write in file {filePath} successfully");
+                _logger.Log(LoggingLevel.DEBUG, nameof(Write), $"Data write in file {filePath} successfully");
                 return true;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Write()", $"Data not write in file {filePath}, {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(Write), $"Data not write in file {filePath}, {e.Message}");
             }
             return false;
         }
@@ -42,12 +42,12 @@ namespace OSL_Utils
             try
             {
                 System.IO.File.WriteAllBytes(filePath, content);
-                _logger.Log(LoggingLevel.DEBUG, "Write()", $"Data write un file {filePath} successfully");
+                _logger.Log(LoggingLevel.DEBUG, nameof(Write), $"Data write un file {filePath} successfully");
                 return true;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Write()", $"Data not write un file {filePath}, {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(Write), $"Data not write un file {filePath}, {e.Message}");
             }
             return false;
         }
@@ -62,12 +62,12 @@ namespace OSL_Utils
             try
             {
                 string content = System.IO.File.ReadAllText(filePath);
-                _logger.Log(LoggingLevel.DEBUG, "Read()", $"Data read from file {filePath} successfully");
+                _logger.Log(LoggingLevel.DEBUG, nameof(Read), $"Data read from file {filePath} successfully");
                 return content;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Read()", $"Data not read from file {filePath}, {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(Read), $"Data not read from file {filePath}, {e.Message}");
             }
             return null;
         }
@@ -84,12 +84,12 @@ namespace OSL_Utils
                 var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 var reader = new StreamReader(fileStream);
                 string? content = reader.ReadLine();
-                _logger.Log(LoggingLevel.DEBUG, "Read()", $"Data read from file {filePath} successfully");
+                _logger.Log(LoggingLevel.DEBUG, nameof(ReadIfRestricted), $"Data read from file {filePath} successfully");
                 return content;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Read()", $"Data not read from file {filePath}, {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(ReadIfRestricted), $"Data not read from file {filePath}, {e.Message}");
             }
             return null;
         }
@@ -105,14 +105,14 @@ namespace OSL_Utils
             {
                 if (System.IO.File.Exists(filePath))
                 {
-                    _logger.Log(LoggingLevel.DEBUG, "Exist()", $"File {filePath} exist");
+                    _logger.Log(LoggingLevel.DEBUG, nameof(Exist), $"File {filePath} exist");
                     return true;
                 }
-                _logger.Log(LoggingLevel.DEBUG, "Exist()", $"File {filePath} not exist");
+                _logger.Log(LoggingLevel.DEBUG, nameof(Exist), $"File {filePath} not exist");
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Exist()", $"File {filePath} not exist, {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(Exist), $"File {filePath} not exist, {e.Message}");
             }
             return false;
         }
@@ -129,12 +129,12 @@ namespace OSL_Utils
             try
             {
                 System.IO.File.Copy(sourceFile, destFile, overwrite);
-                _logger.Log(LoggingLevel.DEBUG, "Copy()", $"File {sourceFile} copy to {destFile}");
+                _logger.Log(LoggingLevel.DEBUG, nameof(Copy), $"File {sourceFile} copy to {destFile}");
                 return destFile;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Copy()", $"File {sourceFile} not copy to {destFile}, {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(Copy), $"File {sourceFile} not copy to {destFile}, {e.Message}");
                 return "";
             }
         }

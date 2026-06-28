@@ -20,12 +20,12 @@ namespace OSL_Utils
             try
             {
                 System.IO.Directory.CreateDirectory(path);
-                _logger.Log(LoggingLevel.DEBUG, "Create()", $"Directory {path} created successfully");
+                _logger.Log(LoggingLevel.DEBUG, nameof(Create), $"Directory {path} created successfully");
                 return true;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Create()", $"Directory {path} not created : {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(Create), $"Directory {path} not created : {e.Message}");
                 return false;
             }
         }
@@ -40,12 +40,12 @@ namespace OSL_Utils
             try
             {
                 bool exist = System.IO.Directory.Exists(path);
-                _logger.Log(LoggingLevel.DEBUG, "Exist()", $"Directory {path} exist : {exist}");
+                _logger.Log(LoggingLevel.DEBUG, nameof(Exist), $"Directory {path} exist : {exist}");
                 return exist;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Exist()", $"Directory {path} not found : {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(Exist), $"Directory {path} not found : {e.Message}");
                 return false;
             }
         }
