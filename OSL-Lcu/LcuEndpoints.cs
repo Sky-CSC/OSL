@@ -37,7 +37,7 @@ namespace OSL_Lcu
             }
             catch (Exception ex)
             {
-                _logger.Log(LoggingLevel.ERROR, "GetRegionLocaleAsync()", $"❌ {ex.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(GetRegionLocaleAsync), $"❌ {ex.Message}");
                 return null;
             }
         }
@@ -59,7 +59,7 @@ namespace OSL_Lcu
             }
             catch (Exception ex)
             {
-                _logger.Log(LoggingLevel.ERROR, "GetGameflowPhaseAsync()", $"❌ {ex.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(GetGameflowPhaseAsync), $"❌ {ex.Message}");
                 return null;
             }
         }
@@ -81,7 +81,7 @@ namespace OSL_Lcu
             }
             catch (Exception ex)
             {
-                _logger.Log(LoggingLevel.ERROR, "GetChampSelectAsync()", $"❌ {ex.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(GetChampSelectAsync), $"❌ {ex.Message}");
                 return null;
             }
         }
@@ -103,7 +103,7 @@ namespace OSL_Lcu
             }
             catch (Exception ex)
             {
-                _logger.Log(LoggingLevel.ERROR, "GetEndGameAsync()", $"❌ {ex.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(GetEndGameAsync), $"❌ {ex.Message}");
                 return null;
             }
         }

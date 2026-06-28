@@ -36,12 +36,12 @@ namespace OSL_Lcu
                 httpRequest.Headers.Add("Authorization", $"Basic {Convert.ToBase64String(Encoding.UTF8.GetBytes($"riot:{_lockFile.Password}"))}");
 
                 var response = Download.GetResponseSelfSigned(httpRequest).Result;
-                _logger.Log(LoggingLevel.INFO, "Request()", $"Request {urlRequest} succesful");
+                _logger.Log(LoggingLevel.INFO, nameof(Request), $"Request {urlRequest} succesful");
                 return response;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Request()", $"Request {RequestName} failed: {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(Request), $"Request {RequestName} failed: {e.Message}");
                 return null;
             }
         }
@@ -73,12 +73,12 @@ namespace OSL_Lcu
                 response.EnsureSuccessStatusCode();
 
                 var content = await response.Content.ReadAsStringAsync();
-                _logger.Log(LoggingLevel.INFO, "Request()", $"Request {urlRequest} successful");
+                _logger.Log(LoggingLevel.INFO, nameof(RequestAsync), $"Request {urlRequest} successful");
                 return content;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Request()", $"Request {RequestName} failed: {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(RequestAsync), $"Request {RequestName} failed: {e.Message}");
                 return null;
             }
         }

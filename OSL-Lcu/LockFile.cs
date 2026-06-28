@@ -50,10 +50,10 @@ namespace OSL_Lcu
             string? leagueClientPath = processes.Length > 0 ? processes[0].MainModule?.FileName : string.Empty;
             if (string.IsNullOrEmpty(leagueClientPath))
             {
-                _logger.Log(LoggingLevel.ERROR, "LockFile()", $"Process {processName} not found");
+                _logger.Log(LoggingLevel.ERROR, nameof(LockFile), $"Process {processName} not found");
                 return;
             }
-            _logger.Log(LoggingLevel.INFO, "LockFile()", $"Process {processName} found at {leagueClientPath}");
+            _logger.Log(LoggingLevel.INFO, nameof(LockFile), $"Process {processName} found at {leagueClientPath}");
             //Set League of Legends lockFile
             string lockFilePath = OSL_Utils.Path.GetDirectoryName(leagueClientPath) + "/lockfile";
             //Read lockFile data and set properties
