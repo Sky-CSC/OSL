@@ -43,7 +43,7 @@ namespace OSL_CDragon
                     List<Asset>? epicMonsterSummaryLocal = JsonConvert.DeserializeObject<List<Asset>>(epicMonsterOnLocal);
                     if (epicMonsterSummaryServer == null || epicMonsterSummaryLocal == null)
                     {
-                        _logger.Log(LoggingLevel.ERROR, "Download()", "Dragons not downloaded");
+                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Dragons not downloaded");
                         return _epicMonsters;
                     }
                     List<Asset>? epicMonsterSummary = [];
@@ -101,7 +101,7 @@ namespace OSL_CDragon
                 }
                 catch (Exception ex)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "Download()", $"Dragons not downloaded : {ex.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Dragons not downloaded : {ex.Message}");
                     return _epicMonsters;
                 }
             }

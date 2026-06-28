@@ -53,7 +53,7 @@ namespace OSL_CDragon
                     List<Schema.CDragon.Perk>? perkSummary = JsonConvert.DeserializeObject<List<Schema.CDragon.Perk>>(perks);
                     if (perkSummary == null)
                     {
-                        _logger.Log(LoggingLevel.ERROR, "Download()", "Perks not downloaded");
+                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Perks not downloaded");
                         return;
                     }
                     // Perks to ignore
@@ -69,7 +69,7 @@ namespace OSL_CDragon
                 }
                 catch (Exception ex)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "Download()", $"Perks not downloaded : {ex.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Perks not downloaded : {ex.Message}");
                     return;
                 }
             }
@@ -95,7 +95,7 @@ namespace OSL_CDragon
                 }
                 catch (Exception ex)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "Download()", $"PerksStyle not downloaded : {ex.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"PerksStyle not downloaded : {ex.Message}");
                     return;
                 }
             }

@@ -51,7 +51,7 @@ namespace OSL_CDragon
                     List<Asset>? positionSummaryLocal = JsonConvert.DeserializeObject<List<Asset>>(positionsOnLocal);
                     if (positionSummaryServer == null || positionSummaryLocal == null)
                     {
-                        _logger.Log(LoggingLevel.ERROR, "Download()", "Positions not downloaded");
+                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Positions not downloaded");
                         return _positions;
                     }
                     List<Asset>? positionSummary = [];
@@ -60,7 +60,7 @@ namespace OSL_CDragon
 
                     foreach (Asset position in positionSummary)
                     {
-                        _logger.Log(LoggingLevel.WARN, "positionSummary()", position.Path);
+                        _logger.Log(LoggingLevel.WARN, nameof(Download), position.Path);
                         // Process each position
                         if (OSL_Utils.Path.GetDirectoryName(position.Path).Contains("top"))
                         {
@@ -86,7 +86,7 @@ namespace OSL_CDragon
                 }
                 catch (Exception ex)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "Download()", $"Positions not downloaded : {ex.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Positions not downloaded : {ex.Message}");
                     return _positions;
                 }
             }

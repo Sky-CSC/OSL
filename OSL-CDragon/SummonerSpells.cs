@@ -43,7 +43,7 @@ namespace OSL_CDragon
                     List<Schema.CDragon.SummonerSpell>? summonerSpellSummary = JsonConvert.DeserializeObject<List<Schema.CDragon.SummonerSpell>>(summonerSpells);
                     if (summonerSpellSummary == null)
                     {
-                        _logger.Log(LoggingLevel.ERROR, "Download()", "Summoner Spells not downloaded");
+                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Summoner Spells not downloaded");
                         return _summonerSpell;
                     }
                     foreach (Schema.CDragon.SummonerSpell summonerSpell in summonerSpellSummary)
@@ -54,7 +54,7 @@ namespace OSL_CDragon
                 }
                 catch (Exception ex)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "Download()", $"Summoner Spells not downloaded : {ex.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Summoner Spells not downloaded : {ex.Message}");
                     return _summonerSpell;
                 }
             }

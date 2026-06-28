@@ -42,7 +42,7 @@ namespace OSL_CDragon
                     List<Asset>? fontSummaryLocal = JsonConvert.DeserializeObject<List<Asset>>(fontsOnLocal);
                     if (fontSummaryServer == null || fontSummaryLocal == null)
                     {
-                        _logger.Log(LoggingLevel.ERROR, "Download()", "Fonts not downloaded");
+                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Fonts not downloaded");
                         return _fonts;
                     }
                     List<Asset>? fontSummary = [];
@@ -55,7 +55,7 @@ namespace OSL_CDragon
                 }
                 catch (Exception e)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "Download()", $"Fonts not downloaded : {e.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Fonts not downloaded : {e.Message}");
                     return _fonts;
                 }
             }

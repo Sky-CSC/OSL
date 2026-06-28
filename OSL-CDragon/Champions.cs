@@ -48,7 +48,7 @@ namespace OSL_CDragon
                     List<ChampionSummary>? championSummary = JsonConvert.DeserializeObject<List<ChampionSummary>>(champions);
                     if (championSummary == null)
                     {
-                        _logger.Log(LoggingLevel.ERROR, "Download()", "Champions not downloaded");
+                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Champions not downloaded");
                         return [];
                     }
                     foreach (ChampionSummary champion in championSummary)
@@ -63,13 +63,13 @@ namespace OSL_CDragon
                 }
                 catch (Exception e)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "Download()", $"Champions not downloaded : {e.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Champions not downloaded : {e.Message}");
                     return [];
                 }
             }
             else
             {
-                _logger.Log(LoggingLevel.ERROR, "Download()", "Champions not downloaded");
+                _logger.Log(LoggingLevel.ERROR, nameof(Download), "Champions not downloaded");
                 return [];
             }
         }
@@ -121,7 +121,7 @@ namespace OSL_CDragon
                 }
                 catch (Exception e)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "ChampionAssets()", $"Champion {_champion.Id} not downloaded : {e.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(ChampionAssets), $"Champion {_champion.Id} not downloaded : {e.Message}");
                 }
             }
         }
@@ -150,11 +150,11 @@ namespace OSL_CDragon
                 sound.ChoosePath = DownloadFile(soundChoose, _champion.Id, $"champions/{_champion.Id}/sounds", "choose.ogg");
                 sound.BanPath = DownloadFile(soundBan, _champion.Id, $"champions/{_champion.Id}/sounds", "ban.ogg");
                 sound.SfxPath = DownloadFile(soundSfx, _champion.Id, $"champions/{_champion.Id}/sounds", "sfx.ogg");
-                _logger.Log(LoggingLevel.INFO, "Sound()", $"Sounds of champion {_champion.Id} downloaded");
+                _logger.Log(LoggingLevel.INFO, nameof(Sound), $"Sounds of champion {_champion.Id} downloaded");
             }
             catch
             {
-                _logger.Log(LoggingLevel.ERROR, "Sound()", $"Sounds of champion {_champion.Id} not downloaded");
+                _logger.Log(LoggingLevel.ERROR, nameof(Sound), $"Sounds of champion {_champion.Id} not downloaded");
             }
             _champion.Sounds = sound;
         }
@@ -180,7 +180,7 @@ namespace OSL_CDragon
             }
             catch
             {
-                _logger.Log(LoggingLevel.ERROR, "Skin()", $"Skin {skin.Id} not downloaded");
+                _logger.Log(LoggingLevel.ERROR, nameof(Skin), $"Skin {skin.Id} not downloaded");
             }
             _champion.Skins.Add(skin);
         }
@@ -211,10 +211,10 @@ namespace OSL_CDragon
                 }
                 catch (Exception e)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "DownloadFile()", $"File {id} not downloaded : {e.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(DownloadFile), $"File {id} not downloaded : {e.Message}");
                 }
             }
-            _logger.Log(LoggingLevel.ERROR, "DownloadFile()", $"File {id} not downloaded");
+            _logger.Log(LoggingLevel.ERROR, nameof(DownloadFile), $"File {id} not downloaded");
             return "";
         }
 

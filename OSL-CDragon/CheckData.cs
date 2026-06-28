@@ -24,16 +24,16 @@ namespace OSL_CDragon
                 string patchShortNumber = $"./wwwroot/assets/{patch.ShortNumber}";
                 if (!OSL_Utils.Directory.Exist(patchShortNumber))
                 {
-                    _logger.Log(LoggingLevel.WARN, "CheckDataLatest()", $"Patch {patchShortNumber} not downloaded");
+                    _logger.Log(LoggingLevel.WARN, nameof(Patchs), $"Patch {patchShortNumber} not downloaded");
                 }
-                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Patch {patchShortNumber} are already downloaded");
+                _logger.Log(LoggingLevel.INFO, nameof(Patchs), $"Patch {patchShortNumber} are already downloaded");
 
                 // Check all regions
                 List<string> regionsError = Regions(patchShortNumber, patch.Regions);
                 //Error in regions
                 if (regionsError.Count != 0)
                 {
-                    _logger.Log(LoggingLevel.WARN, "CheckDataLatest()", $"Patch {patch.Number} have regions not downloaded");
+                    _logger.Log(LoggingLevel.WARN, nameof(Patchs), $"Patch {patch.Number} have regions not downloaded");
 
                     //Set patch info with the current value
                     _info.Patch = patch.Number;
@@ -42,7 +42,7 @@ namespace OSL_CDragon
                     // For each region in error
                     foreach (var regionError in regionsError)
                     {
-                        _logger.Log(LoggingLevel.WARN, "CheckDataLatest()", $"Region {regionError} not correctly downloaded");
+                        _logger.Log(LoggingLevel.WARN, nameof(Patchs), $"Region {regionError} not correctly downloaded");
                         //Set region with current value used
                         _info.Region = regionError;
                         //Set index of patch and region current used
@@ -51,12 +51,12 @@ namespace OSL_CDragon
 
                         //Download all assets of the patch in regionsError list
                         DownloadAllData();
-                        _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Region {regionError} are downloaded");
+                        _logger.Log(LoggingLevel.INFO, nameof(Patchs), $"Region {regionError} are downloaded");
                     }
                 }
                 else
                 {
-                    _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Latest patch {patch.Number} are already downloaded");
+                    _logger.Log(LoggingLevel.INFO, nameof(Patchs), $"Latest patch {patch.Number} are already downloaded");
                 }
             }
 
@@ -86,7 +86,7 @@ namespace OSL_CDragon
                     regionsError.Add(region.Name);
                     continue;
                 }
-                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Region {pathRegionName} are already downloaded");
+                _logger.Log(LoggingLevel.INFO, nameof(Regions), $"Region {pathRegionName} are already downloaded");
 
                 // Check all champions directories
                 if (!Champions(region.Champions))
@@ -166,10 +166,10 @@ namespace OSL_CDragon
         {
             if (!OSL_Utils.File.Exist(champion.SquarePortraitPath))
             {
-                _logger.Log(LoggingLevel.ERROR, "CheckChampion()", $"Champion {champion.SquarePortraitPath} portrait not exist");
+                _logger.Log(LoggingLevel.ERROR, nameof(Champion), $"Champion {champion.SquarePortraitPath} portrait not exist");
                 return false;
             }
-            _logger.Log(LoggingLevel.INFO, "CheckChampion()", $"Champion {champion.SquarePortraitPath} portrait exist");
+            _logger.Log(LoggingLevel.INFO, nameof(Champion), $"Champion {champion.SquarePortraitPath} portrait exist");
             return true;
         }
 
@@ -182,22 +182,22 @@ namespace OSL_CDragon
         {
             if (!OSL_Utils.File.Exist(sound.ChoosePath) && sound.ChoosePath != "")
             {
-                _logger.Log(LoggingLevel.ERROR, "CheckSound()", $"Sound {sound.ChoosePath} not exist");
+                _logger.Log(LoggingLevel.ERROR, nameof(Sound), $"Sound {sound.ChoosePath} not exist");
                 return false;
             }
-            _logger.Log(LoggingLevel.INFO, "CheckSound()", $"Sound {sound.ChoosePath} exist");
+            _logger.Log(LoggingLevel.INFO, nameof(Sound), $"Sound {sound.ChoosePath} exist");
             if (!OSL_Utils.File.Exist(sound.BanPath) && sound.BanPath != "")
             {
-                _logger.Log(LoggingLevel.ERROR, "CheckSound()", $"Sound {sound.BanPath} not exist");
+                _logger.Log(LoggingLevel.ERROR, nameof(Sound), $"Sound {sound.BanPath} not exist");
                 return false;
             }
-            _logger.Log(LoggingLevel.INFO, "CheckSound()", $"Sound {sound.BanPath} exist");
+            _logger.Log(LoggingLevel.INFO, nameof(Sound), $"Sound {sound.BanPath} exist");
             if (!OSL_Utils.File.Exist(sound.SfxPath) && sound.SfxPath != "")
             {
-                _logger.Log(LoggingLevel.ERROR, "CheckSound()", $"Sound {sound.SfxPath} not exist");
+                _logger.Log(LoggingLevel.ERROR, nameof(Sound), $"Sound {sound.SfxPath} not exist");
                 return false;
             }
-            _logger.Log(LoggingLevel.INFO, "CheckSound()", $"Sound {sound.SfxPath} exist");
+            _logger.Log(LoggingLevel.INFO, nameof(Sound), $"Sound {sound.SfxPath} exist");
             return true;
         }
 
@@ -210,28 +210,28 @@ namespace OSL_CDragon
         {
             if (!OSL_Utils.File.Exist(skin.Splashe))
             {
-                _logger.Log(LoggingLevel.ERROR, "CheckSkin()", $"Skin {skin.Splashe} not exist");
+                _logger.Log(LoggingLevel.ERROR, nameof(Skin), $"Skin {skin.Splashe} not exist");
                 return false;
             }
-            _logger.Log(LoggingLevel.INFO, "CheckSkin()", $"Skin {skin.Splashe} exist");
+            _logger.Log(LoggingLevel.INFO, nameof(Skin), $"Skin {skin.Splashe} exist");
             if (!OSL_Utils.File.Exist(skin.SplasheUncentered))
             {
-                _logger.Log(LoggingLevel.ERROR, "CheckSkin()", $"Skin {skin.SplasheUncentered} not exist");
+                _logger.Log(LoggingLevel.ERROR, nameof(Skin), $"Skin {skin.SplasheUncentered} not exist");
                 return false;
             }
-            _logger.Log(LoggingLevel.INFO, "CheckSkin()", $"Skin {skin.SplasheUncentered} exist");
+            _logger.Log(LoggingLevel.INFO, nameof(Skin), $"Skin {skin.SplasheUncentered} exist");
             if (!OSL_Utils.File.Exist(skin.Tile))
             {
-                _logger.Log(LoggingLevel.ERROR, "CheckSkin()", $"Skin {skin.Tile} not exist");
+                _logger.Log(LoggingLevel.ERROR, nameof(Skin), $"Skin {skin.Tile} not exist");
                 return false;
             }
-            _logger.Log(LoggingLevel.INFO, "CheckSkin()", $"Skin {skin.Tile} exist");
+            _logger.Log(LoggingLevel.INFO, nameof(Skin), $"Skin {skin.Tile} exist");
             if (!OSL_Utils.File.Exist(skin.LoadScreen))
             {
-                _logger.Log(LoggingLevel.ERROR, "CheckSkin()", $"Skin {skin.LoadScreen} not exist");
+                _logger.Log(LoggingLevel.ERROR, nameof(Skin), $"Skin {skin.LoadScreen} not exist");
                 return false;
             }
-            _logger.Log(LoggingLevel.INFO, "CheckSkin()", $"Skin {skin.LoadScreen} exist");
+            _logger.Log(LoggingLevel.INFO, nameof(Skin), $"Skin {skin.LoadScreen} exist");
             return true;
         }
 
@@ -250,10 +250,10 @@ namespace OSL_CDragon
             {
                 if (!OSL_Utils.File.Exist(item.IconPath))
                 {
-                    _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Item {item.IconPath} not exist");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Items), $"Item {item.IconPath} not exist");
                     return false;
                 }
-                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Item {item.IconPath} exist");
+                _logger.Log(LoggingLevel.INFO, nameof(Items), $"Item {item.IconPath} exist");
             }
             return true;
         }
@@ -273,10 +273,10 @@ namespace OSL_CDragon
             {
                 if (!OSL_Utils.File.Exist(perk.IconPath))
                 {
-                    _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Perk {perk.IconPath} not exist");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Perks), $"Perk {perk.IconPath} not exist");
                     return false;
                 }
-                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Perk {perk.IconPath} exist");
+                _logger.Log(LoggingLevel.INFO, nameof(Perks), $"Perk {perk.IconPath} exist");
             }
             return true;
         }
@@ -296,10 +296,10 @@ namespace OSL_CDragon
             {
                 if (!OSL_Utils.File.Exist(summonerSpell.IconPath))
                 {
-                    _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Summoner spell {summonerSpell.IconPath} not exist");
+                    _logger.Log(LoggingLevel.ERROR, nameof(SummonerSpells), $"Summoner spell {summonerSpell.IconPath} not exist");
                     return false;
                 }
-                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Summoner spell {summonerSpell.IconPath} exist");
+                _logger.Log(LoggingLevel.INFO, nameof(SummonerSpells), $"Summoner spell {summonerSpell.IconPath} exist");
             }
             return true;
         }
@@ -325,10 +325,10 @@ namespace OSL_CDragon
             {
                 if (!OSL_Utils.File.Exist(path))
                 {
-                    _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Position {path} not exist");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Position), $"Position {path} not exist");
                     return false;
                 }
-                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Position {path} exist");
+                _logger.Log(LoggingLevel.INFO, nameof(Position), $"Position {path} exist");
             }
             return true;
         }
@@ -361,10 +361,10 @@ namespace OSL_CDragon
             {
                 if (!OSL_Utils.File.Exist(path))
                 {
-                    _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Epic monster {path} not exist");
+                    _logger.Log(LoggingLevel.ERROR, nameof(EpicMonster), $"Epic monster {path} not exist");
                     return false;
                 }
-                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Epic monster {path} exist");
+                _logger.Log(LoggingLevel.INFO, nameof(EpicMonster), $"Epic monster {path} exist");
 
             }
             return true;
@@ -388,10 +388,10 @@ namespace OSL_CDragon
             {
                 if (!OSL_Utils.File.Exist(path))
                 {
-                    _logger.Log(LoggingLevel.ERROR, "CheckDataLatest()", $"Font {path} not exist");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Font), $"Font {path} not exist");
                     return false;
                 }
-                _logger.Log(LoggingLevel.INFO, "CheckDataLatest()", $"Font {path} exist");
+                _logger.Log(LoggingLevel.INFO, nameof(Font), $"Font {path} exist");
             }
             return true;
         }

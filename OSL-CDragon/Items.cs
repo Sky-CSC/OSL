@@ -43,7 +43,7 @@ namespace OSL_CDragon
                     List<Schema.CDragon.Item>? itemSummary = JsonConvert.DeserializeObject<List<Schema.CDragon.Item>>(items);
                     if (itemSummary == null)
                     {
-                        _logger.Log(LoggingLevel.ERROR, "Download()", "Items not downloaded");
+                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Items not downloaded");
                         return _items;
                     }
                     foreach (Schema.CDragon.Item item in itemSummary)
@@ -54,7 +54,7 @@ namespace OSL_CDragon
                 }
                 catch (Exception ex)
                 {
-                    _logger.Log(LoggingLevel.ERROR, "Download()", $"Items not downloaded : {ex.Message}");
+                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Items not downloaded : {ex.Message}");
                     return _items;
                 }
             }
