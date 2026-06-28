@@ -59,12 +59,12 @@ namespace OSL_RGDP
                 var httpRequest = new HttpRequestMessage(HttpMethod.Get, urlRequest);
                 httpRequest.Headers.Add("X-Riot-Token", config.ApiKey);
                 var response = _download.GetResponse(httpRequest).Result;
-                _logger.Log(LoggingLevel.INFO, "Request()", $"Request {urlRequest} succesful");
+                _logger.Log(LoggingLevel.INFO, nameof(Request), $"Request {urlRequest} succesful");
                 return response;
             }
             catch (Exception e)
             {
-                _logger.Log(LoggingLevel.ERROR, "Request()", $"Error request {urlRequest} : {e.Message}");
+                _logger.Log(LoggingLevel.ERROR, nameof(Request), $"Error request {urlRequest} : {e.Message}");
                 return null;
             }
         }
