@@ -32,7 +32,7 @@ builder.Services.AddSingleton<IMessageHandler, RuneSpectatorCurentGameInfoByRiot
 
 // Initialize CDragon and download assets if necessary
 var cdragon = new CDragon();
-cdragon.DownloadAssetsWithCheck();
+cdragon.DownloadLatestAssets();
 
 // Register CDragon as a singleton service
 builder.Services.AddSingleton(cdragon);
