@@ -1,4 +1,4 @@
-﻿namespace OSL_Utils.WebSocket
+namespace OSL_Utils.WebSocket
 {
     /// <summary>
     /// WebSocket configuration
@@ -16,6 +16,26 @@
         /// <summary>
         /// Token for authenticate clients
         /// </summary>
-        public string Token { get; set; } = "tWnrMk5KXjOiJ29zGPlgeF6U5YCa2aIdDI2B1K+Jwdc=";
+        public List<string> Token { get; set; }
+
+        public bool Equals(WebSocketConfig? other)
+        {
+            if (other is null)
+                return false;
+
+            return Ip == other.Ip
+                && Port == other.Port
+                && Token.SequenceEqual(other.Token);
+        }
+
+        public WebSocketConfig Clone()
+        {
+            return new WebSocketConfig
+            {
+                Ip = this.Ip,
+                Port = this.Port,
+                Token = [.. Token]
+            };
+        }
     }
 }
