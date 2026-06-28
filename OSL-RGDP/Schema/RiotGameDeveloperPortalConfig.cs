@@ -51,7 +51,7 @@ namespace OSL_RGDP.Schema
             Routing = region;
             Https = "https://";
             Domain = ".api.riotgames.com";
-            _logger.Log(LoggingLevel.INFO, "Info()", $"Region: {Region}, Continent: {Continent}");
+            _logger.Log(LoggingLevel.INFO, nameof(RiotGameDeveloperPortalConfig), $"Region: {Region}, Continent: {Continent}");
         }
 
         /// <summary>
