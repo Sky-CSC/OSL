@@ -1,0 +1,268 @@
+@page "/config/websocket"
+@rendermode InteractiveServer
+@using OSL_Server.WebSocketServer
+@inject WebSocketServer WsServer
+@using OSL_Utils.WebSocket
+@using OSL_Utils.Generator
+@inject ISnackbar Snackbar
+@inject IJSRuntime JSRuntime
+
+
+<PageTitle>OSL-Server : Web Socket Config</PageTitle>
+
+<MudText Typo="Typo.h4" GutterBottom="true">Web Socket Config</MudText>
+
+<MudText Typo="Typo.body2">
+    Configure Ip, Port and Tokens for connect OSL-Server and OSL-Overlay?
+</MudText>
+<br />
+<MudText Typo="Typo.body2">
+    <div style="padding:14px;border-left:5px solid #ffc107;background:#fff8e1;border-radius:6px;color:#7a5c00;">
+        <b>🚧 Socket web server configuration module is currently being developed</b><br>
+        Todo :
+        <br />- Add button for restart manualy web socket client
+    </div>
+</MudText>
+
+<MudStack Row="true">
+    @* ---------------- Ip ---------------- *@
+    <MudPaper Class="pa-2 ma-1" Elevation="3" Style="@($"border: 5px solid var(--mud-palette-primary)")">
+        <MudText Typo="Typo.subtitle2">OSL-Server IP</MudText>
+        <MudTextField T="string"
+                      Value="@WebSocketConf.Ip"
+                      ValueChanged="v => OnStyleChanged(val => WebSocketConf.Ip = val, v)"
+                      Variant="Variant.Outlined"
+                      Placeholder="127.0.0.1" />
+    </MudPaper>
+    @* ---------------- Port ---------------- *@
+    <MudPaper Class="pa-2 ma-1" Elevation="3" Style="@($"border: 5px solid var(--mud-palette-primary)")">
+        <MudText Typo="Typo.subtitle2">OSL-Server Port</MudText>
+        <MudNumericField T="int"
+                         Value="@WebSocketConf.Port"
+                         ValueChanged="v => OnStyleChanged(val => WebSocketConf.Port = val, v)"
+                         Min="1024"
+                         Max="65535"
+                         Variant="Variant.Outlined"
+                         Placeholder="5005" />
+    </MudPaper>
+</MudStack>
+
+<MudPaper Class="pa-2 ma-1" Elevation="3" Style="@($"border: 5px solid var(--mud-palette-primary)")">
+    <MudText Typo="Typo.subtitle2">List of token avalable</MudText>
+    <MudStack Row="true" Spacing="2">
+
+        <MudTextField @bind-Value="_newToken"
+                      Label="Token"
+                      Variant="Variant.Outlined"
+                      ReadOnly="true" />
+
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   OnClick="GenerateNewToken">
+            Generate
+        </MudButton>
+
+        <MudButton Variant="Variant.Filled"
+                   Color="Color.Success"
+                   OnClick="AddToken">
+            Add
+        </MudButton>
+
+    </MudStack>
+
+
+    @if (WebSocketConf.Token is not null)
+    {
+        @foreach (var token in WebSocketConf.Token)
+        {
+
+            <MudText Class="flex-grow-1">
+                @token
+                <MudTooltip Text="Copy"
+                            Placement="Placement.Bottom"
+                            Arrow="true"
+                            Delay="300">
+                    <MudIconButton Icon="@Icons.Material.Filled.ContentCopy"
+                                   Color="Color.Primary"
+                                   OnClick="@(() => CopyToken(token))" />
+                </MudTooltip>
+                <MudTooltip Text="Delete"
+                            Placement="Placement.Bottom"
+                            Arrow="true"
+                            Delay="300">
+                <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                               Color="Color.Error"
+                               OnClick="@(() => RemoveToken(token))" />
+                </MudTooltip>
+
+            </MudText>
+        }
+    }
+
+</MudPaper>
+<br />
+@* ---------------- Save config ---------------- *@
+<MudButton OnClick="SaveConfig" Variant="Variant.Outlined" Color="Color.Success">
+    Save
+</MudButton>
+@* ---------------- Reset to default ---------------- *@
+<MudButton OnClick="ResetConfig" Variant="Variant.Outlined" Color="Color.Error">
+    Reset
+</MudButton>
+@* ---------------- Restart web socket ---------------- *@
+<MudButton OnClick="RestartWebSocketServer" Variant="Variant.Outlined" Color="Color.Warning">
+    Restart Web Socket Server
+</MudButton>
+
+<br />
+<br />
+
+<MudTable Items="@WsServer.Clients.ToList()">
+
+    <HeaderContent>
+        <MudTh>#</MudTh>
+        <MudTh>Id</MudTh>
+        <MudTh>IP</MudTh>
+        <MudTh>Status</MudTh>
+        <MudTh>Authenticated</MudTh>
+        <MudTh>Connected</MudTh>
+        <MudTh>Last Activity</MudTh>
+    </HeaderContent>
+
+    <RowTemplate>
+        <MudTd>
+            @(WsServer.Clients.ToList().IndexOf(context) + 1)
+        </MudTd>
+
+        <MudTd>@context.Id</MudTd>
+
+        <MudTd>@context.IpAddress</MudTd>
+
+        <MudTd>@context.State</MudTd>
+
+        <MudTd>
+            @if (context.Authenticated)
+            {
+                <MudText Color="Color.Success">
+                    Authenticated
+                </MudText>
+            }
+            else
+            {
+                <MudText Color="Color.Warning">
+                    Waiting Auth
+                </MudText>
+            }
+        </MudTd>
+
+        <MudTd>
+            @context.ConnectedAt
+        </MudTd>
+
+        <MudTd>
+            @context.LastActivity
+        </MudTd>
+
+    </RowTemplate>
+
+</MudTable>
+
+@code {
+
+    private OSL_Utils.WebSocket.WebSocketConfig WebSocketConf = null;
+    private string _newToken = string.Empty;
+
+    private void GenerateNewToken()
+    {
+        _newToken = Generator.GenerateToken();
+        StateHasChanged();
+    }
+
+    // [Inject]
+    // private IClipboardService Clipboard { get; set; } = default!;
+
+    // private async Task CopyToken(string token)
+    // {
+    //     await Clipboard.SetTextAsync(token);
+    // }
+
+    /// <summary>
+    /// Style changed string
+    /// </summary>
+    /// <param name="setter"></param>
+    /// <param name="newValue"></param>
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+    }
+
+    /// <summary>
+    /// Style changed int
+    /// </summary>
+    /// <param name="setter"></param>
+    /// <param name="newValue"></param>
+    private void OnStyleChanged(Action<int> setter, int newValue)
+    {
+        setter(newValue);
+    }
+
+    private void AddToken()
+    {
+        if (!string.IsNullOrWhiteSpace(_newToken) && !WebSocketConf.Token.Contains(_newToken))
+        {
+            WebSocketConf.Token.Add(_newToken);
+            _newToken = string.Empty;
+        }
+    }
+
+    private void RemoveToken(string token)
+    {
+        WebSocketConf.Token.Remove(token);
+    }
+
+    private async Task SaveConfig()
+    {
+        if (!WebSocketConf.Equals(WebSocketConfigService.Load(WsServer.ConfigFilePath)))
+        {
+            //Reload socket
+            await WsServer.UpdateSocketConfig(WebSocketConf);
+            StateHasChanged();
+            Console.WriteLine("Not Same Config");
+        }
+        else
+        {
+            Console.WriteLine("Same Config");
+        }
+
+    }
+
+    private void ResetConfig()
+    {
+        WebSocketConf = WebSocketConfigService.Load(WsServer.ConfigFilePath);
+    }
+
+    protected override void OnInitialized()
+    {
+        WebSocketConf = WebSocketConfigService.Load(WsServer.ConfigFilePath);
+        WsServer.OnChange += async () => await InvokeAsync(StateHasChanged);
+
+    }
+
+    public void Dispose()
+    {
+        WsServer.OnChange -= async () => await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task CopyToken(string token)
+    {
+        await JSRuntime.InvokeVoidAsync("navigator.clipboard.writeText", token);
+
+        Snackbar.Add("Token copied to clipboard", Severity.Success);
+    }
+
+    private async Task RestartWebSocketServer()
+    {
+        await WsServer.RestartAsync();
+    }
+
+}
