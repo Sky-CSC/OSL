@@ -1,4 +1,7 @@
 @page "/champselect"
+@using OSL_Overlay.GameFlow.ChampSelect
+@inject ChampSelectView1State ChampState
+<link rel="stylesheet" href="@Assets["css/champSelect/display.css"]" />
 
 
 <PageTitle>Champ Select - Links</PageTitle>
@@ -13,12 +16,40 @@
               Href="champselect/view1"
               Target="_blank" />
 <br />
+<MudText Typo="Typo.h6" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Champ Select Preview</b></MudText>
 
-<div style="padding:14px;border-left:5px solid #ffc107;background:#fff8e1;border-radius:6px;color:#7a5c00;">
-    <b>🚧 Improve in progress</b><br>
-    TODO : Add preview of champ select
+<div class="champ-select">
+    <b>Blue Team Bans</b>
+    @* ---------------- Blue Ban ---------------- *@
+    <BanSlot Class="@Info.BlueTeam.Side"
+             Team="@Info.BlueTeam" />
+    <b>Red Team Bans</b>
+    @* ---------------- Red Ban ---------------- *@
+    <BanSlot Class="@Info.RedTeam.Side"
+             Team="@Info.RedTeam" />
+
+    <br />
+    @* ---------------- Picks ---------------- *@
+    <b>Blue Team Picks</b>
+    <div class="picks">
+        @* Blue Team *@
+        <PlayersSlot Team="@Info.BlueTeam" />
+        <b>Red Team Picks</b>
+        @* Red Team *@
+        <PlayersSlot Team="@Info.RedTeam" />
+    </div>
 </div>
 
 @code {
+    private ChampSelectInfo Info => ChampState.LocalInfo;
 
+    protected override void OnInitialized()
+    {
+        ChampState.OnChange += async () => await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        ChampState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+    }
 }

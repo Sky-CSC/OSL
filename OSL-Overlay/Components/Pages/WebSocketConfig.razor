@@ -142,13 +142,7 @@
             //Reload socket
             await WsClient.UpdateSocketConfig(WebSocketConf);
             StateHasChanged();
-            Console.WriteLine("Not Same Config");
         }
-        else
-        {
-            Console.WriteLine("Same Config");
-        }
-
     }
 
     private string? SingleToken
