@@ -60,7 +60,6 @@ namespace OSL_Overlay.GameFlow.EndGame
                 ObjectCreationHandling = ObjectCreationHandling.Replace
             };
             var info = JsonConvert.DeserializeObject<EndGameInfo>(json, settings);
-            Console.WriteLine(info.ChampionStats.Background);
             if (info != null)
             {
                 CurrentFile = path;

@@ -22,18 +22,14 @@ namespace OSL_Overlay.GameFlow.Rune
             // Initialize Info with empty data
             CurrentGameInfo currentGameInfo = null;
             string filePathCurentGameInfo = "./GameFlow/Rune/CurentGameInfo.json";
-            Console.WriteLine("Test");
             if (File.Exists(filePathCurentGameInfo))
             {
-                Console.WriteLine("Test 2");
                 string json = File.ReadAllText(filePathCurentGameInfo);
                 currentGameInfo = JsonConvert.DeserializeObject<CurrentGameInfo>(json);
             }
 
-            Console.WriteLine("Test 3");
             if (currentGameInfo != null)
                 SetRunesSpectatorCurentGameInfo(currentGameInfo);
-            Console.WriteLine("Test 4");
         }
 
         public void NotifyStateChanged() => OnChange?.Invoke();
@@ -45,12 +41,10 @@ namespace OSL_Overlay.GameFlow.Rune
 
         public void SetRunesSpectatorCurentGameInfo(CurrentGameInfo currentGameInfo)
         {
-            Console.WriteLine("Test 5");
             int indexBlue = 0;
             int indexRed = 0;
             foreach (var player in currentGameInfo.Participants)
             {
-                Console.WriteLine("Test 6");
                 if (player.TeamId == 100)
                 {
                     Info.BlueTeam[indexBlue].Name.Txt = player.RiotId.Split("#")[0];

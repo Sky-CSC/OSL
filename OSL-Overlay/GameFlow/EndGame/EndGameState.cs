@@ -483,14 +483,12 @@ namespace OSL_Overlay.GameFlow.EndGame
         /// <returns></returns>
         public static EndGameInfo CloneInfo(this EndGameInfo source)
         {
-            Console.WriteLine(source.ChampionStats.RedTeam[0].Bar.Background);
             var json = JsonConvert.SerializeObject(source);
             var settings = new JsonSerializerSettings
             {
                 ObjectCreationHandling = ObjectCreationHandling.Replace
             };
             var clone = JsonConvert.DeserializeObject<EndGameInfo>(json, settings);
-            Console.WriteLine(clone.ChampionStats.RedTeam[0].Bar.Background);
             return clone ?? new EndGameInfo();
         }
 

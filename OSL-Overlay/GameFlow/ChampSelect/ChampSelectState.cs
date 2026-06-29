@@ -88,6 +88,8 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             // Update timers phase
             TimerPhase(session);
 
+            // TODO : Try to get info for set runes
+
             NotifyStateChanged();
         }
 
@@ -130,14 +132,12 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             {
                 Info.BlueTeam.Picks[index].ChampionImage = _cdragon.GetChampionSplash(player.ChampionId);
                 Info.BlueTeam.Picks[index].IsPicking = false;
-                Console.WriteLine(Info.BlueTeam.Picks[index].IsPicking);
             }
 
             foreach (var (player, index) in session.TheirTeam.Select((value, idx) => (value, idx)))
             {
                 Info.RedTeam.Picks[index].ChampionImage = _cdragon.GetChampionSplash(player.ChampionId);
                 Info.RedTeam.Picks[index].IsPicking = false;
-                Console.WriteLine(Info.RedTeam.Picks[index].IsPicking);
             }
         }
 
