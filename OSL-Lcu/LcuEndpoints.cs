@@ -107,5 +107,51 @@ namespace OSL_Lcu
                 return null;
             }
         }
+
+        /// <summary>
+        /// Get summoner data by puuid.
+        /// </summary>
+        /// <param name="puuid"></param>
+        /// <returns></returns>
+        public async Task<LolSummonerSummoner?> GetSummonerByPuuidAsync(string puuid)
+        {
+            try
+            {
+                string? json = await _lcu.RequestAsync($"/lol-summoner/v1/summoners-by-puuid-cached/{puuid}");
+
+                if (string.IsNullOrEmpty(json))
+                    return null;
+
+                return JsonConvert.DeserializeObject<LolSummonerSummoner>(json);
+            }
+            catch (Exception ex)
+            {
+                _logger.Log(LoggingLevel.ERROR, nameof(GetSummonerByPuuidAsync), $"❌ {ex.Message}");
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Get summoner data by summoner id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<LolSummonerSummoner?> GetSummonerByIdAsync(Int64 id)
+        {
+            try
+            {
+                string? json = await _lcu.RequestAsync($"/lol-summoner/v1/summoners/{id}");
+
+                if (string.IsNullOrEmpty(json))
+                    return null;
+
+                return JsonConvert.DeserializeObject<LolSummonerSummoner>(json);
+            }
+            catch (Exception ex)
+            {
+                _logger.Log(LoggingLevel.ERROR, nameof(GetSummonerByIdAsync), $"❌ {ex.Message}");
+                return null;
+            }
+        }
     }
 }
