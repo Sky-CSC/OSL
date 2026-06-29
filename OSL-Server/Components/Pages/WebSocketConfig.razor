@@ -26,25 +26,21 @@
 
 <MudStack Row="true">
     @* ---------------- Ip ---------------- *@
-    <MudPaper Class="pa-2 ma-1" Elevation="3" Style="@($"border: 5px solid var(--mud-palette-primary)")">
-        <MudText Typo="Typo.subtitle2">OSL-Server IP</MudText>
-        <MudTextField T="string"
+    <StyleFieldEditor Label="OSL-Server IP"
+                      Type="text"
                       Value="@WebSocketConf.Ip"
                       ValueChanged="v => OnStyleChanged(val => WebSocketConf.Ip = val, v)"
-                      Variant="Variant.Outlined"
+                      BorderColor="var(--mud-palette-primary)"
                       Placeholder="127.0.0.1" />
-    </MudPaper>
     @* ---------------- Port ---------------- *@
-    <MudPaper Class="pa-2 ma-1" Elevation="3" Style="@($"border: 5px solid var(--mud-palette-primary)")">
-        <MudText Typo="Typo.subtitle2">OSL-Server Port</MudText>
-        <MudNumericField T="int"
-                         Value="@WebSocketConf.Port"
-                         ValueChanged="v => OnStyleChanged(val => WebSocketConf.Port = val, v)"
-                         Min="1024"
-                         Max="65535"
-                         Variant="Variant.Outlined"
-                         Placeholder="5005" />
-    </MudPaper>
+    <StyleFieldEditor Label="OSL-Server Port"
+                      Type="intxtoy"
+                      Value="@WebSocketConf.Port.ToString()"
+                      ValueChanged="v => OnStyleChanged(val => WebSocketConf.Port = val, v)"
+                      NumericMin=1024
+                      NumericMax=65535
+                      BorderColor="var(--mud-palette-primary)"
+                      Placeholder="5005" />
 </MudStack>
 
 <MudPaper Class="pa-2 ma-1" Elevation="3" Style="@($"border: 5px solid var(--mud-palette-primary)")">
@@ -201,9 +197,9 @@
     /// </summary>
     /// <param name="setter"></param>
     /// <param name="newValue"></param>
-    private void OnStyleChanged(Action<int> setter, int newValue)
+    private void OnStyleChanged(Action<int> setter, string newValue)
     {
-        setter(newValue);
+        setter(Convert.ToInt32(newValue));
     }
 
     private void AddToken()
@@ -227,13 +223,7 @@
             //Reload socket
             await WsServer.UpdateSocketConfig(WebSocketConf);
             StateHasChanged();
-            Console.WriteLine("Not Same Config");
         }
-        else
-        {
-            Console.WriteLine("Same Config");
-        }
-
     }
 
     private void ResetConfig()
