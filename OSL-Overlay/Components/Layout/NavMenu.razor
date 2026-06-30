@@ -1,9 +1,9 @@
-@using OSL_Overlay.Components.Pages.Components.Icons
+@using OSL_UI.Icons
 
 <MudNavMenu>
     <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home"><b>Home</b></MudNavLink>
     <MudNavLink Href="config/websocket" Match="NavLinkMatch.Prefix" Icon="@CustomIcons.Custom.ServerNetwork"><b>OSL-Server Config</b></MudNavLink>
-    <MudNavLink Href="gamestatus" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.SignalWifiStatusbarConnectedNoInternet4"><b>Game Status</b></MudNavLink>
+    @* <MudNavLink Href="gamestatus" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.SignalWifiStatusbarConnectedNoInternet4"><b>Game Status</b></MudNavLink> *@
     <MudNavGroup Title="Teams" Icon="@Icons.Material.Filled.Diversity3" Expanded="false">
         <MudNavLink Href="team" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Teams Config</MudNavLink>
         <MudNavLink Href="team#blue-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Blue Team</MudNavLink>
