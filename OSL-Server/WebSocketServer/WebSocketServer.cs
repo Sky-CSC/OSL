@@ -12,6 +12,16 @@ using System.Text;
 
 namespace OSL_Server.WebSocketServer
 {
+
+    public enum WebSocketServerState
+    {
+        Stopped,
+        Starting,
+        Running,
+        Restarting,
+        Stopping
+    }
+
     /// <summary>
     /// A WebSocket server that handles client connections, authentication, and message broadcasting.
     /// </summary>
@@ -40,7 +50,9 @@ namespace OSL_Server.WebSocketServer
         public readonly string ConfigFilePath;
         public event Action? OnChange;
         public IReadOnlyList<WebSocketClientInfo> Clients => [.. _clients.Values.OrderBy(x => x.ConnectedAt)];
+        public WebSocketServerState State { get; private set; } = WebSocketServerState.Stopped;
         public void NotifyStateChanged() => OnChange?.Invoke();
+
 
         // Last known values to replay on reconnect
         private LolPublishingContentPubHubConfig? _regionLocale;
@@ -67,6 +79,8 @@ namespace OSL_Server.WebSocketServer
         /// </summary>
         public async Task StartAsync(CancellationToken cancellationToken)
         {
+            SetState(WebSocketServerState.Starting);
+
             var internalCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
 
             var listener = new HttpListener();
@@ -81,6 +95,8 @@ namespace OSL_Server.WebSocketServer
 
                 listener.Start();
                 _currentServer = (listener, internalCts);
+
+                SetState(WebSocketServerState.Running);
             }
             finally
             {
@@ -149,6 +165,7 @@ namespace OSL_Server.WebSocketServer
                 listener.Close();
                 internalCts.Dispose();
                 _logger.Log(LoggingLevel.INFO, nameof(StartAsync), "🛑 WebSocket Server stopped");
+                SetState(WebSocketServerState.Stopped);
             }
         }
 
@@ -158,6 +175,8 @@ namespace OSL_Server.WebSocketServer
         /// <returns></returns>
         private async Task StopCurrentServerAsync()
         {
+            SetState(WebSocketServerState.Stopping);
+
             if (_currentServer is not { } current)
                 return;
 
@@ -180,6 +199,7 @@ namespace OSL_Server.WebSocketServer
 
             current.Cts.Dispose();
             _currentServer = null;
+            SetState(WebSocketServerState.Stopped);
         }
 
         /// <summary>
@@ -453,6 +473,7 @@ namespace OSL_Server.WebSocketServer
         public async Task RestartAsync()
         {
             _logger.Log(LoggingLevel.INFO, nameof(RestartAsync), "🔄 Restarting WebSocket server...");
+            SetState(WebSocketServerState.Restarting);
 
             await _serverLifecycleLock.WaitAsync();
             try
@@ -545,6 +566,15 @@ namespace OSL_Server.WebSocketServer
                 type,
                 data = data == null ? JValue.CreateNull() : JToken.FromObject(data)
             };
+        }
+
+        private void SetState(WebSocketServerState state)
+        {
+            if (State == state)
+                return;
+
+            State = state;
+            NotifyStateChanged();
         }
     }
 }
