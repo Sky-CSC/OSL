@@ -10,19 +10,22 @@
 
 <PageTitle>OSL-Server : Web Socket Config</PageTitle>
 
-<MudText Typo="Typo.h4" GutterBottom="true">Web Socket Config</MudText>
+<MudText Typo="Typo.h4" GutterBottom="true">
+    Web Socket Config
+    <MudChip T="string"
+             Icon="@GetWebSocketStateIcon()"
+             Color="@GetWebSocketStateColor()"
+             Variant="Variant.Filled">
+        @GetWebSocketStateText()
+    </MudChip>
+</MudText>
 
 <MudText Typo="Typo.body2">
-    Configure Ip, Port and Tokens for connect OSL-Server and OSL-Overlay?
+    Configure Ip, Port and Tokens for connect OSL-Server and OSL-Overlay.
 </MudText>
 <br />
-<MudText Typo="Typo.body2">
-    <div style="padding:14px;border-left:5px solid #ffc107;background:#fff8e1;border-radius:6px;color:#7a5c00;">
-        <b>🚧 Socket web server configuration module is currently being developed</b><br>
-        Todo :
-        <br />- Add button for restart manualy web socket client
-    </div>
-</MudText>
+
+
 
 <MudStack Row="true">
     @* ---------------- Ip ---------------- *@
@@ -86,9 +89,9 @@
                             Placement="Placement.Bottom"
                             Arrow="true"
                             Delay="300">
-                <MudIconButton Icon="@Icons.Material.Filled.Delete"
-                               Color="Color.Error"
-                               OnClick="@(() => RemoveToken(token))" />
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                   Color="Color.Error"
+                                   OnClick="@(() => RemoveToken(token))" />
                 </MudTooltip>
 
             </MudText>
@@ -174,14 +177,6 @@
         StateHasChanged();
     }
 
-    // [Inject]
-    // private IClipboardService Clipboard { get; set; } = default!;
-
-    // private async Task CopyToken(string token)
-    // {
-    //     await Clipboard.SetTextAsync(token);
-    // }
-
     /// <summary>
     /// Style changed string
     /// </summary>
@@ -254,5 +249,38 @@
     {
         await WsServer.RestartAsync();
     }
+
+    private string GetWebSocketStateIcon() => WsServer.State switch
+    {
+        WebSocketServerState.Running => Icons.Material.Filled.CloudDone,
+        WebSocketServerState.Starting => Icons.Material.Filled.Sync,
+        WebSocketServerState.Restarting => Icons.Material.Filled.Autorenew,
+        WebSocketServerState.Stopping => Icons.Material.Filled.SyncDisabled,
+        WebSocketServerState.Stopped => Icons.Material.Filled.CloudOff,
+
+        _ => Icons.Material.Filled.Help
+    };
+
+    private Color GetWebSocketStateColor() => WsServer.State switch
+    {
+        WebSocketServerState.Running => Color.Success,
+        WebSocketServerState.Starting => Color.Info,
+        WebSocketServerState.Restarting => Color.Warning,
+        WebSocketServerState.Stopping => Color.Warning,
+        WebSocketServerState.Stopped => Color.Error,
+
+        _ => Color.Default
+    };
+
+    private string GetWebSocketStateText() => WsServer.State switch
+    {
+        WebSocketServerState.Running => "Running",
+        WebSocketServerState.Starting => "Starting",
+        WebSocketServerState.Restarting => "Restarting",
+        WebSocketServerState.Stopping => "Stopping",
+        WebSocketServerState.Stopped => "Stopped",
+
+        _ => "Unknown"
+    };
 
 }

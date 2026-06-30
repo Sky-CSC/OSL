@@ -5,13 +5,18 @@
 
 <PageTitle>OSL-Server : League Client</PageTitle>
 
-<MudText Typo="Typo.h4" GutterBottom="true">League Client</MudText>
+<MudText Typo="Typo.h4" GutterBottom="true">League Client
+    <MudChip T="string"
+             Icon="@GetBooleanIcon(isRunning)"
+             Color="@GetBooleanColor(isRunning)"
+             Variant="Variant.Filled">
+        @GetBooleanText(isRunning)
+    </MudChip>
+</MudText>
 <MudText Class="mb-8">Information about League Client</MudText>
 
-<MudText Typo="Typo.body2">
-    League of Legends process status :
-    <strong>@(isRunning ? "UP ✅" : "DOWN ❌")</strong>
-</MudText>
+<OSL_UI.Box.Build Title="Dev in progress"
+                  Text="Display lockfile information : <br/> - Process name <br/> - Process id <br/> - Port <br/> - Key <br/> Display phase in progress" />
 
 @code {
     private bool isRunning;
@@ -32,4 +37,16 @@
     {
         Watcher.OnChanged -= HandleChanged;
     }
+
+    private static string GetBooleanIcon(bool value) => value
+    ? Icons.Material.Filled.PlayCircle
+    : Icons.Material.Filled.StopCircle;
+
+    private static Color GetBooleanColor(bool value) => value
+        ? Color.Success
+        : Color.Error;
+
+    private static string GetBooleanText(bool value) => value
+        ? "Running"
+        : "Stopped";
 }
