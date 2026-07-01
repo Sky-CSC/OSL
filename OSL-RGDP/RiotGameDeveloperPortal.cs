@@ -23,6 +23,10 @@ namespace OSL_RGDP
         /// Spectator game information.
         /// </summary>
         public SpectatorV5 Spectator { get; } = new SpectatorV5(config);
+        /// <summary>
+        /// Status information.
+        /// </summary>
+        public StatusV4 Status { get; } = new StatusV4(config);
     }
 
     /// <summary>
