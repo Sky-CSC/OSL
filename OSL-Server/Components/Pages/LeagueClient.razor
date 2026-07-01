@@ -21,21 +21,19 @@
 @code {
     private bool isRunning;
 
+    private Action? _handler;
+
     protected override void OnInitialized()
     {
         isRunning = Watcher.IsRunning;
-        Watcher.OnChanged += HandleChanged;
-    }
-
-    private void HandleChanged()
-    {
-        isRunning = Watcher.IsRunning;
-        InvokeAsync(StateHasChanged);
+        _handler = () => InvokeAsync(StateHasChanged);
+        Watcher.OnChange += _handler;
     }
 
     public void Dispose()
     {
-        Watcher.OnChanged -= HandleChanged;
+        if (_handler is not null)
+            Watcher.OnChange -= _handler;
     }
 
     private static string GetBooleanIcon(bool value) => value

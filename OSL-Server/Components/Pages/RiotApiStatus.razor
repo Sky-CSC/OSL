@@ -1,0 +1,118 @@
+@using OSL_RGDP.Schema.Riot
+
+@if (PlatformData is null)
+{
+    <MudAlert Severity="Severity.Info">
+        No platform status available.
+    </MudAlert>
+}
+else
+{
+    <MudText Typo="Typo.h5" Class="mb-3">Maintenances</MudText>
+
+    @if (PlatformData.Maintenances?.Any() == true)
+    {
+        @foreach (var maintenance in PlatformData.Maintenances)
+        {
+            <MudCard Class="mb-4">
+                <MudCardContent>
+
+                    <MudText><b>Status:</b> @maintenance.Status</MudText>
+                    <MudText><b>Created:</b> @maintenance.CreatedAt</MudText>
+                    <MudText><b>Updated:</b> @maintenance.UpdatedAt</MudText>
+
+                    <MudText Class="mt-3"><b>Platforms</b></MudText>
+
+                    <MudStack Row Wrap="Wrap.Wrap" Spacing="1">
+                        @foreach (var platform in maintenance.Platforms)
+                        {
+                            <MudChip T="string" Size="Size.Small">
+                                @platform
+                            </MudChip>
+                        }
+                    </MudStack>
+
+                    <MudText Class="mt-3"><b>Titles</b></MudText>
+
+                    @foreach (var title in maintenance.Titles)
+                    {
+                        <MudPaper Class="pa-2 mt-2" Outlined="true">
+                            <MudText Typo="Typo.body2">
+                                <b>@title.Locale</b>
+                            </MudText>
+
+                            <MudText>
+                                @title.Content
+                            </MudText>
+                        </MudPaper>
+                    }
+
+                </MudCardContent>
+            </MudCard>
+        }
+    }
+    else
+    {
+        <MudAlert Severity="Severity.Success">
+            No maintenance.
+        </MudAlert>
+    }
+
+    <MudDivider Class="my-4" />
+
+    <MudText Typo="Typo.h5" Class="mb-3">Incidents</MudText>
+
+    @if (PlatformData.Incidents?.Any() == true)
+    {
+        @foreach (var incident in PlatformData.Incidents)
+        {
+            <MudCard Class="mb-4">
+                <MudCardContent>
+
+                    <MudText><b>Status:</b> @incident.Status</MudText>
+                    <MudText><b>Created:</b> @incident.CreatedAt</MudText>
+                    <MudText><b>Updated:</b> @incident.UpdatedAt</MudText>
+
+                    <MudText Class="mt-3"><b>Platforms</b></MudText>
+
+                    <MudStack Row Wrap="Wrap.Wrap" Spacing="1">
+                        @foreach (var platform in incident.Platforms)
+                        {
+                            <MudChip T="string" Size="Size.Small">
+                                @platform
+                            </MudChip>
+                        }
+                    </MudStack>
+
+                    <MudText Class="mt-3"><b>Titles</b></MudText>
+
+                    @foreach (var title in incident.Titles)
+                    {
+                        <MudPaper Class="pa-2 mt-2" Outlined="true">
+                            <MudText Typo="Typo.body2">
+                                <b>@title.Locale</b>
+                            </MudText>
+
+                            <MudText>
+                                @title.Content
+                            </MudText>
+                        </MudPaper>
+                    }
+
+                </MudCardContent>
+            </MudCard>
+        }
+    }
+    else
+    {
+        <MudAlert Severity="Severity.Success">
+            No incident.
+        </MudAlert>
+    }
+}
+
+@code
+{
+    [Parameter, EditorRequired]
+    public PlatformDataDto PlatformData { get; set; } = default!;
+}

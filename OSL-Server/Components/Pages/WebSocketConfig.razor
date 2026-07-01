@@ -171,6 +171,8 @@
     private OSL_Utils.WebSocket.WebSocketConfig WebSocketConf = null;
     private string _newToken = string.Empty;
 
+    private Action? _handler;
+
     private void GenerateNewToken()
     {
         _newToken = Generator.GenerateToken();
@@ -229,13 +231,15 @@
     protected override void OnInitialized()
     {
         WebSocketConf = WebSocketConfigService.Load(WsServer.ConfigFilePath);
-        WsServer.OnChange += async () => await InvokeAsync(StateHasChanged);
+        _handler = () => InvokeAsync(StateHasChanged);
+        WsServer.OnChange += _handler;
 
     }
 
     public void Dispose()
     {
-        WsServer.OnChange -= async () => await InvokeAsync(StateHasChanged);
+        if (_handler is not null)
+            WsServer.OnChange -= _handler;
     }
 
     private async Task CopyToken(string token)
