@@ -15,8 +15,10 @@ builder.Services.Configure<LeagueClientConfig>(
     builder.Configuration.GetSection("LeagueClientConfig"));
 
 // Configure RiotDevelopementPortalConfig from appsettings.json
-builder.Services.Configure<RiotDevelopementPortalConfig>(
-    builder.Configuration.GetSection("RiotDevelopementPortalConfig"));
+//builder.Services.Configure<RiotDevelopementPortalConfig>(
+//    builder.Configuration.GetSection("RiotDevelopementPortalConfig"));
+
+builder.Services.AddSingleton<RiotGameDevelopementPortalConfig>();
 
 // Register the LeagueClient as a singleton service
 builder.Services.AddSingleton<LeagueClient>();
