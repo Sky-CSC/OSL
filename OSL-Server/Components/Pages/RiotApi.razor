@@ -3,15 +3,12 @@
 @inject OSL_Server.Services.LeagueClient LeagueClient
 @using OSL_Server.Schema
 @inject ISnackbar Snackbar
-
+@implements IDisposable
 
 <PageTitle>OSL-Server : Riot Api</PageTitle>
 
 <MudText Typo="Typo.h4" GutterBottom="true">Riot Api</MudText>
 <MudText Class="mb-8">Information about <MudLink Href="https://developer.riotgames.com/apis" Target="_blank" Typo="Typo.body2" Color="Color.Primary"> Riot Api </MudLink></MudText>
-
-<OSL_UI.Box.Build Title="Dev in progress"
-                  Text="- Display RIOT API key <br/> - Change Riot Api Key <br/> - Restart Riot Api managed in OSL-Server" />
 
 <StyleFieldEditor Label="Riot Game Development Portal Api Key"
                   Type="text"
@@ -41,7 +38,7 @@
             break;
         case OSL_Server.Services.RiotApiKeyStatus.NotTested:
             <MudAlert Severity="Severity.Warning">
-                Riot Api Key status unknown (Check in <MudLink Href="leagueclient">League Client</MudLink>
+                Riot Api Key status unknown (Check if <MudLink Href="leagueclient">League Client</MudLink> is running)
             </MudAlert>
             break;
     }
@@ -54,24 +51,24 @@
     private bool isRunning;
     private RiotGameDevelopementPortalConfig RiotGameDevelopementPortalConfig = new RiotGameDevelopementPortalConfig();
 
-    private Action? _handler;
-
     protected override void OnInitialized()
     {
         RiotGameDevelopementPortalConfig.ApiKey = LeagueClient.GetApiKey();
-        _handler = () => InvokeAsync(StateHasChanged);
-        LeagueClient.OnChange += _handler;
+        LeagueClient.OnChange += OnServiceChanged;
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
     {
-        if (_handler is not null)
-            LeagueClient.OnChange -= _handler;
+        LeagueClient.OnChange -= OnServiceChanged;
     }
 
     private async Task SaveConfig()
     {
-        Console.WriteLine("Bordel");
         await LeagueClient.UpdateApiKey(RiotGameDevelopementPortalConfig.ApiKey);
         Snackbar.Add("Riot Api Key updated", Severity.Success);
     }

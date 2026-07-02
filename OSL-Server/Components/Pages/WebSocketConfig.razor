@@ -6,7 +6,7 @@
 @using OSL_Utils.Generator
 @inject ISnackbar Snackbar
 @inject IJSRuntime JSRuntime
-
+@implements IDisposable
 
 <PageTitle>OSL-Server : Web Socket Config</PageTitle>
 
@@ -171,8 +171,6 @@
     private OSL_Utils.WebSocket.WebSocketConfig WebSocketConf = null;
     private string _newToken = string.Empty;
 
-    private Action? _handler;
-
     private void GenerateNewToken()
     {
         _newToken = Generator.GenerateToken();
@@ -231,15 +229,18 @@
     protected override void OnInitialized()
     {
         WebSocketConf = WebSocketConfigService.Load(WsServer.ConfigFilePath);
-        _handler = () => InvokeAsync(StateHasChanged);
-        WsServer.OnChange += _handler;
+        WsServer.OnChange += OnServiceChanged;
 
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
     {
-        if (_handler is not null)
-            WsServer.OnChange -= _handler;
+        WsServer.OnChange -= OnServiceChanged;
     }
 
     private async Task CopyToken(string token)

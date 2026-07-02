@@ -15,25 +15,33 @@
 </MudText>
 <MudText Class="mb-8">Information about League Client</MudText>
 
+@if (!isRunning)
+{
+    <MudAlert Severity="Severity.Error">
+        Please run your League of Legends application for use OSL-Server and OSL-Overlay
+    </MudAlert>
+}
+
 <OSL_UI.Box.Build Title="Dev in progress"
                   Text="Display lockfile information : <br/> - Process name <br/> - Process id <br/> - Port <br/> - Key <br/> Display phase in progress" />
 
 @code {
     private bool isRunning;
 
-    private Action? _handler;
-
     protected override void OnInitialized()
     {
         isRunning = Watcher.IsRunning;
-        _handler = () => InvokeAsync(StateHasChanged);
-        Watcher.OnChange += _handler;
+        Watcher.OnChange += OnServiceChanged;
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
     {
-        if (_handler is not null)
-            Watcher.OnChange -= _handler;
+        Watcher.OnChange -= OnServiceChanged;
     }
 
     private static string GetBooleanIcon(bool value) => value
