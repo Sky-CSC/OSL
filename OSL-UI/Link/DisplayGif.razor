@@ -1,0 +1,22 @@
+@using MudBlazor
+<div class="gif-container">
+    <a href="@Href" target="_blank" rel="noopener noreferrer">
+        <img src="@Href"
+             alt="@Alt"
+             width="@Width"
+             height="@Height" />
+
+        <div class="gif-overlay">
+            <MudIcon Icon="@Icons.Material.Filled.OpenInNew"/> @OverlayText
+        </div>
+    </a>
+</div>
+
+@code {
+    [Parameter] public string ImageSrc { get; set; } = string.Empty;
+    [Parameter] public string Href { get; set; } = string.Empty;
+    [Parameter] public string Alt { get; set; } = "";
+    [Parameter] public int Width { get; set; } = 640;
+    [Parameter] public int Height { get; set; } = 360;
+    [Parameter] public string OverlayText { get; set; } = "Open in a new tab";
+}
