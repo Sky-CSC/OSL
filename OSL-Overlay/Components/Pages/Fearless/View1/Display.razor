@@ -3,6 +3,7 @@
 @layout Layout.EmptyLayout
 @inject NavigationManager Nav
 @inject FearlessView1State ViewState
+@implements IDisposable
 
 <PageTitle>Fearless - View1 - @outerIndex:int/@innerIndex:int</PageTitle>
 
@@ -50,6 +51,6 @@
     {
         // recharge la donnée puis rafraîchit l’UI
         LoadFearless();
-        InvokeAsync(StateHasChanged);
+        _ = InvokeAsync(StateHasChanged);
     }
 }

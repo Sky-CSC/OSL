@@ -1,6 +1,7 @@
 @page "/team/"
 @using OSL_Overlay.GameFlow.Team
 @inject TeamState TeamState
+@implements IDisposable
 
 @* ---------------- Team managament ---------------- *@
 <PageTitle>Team</PageTitle>
@@ -447,7 +448,7 @@
 
     private void RefreshUI()
     {
-        InvokeAsync(StateHasChanged);
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()

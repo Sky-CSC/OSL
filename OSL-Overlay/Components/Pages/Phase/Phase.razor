@@ -1,5 +1,6 @@
 @using OSL_Overlay.GameFlow.Phase
 @inject PhaseState PhaseState
+@implements IDisposable
 
 @* ---------------- Phase managament ---------------- *@
 
@@ -52,7 +53,7 @@
 
     private void RefreshUI()
     {
-        InvokeAsync(StateHasChanged);
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()

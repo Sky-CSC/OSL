@@ -5,6 +5,7 @@
 @using OSL_RGDP.WebSocketResponse
 @inject FearlessState FearlessState
 @inject CDragon _cdragon
+@implements IDisposable
 
 <PageTitle>Fearless - Management</PageTitle>
 
@@ -259,11 +260,16 @@
 
     protected override void OnInitialized()
     {
-        FearlessState.OnChange += async () => await InvokeAsync(StateHasChanged);
+        FearlessState.OnChange += OnServiceChanged;
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
     {
-        FearlessState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+        FearlessState.OnChange -= OnServiceChanged;
     }
 }

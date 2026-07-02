@@ -2,6 +2,7 @@
 @using OSL_Overlay.GameFlow.Fearless
 @layout Layout.EmptyLayout
 @inject FearlessView2State ViewState
+@implements IDisposable
 
 <link rel="stylesheet" href="@Assets["css/fearless/View2.css"]" />
 
@@ -101,6 +102,6 @@
     {
         // recharge la donnée puis rafraîchit l’UI
         LoadFearless();
-        InvokeAsync(StateHasChanged);
+        _ = InvokeAsync(StateHasChanged);
     }
 }

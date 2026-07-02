@@ -1,6 +1,8 @@
 @page "/endgame/view1/custom"
 @using OSL_Overlay.GameFlow.EndGame
 @inject EndGameView1State ViewState
+@implements IDisposable
+
 <link rel="stylesheet" href="@Assets["css/endGame/View1.css"]" />
 
 
@@ -36,13 +38,18 @@
 
     protected override void OnInitialized()
     {
-        ViewState.OnChange += async () => await InvokeAsync(StateHasChanged);
+        ViewState.OnChange += OnServiceChanged;
         ViewState.SyncFromGlobal();
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
     {
-        ViewState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+        ViewState.OnChange -= OnServiceChanged;
     }
 
     /// <summary>

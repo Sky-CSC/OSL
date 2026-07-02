@@ -2,6 +2,8 @@
 @layout Layout.EmptyLayout
 @using OSL_Overlay.GameFlow.Rune
 @inject RuneView1State RuneState
+@implements IDisposable
+
 <link rel="stylesheet" href="@Assets["css/rune/View1.css"]" />
 
 
@@ -22,10 +24,16 @@
     private RuneInfo Info => RuneState.LocalInfo;
     protected override void OnInitialized()
     {
-        RuneState.OnChange += async () => await InvokeAsync(StateHasChanged);
+        RuneState.OnChange += OnServiceChanged;
     }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
     public void Dispose()
     {
-        RuneState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+        RuneState.OnChange -= OnServiceChanged;
     }
 }

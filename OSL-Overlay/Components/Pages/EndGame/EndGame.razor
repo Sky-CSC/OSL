@@ -1,6 +1,7 @@
 @page "/endgame"
 @using OSL_Overlay.GameFlow.EndGame
 @inject EndGameState EndGameState
+@implements IDisposable
 
 @* ---------------- End game management ---------------- *@
 <PageTitle>End Game - Management</PageTitle>
@@ -113,12 +114,17 @@
 
     protected override void OnInitialized()
     {
-        EndGameState.OnChange += async () => await InvokeAsync(StateHasChanged);
+        EndGameState.OnChange += OnServiceChanged;
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
     {
-        EndGameState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+        EndGameState.OnChange -= OnServiceChanged;
     }
 
     private void OnSelectChange(ChangeEventArgs e)

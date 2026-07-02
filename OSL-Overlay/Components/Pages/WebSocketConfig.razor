@@ -4,6 +4,7 @@
 @using OSL_Utils.WebSocket
 @inject WebSocketClient WsClient
 @inject CDragon CDragon
+@implements IDisposable
 
 <PageTitle>OSL-Server Config</PageTitle>
 
@@ -177,12 +178,17 @@
 
         WebSocketConf = WebSocketConfigService.Load(WsClient.ConfigFilePath);
 
-        WsClient.OnChange += async () => await InvokeAsync(StateHasChanged);
+        WsClient.OnChange += OnServiceChanged;
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
     {
-        WsClient.OnChange -= async () => await InvokeAsync(StateHasChanged);
+        WsClient.OnChange -= OnServiceChanged;
     }
 
     private async Task SendMessage()

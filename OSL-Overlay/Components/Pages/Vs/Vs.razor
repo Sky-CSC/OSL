@@ -1,5 +1,6 @@
 @using OSL_Overlay.GameFlow.Vs
 @inject VsState VsState
+@implements IDisposable
 
 @* ---------------- VS managament ---------------- *@
 <MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>VS management</b></MudText>
@@ -27,7 +28,7 @@
 
     private void RefreshUI()
     {
-        InvokeAsync(StateHasChanged);
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()

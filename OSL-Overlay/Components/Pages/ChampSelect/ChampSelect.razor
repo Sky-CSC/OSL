@@ -1,6 +1,8 @@
 @page "/champselect"
 @using OSL_Overlay.GameFlow.ChampSelect
 @inject ChampSelectView1State ChampState
+@implements IDisposable
+
 <link rel="stylesheet" href="@Assets["css/champSelect/display.css"]" />
 
 
@@ -45,11 +47,16 @@
 
     protected override void OnInitialized()
     {
-        ChampState.OnChange += async () => await InvokeAsync(StateHasChanged);
+        ChampState.OnChange += OnServiceChanged;
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
     {
-        ChampState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+        ChampState.OnChange -= OnServiceChanged;
     }
 }

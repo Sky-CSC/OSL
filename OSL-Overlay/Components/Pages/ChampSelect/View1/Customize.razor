@@ -1,6 +1,7 @@
 @page "/champselect/view1/custom"
 @using OSL_Overlay.GameFlow.ChampSelect
 @inject ChampSelectView1State ViewState
+@implements IDisposable
 
 @* ---------------- Champ select View1 management ---------------- *@
 <PageTitle>ChampSelect - View1 - Customize</PageTitle>
@@ -813,13 +814,18 @@
 
     protected override void OnInitialized()
     {
-        ViewState.OnChange += async () => await InvokeAsync(StateHasChanged);
+        ViewState.OnChange += OnServiceChanged;
         ViewState.SyncFromGlobal();
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
     {
-        ViewState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+        ViewState.OnChange -= OnServiceChanged;
     }
 
     /// <summary>

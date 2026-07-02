@@ -2,6 +2,8 @@
 @layout Layout.EmptyLayout
 @using OSL_Overlay.GameFlow.EndGame
 @inject EndGameView1State EndGameState
+@implements IDisposable
+
 <link rel="stylesheet" href="@Assets["css/endgame/View1.css"]" />
 
 
@@ -77,10 +79,16 @@
     private EndGameInfo Info => EndGameState.LocalInfo;
     protected override void OnInitialized()
     {
-        EndGameState.OnChange += async () => await InvokeAsync(StateHasChanged);
+        EndGameState.OnChange += OnServiceChanged;
     }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
     public void Dispose()
     {
-        EndGameState.OnChange -= async () => await InvokeAsync(StateHasChanged);
+        EndGameState.OnChange -= OnServiceChanged;
     }
 }
