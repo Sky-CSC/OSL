@@ -1,8 +1,9 @@
 @using OSL_UI.Icons
 
 <MudNavMenu>
-    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home"><b>Home</b></MudNavLink>
+    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.MenuBook"><b>Home</b></MudNavLink>
     <MudNavLink Href="config/websocket" Match="NavLinkMatch.Prefix" Icon="@CustomIcons.Custom.ServerNetwork"><b>OSL-Server Config</b></MudNavLink>
+    <MudNavLink Href="obs" Match="NavLinkMatch.Prefix" Icon="@CustomIcons.Custom.OBS"><b>OBS</b></MudNavLink>
     @* <MudNavLink Href="gamestatus" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.SignalWifiStatusbarConnectedNoInternet4"><b>Game Status</b></MudNavLink> *@
     <MudNavGroup Title="Teams" Icon="@Icons.Material.Filled.Diversity3" Expanded="false">
         <MudNavLink Href="team" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Teams Config</MudNavLink>
@@ -34,7 +35,7 @@
             </MudNavGroup>
         </MudNavGroup>
     </MudNavGroup>
-    <MudNavGroup Title="Runes" Icon="@Icons.Material.Filled.AutoFixHigh" Expanded="false">
+    <MudNavGroup Title="Runes" Icon="@CustomIcons.Custom.Rune" Expanded="false">
         <MudNavLink Href="rune" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Rune Config</MudNavLink>
         <MudNavGroup Title="View 1" Icon="@Icons.Material.Filled.Preview" Expanded="false">
             <MudNavGroup Title="Customize" Icon="@Icons.Material.Filled.Brush" Expanded="true">
