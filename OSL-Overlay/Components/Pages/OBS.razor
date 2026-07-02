@@ -1,0 +1,110 @@
+@page "/obs"
+@using OSL_UI.Box
+@inject ISnackbar Snackbar
+@inject IJSRuntime JSRuntime
+@inject NavigationManager Navigation
+
+<PageTitle>OSL-Overlay : OBS</PageTitle>
+
+<MudText Typo="Typo.h4" GutterBottom="true">Add overlays in OBS</MudText>
+
+<Info Title="Overlay Size"
+      Text="The size of all overlays are 3840 * 2160 (16:9). Enter this value in width and height. Resize at the screen size. Display OBS video example for more information." />
+<MudNavGroup Title="Display OBS video example" Expanded="false">
+
+    <MudNavLink Disabled="false">
+        <DisplayGif ImageSrc="doc/obs/obs-example.gif"
+                    Href="doc/obs/obs-example.gif"
+                    Alt="Exemple OBS"
+                    Width="640"
+                    Height="360" />
+    </MudNavLink>
+</MudNavGroup>
+
+<br />
+<br />
+<MudText Typo="Typo.h6" GutterBottom="true">Champ Select</MudText>
+<DisplayUrl Title="Champ Select View 1"
+            Link="@ChampSelectView1Link"
+            OnCopy="@(() => CopyLink(ChampSelectView1Link))" />
+
+<br />
+<MudText Typo="Typo.h6" GutterBottom="true">Fearless</MudText>
+<DisplayUrl Title="Fearless View 1 Game 1 Blue"
+            Link="@FearlessView1Match1BlueLink"
+            OnCopy="@(() => CopyLink(FearlessView1Match1BlueLink))" />
+<DisplayUrl Title="Fearless View 1 Game 1 Red"
+            Link="@FearlessView1Match1RedLink"
+            OnCopy="@(() => CopyLink(FearlessView1Match1RedLink))" />
+<DisplayUrl Title="Fearless View 1 Game 2 Blue"
+            Link="@FearlessView1Match2BlueLink"
+            OnCopy="@(() => CopyLink(FearlessView1Match2BlueLink))" />
+<DisplayUrl Title="Fearless View 1 Game 2 Red"
+            Link="@FearlessView1Match2RedLink"
+            OnCopy="@(() => CopyLink(FearlessView1Match2RedLink))" />
+<DisplayUrl Title="Fearless View 1 Game X Blue"
+            Link="@FearlessView1MatchXBlueLink"
+            OnCopy="@(() => CopyLink(FearlessView1MatchXBlueLink))" />
+<DisplayUrl Title="Fearless View 1 Game X Red"
+            Link="@FearlessView1MatchXRedLink"
+            OnCopy="@(() => CopyLink(FearlessView1MatchXRedLink))" />
+<br />
+<DisplayUrl Title="Fearless View 2"
+            Link="@FearlessView2Link"
+            OnCopy="@(() => CopyLink(FearlessView2Link))" />
+
+@* <br /> *@
+@* <MudText Typo="Typo.h6" GutterBottom="true">Runes</MudText> *@
+@* <br /> *@
+@* <MudText Typo="Typo.h6" GutterBottom="true">In Game</MudText> *@
+
+<br />
+<MudText Typo="Typo.h6" GutterBottom="true">End Game</MudText>
+<DisplayUrl Title="End Game View 1"
+            Link="@EndGameView1Link"
+            OnCopy="@(() => CopyLink(EndGameView1Link))" />
+
+@code {
+    private string? Host;
+    private string? Protocol;
+    private int Port;
+    private string? BaseAddress;
+
+    private string ChampSelectView1Link = "/champselect/view1";
+    private string FearlessView1Match1BlueLink = "/fearless/view1/0/0";
+    private string FearlessView1Match1RedLink = "/fearless/view1/0/1";
+    private string FearlessView1Match2BlueLink = "/fearless/view1/1/0";
+    private string FearlessView1Match2RedLink = "/fearless/view1/1/1";
+    private string FearlessView1MatchXBlueLink = "/fearless/view1/X-1/0";
+    private string FearlessView1MatchXRedLink = "/fearless/view1/X-1/1";
+    private string FearlessView2Link = "/fearless/view2";
+    private string EndGameView1Link = "/endgame/view1";
+
+    private bool isOpen = false;
+
+    private async Task CopyLink(string link)
+    {
+        await JSRuntime.InvokeVoidAsync("navigator.clipboard.writeText", link);
+
+        Snackbar.Add("Link copied to clipboard", Severity.Success);
+    }
+
+    protected override void OnInitialized()
+    {
+        var uri = new Uri(Navigation.Uri);
+
+        Host = uri.Host;
+        Port = uri.Port;
+        Protocol = uri.Scheme;
+        BaseAddress = $"{Protocol}://{Host}:{Port}";
+        ChampSelectView1Link = BaseAddress + ChampSelectView1Link;
+        FearlessView1Match1BlueLink = BaseAddress + FearlessView1Match1BlueLink;
+        FearlessView1Match1RedLink = BaseAddress + FearlessView1Match1RedLink;
+        FearlessView1Match2BlueLink = BaseAddress + FearlessView1Match2BlueLink;
+        FearlessView1Match2RedLink = BaseAddress + FearlessView1Match2RedLink;
+        FearlessView1MatchXBlueLink = BaseAddress + FearlessView1MatchXBlueLink;
+        FearlessView1MatchXRedLink = BaseAddress + FearlessView1MatchXRedLink;
+        FearlessView2Link = BaseAddress + FearlessView2Link;
+        EndGameView1Link = BaseAddress + EndGameView1Link;
+    }
+}
