@@ -1,34 +1,30 @@
 # **OSL : Overlay Spectator Live**
-[![GitHub Release](https://img.shields.io/github/release/Sky-csc/OSL.svg?label=Stable&logo=github&cacheSeconds=600)](https://github.com/Sky-csc/OSL/releases/latest)
+[![GitHub Release](https://img.shields.io/github/release/Sky-CSC/OSL.svg?label=Stable&logo=github&cacheSeconds=600)](https://github.com/Sky-CSC/OSL/releases/latest)
 [![Github last released date](https://img.shields.io/github/last-commit/Sky-CSC/OSL.svg?label=Released&logo=github&cacheSeconds=600)](https://github.com/Sky-CSC/OSL/commits)
 [![Github last commit date](https://img.shields.io/github/last-commit/Sky-CSC/OSL.svg?label=Updated&logo=github&cacheSeconds=600)](https://github.com/Sky-CSC/OSL/commits)
 
 ![GitHub OSL stars](https://img.shields.io/github/stars/Sky-CSC/OSL.svg?style=flat&label=Stars&color=white)
 [![Total downloads](https://img.shields.io/github/downloads/Sky-CSC/OSL/total.svg?label=Downloads&logo=github&cacheSeconds=600)](https://github.com/Sky-CSC/OSL/releases)
-[![Issues](https://img.shields.io/github/issues/Sky-csc/OSL.svg?label=Issues&logo=github&cacheSeconds=600)](https://github.com/Sky-csc/OSL/issues)
+[![Issues](https://img.shields.io/github/issues/Sky-CSC/OSL.svg?label=Issues&logo=github&cacheSeconds=600)](https://github.com/Sky-CSC/OSL/issues)
 
-[![MIT Licensed](https://img.shields.io/github/license/Sky-csc/OSL?label=License&color=red)](https://github.com/Sky-CSC/OSL/blob/main/LICENSE)
+[![MIT Licensed](https://img.shields.io/github/license/Sky-CSC/OSL?label=License&color=red)](https://github.com/Sky-CSC/OSL/blob/main/LICENSE)
 [![Wiki](https://img.shields.io/badge/Read-Documentation-cc5490.svg?logo=github)](https://sky-csc.github.io/OSL/)
 
 ![Language](https://img.shields.io/badge/C%23-12.0-darkgreen?logo=)
-![.Net-8.0](https://img.shields.io/badge/.NET-8.0-darkgreen?logo=)
+![.Net-10.0](https://img.shields.io/badge/.NET-10.0-darkgreen?logo=)
 ![Framework](https://img.shields.io/badge/Framework-Blazor-darkgreen?logo=Blazor)
-![Platform client](https://img.shields.io/badge/Platform%20:%20OSL%20Client-Windows-darkgreen?logo=)
-![Platform web](https://img.shields.io/badge/Platform%20:%20OSL%20Web-Windows/Linux/Mac-darkgreen?logo=)
+![Platform server](https://img.shields.io/badge/Platform%20:%20OSL%20Server-Windows-darkgreen?logo=)
+![Platform overlay](https://img.shields.io/badge/Platform%20:%20OSL%20Overlay-Windows/Linux/Mac-darkgreen?logo=)
 
-![lib](https://img.shields.io/badge/MudBlazor-7.2.0-darkgreen?logo=)
-![lib](https://img.shields.io/badge/MudBlazor.ThemeManager-2.0.0-darkgreen?logo=)
-![lib](https://img.shields.io/badge/Microsoft.Extensions.Localization-8.0.7-darkgreen?logo=)
-![lib](https://img.shields.io/badge/Newtonsoft.Json-13.0.3-darkgreen?logo=json)
+![lib](https://img.shields.io/badge/MudBlazor-9.6.0-darkgreen?logo=)
+![lib](https://img.shields.io/badge/Newtonsoft.Json-13.0.4-darkgreen?logo=json)
 
 ![League of Legends Api](https://img.shields.io/badge/Game%20Client%20API-League%20of%20Legends-blue?logo=leagueoflegends&logoColor=f5f5f5)
-![League of Legends Api](https://img.shields.io/badge/Game%20Client%20Replay%20API-League%20of%20Legends-blue?logo=leagueoflegends&logoColor=f5f5f5)
-![League of Legends Api](https://img.shields.io/badge/Live%20Events%20API-League%20of%20Legends-blue?logo=leagueoflegends&logoColor=f5f5f5)
 ![League of Legends Api](https://img.shields.io/badge/LCU%20API-League%20of%20Legends-blue?logo=leagueoflegends&logoColor=f5f5f5)
 ![Riot api](https://img.shields.io/badge/Web%20API%20Riot-Riot-blue?logo=RiotGames)
 ![cdragon](https://img.shields.io/badge/CDragon%20API-CDragon-blue?logo=)
 
-This project allows you to display an overlay with additional information for your League of Legends games
+This project allows you to display an overlay with additional information for your League of Legends stream
 
 Applications use various APIs to collect information about the game, champions, players, .....
 
