@@ -32,7 +32,7 @@ namespace OSL_RGDP
         /// to the value of <see cref="RiotGameDeveloperPortalConfig.Continent"/>.</param>
         public MatchV5(RiotGameDeveloperPortalConfig config)
         {
-            _config = config;
+            _config = config.Clone();
             // Routing is the continent not the region
             _config.Routing = _config.Continent;
         }

@@ -1,14 +1,20 @@
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/" />  
+    <meta name="osl-app-name" content="@ApplicationName" />
+    <base href="/" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link href=@Assets["_content/MudBlazor/MudBlazor.min.css"] rel="stylesheet" />
+    <link rel="stylesheet" href="@Assets["css/site.css"]" />
     <link rel="stylesheet" href="@Assets["_content/OSL-UI/css/box.css"]" />
     <link rel="stylesheet" href="@Assets["_content/OSL-UI/css/DisplayGif.css"]" />
+    <link rel="stylesheet" href="@Assets["_content/OSL-UI/css/reconnect.css"]" />
 
     <ImportMap />
     <link rel="icon" type="image/ico" href="favicon.ico" />
@@ -17,8 +23,14 @@
 
 <body>
     <Routes @rendermode="InteractiveServer" />
-    <script src="_framework/blazor.web.js"></script>
+    <Reconnect />
+    <script src="_framework/blazor.web.js" autostart="false"></script>
+    <script src="_content/OSL-UI/js/reconnect.js"></script>
     <script src=@Assets["_content/MudBlazor/MudBlazor.min.js"]></script>
 </body>
 
 </html>
+
+@code {
+    private string ApplicationName => Configuration["ApplicationName"] ?? "Application";
+}

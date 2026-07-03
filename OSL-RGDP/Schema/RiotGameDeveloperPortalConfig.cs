@@ -78,5 +78,10 @@ namespace OSL_RGDP.Schema
             }
             return "europe";
         }
+
+        public RiotGameDeveloperPortalConfig Clone()
+        {
+            return (RiotGameDeveloperPortalConfig)MemberwiseClone();
+        }
     }
 }

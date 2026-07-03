@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using OSL_RGDP.Schema;
 using OSL_RGDP.Schema.Riot;
 using static OSL_RGDP.RgdpApi;
@@ -10,14 +10,21 @@ namespace OSL_RGDP
     /// </summary>
     /// <remarks>This class allows you to retrieve current game information for a given summoner ID.</remarks>
     /// <param name="config">Information for connect to API</param>
-    public class SpectatorV5(RiotGameDeveloperPortalConfig config)
+    public class SpectatorV5
     {
         /// <summary>
         /// Represents the information associated with this instance.
         /// </summary>
         /// <remarks>This field is read-only and is intended to store metadata or configuration details
         /// relevant to the containing class. It cannot be modified after initialization.</remarks>
-        private readonly RiotGameDeveloperPortalConfig _config = config;
+        private readonly RiotGameDeveloperPortalConfig _config;
+
+        public SpectatorV5(RiotGameDeveloperPortalConfig config)
+        {
+            _config = config.Clone();
+            // Routing is the regio not the continent
+            _config.Routing = _config.Region;
+        }
 
         /// <summary>
         /// Retrieves current game information for a given summoner ID.

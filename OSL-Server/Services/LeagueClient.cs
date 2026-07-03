@@ -179,8 +179,6 @@ namespace OSL_Server.Services
 
         public async Task UpdateApiKey(string apiKey)
         {
-            Console.WriteLine(_riotDevelopementPortalConfig.ApiKey);
-            Console.WriteLine(apiKey);
             if (_riotDevelopementPortalConfig.ApiKey != apiKey)
             {
                 _riotDevelopementPortalConfig.ApiKey = apiKey;

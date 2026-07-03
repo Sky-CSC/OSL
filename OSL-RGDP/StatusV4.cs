@@ -24,15 +24,14 @@ namespace OSL_RGDP
         /// to the value of <see cref="RiotGameDeveloperPortalConfig.Region"/>.</param>
         public StatusV4(RiotGameDeveloperPortalConfig config)
         {
-            _config = config;
-            // Routing is the continent not the region
+            _config = config.Clone();
+            // Routing is the regio not the continent
             _config.Routing = _config.Region;
         }
 
         public PlatformDataDto? GetStatus()
         {
             string? data = Request(_config, "/lol/status/v4/platform-data");
-            Console.WriteLine(data);
             if (data == null)
             {
                 return null;
