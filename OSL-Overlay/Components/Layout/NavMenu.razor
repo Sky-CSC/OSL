@@ -35,7 +35,7 @@
             </MudNavGroup>
         </MudNavGroup>
     </MudNavGroup>
-    <MudNavGroup Title="Runes" Icon="@CustomIcons.Custom.Rune" Expanded="false">
+    <MudNavGroup Title="Runes" Icon="@CustomIcons.Custom.Rune" Expanded="false" Disabled="true">
         <MudNavLink Href="rune" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Rune Config</MudNavLink>
         <MudNavGroup Title="View 1" Icon="@Icons.Material.Filled.Preview" Expanded="false">
             <MudNavGroup Title="Customize" Icon="@Icons.Material.Filled.Brush" Expanded="true">
@@ -68,6 +68,9 @@
                 <MudNavLink Href="champselect/view1/custom#vs" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Vs</MudNavLink>
             </MudNavGroup>
         </MudNavGroup>
+    </MudNavGroup>
+    <MudNavGroup Title="In Game" Icon="@Icons.Material.Filled.InsertChart" Expanded="false" Disabled="true">
+        <MudNavLink Href="ingame" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">In Game Config</MudNavLink>
     </MudNavGroup>
     <MudNavGroup Title="End Game" Icon="@Icons.Material.Filled.InsertChart" Expanded="false">
         <MudNavLink Href="endgame" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">End Game Config</MudNavLink>

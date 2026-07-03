@@ -3,6 +3,7 @@
 @using OSL_Overlay.GameFlow.Fearless
 @using OSL_RGDP.Schema.Riot
 @using OSL_RGDP.WebSocketResponse
+@using OSL_UI.Box
 @inject FearlessState FearlessState
 @inject CDragon _cdragon
 @implements IDisposable
@@ -88,6 +89,11 @@
 <MudText id="link" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Fearless links</MudText>
 <MudStack Row="false">
     <MudStack Row="true">
+        @if (FearlessState.FearlessList.Count == 0)
+        {
+            <OSL_UI.Box.Info Title="Set a match to see links for view1"
+                              Text="" />
+        }
         @for (int i = 0; i < FearlessState.FearlessList.Count; i++)
         {
             <SwitchButton Text="@($"View 1, match {i+1}")"
