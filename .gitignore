@@ -1,0 +1,72 @@
+# Visual Studio 2022
+.vs/
+
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Log files
+*.log
+
+# ASP.NET Core & Blazor
+OSL-Overlay/wwwroot/assets
+OSL-Overlay/wwwroot/data
+OSL-Overlay/wwwroot/temp
+OSL-Server/wwwroot/assets
+appsettings.json
+appsettings.Development.json
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# JetBrains Rider
+.idea/
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# Git specific
+.git/*
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Entity Framework
+Migrations/
+
+# Publish output
+publish/
+out/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Rider and VS Code
+*.code-workspace
+.vscode/
+
+# Resharper
+*.DotSettings.user
+
+# OSL-DOC
+OSL-Doc/_site
+OSL-Doc/api
+
+# OSL-Server
+OSL-Server/Services/RiotGameDevelopementPortalConfig.json
