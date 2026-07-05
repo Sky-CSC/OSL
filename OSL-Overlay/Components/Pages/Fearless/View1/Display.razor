@@ -1,0 +1,56 @@
+@page "/fearless/view1/{outerIndex:int}/{innerIndex:int}"
+@using OSL_Overlay.GameFlow.Fearless
+@layout Layout.EmptyLayout
+@inject NavigationManager Nav
+@inject FearlessView1State ViewState
+@implements IDisposable
+
+<PageTitle>Fearless - View1 - @outerIndex:int/@innerIndex:int</PageTitle>
+
+@if (currentFearless is not null)
+{
+    <FearlessBan Fearless="currentFearless" />
+}
+
+@code {
+    [Parameter] public int outerIndex { get; set; }
+    [Parameter] public int innerIndex { get; set; }
+
+    private FearlessInfo? currentFearless;
+
+    protected override void OnParametersSet()
+    {
+        LoadFearless();
+    }
+
+    private void LoadFearless()
+    {
+        if (outerIndex >= 0 && outerIndex < ViewState.LocalFearlessList.Count)
+        {
+            var subList = ViewState.LocalFearlessList[outerIndex];
+            if (innerIndex >= 0 && innerIndex < subList.Count)
+            {
+                currentFearless = subList[innerIndex];
+                return;
+            }
+        }
+        currentFearless = null;
+    }
+
+    protected override void OnInitialized()
+    {
+        ViewState.OnChange += StateHasChangedSafe;
+    }
+
+    public void Dispose()
+    {
+        ViewState.OnChange -= StateHasChangedSafe;
+    }
+
+    private void StateHasChangedSafe()
+    {
+        // recharge la donnée puis rafraîchit l’UI
+        LoadFearless();
+        _ = InvokeAsync(StateHasChanged);
+    }
+}

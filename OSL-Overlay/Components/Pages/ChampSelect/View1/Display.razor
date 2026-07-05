@@ -1,0 +1,98 @@
+@page "/champselect/view1"
+@layout Layout.EmptyLayout
+@using OSL_Overlay.GameFlow.ChampSelect
+@inject ChampSelectView1State ChampState
+@implements IDisposable
+
+<link rel="stylesheet" href="@Assets["css/champSelect/View1.css"]" />
+
+@* ---------------- Champ select view1 ---------------- *@
+
+<div class="champ-select" style="background:@Info.Background">
+    @* ---------------- Blue Ban ---------------- *@
+    <BanSlot Class="@Info.BlueTeam.Side"
+             Team="@Info.BlueTeam" />
+
+    @* ---------------- Red Ban ---------------- *@
+    <BanSlot Class="@Info.RedTeam.Side"
+             Team="@Info.RedTeam" />
+
+    @* ---------------- Patch ---------------- *@
+    @if (Info.Patch.Show)
+    {
+        <PatchSlot Patch="@Info.Patch" />
+    }
+
+    @* ---------------- Blue Coach ---------------- *@
+    @if (Info.BlueTeam.Coach.Show)
+    {
+        <CoachSlot Class="@Info.BlueTeam.Side"
+                   Coach="@Info.BlueTeam.Coach" />
+    }
+
+    @* ---------------- Red Coach ---------------- *@
+    @if (Info.RedTeam.Coach.Show)
+    {
+        <CoachSlot Class="@Info.RedTeam.Side"
+                   Coach="@Info.RedTeam.Coach" />
+    }
+
+    @* ---------------- Blue Timer ---------------- *@
+    @if (Info.BlueTeam.Timer.Show)
+    {
+        <TimerBarSlot Timer="@Info.BlueTeam.Timer" />
+    }
+
+    @* ---------------- Red Timer ---------------- *@
+    @if (Info.RedTeam.Timer.Show)
+    {
+        <TimerBarSlot Timer="@Info.RedTeam.Timer" />
+    }
+
+    @* ---------------- Red Timer ---------------- *@
+    @if (Info.CommonTimer.Show)
+    {
+        <TimerBarSlot Timer="@Info.CommonTimer" />
+    }
+
+    @* ---------------- Picks ---------------- *@
+    <div class="picks" style="background:@Info.TeamsBackground;">
+        @* Blue Team *@
+        <PlayersSlot Team="@Info.BlueTeam" />
+        @* Red Team *@
+        <PlayersSlot Team="@Info.RedTeam" />
+    </div>
+
+    @* ---------------- Blue Team Info ---------------- *@
+    <TeamSlot Class="@Info.BlueTeam.Side"
+              Team="@Info.BlueTeam" />
+
+    @* ---------------- Red Team Info ---------------- *@
+    <TeamSlot Class="@Info.RedTeam.Side"
+              Team="@Info.RedTeam" />
+
+    @* ---------------- Phase ---------------- *@
+    <Txt Class="phase" Text="@Info.PhaseInfo.Phase" />
+
+    @* ---------------- Vs ---------------- *@
+    <Txt Class="vs" Text="@Info.Vs" />
+</div>
+
+@code {
+    private ChampSelectInfo Info => ChampState.LocalInfo;
+
+    protected override void OnInitialized()
+    {
+        ChampState.OnChange += OnServiceChanged;
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        ChampState.OnChange -= OnServiceChanged;
+    }
+}

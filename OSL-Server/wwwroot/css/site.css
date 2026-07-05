@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient( 180deg, #1A1511 0%, #241D18 100% );
+}
+
+.mud-paper,
+.mud-card {
+    border-radius: 14px;
+    border: 1px solid rgba(184, 138, 90, 0.12);
+    backdrop-filter: blur(8px);
+}
+
+.mud-button-root {
+    text-transform: none !important;
+    font-weight: 600;
+}
+
+.appbar-blur {
+    backdrop-filter: blur(12px);
+    background: rgba(21,18,15,0.75) !important;
+    border-bottom: 1px solid rgba(184,138,90,0.15);
+}
+
+.mud-nav-link.active {
+    background: rgba(184,138,90,0.15);
+    border-left: 3px solid #B88A5A;
+}
+
+.mud-drawer {
+    border-right: 1px solid rgba(184,138,90,0.10);
+}
+
+.osl-version-chip {
+    font-size: 0.70rem !important;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #F1E3D2 !important;
+    box-shadow: 0 2px 8px rgba(166,124,82,0.25);
+    pointer-events: none;
+    user-select: none;
+}

@@ -1,0 +1,11 @@
+@using OSL_Overlay.GameFlow.ChampSelect
+
+@* ---------------- Patch Info ---------------- *@
+<div class="patch" style="background:@Patch.BackgroundColor; @Patch.BorderColor">
+    <Txt Class="patch-text" Text="@Patch.PatchInfo" />
+    <Txt Class="version" Text="@Patch.Version" />
+</div>
+
+@code {
+    [Parameter] required public Patch Patch { get; set; }
+}

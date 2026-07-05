@@ -1,0 +1,72 @@
+.fearless {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(90deg, #063742 0%, #410E16 100%);
+    border: 10px solid #c99d53;
+    height: auto; /* s’adapte au contenu */
+    width: fit-content; /* largeur selon contenu */
+    max-width: 100%; /* évite de déborder trop sur petits écrans */
+    /* fait déborder le fond */
+    padding-left: 20px; /* espace interne autour du contenu */
+    padding-right: 50px; /* espace interne autour du contenu */
+    padding-bottom: 50px; /* espace interne autour du contenu */
+    /*margin: 0 -50px -30px;*/ /* dépasse à gauche (-) droite (-) et en bas (-) */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Titre Fearless */
+.fearless-text {
+    font-size: 70px;
+    font-family: Anton;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* Contenu principal */
+.fearless-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    height: auto; /* ← s’adapte aussi */
+    gap: 50px;
+}
+
+/* Bloc d'une lane (Top / Jungle / Mid / ADC / Supp) */
+.fearless-image {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Image de la lane */
+.image-lane {
+    position: relative;
+    z-index: 2;
+    width: 128px;
+    height: 120px;
+    margin-right: -20px;
+}
+
+/* Ligne d'images pour un match */
+.images {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.image-top,
+.image-jungle,
+.image-mid,
+.image-adc,
+.image-supp {
+    width: 128px;
+    height: 128px;
+}

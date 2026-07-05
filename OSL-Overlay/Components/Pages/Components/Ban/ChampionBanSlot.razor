@@ -1,0 +1,27 @@
+@using OSL_Overlay.GameFlow.ChampSelect
+
+@* ---------------- Bans ---------------- *@
+<div class="champion">
+    @* ---------------- Background image ban ---------------- *@
+    <Image Class="champion-ban" Img="new(Ban.BanImage, Ban.BackgroundColor, Ban.BorderBanning)" />
+    <Image Class="champion-ban" Img="new(Ban.ChampionImage, border: Ban.BorderBanning)" />
+
+    @* ---------------- Is Banning ---------------- *@
+    @if (Ban.IsBanning)
+    {
+        <Blink Class="champion-blink" Color="@Ban.BlinkColor" />
+    }
+
+    @* ---------------- Cross picture if ban completed ---------------- *@
+    @if (Ban.IsCompleted)
+    {
+        <div class="champion-grey" style="background:@Ban.Greyscale"></div>
+        <Image Class="champion-completed-image" Img="@Ban.Cross.Image" />
+        <div class="champion-completed-line" style="color:@Ban.Cross.GraphicLineColor; @Ban.BorderCompleted; --cross-line-width:@Ban.Cross.Width; --cross-line-height:@Ban.Cross.Height; --cross-line-rotate:@Ban.Cross.Rotate" />
+        <div class="champion-completed-cross" style="color:@Ban.Cross.GraphicCrossColor; @Ban.BorderCompleted; --cross-line-width:@Ban.Cross.Width; --cross-line-height:@Ban.Cross.Height; --cross-line-rotate:@Ban.Cross.Rotate" />
+    }
+</div>
+
+@code {
+    [Parameter] required public Ban Ban { get; set; }
+}

@@ -1,0 +1,25 @@
+.switch-btn {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border-radius: var(--btn-border-radius);
+    font-size: var(--btn-font-size);
+    padding: 14px 28px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    width: var(--btn-max-width);
+    height: var(--btn-max-height);
+}
+
+.swap-icon {
+    transition: transform 0.4s ease-in-out;
+}
+
+.switch-btn:hover {
+    background: var(--btn-bg-hover);
+}
+
+    .switch-btn:hover .swap-icon {
+        transform: rotateY(180deg);
+    }

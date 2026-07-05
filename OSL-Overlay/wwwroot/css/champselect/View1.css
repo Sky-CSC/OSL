@@ -1,0 +1,663 @@
+.champ-select {
+    height: 2160px;
+    width: 3840px;
+}
+
+    .champ-select .picks {
+        position: absolute;
+        top: 1660px;
+        height: 500px;
+        width: 3840px;
+        display: flex;
+        justify-content: space-between; /* blue left, red  right */
+    }
+
+        .champ-select .picks .blue-side,
+        .champ-select .picks .red-side {
+            height: 500px;
+            width: 1580px;
+            display: flex;
+            overflow: hidden;
+        }
+
+            .champ-select .picks .blue-side .champion,
+            .champ-select .picks .red-side .champion {
+                flex: 0 0 316px;
+                height: 500px;
+                overflow: hidden;
+                position: relative; /* clé pour pouvoir superposer */
+                display: flex;
+                flex-direction: column;
+            }
+
+                .champ-select .picks .blue-side .champion .image-wrapper,
+                .champ-select .picks .red-side .champion .image-wrapper {
+                    position: relative; /* permet aux enfants absolus de se positionner sur l'image */
+                    width: 100%;
+                    height: 400px; /* même hauteur que l'image */
+                }
+
+                .champ-select .picks .blue-side .champion .blink,
+                .champ-select .picks .red-side .champion .blink {
+                    position: absolute;
+                    inset: 0; /* couvre tout le wrapper */
+                    z-index: 2; /* au-dessus de l'image */
+                    animation-duration: 1.5s;
+                    animation-name: pickBlink;
+                    animation-iteration-count: infinite;
+                    transition: none;
+                }
+
+
+                .champ-select .picks .blue-side .champion .background, .champ-select .picks .red-side .champion .background {
+                    position: absolute; /* superpose toutes les images */
+                    inset: 0; /* colle à l’intérieur du wrapper */
+                    width: 100%;
+                    height: 400px;
+                    object-fit: cover;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                /* Tous les éléments en overlay */
+                .champ-select .picks .blue-side .champion .overlay,
+                .champ-select .picks .red-side .champion .overlay {
+                    position: absolute;
+                    z-index: 2; /* au-dessus du background */
+                }
+
+                /* Positionne chaque élément */
+
+                .champ-select .picks .blue-side .champion .lane,
+                .champ-select .picks .red-side .champion .lane {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 125px;
+                    height: 125px;
+                    transform: translate(-50%, -50%); /* centre exact */
+                }
+
+                    .champ-select .picks .blue-side .champion .lane .image-img,
+                    .champ-select .picks .red-side .champion .lane .image-img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                .champ-select .picks .blue-side .champion .spells,
+                .champ-select .picks .red-side .champion .spells {
+                    bottom: 105px;
+                    left: 5px;
+                }
+
+                /*.champ-select .picks .blue-side .champion .blink,
+                .champ-select .picks .red-side .champion .blink {
+                    inset: 0;*/ /* prend toute l’image */
+                /*animation-duration: 1.5s;
+                    animation-name: pickBlink;
+                    animation-iteration-count: infinite;
+                    transition: none;
+                }*/
+
+                .champ-select .picks .blue-side .champion .action,
+                .champ-select .picks .red-side .champion .action {
+                    bottom: 110px;
+                    right: 10px;
+                    font-size: 18px;
+                    color: white;
+                    text-shadow: 0 0 5px black;
+                }
+
+                /* Summoner name reste en bas */
+                .champ-select .picks .blue-side .champion .summoner-name,
+                .champ-select .picks .red-side .champion .summoner-name {
+                    flex: 1; /* prend tout l'espace restant en bas */
+                    display: flex;
+                    align-items: center; /* centre verticalement */
+                    justify-content: center; /* centre horizontalement */
+
+                    font-size: 40px; /* taille de base */
+                    font-weight: bold;
+                    text-align: center; /* centre le texte sur plusieurs lignes */
+
+                    word-break: break-word; /* permet de casser un mot trop long */
+                    overflow-wrap: break-word;
+                    hyphens: auto; /* ajoute des traits si possible selon la langue */
+
+                    white-space: normal; /* permet le retour à la ligne */
+                }
+
+        /*.champ-select .picks .blue-side .champion,
+            .champ-select .picks .red-side .champion {
+                flex: 0 0 316px;
+                height: 500px;
+                overflow: hidden;*/
+        /*border: 5px solid red;*/
+        /*}
+
+                .champ-select .picks .blue-side .champion .image,
+                .champ-select .picks .red-side .champion .image {
+                    width: 100%;
+                    height: 400px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .champ-select .picks .blue-side .champion .summoner-name,
+                .champ-select .picks .red-side .champion .summoner-name {
+                    flex: 1;*/ /* prend tout l’espace restant (100px ici) */
+        /*display: flex;*/ /* pour centrer le texte */
+        /*align-items: center;*/ /* centre verticalement */
+        /*justify-content: center;*/ /* centre horizontalement */
+        /*font-size: 24px;*/ /* exemple */
+        /*font-weight: bold;
+                }*/
+        /* Reverse display */
+        .champ-select .picks .red-side {
+            flex-direction: row-reverse;
+        }
+
+    .champ-select .timer-bar {
+        position: absolute;
+        top: 1635px;
+        height: 25px;
+        width: 3840px;
+    }
+
+        .champ-select .timer-bar .timer-fill {
+            width: 100%;
+            height: 100%;
+            transform: scaleX(var(--progress, 1));
+            transition: transform 0.16s linear;
+        }
+
+        .champ-select .timer-bar.right-to-left .timer-fill {
+            transform-origin: right center;
+        }
+
+        .champ-select .timer-bar.left-to-right .timer-fill {
+            transform-origin: left center;
+        }
+
+        .champ-select .timer-bar.center .timer-fill,
+        .champ-select .timer-bar.center-outside .timer-fill {
+            transform-origin: center center;
+        }
+
+    .champ-select .patch {
+        position: absolute;
+        top: 1490px;
+        left: 1760px;
+        width: 320px;
+        height: 150px;
+        background: red;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .champ-select .patch .patch-text {
+            margin-top: 10px;
+            font-size: 40px;
+        }
+
+        .champ-select .patch .version {
+            margin-top: 10px;
+            font-size: 60px;
+        }
+
+        .champ-select .patch .patch-text,
+        .champ-select .patch .version {
+            display: flex;
+            align-items: center; /* centre verticalement */
+            justify-content: center; /* centre horizontalement */
+            font-weight: bold;
+            text-align: center; /* centre le texte sur plusieurs lignes */
+            word-break: break-word; /* permet de casser un mot trop long */
+            overflow-wrap: break-word;
+            hyphens: auto; /* ajoute des traits si possible selon la langue */
+            white-space: normal; /* permet le retour à la ligne */
+        }
+
+    .champ-select .coach {
+        position: absolute;
+        top: 1575px;
+        width: 970px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        font-size: 40px;
+    }
+
+        /* Côté bleu → aligné à gauche */
+        .champ-select .coach.blue-side {
+            left: 0; /* à adapter selon ton layout */
+            justify-content: flex-start; /* contenu collé à gauche */
+            text-align: left;
+        }
+
+            .champ-select .coach.blue-side .coach-text,
+            .champ-select .coach.blue-side .coach-name {
+                font-weight: bold;
+                text-align: center;
+                word-break: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+
+            .champ-select .coach.blue-side .coach-text {
+                min-width: 20%;
+                margin-left: 20px;
+                margin-right: 20px;
+                /*max-width: 30%;*/
+                /*max-width: 300px;*/
+            }
+
+        .champ-select .coach.red-side .coach-text {
+            min-width: 20%;
+            /*max-width: 75%;*/
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .champ-select .coach.red-side .coach-name {
+            margin-right: 20px;
+        }
+
+        .champ-select .coach.blue-side .coach-name {
+            /*min-width: px;*/
+            max-width: 75%;
+        }
+        /* Côté rouge → aligné à droite */
+        .champ-select .coach.red-side {
+            left: 2870px; /* à adapter selon ton layout */
+            justify-content: flex-end; /* contenu collé à droite */
+            text-align: center;
+        }
+
+            .champ-select .coach.red-side .coach-text,
+            .champ-select .coach.red-side .coach-name {
+                font-weight: bold;
+                text-align: center;
+                word-break: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+
+    .champ-select .ban {
+        position: absolute;
+        top: 1395px;
+        width: 970px;
+        height: 180px;
+        display: flex;
+    }
+
+        /* Blue bans (gauche) */
+        .champ-select .ban.blue-side {
+            left: 0;
+            justify-content: flex-start;
+        }
+
+        /* Red bans (droite, inversés) */
+        .champ-select .ban.red-side {
+            left: 2870px;
+            justify-content: flex-end;
+            flex-direction: row-reverse; /* inverse l’ordre des enfants */
+        }
+
+        .champ-select .ban.blue-side .champion:nth-child(4) {
+            margin-left: 70px;
+        }
+
+        .champ-select .ban.red-side .champion:nth-child(4) {
+            margin-right: 70px;
+        }
+
+        .champ-select .ban .champion {
+            height: 180px;
+            width: 180px;
+            position: relative; /* nécessaire pour overlay */
+            overflow: hidden;
+        }
+
+            /* Image ban */
+            .champ-select .ban .champion .champion-ban {
+                position: absolute; /* superposition */
+                inset: 0; /* prend toute la place */
+                height: 100%;
+                width: 100%;
+                display: block;
+                object-fit: cover; /* garde les proportions */
+                z-index: 1;
+            }
+
+                .champ-select .ban .champion .champion-ban .image-img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+            /* Blink overlay */
+            .champ-select .ban .champion .champion-blink {
+                position: absolute;
+                inset: 0;
+                z-index: 2;
+                animation-duration: 1.5s;
+                animation-name: banBlink;
+                animation-iteration-count: infinite;
+            }
+
+            /* Completed overlay (croix) */
+            .champ-select .ban .champion .champion-grey {
+                position: absolute;
+                inset: 0;
+                z-index: 3;
+            }
+
+            .champ-select .ban .champion .champion-completed-image .image-img {
+                height: 100%;
+                width: 100%;
+            }
+
+            .champ-select .ban .champion .champion-completed-image,
+            .champ-select .ban .champion .champion-completed-line,
+            .champ-select .ban .champion .champion-completed-cross {
+                position: absolute;
+                inset: 0;
+                z-index: 4;
+            }
+
+                .champ-select .ban .champion .champion-completed-line::before,
+                .champ-select .ban .champion .champion-completed-line::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: var(--cross-line-width);
+                    height: var(--cross-line-height);
+                    transform: translate(-50%, -50%) rotate(var(--cross-line-rotate));
+                    background: currentColor;
+                }
+
+                .champ-select .ban .champion .champion-completed-cross::before,
+                .champ-select .ban .champion .champion-completed-cross::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: var(--cross-line-width);
+                    height: var(--cross-line-height);
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                    background: currentColor;
+                }
+
+                .champ-select .ban .champion .champion-completed-cross::after {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                    background: currentColor;
+                }
+
+    .champ-select .team {
+        position: absolute;
+        top: 1660px;
+        height: 500px;
+        width: 340px;
+        display: flex;
+        flex-direction: column; /* empile verticalement */
+        align-items: center; /* centre horizontalement */
+        justify-content: center;
+        /*position: relative;*/ /* pour position absolue des textes */
+    }
+
+        .champ-select .team.blue-side {
+            left: 1580px;
+        }
+
+        .champ-select .team.red-side {
+            left: 1920px;
+        }
+
+        /* Logo centré et taille fixe */
+        .champ-select .team .team-logo .image-img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            display: block;
+            z-index: 1;
+        }
+
+        /* Nom superposé au-dessus du logo */
+        .champ-select .team .team-name {
+            position: absolute;
+            /*bottom: 60%;*/ /* ajuste la position au-dessus du logo */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            z-index: 2;
+        }
+
+        /* Tag superposé au-dessus du nom */
+        .champ-select .team .team-tag {
+            position: absolute;
+            /*bottom: 70%;*/ /* légèrement au-dessus du nom */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            z-index: 3;
+            font-size: 50px;
+        }
+
+        .champ-select .team .bo-graphic {
+            position: absolute;
+            top: 370px;
+            width: 100%; /* prend toute la largeur disponible de la div parent */
+            max-width: 300px; /* largeur max de la zone BO */
+            /*height: auto;*/ /* hauteur automatique selon le nombre de lignes */
+            height: 130px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* centre horizontalement les slots sur chaque ligne */
+            align-content: center; /* centre verticalement les lignes dans la div */
+            text-align: center;
+            column-gap: 10px;
+            row-gap: 5px; /* espace vertical réduit entre les lignes */
+            padding: 5px 0; /* petit padding pour plus de confort */
+        }
+
+            .champ-select .team .bo-graphic .bo-graphic-slot {
+                flex: 0 0 70px; /* largeur fixe de chaque slot */
+                height: 25px; /* hauteur fixe */
+                filter: grayscale(60%);
+            }
+
+    .champ-select .phase {
+        position: absolute;
+        top: 1660px;
+        left: 1580px;
+        height: 70px;
+        width: 680px;
+        display: flex;
+        flex-direction: column; /* empile verticalement */
+        align-items: center; /* centre horizontalement */
+        justify-content: center;
+    }
+
+        .champ-select .phase.text{
+            font-size: 40px;
+        }
+
+    .champ-select .vs {
+        position: absolute;
+        top: 1740px;
+        left: 1580px;
+        height: 70px;
+        width: 680px;
+        display: flex;
+        flex-direction: column; /* empile verticalement */
+        align-items: center; /* centre horizontalement */
+        justify-content: center;
+    }
+
+        .champ-select .vs.text{
+            font-size: 40px;
+        }
+        /* .champ-select .coach.red-side .coach-text {
+            min-width: 770px;
+            max-width: 770px;
+        }*/
+        /*.champ-select .coach.red-side .coach-name {*/
+        /*            max-width: 200px;
+            max-width: 770px*/ /*;*/
+        /*justify-content: left;*/
+        /*}*/
+        @keyframes pickBlink {
+            0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes banBlink {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/*.champ-select {
+    height: 2160px;
+    width: 3840px;
+}
+
+    .champ-select .picks {
+        position: absolute;
+        top: 1660px;
+        height: 500px;
+        width: 3840px;
+    }
+
+        .champ-select .picks .blue-side {
+            height: 500px;
+            width: 1580px;
+            display: flex;
+            overflow: hidden;
+        }
+
+            .champ-select .picks .blue-side .champion {
+                flex: 0 0 316px;
+                height: 500px;
+                overflow: hidden;
+            }
+
+                .champ-select .picks .blue-side .champion .image {
+                    width: 100%;
+                    height: 400px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+        .champ-select .picks .red-side {
+            height: 500px;
+            width: 1580px;
+            display: flex;
+            justify-content: flex-end;
+            overflow: hidden;
+        }
+
+            .champ-select .picks .red-side .champion {
+                flex: 0 0 316px;
+                height: 500px;
+                overflow: hidden;
+            }
+
+                .champ-select .picks .red-side .champion .image {
+                    width: 100%;
+                    height: 400px;
+                    display: flex;
+                    justify-content: center;
+                }*/
+/*.champ-select .picks .blue-side {
+        position: absolute;
+        top: 1660px;
+        width: 1580px;
+        height: 500px;*/
+/*overflow: hidden;*/
+/*display: flex;
+        background: linear-gradient(10deg, blue 0, #000000 100%);
+    }
+        .champ-select .picks .blue-side .champion-pick {
+            position: absolute;
+            width: 316px;
+            height: 500px;
+            border-right: 5px solid #ffffff;
+            overflow: hidden;
+        }
+
+    .champ-select .picks .red-side {
+        position: absolute;
+        top: 1660px;
+        left: 2260px;
+        width: 1580px;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        background: linear-gradient(10deg, red 0, #000000 100%);
+    }*/
+/*.timer-bar {
+            position: relative;
+            height: 10px;
+            background-color: red;
+            overflow: hidden;
+        }
+
+    .timer-bar .timer-fill {
+        width: 100%;*/ /* largeur fixe */
+/*height: 100%;
+        background-color: blue;
+        border-radius: inherit;
+        transform: scaleX(var(--progress, 1));
+        transform-origin: left center;
+        transition: transform 0.16s linear;
+    }*/
+/* RTL */
+/*.timer-bar.rtl .timer-fill {
+        transform-origin: right center;
+    }*/
+/* Centre → contraction */
+/*.timer-bar.center-in .timer-fill,
+    .timer-bar.center-out .timer-fill {
+        transform-origin: center center;
+    }
+
+.bo-graphic {
+    position: absolute;
+    top: 370px;
+    width: 340px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+    .bo-graphic .bo-graphic-slot {
+        width: 70px;
+        height: 25px;
+        filter: grayscale(60%);
+        margin-right: 10px;
+    }*/

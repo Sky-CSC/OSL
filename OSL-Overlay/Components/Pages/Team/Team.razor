@@ -1,0 +1,458 @@
+@page "/team/"
+@using OSL_Overlay.GameFlow.Team
+@inject TeamState TeamState
+@implements IDisposable
+
+@* ---------------- Team managament ---------------- *@
+<PageTitle>Team</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Team management</b></MudText>
+
+<MudStack Row="true">
+    @* ---------------- Save blue team info ---------------- *@
+    <StyleManager Label="Save config (default for blue)"
+                  RelativePath="data/teams"
+                  CurrentFile="@TeamState.BlueFile"
+                  OnSave="TeamState.SaveBlue"
+                  OnFileSelected="TeamState.FileSelectedBlue"
+                  HideDuplicate=true
+                  FilePrefix="team" />
+    <br />
+    @* ---------------- Save red team info ---------------- *@
+    <StyleManager Label="Save config (default for red)"
+                  RelativePath="data/teams"
+                  CurrentFile="@TeamState.RedFile"
+                  OnSave="TeamState.SaveRed"
+                  OnFileSelected="TeamState.FileSelectedRed"
+                  HideDuplicate=true
+                  FilePrefix="team" />
+</MudStack>
+<br />
+<br />
+
+@* ---------------- Team swap ---------------- *@
+<SwitchButton Text="Swap Teams"
+              Icon="@Icons.Material.Filled.SwapHoriz"
+              BackgroundColor="@Colors.BlueGray.Darken4"
+              HoverBackgroundColor="@Colors.Red.Darken2"
+              TextColor="#ffffff"
+              OnClick="@TeamState.SwapTeams" />
+<br />
+
+<MudStack Row="true" Spacing="20">
+    <MudStack Row="false">
+        @* ---------------- Blue team ---------------- *@
+        <MudText id="blue-side" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Blue Team</MudText>
+        <MudStack Row="true">
+            @* ---------------- Blue team name ---------------- *@
+            <StyleFieldEditor Label="Name"
+                              Type="text"
+                              Value="@TeamState.BlueInfo.Name"
+                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Name = val, v)"
+                              BorderColor="#0B849E" />
+            @* ---------------- Blue team tag ---------------- *@
+            <StyleFieldEditor Label="Tag"
+                              Type="text"
+                              Value="@TeamState.BlueInfo.Tag"
+                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Tag = val, v)"
+                              BorderColor="#0B849E" />
+            @* ---------------- Blue team coach name ---------------- *@
+            <StyleFieldEditor Label="Coach"
+                              Type="text"
+                              Value="@TeamState.BlueInfo.Coach"
+                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Coach = val, v)"
+                              BorderColor="#0B849E" />
+        </MudStack>
+        <MudStack Row="true">
+            @* ---------------- Blue team logo ---------------- *@
+            <StyleFieldEditor Label="Logo"
+                              Type="import-image"
+                              Value="@TeamState.BlueInfo.Logo"
+                              ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Logo = val, v)"
+                              BorderColor="#0B849E" />
+            @if (TeamState.BlueInfo.Logo != "")
+            {
+                <div style="width:100px; height:105px">
+                    <img src="@TeamState.BlueInfo.Logo" alt="@TeamState.BlueInfo.Logo" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            @* ---------------- Blue team custom names ---------------- *@
+            <StyleFieldEditor Label="Show all custom name"
+                              Type="checkbox"
+                              Value="@TeamState.DisplayBlueCustomName.ToString()"
+                              ValueChanged="v => TeamState.DisplayCustomBlueName(Convert.ToBoolean(v))"
+                              BorderColor="#0B849E" />
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Blue team top display custom names ---------------- *@
+                    <StyleFieldEditor Label="Display custom top name"
+                                      Type="checkbox"
+                                      Value="@TeamState.BlueInfo.Top.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.BlueInfo.Top.ShowCustomName = val, v)"
+                                      BorderColor="#0B849E" />
+                    @* ---------------- Blue team top text custom names ---------------- *@
+                    <StyleFieldEditor Label="Top name"
+                                      Type="text"
+                                      Value="@TeamState.BlueInfo.Top.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Top.Name = val, v)"
+                                      BorderColor="#0B849E" />
+                </MudStack>
+                @* ---------------- Blue team top image ---------------- *@
+                <StyleFieldEditor Label="Top image"
+                                  Type="import-image"
+                                  Value="@TeamState.BlueInfo.Top.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Top.Image = val, v)"
+                                  BorderColor="#0B849E" />
+            </MudStack>
+            @if (TeamState.BlueInfo.Top.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.BlueInfo.Top.Image" alt="@TeamState.BlueInfo.Top.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Blue team jungle info ---------------- *@
+                    <StyleFieldEditor Label="Display custom jungle name"
+                                      Type="checkbox"
+                                      Value="@TeamState.BlueInfo.Jungle.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.BlueInfo.Jungle.ShowCustomName = val, v)"
+                                      BorderColor="#0B849E" />
+                    <StyleFieldEditor Label="Jungle name"
+                                      Type="text"
+                                      Value="@TeamState.BlueInfo.Jungle.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Jungle.Name = val, v)"
+                                      BorderColor="#0B849E" />
+                </MudStack>
+                <StyleFieldEditor Label="Jungle image"
+                                  Type="import-image"
+                                  Value="@TeamState.BlueInfo.Jungle.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Jungle.Image = val, v)"
+                                  BorderColor="#0B849E" />
+            </MudStack>
+            @if (TeamState.BlueInfo.Jungle.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.BlueInfo.Jungle.Image" alt="@TeamState.BlueInfo.Jungle.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Blue team mid info ---------------- *@
+                    <StyleFieldEditor Label="Display custom mid name"
+                                      Type="checkbox"
+                                      Value="@TeamState.BlueInfo.Mid.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.BlueInfo.Mid.ShowCustomName = val, v)"
+                                      BorderColor="#0B849E" />
+                    <StyleFieldEditor Label="Mid name"
+                                      Type="text"
+                                      Value="@TeamState.BlueInfo.Mid.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Mid.Name = val, v)"
+                                      BorderColor="#0B849E" />
+                </MudStack>
+                <StyleFieldEditor Label="Mid image"
+                                  Type="import-image"
+                                  Value="@TeamState.BlueInfo.Mid.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Mid.Image = val, v)"
+                                  BorderColor="#0B849E" />
+            </MudStack>
+            @if (TeamState.BlueInfo.Mid.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.BlueInfo.Mid.Image" alt="@TeamState.BlueInfo.Mid.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Blue team adc info ---------------- *@
+                    <StyleFieldEditor Label="Display custom adc name"
+                                      Type="checkbox"
+                                      Value="@TeamState.BlueInfo.Adc.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.BlueInfo.Adc.ShowCustomName = val, v)"
+                                      BorderColor="#0B849E" />
+                    <StyleFieldEditor Label="Adc name"
+                                      Type="text"
+                                      Value="@TeamState.BlueInfo.Adc.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Adc.Name = val, v)"
+                                      BorderColor="#0B849E" />
+                </MudStack>
+                <StyleFieldEditor Label="Adc image"
+                                  Type="import-image"
+                                  Value="@TeamState.BlueInfo.Adc.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Adc.Image = val, v)"
+                                  BorderColor="#0B849E" />
+            </MudStack>
+            @if (TeamState.BlueInfo.Adc.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.BlueInfo.Adc.Image" alt="@TeamState.BlueInfo.Adc.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Blue team supp info ---------------- *@
+                    <StyleFieldEditor Label="Display custom support name"
+                                      Type="checkbox"
+                                      Value="@TeamState.BlueInfo.Supp.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.BlueInfo.Supp.ShowCustomName = val, v)"
+                                      BorderColor="#0B849E" />
+                    <StyleFieldEditor Label="Supp name"
+                                      Type="text"
+                                      Value="@TeamState.BlueInfo.Supp.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Supp.Name = val, v)"
+                                      BorderColor="#0B849E" />
+                </MudStack>
+                <StyleFieldEditor Label="Supp image"
+                                  Type="import-image"
+                                  Value="@TeamState.BlueInfo.Supp.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.BlueInfo.Supp.Image = val, v)"
+                                  BorderColor="#0B849E" />
+            </MudStack>
+            @if (TeamState.BlueInfo.Supp.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.BlueInfo.Supp.Image" alt="@TeamState.BlueInfo.Supp.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+    </MudStack>
+    <br />
+    <MudStack Row="false">
+        @* ---------------- Red team ---------------- *@
+        <MudText id="red-side" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Red Team</MudText>
+        <MudStack Row="true">
+            @* ---------------- Red team name ---------------- *@
+            <StyleFieldEditor Label="Name"
+                              Type="text"
+                              Value="@TeamState.RedInfo.Name"
+                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Name = val, v)"
+                              BorderColor="#BE1E37" />
+            @* ---------------- Red team tag ---------------- *@
+            <StyleFieldEditor Label="Tag"
+                              Type="text"
+                              Value="@TeamState.RedInfo.Tag"
+                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Tag = val, v)"
+                              BorderColor="#BE1E37" />
+            @* ---------------- Red team coach ---------------- *@
+            <StyleFieldEditor Label="Coach"
+                              Type="text"
+                              Value="@TeamState.RedInfo.Coach"
+                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Coach = val, v)"
+                              BorderColor="#BE1E37" />
+        </MudStack>
+        <MudStack Row="true">
+            @* ---------------- Red team logo ---------------- *@
+            <StyleFieldEditor Label="Logo"
+                              Type="import-image"
+                              Value="@TeamState.RedInfo.Logo"
+                              ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Logo = val, v)"
+                              BorderColor="#BE1E37" />
+            @if (TeamState.RedInfo.Logo != "")
+            {
+                <div style="width:100px; height:105px">
+                    <img src="@TeamState.RedInfo.Logo" alt="@TeamState.RedInfo.Logo" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            @* ---------------- Red team custom names ---------------- *@
+            <StyleFieldEditor Label="Show all custom name"
+                              Type="checkbox"
+                              Value="@TeamState.DisplayRedCustomName.ToString()"
+                              ValueChanged="v => TeamState.DisplayCustomRedName(Convert.ToBoolean(v))"
+                              BorderColor="#BE1E37" />
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Red team top info ---------------- *@
+                    <StyleFieldEditor Label="Display custom top name"
+                                      Type="checkbox"
+                                      Value="@TeamState.RedInfo.Top.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.RedInfo.Top.ShowCustomName = val, v)"
+                                      BorderColor="#BE1E37" />
+                    <StyleFieldEditor Label="Top name"
+                                      Type="text"
+                                      Value="@TeamState.RedInfo.Top.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Top.Name = val, v)"
+                                      BorderColor="#BE1E37" />
+                </MudStack>
+                <StyleFieldEditor Label="Top image"
+                                  Type="import-image"
+                                  Value="@TeamState.RedInfo.Top.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Top.Image = val, v)"
+                                  BorderColor="#BE1E37" />
+            </MudStack>
+            @if (TeamState.RedInfo.Top.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.RedInfo.Top.Image" alt="@TeamState.RedInfo.Top.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Red team junbgle info ---------------- *@
+                    <StyleFieldEditor Label="Display custom jungle name"
+                                      Type="checkbox"
+                                      Value="@TeamState.RedInfo.Jungle.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.RedInfo.Jungle.ShowCustomName = val, v)"
+                                      BorderColor="#BE1E37" />
+                    <StyleFieldEditor Label="Jungle name"
+                                      Type="text"
+                                      Value="@TeamState.RedInfo.Jungle.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Jungle.Name = val, v)"
+                                      BorderColor="#BE1E37" />
+                </MudStack>
+                <StyleFieldEditor Label="Jungle image"
+                                  Type="import-image"
+                                  Value="@TeamState.RedInfo.Jungle.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Jungle.Image = val, v)"
+                                  BorderColor="#BE1E37" />
+            </MudStack>
+            @if (TeamState.RedInfo.Jungle.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.RedInfo.Jungle.Image" alt="@TeamState.RedInfo.Jungle.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Red team mid info ---------------- *@
+                    <StyleFieldEditor Label="Display custom mid name"
+                                      Type="checkbox"
+                                      Value="@TeamState.RedInfo.Mid.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.RedInfo.Mid.ShowCustomName = val, v)"
+                                      BorderColor="#BE1E37" />
+                    <StyleFieldEditor Label="Mid name"
+                                      Type="text"
+                                      Value="@TeamState.RedInfo.Mid.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Mid.Name = val, v)"
+                                      BorderColor="#BE1E37" />
+                </MudStack>
+                <StyleFieldEditor Label="Mid image"
+                                  Type="import-image"
+                                  Value="@TeamState.RedInfo.Mid.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Mid.Image = val, v)"
+                                  BorderColor="#BE1E37" />
+            </MudStack>
+            @if (TeamState.RedInfo.Mid.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.RedInfo.Mid.Image" alt="@TeamState.RedInfo.Mid.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Red team adc info ---------------- *@
+                    <StyleFieldEditor Label="Display custom adc name"
+                                      Type="checkbox"
+                                      Value="@TeamState.RedInfo.Adc.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.RedInfo.Adc.ShowCustomName = val, v)"
+                                      BorderColor="#BE1E37" />
+                    <StyleFieldEditor Label="Adc name"
+                                      Type="text"
+                                      Value="@TeamState.RedInfo.Adc.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Adc.Name = val, v)"
+                                      BorderColor="#BE1E37" />
+                </MudStack>
+                <StyleFieldEditor Label="Adc image"
+                                  Type="import-image"
+                                  Value="@TeamState.RedInfo.Adc.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Adc.Image = val, v)"
+                                  BorderColor="#BE1E37" />
+            </MudStack>
+            @if (TeamState.RedInfo.Adc.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.RedInfo.Adc.Image" alt="@TeamState.RedInfo.Adc.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+        <MudStack Row="true">
+            <MudStack Row="false">
+                <MudStack Row="true">
+                    @* ---------------- Red team supp info ---------------- *@
+                    <StyleFieldEditor Label="Display custom support name"
+                                      Type="checkbox"
+                                      Value="@TeamState.RedInfo.Supp.ShowCustomName.ToString()"
+                                      ValueChanged="v => OnStyleChanged(val =>TeamState.RedInfo.Supp.ShowCustomName = val, v)"
+                                      BorderColor="#BE1E37" />
+                    <StyleFieldEditor Label="Supp name"
+                                      Type="text"
+                                      Value="@TeamState.RedInfo.Supp.Name"
+                                      ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Supp.Name = val, v)"
+                                      BorderColor="#BE1E37" />
+                </MudStack>
+                <StyleFieldEditor Label="Supp image"
+                                  Type="import-image"
+                                  Value="@TeamState.RedInfo.Supp.Image"
+                                  ValueChanged="v => OnStyleChanged(val => TeamState.RedInfo.Supp.Image = val, v)"
+                                  BorderColor="#BE1E37" />
+            </MudStack>
+            @if (TeamState.RedInfo.Supp.Image != "")
+            {
+                <div style="width:200px; height:220px">
+                    <img src="@TeamState.RedInfo.Supp.Image" alt="@TeamState.RedInfo.Supp.Image" style="height:100%; border-radius:4px;" />
+                </div>
+            }
+        </MudStack>
+    </MudStack>
+</MudStack>
+
+
+@code {
+    /// <summary>
+    /// When css is update notifie Champ state
+    /// </summary>
+    /// <param name="setter"></param>
+    /// <param name="newValue"></param>
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+        RefreshUI();
+    }
+    private void OnStyleChanged(Action<bool> setter, string newValue)
+    {
+        setter(Convert.ToBoolean(newValue));
+        RefreshUI();
+    }
+
+    protected override void OnInitialized()
+    {
+        TeamState.OnChange += RefreshUI;
+    }
+
+    private void RefreshUI()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        TeamState.OnChange -= RefreshUI;
+    }
+}

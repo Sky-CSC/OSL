@@ -1,0 +1,32 @@
+.gif-container {
+    display: inline-block;
+}
+
+    .gif-container a {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .gif-container img {
+        display: block;
+    }
+
+.gif-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    cursor: pointer;
+}
+
+.gif-container a:hover .gif-overlay {
+    opacity: 1;
+}

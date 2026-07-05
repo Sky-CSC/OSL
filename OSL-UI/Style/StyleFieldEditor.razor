@@ -1,0 +1,384 @@
+@using Microsoft.AspNetCore.Components.Forms
+@using MudBlazor
+
+@* ---------------- Style field editor component ---------------- *@
+<MudPaper Class="pa-2 ma-1" Elevation="3" Style="@($"border: 5px solid {BorderColor}")">
+    <MudText Typo="Typo.subtitle2">@Label</MudText>
+
+    @* ---------------- Font ---------------- *@
+    @if (Type == "font")
+    {
+        <MudSelect T="string"
+                   Label="Font"
+                   Value="Value"
+                   ValueChanged="OnFontChanged"
+                   Variant="Variant.Filled">
+            @foreach (var font in AvailableFonts)
+            {
+                <MudSelectItem Value="@font">@font</MudSelectItem>
+            }
+        </MudSelect>
+
+    }
+
+    @* ---------------- Timer Direction ---------------- *@
+    @if (Type == "timer")
+    {
+        <MudSelect T="string"
+                   Label="Timer direction"
+                   Value="Value"
+                   ValueChanged="OnTimerDirectionChanged"
+                   Variant="Variant.Filled">
+            @foreach (var direction in AvailableTimerDirection)
+            {
+                <MudSelectItem Value="@direction">@direction</MudSelectItem>
+            }
+        </MudSelect>
+
+    }
+    @* ---------------- Text Align ---------------- *@
+    @if (Type == "text-align")
+    {
+        <MudSelect T="string"
+                   Value="Value"
+                   ValueChanged="OnTextAlignDirectionChanged"
+                   Variant="Variant.Filled">
+            @foreach (var direction in AvailableTextAlignDirection)
+            {
+                <MudSelectItem Value="@direction">@direction</MudSelectItem>
+            }
+        </MudSelect>
+
+    }
+
+    @* ---------------- Color ---------------- *@
+    else if (Type == "color")
+    {
+        <ColorPicker Label="Color"
+                     Value="@Value.AsMudColor()"
+                     ValueChanged="OnColorChanged" />
+    }
+
+    @* ---------------- Text ---------------- *@
+    else if (Type == "text")
+    {
+        <MudTextField T="string"
+                      Value="@Value"
+                      ValueChanged="OnTextChanged"
+                      Variant="Variant.Outlined"
+                      HelperText="@HelperText"
+                      Placeholder="@Placeholder" />
+    }
+
+    @* ---------------- Text / Slider ---------------- *@
+    else if (Type == "slider")
+    {
+        if (Value?.Contains("px") == true || Value?.Contains("%") == true || Value?.Contains("deg") == true)
+        {
+
+            var unit = Value.EndsWith("px") ? "px"
+            : Value.EndsWith("%") ? "%"
+            : "deg";
+
+            double parsedValue = 0;
+            double.TryParse(Value.Replace(unit, ""), out parsedValue);
+
+            // Bornes dynamiques selon le type d’unité
+            double min = unit switch
+            {
+                "%" => 0,
+                "deg" => -360,
+                "px" => 0,
+                _ => 0
+            };
+
+            double max = unit switch
+            {
+                "%" => 500,
+                "deg" => 360,
+                "px" => 1000,
+                _ => 100
+            };
+
+            double step = unit switch
+            {
+                "deg" => 0.1,
+                _ => 0.5
+            };
+
+
+            <div style="display:flex; align-items:center; gap:12px;">
+                <MudSlider T="double"
+                           Value="@parsedValue"
+                           Min="@min"
+                           Max="@max"
+                           Step="@step"
+                           Color="Color.Primary"
+                           Style="width:200px;"
+                           ValueChanged="v => OnSliderChanged(v, unit)" />
+
+                <MudNumericField T="double"
+                                 Value="@parsedValue"
+                                 Immediate="true"
+                                 Variant="Variant.Outlined"
+                                 Style="width:80px;"
+                                 ValueChanged="v => OnSliderChanged(v, unit)" />
+
+                <span>@unit</span>
+            </div>
+        }
+        else
+        {
+            <MudTextField T="string"
+                          Value="@Value"
+                          ValueChanged="OnTextChanged"
+                          Variant="Variant.Outlined"
+                          HelperText="@HelperText" />
+        }
+    }
+
+    @* ---------------- Integer (0-5) ---------------- *@
+    else if (Type == "int0to5")
+    {
+        <MudNumericField T="int"
+                         Value="@Convert.ToInt32(Value)"
+                         ValueChanged="OnIntChanged"
+                         Min="0"
+                         Max="5"
+                         Variant="Variant.Outlined"
+                         HelperText="@HelperText" />
+    }
+    else if (Type == "intxtoy")
+    {
+        <MudNumericField T="int"
+                         Value="@Convert.ToInt32(Value)"
+                         ValueChanged="OnIntChanged"
+                         Min="@NumericMin"
+                         Max="@NumericMax"
+                         Variant="Variant.Outlined"
+                         HelperText="@HelperText" />
+    }
+
+    @* ---------------- Checkbox ---------------- *@
+    else if (Type == "checkbox")
+    {
+        <MudCheckBox T="bool"
+                     Value="@Convert.ToBoolean(Value)"
+                     ValueChanged="OnCheckboxChange"
+                     Color="Color.Primary" />
+    }
+
+    @* ---------------- Image ---------------- *@
+    else if (Type == "image")
+    {
+        <MudSelect T="string"
+                   Label="Images"
+                   Value="_selectedImage"
+                   ValueChanged="OnImageSelected"
+                   Variant="Variant.Filled"
+                   Style="min-width:200px;">
+            <MudSelectItem Value="@string.Empty">None</MudSelectItem>
+            @foreach (var img in LoadDirectoryImage(DirectoryPath))
+            {
+                <MudSelectItem Value="@img.Path">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <img src="@img.Path" alt="@img.FileName" style="width:30px; height:30px; object-fit:cover; border-radius:4px;" />
+                        <span>@img.FileName</span>
+                    </div>
+                </MudSelectItem>
+            }
+        </MudSelect>
+    }
+
+    @* ---------------- Import Image ---------------- *@
+    else if (Type == "import-image")
+    {
+        <InputFile OnChange="OnImageFileSelected" />
+
+        @if (!string.IsNullOrEmpty(Value))
+        {
+            <br />
+            <MudText Typo="Typo.caption" Class="mt-2">Selected :</MudText>
+            <br />
+            <span>@Value</span>
+        }
+    }
+
+    @* ---------------- List of champion square portrait image with name ---------------- *@
+    else if (Type == "champion-square-portrait-image")
+    {
+        <div style="display:flex; align-items:center; gap:8px;">
+            <!-- Image du champion sélectionné ou image par défaut -->
+            <img src="@GetChampionPath()"
+                 alt="@(_selectedChampion?.Name ?? "default")"
+                 style="width:48px; height:48px; object-fit:cover; cursor:pointer; box-shadow:0 0 6px rgba(0,0,0,0.2);"
+                 @onclick="OpenSelector" />
+
+            <MudAutocomplete T="OSL_CDragon.Schema.Champion"
+                             @ref="_auto"
+                             Value="@_selectedChampion"
+                             ValueChanged="OnChampionChanged"
+                             ToStringFunc="@(c => c?.Name ?? string.Empty)"
+                             SearchFunc="SearchChampionsAsync"
+                             Dense="true"
+                             Variant="Variant.Filled"
+                             MinCharacters="0"
+                             Clearable="true"
+                             MaxHeight="500"
+                             ResetValueOnEmptyText="false"
+                             MaxItems="int.MaxValue" >
+
+                <!-- Template des éléments de la liste -->
+                <ItemTemplate Context="champ">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <img src="@OSL_Utils.Path.ToWebPath(champ.SquarePortraitPath, "wwwroot")"
+                             alt="@champ.Name"
+                             style="width:30px; height:30px; object-fit:cover; border-radius:4px;" />
+                        <span>@champ.Name</span>
+                    </div>
+                </ItemTemplate>
+
+                <!-- Template du texte affiché quand un item est sélectionné -->
+                <ItemSelectedTemplate Context="champ">
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <img src="@OSL_Utils.Path.ToWebPath(champ.SquarePortraitPath, "wwwroot")"
+                             alt="@champ.Name"
+                             style="width:24px; height:24px; object-fit:cover; border-radius:4px;" />
+                        <span>@champ.Name</span>
+                    </div>
+                </ItemSelectedTemplate>
+            </MudAutocomplete>
+        </div>
+    }
+
+    @* ---------------- Background ---------------- *@
+    else if (Type == "background")
+    {
+        <MudSelect T="string" Label="Background Type" Value="_backgroundType" Variant="Variant.Filled" ValueChanged="OnBackgroundTypeChanged">
+            <MudSelectItem Value="@("solid")">Solid</MudSelectItem>
+            <MudSelectItem Value="@("linear")">Linear Gradient</MudSelectItem>
+            <MudSelectItem Value="@("radial")">Radial Gradient</MudSelectItem>
+            <MudSelectItem Value="@("image")">Image</MudSelectItem>
+            <MudSelectItem Value="@("none")">None</MudSelectItem>
+        </MudSelect>
+
+        @* Hexa color *@
+        @if (_backgroundType == "solid")
+        {
+            <ColorPicker Label="Color"
+                         Value="@Value.AsMudColor()"
+                         ValueChanged="OnBgColorChanged" />
+        }
+
+        @* Linear or Radial *@
+        else if (_backgroundType == "linear" || _backgroundType == "radial")
+        {
+            @if (_backgroundType == "linear")
+            {
+                <MudNumericField T="int"
+                                 Value="_linearAngle"
+                                 ValueChanged="OnLinearAngleChanged"
+                                 Label="Angle (deg)" Min="-360" Max="360" />
+            }
+
+            <MudStack Row="false" Spacing="2">
+                @foreach (var stop in _gradientStops)
+                {
+                    <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
+                        <ColorPicker Label="Color"
+                                     Value="@stop.Color.AsMudColor()"
+                                     ValueChanged="c => OnGradientStopColorChanged(stop, c)" />
+                        <MudNumericField T="int"
+                                         Value="stop.Position"
+                                         ValueChanged="pos => OnGradientStopPositionChanged(stop, pos)"
+                                         Label="%" Min="0" Max="100" Style="width:60px;" />
+
+                        @if (_gradientStops.Count > 2)
+                        {
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                           Color="Color.Error"
+                                           OnClick="() => RemoveGradientStop(stop)" />
+                        }
+                    </MudStack>
+                }
+
+                <MudButton Variant="Variant.Outlined" StartIcon="@Icons.Material.Filled.Add" OnClick="AddGradientStop">
+                    Add Color
+
+                </MudButton>
+            </MudStack>
+        }
+
+        @* Image background *@
+        else if (_backgroundType == "image")
+        {
+            <MudText Typo="Typo.subtitle2">Image URL</MudText>
+            <MudTextField Value="_bgImageUrl" Label="Url" Variant="Variant.Filled" Immediate="true" OnBlur="OnBgImageChanged" />
+
+            <MudText Typo="Typo.subtitle2">Import image</MudText>
+            <InputFile OnChange="OnFileSelected" />
+
+            @if (!string.IsNullOrEmpty(_bgImageUrl))
+            {
+                <MudText Typo="Typo.caption" Class="mt-2">Prévisualisation :</MudText>
+                <img src="@_bgImageUrl" alt="Background preview" style="max-width:200px; max-height:150px; display:block; margin-top:5px;" />
+            }
+
+            <MudSelect T="string" Label="Size" Value="_bgImageSize" ValueChanged="OnBgImageSizeChanged">
+                <MudSelectItem Value="@("auto")">Auto</MudSelectItem>
+                <MudSelectItem Value="@("cover")">Cover</MudSelectItem>
+                <MudSelectItem Value="@("contain")">Contain</MudSelectItem>
+            </MudSelect>
+
+            <MudSelect T="string" Label="Repeat" Value="_bgImageRepeat" ValueChanged="OnBgImageRepeatChanged">
+                <MudSelectItem Value="@("no-repeat")">No Repeat</MudSelectItem>
+                <MudSelectItem Value="@("repeat")">Repeat</MudSelectItem>
+                <MudSelectItem Value="@("repeat-x")">Repeat X</MudSelectItem>
+                <MudSelectItem Value="@("repeat-y")">Repeat Y</MudSelectItem>
+            </MudSelect>
+
+            <MudSelect T="string" Label="Position" Value="_bgImagePosition" ValueChanged="OnBgImagePositionChanged">
+                <MudSelectItem Value="@("center")">Center</MudSelectItem>
+                <MudSelectItem Value="@("top")">Top</MudSelectItem>
+                <MudSelectItem Value="@("bottom")">Bottom</MudSelectItem>
+                <MudSelectItem Value="@("left")">Left</MudSelectItem>
+                <MudSelectItem Value="@("right")">Right</MudSelectItem>
+            </MudSelect>
+        }
+
+
+        @* None background *@
+        else if (_backgroundType == "none")
+        {
+            <MudText Typo="Typo.caption" Class="text-secondary">No background applied</MudText>
+        }
+    }
+
+    @* ---------------- BORDER ---------------- *@
+    else if (Type == "border")
+    {
+        <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center">
+            <MudNumericField T="int" Value="_borderWidth" Label="Width (px)" Min="0" Max="40" ValueChanged="OnBorderWidthChanged" />
+            <MudSelect T="string" Label="Style" Value="_borderStyle" ValueChanged="OnBorderStyleChanged">
+                <MudSelectItem Value="@("solid")">Solid</MudSelectItem>
+                <MudSelectItem Value="@("dashed")">Dashed</MudSelectItem>
+                <MudSelectItem Value="@("dotted")">Dotted</MudSelectItem>
+                <MudSelectItem Value="@("double")">Double</MudSelectItem>
+                <MudSelectItem Value="@("none")">None</MudSelectItem>
+            </MudSelect>
+        </MudStack>
+        <ColorPicker Label="Color"
+                     Value="@_borderColor.AsMudColor()"
+                     ValueChanged="OnBorderColorChanged" />
+
+        <MudStack Row="true" Spacing="1" AlignItems="AlignItems.Start" Class="mt-2">
+            <MudCheckBox T="bool" Label="All" Value="_borderAll" ValueChanged="OnBorderAllChanged" />
+            <MudCheckBox T="bool" Label="Left" Value="_borderLeft" ValueChanged='val => OnBorderSideChanged("left", val)' />
+            <MudCheckBox T="bool" Label="Right" Value="_borderRight" ValueChanged='val => OnBorderSideChanged("right", val)' />
+        </MudStack>
+        <MudStack Row="true" Spacing="1" AlignItems="AlignItems.Start" Class="mt-2">
+            <MudCheckBox T="bool" Label="Top" Value="_borderTop" ValueChanged='val => OnBorderSideChanged("top", val)' />
+            <MudCheckBox T="bool" Label="Bottom" Value="_borderBottom" ValueChanged='val => OnBorderSideChanged("bottom", val)' />
+        </MudStack>
+    }
+</MudPaper>

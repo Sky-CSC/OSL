@@ -1,0 +1,22 @@
+@using OSL_Overlay.GameFlow.Fearless
+<link rel="stylesheet" href="@Assets["css/fearless/View1.css"]" />
+<div class="fearless" style="background: @Fearless.Background; @Fearless.Border">
+    <Txt Class="fearless-text" Text="@Fearless.Text" />
+    <div class="fearless-line" style="background:@Fearless.Line.Background; @Fearless.Line.Border"></div>
+    <div class="fearless-champions">
+        @foreach (var champ in Fearless.Champions)
+        {
+            <div class="fearless-champ-wrapper">
+                <Image Class="fearless-ban" Img="@champ.Image"/>
+                <div class="fearless-grey" style="background:@champ.Greyscale"></div>
+                <Image Class="fearless-ban-image" Img="@champ.Cross.Image" />
+                <div class="fearless-ban-line" style="color:@champ.Cross.GraphicLineColor; @champ.Border; --cross-line-width:@champ.Cross.Width; --cross-line-height:@champ.Cross.Height; --cross-line-rotate:@champ.Cross.Rotate" />
+                <div class="fearless-ban-cross" style="color:@champ.Cross.GraphicCrossColor; @champ.Border; --cross-line-width:@champ.Cross.Width; --cross-line-height:@champ.Cross.Height; --cross-line-rotate:@champ.Cross.Rotate" />
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] required public FearlessInfo Fearless { get; set; }
+}

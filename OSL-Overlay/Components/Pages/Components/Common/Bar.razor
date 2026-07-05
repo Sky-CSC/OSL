@@ -1,0 +1,8 @@
+@* ---------------- Bar ---------------- *@
+<div class="@Class" style="background:@BarInfo.Background; @BarInfo.Border; width:@Width;"></div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] public GameFlow.EndGame.Bar BarInfo { get; set; } = new();
+    [Parameter] public string Width { get; set; } = "10%";
+}

@@ -1,0 +1,235 @@
+
+.champ-select .picks {
+    height: 400px;
+    width: 575px;
+    justify-content: space-between; /* blue left, red  right */
+}
+
+    .champ-select .picks .blue-side,
+    .champ-select .picks .red-side {
+        height: 200px;
+        width: 580px;
+        display: flex;
+        overflow: hidden;
+    }
+
+        .champ-select .picks .blue-side .champion,
+        .champ-select .picks .red-side .champion {
+            flex: 0 0 116px;
+            height: 200px;
+            overflow: hidden;
+            position: relative; /* clé pour pouvoir superposer */
+            display: flex;
+            flex-direction: column;
+        }
+
+            .champ-select .picks .blue-side .champion .image-wrapper,
+            .champ-select .picks .red-side .champion .image-wrapper {
+                position: relative; /* permet aux enfants absolus de se positionner sur l'image */
+                width: 100%;
+                height: 150px; /* même hauteur que l'image */
+            }
+
+            .champ-select .picks .blue-side .champion .blink,
+            .champ-select .picks .red-side .champion .blink {
+                position: absolute;
+                inset: 0; /* couvre tout le wrapper */
+                z-index: 2; /* au-dessus de l'image */
+                animation-duration: 1.5s;
+                animation-name: pickBlink;
+                animation-iteration-count: infinite;
+                transition: none;
+            }
+
+
+            .champ-select .picks .blue-side .champion .background, .champ-select .picks .red-side .champion .background {
+                position: absolute; /* superpose toutes les images */
+                inset: 0; /* colle à l’intérieur du wrapper */
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                display: flex;
+                justify-content: center;
+            }
+
+            /* Tous les éléments en overlay */
+            .champ-select .picks .blue-side .champion .overlay,
+            .champ-select .picks .red-side .champion .overlay {
+                position: absolute;
+                z-index: 2; /* au-dessus du background */
+            }
+
+            /* Positionne chaque élément */
+
+            .champ-select .picks .blue-side .champion .lane,
+            .champ-select .picks .red-side .champion .lane {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 125px;
+                height: 125px;
+                transform: translate(-50%, -50%); /* centre exact */
+            }
+
+                .champ-select .picks .blue-side .champion .lane .image-img,
+                .champ-select .picks .red-side .champion .lane .image-img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            .champ-select .picks .blue-side .champion .spells,
+            .champ-select .picks .red-side .champion .spells {
+                bottom: 105px;
+                left: 5px;
+            }
+
+            .champ-select .picks .blue-side .champion .action,
+            .champ-select .picks .red-side .champion .action {
+                bottom: 110px;
+                right: 10px;
+                font-size: 18px;
+                color: white;
+                text-shadow: 0 0 5px black;
+            }
+
+            /* Summoner name reste en bas */
+            .champ-select .picks .blue-side .champion .summoner-name,
+            .champ-select .picks .red-side .champion .summoner-name {
+                flex: 1; /* prend tout l'espace restant en bas */
+                display: flex;
+                align-items: center; /* centre verticalement */
+                justify-content: center; /* centre horizontalement */
+
+                font-size: 100%; /* taille de base */
+                font-weight: bold;
+                text-align: center; /* centre le texte sur plusieurs lignes */
+
+                word-break: break-word; /* permet de casser un mot trop long */
+                overflow-wrap: break-word;
+                hyphens: auto; /* ajoute des traits si possible selon la langue */
+
+                white-space: normal; /* permet le retour à la ligne */
+            }
+
+        .champ-select .picks .red-side{
+            margin-left: -5px;
+        }
+
+        .champ-select .ban {
+            width: 970px;
+            height: 80px;
+            display: flex;
+        }
+
+    .champ-select .ban .champion {
+        height: 80px;
+        width: 80px;
+        position: relative; /* nécessaire pour overlay */
+        overflow: hidden;
+    }
+
+        /* Image ban */
+        .champ-select .ban .champion .champion-ban {
+            position: absolute; /* superposition */
+            inset: 0; /* prend toute la place */
+            height: 100%;
+            width: 100%;
+            display: block;
+            object-fit: cover; /* garde les proportions */
+            z-index: 1;
+        }
+
+            .champ-select .ban .champion .champion-ban .image-img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+        /* Blink overlay */
+        .champ-select .ban .champion .champion-blink {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            animation-duration: 1.5s;
+            animation-name: banBlink;
+            animation-iteration-count: infinite;
+        }
+
+        /* Completed overlay (croix) */
+        /*.champ-select .ban .champion .champion-grey {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+        }*/
+
+        .champ-select .ban .champion .champion-completed-image .image-img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .champ-select .ban .champion .champion-completed-image,
+        .champ-select .ban .champion .champion-completed-line,
+        .champ-select .ban .champion .champion-completed-cross {
+            position: absolute;
+            inset: 0;
+            z-index: 4;
+        }
+
+            .champ-select .ban .champion .champion-completed-line::before,
+            .champ-select .ban .champion .champion-completed-line::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: var(--cross-line-width);
+                height: var(--cross-line-height);
+                transform: translate(-50%, -50%) rotate(var(--cross-line-rotate));
+                background: currentColor;
+            }
+
+            .champ-select .ban .champion .champion-completed-cross::before,
+            .champ-select .ban .champion .champion-completed-cross::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: var(--cross-line-width);
+                height: var(--cross-line-height);
+                transform: translate(-50%, -50%) rotate(-45deg);
+                background: currentColor;
+            }
+
+            .champ-select .ban .champion .champion-completed-cross::after {
+                transform: translate(-50%, -50%) rotate(45deg);
+                background: currentColor;
+            }
+
+
+
+@keyframes pickBlink {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes banBlink {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

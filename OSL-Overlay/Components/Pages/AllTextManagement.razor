@@ -1,0 +1,30 @@
+@page "/text"
+@using OSL_Overlay.Components.Pages.Bo
+@using OSL_Overlay.Components.Pages.Patch
+@using OSL_Overlay.Components.Pages.Phase
+@using OSL_Overlay.Components.Pages.Vs
+
+@* ---------------- Text managament ---------------- *@
+<PageTitle>Texts management</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText id="bo" Class="section">
+    <Bo />
+</MudText>
+<br />
+<MudText id="patch" Class="section">
+    <Patch />
+</MudText>
+<br />
+<MudText id="phase" Class="section">
+    <Phase />
+</MudText>
+<br />
+<MudText id="vs" Class="section">
+    <Vs />
+</MudText>

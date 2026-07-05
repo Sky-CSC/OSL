@@ -1,0 +1,12 @@
+@* ---------------- Image ----------------*@
+<div class="@Class image" style="background:@Img.Background; @Img.Border">
+    @if (!string.IsNullOrEmpty(Img.Path))
+    {
+        <img class="image-img" src="@Img.Path" />
+    }
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] public GameFlow.Common.Image Img { get; set; } = new();
+}

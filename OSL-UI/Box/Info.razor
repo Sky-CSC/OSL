@@ -1,0 +1,23 @@
+@using System.Text.RegularExpressions
+<div class="doc-box doc-info">
+    <b>ℹ️ @Title</b><br>
+    @foreach (var ligne in ParseBr(Text))
+    {
+        <div>@ligne</div>
+    }
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; } = "Information";
+    [Parameter] public string Text { get; set; } = "Text ...";
+
+    private static List<string> ParseBr(string? texte)
+    {
+        if (string.IsNullOrWhiteSpace(texte))
+            return new();
+
+        return Regex.Split(texte, @"<br\s*/?>", RegexOptions.IgnoreCase)
+                    .Where(l => !string.IsNullOrWhiteSpace(l))
+                    .ToList();
+    }
+}

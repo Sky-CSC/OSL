@@ -1,0 +1,34 @@
+@using Microsoft.AspNetCore.Components
+@using MudBlazor
+
+<MudPaper Class="ma-2" Outlined="true">
+    <MudStack Row="true" AlignItems="AlignItems.Center" Class="pa-2">
+        <MudIcon Icon="@Icons.Material.Filled.Link"
+                 Color="Color.Primary" />
+
+        <MudText Style="min-width:180px;">
+            <b>@Title</b>
+        </MudText>
+
+        <MudText Style="font-family: monospace;">
+            @Link
+        </MudText>
+
+        <MudTooltip Text="Copy link">
+            <MudIconButton Icon="@Icons.Material.Filled.ContentCopy"
+                           Color="Color.Primary"
+                           OnClick="OnCopy" />
+        </MudTooltip>
+    </MudStack>
+</MudPaper>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Title { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public string Link { get; set; } = string.Empty;
+
+    [Parameter, EditorRequired]
+    public EventCallback OnCopy { get; set; }
+}

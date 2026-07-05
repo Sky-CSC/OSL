@@ -1,0 +1,738 @@
+{
+  "Background": "",
+  "TeamsBackground": "linear-gradient(10deg, #010A13 0%, #010A13 100%)",
+  "BlueTeam": {
+    "Background": "linear-gradient(10deg, #063742 0%, #000000 100%)",
+    "Bans": [
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/84/default-square.png",
+        "BackgroundColor": "#063742",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "BorderBanning": "border: 0px solid #010A13",
+        "IsCompleted": true,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 0px solid #010A13",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      },
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "",
+        "BackgroundColor": "#063742",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "BorderBanning": "border: 0px solid #010A13",
+        "IsCompleted": false,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 0px solid #010A13",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      },
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "",
+        "BackgroundColor": "#063742",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "BorderBanning": "border: 0px solid #010A13;",
+        "IsCompleted": false,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 5px solid #010A13;",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      },
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "",
+        "BackgroundColor": "#063742",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "BorderBanning": "border: 0px solid #010A13",
+        "IsCompleted": false,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 0px solid #010A13",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      },
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "",
+        "BackgroundColor": "#063742",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "BorderBanning": "border: 0px solid #010A13",
+        "IsCompleted": false,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 0px solid #010A13",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      }
+    ],
+    "Coach": {
+      "Show": true,
+      "Background": "#063742",
+      "Border": "border: 7px solid #0B849E",
+      "Text": {
+        "Txt": "Coach :",
+        "Font": "Spiegel",
+        "Color": "#ffffff",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "Name": {
+        "Txt": "Cyberdyne",
+        "Font": "Spiegel",
+        "Color": "#ffffff",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      }
+    },
+    "Timer": {
+      "Show": false,
+      "Duration": 0,
+      "Direction": "right-to-left",
+      "BarColor": "#010a13",
+      "FillColor": "#063742"
+    },
+    "Picks": [
+      {
+        "PlayerImage": "data/teams/Skynet/top.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/103/skins/103000/splashe.png",
+        "BorderImage": "border-right: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/top/top.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "Name": {
+          "Txt": "Sky csc",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      },
+      {
+        "PlayerImage": "data/teams/Skynet/jungle.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/147/skins/147000/splashe.png",
+        "BorderImage": "border-right: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/jungle/jungle.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "Name": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      },
+      {
+        "PlayerImage": "data/teams/Skynet/mid.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/86/skins/86000/splashe.png",
+        "BorderImage": "border-right: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/mid/mid.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "Name": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      },
+      {
+        "PlayerImage": "data/teams/Skynet/adc.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/30/skins/30000/splashe.png",
+        "BorderImage": "border-right: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/adc/adc.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "Name": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      },
+      {
+        "PlayerImage": "data/teams/Skynet/supp.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/31/skins/31000/splashe.png",
+        "BorderImage": "border-right: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/support/supp.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #0B849E 100%)",
+        "Name": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      }
+    ],
+    "Side": "blue-side",
+    "ShowLogo": false,
+    "Logo": {
+      "Path": "data/teams/Skynet/logo.png",
+      "Background": "",
+      "Border": ""
+    },
+    "ShowName": false,
+    "Name": {
+      "Txt": "Skynet",
+      "Font": "Spiegel",
+      "Color": "",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "ShowTag": true,
+    "Tag": {
+      "Txt": "CSC",
+      "Font": "Spiegel",
+      "Color": "",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "BoGraphic": {
+      "Show": true,
+      "NbMatchForWin": 0,
+      "NbWin": 0,
+      "Win": {
+        "Txt": "",
+        "Font": "Spiegel",
+        "Color": "",
+        "Background": "#ffffff",
+        "Border": "5px solid #0b849e",
+        "Align": ""
+      },
+      "Undef": {
+        "Txt": "",
+        "Font": "Spiegel",
+        "Color": "",
+        "Background": "#ffffff00",
+        "Border": "5px solid #0b849e",
+        "Align": ""
+      }
+    }
+  },
+  "RedTeam": {
+    "Background": "linear-gradient(-10deg, #410E16 0%, #000000 100%)",
+    "Bans": [
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "",
+        "BackgroundColor": "#410E16",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "BorderBanning": "border: 0px solid #010A13",
+        "IsCompleted": false,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 0px solid #010A13",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      },
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "",
+        "BackgroundColor": "#410E16",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "BorderBanning": "border: 0px solid #010A13",
+        "IsCompleted": false,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 0px solid #010A13",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      },
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "",
+        "BackgroundColor": "#410E16",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "BorderBanning": "border: 0px solid #010A13;",
+        "IsCompleted": false,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 0px solid #010A13",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      },
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "",
+        "BackgroundColor": "#410E16",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "BorderBanning": "border: 0px solid #010A13",
+        "IsCompleted": false,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 0px solid #010A13",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      },
+      {
+        "BanImage": "assets/bans/3.png",
+        "ChampionImage": "",
+        "BackgroundColor": "#410E16",
+        "IsBanning": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "BorderBanning": "border: 0px solid #010A13",
+        "IsCompleted": false,
+        "Greyscale": "#00000066",
+        "BorderCompleted": "border: 0px solid #010A13",
+        "Cross": {
+          "Image": {
+            "Path": "",
+            "Background": "",
+            "Border": ""
+          },
+          "GraphicLineColor": "",
+          "GraphicCrossColor": "",
+          "Width": "",
+          "Height": "",
+          "Rotate": ""
+        }
+      }
+    ],
+    "Coach": {
+      "Show": true,
+      "Background": "#410E16",
+      "Border": "border: 7px solid #BE1E37",
+      "Text": {
+        "Txt": "Coach :",
+        "Font": "Spiegel",
+        "Color": "#ffffff",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      },
+      "Name": {
+        "Txt": "Gandalph",
+        "Font": "Spiegel",
+        "Color": "#ffffff",
+        "Background": "",
+        "Border": "",
+        "Align": ""
+      }
+    },
+    "Timer": {
+      "Show": false,
+      "Duration": 0,
+      "Direction": "left-to-right",
+      "BarColor": "#010a13",
+      "FillColor": "#410e16"
+    },
+    "Picks": [
+      {
+        "PlayerImage": "data/teams/Lord Of The Ring/top.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/6/skins/6000/splashe.png",
+        "BorderImage": "border-left: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/top/top.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "Name": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      },
+      {
+        "PlayerImage": "data/teams/Lord Of The Ring/jungle.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/90/skins/90000/splashe.png",
+        "BorderImage": "border-left: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/jungle/jungle.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "Name": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      },
+      {
+        "PlayerImage": "data/teams/Lord Of The Ring/mid.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/80/skins/80000/splashe.png",
+        "BorderImage": "border-left: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/mid/mid.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "Name": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      },
+      {
+        "PlayerImage": "data/teams/Lord Of The Ring/adc.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/18/skins/18000/splashe.png",
+        "BorderImage": "border-left: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/adc/adc.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "Name": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      },
+      {
+        "PlayerImage": "data/teams/Lord Of The Ring/supp.png",
+        "ChampionImage": "./assets/15.20/fr_fr/champions/147/skins/147000/splashe.png",
+        "BorderImage": "border-left: 5px solid #FFFFFF;",
+        "ShowLane": true,
+        "LaneImage": "assets/positions/support/supp.png",
+        "ShowSummonerSpells": false,
+        "Spell1": "",
+        "Spell2": "",
+        "IsPicking": false,
+        "BlinkColor": "radial-gradient(circle, #00000000 25%, #BE1E37 100%)",
+        "Name": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "#FFFFFF",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        },
+        "Action": {
+          "Txt": "",
+          "Font": "Spiegel",
+          "Color": "",
+          "Background": "",
+          "Border": "",
+          "Align": ""
+        }
+      }
+    ],
+    "Side": "red-side",
+    "ShowLogo": false,
+    "Logo": {
+      "Path": "data/teams/Lord Of The Ring/logo.png",
+      "Background": "",
+      "Border": ""
+    },
+    "ShowName": false,
+    "Name": {
+      "Txt": "Lord Of The Ring",
+      "Font": "Spiegel",
+      "Color": "#ffffff",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "ShowTag": true,
+    "Tag": {
+      "Txt": "LoTR",
+      "Font": "Spiegel",
+      "Color": "#ffffff",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "BoGraphic": {
+      "Show": true,
+      "NbMatchForWin": 0,
+      "NbWin": 0,
+      "Win": {
+        "Txt": "",
+        "Font": "Spiegel",
+        "Color": "",
+        "Background": "#ffffff",
+        "Border": "5px solid #be1e37",
+        "Align": ""
+      },
+      "Undef": {
+        "Txt": "",
+        "Font": "Spiegel",
+        "Color": "",
+        "Background": "#ffffff00",
+        "Border": "5px solid #be1e37",
+        "Align": ""
+      }
+    }
+  },
+  "Patch": {
+    "Show": true,
+    "BackgroundColor": "#010a13",
+    "BorderColor": "border: 0px solid #ffffff;",
+    "PatchInfo": {
+      "Txt": "Patch",
+      "Font": "Spiegel",
+      "Color": "#ffffff",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "Version": {
+      "Txt": "15.20",
+      "Font": "Spiegel",
+      "Color": "#ffffff",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    }
+  },
+  "CommonTimer": {
+    "Show": true,
+    "Duration": 60,
+    "Direction": "center",
+    "BarColor": "#010a13",
+    "FillColor": "linear-gradient(90deg, #063742 0, #410E16 100%)"
+  },
+  "PhaseInfo": {
+    "Event": {
+      "Txt": "2026 OSL 2.0.0",
+      "Font": "Spiegel",
+      "Color": "#ffffff",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "Phase": {
+      "Txt": "Swiss Group - Round 1",
+      "Font": "Spiegel",
+      "Color": "#ffffff",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    },
+    "Date": {
+      "Txt": "03 Juill",
+      "Font": "Spiegel",
+      "Color": "#ffffff",
+      "Background": "",
+      "Border": "",
+      "Align": ""
+    }
+  },
+  "Vs": {
+    "Txt": "VS",
+    "Font": "Spiegel",
+    "Color": "#ffffff",
+    "Background": "",
+    "Border": "",
+    "Align": ""
+  }
+}

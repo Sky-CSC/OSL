@@ -1,0 +1,52 @@
+@using OSL_Overlay.GameFlow.Patch
+@inject PatchState PatchState
+@implements IDisposable
+
+@* ---------------- Patch managament ---------------- *@
+
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Patch management</b></MudText>
+
+<MudStack Row="true">
+    <MudStack Row="false">
+        <MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Patch text</MudText>
+        @* ---------------- Text ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PatchState.Info.Text"
+                          ValueChanged="v => PatchState.UpdateText(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="Patch" />
+    </MudStack>
+    <MudStack Row="false">
+        <MudText id="version" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Patch version</MudText>
+        @* ---------------- Version ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PatchState.Info.Version"
+                          ValueChanged="v => PatchState.UpdatePatch(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="15.20" />
+    </MudStack>
+</MudStack>
+
+@code {
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+    }
+
+    protected override void OnInitialized()
+    {
+        PatchState.OnChange += RefreshUI;
+    }
+
+    private void RefreshUI()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        PatchState.OnChange -= RefreshUI;
+    }
+}

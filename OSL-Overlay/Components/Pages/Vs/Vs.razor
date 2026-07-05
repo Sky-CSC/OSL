@@ -1,0 +1,38 @@
+@using OSL_Overlay.GameFlow.Vs
+@inject VsState VsState
+@implements IDisposable
+
+@* ---------------- VS managament ---------------- *@
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>VS management</b></MudText>
+<MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">VS text</MudText>
+<MudStack Row="true">
+    @* ---------------- Text ---------------- *@
+    <StyleFieldEditor Label=""
+                      Type="text"
+                      Value="@VsState.Info.Text"
+                      ValueChanged="v => VsState.UpdateText(v)"
+                      BorderColor="#0B849E"
+                      Placeholder="VS"/>
+</MudStack>
+
+@code {
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+    }
+
+    protected override void OnInitialized()
+    {
+        VsState.OnChange += RefreshUI;
+    }
+
+    private void RefreshUI()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        VsState.OnChange -= RefreshUI;
+    }
+}

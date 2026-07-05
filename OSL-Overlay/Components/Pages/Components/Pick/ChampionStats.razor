@@ -1,0 +1,14 @@
+@* ---------------- Champion Stats ---------------- *@
+<div class="champion-stats">
+    <Txt Txt="@ChampionName" />
+    <Txt Txt="@PickText" />
+    <Txt Txt="@BanText" />
+    <Txt Txt="@WinText" />
+</div>
+
+@code {
+    [Parameter] public string ChampionName { get; set; } = string.Empty;
+    [Parameter] public string PickText { get; set; } = "Pick : 0%";
+    [Parameter] public string BanText { get; set; } = "Ban : 0%";
+    [Parameter] public string WinText { get; set; } = "Win : 0%";
+}

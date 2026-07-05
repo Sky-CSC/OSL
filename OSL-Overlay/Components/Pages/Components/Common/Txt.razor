@@ -1,0 +1,11 @@
+@using OSL_Overlay.GameFlow.Common
+
+@* ---------------- Text ----------------*@
+<div class="@Class text" style="font-family:@Text.Font; color:@Text.Color; background:@Text.Background; @Text.Border; text-align:@Text.Align;">
+    <span>@Text.Txt</span>
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public Text Text { get; set; }
+}

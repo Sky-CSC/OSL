@@ -1,0 +1,223 @@
+/*#osl-reconnect-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.osl-reconnect-box {
+    background: #fff;
+    padding: 24px 32px;
+    border-radius: 8px;
+    font-family: Roboto, sans-serif;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+*/
+
+/* ===================================================================
+   Reconnection overlay — mirrors the app's MudTheme palette.
+   Theme is controlled via the [data-theme] attribute on <html>,
+   synced from Blazor's MudThemeProvider (see reconnect.js).
+   =================================================================== */
+
+:root {
+    --osl-primary: var(--mud-palette-primary);
+    --osl-primary-contrast: #FFFFFF;
+    --osl-secondary: var(--mud-palette-secondary);
+    --osl-background: var(--mud-palette-background);
+    --osl-surface: var(--mud-palette-surface);
+    --osl-text-primary: var(--mud-palette-text-primary);
+    --osl-text-secondary: var(--mud-palette-text-secondary);
+    --osl-error: var(--mud-palette-error);
+    --osl-divider: var(--mud-palette-divider);
+    --osl-overlay: rgba(21, 15, 8, 0.5);
+}
+
+html[data-theme="dark"] {
+    --osl-primary: var(--mud-palette-primary);
+    --osl-primary-contrast: #FFFFFF;
+    --osl-secondary: var(--mud-palette-secondary);
+    --osl-background: var(--mud-palette-background);
+    --osl-surface: var(--mud-palette-surface);
+    --osl-text-primary: var(--mud-palette-text-primary);
+    --osl-text-secondary: var(--mud-palette-text-secondary);
+    --osl-error: var(--mud-palette-error);
+    --osl-divider: var(--mud-palette-divider);
+    --osl-overlay: rgba(0, 0, 0, 0.7);
+}
+
+#osl-reconnect-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--osl-overlay);
+    backdrop-filter: blur(2px);
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+    #osl-reconnect-overlay.osl-visible {
+        display: flex;
+    }
+
+.osl-reconnect-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 320px;
+    max-width: 90vw;
+    padding: 32px 28px;
+    background-color: var(--osl-surface);
+    color: var(--osl-text-primary);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: osl-card-in 0.25s ease-out;
+}
+
+@keyframes osl-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Spinner mimicking MudProgressCircular (indeterminate) */
+.osl-spinner {
+    width: 48px;
+    height: 48px;
+}
+
+    .osl-spinner circle {
+        fill: none;
+        stroke: var(--osl-primary);
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-dasharray: 90 150;
+        stroke-dashoffset: 0;
+        transform-origin: center;
+        animation: osl-spin 1.4s linear infinite, osl-dash 1.4s ease-in-out infinite;
+    }
+
+@keyframes osl-spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes osl-dash {
+    0% {
+        stroke-dasharray: 1 150;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 90 150;
+        stroke-dashoffset: -35;
+    }
+
+    100% {
+        stroke-dasharray: 90 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+.osl-reconnect-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--osl-text-primary);
+}
+
+.osl-reconnect-subtitle {
+    font-size: 0.875rem;
+    margin: 0;
+    color: var(--osl-text-secondary);
+}
+
+.osl-reconnect-card.osl-failed .osl-spinner {
+    display: none;
+}
+
+.osl-reconnect-card.osl-failed .osl-reconnect-title {
+    color: var(--osl-error);
+}
+
+.osl-reload-button {
+    margin-top: 4px;
+    padding: 8px 22px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--osl-primary);
+    color: var(--osl-primary-contrast);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    display: none;
+    transition: filter 0.15s ease;
+}
+
+    .osl-reload-button:hover {
+        filter: brightness(1.08);
+    }
+
+.osl-reconnect-card.osl-failed .osl-reload-button,
+.osl-reconnect-card.osl-slow .osl-reload-button {
+    display: inline-block;
+}
+
+.osl-reconnect-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 6px;
+    animation: osl-logo-spin 4.2s linear infinite;
+}
+
+/*
+ * Timeline (total cycle = 4.2s) :
+ *   0s    -> 0.6s : rotation 0deg -> 360deg
+ *   0.6s  -> 4.2s : pause (3.6s), then the loop restarts
+ */
+@keyframes osl-logo-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    14.29% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Freeze le logo (sans rotation ni pause) une fois la reconnexion définitivement échouée */
+.osl-reconnect-card.osl-failed .osl-reconnect-logo {
+    animation: none;
+    opacity: 0.6;
+}
+
+.osl-reconnect-app-name {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--osl-secondary);
+}

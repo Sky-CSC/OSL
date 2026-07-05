@@ -1,0 +1,116 @@
+@using OSL_Overlay.GameFlow.Bo
+@inject BoState BoState
+@implements IDisposable
+
+@* ---------------- Best of managament ---------------- *@
+
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Best Of management</b></MudText>
+@* ---------------- Button swap bo ---------------- *@
+<SwitchButton Text="Swap Bo"
+              Icon="@Icons.Material.Filled.SwapHoriz"
+              BackgroundColor="@Colors.BlueGray.Darken4"
+              HoverBackgroundColor="@Colors.Red.Darken2"
+              TextColor="#ffffff"
+              OnClick="@BoState.SwapBo" />
+<br />
+
+@* ---------------- Blue bo ---------------- *@
+<MudText id="blue-side" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Blue Team</MudText>
+<MudStack Row="true">
+    @* ---------------- Text ---------------- *@
+    <StyleFieldEditor Label="Text"
+                      Type="text"
+                      Value="@BoState.BlueInfo.Text"
+                      ValueChanged="v => OnStyleChanged(val => BoState.BlueInfo.Text = val, v)"
+                      BorderColor="#0B849E"/>
+    @* ---------------- Nb games ---------------- *@
+    <StyleFieldEditor Label="Number of games"
+                      Type="int0to5"
+                      Value="@BoState.BlueInfo.NbGames.ToString()"
+                      ValueChanged="v => OnStyleChanged(val => BoState.BlueInfo.NbGames = val, v)"
+                      BorderColor="#0B849E"/>
+    @* ---------------- Nb win  ---------------- *@
+    <StyleFieldEditor Label="Number of games win"
+                      Type="int0to5"
+                      Value="@BoState.BlueInfo.Win.ToString()"
+                      ValueChanged="v => OnStyleChanged(val => BoState.BlueInfo.Win = val, v)"
+                      BorderColor="#0B849E"/>
+    @* ---------------- Validate  ---------------- *@
+    <MudButton OnClick="BoState.UpdateBlueBo" Variant="Variant.Outlined" Color="Color.Success">
+        Validate
+    </MudButton>
+    @* ---------------- Reset to 0 ---------------- *@
+    <MudButton OnClick="BoState.ResetBlueBo" Variant="Variant.Outlined" Color="Color.Error">
+        Reset
+    </MudButton>
+</MudStack>
+<br />
+@* ---------------- Red bo ---------------- *@
+<MudText Id="red-side" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Red Team</MudText>
+<MudStack Row="true">
+    @* ---------------- Text ---------------- *@
+    <StyleFieldEditor Label="Text"
+                      Type="text"
+                      Value="@BoState.RedInfo.Text"
+                      ValueChanged="v => OnStyleChanged(val => BoState.RedInfo.Text = val, v)"
+                      BorderColor="#BE1E37"/>
+    @* ---------------- Nb games ---------------- *@
+    <StyleFieldEditor Label="Number of games"
+                      Type="int0to5"
+                      Value="@BoState.RedInfo.NbGames.ToString()"
+                      ValueChanged="v => OnStyleChanged(val => BoState.RedInfo.NbGames = val, v)"
+                      BorderColor="#BE1E37"/>
+    @* ---------------- Nb win ---------------- *@
+    <StyleFieldEditor Label="Number of games win"
+                      Type="int0to5"
+                      Value="@BoState.RedInfo.Win.ToString()"
+                      ValueChanged="v => OnStyleChanged(val => BoState.RedInfo.Win = val, v)"
+                      BorderColor="#BE1E37"/>
+    @* ---------------- Validate ---------------- *@
+    <MudButton OnClick="BoState.UpdateRedBo" Variant="Variant.Outlined" Color="Color.Success">
+        Validate
+    </MudButton>
+    @* ---------------- Reset to 0 ---------------- *@
+    <MudButton OnClick="BoState.ResetRedBo" Variant="Variant.Outlined" Color="Color.Error">
+        Reset
+    </MudButton>
+</MudStack>
+
+@code {
+
+    /// <summary>
+    /// Style changed string
+    /// </summary>
+    /// <param name="setter"></param>
+    /// <param name="newValue"></param>
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+    }
+
+    /// <summary>
+    /// Style changed int
+    /// </summary>
+    /// <param name="setter"></param>
+    /// <param name="newValue"></param>
+    private void OnStyleChanged(Action<int> setter, string newValue)
+    {
+        setter(Convert.ToInt32(newValue));
+    }
+
+    protected override void OnInitialized()
+    {
+        BoState.OnChange += RefreshUI;
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        BoState.OnChange -= RefreshUI;
+    }
+}
+

@@ -1,0 +1,12 @@
+@using OSL_Overlay.GameFlow.ChampSelect
+
+@* ---------------- Display Coach ---------------- *@
+<div class="coach @Class" style="background:@Coach.Background; @Coach.Border">
+    <Txt Class="coach-text" Text="@Coach.Text" />
+    <Txt Class="coach-name" Text="@Coach.Name"/>
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public Coach Coach { get; set; }
+}

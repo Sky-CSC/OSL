@@ -1,0 +1,38 @@
+@using OSL_Overlay.GameFlow.EndGame
+<div class="@Class" style="background:@Stat.Background; @Stat.Border;">
+    <div class="blue-team">
+        @foreach (var evnt in Events)
+        {
+            if (evnt.TeamId == 100 && DragonImages.ContainsKey(evnt.Type))
+            {
+                <Image Class="blue-team-image" Img="@DragonImages[evnt.Type]" />
+            }
+        }
+    </div>
+    <Txt Class="title" Text="@Stat.Title" />
+    <div class="red-team">
+        @foreach (var evnt in Events)
+        {
+            if (evnt.TeamId == 200 && DragonImages.ContainsKey(evnt.Type))
+            {
+                <Image Class="blue-team-image" Img="@DragonImages[evnt.Type]" />
+            }
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public StatDrakeImage Stat { get; set; }
+    [Parameter] required public List<Event> Events { get; set; }
+
+    private Dictionary<string, GameFlow.Common.Image> DragonImages => new()
+    {
+        ["AIR_DRAGON"] = Stat.Air.Image,
+        ["CHEMTECH_DRAGON"] = Stat.Chemtech.Image,
+        ["EARTH_DRAGON"] = Stat.Earth.Image,
+        ["FIRE_DRAGON"] = Stat.Fire.Image,
+        ["HEXTECH_DRAGON"] = Stat.Hextech.Image,
+        ["WATER_DRAGON"] = Stat.Water.Image
+    };
+}

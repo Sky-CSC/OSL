@@ -1,0 +1,221 @@
+/* Theme Configuration Options */
+
+:root 
+{
+    /* General */
+
+    --base-font-size: 16px;
+    --smalldevice-base-font-size: 14px; /* Base font size for devices < 1024px */
+    --sidebar-width: 400px;
+}
+
+/* Dark Theme (Default) */
+:root,
+[data-theme='dark'] {
+
+    /* General */
+    --main-bg-color: #181212;
+    --footer-bg-color: rgba(71,32,25,.55);
+    --separator-color: #4B2D26;
+
+    --table-strip-bg-color: #201817;
+    --table-header-bg-color: #2A1A17;
+    --table-header-color: #F4ECE8;
+    --table-header-border-color: #4B2D26;
+
+    /* Text */
+    --appname-color: #ffffff;
+
+    --h1-color: #ffffff;
+    --h2-color: #FFE6D5;
+    --h3-color: #FFD2B4;
+    --h4-color: #FFFFFF;
+    --h5-color: #FFC398;
+
+    --text-color: #F4ECE8;
+
+    --link-color: #F16B1B;
+    --link-hover-color: #FF8B3D;
+    --link-active-color: #FF8B3D;
+
+    /* Mobile */
+    --topbar-bg-color: #211715;
+
+    /* Button */
+    --button-color: #D58B63;
+
+    /* Sidebar */
+    --sidebar-bg-color: #221716;
+
+    --search-color: #F4ECE8;
+    --search-bg-color: #191212;
+    --search-searchicon-color: #FFB37F;
+    --search-border-color: #4B2D26;
+
+    --sidebar-item-color: #F4ECE8;
+    --sidebar-active-item-color: #F16B1B;
+
+    --sidebar-level1-item-bg-color: #2A1A17;
+    --sidebar-level1-item-hover-bg-color: #3A231E;
+
+    --toc-filter-color: #F4ECE8;
+    --toc-filter-bg-color: #191212;
+    --toc-filter-filtericon-color: #FFB37F;
+    --toc-filter-clearicon-color: #FF6A4A;
+    --toc-filter-border-color: #4B2D26;
+
+    /* Scrollbars */
+    --scrollbar-bg-color: transparent;
+    --scrollbar-thumb-bg-color: rgba(241,107,27,.35);
+    --scrollbar-thumb-border-color: transparent;
+
+    /* Alerts */
+
+    --alert-info-title-color: #FF8B3D;
+    --alert-info-border-color: rgba(241,107,27,.6);
+    --alert-info-bg-color: rgba(241,107,27,.12);
+    --alert-info-text-color: #FFE0C8;
+
+    --alert-info-TIP-title-color-override: #FFB066;
+    --alert-info-TIP-border-color-override: rgba(255,176,102,.6);
+    --alert-info-TIP-bg-color-override: rgba(255,176,102,.12);
+    --alert-info-TIP-text-color-override: #FFE9D6;
+
+    --alert-danger-title-color: #FF6D5A;
+    --alert-danger-border-color: rgba(255,109,90,.6);
+    --alert-danger-bg-color: rgba(255,109,90,.12);
+    --alert-danger-text-color: #FFD5CF;
+
+    --alert-danger-IMPORTANT-title-color-override: #F16B1B;
+    --alert-danger-IMPORTANT-border-color-override: rgba(241,107,27,.6);
+    --alert-danger-IMPORTANT-bg-color-override: rgba(241,107,27,.12);
+    --alert-danger-IMPORTANT-text-color-override: #FFE0C8;
+
+    --alert-warning-title-color: #FFB347;
+    --alert-warning-border-color: rgba(255,179,71,.6);
+    --alert-warning-bg-color: rgba(255,179,71,.12);
+    --alert-warning-text-color: #FFE8C4;
+
+    --blockquote-border-color: rgba(241,107,27,.45);
+    --blockquote-bg-color: rgba(241,107,27,.08);
+
+    --breadcrumb-bg-color: #261A18;
+
+    /* Tabs */
+
+    --nav-tabs-border-width: 1px;
+    --nav-tabs-border-color: #4B2D26;
+    --nav-tabs-border-radius: .375rem;
+
+    --nav-tabs-link-hover-border-color:
+        #4B2D26 #4B2D26 transparent;
+
+    --nav-tabs-link-active-color: #FFFFFF;
+
+    --nav-tabs-link-active-bg:
+        var(--main-bg-color);
+
+    --nav-tabs-link-active-border-color:
+        var(--nav-tabs-border-color)
+        var(--nav-tabs-border-color)
+        var(--main-bg-color);
+
+    /* Inline Code */
+
+    --ref-bg-color: rgba(241,107,27,.12);
+    --ref-color: #FFB37F;
+
+    /* Code Blocks */
+
+    --code-bg-color: #1E1514;
+}
+
+/* Light Theme */
+[data-theme='light'] {
+
+    --main-bg-color: #FFF8F2;
+
+    --footer-bg-color: rgba(241,107,27,.08);
+
+    --separator-color: #E8D2C6;
+
+    --table-strip-bg-color: #FFF2E9;
+
+    --table-header-bg-color: #FFE5D5;
+
+    --table-header-color: #5B382F;
+
+    --table-header-border-color: #E8D2C6;
+
+    /* Text */
+
+    --appname-color: #5B382F;
+
+    --h1-color: #5B382F;
+    --h2-color: #6D4338;
+    --h3-color: #865043;
+    --h4-color: #5B382F;
+    --h5-color: #6D4338;
+
+    --text-color: #44302B;
+
+    --link-color: #D9500D;
+    --link-hover-color: #F16B1B;
+    --link-active-color: #F16B1B;
+
+    /* Mobile */
+
+    --topbar-bg-color: #FFF0E5;
+
+    /* Button */
+
+    --button-color: #94685A;
+
+    /* Sidebar */
+
+    --sidebar-bg-color: #FFF3EB;
+
+    --search-color: #44302B;
+    --search-bg-color: #FFFFFF;
+    --search-searchicon-color: #D9500D;
+    --search-border-color: #E8D2C6;
+
+    --sidebar-item-color: #44302B;
+    --sidebar-active-item-color: #D9500D;
+
+    --sidebar-level1-item-bg-color: #FFE7D9;
+    --sidebar-level1-item-hover-bg-color: #FFD7C1;
+
+    --toc-filter-color: #44302B;
+    --toc-filter-bg-color: #FFFFFF;
+    --toc-filter-filtericon-color: #D9500D;
+    --toc-filter-clearicon-color: #D64545;
+    --toc-filter-border-color: #E8D2C6;
+
+    /* Scrollbars */
+
+    --scrollbar-bg-color: transparent;
+    --scrollbar-thumb-bg-color: rgba(217,80,13,.25);
+    --scrollbar-thumb-border-color: transparent;
+
+    /* Inline Code */
+
+    --ref-bg-color: rgba(241,107,27,.10);
+    --ref-color: #B73F00;
+
+    /* Code Blocks */
+
+    --code-bg-color: #FFF7F2;
+
+    --blockquote-border-color: rgba(217,80,13,.25);
+
+    --blockquote-bg-color: rgba(217,80,13,.05);
+
+    --breadcrumb-bg-color: #FFF0E5;
+}
+
+/* Code Block Overrides */
+
+pre, legend {
+    --scrollbar-thumb-bg-color: #333;
+}

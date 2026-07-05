@@ -1,0 +1,54 @@
+.doc-box {
+    padding: 14px;
+    border-left: 5px solid;
+    border-radius: 6px;
+    margin: 12px 0;
+}
+
+.doc-info {
+    background: #e3f2fd;
+    border-color: #2196f3;
+    color: #0d47a1;
+}
+
+.doc-success {
+    background: #e8f5e9;
+    border-color: #4caf50;
+    color: #1b5e20;
+}
+
+.doc-warning {
+    background: #fff3e0;
+    border-color: #ff9800;
+    color: #e65100;
+}
+
+.doc-error {
+    background: #ffebee;
+    border-color: #f44336;
+    color: #b71c1c;
+}
+
+.doc-requirement {
+    background: #ede7f6;
+    border-color: #673ab7;
+    color: #311b92;
+}
+
+.doc-tip {
+    background: #e0f7fa;
+    border-color: #00bcd4;
+    color: #006064;
+}
+
+.doc-important {
+    background: #e8eaf6;
+    border-color: #3f51b5;
+    color: #1a237e;
+}
+
+.doc-build {
+    background: #fff8e1;
+    border-color: #ffc107;
+    color: #7a5c00;
+}

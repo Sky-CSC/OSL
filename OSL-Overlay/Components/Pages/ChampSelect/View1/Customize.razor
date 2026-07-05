@@ -1,0 +1,857 @@
+@page "/champselect/view1/custom"
+@using OSL_Overlay.GameFlow.ChampSelect
+@inject ChampSelectView1State ViewState
+@implements IDisposable
+
+@* ---------------- Champ select View1 management ---------------- *@
+<PageTitle>ChampSelect - View1 - Customize</PageTitle>
+
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
+
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Champ Select management</b></MudText>
+<br />
+
+@* ---------------- Choose file style to use ---------------- *@
+<StyleManager RelativePath="styles/champselect/view1"
+              CurrentFile="@ViewState.CurrentFile"
+              OnSave="HandleSave"
+              OnFileSelected="HandleFileSelected" />
+<br />
+@* ---------------- Customize field ---------------- *@
+<MudStack Row="false" Spacing="3">
+
+    @* ---------------- Background ---------------- *@
+    <MudText id="background" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Background</MudText>
+    <StyleFieldEditor Label=""
+                      Type="background"
+                      Value="@Info.Background"
+                      ValueChanged="v => OnStyleChanged(val => Info.Background = val, v)" />
+    <br />
+    @* ---------------- Picks bakground---------------- *@
+    <MudText id="pick-background" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Picks background</MudText>
+    <StyleFieldEditor Label=""
+                      Type="background"
+                      Value="@Info.TeamsBackground"
+                      ValueChanged="v => OnStyleChanged(val => Info.TeamsBackground = val, v)" />
+    <br />
+    <MudText id="pick-champion-background" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Pick champion background</MudText>
+    @* ---------------- Teams bakground---------------- *@
+    <MudStack Row="true">
+        @* ---------------- Blue bakground---------------- *@
+        <StyleFieldEditor Label="Blue team"
+                          Type="background"
+                          Value="@Info.BlueTeam.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Background = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Red bakground---------------- *@
+        <StyleFieldEditor Label="Red team"
+                          Type="background"
+                          Value="@Info.RedTeam.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Background = val, v)"
+                          BorderColor="#BE1E37" />
+
+    </MudStack>
+    <br />
+    @* ---------------- Blink---------------- *@
+    <MudText id="pick-blink" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Pick blink</MudText>
+    @* ---------------- Blue blink ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
+        {
+            var index = i;
+            @* ---------------- Background ---------------- *@
+            <StyleFieldEditor Label="@($"Blue champion {index + 1}")"
+                              Type="background"
+                              Value="@Info.BlueTeam.Picks[index].BlinkColor"
+                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Picks[index].BlinkColor = val, v)"
+                              BorderColor="#0B849E" />
+        }
+    </MudStack>
+    @* ---------------- Red blink ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.RedTeam.Picks.Count; i++)
+        {
+            var index = i;
+            @* ---------------- Background ---------------- *@
+            <StyleFieldEditor Label="@($"Red champion {index + 1}")"
+                              Type="background"
+                              Value="@Info.RedTeam.Picks[index].BlinkColor"
+                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Picks[index].BlinkColor = val, v)"
+                              BorderColor="#BE1E37" />
+        }
+    </MudStack>
+    <br />
+    @* ---------------- Champ border ---------------- *@
+    <MudText id="pick-border" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Champion border</MudText>
+    @* ---------------- Blue border ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
+        {
+            var index = i;
+            @* ---------------- Border ---------------- *@
+            <StyleFieldEditor Label="@($"Blue champion {index + 1}")"
+                              Type="border"
+                              Value="@Info.BlueTeam.Picks[index].BorderImage"
+                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Picks[index].BorderImage = val, v)"
+                              BorderColor="#0B849E" />
+        }
+    </MudStack>
+    @* ---------------- Red border ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.RedTeam.Picks.Count; i++)
+        {
+            var index = i;
+            @* ---------------- Border ---------------- *@
+            <StyleFieldEditor Label="@($"Red champion {index + 1}")"
+                              Type="border"
+                              Value="@Info.RedTeam.Picks[index].BorderImage"
+                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Picks[index].BorderImage = val, v)"
+                              BorderColor="#BE1E37" />
+        }
+    </MudStack>
+    <br />
+    @* ---------------- Summoner name ---------------- *@
+    <MudText id="summoner-name" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Summoner name</MudText>
+    @* ---------------- Blue name ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
+        {
+            var index = i;
+            <MudStack Row="false" Spacing="2">
+                @* ---------------- Background ---------------- *@
+                <StyleFieldEditor Label="@($"Blue summoner name {index + 1} background")"
+                                  Type="background"
+                                  Value="@Info.BlueTeam.Picks[index].Name.Background"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Picks[index].Name.Background = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Border ---------------- *@
+                <StyleFieldEditor Label="@($"Blue summoner name {index + 1} border")"
+                                  Type="border"
+                                  Value="@Info.BlueTeam.Picks[index].Name.Border"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Picks[index].Name.Border = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Color ---------------- *@
+                <StyleFieldEditor Label="@($"Blue summoner name {index + 1} color")"
+                                  Type="color"
+                                  Value="@Info.BlueTeam.Picks[index].Name.Color"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Picks[index].Name.Color = val, v)"
+                                  BorderColor="#0B849E" />
+            </MudStack>
+        }
+    </MudStack>
+    @* ---------------- Red name ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.RedTeam.Picks.Count; i++)
+        {
+            var index = i;
+            <MudStack Row="false" Spacing="2">
+                @* ---------------- Background ---------------- *@
+                <StyleFieldEditor Label="@($"Red summoner name {index + 1} background")"
+                                  Type="background"
+                                  Value="@Info.RedTeam.Picks[index].Name.Background"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Picks[index].Name.Background = val, v)"
+                                  BorderColor="#BE1E37" />
+                @* ---------------- Border ---------------- *@
+                <StyleFieldEditor Label="@($"Red summoner name {index + 1} border")"
+                                  Type="border"
+                                  Value="@Info.RedTeam.Picks[index].Name.Border"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Picks[index].Name.Border = val, v)"
+                                  BorderColor="#BE1E37" />
+                @* ---------------- Color ---------------- *@
+                <StyleFieldEditor Label="@($"Red summoner name {index + 1} color")"
+                                  Type="color"
+                                  Value="@Info.RedTeam.Picks[index].Name.Color"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Picks[index].Name.Color = val, v)"
+                                  BorderColor="#BE1E37" />
+            </MudStack>
+        }
+    </MudStack>
+    <br />
+    @* ---------------- Summoner spell ---------------- *@
+    <MudText id="summoner-spell" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Summoner spell</MudText>
+    @* ---------------- Blue summoner spell ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
+        {
+            var index = i;
+            @* ---------------- Show summoner spell ? ---------------- *@
+            <StyleFieldEditor Label="Show blue summoner spell ?"
+                              Type="checkbox"
+                              Value="@Info.BlueTeam.Picks[index].ShowSummonerSpells.ToString()"
+                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Picks[index].ShowSummonerSpells = val, v)"
+                              BorderColor="#0B849E" />
+        }
+    </MudStack>
+    @* ---------------- Red summoner spell ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.RedTeam.Picks.Count; i++)
+        {
+            var index = i;
+            @* ---------------- Show summoner spell ? ---------------- *@
+            <StyleFieldEditor Label="Show blue summoner spell ?"
+                              Type="checkbox"
+                              Value="@Info.RedTeam.Picks[index].ShowSummonerSpells.ToString()"
+                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Picks[index].ShowSummonerSpells = val, v)"
+                              BorderColor="#BE1E37" />
+        }
+    </MudStack>
+    <br />
+    @* ---------------- Lanes ---------------- *@
+    <MudText id="lane" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Lane</MudText>
+    @* ---------------- Blue Lanes ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.BlueTeam.Picks.Count; i++)
+        {
+            var index = i;
+            var path = "assets/positions/top";
+            if (index == 1)
+                path = "assets/positions/jungle";
+            else if (index == 2)
+                path = "assets/positions/mid";
+            else if (index == 3)
+                path = "assets/positions/adc";
+            else if (index == 4)
+                path = "assets/positions/support";
+            <MudStack Row="false" Style="overflow-y:auto;">
+                @* ---------------- Show lane ? ---------------- *@
+                <StyleFieldEditor Label="Show lane image ?"
+                                  Type="checkbox"
+                                  Value="@Info.BlueTeam.Picks[index].ShowLane.ToString()"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Picks[index].ShowLane = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Lane image ---------------- *@
+                <StyleFieldEditor Label="@($"Blue player {index + 1} lane")"
+                                  Type="image"
+                                  Value="@Info.BlueTeam.Picks[index].LaneImage"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Picks[index].LaneImage = val, v)"
+                                  DirectoryPath="@path"
+                                  BorderColor="#0B849E" />
+            </MudStack>
+        }
+    </MudStack>
+    @* ---------------- Red Lanes ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.RedTeam.Picks.Count; i++)
+        {
+            var index = i;
+            var path = "assets/positions/top";
+            if (index == 1)
+                path = "assets/positions/jungle";
+            else if (index == 2)
+                path = "assets/positions/mid";
+            else if (index == 3)
+                path = "assets/positions/adc";
+            else if (index == 4)
+                path = "assets/positions/support";
+            <MudStack Row="false" Style="overflow-y:auto;">
+                @* ---------------- Show lane ? ---------------- *@
+                <StyleFieldEditor Label="Show lane image ?"
+                                  Type="checkbox"
+                                  Value="@Info.RedTeam.Picks[index].ShowLane.ToString()"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Picks[index].ShowLane = val, v)"
+                                  BorderColor="#BE1E37" />
+                @* ---------------- Lane image ---------------- *@
+                <StyleFieldEditor Label="@($"Red player {index + 1} lane")"
+                                  Type="image"
+                                  Value="@Info.RedTeam.Picks[index].LaneImage"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Picks[index].LaneImage = val, v)"
+                                  DirectoryPath="@path"
+                                  BorderColor="#BE1E37" />
+            </MudStack>
+        }
+    </MudStack>
+    <br />
+    @* ---------------- Timer ---------------- *@
+    <MudText id="timer" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Timer</MudText>
+    @* ---------------- Blue Timer ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
+        @* ---------------- Background ---------------- *@
+        <StyleFieldEditor Label="Blue background"
+                          Type="background"
+                          Value="@Info.BlueTeam.Timer.BarColor"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Timer.BarColor = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Fill color ---------------- *@
+        <StyleFieldEditor Label="Blue fill"
+                          Type="background"
+                          Value="@Info.BlueTeam.Timer.FillColor"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Timer.FillColor = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Direction ---------------- *@
+        <StyleFieldEditor Label="Blue direction"
+                          Type="timer"
+                          Value="@Info.BlueTeam.Timer.Direction"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Timer.Direction = val, v)"
+                          BorderColor="#0B849E" />
+    </MudStack>
+    @* ---------------- Red Timer ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
+        @* ---------------- Background ---------------- *@
+        <StyleFieldEditor Label="Red background"
+                          Type="background"
+                          Value="@Info.RedTeam.Timer.BarColor"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Timer.BarColor = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Fill color ---------------- *@
+        <StyleFieldEditor Label="Red fill"
+                          Type="background"
+                          Value="@Info.RedTeam.Timer.FillColor"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Timer.FillColor = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Direction ---------------- *@
+        <StyleFieldEditor Label="Red direction"
+                          Type="timer"
+                          Value="@Info.RedTeam.Timer.Direction"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Timer.Direction = val, v)"
+                          BorderColor="#BE1E37" />
+    </MudStack>
+    @* ---------------- Common Timer ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
+        @* ---------------- Background ---------------- *@
+        <StyleFieldEditor Label="Common background"
+                          Type="background"
+                          Value="@Info.CommonTimer.BarColor"
+                          ValueChanged="v => OnStyleChanged(val => Info.CommonTimer.BarColor = val, v)" />
+        @* ---------------- Fill color ---------------- *@
+        <StyleFieldEditor Label="Common fill"
+                          Type="background"
+                          Value="@Info.CommonTimer.FillColor"
+                          ValueChanged="v => OnStyleChanged(val => Info.CommonTimer.FillColor = val, v)" />
+        @* ---------------- Direction ---------------- *@
+        <StyleFieldEditor Label="Common direction"
+                          Type="timer"
+                          Value="@Info.CommonTimer.Direction"
+                          ValueChanged="v => OnStyleChanged(val => Info.CommonTimer.Direction = val, v)" />
+    </MudStack>
+    <br />
+    @* ---------------- Patch ---------------- *@
+    <MudText id="patch" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Patch</MudText>
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
+        <MudStack Row="false">
+            @* ---------------- Show patch ? ---------------- *@
+            <StyleFieldEditor Label="Show patch ?"
+                              Type="checkbox"
+                              Value="@Info.Patch.Show.ToString()"
+                              ValueChanged="v => OnStyleChanged(val => Info.Patch.Show = val, v)" />
+            @* ---------------- Background ---------------- *@
+            <StyleFieldEditor Label="Background"
+                              Type="background"
+                              Value="@Info.Patch.BackgroundColor"
+                              ValueChanged="v => OnStyleChanged(val => Info.Patch.BackgroundColor = val, v)" />
+        </MudStack>
+        @* ---------------- Border ---------------- *@
+        <StyleFieldEditor Label="Border"
+                          Type="border"
+                          Value="@Info.Patch.BorderColor"
+                          ValueChanged="v => OnStyleChanged(val => Info.Patch.BorderColor = val, v)" />
+        @* ---------------- Patch Text ---------------- *@
+        <MudStack Row="false">
+            @* ---------------- Color ---------------- *@
+            <StyleFieldEditor Label="Patch color"
+                              Type="color"
+                              Value="@Info.Patch.PatchInfo.Color"
+                              ValueChanged="v => OnStyleChanged(val => Info.Patch.PatchInfo.Color = val, v)" />
+            @* ---------------- Font ---------------- *@
+            <StyleFieldEditor Label="Patch font"
+                              Type="font"
+                              Value="@Info.Patch.PatchInfo.Font"
+                              ValueChanged="v => OnStyleChanged(val => Info.Patch.PatchInfo.Font = val, v)" />
+        </MudStack>
+        @* ---------------- Version Text ---------------- *@
+        <MudStack Row="false">
+            @* ---------------- Color ---------------- *@
+            <StyleFieldEditor Label="Version color"
+                              Type="color"
+                              Value="@Info.Patch.Version.Color"
+                              ValueChanged="v => OnStyleChanged(val => Info.Patch.Version.Color = val, v)" />
+            @* ---------------- Font ---------------- *@
+            <StyleFieldEditor Label="Version font"
+                              Type="font"
+                              Value="@Info.Patch.Version.Font"
+                              ValueChanged="v => OnStyleChanged(val => Info.Patch.Version.Font = val, v)" />
+        </MudStack>
+    </MudStack>
+    <br />
+    @* ---------------- Coach ---------------- *@
+    <MudText id="coach" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Coach</MudText>
+    <MudStack Row="true" Style="overflow-y:auto;" AlignItems="AlignItems.Center">
+        @* ---------------- Blue Coach ---------------- *@
+        <MudStack Row="false">
+            @* ---------------- Show coach ? ---------------- *@
+            <StyleFieldEditor Label="Show blue coach ?"
+                              Type="checkbox"
+                              Value="@Info.BlueTeam.Coach.Show.ToString()"
+                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Coach.Show = val, v)"
+                              BorderColor="#0B849E" />
+            @* ---------------- Background ---------------- *@
+            <StyleFieldEditor Label="Blue background"
+                              Type="background"
+                              Value="@Info.BlueTeam.Coach.Background"
+                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Coach.Background = val, v)"
+                              BorderColor="#0B849E" />
+        </MudStack>
+        @* ---------------- Border ---------------- *@
+        <StyleFieldEditor Label="Blue border"
+                          Type="border"
+                          Value="@Info.BlueTeam.Coach.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Coach.Border = val, v)"
+                          BorderColor="#0B849E" />
+        <MudStack Row="false">
+            @* ---------------- Text color ---------------- *@
+            <StyleFieldEditor Label="Blue text color"
+                              Type="color"
+                              Value="@Info.BlueTeam.Coach.Text.Color"
+                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Coach.Text.Color =val, v)"
+                              BorderColor="#0B849E" />
+            @* ---------------- Text font ---------------- *@
+            <StyleFieldEditor Label="Blue text font"
+                              Type="font"
+                              Value="@Info.BlueTeam.Coach.Text.Font"
+                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Coach.Text.Font =val, v)"
+                              BorderColor="#0B849E" />
+        </MudStack>
+        <MudStack Row="false">
+            @* ---------------- Name color ---------------- *@
+            <StyleFieldEditor Label="Blue name color"
+                              Type="color"
+                              Value="@Info.BlueTeam.Coach.Name.Color"
+                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Coach.Name.Color =val, v)"
+                              BorderColor="#0B849E" />
+            @* ---------------- Name font ---------------- *@
+            <StyleFieldEditor Label="Blue name font"
+                              Type="font"
+                              Value="@Info.BlueTeam.Coach.Name.Font"
+                              ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Coach.Name.Font =val, v)"
+                              BorderColor="#0B849E" />
+        </MudStack>
+    </MudStack>
+    @* ---------------- Red Coach ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        <MudStack Row="false">
+            @* ---------------- Show coach ---------------- *@
+            <StyleFieldEditor Label="Show red coach ?"
+                              Type="checkbox"
+                              Value="@Info.RedTeam.Coach.Show.ToString()"
+                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Coach.Show = val, v)"
+                              BorderColor="#BE1E37" />
+            @* ---------------- Background ---------------- *@
+            <StyleFieldEditor Label="Red background"
+                              Type="background"
+                              Value="@Info.RedTeam.Coach.Background"
+                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Coach.Background = val, v)"
+                              BorderColor="#BE1E37" />
+        </MudStack>
+        @* ---------------- Border ---------------- *@
+        <StyleFieldEditor Label="Red border"
+                          Type="border"
+                          Value="@Info.RedTeam.Coach.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Coach.Border = val, v)"
+                          BorderColor="#BE1E37" />
+        <MudStack Row="false">
+            @* ---------------- Text color ---------------- *@
+            <StyleFieldEditor Label="Red text color"
+                              Type="color"
+                              Value="@Info.RedTeam.Coach.Text.Color"
+                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Coach.Text.Color =val, v)"
+                              BorderColor="#BE1E37" />
+            @* ---------------- Text font ---------------- *@
+            <StyleFieldEditor Label="Red text font"
+                              Type="font"
+                              Value="@Info.RedTeam.Coach.Text.Font"
+                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Coach.Text.Font =val, v)"
+                              BorderColor="#BE1E37" />
+        </MudStack>
+        <MudStack Row="false">
+            @* ---------------- Name color ---------------- *@
+            <StyleFieldEditor Label="Red name color"
+                              Type="color"
+                              Value="@Info.RedTeam.Coach.Name.Color"
+                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Coach.Name.Color =val, v)"
+                              BorderColor="#BE1E37" />
+            @* ---------------- Name font ---------------- *@
+            <StyleFieldEditor Label="Red name font"
+                              Type="font"
+                              Value="@Info.RedTeam.Coach.Name.Font"
+                              ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Coach.Name.Font =val, v)"
+                              BorderColor="#BE1E37" />
+        </MudStack>
+    </MudStack>
+
+    <br />
+    @* ---------------- Bans ---------------- *@
+    <MudText id="ban" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Bans</MudText>
+    @* ---------------- Blue Bans ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.BlueTeam.Bans.Count; i++)
+        {
+            var index = i;
+            <MudStack Row="false" Spacing="2">
+                @* ---------------- Background ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} background")"
+                                  Type="background"
+                                  Value="@Info.BlueTeam.Bans[index].BackgroundColor"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].BackgroundColor = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Image ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} image")"
+                                  Type="image"
+                                  DirectoryPath="assets/bans"
+                                  Value="@Info.BlueTeam.Bans[index].BanImage"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].BanImage = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Border banning ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} border banning")"
+                                  Type="border"
+                                  Value="@Info.BlueTeam.Bans[index].BorderBanning"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].BorderBanning = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Border complete ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} border complete")"
+                                  Type="border"
+                                  Value="@Info.BlueTeam.Bans[index].BorderCompleted"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].BorderCompleted = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Blink ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} blink")"
+                                  Type="background"
+                                  Value="@Info.BlueTeam.Bans[index].BlinkColor"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].BlinkColor = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Grey scale ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} grey scale")"
+                                  Type="background"
+                                  Value="@Info.BlueTeam.Bans[index].Greyscale"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].Greyscale = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Color line ban ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} cross image")"
+                                  Type="image"
+                                  DirectoryPath="assets/bans"
+                                  Value="@Info.BlueTeam.Bans[index].Cross.Image.Path"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].Cross.Image.Path = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Color line ban ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} line color")"
+                                  Type="color"
+                                  Value="@Info.BlueTeam.Bans[index].Cross.GraphicLineColor"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].Cross.GraphicLineColor = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Color cross ban ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} cross color")"
+                                  Type="color"
+                                  Value="@Info.BlueTeam.Bans[index].Cross.GraphicCrossColor"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].Cross.GraphicCrossColor = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Width cross ban ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} cross width")"
+                                  Type="slider"
+                                  Value="@Info.BlueTeam.Bans[index].Cross.Width"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].Cross.Width = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Height cross ban ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} cross height")"
+                                  Type="slider"
+                                  Value="@Info.BlueTeam.Bans[index].Cross.Height"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].Cross.Height = val, v)"
+                                  BorderColor="#0B849E" />
+                @* ---------------- Rotate cross ban ---------------- *@
+                <StyleFieldEditor Label="@($"Blue ban {index + 1} cross rotate")"
+                                  Type="slider"
+                                  Value="@Info.BlueTeam.Bans[index].Cross.Rotate"
+                                  ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Bans[index].Cross.Rotate = val, v)"
+                                  BorderColor="#0B849E" />
+
+            </MudStack>
+        }
+    </MudStack>
+    @* ---------------- Red Bans ---------------- *@
+    <MudStack Row="true" Style="overflow-y:auto;">
+        @for (int i = 0; i < Info.RedTeam.Bans.Count; i++)
+        {
+            var index = i;
+            <MudStack Row="false" Spacing="2">
+                @* ---------------- Background ---------------- *@
+                <StyleFieldEditor Label="@($"Red ban {index + 1} background")"
+                                  Type="background"
+                                  Value="@Info.RedTeam.Bans[index].BackgroundColor"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Bans[index].BackgroundColor = val, v)"
+                                  BorderColor="#BE1E37" />
+                @* ---------------- Border banning ---------------- *@
+                <StyleFieldEditor Label="@($"Red ban {index + 1} border banning")"
+                                  Type="border"
+                                  Value="@Info.RedTeam.Bans[index].BorderBanning"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Bans[index].BorderBanning = val, v)"
+                                  BorderColor="#BE1E37" />
+                @* ---------------- Border complete ---------------- *@
+                <StyleFieldEditor Label="@($"Red ban {index + 1} border complete")"
+                                  Type="border"
+                                  Value="@Info.RedTeam.Bans[index].BorderCompleted"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Bans[index].BorderCompleted = val, v)"
+                                  BorderColor="#BE1E37" />
+                @* ---------------- Blink ---------------- *@
+                <StyleFieldEditor Label="@($"Red ban {index + 1} blink")"
+                                  Type="background"
+                                  Value="@Info.RedTeam.Bans[index].BlinkColor"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Bans[index].BlinkColor = val, v)"
+                                  BorderColor="#BE1E37" />
+                @* ---------------- Grey scale ---------------- *@
+                <StyleFieldEditor Label="@($"Red ban {index + 1} grey scale")"
+                                  Type="background"
+                                  Value="@Info.RedTeam.Bans[index].Greyscale"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Bans[index].Greyscale = val, v)"
+                                  BorderColor="#BE1E37" />
+                @* ---------------- Color line ban ---------------- *@
+                <StyleFieldEditor Label="@($"Red ban {index + 1} line color")"
+                                  Type="color"
+                                  Value="@Info.RedTeam.Bans[index].Cross.GraphicLineColor"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Bans[index].Cross.GraphicLineColor = val, v)"
+                                  BorderColor="#BE1E37" />
+                @* ---------------- Color cross ban ---------------- *@
+                <StyleFieldEditor Label="@($"Red ban {index + 1} cross color")"
+                                  Type="color"
+                                  Value="@Info.RedTeam.Bans[index].Cross.GraphicCrossColor"
+                                  ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Bans[index].Cross.GraphicCrossColor = val, v)"
+                                  BorderColor="#BE1E37" />
+
+            </MudStack>
+        }
+    </MudStack>
+
+    <br />
+    @* ---------------- Teams ---------------- *@
+    <MudText id="teams" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Teams</MudText>
+    @* ---------------- Blue Team ---------------- *@
+    <MudStack Row="true">
+        @* ---------------- Show logo ? ---------------- *@
+        <StyleFieldEditor Label="Show blue logo ?"
+                          Type="checkbox"
+                          Value="@Info.BlueTeam.ShowLogo.ToString()"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.ShowLogo = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Show tag ? ---------------- *@
+        <StyleFieldEditor Label="Show blue tag ?"
+                          Type="checkbox"
+                          Value="@Info.BlueTeam.ShowTag.ToString()"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.ShowTag = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Tag color ---------------- *@
+        <StyleFieldEditor Label="Blue tag color"
+                          Type="color"
+                          Value="@Info.BlueTeam.Tag.Color"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Tag.Color = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Tag font ---------------- *@
+        <StyleFieldEditor Label="Blue tag color"
+                          Type="font"
+                          Value="@Info.BlueTeam.Tag.Font"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.Tag.Font = val, v)"
+                          BorderColor="#0B849E" />
+    </MudStack>
+    @* ---------------- Red Team ---------------- *@
+    <MudStack Row="true">
+        @* ---------------- Show logo ? ---------------- *@
+        <StyleFieldEditor Label="Show red logo ?"
+                          Type="checkbox"
+                          Value="@Info.RedTeam.ShowLogo.ToString()"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.ShowLogo = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Show tag ? ---------------- *@
+        <StyleFieldEditor Label="Show red tag ?"
+                          Type="checkbox"
+                          Value="@Info.RedTeam.ShowTag.ToString()"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.ShowTag = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Tag color ---------------- *@
+        <StyleFieldEditor Label="Red tag color"
+                          Type="color"
+                          Value="@Info.RedTeam.Tag.Color"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Tag.Color = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Tag font ---------------- *@
+        <StyleFieldEditor Label="Red tag font"
+                          Type="font"
+                          Value="@Info.RedTeam.Tag.Font"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.Tag.Font = val, v)"
+                          BorderColor="#BE1E37" />
+    </MudStack>
+    <br />
+    @* ---------------- Bo ---------------- *@
+    <MudText id="bo" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Best Of</MudText>
+    @* ---------------- Blue Bo ---------------- *@
+    <MudStack Row="true" AlignItems="AlignItems.Center">
+        @* ---------------- Show bo ---------------- *@
+        <StyleFieldEditor Label="Show blue bo ?"
+                          Type="checkbox"
+                          Value="@Info.BlueTeam.BoGraphic.Show.ToString()"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Show = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Background win ---------------- *@
+        <StyleFieldEditor Label="Blue bo background win"
+                          Type="background"
+                          Value="@Info.BlueTeam.BoGraphic.Win.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Win.Background = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Border win ---------------- *@
+        <StyleFieldEditor Label="Blue bo border win"
+                          Type="border"
+                          Value="@Info.BlueTeam.BoGraphic.Win.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Win.Border = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Background undef ---------------- *@
+        <StyleFieldEditor Label="Blue bo background undef"
+                          Type="background"
+                          Value="@Info.BlueTeam.BoGraphic.Undef.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Undef.Background = val, v)"
+                          BorderColor="#0B849E" />
+        @* ---------------- Border undef ---------------- *@
+        <StyleFieldEditor Label="Blue bo border undef"
+                          Type="border"
+                          Value="@Info.BlueTeam.BoGraphic.Undef.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.BlueTeam.BoGraphic.Undef.Border = val, v)"
+                          BorderColor="#0B849E" />
+    </MudStack>
+    @* ---------------- Red Bo ---------------- *@
+    <MudStack Row="true" AlignItems="AlignItems.Center">
+        @* ---------------- Show bo ? ---------------- *@
+        <StyleFieldEditor Label="Show red bo ?"
+                          Type="checkbox"
+                          Value="@Info.RedTeam.BoGraphic.Show.ToString()"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Show = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Background win ---------------- *@
+        <StyleFieldEditor Label="Red bo background win"
+                          Type="background"
+                          Value="@Info.RedTeam.BoGraphic.Win.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Win.Background = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Border win ---------------- *@
+        <StyleFieldEditor Label="Red bo border win"
+                          Type="border"
+                          Value="@Info.RedTeam.BoGraphic.Win.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Win.Border = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Background undef ---------------- *@
+        <StyleFieldEditor Label="Red bo background undef"
+                          Type="background"
+                          Value="@Info.RedTeam.BoGraphic.Undef.Background"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Undef.Background = val, v)"
+                          BorderColor="#BE1E37" />
+        @* ---------------- Border undef ---------------- *@
+        <StyleFieldEditor Label="Red bo background undef"
+                          Type="border"
+                          Value="@Info.RedTeam.BoGraphic.Undef.Border"
+                          ValueChanged="v => OnStyleChanged(val => Info.RedTeam.BoGraphic.Undef.Border = val, v)"
+                          BorderColor="#BE1E37" />
+    </MudStack>
+
+    <br />
+    @* ---------------- Phase ---------------- *@
+    <MudText id="phase" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Phase</MudText>
+    <MudStack Row="true">
+        @* ---------------- Color ---------------- *@
+        <StyleFieldEditor Label="Phase"
+                          Type="color"
+                          Value="@Info.PhaseInfo.Phase.Color"
+                          ValueChanged="v => OnStyleChanged(val => Info.PhaseInfo.Phase.Color = val, v)" />
+        @* ---------------- Font ---------------- *@
+        <StyleFieldEditor Label="Phase"
+                          Type="font"
+                          Value="@Info.PhaseInfo.Phase.Font"
+                          ValueChanged="v => OnStyleChanged(val => Info.PhaseInfo.Phase.Font = val, v)" />
+    </MudStack>
+
+    <br />
+    @* ---------------- Vs ---------------- *@
+    <MudText id="vs" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">VS</MudText>
+    <MudStack Row="true">
+        @* ---------------- Color ---------------- *@
+        <StyleFieldEditor Label="Vs color"
+                          Type="color"
+                          Value="@Info.Vs.Color"
+                          ValueChanged="v => OnStyleChanged(val => Info.Vs.Color = val, v)" />
+        @* ---------------- Font ---------------- *@
+        <StyleFieldEditor Label="Vs font"
+                          Type="font"
+                          Value="@Info.Vs.Font"
+                          ValueChanged="v => OnStyleChanged(val => Info.Vs.Font = val, v)" />
+    </MudStack>
+</MudStack>
+
+@code {
+    private ChampSelectInfo Info => ViewState.LocalInfo;
+
+    /// <summary>
+    /// When css is update notifie Champ state
+    /// </summary>
+    /// <param name="setter"></param>
+    /// <param name="newValue"></param>
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+        RefreshUI();
+    }
+
+    /// <summary>
+    /// When css is update notifie Champ state
+    /// </summary>
+    /// <param name="setter"></param>
+    /// <param name="newValue"></param>
+    private void OnStyleChanged(Action<bool> setter, string newValue)
+    {
+        setter(Convert.ToBoolean(newValue));
+        RefreshUI();
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+        ViewState.NotifyStateChanged();
+    }
+
+    protected override void OnInitialized()
+    {
+        ViewState.OnChange += OnServiceChanged;
+        ViewState.SyncFromGlobal();
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        ViewState.OnChange -= OnServiceChanged;
+    }
+
+    /// <summary>
+    /// Save file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleSave(string filePath)
+    {
+        // Sauvegarde dans un NOUVEAU fichier
+        ViewState.SaveStyle(filePath);
+        ViewState.CurrentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    /// <summary>
+    /// Select file
+    /// </summary>
+    /// <param name="filePath"></param>
+    /// <returns></returns>
+    private async Task HandleFileSelected(string filePath)
+    {
+        // Chargement du style existant
+        ViewState.LoadStyle(filePath);
+        ViewState.CurrentFile = filePath;
+        await InvokeAsync(StateHasChanged);
+    }
+
+}

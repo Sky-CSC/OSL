@@ -1,0 +1,63 @@
+@using OSL_Overlay.GameFlow.Phase
+@inject PhaseState PhaseState
+@implements IDisposable
+
+@* ---------------- Phase managament ---------------- *@
+
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Phase management</b></MudText>
+<MudStack Row="true">
+    <MudStack Row="false">
+        <MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Phase text</MudText>
+        @* ---------------- Text ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PhaseState.Info.Phase.Txt"
+                          ValueChanged="v => PhaseState.UpdatePhaseText(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="Swiss Group - Round 1" />
+    </MudStack>
+    <br />
+    <MudStack Row="false">
+        <MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Event text</MudText>
+        @* ---------------- Text ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PhaseState.Info.Event.Txt"
+                          ValueChanged="v => PhaseState.UpdateEventText(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="2025 OcciLan" />
+    </MudStack>
+    <br />
+    <MudStack Row="false">
+        <MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Date text</MudText>
+        @* ---------------- Text ---------------- *@
+        <StyleFieldEditor Label=""
+                          Type="text"
+                          Value="@PhaseState.Info.Date.Txt"
+                          ValueChanged="v => PhaseState.UpdateDateText(v)"
+                          BorderColor="#0B849E"
+                          Placeholder="24 Oct" />
+    </MudStack>
+</MudStack>
+
+@code {
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+    }
+
+    protected override void OnInitialized()
+    {
+        PhaseState.OnChange += RefreshUI;
+    }
+
+    private void RefreshUI()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        PhaseState.OnChange -= RefreshUI;
+    }
+}

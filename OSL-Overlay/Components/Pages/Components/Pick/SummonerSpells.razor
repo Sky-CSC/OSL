@@ -1,0 +1,11 @@
+@* ---------------- Summoners Spells ---------------- *@
+<div class="@Class summoner-spells">
+    <img class="summoner-spell-1" src="@Spell1" />
+    <img class="summoner-spell-2" src="@Spell2" />
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] public string Spell1 { get; set; } = string.Empty;
+    [Parameter] public string Spell2 { get; set; } = string.Empty;
+}

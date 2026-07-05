@@ -1,0 +1,21 @@
+@using OSL_Overlay.GameFlow.EndGame
+<div class="@Class" style="background:@Ban.Background; @Ban.Border;">
+    <div class="blue-team">
+        @foreach (var champ in Ban.BlueTeam)
+        {
+            <Image Class="blue-team-image" Img="@champ" />
+        }
+    </div>
+    <Txt Class="title" Text="@Ban.Title" />
+    <div class="red-team">
+        @foreach (var champ in Ban.RedTeam)
+        {
+            <Image Class="red-team-image" Img="@champ" />
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public Ban Ban { get; set; }
+}

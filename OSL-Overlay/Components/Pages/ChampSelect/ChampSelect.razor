@@ -1,0 +1,62 @@
+@page "/champselect"
+@using OSL_Overlay.GameFlow.ChampSelect
+@inject ChampSelectView1State ChampState
+@implements IDisposable
+
+<link rel="stylesheet" href="@Assets["css/champSelect/display.css"]" />
+
+
+<PageTitle>Champ Select - Links</PageTitle>
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Champ Select links</b></MudText>
+
+@* ---------------- View1 link ---------------- *@
+<SwitchButton Text="Link to view1"
+              Icon="@Icons.Material.Filled.InsertLink"
+              BackgroundColor="@Colors.BlueGray.Darken4"
+              HoverBackgroundColor="@Colors.BlueGray.Darken2"
+              TextColor="#FF0000"
+              Href="champselect/view1"
+              Target="_blank" />
+<br />
+<MudText Typo="Typo.h6" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Champ Select Preview</b></MudText>
+
+<div class="champ-select">
+    <b>Blue Team Bans</b>
+    @* ---------------- Blue Ban ---------------- *@
+    <BanSlot Class="@Info.BlueTeam.Side"
+             Team="@Info.BlueTeam" />
+    <b>Red Team Bans</b>
+    @* ---------------- Red Ban ---------------- *@
+    <BanSlot Class="@Info.RedTeam.Side"
+             Team="@Info.RedTeam" />
+
+    <br />
+    @* ---------------- Picks ---------------- *@
+    <b>Blue Team Picks</b>
+    <div class="picks">
+        @* Blue Team *@
+        <PlayersSlot Team="@Info.BlueTeam" />
+        <b>Red Team Picks</b>
+        @* Red Team *@
+        <PlayersSlot Team="@Info.RedTeam" />
+    </div>
+</div>
+
+@code {
+    private ChampSelectInfo Info => ChampState.LocalInfo;
+
+    protected override void OnInitialized()
+    {
+        ChampState.OnChange += OnServiceChanged;
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        ChampState.OnChange -= OnServiceChanged;
+    }
+}

@@ -1,0 +1,90 @@
+@using static OSL_Overlay.GameFlow.EndGame.EndGameInfo
+@using static OSL_Overlay.GameFlow.EndGame.EndGameStateExtensions
+@using OSL_Overlay.GameFlow.EndGame
+<div class="@Class">
+    @foreach (var player in ChampionStat)
+    {
+        <div class="player">
+            <Image Class="player-image" Img="@player.Image" />
+            <div class="player-data">
+                <Txt Class="player-name" Text="@player.Name" />
+                <Txt Class="player-stat" Text="@CalculateStat(player.Stat)" />
+                <Bar class="player-bar" BarInfo="@player.Bar" Width="@CalculateWidth(player.Stat.Txt)" />
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public List<Player> ChampionStat { get; set; }
+    [Parameter] required public List<Player> ForMax { get; set; }
+
+    double maxStat = 0;
+
+    protected override void OnInitialized()
+    {
+        maxStat = CalculateMax(ChampionStat, ForMax);
+    }
+
+    private double CalculateMax(List<Player> teamBlue, List<Player> teamRed)
+    {
+        double max = 0;
+        foreach (var player in teamBlue)
+        {
+            if (player.Stat.Txt.Equals("False"))
+            {
+                max = 0;
+            }
+            else if (player.Stat.Txt.Equals("True"))
+            {
+                max = 1;
+            }
+            else if (player.Stat.Txt != string.Empty && Convert.ToDouble(player.Stat.Txt) > max)
+            {
+                max = Convert.ToDouble(player.Stat.Txt);
+            }
+        }
+
+        foreach (var player in teamRed)
+        {
+            if (player.Stat.Txt.Equals("False"))
+            {
+                max = 0;
+            }
+            else if (player.Stat.Txt.Equals("True"))
+            {
+                max = 1;
+            }
+            else if (player.Stat.Txt != string.Empty && Convert.ToDouble(player.Stat.Txt) > max)
+            {
+                max = Convert.ToDouble(player.Stat.Txt);
+            }
+        }
+        return max;
+    }
+
+    private string CalculateWidth(string value)
+    {
+        maxStat = CalculateMax(ChampionStat, ForMax);
+        if (value.Equals("False"))
+        {
+            double val = 0;
+            double width = (val / maxStat) * 100;
+            return $"{width}%".Replace(",", ".");
+        }
+        else if (value.Equals("True"))
+        {
+            double val = 1;
+            double width = (val / maxStat) * 100;
+            return $"{width}%".Replace(",", ".");
+        }
+        else if (value != string.Empty)
+        {
+            double val = Convert.ToDouble(value);
+            double width = (val / maxStat) * 100;
+            return $"{width}%".Replace(",",".");
+        }
+        return $"0%".Replace(",", ".");
+    }
+}

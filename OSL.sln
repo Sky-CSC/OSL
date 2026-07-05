@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11822.322 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-CDragon", "OSL-CDragon\OSL-CDragon.csproj", "{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-Utils", "OSL-Utils\OSL-Utils.csproj", "{9DC25959-5215-48AE-955D-E302859A3960}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-RGDP", "OSL-RGDP\OSL-RGDP.csproj", "{F574D5AA-A11E-4813-81CD-7784776BEEA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-Lcu", "OSL-Lcu\OSL-Lcu.csproj", "{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-SwaggerGenerator", "OSL-SwaggerGenerator\OSL-SwaggerGenerator.csproj", "{09EB97E6-DAA4-444C-9ABA-C55457349EB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-Server", "OSL-Server\OSL-Server.csproj", "{13BA0AF2-DB21-42A7-21BA-4AA9B0A4F764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSL-Overlay", "OSL-Overlay\OSL-Overlay.csproj", "{C4087DE4-B7F4-1814-1BA4-10FB96292ECF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31EAC9FA-0FFC-4C53-9447-563EBB5429ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC25959-5215-48AE-955D-E302859A3960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC25959-5215-48AE-955D-E302859A3960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC25959-5215-48AE-955D-E302859A3960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC25959-5215-48AE-955D-E302859A3960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F574D5AA-A11E-4813-81CD-7784776BEEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F574D5AA-A11E-4813-81CD-7784776BEEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F574D5AA-A11E-4813-81CD-7784776BEEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F574D5AA-A11E-4813-81CD-7784776BEEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FABE6FA-6759-43C0-A13E-EACAA15ADC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09EB97E6-DAA4-444C-9ABA-C55457349EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09EB97E6-DAA4-444C-9ABA-C55457349EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09EB97E6-DAA4-444C-9ABA-C55457349EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09EB97E6-DAA4-444C-9ABA-C55457349EB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13BA0AF2-DB21-42A7-21BA-4AA9B0A4F764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13BA0AF2-DB21-42A7-21BA-4AA9B0A4F764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13BA0AF2-DB21-42A7-21BA-4AA9B0A4F764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13BA0AF2-DB21-42A7-21BA-4AA9B0A4F764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4087DE4-B7F4-1814-1BA4-10FB96292ECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4087DE4-B7F4-1814-1BA4-10FB96292ECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4087DE4-B7F4-1814-1BA4-10FB96292ECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4087DE4-B7F4-1814-1BA4-10FB96292ECF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73AA30DD-46C7-4595-8FEA-883585A1BBE4}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,106 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "..",
+          "files": [
+            "OSL-CDragon/**/*.csproj",
+            "OSL-Lcu/**/*.csproj",
+            "OSL-Overlay/**/*.csproj",
+            "OSL-RGDP/**/*.csproj",
+            "OSL-Server/**/*.csproj",
+            "OSL-UI/**/*.csproj",
+            "OSL-Utils/**/*.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**",
+
+            "**/Components/Pages/**",
+            "**/Pages/**",
+
+            "**/wwwroot/**",
+
+            "**/*.razor",
+            "**/*.razor.cs",
+
+            "**/*.g.cs",
+            "**/*.designer.cs",
+
+            "**/Migrations/**",
+
+            "**/Program.cs",
+            "**/Startup.cs"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+
+  "build": {
+    "content": [
+      {
+        "files": [
+          "index.md",
+          "toc.yml",
+
+          "docs/architecture/*.md",
+          "docs/architecture/toc.yml",
+
+          "docs/getting-started/*.md",
+          "docs/getting-started/toc.yml",
+
+          "docs/guides/*.md",
+          "docs/guides/toc.yml",
+
+          "docs/libraries/*.md",
+          "docs/libraries/toc.yml",
+
+          "api/**/*.yml",
+          "api/index.md",
+
+          "pictures/**/*"
+        ]
+      }
+    ],
+
+    "resource": [
+      {
+        "files": [
+          "pictures/**/*"
+        ]
+      }
+    ],
+
+    "overwrite": [],
+
+    "dest": "_site",
+
+    "template": [
+      "default",
+      "templates/singulinkfx"
+    ],
+
+    "globalMetadata": {
+      "_appTitle": "OSL Documentation",
+      "_appName": "OSL",
+      "_appLogoPath": "pictures/logo.png",
+      "_appFaviconPath": "pictures/favicon.ico",
+      "_appFooter": "<strong><a href='https://github.com/Sky-CSC/OSL'>Sky csc</a> </strong>",
+      "_copyrightFooter": "OSL © Sky csc",
+
+      "_enableSearch": true,
+
+      "_disableContribution": true,
+
+      "_basePath": "/docs",
+
+      "_gitContribute": {
+        "repo": "https://github.com/tonrepo/OSL",
+        "branch": "main"
+      }
+    }
+  }
+}

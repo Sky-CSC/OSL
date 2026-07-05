@@ -1,0 +1,209 @@
+@inherits LayoutComponentBase
+@inject IJSRuntime JS
+
+<MudThemeProvider Theme="@_theme" IsDarkMode="_isDarkMode" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<MudLayout>
+    <MudAppBar Elevation="0" Dense="true" Class="appbar-blur">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudText Typo="Typo.h5" Class="ml-3">OSL Server</MudText>
+        <MudChip T="string"
+                 Size="Size.Small"
+                 Variant="Variant.Filled"
+                 Class="osl-version-chip">
+            v2.0.0
+        </MudChip>
+        <MudImage Src="favicon.ico"
+                  Alt="OSL Logo"
+                  Style="height:26px;width:auto;margin:0 10px;" />
+        <MudSpacer />
+        <MudTooltip Text="Light/Dark"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@DarkLightModeButtonIcon"
+                           Color="Color.Secondary"
+                           OnClick="DarkModeToggle" />
+        </MudTooltip>
+
+        <MudTooltip Text="GitHub"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub"
+                           Color="Color.Secondary"
+                           Href="https://github.com/Sky-CSC/OSL"
+                           Target="_blank" />
+        </MudTooltip>
+
+        <MudTooltip Text="Bug report"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Material.Filled.BugReport"
+                           Color="Color.Secondary"
+                           Href="https://github.com/Sky-CSC/OSL/issues"
+                           Target="_blank" />
+        </MudTooltip>
+        <MudTooltip Text="Documentation"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Material.Filled.HelpOutline"
+                           Color="Color.Secondary"
+                           Href="https://doc.osl.sky-csc.fr"
+                           Target="_blank" />
+        </MudTooltip>
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" Variant="DrawerVariant.Responsive" ClipMode="DrawerClipMode.Always" Elevation="1">
+        <NavMenu />
+        <MudDivider />
+        <div class="d-flex justify-center pa-3">
+            <MudLink Href="https://github.com/Sky-CSC/OSL/"
+                     Typo="Typo.caption"
+                     Target="_blank">
+                     OSL © 2026
+            </MudLink>
+        </div>
+    </MudDrawer>
+    <MudMainContent Class="pt-20 px-6 pb-6">
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+    private bool _drawerOpen = true;
+    private bool _isDarkMode = false;
+    private MudTheme? _theme = null;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        _theme = new()
+        {
+            PaletteLight = _lightPalette,
+            PaletteDark = _darkPalette,
+            LayoutProperties = new LayoutProperties()
+        };
+    }
+
+    private void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    private void DarkModeToggle()
+    {
+        _isDarkMode = !_isDarkMode;
+    }
+
+    private readonly PaletteLight _lightPalette = new()
+    {
+        Primary = "#8C6A4A",
+        PrimaryContrastText = "#FFFFFF",
+
+        Secondary = "#C9A27E",
+        SecondaryContrastText = "#2B2118",
+
+        Background = "#F4EFE8",
+        Surface = "#FFFDF9",
+
+        AppbarBackground = "#3A2A1F",
+        AppbarText = "#F5E6D3",
+
+        DrawerBackground = "#FCF8F3",
+        DrawerText = "#4A3728",
+        DrawerIcon = "#8C6A4A",
+
+        TextPrimary = "#2E2219",
+        TextSecondary = "#6D5745",
+
+        Success = "#6BA368",
+        Warning = "#D9A441",
+        Error = "#C65B4B",
+        Info = "#5B8DB8",
+
+        Divider = "#D8C8B8",
+
+        GrayLight = "#EDE4DA",
+        GrayLighter = "#F8F4EF",
+
+        ActionDefault = "#6D5745",
+        ActionDisabled = "#B9AA9C",
+        ActionDisabledBackground = "#E5DBD0",
+    };
+
+    private readonly PaletteDark _darkPalette = new()
+    {
+        Primary = "#B88A5A",
+        PrimaryContrastText = "#FFFFFF",
+
+        Secondary = "#D6B08A",
+        SecondaryContrastText = "#1B140F",
+
+        Background = "#15120F",
+        BackgroundGray = "#1D1814",
+        Surface = "#241D18",
+
+        AppbarBackground = "rgba(21,18,15,0.95)",
+        AppbarText = "#EADBC8",
+
+        DrawerBackground = "#1B1612",
+        DrawerText = "#D7C2AA",
+        DrawerIcon = "#B88A5A",
+
+        TextPrimary = "#F1E3D2",
+        TextSecondary = "#C8B29A",
+        TextDisabled = "#7A6A5D",
+
+        ActionDefault = "#D6B08A",
+        ActionDisabled = "#6B5B4D",
+        ActionDisabledBackground = "#3A2A1F",
+
+        GrayLight = "#332821",
+        GrayLighter = "#241D18",
+
+        Info = "#6CA0DC",
+        Success = "#81B784",
+        Warning = "#E0B45C",
+        Error = "#D97B66",
+
+        LinesDefault = "#3B2F27",
+        TableLines = "#3B2F27",
+        Divider = "#4A3A2F",
+
+        OverlayLight = "rgba(0,0,0,0.7)",
+    };
+
+    public string DarkLightModeButtonIcon => _isDarkMode switch
+    {
+        true => Icons.Material.Rounded.LightMode,
+        false => Icons.Material.Outlined.DarkMode,
+    };
+
+    private async Task ToggleTheme()
+    {
+        _isDarkMode = !_isDarkMode;
+        await JS.InvokeVoidAsync("OSLReconnect.setTheme", _isDarkMode ? "dark" : "light");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Sync initial theme on first load
+            await JS.InvokeVoidAsync("OSLReconnect.setTheme", _isDarkMode ? "dark" : "light");
+        }
+    }
+
+}

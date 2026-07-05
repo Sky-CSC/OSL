@@ -1,0 +1,227 @@
+@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="@_theme" IsDarkMode="_isDarkMode" />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+
+    <MudAppBar Elevation="0"
+               Dense="true"
+               Class="appbar-blur">
+
+        <MudIconButton Icon="@Icons.Material.Filled.Menu"
+                       Color="Color.Inherit"
+                       Edge="Edge.Start"
+                       OnClick="DrawerToggle" />
+
+        <MudText Typo="Typo.h5"
+                 Class="ml-3 osl-title">
+
+            OSL-Overlay
+
+        </MudText>
+
+        <MudChip T="string"
+                 Size="Size.Small"
+                 Variant="Variant.Filled"
+                 Class="osl-version-chip">
+            v2.0.0
+        </MudChip>
+
+        <MudImage Src="favicon.ico"
+                  Alt="OSL Logo"
+                  Style="height:26px;width:auto;margin:0 10px;" />
+
+        <MudSpacer />
+        <MudTooltip Text="Light/Dark"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@DarkLightModeButtonIcon"
+                           Color="Color.Primary"
+                           OnClick="DarkModeToggle" />
+        </MudTooltip>
+
+        <MudTooltip Text="GitHub"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub"
+                           Color="Color.Primary"
+                           Href="https://github.com/Sky-CSC/OSL"
+                           Target="_blank" />
+        </MudTooltip>
+
+        <MudTooltip Text="Bug report"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Material.Filled.BugReport"
+                           Color="Color.Primary"
+                           Href="https://github.com/Sky-CSC/OSL/issues"
+                           Target="_blank" />
+        </MudTooltip>
+        <MudTooltip Text="Documentation"
+                    Placement="Placement.Bottom"
+                    Arrow="true"
+                    Delay="300">
+            <MudIconButton Icon="@Icons.Material.Filled.HelpOutline"
+                           Color="Color.Primary"
+                           Href="https://doc.osl.sky-csc.fr"
+                           Target="_blank" />
+        </MudTooltip>
+
+    </MudAppBar>
+
+    <MudDrawer id="nav-drawer"
+               @bind-Open="_drawerOpen"
+               Variant="DrawerVariant.Responsive"
+               ClipMode="DrawerClipMode.Always"
+               Elevation="0">
+
+        <NavMenu />
+        <MudDivider />
+        <div class="d-flex justify-center pa-3">
+            <MudLink Href="https://github.com/Sky-CSC/OSL/"
+                     Typo="Typo.caption"
+                     Target="_blank">
+                OSL © 2026
+            </MudLink>
+        </div>
+
+    </MudDrawer>
+
+    <MudMainContent Class="pt-16 pa-4">
+
+        @Body
+
+    </MudMainContent>
+
+</MudLayout>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
+
+@code {
+
+    private bool _drawerOpen = true;
+
+    private bool _isDarkMode = false;
+
+    private MudTheme? _theme;
+
+    protected override void OnInitialized()
+    {
+        _theme = new MudTheme
+        {
+            PaletteLight = _lightPalette,
+
+            PaletteDark = _darkPalette,
+
+            LayoutProperties = new LayoutProperties
+            {
+                DrawerWidthLeft = "240px",
+
+                AppbarHeight = "56px",
+            }
+        };
+    }
+
+    private void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    private void DarkModeToggle()
+    {
+        _isDarkMode = !_isDarkMode;
+    }
+
+    public string DarkLightModeButtonIcon =>
+        _isDarkMode
+            ? Icons.Material.Outlined.LightMode
+            : Icons.Material.Outlined.DarkMode;
+
+    private readonly PaletteLight _lightPalette = new()
+    {
+        Primary = "#10B67B",
+        PrimaryContrastText = "#FFFFFF",
+
+        Secondary = "#63FBD6",
+        SecondaryContrastText = "#12302A",
+
+        Background = "#F4FCFA",
+        Surface = "#FFFFFF",
+
+        AppbarBackground = "#1E3733",
+        AppbarText = "#E9FFFA",
+
+        DrawerBackground = "#F9FDFC",
+        DrawerText = "#29423D",
+        DrawerIcon = "#10B67B",
+
+        TextPrimary = "#243433",
+        TextSecondary = "#5E7572",
+
+        Success = "#10B67B",
+        Warning = "#D6A73A",
+        Error = "#D65B5B",
+        Info = "#4DA6E7",
+
+        Divider = "#DCEBE7",
+
+        GrayLight = "#EDF6F4",
+        GrayLighter = "#F8FCFB",
+
+        ActionDefault = "#4B6762",
+        ActionDisabled = "#B2C3C0",
+        ActionDisabledBackground = "#E4EEEC",
+    };
+
+    private readonly PaletteDark _darkPalette = new()
+    {
+        Primary = "#63FBD6",
+        PrimaryContrastText = "#0D1B19",
+
+        Secondary = "#10B67B",
+        SecondaryContrastText = "#FFFFFF",
+
+        Background = "#151A1A",
+        BackgroundGray = "#1C2323",
+        Surface = "#202929",
+
+        AppbarBackground = "rgba(21,26,26,0.92)",
+        AppbarText = "#DDFCF6",
+
+        DrawerBackground = "#1A2020",
+        DrawerText = "#C4E7DF",
+        DrawerIcon = "#63FBD6",
+
+        TextPrimary = "#F1FFFC",
+        TextSecondary = "#A7C5BF",
+        TextDisabled = "#6F8782",
+
+        ActionDefault = "#63FBD6",
+        ActionDisabled = "#546765",
+        ActionDisabledBackground = "#283030",
+
+        GrayLight = "#293232",
+        GrayLighter = "#202929",
+
+        Info = "#64B5F6",
+        Success = "#10B67B",
+        Warning = "#E0B45C",
+        Error = "#E37B7B",
+
+        LinesDefault = "#313B3B",
+        TableLines = "#313B3B",
+        Divider = "#394142",
+
+        OverlayLight = "rgba(0,0,0,0.75)",
+    };
+}

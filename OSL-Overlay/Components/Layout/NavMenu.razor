@@ -1,0 +1,83 @@
+@using OSL_UI.Icons
+
+<MudNavMenu>
+    <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.MenuBook"><b>Home</b></MudNavLink>
+    <MudNavLink Href="config/websocket" Match="NavLinkMatch.Prefix" Icon="@CustomIcons.Custom.ServerNetwork"><b>OSL-Server Config</b></MudNavLink>
+    <MudNavLink Href="obs" Match="NavLinkMatch.Prefix" Icon="@CustomIcons.Custom.OBS"><b>OBS</b></MudNavLink>
+    @* <MudNavLink Href="gamestatus" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.SignalWifiStatusbarConnectedNoInternet4"><b>Game Status</b></MudNavLink> *@
+    <MudNavGroup Title="Teams" Icon="@Icons.Material.Filled.Diversity3" Expanded="false">
+        <MudNavLink Href="team" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Teams Config</MudNavLink>
+        <MudNavLink Href="team#blue-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Blue Team</MudNavLink>
+        <MudNavLink Href="team#red-side" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Red Team</MudNavLink>
+    </MudNavGroup>
+    <MudNavGroup Title="Texts" Icon="@Icons.Material.Filled.TextFields" Expanded="false">
+        <MudNavLink Href="text" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Modify texts</MudNavLink>
+        <MudNavLink Href="text#bo" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Bo</MudNavLink>
+        <MudNavLink Href="text#patch" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Patch</MudNavLink>
+        <MudNavLink Href="text#phase" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Phase</MudNavLink>
+        <MudNavLink Href="text#vs" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">VS</MudNavLink>
+
+    </MudNavGroup>
+    <MudNavGroup Title="Fearless" Icon="@Icons.Material.Filled.ImageNotSupported" Expanded="false">
+        <MudNavLink Href="fearless" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Fearless Config</MudNavLink>
+        <MudNavGroup Title="View 1" Icon="@Icons.Material.Filled.Preview" Expanded="false">
+            <MudNavGroup Title="Customize" Icon="@Icons.Material.Filled.Brush" Expanded="true">
+                <MudNavLink Href="fearless/view1/customize" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Customize Config</MudNavLink>
+                <MudNavLink Href="fearless/view1/customize#link" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Links</MudNavLink>
+                <MudNavLink Href="fearless/view1/customize#custom" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Customize</MudNavLink>
+            </MudNavGroup>
+        </MudNavGroup>
+        <MudNavGroup Title="View 2" Icon="@Icons.Material.Filled.Preview" Expanded="false">
+            <MudNavGroup Title="Customize" Icon="@Icons.Material.Filled.Brush" Expanded="true">
+                <MudNavLink Href="fearless/view2/customize" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Customize Config</MudNavLink>
+                <MudNavLink Href="fearless/view2/customize#link" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Links</MudNavLink>
+                <MudNavLink Href="fearless/view2/customize#custom" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Customize</MudNavLink>
+            </MudNavGroup>
+        </MudNavGroup>
+    </MudNavGroup>
+    <MudNavGroup Title="Runes" Icon="@CustomIcons.Custom.Rune" Expanded="false" Disabled="true">
+        <MudNavLink Href="rune" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Rune Config</MudNavLink>
+        <MudNavGroup Title="View 1" Icon="@Icons.Material.Filled.Preview" Expanded="false">
+            <MudNavGroup Title="Customize" Icon="@Icons.Material.Filled.Brush" Expanded="true">
+                <MudNavLink Href="rune/view1/customize" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Customize Config</MudNavLink>
+                <MudNavLink Href="rune/view1/customize#link" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Links</MudNavLink>
+                <MudNavLink Href="rune/view1/customize#custom" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Customize</MudNavLink>
+            </MudNavGroup>
+        </MudNavGroup>
+    </MudNavGroup>
+    <MudNavGroup Title="Champ Select" Icon="@Icons.Material.Filled.FactCheck" Expanded="false">
+        <MudNavLink Href="champselect" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Link">Champ Select links</MudNavLink>
+        <MudNavGroup Title="View 1" Icon="@Icons.Material.Filled.Preview" Expanded="false">
+            <MudNavGroup Title="Customize" Icon="@Icons.Material.Filled.Brush" Expanded="true">
+                <MudNavLink Href="champselect/view1/custom" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Customize Config</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#background" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Background</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#pick-background" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Pick Background</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#pick-champion-background" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Pick champion background</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#pick-blink" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Pick blink</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#pick-border" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Champion border</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#summoner-name" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Summoner name</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#summoner-spell" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Summoner Spell</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#lane" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Lane</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#timer" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Timer</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#patch" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Patch</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#coach" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Coach</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#ban" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Bans</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#teams" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Teams</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#bo" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Bo</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#phase" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Phase</MudNavLink>
+                <MudNavLink Href="champselect/view1/custom#vs" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.ChevronRight">Vs</MudNavLink>
+            </MudNavGroup>
+        </MudNavGroup>
+    </MudNavGroup>
+    <MudNavGroup Title="In Game" Icon="@Icons.Material.Filled.InsertChart" Expanded="false" Disabled="true">
+        <MudNavLink Href="ingame" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">In Game Config</MudNavLink>
+    </MudNavGroup>
+    <MudNavGroup Title="End Game" Icon="@Icons.Material.Filled.InsertChart" Expanded="false">
+        <MudNavLink Href="endgame" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">End Game Config</MudNavLink>
+        <MudNavGroup Title="View 1" Icon="@Icons.Material.Filled.Preview" Expanded="false">
+            <MudNavGroup Title="Customize" Icon="@Icons.Material.Filled.Brush" Expanded="true">
+                <MudNavLink Href="endgame/view1/custom" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Construction">Customize Config</MudNavLink>
+            </MudNavGroup>
+        </MudNavGroup>
+    </MudNavGroup>
+</MudNavMenu>

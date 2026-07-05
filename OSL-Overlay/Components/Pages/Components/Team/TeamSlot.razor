@@ -1,0 +1,24 @@
+@using OSL_Overlay.GameFlow.ChampSelect
+<div class="team @Class">
+    @if (Team.ShowLogo)
+    {
+        <Image Class="team-logo" Img="@Team.Logo" />
+    }
+    @if (Team.ShowName)
+    {
+        <Txt Class="team-name" Text="@Team.Name" />
+    }
+    @if (Team.ShowTag)
+    {
+        <Txt Class="team-tag" Text="@Team.Tag" />
+    }
+    @if (Team.BoGraphic.Show)
+    {
+        <BoGraphicSlot Class="bo-graphic" Bo="@Team.BoGraphic" />
+    }
+</div>
+
+@code {
+    [Parameter] public string Class { get; set; } = string.Empty;
+    [Parameter] required public GameFlow.Common.Team Team { get; set; }
+}

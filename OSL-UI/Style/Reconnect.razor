@@ -1,0 +1,119 @@
+@using Microsoft.JSInterop
+@using MudBlazor
+@inject IJSRuntime JS
+@implements IAsyncDisposable
+
+@if (_visible)
+{
+    <div class="osl-reconnect-overlay">
+
+        <MudPaper Class="pa-8 osl-reconnect-card" Elevation="10">
+
+            <MudStack Spacing="3" AlignItems="AlignItems.Center">
+
+                <MudProgressCircular Indeterminate="true" Color="Color.Primary" />
+
+                <MudText Typo="Typo.h5">@Title</MudText>
+
+                <MudText Typo="Typo.body2" Align="Align.Center">
+                    @Message
+                </MudText>
+
+                @if (_state == OSLReconnectState.Retrying)
+                {
+                    <MudText Color="Color.Warning">
+                        Retry in @_seconds s
+                    </MudText>
+                }
+
+                @if (_state == OSLReconnectState.Failed)
+                {
+                    <MudButton Variant="Variant.Filled"
+                               Color="Color.Primary"
+                               OnClick="Reload">
+                        Reload
+                    </MudButton>
+                }
+
+            </MudStack>
+
+        </MudPaper>
+
+    </div>
+}
+
+@code {
+
+    public enum OSLReconnectState
+    {
+        Connected,
+        Reconnecting,
+        Retrying,
+        Failed,
+        ReloadRequired
+    }
+
+    private DotNetObjectReference<Reconnect>? _obj;
+
+    private bool _visible;
+    private int _seconds;
+
+    private OSLReconnectState _state = OSLReconnectState.Connected;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+
+        _obj = DotNetObjectReference.Create(this);
+
+        await JS.InvokeVoidAsync("OSLReconnect.register", _obj);
+    }
+
+    [JSInvokable]
+    public Task OnReconnectUpdate(ReconnectPayload payload)
+    {
+        _state = payload.State switch
+        {
+            "Reconnecting" => OSLReconnectState.Reconnecting,
+            "Retrying" => OSLReconnectState.Retrying,
+            "Failed" => OSLReconnectState.Failed,
+            "ReloadRequired" => OSLReconnectState.ReloadRequired,
+            "Connected" => OSLReconnectState.Connected,
+            _ => _state
+        };
+
+        _seconds = payload.Seconds ?? 0;
+        _visible = _state != OSLReconnectState.Connected;
+
+        InvokeAsync(StateHasChanged);
+        return Task.CompletedTask;
+    }
+
+    private Task Reload()
+        => JS.InvokeVoidAsync("location.reload").AsTask();
+
+    public async ValueTask DisposeAsync()
+    {
+        _obj?.Dispose();
+    }
+
+    private string Title => _state switch
+    {
+        OSLReconnectState.Reconnecting => "Reconnecting...",
+        OSLReconnectState.Retrying => "Retrying connection...",
+        OSLReconnectState.Failed => "Connection failed",
+        OSLReconnectState.ReloadRequired => "Reload required",
+        _ => ""
+    };
+
+    private string Message => _state switch
+    {
+        OSLReconnectState.Reconnecting => "OSL Server is trying to restore connection.",
+        OSLReconnectState.Retrying => "Automatic retry in progress.",
+        OSLReconnectState.Failed => "Unable to reconnect to server.",
+        OSLReconnectState.ReloadRequired => "Please reload the application.",
+        _ => ""
+    };
+
+    public record ReconnectPayload(string State, int? Seconds);
+}

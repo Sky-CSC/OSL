@@ -1,0 +1,89 @@
+@using MudBlazor
+@using OSL_UI.Button
+@inject IDialogService DialogService
+
+@* ---------------- Style manager ---------------- *@
+<MudPaper Class="pa-2" Style="max-height:400px; overflow-y:auto;">
+
+    @* ---------------- Button for save on new file changes ---------------- *@
+    <SwitchButton Text="@Label"
+                  Icon="@Icons.Material.Filled.Save"
+                  BackgroundColor="@Colors.BlueGray.Darken4"
+                  HoverBackgroundColor="@Colors.BlueGray.Darken2"
+                  TextColor="@Colors.LightGreen.Accent3"
+                  OnClick="SaveFile"
+                  BorderRadius="5px"
+                  FontSize="15px"
+                  MaxWidth="350px;" />
+
+    <MudDivider Class="my-4" />
+
+    @* ---------------- Tables of files ---------------- *@
+    <MudTable Items="_files" Hover="true" Dense="true" Bordered="false" Class="flex-grow-1">
+        <RowTemplate>
+            <MudTr Style="@GetRowBackgroundStyle(context)">
+                <MudTd Style="@GetRowColorStyle(context)" DataLabel="Name">@context</MudTd>
+                <MudTd>
+                    @* Text for rename file *@
+                    <MudTextField T="string"
+                                  Value="@GetFileRename(context)"
+                                  Placeholder="New name"
+                                  Immediate="true"
+                                  ValueChanged="@(newValue => UpdateFileRename(context, newValue))" />
+                    <MudStack Row="true" Spacing="1" AlignItems="AlignItems.Center">
+                        @* Button for rename file *@
+                        <MudIconButton Icon="@Icons.Material.Filled.Edit"
+                                       Style="@($"color:{Colors.Orange.Default};")"
+                                       OnClick="@(() => RenameFile(context))"
+                                       Disabled="IsDefaultFile(HideRename, context)" />
+
+                        @* Button for delete file *@
+                        <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                       Style="@($"color:{Colors.Red.Darken4};")"
+                                       OnClick="@(() => ConfirmDelete(context))"
+                                       Disabled="IsDefaultFile(HideDelete, context)" />
+
+                        @* Button for select file *@
+                        <SwitchButton Text="@(IsSelected(context) ? "Selected" : "Select")"
+                                      Icon="@(IsSelected(context) ? Icons.Material.Filled.CenterFocusStrong : Icons.Material.Filled.CenterFocusWeak)"
+                                      BackgroundColor="@Colors.Teal.Darken4"
+                                      HoverBackgroundColor="@Colors.Teal.Darken2"
+                                      TextColor="@Colors.Teal.Lighten5"
+                                      OnClick="@(() => SelectFile(context))"
+                                      BorderRadius="5px"
+                                      FontSize="15px"
+                                      MaxHeight="40px"
+                                      MaxWidth="120px"
+                                      Disabled="HideSelect" />
+
+                        @* Button for duplicate file *@
+                        <SwitchButton Text="Duplicate"
+                                      Icon="@Icons.Material.Filled.ContentCopy"
+                                      BackgroundColor="@Colors.Blue.Darken4"
+                                      HoverBackgroundColor="@Colors.Blue.Darken2"
+                                      TextColor="@Colors.Blue.Lighten5"
+                                      OnClick="@(() => DuplicateFile(context))"
+                                      BorderRadius="5px"
+                                      FontSize="15px"
+                                      MaxHeight="40px"
+                                      MaxWidth="130px"
+                                      Disabled="HideDuplicate" />
+
+                        @* Button for save changes on file *@
+                        <SwitchButton Text="Save Changes"
+                                      Icon="@Icons.Material.Filled.Save"
+                                      BackgroundColor="@Colors.BlueGray.Darken4"
+                                      HoverBackgroundColor="@Colors.BlueGray.Darken2"
+                                      TextColor="@Colors.LightGreen.Accent3"
+                                      OnClick="@(() => SaveChanges(context))"
+                                      BorderRadius="5px"
+                                      FontSize="15px"
+                                      MaxHeight="40px"
+                                      MaxWidth="210px"
+                                      Disabled="IsDefaultFile(HideSave, context)" />
+                    </MudStack>
+                </MudTd>
+            </MudTr>
+        </RowTemplate>
+    </MudTable>
+</MudPaper>

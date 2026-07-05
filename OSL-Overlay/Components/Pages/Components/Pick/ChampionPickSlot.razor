@@ -1,0 +1,41 @@
+@using OSL_Overlay.GameFlow.ChampSelect
+
+@* ---------------- Champion pick ---------------- *@
+<div class="champion" style="@Pick.BorderImage;">
+    @* ---------------- Player or champion picture ---------------- *@
+    <div class="image-wrapper">
+        <Image Class="background" Img="new(Pick.PlayerImage)" />
+        <Image Class="background" Img="new(Pick.ChampionImage)" />
+        @* ---------------- Piking or banning ---------------- *@
+        @if (Pick.IsPicking)
+        {
+            <Blink class="blink" Color="@Pick.BlinkColor" />
+        }
+
+        @* ---------------- Lane ---------------- *@
+        @if (Pick.ShowLane && Pick.IsPicking)
+        {
+            <Image Class="overlay lane" Img="new(Pick.LaneImage)" />
+        }
+    </div>
+
+    @* ---------------- Summoner Spells ---------------- *@
+    @if (Pick.ShowSummonerSpells)
+    {
+        <SummonerSpells Class="overlay spells" Spell1="@Pick.Spell1" Spell2="@Pick.Spell2" />
+    }
+
+    @* ---------------- Summoner Name ---------------- *@
+    <Txt Class="summoner-name" Text="@Pick.Name" />
+
+    @* ---------------- Summoner Action ---------------- *@
+    <Txt Class="overlay action" Text="@Pick.Action" />
+
+    @* ---------------- Champion Stats ---------------- *@
+    @* <ChampionStats PickText="@PickText" BanText="@BanText" WinText="@WinText" ChampionName="@ChampionName" /> *@
+
+</div>
+
+@code {
+    [Parameter] required public Pick Pick { get; set; }
+}

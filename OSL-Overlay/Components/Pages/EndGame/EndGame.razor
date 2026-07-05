@@ -1,0 +1,158 @@
+@page "/endgame"
+@using OSL_Overlay.GameFlow.EndGame
+@inject EndGameState EndGameState
+@implements IDisposable
+
+@* ---------------- End game management ---------------- *@
+<PageTitle>End Game - Management</PageTitle>
+
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>End Game management</b></MudText>
+<MudStack Row="true">
+    <StyleFieldEditor Label="Match Id"
+                      Type="text"
+                      Value="@_idMatch"
+                      ValueChanged="v => OnStyleChanged(val => _idMatch = val, v)"
+                      HelperText="Just Id not region prefix" />
+
+    <SwitchButton Icon="@Icons.Material.Filled.AddBox"
+                  Text="@($"Set match {_idMatch}")"
+                  OnClick="() => SetIdMatch()"
+                  BackgroundColor="@Colors.Teal.Darken4"
+                  HoverBackgroundColor="@Colors.Teal.Darken2"
+                  TextColor="#ffffff"
+                  MaxWidth="200px"
+                  MaxHeight="60px"
+                  BorderRadius="8px"
+                  FontSize="16px" />
+</MudStack>
+
+<br />
+
+@* ---------------- View links ---------------- *@
+<MudText id="link" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">End Game links</MudText>
+<SwitchButton Text="Link to view1"
+              Icon="@Icons.Material.Filled.InsertLink"
+              BackgroundColor="@Colors.BlueGray.Darken4"
+              HoverBackgroundColor="@Colors.BlueGray.Darken2"
+              TextColor="#FF0000"
+              Href="endgame/view1"
+              Target="_blank" />
+
+<br />
+
+<MudText id="link" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">End Game statistics</MudText>
+<MudCard Class="pa-3 mb-4">
+    <MudText Typo="Typo.subtitle1">Select a statistic</MudText>
+
+    <select @onchange="OnSelectChange"
+            style="width:100%;padding:12px;border:1px solid #ccc;font-size:14px;">
+
+        <option value="">-- Choose a metric --</option>
+
+        @foreach (var prop in EndGameState.ParticipantProperties)
+        {
+            <option value="@prop">@prop</option>
+        }
+
+    </select>
+</MudCard>
+
+<MudDivider Class="my-3" />
+
+<MudCard Class="pa-4 mb-4">
+    <MudText Typo="Typo.h6">
+        @EndGameState.Info.ChampionStats.Title.Txt
+    </MudText>
+</MudCard>
+
+<MudGrid Spacing="2">
+
+    <MudItem xs="12" md="6">
+        <MudCard Class="pa-4" Style="border-top:4px solid #0B849E;">
+
+            <MudText Typo="Typo.h6" Style="color:#0B849E;">
+                Blue Team
+            </MudText>
+
+            <MudStack Spacing="1">
+                @foreach (var player in EndGameState.Info.ChampionStats.BlueTeam)
+                {
+                    <MudPaper Class="pa-2"
+                              Elevation="0"
+                              Style="background:#06374212;border-radius:8px;">
+                        <MudText>@player.Stat.Txt</MudText>
+                    </MudPaper>
+                }
+            </MudStack>
+        </MudCard>
+    </MudItem>
+
+    <MudItem xs="12" md="6">
+        <MudCard Class="pa-4" Style="border-top:4px solid #BE1E37;">
+
+            <MudText Typo="Typo.h6" Style="color:#BE1E37;">
+                Red Team
+            </MudText>
+
+            <MudStack Spacing="1">
+                @foreach (var player in EndGameState.Info.ChampionStats.RedTeam)
+                {
+                    <MudPaper Class="pa-2"
+                              Elevation="0"
+                              Style="background:#410E1612;border-radius:8px;">
+                        <MudText>@player.Stat.Txt</MudText>
+                    </MudPaper>
+                }
+            </MudStack>
+        </MudCard>
+    </MudItem>
+</MudGrid>
+
+
+@code {
+    private string _idMatch = "7550999924";
+
+    protected override void OnInitialized()
+    {
+        EndGameState.OnChange += OnServiceChanged;
+    }
+
+    private void OnServiceChanged()
+    {
+        _ = InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        EndGameState.OnChange -= OnServiceChanged;
+    }
+
+    private void OnSelectChange(ChangeEventArgs e)
+    {
+        var selected = e.Value?.ToString();
+        if (!string.IsNullOrEmpty(selected))
+        {
+            EndGameState.UpdateTotalInfo(selected);
+            StateHasChanged();
+        }
+    }
+
+    private void OnStyleChanged(Action<string> setter, string newValue)
+    {
+        setter(newValue);
+        RefreshUI();
+    }
+
+    public async Task SetIdMatch()
+    {
+        await EndGameState.CustomSetMatch(Convert.ToInt64(_idMatch));
+        await EndGameState.CustomSetTimeline(Convert.ToInt64(_idMatch));
+
+    }
+
+    private void RefreshUI()
+    {
+        InvokeAsync(StateHasChanged);
+        EndGameState.NotifyStateChanged();
+    }
+}

@@ -1,0 +1,580 @@
+.end-game {
+    height: 2160px;
+    width: 3840px;
+    /*background: url("/data/backgrounds/fond-endgame.png");*/
+    background: linear-gradient(90deg, #063742 0%, #410E16 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+    /* .end-game .headband-timer {
+        position: absolute;
+        top: 100px;
+        left: 200px;
+        height: 210px;
+        width: 3450px;
+        display: flex;
+    }*/
+
+    .end-game .game-info {
+        position: absolute;
+        top: 350px;
+        left: 200px;
+        height: 1620px;
+        width: 3450px;
+        display: flex;
+        /*background: #00000055;*/
+    }
+
+        /* Container principal */
+        .end-game .game-info .game-stats {
+            width: 1500px;
+            height: 1620px;
+            /*margin: 0 auto;*/ /* centrage horizontal */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* centrage horizontal des éléments */
+            justify-content: flex-start;
+            /*background: red;*/
+            /*gap: 20px;*/ /* espace entre chaque ligne */
+            /*background-color: #1a1a1a;*/ /* juste pour voir la zone */
+        }
+
+            /* Titre */
+            .end-game .game-info .game-stats .game-stats-title {
+                width: 1400px;
+                height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 5px solid white;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 52px;
+                letter-spacing: 2px;
+            }
+
+/* Container général */
+.stat-image-slot,
+.stat-text-slot {
+    display: flex;
+    align-items: center; /* centrage vertical */
+    justify-content: center; /* centrage horizontal global */
+    width: 1400px;
+    height: 160px;
+    border-bottom: 5px solid white;
+    text-transform: uppercase;
+    color: white;
+    /*background-color: #2a2a2a;*/
+}
+
+    /* Chaque zone prend une largeur égale */
+    .stat-image-slot .blue-team,
+    .stat-image-slot .red-team,
+    .stat-image-slot .title,
+    .stat-text-slot .blue-team,
+    .stat-text-slot .red-team,
+    .stat-text-slot .title {
+        display: flex;
+        flex: 1; /* largeur égale pour chaque zone */
+        justify-content: end; /* centrer horizontalement le contenu */
+        align-items: center; /* centrer verticalement le contenu */
+        gap: 5px; /* espace interne entre éléments dans la zone */
+        min-width: 0; /* pour gérer le débordement si beaucoup d’images */
+    }
+
+    /* Titre */
+    .stat-image-slot .title,
+    .stat-text-slot .title {
+        justify-content: center; /* centrer horizontalement le contenu */
+        font-size: 50px;
+        text-align: center;
+        white-space: normal; /* permet à plusieurs mots de passer à la ligne */
+        word-break: break-word; /* coupe les mots trop longs si nécessaire */
+        line-height: 1.1; /* réduit un peu l’espacement vertical entre les lignes */
+        max-width: 200px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .stat-image-slot .red-team,
+    .stat-text-slot .red-team {
+        justify-content: start; /* centrer horizontalement le contenu */
+    }
+
+    .stat-image-slot .red-team {
+        flex-direction: row-reverse;
+    }
+    /* Texte côté équipe */
+    .stat-text-slot .blue-team,
+    .stat-text-slot .red-team {
+        font-size: 70px;
+    }
+
+    /* Images côté équipe */
+    .stat-image-slot .blue-team img,
+    .stat-image-slot .red-team img {
+        height: 105px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    /* Si une équipe n’a pas d’éléments, sa zone reste visible */
+    .stat-image-slot .blue-team:empty,
+    .stat-image-slot .red-team:empty,
+    .stat-text-slot .blue-team:empty,
+    .stat-text-slot .red-team:empty {
+        min-width: 0;
+    }
+
+    /* Réduction de l’espace entre title et les côtés */
+    .stat-image-slot .blue-team,
+    .stat-image-slot .red-team,
+    .stat-text-slot .blue-team,
+    .stat-text-slot .red-team {
+        margin: 0 5px; /* petit espace horizontal vers le title */
+    }
+
+
+.end-game .game-info .game-champion-stats {
+    width: 2000px;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.champion-stat-title {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.game-champion-stats-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colonnes égales */
+    justify-items: center;
+    align-items: start; /* top align pour aligner les lignes */
+    width: 99%;
+    height: 100%;
+    padding: 10px 60px;
+}
+
+.champion-stat.blue-team,
+.champion-stat.red-team {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+.player {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 150px;
+    letter-spacing: 2px;
+}
+
+.champion-stat.blue-team .player {
+    flex-direction: row;
+}
+
+.champion-stat.blue-team .player-image {
+    margin-right: 20px;
+}
+
+.champion-stat.red-team .player {
+    flex-direction: row-reverse;
+}
+
+.champion-stat.red-team .player-image {
+    margin-left: 20px;
+}
+
+.player-image {
+    /*width: 140px;*/
+    height: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+    .player-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.player-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 650px;
+}
+
+.player-name {
+    font-size: 35px;
+    font-weight: 700;
+    color: #ffffff;
+    /*text-transform: uppercase;*/
+}
+
+.player-stat {
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.player-bar {
+    height: 32px;
+    display: flex;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+    background-color: #1a1a1a; /* fond par défaut */
+}
+
+.champion-stat.blue-team .player-bar {
+    margin-left: 0; /* rien à changer */
+    justify-content: flex-start; /* facultatif */
+}
+
+.champion-stat.red-team .player-bar {
+    margin-left: auto; /* pousse la barre à droite */
+    justify-content: flex-end; /* contenu à droite */
+}
+
+.champion-stat.blue-team .player {
+    text-align: left;
+}
+
+.champion-stat.red-team .player {
+    text-align: right;
+}
+
+.player-bar {
+    transition: width 0.5s ease-in-out;
+}
+
+/*.mud-chart-line{
+    position:absolute;
+
+}*/
+
+.game-golds {
+    position: absolute;
+    top: 950px;
+    left: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centrage horizontal des éléments */
+    justify-content: flex-start;
+}
+
+.game-golds-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Layout principal ---------- */
+.headband-timer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* centre globalement le GameTime */
+    top: 100px;
+    left: 200px;
+    height: 210px;
+    width: 3450px;
+    box-sizing: border-box;
+}
+
+/* ---------- TeamSlot ---------- */
+.team {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0; /* pas d’espace entre les sous-éléments */
+}
+
+    /* --- Blue side (gauche) --- */
+    .team.blue-side {
+        margin-left: 40px; /* espace depuis le bord gauche */
+    }
+
+    /* --- Red side (droite) --- */
+    .team.red-side {
+        flex-direction: row-reverse; /* inversion de l’ordre */
+        margin-right: 40px; /* espace depuis le bord droit */
+    }
+
+/* ---------- Logo ---------- */
+.team-logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 150px;
+    width: 300px;
+}
+.red-side .team-logo {
+    justify-content: end;
+}
+
+    .team-logo img {
+        height: 150px;
+        width: auto;
+        object-fit: contain;
+    }
+
+/* ---------- Nom et Tag ---------- */
+.team-name, .team-tag {
+    font-weight: bold;
+    text-align: center;
+    font-size: 100px;
+    height: 150px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- BoGraphic ---------- */
+.team .bo-graphic {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    gap: 10px;
+}
+
+    .team .bo-graphic .bo-graphic-slot {
+        width: 70px;
+        height: 25px;
+        filter: grayscale(60%);
+    }
+
+/* ---------- Texte (Win / Loss / autre) ---------- */
+.text.headband {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    height: 150px;
+    width: 350px;
+    margin: 0; /* supprime tout espace entre les éléments */
+    /*background: red;*/
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    text-transform: uppercase;
+}
+
+/* ---------- GameTime (centré et empilé) ---------- */
+.timer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0;
+    flex-shrink: 0;
+    width: 570px;
+    text-transform: uppercase;
+    /*background: red;*/
+}
+
+.timer-title {
+    font-size: 50px;
+    line-height: 1;
+    margin: 0;
+}
+
+.timer-timer {
+    font-size: 120px;
+    line-height: 1;
+    margin: 0;
+}
+
+.game-event-info {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* gauche/droite normales */
+    top: 2000px;
+    left: 200px;
+    height: 100px;
+    width: 3450px;
+    box-sizing: border-box;
+}
+
+    /* --- Event à gauche --- */
+    .game-event-info .game-event-info-event {
+        margin-left: 20px;
+    }
+
+    /* --- Date à droite --- */
+    .game-event-info .game-event-info-date {
+        margin-right: 20px;
+    }
+
+    /* --- Phase centrée absolument --- */
+    .game-event-info .game-event-info-phase {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    /* --- Style texte général --- */
+    .game-event-info .text {
+        font-size: 50px;
+        white-space: nowrap; /* évite les retours à la ligne intempestifs */
+    }
+
+
+/* ---------- Layout principal ---------- */
+/*.headband-timer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    top: 100px;
+    left: 200px;
+    height: 210px;
+    width: 3450px;*/
+    /*background: red;*/
+/*}*/
+
+/*.end-game .headband-timer {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    height: 210px;
+    width: 3450px;
+    display: flex;
+}*/
+
+/* ---------- TeamSlot ---------- */
+/*.team {
+    display: flex;
+    flex-direction: row;*/ /* logo, nom, tag empilés verticalement */
+    /*align-items: center;
+    justify-content: center;*/
+    /*min-width: 150px;*/
+    /*margin-left: 30px;
+}
+
+    .team.red-side {
+        flex-direction: row-reverse;
+        margin-right: 30px;
+    }*/
+/*        .team.red-side .team-logo {
+            background: blue;
+            left: 0px;
+        }*/
+
+/*.team-logo {
+    height: 150px;
+    width: 350px;
+}
+
+    .team-logo img {
+        height: 150px;*/
+        /*width: 50px;*/
+    /*}
+
+.team-name, .team-tag {
+    font-weight: bold;
+    text-align: center;
+    font-size: 100px;
+    height: 150px;
+    width: 450px;*/
+    /*background:red;*/
+/*}
+
+.team .bo-graphic {*/
+    /*position: absolute;*/
+    /*top: 370px;*/
+    /*width: 200px;*/ /* prend toute la largeur disponible de la div parent */
+    /*max-width: 300px;*/ /* largeur max de la zone BO */
+    /*height: auto;*/ /* hauteur automatique selon le nombre de lignes */
+    /*height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;*/ /* centre horizontalement les slots sur chaque ligne */
+    /*align-content: center;*/ /* centre verticalement les lignes dans la div */
+    /*text-align: center;
+    column-gap: 10px;
+    row-gap: 10px;*/ /* espace vertical réduit entre les lignes */
+    /*padding: 15px 0;*/ /* petit padding pour plus de confort */
+    /*background: red;*/
+/*}
+
+    .team .bo-graphic .bo-graphic-slot {
+        width: 70px;
+        height: 25px;
+        filter: grayscale(60%);
+    }*/
+
+/* ---------- Texte (Win / Loss / autre) ---------- */
+/*.text.headband {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;*/
+    /*background: red;*/
+    /*height: 150px;
+    width: 350px;
+}*/
+
+/* ---------- GameTime (titre au-dessus du timer) ---------- */
+/*.timer-text {
+    display: flex;
+    flex-direction: column;*/ /* un au-dessus de l’autre */
+    /*align-items: center;
+    justify-content: center;
+    text-align: center;*/
+    /*background: red;*/
+/*}
+
+.timer-title {
+    font-size: 50px;
+    line-height: 1;
+}
+
+.timer-timer {
+    font-size: 120px;
+    line-height: 1;
+}*/

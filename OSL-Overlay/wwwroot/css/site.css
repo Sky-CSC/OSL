@@ -1,0 +1,26 @@
+.custom-nav-group-gif{
+    max-width: 640px;
+}
+
+.custom-nav-group > .mud-nav-link {
+    background-color: var(--mud-palette-primary);
+    color: white;
+    transition: background-color .2s ease;
+}
+
+    .custom-nav-group > .mud-nav-link:hover {
+        background-color: var(--mud-palette-primary-darken);
+        color: white;
+    }
+
+    /* Icon and arow */
+    .custom-nav-group > .mud-nav-link .mud-icon-root,
+    .custom-nav-group > .mud-nav-link .mud-nav-group-expand-icon {
+        color: white;
+    }
+
+    /* Hover */
+    .custom-nav-group > .mud-nav-link:hover .mud-icon-root,
+    .custom-nav-group > .mud-nav-link:hover .mud-nav-group-expand-icon {
+        color: white;
+    }

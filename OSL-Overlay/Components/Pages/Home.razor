@@ -1,0 +1,77 @@
+@page "/"
+
+<PageTitle>OSL-Overlay - Home </PageTitle>
+
+<MudText Typo="Typo.h3" GutterBottom="true">Welcome to OSL !</MudText>
+
+
+<MudText Class="mb-8">This application permite to display more and more information for yours League of Legends toornaments</MudText>
+
+<MudAlert Severity="Severity.Normal" ContentAlignment="HorizontalAlignment.Start">
+    You will find some information on this page, but the full documentation is available here:
+    <MudLink Href="https://doc.osl.sky-csc.fr" Target="_blank" Typo="Typo.body2" Color="Color.Primary">
+        <b>OSL web site documentation</b>
+    </MudLink>
+</MudAlert>
+
+
+<br />
+<MudText Typo="Typo.h4" GutterBottom="true">Requirements</MudText>
+<MudText Typo="Typo.body2">
+    <div class="doc-box doc-requirement">
+        <b>💻 To use this application you need :</b><br>
+        - <MudLink Href="https://github.com/Sky-CSC/OSL" Target="_blank">OSL-Server 2.0.0 or above</MudLink>
+        <br />
+        - <MudLink Href="https://obsproject.com/fr" Target="_blank">OBS or equivalent (display links for cast)</MudLink>
+    </div>
+</MudText>
+
+<br />
+<MudText Typo="Typo.h4" GutterBottom="true">Pages</MudText>
+
+<MudText Typo="Typo.h6" GutterBottom="true">OSL-Server config</MudText>
+<OSL_UI.Box.Tip Title="Configure OSL-Server"
+                Text="Enter correct IP, port and Token to connect OSL-Overlay to OSL-Server to share informations." />
+<br />
+<MudText Typo="Typo.h6" GutterBottom="true">OBS</MudText>
+<OSL_UI.Box.Tip Title="Display overlay in your cast app"
+                Text="List of all overlays urls." />
+<br />
+<MudText Typo="Typo.h6" GutterBottom="true">Teams</MudText>
+<OSL_UI.Box.Tip Title="Team information"
+                Text="Add, delete, modify teams informations.
+                    <br/> Choose 2 teams and logo, name and/or tags, pictures, ... displayed on differents overlays." />
+<br />
+
+<MudText Typo="Typo.h6" GutterBottom="true">Text</MudText>
+<OSL_UI.Box.Tip Title="Text information"
+                Text="Manage best of, patch, phase, vs text display in different overlays."/>
+
+<MudText Typo="Typo.h6" GutterBottom="true">Fearless</MudText>
+<OSL_UI.Box.Tip Title="Fearless mode"
+                Text="Display banned champs for game in fearless mode. Enter match id already played and set it."/>
+
+<br />
+<MudText Typo="Typo.h6" GutterBottom="true">Runes</MudText>
+<MudText Typo="Typo.body2">
+    <OSL_UI.Box.Build Title="Module currently under development"
+                      Text="Display players runes." />
+</MudText>
+<br />
+
+<MudText Typo="Typo.h6" GutterBottom="true">Champ Select</MudText>
+<OSL_UI.Box.Tip Title="Champ select information"
+                Text="Display curent ban pick information."/>
+<br />
+
+<MudText Typo="Typo.h6" GutterBottom="true">In Game</MudText>
+<MudText Typo="Typo.body2">
+    <OSL_UI.Box.Build Title="Module currently under development"
+                      Text="In game enables to display in game informations (gold, towers, items, objectives, ...)" />
+</MudText>
+<br />
+
+<MudText Typo="Typo.h6" GutterBottom="true">End Game</MudText>
+<OSL_UI.Box.Tip Title="End game statistics"
+                Text="Display end game information of a game. Enter match id and set it.
+<br/> It is possible to choose diferent statistics (by default is Damage Dealt To Champions)"/>
