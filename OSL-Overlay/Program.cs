@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.AspNetCore.Hosting.Server.Features;
 using MudBlazor.Services;
 using OSL_CDragon;
 using OSL_Overlay.Components;
@@ -12,6 +14,8 @@ using OSL_Overlay.GameFlow.Team;
 using OSL_Overlay.GameFlow.Vs;
 using OSL_Overlay.WebSocketClient;
 using OSL_Overlay.WebSocketClient.Handlers;
+using OSL_Utils;
+using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -73,6 +77,10 @@ builder.Services.AddSingleton<RuneView1State>();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+// Configure logging level from appsettings.json
+Logger.LogLevel = builder.Configuration
+    .GetValue("Logger:LogLevel", LoggingLevel.DEBUG);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -92,7 +100,6 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 // Before running the app, download assets (Champions, Items, Runes, EpicMonsters, Position, Font.)
-
 
 // Connect to the WebSocket server
 using (var scope = app.Services.CreateScope())
@@ -121,5 +128,47 @@ using (var scope = app.Services.CreateScope())
     var runeState = scope.ServiceProvider.GetRequiredService<RuneState>();
     var runeView1State = scope.ServiceProvider.GetRequiredService<RuneView1State>();
 }
-    
-app.Run();
+
+await app.StartAsync();
+
+var openBrowser = builder.Configuration.GetValue<bool>("OpenBrowserOnStartup");
+if (openBrowser)
+{
+    app.Lifetime.ApplicationStarted.Register(() =>
+    {
+        var addressesFeature = app.Services
+            .GetRequiredService<IServer>()
+            .Features
+            .Get<IServerAddressesFeature>();
+
+        var listeningAddress = addressesFeature?.Addresses.FirstOrDefault();
+        if (listeningAddress is null)
+        {
+            return;
+        }
+
+        var uri = new Uri(listeningAddress);
+
+        // Replace "localhost"/"0.0.0.0" by the LAN IP if available.
+        var ip = NetworkUtils.GetPreferredIPv4Address();
+        var targetUrl = ip is not null
+            ? $"{uri.Scheme}://{ip}:{uri.Port}"
+            : listeningAddress;
+
+        try
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = targetUrl,
+                UseShellExecute = true
+            });
+        }
+        catch
+        {
+            // Deliberately Silent: The Browser Failed to Open
+            // must never prevent the application from starting.
+        }
+    });
+}
+
+await app.WaitForShutdownAsync();
