@@ -13,7 +13,7 @@ namespace OSL_Utils
         /// <summary>
         /// Log level
         /// </summary>
-        public LoggingLevel LogLevel { get; set; }
+        public static LoggingLevel LogLevel { get; set; }
 
         /// <summary>
         /// Prefix context
@@ -38,9 +38,8 @@ namespace OSL_Utils
         /// </summary>
         /// <param name="contextPrefix">Prefixe context</param>
         /// <param name="logLevel">Log level</param>
-        public Logger(string contextPrefix = "", LoggingLevel? logLevel = null)
+        public Logger(string contextPrefix = "")
         {
-            LogLevel = logLevel ?? DefaultLoggingLevel;
             ContextPrefix = string.IsNullOrEmpty(contextPrefix) ? "" : contextPrefix + ".";
         }
 
