@@ -8,11 +8,9 @@
     <AssemblyName>$(AssemblyName.Replace(' ', '_'))</AssemblyName>
   </PropertyGroup>
 
-
   <ItemGroup>
     <PackageReference Include="MudBlazor" Version="9.6.0" />
   </ItemGroup>
-
 
   <ItemGroup>
     <ProjectReference Include="..\OSL-Lcu\OSL-Lcu.csproj" />
@@ -21,10 +19,16 @@
     <ProjectReference Include="..\OSL-UI\OSL-UI.csproj" />
   </ItemGroup>
 
-
   <ItemGroup>
     <Folder Include="Phases\EndGame\" />
     <Folder Include="Phases\ChampSelect\" />
     <Folder Include="Phases\InGame\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
