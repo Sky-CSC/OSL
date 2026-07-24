@@ -66,7 +66,9 @@ namespace OSL_CDragon
             CheckEpicMonstersData();
             // Check if fonts are downloaded
             CheckFontsData();
-            //Rajouter le télécharmenet des assets des runes, ban, logo et images pour l'affichage de l'application et des autres assets
+            // Check if bans are downloaded
+            CheckBansData();
+            //Rajouter le télécharmenet des assets des runes, logo et images pour l'affichage de l'application et des autres assets
             // Save data in local file
             SaveData();
             // Save info in local file
@@ -248,10 +250,19 @@ namespace OSL_CDragon
 
         public void CheckFontsData()
         {
-            // If epic monsters are not downloaded, download it
+            // If fonts are not downloaded, download it
             if (!Font(_data.Fonts))
             {
                 DownloadFontsData();
+            }
+        }
+
+        public void CheckBansData()
+        {
+            // If bans are not downloaded, download it
+            if (!Ban(_data.Bans))
+            {
+                DownloadBansData();
             }
         }
 
@@ -323,12 +334,21 @@ namespace OSL_CDragon
         }
 
         /// <summary>
-        /// Download epic monsters data
+        /// Download fonts data
         /// </summary>
         private void DownloadFontsData()
         {
             Fonts fonts = new();
             _data.Fonts = fonts.Download();
+        }
+
+        /// <summary>
+        /// Download bans data
+        /// </summary>
+        private void DownloadBansData()
+        {
+            Bans bans = new();
+            _data.Bans = bans.Download();
         }
 
         /// <summary>
@@ -404,6 +424,8 @@ namespace OSL_CDragon
                 OSL_Utils.Directory.Create("./wwwroot/assets/runes");
                 // Create font directiorie
                 OSL_Utils.Directory.Create("./wwwroot/assets/fonts");
+                // Create ban directiorie
+                OSL_Utils.Directory.Create("./wwwroot/assets/bans");
 
                 _logger.Log(LoggingLevel.INFO, nameof(CreateDirectories), "Directories created");
                 return true;

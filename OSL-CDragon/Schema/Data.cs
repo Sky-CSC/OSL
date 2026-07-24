@@ -25,6 +25,11 @@ namespace OSL_CDragon.Schema
         /// </summary>
         public List<Asset> Fonts { get; set; }
 
+        /// <summary>
+        /// List of bans
+        /// </summary>
+        public List<Asset> Bans { get; set; }
+
         public Ux Ux { get; set; }
 
         /// <summary>
@@ -36,6 +41,8 @@ namespace OSL_CDragon.Schema
             Positions = new();
             EpicMonsters = new();
             Fonts = [];
+            Bans = [];
+            Ux = new();
         }
     }
 }

@@ -61,6 +61,7 @@ namespace OSL_CDragon.Schema
             InGameScoreBoard,
             EndGame,
             Font,
+            Ban,
         }
     }
 }
