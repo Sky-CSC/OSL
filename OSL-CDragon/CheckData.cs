@@ -395,5 +395,30 @@ namespace OSL_CDragon
             }
             return true;
         }
+        /// <summary>
+        /// Check if all bans assets are downloaded
+        /// </summary>
+        /// <param name="bans"></param>
+        /// <returns></returns>
+        internal static bool Ban(List<Asset> bans)
+        {
+            if (bans.Count == 0)
+            {
+                return false;
+            }
+
+            var banPaths = bans.Select(ban => ban.Path);
+
+            foreach (string path in banPaths)
+            {
+                if (!OSL_Utils.File.Exist(path))
+                {
+                    _logger.Log(LoggingLevel.ERROR, nameof(Ban), $"Ban {path} not exist");
+                    return false;
+                }
+                _logger.Log(LoggingLevel.INFO, nameof(Ban), $"Ban {path} exist");
+            }
+            return true;
+        }
     }
 }
