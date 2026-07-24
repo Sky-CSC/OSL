@@ -22,6 +22,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add MudBlazor services
 builder.Services.AddMudServices();
 
+// Configure logging level from appsettings.json
+Logger.LogLevel = builder.Configuration
+    .GetValue("Logger:LogLevel", LoggingLevel.DEBUG);
+
 // Register the WebSocketClient as a singleton service
 builder.Services.AddSingleton<WebSocketClient>();
 
@@ -76,10 +80,6 @@ builder.Services.AddSingleton<RuneView1State>();
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
-// Configure logging level from appsettings.json
-Logger.LogLevel = builder.Configuration
-    .GetValue("Logger:LogLevel", LoggingLevel.DEBUG);
 
 var app = builder.Build();
 
