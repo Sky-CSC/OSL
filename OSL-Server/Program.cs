@@ -14,6 +14,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add MudBlazor services
 builder.Services.AddMudServices();
 
+Logger.LogLevel = builder.Configuration
+    .GetValue("Logger:LogLevel", LoggingLevel.DEBUG);
+
 // Configure LeagueClientConfig from appsettings.json
 builder.Services.Configure<LeagueClientConfig>(
     builder.Configuration.GetSection("LeagueClientConfig"));
@@ -37,9 +40,6 @@ builder.Services.AddSingleton<IMessageHandler, SpectatorCurentGameInfoByRiotId>(
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-
-Logger.LogLevel = builder.Configuration
-    .GetValue("Logger:LogLevel", LoggingLevel.DEBUG);
 
 var app = builder.Build();
 
