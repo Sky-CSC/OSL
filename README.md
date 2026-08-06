@@ -10,11 +10,11 @@
 [![MIT Licensed](https://img.shields.io/github/license/Sky-CSC/OSL?label=License&color=red)](https://github.com/Sky-CSC/OSL/blob/main/LICENSE)
 [![Wiki](https://img.shields.io/badge/Read-Documentation-cc5490.svg?logo=github)](https://sky-csc.github.io/OSL/)
 
-![Language](https://img.shields.io/badge/C%23-12.0-darkgreen?logo=)
+![Language](https://img.shields.io/badge/C%23-14.0-darkgreen?logo=)
 ![.Net-10.0](https://img.shields.io/badge/.NET-10.0-darkgreen?logo=)
 ![Framework](https://img.shields.io/badge/Framework-Blazor-darkgreen?logo=Blazor)
-![Platform server](https://img.shields.io/badge/Platform%20:%20OSL%20Server-Windows-darkgreen?logo=)
-![Platform overlay](https://img.shields.io/badge/Platform%20:%20OSL%20Overlay-Windows/Linux/Mac-darkgreen?logo=)
+![Application server](https://img.shields.io/badge/Application%20:%20OSL%20Server-Windows-darkgreen?logo=)
+![Application overlay](https://img.shields.io/badge/Application%20:%20OSL%20Overlay-Windows/Linux-darkgreen?logo=)
 
 ![lib](https://img.shields.io/badge/MudBlazor-9.6.0-darkgreen?logo=)
 ![lib](https://img.shields.io/badge/Newtonsoft.Json-13.0.4-darkgreen?logo=json)
@@ -24,105 +24,93 @@
 ![Riot api](https://img.shields.io/badge/Web%20API%20Riot-Riot-blue?logo=RiotGames)
 ![cdragon](https://img.shields.io/badge/CDragon%20API-CDragon-blue?logo=)
 
-This project allows you to display an overlay with additional information for your League of Legends stream
+OSL is an free open-source project that provides tools and libraries for working with League of Legends game data and building real-time overlays.
+The data recovery software and the overlay software are separate and can be deployed on multiple computer.
 
-Applications use various APIs to collect information about the game, champions, players, .....
+## **Features**
 
-# **Refactoring and improving code in progress**
+Is a short list of features, read [documentation](https://sky-csc.github.io/OSL/) for more information and tips.
 
-# **Roadmap / Features**
+### Available
 
-**[Customization :]()**
-<br>You can customize many things
-- Colors
-- Backgrounds
-- Fonts type and size
-- Borders
-- Information display time 
+* Champion Select overlay and customization
+* Fearless overlay
+* End Game overlay
+* Manage team information (name, tag, coach, logo, player name, player picture)
+* Display BO, Patch, Phase, Vs information (text)
 
-**[Team information :]()**
-- Name
-- Nickname
-- Coatch name
-- Logo
-- Group photo
-- Player photo
-- Number of wins and losses
+### In Development
 
-<br>
+* New Champion Select overlays
+* Fearless view customization
+* End Game view customization
+* New End Game overlays
+    * Display more stats for one player (Runes, items, stats)
+* Add In Game overlays
+* Add Runes overlays
 
-**[Champion Selection (4 view) :]()**
-- Banned and selected champion
-- Summoners names
-- Team information
-- Timer ban/select/waiting
-- Summoners Spell
-- Champion statistics (winrate/pickrate/banrate)
+## **Repository**
 
-<br>
+Source code:
 
-**[In Game :]()**
-<br>[With riot overlay (4 view) :]()
-- Dragon, Baron, Herald, Elder, Voidgrubs :
-    - Frame
-    - Logo
-    - Killed
-    - Soul/Buff/Count
-    - Timer
-- Team information and frame
-- Animations for level ups and item purchases
-- Inhibitor killed display (side, timer)
-- Leader boards for gold, level and xp
-- Custom frames
+> **GitHub:** https://github.com/Sky-CSC/OSL/
 
-[Without riot overlay (4 view):]()
-- Custom Scoreboard
-    - Kill
-    - Gold
-    - Gold diff
-- Dragon, Baron, Herald, Elder, Voidgrubs :
-    - Frame
-    - Logo
-    - Killed
-    - Soul/Buff/Count
-    - Timer
-- Team information and frame
-- Animations for level ups and item purchases
-- Inhibitor killed display (side, timer)
-- Leader boards for gold, level and xp
-- Custom frames
+## **Latest Release**
 
-<br>
+Download the latest stable version:
 
-**[End Game (3 view) :]()**
-- Team information
-- Banned and selected champion
-- KDA/Gold/Tower/Dragon/Elder/Herald/Baron/Voidgrubs
-- Gold Diff
-- Items purchases
-- Général information : assists, barracks killed, champions killed, gold earned, largest critical strike, largest killing spree, largest multi kill, level, magic damage dealt player, magic damage dealt to champions, magic damage taken, minions killed, num deaths, physical damage dealt player, physical damage dealt to champions, physical damage taken, total damage dealt, total damage dealt to buildings, total damage dealt to champions, total damage dealt to objectives, total damage dealt to turrets, total damage self mitigated, total damage shielded on teammates, total damage taken, total heal, total heal on teammates, total time crowd control dealt, true damage dealt player, true damage dealt to champions, true damage taken, turrets killed, vision score, ward killed, ward placed
+> **Latest Release:** https://github.com/Sky-CSC/OSL/releases/latest
 
-<br>
+## **OSL Server**
 
-**[Runes (1 view):]()**
-- Display runes and shards lane vs lane :
-    - Jungle 
-    - Mid
-    - Adc
-    - Support
-    - Adc and support
-- Display fundamental rune of all sommoners
+The OSL Server is responsible for collecting League of Legends data and distributing it to connected clients in real time. It acts as the central component of the platform, exposing game information through WebSockets for overlays and other applications.
 
-# **Documentation**
+> Home
+> ![OSL Server Home](./OSL-Doc/pictures/osl-server-home.png)
+
+---
+
+## **OSL Overlay**
+
+The OSL Overlay is a web-based application that displays live game information received from the OSL Server. It provides a collection of customizable overlays.
+> Home
+> ![OSL Server Home](./OSL-Doc/pictures/osl-overlay-home.png)
+
+> Champ Select
+> ![OSL Server Champ Select](./OSL-Doc/pictures/osl-overlay-champselect.png)
+
+> Fearless
+> ![OSL Server Fearless](./OSL-Doc/pictures/osl-overlay-fearless-1-0.png)
+> ![OSL Server Fearless](./OSL-Doc/pictures/osl-overlay-fearless-1-1.png)
+> ![OSL Server Fearless](./OSL-Doc/pictures/osl-overlay-fearless-2.png)
+
+> End Game
+> ![OSL Server End Game](./OSL-Doc/pictures/osl-overlay-endgame.png)
+
+## **Documentation**
 Applications, riot api and installation documentation. **[Link documentation](https://sky-csc.github.io/OSL/)**
 
-# **Getting Started**
+## **Getting Started**
 
-**Installation**
+### **Installation**
 
-coming soon
+- Download [Latest Release](https://github.com/Sky-CSC/OSL/releases/latest)
+- Run `OSL-Server.exe`, a web page opens automatically when the application is launched
+- Run `OSL-Overlay.exe`, a web page opens automatically when the application is launched
 
-# Thanks to these projets and community
+The two applications do not need to be on the same computer to work. You just need to change the IP address and/or port in the dedicated web interface (OSL-Overlay -> OSL-Server Config).
+
+### **OBS**
+- Go to `OBS` web pages of `OSL-Overlay`
+- Copy url on `OBS application`
+
+> [!CAUTION]
+> Use only http links, not https. OSB does not support https links.
+
+> ![OBS](./OSL-Doc/pictures/obs-example.gif)
+
+
+## **Thanks to these projets and community**
 ### [BlossomiShymae](https://github.com/BlossomiShymae)
 
 [Needlework.Net](https://github.com/BlossomiShymae/Needlework.Net) (A .NET helper development tool for the LCU and Game Client!)
@@ -155,11 +143,11 @@ coming soon
 
 [LiveEventsDocumentation](https://github.com/SkinSpotlights/LiveEventsDocumentation) (Minimalist documentation of live events)
 
-# **License**
+## **License**
 Distributed under the MIT License. See LICENSE for more information.
 
 
-# **Legal disclaimer**
+## **Legal disclaimer**
 OSL isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
 
 OSL was created under Riot Games' "Legal Jibber Jabber" policy using assets owned by Riot Games.  Riot Games does not endorse or sponsor this project.
