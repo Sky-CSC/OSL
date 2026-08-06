@@ -84,9 +84,12 @@
 
     private async Task CopyLink(string link)
     {
-        await JSRuntime.InvokeVoidAsync("navigator.clipboard.writeText", link);
+        var copied = await JSRuntime.InvokeAsync<bool>("copyText", link);
 
-        Snackbar.Add("Link copied to clipboard", Severity.Success);
+        if (copied)
+            Snackbar.Add("Link copied to clipboard", Severity.Success);
+        else
+            Snackbar.Add("Unable to copy the link.", Severity.Error);
     }
 
     protected override void OnInitialized()

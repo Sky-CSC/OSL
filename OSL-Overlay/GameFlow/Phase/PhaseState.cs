@@ -29,7 +29,7 @@ namespace OSL_Overlay.GameFlow.Phase
             _champSelectState = champSelectState;
             _endGameState = endGameState;
             Info.Phase.Txt = "Swiss Group - Round 1";
-            Info.Event.Txt = "2026 OSL 2.0.0";
+            Info.Event.Txt = "2026 OSL 2.1.1";
             Info.Date.Txt = "03 Juill";
             _champSelectState.UpdateInfoPhase(Info);
             _endGameState.UpdateInfoPhase(Info);
