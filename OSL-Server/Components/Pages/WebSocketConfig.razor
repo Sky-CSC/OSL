@@ -245,9 +245,12 @@
 
     private async Task CopyToken(string token)
     {
-        await JSRuntime.InvokeVoidAsync("navigator.clipboard.writeText", token);
+        var copied = await JSRuntime.InvokeAsync<bool>("copyText", token);
 
-        Snackbar.Add("Token copied to clipboard", Severity.Success);
+        if (copied)
+            Snackbar.Add("Token copied to clipboard", Severity.Success);
+        else
+            Snackbar.Add("Unable to copy the Token.", Severity.Error);
     }
 
     private async Task RestartWebSocketServer()
