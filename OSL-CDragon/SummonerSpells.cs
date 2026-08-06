@@ -48,8 +48,9 @@ namespace OSL_CDragon
                     }
                     foreach (Schema.CDragon.SummonerSpell summonerSpell in summonerSpellSummary)
                     {
-                        // Process each item 
-                        _summonerSpell.Add(SummonerSpellAssets(summonerSpell));
+                        // Process each summoner spells containing the icon2d assets
+                        if (summonerSpell.IconPath.Contains("/Icons2D/"))
+                            _summonerSpell.Add(SummonerSpellAssets(summonerSpell));
                     }
                 }
                 catch (Exception ex)

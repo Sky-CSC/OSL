@@ -104,7 +104,7 @@ namespace OSL_CDragon
         /// </summary>
         /// <param name="id">Summoner Spell id</param>
         /// <returns>A <see cref="SummonerSpell"/> object if found; otherwise, null.</returns>
-        public SummonerSpell? GetSummonerSpell(int id)
+        public SummonerSpell? GetSummonerSpell(uint id)
         {
             return _data.Patchs[_indexPatch].Regions[_indexRegion].SummonerSpells.FirstOrDefault(spell => spell.Id == id) ?? null;
         }
