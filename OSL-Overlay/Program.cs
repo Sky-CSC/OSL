@@ -15,6 +15,7 @@ using OSL_Overlay.GameFlow.Vs;
 using OSL_Overlay.WebSocketClient;
 using OSL_Overlay.WebSocketClient.Handlers;
 using OSL_Utils;
+using OSL_Utils.Version;
 using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -76,6 +77,11 @@ builder.Services.AddSingleton<EndGameView1State>();
 // Runes
 builder.Services.AddSingleton<RuneState>();
 builder.Services.AddSingleton<RuneView1State>();
+
+// Version
+var versionPath = "./version.json";
+var version = VersionService.GetVersion(versionPath);
+builder.Services.AddSingleton(new VersionInfo { Version = version });
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

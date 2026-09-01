@@ -1,4 +1,6 @@
+@using OSL_Utils.Version
 @inherits LayoutComponentBase
+@inject VersionInfo VersionInfo
 
 <MudThemeProvider Theme="@_theme" IsDarkMode="_isDarkMode" />
 <MudPopoverProvider />
@@ -27,7 +29,7 @@
                  Size="Size.Small"
                  Variant="Variant.Filled"
                  Class="osl-version-chip">
-            v2.1.1
+            @_version
         </MudChip>
 
         <MudImage Src="favicon.ico"
@@ -108,12 +110,10 @@
 </div>
 
 @code {
-
     private bool _drawerOpen = true;
-
     private bool _isDarkMode = false;
-
     private MudTheme? _theme;
+    private string _version => $"v{VersionInfo.Version}";
 
     protected override void OnInitialized()
     {
