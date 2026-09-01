@@ -7,6 +7,7 @@ using OSL_Server.Services;
 using OSL_Server.WebSocketServer;
 using OSL_Server.WebSocketServer.Handlers;
 using OSL_Utils;
+using OSL_Utils.Version;
 using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,6 +37,11 @@ builder.Services.AddSingleton<IMessageHandler, FearlessGameMatchHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameMatchHandler>();
 builder.Services.AddSingleton<IMessageHandler, EndGameTimelineHandler>();
 builder.Services.AddSingleton<IMessageHandler, SpectatorCurentGameInfoByRiotId>();
+
+// Version
+var versionPath = "./version.json";
+var version = VersionService.GetVersion(versionPath);
+builder.Services.AddSingleton(new VersionInfo { Version = version });
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
