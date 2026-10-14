@@ -85,6 +85,9 @@ namespace OSL_Overlay.GameFlow.ChampSelect
             // Update champion bans in progress
             UpdateChampionBansInProgress(session);
 
+            // Update champion bans
+            UpdateChampionBans(session);
+
             // Update timers phase
             TimerPhase(session);
 
@@ -241,12 +244,16 @@ namespace OSL_Overlay.GameFlow.ChampSelect
                                 Info.BlueTeam.Bans[BluePickTurn.GetValueOrDefault(action.PickTurn)].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
                                 Info.BlueTeam.Bans[BluePickTurn.GetValueOrDefault(action.PickTurn)].IsCompleted = true;
                                 Info.BlueTeam.Bans[BluePickTurn.GetValueOrDefault(action.PickTurn)].IsBanning = false;
+                                if (!session.Bans.MyTeamBans.Contains(action.ChampionId))
+                                    session.Bans.MyTeamBans.Add(action.ChampionId);
                             }
                             else
                             {
                                 Info.RedTeam.Bans[RedPickTurn.GetValueOrDefault(action.PickTurn)].ChampionImage = _cdragon.GetChampionSquare(action.ChampionId);
                                 Info.RedTeam.Bans[RedPickTurn.GetValueOrDefault(action.PickTurn)].IsCompleted = true;
                                 Info.RedTeam.Bans[RedPickTurn.GetValueOrDefault(action.PickTurn)].IsBanning = false;
+                                if (!session.Bans.TheirTeamBans.Contains(action.ChampionId))
+                                    session.Bans.TheirTeamBans.Add(action.ChampionId);
                             }
                         }
                     }
