@@ -1,77 +1,45 @@
-using Newtonsoft.Json;
 using OSL_CDragon.Schema;
-using OSL_Utils;
+using Dto = OSL_CDragon.Schema.CDragon;
+using Logger = OSL_Utils.Logger;
+using LoggingLevel = OSL_Utils.LoggingLevel;
 
-namespace OSL_CDragon
+namespace OSL_CDragon;
+
+/// <summary>Builds the item catalog and queues the 2D icons.</summary>
+internal static class Items
 {
-    /// <summary>
-    /// Download items data.
-    /// </summary>
-    /// <param name="info"></param>
-    internal class Items(Info info)
+    private static readonly Logger _logger = new("Items");
+
+    internal static async Task<List<Item>> PlanAsync(SyncContext context)
     {
-        /// <summary>
-        /// The logger
-        /// </summary>
-        private static readonly Logger _logger = new("Items");
-
-        /// <summary>
-        /// The download manager.
-        /// </summary>
-        private static readonly Download _download = new();
-        /// <summary>
-        /// The information fort download assets.
-        /// </summary>
-        private Info _info = info;
-        /// <summary>
-        /// The list of items.
-        /// </summary>
-        private readonly List<Item> _items = [];
-
-        /// <summary>
-        /// Download items data.
-        /// </summary>
-        /// <returns>list of items</returns>
-        internal List<Item> Download()
+        var source = await context.GetJsonAsync<List<Dto.Item>>(context.RegionalUrl("v1/items.json")).ConfigureAwait(false);
+        if (source is null)
         {
-            Uri urlItems = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/items.json");
-            string? items = _download.StringAsync(urlItems).Result;
-            if (items != null)
+            _logger.Log(LoggingLevel.ERROR, nameof(PlanAsync), "Item list not available");
+            return [];
+        }
+
+        var items = new List<Item>(source.Count);
+        foreach (Dto.Item item in source)
+        {
+            string iconPath = string.Empty;
+            string? relative = AssetPaths.AfterLast(item.IconPath, "/Icons2D/");
+            if (relative is not null)
             {
-                try
-                {
-                    List<Schema.CDragon.Item>? itemSummary = JsonConvert.DeserializeObject<List<Schema.CDragon.Item>>(items);
-                    if (itemSummary == null)
-                    {
-                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Items not downloaded");
-                        return _items;
-                    }
-                    foreach (Schema.CDragon.Item item in itemSummary)
-                    {
-                        // Process each item 
-                        _items.Add(ItemAssets(item));
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Items not downloaded : {ex.Message}");
-                    return _items;
-                }
+                iconPath = context.Queue(
+                    context.DefaultUrl($"assets/items/icons2d/{relative}"),
+                    $"{context.RegionDir}/items/{item.Id}.png");
             }
-            return _items;
+
+            items.Add(new Item(item.Id, item.Name, iconPath, item.From, item.To));
         }
 
-        /// <summary>
-        /// Download item icons2d assets.
-        /// </summary>
-        /// <param name="itemCDragon">CDragon item info</param>
-        /// <returns>Item</returns>
-        private Item ItemAssets(Schema.CDragon.Item itemCDragon)
-        {
-            string itemName = itemCDragon.IconPath.Split("/Icons2D/")[^1].ToLower();
-            Uri urlItem = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/{itemName}");
-            Item item = new(itemCDragon.Id, itemCDragon.Name, _download.DownloadFile(urlItem, $"{_info.AssetsDir}/items", $"{itemCDragon.Id}.png"), itemCDragon.From, itemCDragon.To);
-            return item;
-        }
+        return items;
+    }
+
+    internal static void VerifyFiles(IEnumerable<Item> items)
+    {
+        foreach (Item item in items)
+            item.IconPath = AssetPaths.ExistingOrEmpty(item.IconPath);
     }
 }

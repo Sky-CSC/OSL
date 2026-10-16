@@ -1,130 +1,69 @@
-using Newtonsoft.Json;
 using OSL_CDragon.Schema;
-using OSL_Utils;
+using Dto = OSL_CDragon.Schema.CDragon;
+using Logger = OSL_Utils.Logger;
+using LoggingLevel = OSL_Utils.LoggingLevel;
 
-namespace OSL_CDragon
+namespace OSL_CDragon;
+
+/// <summary>Builds the rune catalog (perks and perk styles) and queues the icons.</summary>
+internal static class Perks
 {
-    /// <summary>
-    /// Donwload perks data.
-    /// </summary>
-    /// <param name="info"></param>
-    internal class Perks(Info info)
+    private static readonly Logger _logger = new("Perks");
+
+    /// <summary>Perks that must not be exposed (unused or removed runes).</summary>
+    private static readonly HashSet<int> _ignored =
+    [
+        7000, 8006, 8007, 8016, 8109, 8114, 8115, 8127, 8205, 8207, 8208, 8220, 8318, 8319, 8320, 8344, 8414, 8415, 8416, 8454,
+    ];
+
+    internal static async Task<List<Perk>> PlanAsync(SyncContext context)
     {
-        /// <summary>
-        /// The logger
-        /// </summary>
-        private static readonly Logger _logger = new("Perks");
+        Task<List<Dto.Perk>?> perksTask = context.GetJsonAsync<List<Dto.Perk>>(context.RegionalUrl("v1/perks.json"));
+        Task<Dto.PerkStyle?> stylesTask = context.GetJsonValueAsync<Dto.PerkStyle>(context.RegionalUrl("v1/perkstyles.json"));
+        await Task.WhenAll(perksTask, stylesTask).ConfigureAwait(false);
 
-        /// <summary>
-        /// The download manager.
-        /// </summary>
-        private static readonly Download _download = new();
-        /// <summary>
-        /// The information fort download assets.
-        /// </summary>
-        private Info _info = info;
-        /// <summary>
-        /// The list of Perks.
-        /// </summary>
-        private readonly List<Perk> _perks = [];
+        var perks = new List<Perk>();
 
-        /// <summary>
-        /// Download perks data.
-        /// </summary>
-        /// <returns>List of perks</returns>
-        internal List<Perk> Download()
+        if (perksTask.Result is { } sourcePerks)
         {
-            Perk();
-            PerkStyle();
-            return _perks;
+            foreach (Dto.Perk perk in sourcePerks.Where(perk => !_ignored.Contains(perk.Id)))
+                perks.Add(PlanPerk(context, perk.Id, perk.Name, perk.IconPath));
+        }
+        else
+        {
+            _logger.Log(LoggingLevel.ERROR, nameof(PlanAsync), "Perk list not available");
         }
 
-        /// <summary>
-        /// Download the perks data.
-        /// </summary>
-        private void Perk()
+        if (stylesTask.Result?.Styles is { } styles)
         {
-            Uri urlPerks = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/perks.json");
-            string? perks = _download.StringAsync(urlPerks).Result;
-            if (perks != null)
-            {
-                try
-                {
-                    List<Schema.CDragon.Perk>? perkSummary = JsonConvert.DeserializeObject<List<Schema.CDragon.Perk>>(perks);
-                    if (perkSummary == null)
-                    {
-                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Perks not downloaded");
-                        return;
-                    }
-                    // Perks to ignore
-                    int[] perksToIgnore = { 7000, 8006, 8007, 8016, 8109, 8114, 8115, 8127, 8205, 8207, 8208, 8220, 8318, 8319, 8320, 8344, 8414, 8415, 8416, 8454 };
-                    foreach (Schema.CDragon.Perk perk in perkSummary)
-                    {
-                        // Process each perk
-                        if (!perksToIgnore.Contains(perk.Id))
-                        {
-                            _perks.Add(PerkAssets(perk));
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Perks not downloaded : {ex.Message}");
-                    return;
-                }
-            }
+            foreach (Dto.Style style in styles)
+                perks.Add(PlanPerk(context, style.Id, style.Name, style.IconPath));
+        }
+        else
+        {
+            _logger.Log(LoggingLevel.ERROR, nameof(PlanAsync), "Perk style list not available");
         }
 
-        /// <summary>
-        /// Download the perk sytles data.
-        /// </summary>
-        private void PerkStyle()
+        return perks;
+    }
+
+    private static Perk PlanPerk(SyncContext context, int id, string name, string iconPath)
+    {
+        string? relative = AssetPaths.AfterLast(iconPath, "/perk-images/");
+        string destination = string.Empty;
+        if (relative is not null)
         {
-            Uri urlPerksStyle = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/perkstyles.json");
-            string? perksStyle = _download.StringAsync(urlPerksStyle).Result;
-            if (perksStyle != null)
-            {
-                try
-                {
-                    Schema.CDragon.PerkStyle perkStyleSummary = JsonConvert.DeserializeObject<Schema.CDragon.PerkStyle>(perksStyle);
-                    foreach (Schema.CDragon.Style perkStyle in perkStyleSummary.Styles)
-                    {
-                        // Process each perk style
-                        _perks.Add(PerkAssets(perkStyle));
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"PerksStyle not downloaded : {ex.Message}");
-                    return;
-                }
-            }
+            destination = context.Queue(
+                context.DefaultUrl($"v1/perk-images/{relative}"),
+                $"{context.RegionDir}/perks/{id}.png");
         }
 
-        /// <summary>
-        /// Download the perk or perk sytles images assets.
-        /// </summary>
-        /// <param name="perkCDragon">CDragon perk or perk style info</param>
-        /// <returns>perk</returns>
-        private Perk PerkAssets(dynamic perkCDragon)
-        {
-            string perkPathName = perkCDragon.IconPath;
-            perkPathName = perkPathName.Split("/perk-images/")[^1].ToLower();
-            Uri urlPerk = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/v1/perk-images/{perkPathName}");
+        return new Perk(id, name, destination);
+    }
 
-            string dir = OSL_Utils.Path.GetDirectoryName($"perks/{perkPathName}");
-            //Folder to concerve, remove last folder if not in the list
-            string[] lastFolders = { "inspiration", "precision", "resolve", "sorcery", "domination", "statmods" };
-            if (!lastFolders.Contains(dir.Split("/")[^1]))
-            {
-                dir = dir.Replace(dir.Split("/")[^1], "");
-            }
-
-            string fullPerkDir = OSL_Utils.Path.Combine(_info.AssetsDir, dir);
-            OSL_Utils.Directory.Create(fullPerkDir);
-
-            Perk perk = new(perkCDragon.Id, perkCDragon.Name, _download.DownloadFile(urlPerk, fullPerkDir, $"{perkCDragon.Id}.png"));
-            return perk;
-        }
+    internal static void VerifyFiles(IEnumerable<Perk> perks)
+    {
+        foreach (Perk perk in perks)
+            perk.IconPath = AssetPaths.ExistingOrEmpty(perk.IconPath);
     }
 }

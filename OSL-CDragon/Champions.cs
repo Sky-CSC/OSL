@@ -1,231 +1,127 @@
-using Newtonsoft.Json;
 using OSL_CDragon.Schema;
-using OSL_CDragon.Schema.CDragon;
-using OSL_Utils;
+using Dto = OSL_CDragon.Schema.CDragon;
+using Logger = OSL_Utils.Logger;
+using LoggingLevel = OSL_Utils.LoggingLevel;
 
-namespace OSL_CDragon
+namespace OSL_CDragon;
+
+/// <summary>
+/// Builds the champion catalog: reads the champion list and each champion detail, and queues the files to download
+/// (square portrait, optional voice-overs, skin images).
+/// </summary>
+internal static class Champions
 {
-    /// <summary>
-    /// Download champions data from the CommunityDragon API.
-    /// </summary>
-    /// <param name="info"></param>
-    internal class Champions(Info info)
+    private static readonly Logger _logger = new("Champions");
+
+    internal static async Task<List<Champion>> PlanAsync(SyncContext context)
     {
-        /// <summary>
-        /// The logger.
-        /// </summary>
-        private static readonly Logger _logger = new("Champions");
-
-        /// <summary>
-        /// The download manager.
-        /// </summary>
-        private static readonly Download _download = new();
-        /// <summary>
-        /// The information for download the assets.
-        /// </summary>
-        private Info _info = info;
-        /// <summary>
-        /// The list of champions.
-        /// </summary>
-        private readonly List<Schema.Champion> _champions = [];
-        /// <summary>
-        /// The champion.
-        /// </summary>
-        private Schema.Champion _champion = new();
-
-        /// <summary>
-        /// Download the champions data.
-        /// </summary>
-        /// <returns>List of champion</returns>
-        internal List<Schema.Champion> Download()
+        var summaries = await context.GetJsonAsync<List<Dto.ChampionSummary>>(context.RegionalUrl("v1/champion-summary.json")).ConfigureAwait(false);
+        if (summaries is null || summaries.Count == 0)
         {
-            Uri urlChampions = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champion-summary.json");
-            string? champions = _download.StringAsync(urlChampions).Result;
-            if (champions != null)
-            {
-                try
-                {
-                    List<ChampionSummary>? championSummary = JsonConvert.DeserializeObject<List<ChampionSummary>>(champions);
-                    if (championSummary == null)
-                    {
-                        _logger.Log(LoggingLevel.ERROR, nameof(Download), "Champions not downloaded");
-                        return [];
-                    }
-                    foreach (ChampionSummary champion in championSummary)
-                    {
-                        _champion = new(champion.Id);
-                        // Process each champion
-                        CreateDirectory();
-                        ChampionAssets();
-                        _champions.Add(_champion);
-                    }
-                    return _champions;
-                }
-                catch (Exception e)
-                {
-                    _logger.Log(LoggingLevel.ERROR, nameof(Download), $"Champions not downloaded : {e.Message}");
-                    return [];
-                }
-            }
-            else
-            {
-                _logger.Log(LoggingLevel.ERROR, nameof(Download), "Champions not downloaded");
-                return [];
-            }
+            _logger.Log(LoggingLevel.ERROR, nameof(PlanAsync), "Champion list not available");
+            return [];
         }
 
-        /// <summary>
-        /// Create the directory for the champion.
-        /// </summary>
-        private void CreateDirectory()
+        var champions = new Champion[summaries.Count];
+        var options = new ParallelOptions
         {
-            string championDir = OSL_Utils.Path.Combine(_info.AssetsDir, "champions", _champion.Id.ToString());
-            OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(championDir));
-            OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(championDir, "sounds"));
-            OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(championDir, "skins"));
-            OSL_Utils.Directory.Create(OSL_Utils.Path.Combine(championDir, "abilitys"));
+            MaxDegreeOfParallelism = context.MaxParallelism,
+            CancellationToken = context.CancellationToken,
+        };
+
+        await Parallel.ForEachAsync(Enumerable.Range(0, summaries.Count), options, async (index, _) =>
+        {
+            champions[index] = await PlanChampionAsync(context, summaries[index].Id).ConfigureAwait(false);
+        }).ConfigureAwait(false);
+
+        return [.. champions];
+    }
+
+    private static async Task<Champion> PlanChampionAsync(SyncContext context, int id)
+    {
+        var champion = new Champion(id);
+        string championDir = $"{context.RegionDir}/champions/{id}";
+
+        champion.SquarePortraitPath = context.Queue(
+            context.DefaultUrl($"v1/champion-icons/{id}.png"),
+            $"{championDir}/default-square.png");
+
+        // The "none" champion (-1) has no voice-over and no skin.
+        if (id != -1 && context.DownloadSounds)
+        {
+            string soundDir = $"{context.RegionDir}/champions/{id}/sounds";
+            champion.Sounds = new Sound
+            {
+                ChoosePath = context.Queue(context.RegionalUrl($"v1/champion-choose-vo/{id}.ogg"), $"{soundDir}/choose.ogg"),
+                BanPath = context.Queue(context.RegionalUrl($"v1/champion-ban-vo/{id}.ogg"), $"{soundDir}/ban.ogg"),
+                SfxPath = context.Queue(context.DefaultUrl($"v1/champion-sfx-audios/{id}.ogg"), $"{championDir}/sounds/sfx.ogg"),
+            };
         }
 
-        /// <summary>
-        /// Download square portrait, sound, skin assets.
-        /// </summary>
-        private void ChampionAssets()
+        Dto.Champion? maybeDetails = await context.GetJsonValueAsync<Dto.Champion>(context.RegionalUrl($"v1/champions/{id}.json")).ConfigureAwait(false);
+        if (maybeDetails is not { } details)
         {
-            //Download square portrait
-            SquarePortrait();
-            //Download songs
-            if (_champion.Id != -1)
-            {
-                Sound();
-            }
-
-            Uri urlChampion = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champions/{_champion.Id}.json");
-            string? champ = _download.StringAsync(urlChampion).Result;
-            if (champ != null)
-            {
-                try
-                {
-                    Schema.CDragon.Champion champCD = JsonConvert.DeserializeObject<Schema.CDragon.Champion>(champ);
-                    _champion.Name = champCD.Name;
-                    _champion.Alias = champCD.Alias;
-                    _champion.Roles = champCD.Roles;
-                    if (_champion.Id != -1 && champCD.Skins.Count > 0)
-                    {
-                        int nbSkinToDownload = _info.DownloadAllSkin ? champCD.Skins.Count : 1;
-                        for (int index = 0; index < nbSkinToDownload; index++)
-                        {
-                            //Dowload skins
-                            Skin(champCD.Skins[index]);
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-                    _logger.Log(LoggingLevel.ERROR, nameof(ChampionAssets), $"Champion {_champion.Id} not downloaded : {e.Message}");
-                }
-            }
+            _logger.Log(LoggingLevel.WARN, nameof(PlanChampionAsync), $"Details of champion {id} not available");
+            return champion;
         }
 
-        /// <summary>
-        /// Download the square portrait of the champion.
-        /// </summary>
-        private void SquarePortrait()
+        champion.Name = details.Name;
+        champion.Alias = details.Alias;
+        champion.Roles = details.Roles;
+
+        if (id != -1 && details.Skins is { Count: > 0 })
         {
-            Uri squarePortrait = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/{_champion.Id}.png");
-            _champion.SquarePortraitPath = DownloadFile(squarePortrait, _champion.Id, $"champions/{_champion.Id}", "default-square.png");
+            int skinCount = context.DownloadAllSkins ? details.Skins.Count : 1;
+            for (int index = 0; index < skinCount; index++)
+                champion.Skins.Add(PlanSkin(context, championDir, details.Skins[index]));
         }
 
-        /// <summary>
-        /// Download the sounds of the champion.
-        /// </summary>
-        private void Sound()
+        return champion;
+    }
+
+    private static Skin PlanSkin(SyncContext context, string championDir, Dto.Skin source)
+    {
+        string skinDir = $"{championDir}/skins/{source.Id}";
+        return new Skin(source.Id, source.IsBase)
         {
-            Uri soundChoose = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champion-choose-vo/{_champion.Id}.ogg");
-            Uri soundBan = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/{_info.Region}/v1/champion-ban-vo/{_champion.Id}.ogg");
-            Uri soundSfx = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/v1/champion-sfx-audios/{_champion.Id}.ogg");
+            Splashe = QueueSkinImage(context, source.SplashPath, $"{skinDir}/splashe.png"),
+            SplasheUncentered = QueueSkinImage(context, source.UncenteredSplashPath, $"{skinDir}/splashe-uncentered.png"),
+            Tile = QueueSkinImage(context, source.TilePath, $"{skinDir}/tile.png"),
+            LoadScreen = QueueSkinImage(context, source.LoadScreenPath, $"{skinDir}/loadscreen.png"),
+        };
+    }
 
-            Sound sound = new();
-            try
-            {
-                sound.ChoosePath = DownloadFile(soundChoose, _champion.Id, $"champions/{_champion.Id}/sounds", "choose.ogg");
-                sound.BanPath = DownloadFile(soundBan, _champion.Id, $"champions/{_champion.Id}/sounds", "ban.ogg");
-                sound.SfxPath = DownloadFile(soundSfx, _champion.Id, $"champions/{_champion.Id}/sounds", "sfx.ogg");
-                _logger.Log(LoggingLevel.INFO, nameof(Sound), $"Sounds of champion {_champion.Id} downloaded");
-            }
-            catch
-            {
-                _logger.Log(LoggingLevel.ERROR, nameof(Sound), $"Sounds of champion {_champion.Id} not downloaded");
-            }
-            _champion.Sounds = sound;
-        }
+    private static string QueueSkinImage(SyncContext context, string? sourcePath, string destination)
+    {
+        const string marker = "/ASSETS/";
+        if (string.IsNullOrEmpty(sourcePath))
+            return string.Empty;
 
-        /// <summary>
-        /// Download the skins of the champion.
-        /// </summary>
-        /// <param name="skinCD">CDragon information of skin</param>
-        private void Skin(Schema.CDragon.Skin skinCD)
+        int index = sourcePath.IndexOf(marker, StringComparison.OrdinalIgnoreCase);
+        if (index < 0)
+            return string.Empty;
+
+        string relative = sourcePath[(index + marker.Length)..].ToLowerInvariant();
+        return context.Queue(context.DefaultUrl($"{relative}"), destination);
+    }
+
+    /// <summary>Replaces by an empty string every path whose file is not on disk (not found or failed download).</summary>
+    internal static void VerifyFiles(IEnumerable<Champion> champions)
+    {
+        foreach (Champion champion in champions)
         {
-            Uri splashe = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.SplashPath)}");
-            Uri splasheUncentered = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.UncenteredSplashPath)}");
-            Uri tile = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.TilePath)}");
-            Uri loadScreen = new($"https://raw.communitydragon.org/{_info.ShortPatch}/plugins/rcp-be-lol-game-data/global/default/assets/{SplitAssetsToLower(skinCD.LoadScreenPath)}");
+            champion.SquarePortraitPath = AssetPaths.ExistingOrEmpty(champion.SquarePortraitPath);
+            champion.Sounds.ChoosePath = AssetPaths.ExistingOrEmpty(champion.Sounds.ChoosePath);
+            champion.Sounds.BanPath = AssetPaths.ExistingOrEmpty(champion.Sounds.BanPath);
+            champion.Sounds.SfxPath = AssetPaths.ExistingOrEmpty(champion.Sounds.SfxPath);
 
-            Schema.Skin skin = new(skinCD.Id, skinCD.IsBase);
-            try
+            foreach (Skin skin in champion.Skins)
             {
-                skin.Splashe = DownloadFile(splashe, skin.Id, $"champions/{_champion.Id}/skins/{skin.Id}", "splashe.png");
-                skin.SplasheUncentered = DownloadFile(splasheUncentered, skin.Id, $"champions/{_champion.Id}/skins/{skin.Id}", "splashe-uncentered.png");
-                skin.Tile = DownloadFile(tile, skin.Id, $"champions/{_champion.Id}/skins/{skin.Id}", "tile.png");
-                skin.LoadScreen = DownloadFile(loadScreen, skin.Id, $"champions/{_champion.Id}/skins/{skin.Id}", "loadscreen.png");
+                skin.Splashe = AssetPaths.ExistingOrEmpty(skin.Splashe);
+                skin.SplasheUncentered = AssetPaths.ExistingOrEmpty(skin.SplasheUncentered);
+                skin.Tile = AssetPaths.ExistingOrEmpty(skin.Tile);
+                skin.LoadScreen = AssetPaths.ExistingOrEmpty(skin.LoadScreen);
             }
-            catch
-            {
-                _logger.Log(LoggingLevel.ERROR, nameof(Skin), $"Skin {skin.Id} not downloaded");
-            }
-            _champion.Skins.Add(skin);
-        }
-
-        /// <summary>
-        /// Download a file from a URL.
-        /// </summary>
-        /// <param name="url">url</param>
-        /// <param name="id">champion id</param>
-        /// <param name="directory">directory to save file</param>
-        /// <param name="fileName">name of file</param>
-        /// <returns></returns>
-        private string DownloadFile(Uri url, int id, string directory, string fileName)
-        {
-            byte[]? data = _download.FileAsync(url).Result;
-            if (data != null)
-            {
-                try
-                {
-                    string path = OSL_Utils.Path.Combine(_info.AssetsDir, directory);
-                    string filePath = OSL_Utils.Path.Combine(path, fileName);
-                    if (OSL_Utils.Directory.Create(path))
-                    {
-                        OSL_Utils.File.Write(filePath, data);
-                        _logger.Log(LoggingLevel.INFO, "DownloadFile()", $"File {id} downloaded");
-                        return filePath;
-                    }
-                }
-                catch (Exception e)
-                {
-                    _logger.Log(LoggingLevel.ERROR, nameof(DownloadFile), $"File {id} not downloaded : {e.Message}");
-                }
-            }
-            _logger.Log(LoggingLevel.ERROR, nameof(DownloadFile), $"File {id} not downloaded");
-            return "";
-        }
-
-        /// <summary>
-        /// Split the assets path to lower.
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        private static string SplitAssetsToLower(string path)
-        {
-            return path.Split("/ASSETS/")[1].ToLower();
         }
     }
 }

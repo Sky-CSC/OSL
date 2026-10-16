@@ -26,6 +26,11 @@ namespace OSL_CDragon.Schema
         /// </summary>
         public List<Perk> Perks { get; set; }
         /// <summary>
+        /// True once every asset of the region has been downloaded (or does not exist on the server).
+        /// When false, the next synchronisation resumes the download; files already on disk are skipped.
+        /// </summary>
+        public bool IsComplete { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Region"/> struct.
         /// </summary>
         public Region()

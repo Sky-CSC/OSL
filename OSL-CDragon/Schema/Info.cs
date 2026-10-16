@@ -34,6 +34,18 @@ namespace OSL_CDragon.Schema
         /// </summary>
         public string AssetsDir { get; set; }
         /// <summary>
+        /// A value indicating whether champion voice-overs (choose, ban, sfx) are downloaded. They are not used by the overlay yet.
+        /// </summary>
+        public bool DownloadSounds { get; set; }
+        /// <summary>
+        /// Maximum number of simultaneous downloads.
+        /// </summary>
+        public int MaxParallelDownloads { get; set; }
+        /// <summary>
+        /// Number of patches kept on disk (the current one included). 0 disables the cleanup.
+        /// </summary>
+        public int RetainedPatches { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="Info"/> struct.
         /// </summary>
         public Info()
@@ -45,6 +57,9 @@ namespace OSL_CDragon.Schema
             Date = DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss");
             DownloadAllSkin = false;
             AssetsDir = "";
+            DownloadSounds = false;
+            MaxParallelDownloads = 8;
+            RetainedPatches = 2;
         }
     }
 }
