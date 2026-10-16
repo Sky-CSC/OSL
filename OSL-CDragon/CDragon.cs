@@ -73,12 +73,15 @@ public partial class CDragon
             _logger.Log(LoggingLevel.WARN, nameof(SetRegion), $"Unusable region '{locale}', ignored");
             return false;
         }
+        // Same region again (the server sends it at every reconnection): a manual choice must not be cancelled.
         if (string.Equals(region, _info.Region, StringComparison.Ordinal))
             return false;
         _logger.Log(LoggingLevel.INFO, nameof(SetRegion), $"Region changed from {_info.Region} to {region}");
         _info.Region = region;
-        // Instant switch when this region is already complete for the served patch.
-        string? servedPatch = _current?.Patch.ShortNumber;
+        // A new region is the new default: follow the latest patch again.
+        _info.PinnedShortPatch = null;
+        // Instant switch when this region is already complete for the latest patch on disk.
+        string? servedPatch = LatestInstalledPatch() ?? _current?.Patch.ShortNumber;
         RegionIndex? known = servedPatch is null ? null : FindIndex(_data, servedPatch, region);
         if (known is { Region.IsComplete: true })
         {
@@ -103,6 +106,11 @@ public partial class CDragon
         string value = locale.Trim();
         if (string.Equals(value, DefaultRegion, StringComparison.OrdinalIgnoreCase))
             return DefaultRegion;
+        // The "default" folder of CommunityDragon holds the English names: it is the folder of "en_us".
+        if (value.Equals(SharedRegion, StringComparison.OrdinalIgnoreCase)
+            || value.Equals("en_us", StringComparison.OrdinalIgnoreCase)
+            || value.Equals("en-us", StringComparison.OrdinalIgnoreCase))
+            return SharedRegion;
         return _localePattern.IsMatch(value) ? value.Replace('-', '_').ToLowerInvariant() : null;
     }
 
@@ -111,12 +119,19 @@ public partial class CDragon
     {
         _data = ReadJson<Data>(AssetPaths.DataFile) ?? new Data();
         _info = ReadJson<Info>(AssetPaths.InfoFile) ?? new Info();
+        _info.Region = NormalizeRegion(_info.Region) ?? DefaultRegion;
+        _info.ManualPatches ??= [];
         MergeDuplicatedPatches(_data);
 
-        _current = FindIndex(_data, _info.ShortPatch, _info.Region)
+        _current = FindIndex(_data, _info.PinnedShortPatch ?? _info.ShortPatch, _info.Region)
                    ?? _data.Patchs.AsEnumerable().Reverse()
                        .Select(patch => FindIndex(_data, patch.ShortNumber, _info.Region))
                        .FirstOrDefault(index => index is not null);
+
+        // The patch chosen by the user no longer exists on disk: back to the automatic mode.
+        if (_info.PinnedShortPatch is not null && _current?.Patch.ShortNumber != _info.PinnedShortPatch)
+            _info.PinnedShortPatch = null;
+        RefreshInstalled();
 
         _logger.Log(LoggingLevel.INFO, nameof(LoadFromDisk),
             _current is null ? "No asset available on disk yet" : $"Assets of patch {_current.Patch.ShortNumber} ({_info.Region}) loaded");
@@ -241,15 +256,17 @@ public partial class CDragon
     }
 
     /// <returns>True when the region is complete (nothing failed for a transient reason).</returns>
-    private async Task<bool> SyncRegionAsync(string patch, string shortPatch, CancellationToken cancellationToken)
+    private async Task<bool> SyncRegionAsync(string patch, string shortPatch, CancellationToken cancellationToken, string? requestedRegion = null)
     {
-        string region = _info.Region;
+        // A region asked by hand (download of an older patch) is never replaced by a fallback and never becomes the latest patch.
+        bool manual = requestedRegion is not null;
+        string region = requestedRegion ?? _info.Region;
         Region? existing = _data.Patchs.FirstOrDefault(p => p.ShortNumber == shortPatch)?.Regions.FirstOrDefault(r => r.Name == region);
 
         if (existing is { IsComplete: true } && Directory.Exists($"{AssetPaths.Root}/{shortPatch}"))
         {
             _logger.Log(LoggingLevel.INFO, nameof(SyncRegionAsync), $"Patch {shortPatch} ({region}) already complete");
-            SwitchTo(patch, shortPatch, existing);
+            SwitchTo(patch, shortPatch, existing, isLatest: !manual);
             return true;
         }
 
@@ -288,7 +305,7 @@ public partial class CDragon
         newRegion.IsComplete = newRegion.Champions.Count > 0 && summary.Failed == 0 && context.TransientFailures == 0;
 
         // The region folder does not exist on CommunityDragon (not a network problem): fall back instead of failing forever.
-        if (newRegion.Champions.Count == 0 && context.TransientFailures == 0)
+        if (!manual && newRegion.Champions.Count == 0 && context.TransientFailures == 0)
         {
             string fallback = _current?.Region.Name ?? DefaultRegion;
             if (!string.Equals(fallback, region, StringComparison.Ordinal))
@@ -301,18 +318,18 @@ public partial class CDragon
         }
 
         // Never replace a working data set by an empty one.
-        if (newRegion.Champions.Count == 0 && _current is not null)
+        if (newRegion.Champions.Count == 0 && (manual || _current is not null))
         {
             _logger.Log(LoggingLevel.ERROR, nameof(SyncRegionAsync), "No champion available for the new patch, previous data kept");
             return false;
         }
 
-        SwitchTo(patch, shortPatch, newRegion);
+        SwitchTo(patch, shortPatch, newRegion, isLatest: !manual);
         return newRegion.IsComplete;
     }
 
     /// <summary>Stores the region in the data and makes it the one served to readers.</summary>
-    private void SwitchTo(string patch, string shortPatch, Region region)
+    private void SwitchTo(string patch, string shortPatch, Region region, bool isLatest = true)
     {
         Patch? entry = _data.Patchs.FirstOrDefault(p => p.ShortNumber == shortPatch);
         if (entry is null)
@@ -325,15 +342,22 @@ public partial class CDragon
         entry.Regions.RemoveAll(r => r.Name == region.Name);
         entry.Regions.Add(region);
 
-        _info.Patch = patch;
-        _info.ShortPatch = shortPatch;
-        _info.IsLatest = true;
-        _info.AssetsDir = $"{AssetPaths.Root}/{shortPatch}/{region.Name}";
-        _info.Date = DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss");
+        // An older patch downloaded by hand must not look like the latest one.
+        if (isLatest)
+        {
+            _info.Patch = patch;
+            _info.ShortPatch = shortPatch;
+            _info.IsLatest = true;
+            _info.AssetsDir = $"{AssetPaths.Root}/{shortPatch}/{region.Name}";
+            _info.Date = DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss");
+        }
 
         // The region may have been changed while this one was downloading: only serve it if it is still the requested one
         // (or if nothing is served yet: images are shared by all regions, so it is better than nothing).
-        if (_current is null || string.Equals(region.Name, _info.Region, StringComparison.Ordinal))
+        // A patch pinned by the user is never replaced by a newer one.
+        bool followsLatest = isLatest && (_info.PinnedShortPatch is null || _info.PinnedShortPatch == shortPatch);
+        bool reloadsServed = _current is { } served && served.Patch.ShortNumber == shortPatch && served.Region.Name == region.Name;
+        if (_current is null || reloadsServed || (followsLatest && string.Equals(region.Name, _info.Region, StringComparison.Ordinal)))
             _current = new RegionIndex(entry, region);
 
         SaveAll();
@@ -347,8 +371,12 @@ public partial class CDragon
         if (retained <= 0)
             return;
 
-        var keep = _data.Patchs.TakeLast(retained).Select(patch => patch.ShortNumber).ToHashSet();
+        // The most recent patches by version number (a patch downloaded by hand is not necessarily the last one added).
+        var keep = _data.Patchs.OrderByDescending(patch => ParsePatch(patch.ShortNumber)).Take(retained).Select(patch => patch.ShortNumber).ToHashSet();
         keep.Add(currentShortPatch);
+        keep.UnionWith(_info.ManualPatches);
+        if (_info.PinnedShortPatch is not null)
+            keep.Add(_info.PinnedShortPatch);
 
         foreach (Patch patch in _data.Patchs.Where(patch => !keep.Contains(patch.ShortNumber)).ToList())
         {
@@ -384,6 +412,7 @@ public partial class CDragon
         {
             AssetPaths.WriteTextAtomic(AssetPaths.DataFile, JsonConvert.SerializeObject(_data, Formatting.Indented));
             AssetPaths.WriteTextAtomic(AssetPaths.InfoFile, JsonConvert.SerializeObject(_info, Formatting.Indented));
+            RefreshInstalled();
         }
     }
 

@@ -22,6 +22,15 @@ namespace OSL_CDragon.Schema
         /// </summary>
         public string Region { get; set; }
         /// <summary>
+        /// Short patch (e.g. "16.19") chosen manually by the user. Null means "always follow the latest patch".
+        /// It is reset when the server sends another region.
+        /// </summary>
+        public string? PinnedShortPatch { get; set; }
+        /// <summary>
+        /// Older patches downloaded by hand: the automatic cleanup never removes them (only the user can).
+        /// </summary>
+        public HashSet<string> ManualPatches { get; set; } = [];
+        /// <summary>
         /// The date of the last update.
         /// </summary>
         public string Date { get; set; }
