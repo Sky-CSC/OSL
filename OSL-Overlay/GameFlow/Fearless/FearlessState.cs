@@ -33,6 +33,21 @@ namespace OSL_Overlay.GameFlow.Fearless
         {
             _client = client;
             _cdragon = cDragon;
+            // Assets are downloaded in the background: paths computed before are empty and must be refreshed.
+            _cdragon.Updated += RefreshAssets;
+        }
+
+        /// <summary>
+        /// Computes the champion image paths again (called when the assets are updated).
+        /// </summary>
+        private void RefreshAssets()
+        {
+            foreach (var champion in FearlessList.SelectMany(team => team).SelectMany(info => info.Champions))
+            {
+                if (champion.ChampionId != 0)
+                    champion.Image.Path = _cdragon.GetChampionSquare(champion.ChampionId);
+            }
+            NotifyStateChanged();
         }
 
         public void NotifyStateChanged() => OnChange?.Invoke();
@@ -72,7 +87,7 @@ namespace OSL_Overlay.GameFlow.Fearless
 
             foreach (var player in fearlessMatchDto.Match.Info.Participants)
             {
-                Champion champion = new(_cdragon.GetChampionSquare(player.ChampionId));
+                Champion champion = new(player.ChampionId, _cdragon.GetChampionSquare(player.ChampionId));
                 if (player.TeamId == 100)
                 {
                     FearlessList[fearlessMatchDto.Index][0].Champions.Add(champion);

@@ -12,12 +12,19 @@ namespace OSL_Overlay.GameFlow.Rune
         private readonly CDragon _cdragon;
         private readonly WebSocket _client;
 
+        /// <summary>
+        /// Last data applied, to compute the icon paths again when the assets finish downloading.
+        /// </summary>
+        private Action? _replayLastData;
+
         public event Action? OnChange;
 
         public RuneState(WebSocket client, CDragon cdragon)
         {
             _client = client;
             _cdragon = cdragon;
+            // Assets are downloaded in the background: paths computed before are empty and must be refreshed.
+            _cdragon.Updated += () => _replayLastData?.Invoke();
 
             // Initialize Info with empty data
             CurrentGameInfo currentGameInfo = null;
@@ -41,6 +48,7 @@ namespace OSL_Overlay.GameFlow.Rune
 
         public void SetRunesSpectatorCurentGameInfo(CurrentGameInfo currentGameInfo)
         {
+            _replayLastData = () => SetRunesSpectatorCurentGameInfo(currentGameInfo);
             int indexBlue = 0;
             int indexRed = 0;
             foreach (var player in currentGameInfo.Participants)
@@ -71,6 +79,7 @@ namespace OSL_Overlay.GameFlow.Rune
 
         public void SetRunesWithMatchDto(MatchDto matchDto)
         {
+            _replayLastData = () => SetRunesWithMatchDto(matchDto);
             int indexBlue = 0;
             int indexRed = 0;
             foreach (var player in matchDto.Info.Participants)

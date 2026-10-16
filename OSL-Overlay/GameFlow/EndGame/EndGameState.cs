@@ -58,6 +58,8 @@ namespace OSL_Overlay.GameFlow.EndGame
         {
             _client = client;
             _cdragon = cdragon;
+            // Assets are downloaded in the background: paths computed before are empty and must be refreshed.
+            _cdragon.Updated += RefreshAssets;
             LoadParticipantProperties();
             // Load default data from local files for initialization
             MatchDto matchDto = null;
@@ -79,6 +81,21 @@ namespace OSL_Overlay.GameFlow.EndGame
                 SetMatch(matchDto);
             if (timelineDto != null)
                 SetTimeline(timelineDto);
+        }
+
+        /// <summary>
+        /// Property used for the "total" statistic, kept to compute the champion images again.
+        /// </summary>
+        private string _lastTotalProperty = "TotalDamageDealtToChampions";
+        /// <summary>
+        /// Computes the champion image paths again from the current match (called when the assets are updated).
+        /// </summary>
+        private void RefreshAssets()
+        {
+            if (MatchDto?.Info?.Participants == null || !MatchDto.Info.Participants.Any())
+                return;
+            UpdateBans();
+            UpdateTotalInfo(_lastTotalProperty);
         }
 
         public void NotifyStateChanged() => OnChange?.Invoke();
@@ -350,6 +367,7 @@ namespace OSL_Overlay.GameFlow.EndGame
             int indexBlue = 0;
             int indexRed = 0;
 
+            _lastTotalProperty = propertyName;
             Info.ChampionStats.Title.Txt = ToTitleCase(propertyName);
 
             foreach (var player in MatchDto.Info.Participants)

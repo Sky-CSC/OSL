@@ -1,0 +1,56 @@
+@using OSL_CDragon
+@implements IDisposable
+@inject CDragon Assets
+
+@* Shows the asset download progress. Place it inside the <MudAppBar> of MainLayout.razor. *@
+@if (_status.IsBusy)
+{
+    <MudTooltip Text="@_status.Message" Placement="Placement.Bottom" Arrow="true">
+        <MudChip T="string"
+                 Size="Size.Small"
+                 Variant="Variant.Outlined"
+                 Color="Color.Info"
+                 Icon="@Icons.Material.Filled.CloudDownload">
+            @(_status.Total > 0 ? $"Assets {_status.Percent:0}%" : "Assets...")
+        </MudChip>
+    </MudTooltip>
+
+    <MudProgressLinear Color="Color.Info"
+                       Size="Size.Small"
+                       Min="0"
+                       Max="100"
+                       Value="@_status.Percent"
+                       Indeterminate="@(_status.Total == 0)"
+                       Style="position:absolute; left:0; right:0; bottom:0;" />
+}
+else if (_status.State == AssetSyncState.Failed)
+{
+    <MudTooltip Text="@_status.Message" Placement="Placement.Bottom" Arrow="true">
+        <MudChip T="string"
+                 Size="Size.Small"
+                 Variant="Variant.Outlined"
+                 Color="Color.Warning"
+                 Icon="@Icons.Material.Filled.CloudOff">
+            Assets incomplete
+        </MudChip>
+    </MudTooltip>
+}
+
+@code {
+    private AssetSyncStatus _status = AssetSyncStatus.Idle;
+
+    protected override void OnInitialized()
+    {
+        _status = Assets.Status;
+        Assets.StatusChanged += OnStatusChanged;
+    }
+
+    // Raised from a background thread: go back to the Blazor synchronisation context.
+    private void OnStatusChanged(AssetSyncStatus status)
+    {
+        _status = status;
+        _ = InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose() => Assets.StatusChanged -= OnStatusChanged;
+}

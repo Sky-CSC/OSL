@@ -35,6 +35,20 @@ namespace OSL_Overlay.GameFlow.Patch
             Info.Text = "Patch";
             Info.Version = _cdragon.GetPatchVersion();
             _champSelectState.UpdateInfoPatch(Info);
+
+            // On the first launch the assets are downloaded in the background: the version is known later.
+            _cdragon.Updated += OnAssetsUpdated;
+        }
+
+        private void OnAssetsUpdated()
+        {
+            // Only fills the version while it is unknown, a version set by the user is never overwritten.
+            if (!string.IsNullOrEmpty(Info.Version))
+                return;
+
+            Info.Version = _cdragon.GetPatchVersion();
+            _champSelectState.UpdateInfoPatch(Info);
+            NotifyChanged();
         }
 
         public void NotifyChanged() => OnChange?.Invoke();

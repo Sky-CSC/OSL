@@ -12,6 +12,7 @@ using OSL_Overlay.GameFlow.Phase;
 using OSL_Overlay.GameFlow.Rune;
 using OSL_Overlay.GameFlow.Team;
 using OSL_Overlay.GameFlow.Vs;
+using OSL_Overlay.Services;
 using OSL_Overlay.WebSocketClient;
 using OSL_Overlay.WebSocketClient.Handlers;
 using OSL_Utils;
@@ -39,12 +40,14 @@ builder.Services.AddSingleton<IMessageHandler, ChampSelectHandler>();
 builder.Services.AddSingleton<IMessageHandler, FearlessMatchHandler>();
 builder.Services.AddSingleton<IMessageHandler, RuneSpectatorCurentGameInfoByRiotId>();
 
-// Initialize CDragon and download assets if necessary
+// Initialize CDragon: the assets already on disk are served immediately,
+// the missing ones are downloaded in the background (see AssetUpdateService)
 var cdragon = new CDragon();
-cdragon.DownloadLatestAssets();
+cdragon.LoadFromDisk();
 
 // Register CDragon as a singleton service
 builder.Services.AddSingleton(cdragon);
+builder.Services.AddHostedService<AssetUpdateService>();
 
 // Teams
 builder.Services.AddSingleton<TeamState>();
@@ -104,8 +107,6 @@ app.UseAntiforgery();
 app.UseStaticFiles();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
-
-// Before running the app, download assets (Champions, Items, Runes, EpicMonsters, Position, Font.)
 
 // Connect to the WebSocket server
 using (var scope = app.Services.CreateScope())

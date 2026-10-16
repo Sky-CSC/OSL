@@ -59,6 +59,10 @@ namespace OSL_Overlay.GameFlow.Fearless
 
     public class Champion
     {
+        /// <summary>
+        /// Champion id, kept to compute the image path again when the assets are updated (0 = unknown).
+        /// </summary>
+        public int ChampionId { get; set; }
         public Image Image { get; set; }
         public string Border { get; set; }
         public Lane Lane { get; set; }
@@ -72,6 +76,10 @@ namespace OSL_Overlay.GameFlow.Fearless
             Greyscale = string.Empty;
             Cross = new Cross();
         }
+        public Champion(int championId, string image) : this(image)
+        {
+            ChampionId = championId;
+        }
         public Champion(string image)
         {
             Image = new(image);
@@ -84,6 +92,7 @@ namespace OSL_Overlay.GameFlow.Fearless
         {
             return new Champion
             {
+                ChampionId = this.ChampionId,
                 Image = this.Image,
                 Border = this.Border,
                 Lane = this.Lane.Clone(),

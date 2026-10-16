@@ -42,6 +42,12 @@ namespace OSL_Overlay.GameFlow.ChampSelect
         /// </summary>
         private readonly CDragon _cdragon;
 
+        /// <summary>
+        /// Last session received: the image paths are computed from it, so they can be computed again
+        /// when the assets finish downloading.
+        /// </summary>
+        private ChampSelectSession? _lastSession;
+
         public event Action? OnChange;
 
         /// <summary>
@@ -51,6 +57,8 @@ namespace OSL_Overlay.GameFlow.ChampSelect
         public ChampSelectState(CDragon cdragon)
         {
             _cdragon = cdragon;
+            // Assets are downloaded in the background: paths computed before are empty and must be refreshed.
+            _cdragon.Updated += RefreshAssets;
             // Load default data for initialization
             ChampSelectSession session = null;
             string filePathMatch = "./GameFlow/ChampSelect/Session.json";
@@ -65,11 +73,22 @@ namespace OSL_Overlay.GameFlow.ChampSelect
         }
 
         /// <summary>
+        /// Computes the image paths again from the last session (called when the assets are updated).
+        /// </summary>
+        private void RefreshAssets()
+        {
+            if (_lastSession != null)
+                ManageSession(_lastSession);
+        }
+
+        /// <summary>
         /// Update data from LCU session
         /// </summary>
         /// <param name="session"></param>
         public void ManageSession(ChampSelectSession session)
         {
+            _lastSession = session;
+
             // Update player names
             UpdatePlayerNames(session);
 

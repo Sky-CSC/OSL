@@ -1,13 +1,14 @@
-﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq;
+using OSL_CDragon;
 using OSL_Lcu.Schema.Lcu;
 using OSL_Utils;
 
 namespace OSL_Overlay.WebSocketClient.Handlers
 {
     /// <summary>
-    /// Handler for the "regionLocale" message type.
+    /// Handles the "regionLocale" message: the language of the League client decides which region of the assets is used.
     /// </summary>
-    public class RegionLocaleHandler : IMessageHandler
+    public class RegionLocaleHandler(CDragon cdragon) : IMessageHandler
     {
         private static readonly Logger _logger = new("RegionLocaleHandler");
 
@@ -18,8 +19,12 @@ namespace OSL_Overlay.WebSocketClient.Handlers
         public Task HandleAsync(JToken jsonData)
         {
             var data = jsonData.ToObject<LolPublishingContentPubHubConfig>();
-            _logger.Log(LoggingLevel.INFO, "HandleAsync()", $"🎯 Region Locale management");
-            // TODO : Process the LolPublishingContentPubHubConfig data as needed
+            string? locale = data?.AppContext?.AppLocale;
+            if (string.IsNullOrWhiteSpace(locale))
+                locale = data?.AppContext?.PublishingLocale;
+            _logger.Log(LoggingLevel.INFO, "HandleAsync()", $"🎯 Region locale received : '{locale}' (current assets region : {cdragon.Region})");
+            // Returns immediately: the new catalogs are read in the background by AssetUpdateService.
+            cdragon.SetRegion(locale);
             return Task.CompletedTask;
         }
     }
