@@ -1,0 +1,51 @@
+@using OSL_CDragon
+@implements IDisposable
+@inject CDragon Cdragon
+
+@* Shows the patch and the region of the assets used by the overlay. Place it inside the <MudAppBar> of MainLayout.razor. *@
+<MudTooltip Text="@_tooltip" Placement="Placement.Bottom" Arrow="true" Delay="300">
+    <MudChip T="string"
+             Size="Size.Small"
+             Variant="Variant.Outlined"
+             Color="@(_pinned ? Color.Warning : Color.Info)"
+             Icon="@Icons.Material.Filled.Folder"
+             Href="config/assets"
+             Class="ml-2">
+        @_label
+    </MudChip>
+</MudTooltip>
+
+@code {
+    private string _label = string.Empty;
+    private string _tooltip = string.Empty;
+    private bool _pinned;
+
+    protected override void OnInitialized()
+    {
+        Refresh();
+        Cdragon.Updated += OnUpdated;
+    }
+
+    private void Refresh()
+    {
+        string patch = Cdragon.ServedPatch;
+        string region = Cdragon.ServedRegion;
+        _pinned = Cdragon.IsPinned;
+        _label = patch.Length == 0 ? "Assets : none" : $"Assets {patch} · {CDragon.DisplayRegion(region)}";
+        _tooltip = _pinned
+            ? "Assets chosen manually (click to change)"
+            : "Assets follow the latest patch (click to change)";
+    }
+
+    // Raised from a background thread: go back to the Blazor synchronisation context.
+    private void OnUpdated()
+    {
+        _ = InvokeAsync(() =>
+        {
+            Refresh();
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose() => Cdragon.Updated -= OnUpdated;
+}

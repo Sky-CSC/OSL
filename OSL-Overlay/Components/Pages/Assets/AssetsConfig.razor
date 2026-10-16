@@ -1,0 +1,250 @@
+@page "/config/assets"
+@using OSL_CDragon
+@implements IDisposable
+@inject CDragon Cdragon
+@inject ISnackbar Snackbar
+
+<PageTitle>OSL-Overlay - Assets</PageTitle>
+
+<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Assets</b></MudText>
+
+@* ---------------- Assets in use ---------------- *@
+<MudPaper Outlined="true" Class="pa-4 mb-4">
+    <MudStack Row="true" Spacing="4" AlignItems="AlignItems.Center" Wrap="Wrap.Wrap">
+        <MudText>Version : <b>@(string.IsNullOrEmpty(Cdragon.ServedPatch) ? "none" : Cdragon.ServedPatch)</b></MudText>
+        <MudText>Region : <b>@(string.IsNullOrEmpty(Cdragon.ServedRegion) ? "none" : CDragon.DisplayRegion(Cdragon.ServedRegion))</b></MudText>
+        <MudChip T="string" Size="Size.Small" Color="@(Cdragon.IsPinned ? Color.Warning : Color.Success)">
+            @(Cdragon.IsPinned ? "Chosen manually" : "Automatic (latest)")
+        </MudChip>
+        <MudSpacer />
+        <MudButton Variant="Variant.Outlined"
+                   Disabled="@(!Cdragon.IsPinned)"
+                   OnClick="FollowLatest">
+            Use the latest version
+        </MudButton>
+    </MudStack>
+    @if (Cdragon.Status.IsBusy || Cdragon.Status.State == AssetSyncState.Failed)
+    {
+        <MudText Typo="Typo.caption" Class="mt-2">@Cdragon.Status.Message</MudText>
+    }
+</MudPaper>
+
+@* ---------------- Installed versions ---------------- *@
+<MudText Typo="Typo.h6" GutterBottom="true"><b>Installed versions</b></MudText>
+
+<MudTable Items="@Cdragon.GetInstalled()" T="AssetVersion" Dense="true" Hover="true" Class="mb-4">
+    <HeaderContent>
+        <MudTh>Version</MudTh>
+        <MudTh>Region</MudTh>
+        <MudTh>State</MudTh>
+        <MudTh></MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Version">@context.ShortPatch</MudTd>
+        <MudTd DataLabel="Region">@CDragon.DisplayRegion(context.Region)</MudTd>
+        <MudTd DataLabel="State">@(context.IsComplete ? "Complete" : "Incomplete")</MudTd>
+        <MudTd>
+            <MudStack Row="true" Spacing="1" AlignItems="AlignItems.Center" Justify="Justify.FlexEnd">
+                @if (IsInUse(context))
+                {
+                    <MudChip T="string" Size="Size.Small" Color="Color.Success">In use</MudChip>
+                }
+                else if (_pendingDelete == context)
+                {
+                    <MudButton Size="Size.Small" Variant="Variant.Filled" Color="Color.Error" OnClick="() => ConfirmDelete(context)">Confirm delete</MudButton>
+                    <MudButton Size="Size.Small" Variant="Variant.Text" OnClick="CancelDelete">Cancel</MudButton>
+                }
+                else
+                {
+                    <MudButton Size="Size.Small" Variant="Variant.Outlined" OnClick="() => Use(context)">Use</MudButton>
+                    <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                                   Size="Size.Small"
+                                   title="Delete"
+                                   Disabled="@Cdragon.Status.IsBusy"
+                                   OnClick="() => AskDelete(context)" />
+                }
+            </MudStack>
+        </MudTd>
+    </RowTemplate>
+    <NoRecordsContent>
+        <MudText>No assets on disk yet.</MudText>
+    </NoRecordsContent>
+</MudTable>
+
+@* ---------------- Download a patch ---------------- *@
+<MudText Typo="Typo.h6" GutterBottom="true"><b>Download a patch</b></MudText>
+<MudText Typo="Typo.body2" Class="mb-2">
+    Patches older than @CDragon.MinimumPatch are not available. A downloaded older patch is kept until you delete it.
+    The region "default" is the English one.
+</MudText>
+
+<MudStack Row="true" AlignItems="AlignItems.Center" Wrap="Wrap.Wrap" Spacing="3">
+    <MudSelect T="string"
+               Label="Version"
+               Variant="Variant.Outlined"
+               Margin="Margin.Dense"
+               Style="min-width:160px;"
+               Value="_patch"
+               ValueChanged="OnPatchChanged"
+               Disabled="@(_loadingPatches || _downloading)">
+        @foreach (string patch in _patches)
+        {
+            <MudSelectItem T="string" Value="@patch">@patch</MudSelectItem>
+        }
+    </MudSelect>
+
+    <MudSelect T="string"
+               Label="Region"
+               Variant="Variant.Outlined"
+               Margin="Margin.Dense"
+               Style="min-width:180px;"
+               @bind-Value="_region"
+               Disabled="@(_patch is null || _loadingRegions || _downloading)">
+        @foreach (string region in _regions)
+        {
+            <MudSelectItem T="string" Value="@region">@CDragon.DisplayRegion(region)@(IsInstalled(_patch, region) ? " (installed)" : "")</MudSelectItem>
+        }
+    </MudSelect>
+
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Primary"
+               Disabled="@CannotDownload"
+               OnClick="StartDownloadAsync">
+        Download
+    </MudButton>
+</MudStack>
+
+@if (_loadingPatches || _loadingRegions || _downloading)
+{
+    <MudProgressLinear Indeterminate="true" Class="mt-2" />
+}
+@if (_patchesUnavailable)
+{
+    <MudStack Row="true" AlignItems="AlignItems.Center" Class="mt-2">
+        <MudText Typo="Typo.body2">CommunityDragon could not be reached.</MudText>
+        <MudButton Size="Size.Small" Variant="Variant.Outlined" OnClick="LoadPatchesAsync">Retry</MudButton>
+    </MudStack>
+}
+@if (_regionsUnavailable)
+{
+    <MudText Typo="Typo.body2" Class="mt-2">No region found for this patch.</MudText>
+}
+
+@code {
+    private IReadOnlyList<string> _patches = [];
+    private IReadOnlyList<string> _regions = [];
+    private string? _patch;
+    private string? _region;
+    private AssetVersion? _pendingDelete;
+    private bool _loadingPatches;
+    private bool _loadingRegions;
+    private bool _downloading;
+    private bool _patchesUnavailable;
+    private bool _regionsUnavailable;
+    private bool _disposed;
+
+    private bool CannotDownload =>
+        _downloading || Cdragon.Status.IsBusy || _patch is null || _region is null || IsComplete(_patch, _region);
+
+    protected override async Task OnInitializedAsync()
+    {
+        Cdragon.Updated += Refresh;
+        Cdragon.StatusChanged += OnStatusChanged;
+        await LoadPatchesAsync();
+    }
+
+    private async Task LoadPatchesAsync()
+    {
+        _loadingPatches = true;
+        _patchesUnavailable = false;
+        try
+        {
+            _patches = await Cdragon.GetAvailablePatchesAsync();
+            _patchesUnavailable = _patches.Count == 0;
+        }
+        finally
+        {
+            _loadingPatches = false;
+        }
+    }
+
+    private async Task OnPatchChanged(string patch)
+    {
+        _patch = patch;
+        _region = null;
+        _regions = [];
+        _regionsUnavailable = false;
+        _loadingRegions = true;
+        try
+        {
+            _regions = await Cdragon.GetAvailableRegionsAsync(patch);
+            _regionsUnavailable = _regions.Count == 0;
+        }
+        finally
+        {
+            _loadingRegions = false;
+        }
+    }
+
+    private bool IsInstalled(string? patch, string region) =>
+        Cdragon.GetInstalled().Any(v => v.ShortPatch == patch && v.Region == region);
+
+    private bool IsComplete(string? patch, string region) =>
+        Cdragon.GetInstalled().Any(v => v.ShortPatch == patch && v.Region == region && v.IsComplete);
+
+    private bool IsInUse(AssetVersion version) =>
+        version.ShortPatch == Cdragon.ServedPatch && version.Region == Cdragon.ServedRegion;
+
+    private void Use(AssetVersion version)
+    {
+        _pendingDelete = null;
+        if (!Cdragon.Select(version.ShortPatch, version.Region))
+            Snackbar.Add($"Version {version.ShortPatch} ({CDragon.DisplayRegion(version.Region)}) is no longer available.", Severity.Warning);
+    }
+
+    private void FollowLatest() => Cdragon.FollowLatest();
+
+    private void AskDelete(AssetVersion version) => _pendingDelete = version;
+
+    private void CancelDelete() => _pendingDelete = null;
+
+    private void ConfirmDelete(AssetVersion version)
+    {
+        _pendingDelete = null;
+        AssetOperationResult result = Cdragon.Delete(version.ShortPatch, version.Region);
+        Snackbar.Add(result.Message, result.Success ? Severity.Success : Severity.Warning);
+    }
+
+    private async Task StartDownloadAsync()
+    {
+        if (_patch is null || _region is null)
+            return;
+
+        _downloading = true;
+        AssetOperationResult result;
+        try
+        {
+            result = await Cdragon.DownloadAsync(_patch, _region);
+        }
+        finally
+        {
+            _downloading = false;
+        }
+
+        // The page may have been closed during the download (which went on anyway).
+        if (!_disposed)
+            Snackbar.Add(result.Message, result.Success ? Severity.Success : Severity.Warning);
+    }
+
+    // Raised from a background thread: go back to the Blazor synchronisation context.
+    private void Refresh() => _ = InvokeAsync(StateHasChanged);
+
+    private void OnStatusChanged(AssetSyncStatus status) => Refresh();
+
+    public void Dispose()
+    {
+        _disposed = true;
+        Cdragon.Updated -= Refresh;
+        Cdragon.StatusChanged -= OnStatusChanged;
+    }
+}
