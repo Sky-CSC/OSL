@@ -26,13 +26,26 @@ namespace OSL_Overlay.GameFlow.Team
         /// </summary>
         public string? RedFile { get; set; }
         /// <summary>
-        /// Display blue team custom names
+        /// True when every blue lane shows its custom name
         /// </summary>
-        public bool DisplayBlueCustomName { get; set; } = false;
+        public bool DisplayBlueCustomName => AllCustomNames(BlueInfo);
         /// <summary>
-        /// Display red team custom names
+        /// True when every red lane shows its custom name
         /// </summary>
-        public bool DisplayRedCustomName { get; set; } = false;
+        public bool DisplayRedCustomName => AllCustomNames(RedInfo);
+
+        /// <summary>
+        /// True when the blue team was edited since it was last loaded or saved
+        /// </summary>
+        public bool IsBlueModified => Snapshot(BlueInfo) != _blueSnapshot;
+        /// <summary>
+        /// True when the red team was edited since it was last loaded or saved
+        /// </summary>
+        public bool IsRedModified => Snapshot(RedInfo) != _redSnapshot;
+
+        // Content of the teams when they were last loaded or saved, to detect unsaved changes
+        private string _blueSnapshot = Snapshot(new TeamInfo());
+        private string _redSnapshot = Snapshot(new TeamInfo());
 
         /// <summary>
         /// Champ select state for update team info
@@ -78,7 +91,6 @@ namespace OSL_Overlay.GameFlow.Team
         /// <param name="display"></param>
         public void DisplayCustomBlueName(bool display)
         {
-            DisplayBlueCustomName = display;
             BlueInfo.Top.ShowCustomName = display;
             BlueInfo.Jungle.ShowCustomName = display;
             BlueInfo.Mid.ShowCustomName = display;
@@ -92,7 +104,6 @@ namespace OSL_Overlay.GameFlow.Team
         /// <param name="display"></param>
         public void DisplayCustomRedName(bool display)
         {
-            DisplayRedCustomName = display;
             RedInfo.Top.ShowCustomName = display;
             RedInfo.Jungle.ShowCustomName = display;
             RedInfo.Mid.ShowCustomName = display;
@@ -117,6 +128,7 @@ namespace OSL_Overlay.GameFlow.Team
                 ChampState.UpdateBlueTeamInfo(info);
                 EndGameState.UpdateBlueTeamInfo(info);
                 BlueInfo = info;
+                _blueSnapshot = Snapshot(info);
             }
             BlueFile = filePath;
 
@@ -140,6 +152,7 @@ namespace OSL_Overlay.GameFlow.Team
                 ChampState.UpdateRedTeamInfo(info);
                 EndGameState.UpdateRedTeamInfo(info);
                 RedInfo = info;
+                _redSnapshot = Snapshot(info);
             }
             RedFile = filePath;
 
@@ -172,6 +185,7 @@ namespace OSL_Overlay.GameFlow.Team
                 string json = JsonConvert.SerializeObject(BlueInfo, Formatting.Indented);
                 OSL_Utils.File.Write(filePath, json);
                 BlueFile = filePath;
+                _blueSnapshot = Snapshot(BlueInfo);
 
                 // Update champ state
                 ChampState.UpdateBlueTeamInfo(BlueInfo);
@@ -207,6 +221,7 @@ namespace OSL_Overlay.GameFlow.Team
                 string json = JsonConvert.SerializeObject(RedInfo, Formatting.Indented);
                 OSL_Utils.File.Write(filePath, json);
                 RedFile = filePath;
+                _redSnapshot = Snapshot(RedInfo);
 
                 // Update champ state
                 ChampState.UpdateRedTeamInfo(RedInfo);
@@ -215,6 +230,32 @@ namespace OSL_Overlay.GameFlow.Team
                 NotifyChanged();
             }
         }
+
+        /// <summary>
+        /// Send the current blue team to the overlays without saving it to a file
+        /// </summary>
+        public void ApplyBlue()
+        {
+            ChampState.UpdateBlueTeamInfo(BlueInfo);
+            EndGameState.UpdateBlueTeamInfo(BlueInfo);
+            NotifyChanged();
+        }
+
+        /// <summary>
+        /// Send the current red team to the overlays without saving it to a file
+        /// </summary>
+        public void ApplyRed()
+        {
+            ChampState.UpdateRedTeamInfo(RedInfo);
+            EndGameState.UpdateRedTeamInfo(RedInfo);
+            NotifyChanged();
+        }
+
+        private static bool AllCustomNames(TeamInfo info) =>
+            info.Top.ShowCustomName && info.Jungle.ShowCustomName && info.Mid.ShowCustomName
+            && info.Adc.ShowCustomName && info.Supp.ShowCustomName;
+
+        private static string Snapshot(TeamInfo info) => JsonConvert.SerializeObject(info);
 
         /// <summary>
         /// Swap blue and red teams
