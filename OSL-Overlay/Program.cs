@@ -48,6 +48,7 @@ cdragon.LoadFromDisk();
 // Register CDragon as a singleton service
 builder.Services.AddSingleton(cdragon);
 builder.Services.AddHostedService<AssetUpdateService>();
+builder.Services.AddHostedService<TempCleanupService>();
 
 // Teams
 builder.Services.AddSingleton<TeamState>();
