@@ -1,89 +1,101 @@
 @using MudBlazor
-@using OSL_UI.Button
 @inject IDialogService DialogService
+@inject ISnackbar Snackbar
 
-@* ---------------- Style manager ---------------- *@
-<MudPaper Class="pa-2" Style="max-height:400px; overflow-y:auto;">
+@* ---------------- Style manager: choose a file, then act on the selected file ---------------- *@
+<MudPaper Outlined="true" Class="pa-3">
 
-    @* ---------------- Button for save on new file changes ---------------- *@
-    <SwitchButton Text="@Label"
-                  Icon="@Icons.Material.Filled.Save"
-                  BackgroundColor="@Colors.BlueGray.Darken4"
-                  HoverBackgroundColor="@Colors.BlueGray.Darken2"
-                  TextColor="@Colors.LightGreen.Accent3"
-                  OnClick="SaveFile"
-                  BorderRadius="5px"
-                  FontSize="15px"
-                  MaxWidth="350px;" />
+    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Wrap="Wrap.Wrap" Class="mb-2">
+        <MudText Typo="Typo.subtitle1"><b>@Label</b></MudText>
+        @if (Modified)
+        {
+            <MudChip T="string" Size="Size.Small" Color="Color.Warning">Unsaved changes</MudChip>
+        }
+    </MudStack>
 
-    <MudDivider Class="my-4" />
+    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2" Wrap="Wrap.Wrap">
 
-    @* ---------------- Tables of files ---------------- *@
-    <MudTable Items="_files" Hover="true" Dense="true" Bordered="false" Class="flex-grow-1">
-        <RowTemplate>
-            <MudTr Style="@GetRowBackgroundStyle(context)">
-                <MudTd Style="@GetRowColorStyle(context)" DataLabel="Name">@context</MudTd>
-                <MudTd>
-                    @* Text for rename file *@
-                    <MudTextField T="string"
-                                  Value="@GetFileRename(context)"
-                                  Placeholder="New name"
-                                  Immediate="true"
-                                  ValueChanged="@(newValue => UpdateFileRename(context, newValue))" />
-                    <MudStack Row="true" Spacing="1" AlignItems="AlignItems.Center">
-                        @* Button for rename file *@
-                        <MudIconButton Icon="@Icons.Material.Filled.Edit"
-                                       Style="@($"color:{Colors.Orange.Default};")"
-                                       OnClick="@(() => RenameFile(context))"
-                                       Disabled="IsDefaultFile(HideRename, context)" />
+        @* ---------------- 1. Which file ---------------- *@
+        <MudSelect @key="_selectKey"
+                   T="string"
+                   Label="File"
+                   Variant="Variant.Outlined"
+                   Margin="Margin.Dense"
+                   Style="min-width:200px; flex:1 1 200px;"
+                   Value="@SelectedName"
+                   ValueChanged="SelectFile"
+                   ToStringFunc="Display"
+                   Disabled="@(HideSelect || _mode != EditMode.None)">
+            @foreach (string file in _files)
+            {
+                <MudSelectItem T="string" Value="@file">@Display(file)@(IsProtected(file) ? " (default)" : "")</MudSelectItem>
+            }
+        </MudSelect>
 
-                        @* Button for delete file *@
-                        <MudIconButton Icon="@Icons.Material.Filled.Delete"
-                                       Style="@($"color:{Colors.Red.Darken4};")"
-                                       OnClick="@(() => ConfirmDelete(context))"
-                                       Disabled="IsDefaultFile(HideDelete, context)" />
+        @* ---------------- 2. Write the current settings ---------------- *@
+        <MudTooltip Text="@SaveTooltip">
+            <span>
+                <MudButton Variant="@(Modified ? Variant.Filled : Variant.Outlined)"
+                           Color="Color.Primary"
+                           StartIcon="@Icons.Material.Filled.Save"
+                           Disabled="@CannotSave"
+                           OnClick="SaveSelectedAsync">
+                    Save
+                </MudButton>
+            </span>
+        </MudTooltip>
+        <MudTooltip Text="Write the current settings in a new file">
+            <MudButton Variant="Variant.Outlined"
+                       StartIcon="@Icons.Material.Filled.Add"
+                       Disabled="@(_mode != EditMode.None)"
+                       OnClick="() => StartMode(EditMode.SaveAs)">
+                Save as new
+            </MudButton>
+        </MudTooltip>
 
-                        @* Button for select file *@
-                        <SwitchButton Text="@(IsSelected(context) ? "Selected" : "Select")"
-                                      Icon="@(IsSelected(context) ? Icons.Material.Filled.CenterFocusStrong : Icons.Material.Filled.CenterFocusWeak)"
-                                      BackgroundColor="@Colors.Teal.Darken4"
-                                      HoverBackgroundColor="@Colors.Teal.Darken2"
-                                      TextColor="@Colors.Teal.Lighten5"
-                                      OnClick="@(() => SelectFile(context))"
-                                      BorderRadius="5px"
-                                      FontSize="15px"
-                                      MaxHeight="40px"
-                                      MaxWidth="120px"
-                                      Disabled="HideSelect" />
+        @* ---------------- 3. Manage the selected file ---------------- *@
+        <MudTooltip Text="@RenameTooltip">
+            <span>
+                <MudIconButton Icon="@Icons.Material.Filled.Edit"
+                               Style="@($"color:{Colors.Orange.Default};")"
+                               Disabled="@CannotRename"
+                               OnClick="() => StartMode(EditMode.Rename)" />
+            </span>
+        </MudTooltip>
+        <MudTooltip Text="Duplicate the selected file">
+            <span>
+                <MudIconButton Icon="@Icons.Material.Filled.ContentCopy"
+                               Style="@($"color:{Colors.Blue.Default};")"
+                               Disabled="@CannotDuplicate"
+                               OnClick="DuplicateAsync" />
+            </span>
+        </MudTooltip>
+        <MudTooltip Text="@DeleteTooltip">
+            <span>
+                <MudIconButton Icon="@Icons.Material.Filled.Delete"
+                               Style="@($"color:{Colors.Red.Darken4};")"
+                               Disabled="@CannotDelete"
+                               OnClick="DeleteAsync" />
+            </span>
+        </MudTooltip>
+    </MudStack>
 
-                        @* Button for duplicate file *@
-                        <SwitchButton Text="Duplicate"
-                                      Icon="@Icons.Material.Filled.ContentCopy"
-                                      BackgroundColor="@Colors.Blue.Darken4"
-                                      HoverBackgroundColor="@Colors.Blue.Darken2"
-                                      TextColor="@Colors.Blue.Lighten5"
-                                      OnClick="@(() => DuplicateFile(context))"
-                                      BorderRadius="5px"
-                                      FontSize="15px"
-                                      MaxHeight="40px"
-                                      MaxWidth="130px"
-                                      Disabled="HideDuplicate" />
-
-                        @* Button for save changes on file *@
-                        <SwitchButton Text="Save Changes"
-                                      Icon="@Icons.Material.Filled.Save"
-                                      BackgroundColor="@Colors.BlueGray.Darken4"
-                                      HoverBackgroundColor="@Colors.BlueGray.Darken2"
-                                      TextColor="@Colors.LightGreen.Accent3"
-                                      OnClick="@(() => SaveChanges(context))"
-                                      BorderRadius="5px"
-                                      FontSize="15px"
-                                      MaxHeight="40px"
-                                      MaxWidth="210px"
-                                      Disabled="IsDefaultFile(HideSave, context)" />
-                    </MudStack>
-                </MudTd>
-            </MudTr>
-        </RowTemplate>
-    </MudTable>
+    @* ---------------- Name of the new file / new name ---------------- *@
+    @if (_mode != EditMode.None)
+    {
+        <MudStack Row="true" AlignItems="AlignItems.Start" Spacing="2" Wrap="Wrap.Wrap" Class="mt-3">
+            <MudTextField T="string"
+                          Label="@(_mode == EditMode.SaveAs ? "Name of the new file" : "New name")"
+                          Variant="Variant.Outlined"
+                          Margin="Margin.Dense"
+                          Immediate="true"
+                          @bind-Value="_nameInput"
+                          Error="@(_error is not null)"
+                          ErrorText="@_error" />
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="ConfirmModeAsync">
+                @(_mode == EditMode.SaveAs ? "Save" : "Rename")
+            </MudButton>
+            <MudButton Variant="Variant.Text" OnClick="CancelMode">Cancel</MudButton>
+        </MudStack>
+    }
 </MudPaper>

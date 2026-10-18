@@ -1,0 +1,104 @@
+@using Microsoft.AspNetCore.Components.Forms
+@using MudBlazor
+
+@* ---------------- Image picker: thumbnail + choose / remove, without showing the file path ---------------- *@
+<div class="osl-imgpick">
+    <div class="osl-imgpick-thumb" style="@($"width:{Size}px; height:{Size}px; border-color:{Accent};")">
+        @if (string.IsNullOrEmpty(Value))
+        {
+            <MudIcon Icon="@Icons.Material.Filled.Image" Style="opacity:.4;" />
+        }
+        else
+        {
+            <img src="@Value" alt="@Label" />
+        }
+    </div>
+
+    <div class="osl-imgpick-actions">
+        <span class="osl-imgpick-label">@Label</span>
+        <div class="osl-imgpick-buttons">
+            <label class="osl-imgpick-button" style="@($"border-color:{Accent};")">
+                <MudIcon Icon="@Icons.Material.Filled.CloudUpload" Size="MudBlazor.Size.Small" />
+                <span>@(string.IsNullOrEmpty(Value) ? "Choose" : "Change")</span>
+                <InputFile OnChange="OnFileChanged" accept="image/png,image/jpeg,image/webp,image/gif,image/svg+xml" style="display:none;" />
+            </label>
+            @if (!string.IsNullOrEmpty(Value))
+            {
+                <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="MudBlazor.Size.Small" title="Remove the image" OnClick="RemoveAsync" />
+            }
+        </div>
+        @if (_error is not null)
+        {
+            <MudText Typo="Typo.caption" Color="Color.Error">@_error</MudText>
+        }
+    </div>
+</div>
+
+<style>
+    .osl-imgpick { display: flex; align-items: center; gap: 10px; flex-wrap: nowrap; }
+    .osl-imgpick-thumb { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; border: 2px dashed; border-radius: 6px; overflow: hidden; }
+    .osl-imgpick-thumb img { width: 100%; height: 100%; object-fit: contain; }
+    .osl-imgpick-actions { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .osl-imgpick-label { font-size: .8rem; opacity: .8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .osl-imgpick-buttons { display: flex; align-items: center; gap: 4px; }
+    .osl-imgpick-button { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border: 1px solid; border-radius: 4px; cursor: pointer; font-size: .85rem; user-select: none; }
+    .osl-imgpick-button:hover { background: var(--mud-palette-action-default-hover); }
+</style>
+
+@code {
+    private static readonly string[] AllowedExtensions = [".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"];
+    private const long MaxSize = 10 * 1024 * 1024;
+
+    /// <summary>What the image is (shown above the buttons)</summary>
+    [Parameter] public string Label { get; set; } = "Image";
+
+    /// <summary>Relative path of the image (not displayed)</summary>
+    [Parameter] public string Value { get; set; } = string.Empty;
+    [Parameter] public EventCallback<string> ValueChanged { get; set; }
+
+    /// <summary>Size of the thumbnail in pixels</summary>
+    [Parameter] public int Size { get; set; } = 56;
+
+    /// <summary>Color of the thumbnail and button borders</summary>
+    [Parameter] public string Accent { get; set; } = "#0B849E";
+
+    private string? _error;
+
+    private async Task OnFileChanged(InputFileChangeEventArgs e)
+    {
+        _error = null;
+        IBrowserFile file = e.File;
+
+        string extension = System.IO.Path.GetExtension(file.Name).ToLowerInvariant();
+        if (!AllowedExtensions.Contains(extension))
+        {
+            _error = "Unsupported format.";
+            return;
+        }
+        if (file.Size > MaxSize)
+        {
+            _error = "Image too large (10 MB max).";
+            return;
+        }
+
+        // Temporary folder: the file is copied next to the team file when the team is saved
+        string tempDirectory = System.IO.Path.Combine("./wwwroot", "temp");
+        System.IO.Directory.CreateDirectory(tempDirectory);
+
+        string fileName = $"{Guid.NewGuid()}{extension}";
+        await using (System.IO.FileStream stream = System.IO.File.Create(System.IO.Path.Combine(tempDirectory, fileName)))
+        {
+            await file.OpenReadStream(MaxSize).CopyToAsync(stream);
+        }
+
+        Value = $"temp/{fileName}";
+        await ValueChanged.InvokeAsync(Value);
+    }
+
+    private async Task RemoveAsync()
+    {
+        _error = null;
+        Value = string.Empty;
+        await ValueChanged.InvokeAsync(Value);
+    }
+}

@@ -320,8 +320,14 @@ namespace OSL_UI.Style
             public string Path { get; set; } = "";
         }
 
+        // The list of a directory is read once per component (it used to be read from the disk at each render)
+        private readonly Dictionary<string, List<ImageInfo>> _imageCache = new();
+
         private List<ImageInfo> LoadDirectoryImage(string path)
         {
+            if (_imageCache.TryGetValue(path, out List<ImageInfo>? cached))
+                return cached;
+
             List<ImageInfo> imageInfos = [];
             var folder = System.IO.Path.Combine("./wwwroot", path);
             if (System.IO.Directory.Exists(folder))
@@ -341,6 +347,7 @@ namespace OSL_UI.Style
                     });
                 }
             }
+            _imageCache[path] = imageInfos;
             return imageInfos;
 
             //imageInfos. = System.IO.Directory.GetFiles(path);
