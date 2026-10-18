@@ -1,0 +1,44 @@
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+@inject ISnackbar Snackbar
+
+@* ---------------- Link of an overlay: shows the address, copies it, opens it ---------------- *@
+<div class="overlay-link" style="@($"border-left: 5px solid {Accent};")">
+    <div class="overlay-link-text">
+        <span class="overlay-link-title">@Title</span>
+        <code class="overlay-link-url">@AbsoluteUrl</code>
+    </div>
+    <MudTooltip Text="Copy the link">
+        <MudIconButton Icon="@Icons.Material.Filled.ContentCopy" Size="Size.Small" OnClick="CopyAsync" />
+    </MudTooltip>
+    <MudTooltip Text="Open in a new tab">
+        <MudIconButton Icon="@Icons.Material.Filled.OpenInNew" Size="Size.Small" Href="@AbsoluteUrl" Target="_blank" />
+    </MudTooltip>
+</div>
+
+<style>
+    .overlay-link { display: flex; align-items: center; gap: 8px; padding: 6px 8px 6px 12px; margin-bottom: 6px; border-radius: 4px; background: var(--mud-palette-background-gray); }
+    .overlay-link-text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+    .overlay-link-title { font-weight: 500; }
+    .overlay-link-url { font-size: .75rem; opacity: .75; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+</style>
+
+@code {
+    [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
+
+    /// <summary>Path of the overlay, relative to the site (e.g. "champselect/view1").</summary>
+    [Parameter, EditorRequired] public string Path { get; set; } = string.Empty;
+
+    [Parameter] public string Accent { get; set; } = "var(--mud-palette-primary)";
+
+    private string AbsoluteUrl => Navigation.ToAbsoluteUri(Path.TrimStart('/')).ToString();
+
+    private async Task CopyAsync()
+    {
+        bool copied = await JS.InvokeAsync<bool>("copyText", AbsoluteUrl);
+        if (copied)
+            Snackbar.Add("Link copied to clipboard", Severity.Success);
+        else
+            Snackbar.Add("Unable to copy the link.", Severity.Error);
+    }
+}

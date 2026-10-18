@@ -1,184 +1,186 @@
 @page "/config/websocket"
-@using OSL_CDragon
 @using OSL_Overlay.WebSocketClient
 @using OSL_Utils.WebSocket
 @inject WebSocketClient WsClient
-@inject CDragon CDragon
+@inject ISnackbar Snackbar
 @implements IDisposable
 
-<PageTitle>OSL-Overlay - Config</PageTitle>
+<PageTitle>OSL-Overlay - Server Config</PageTitle>
 
-<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>OSL-Server Config</b></MudText>
+<PageHeader Title="OSL-Server" Subtitle="Connection of OSL-Overlay to OSL-Server, which sends the game data." />
 
-<MudStack Row="true">
+@* ---------------- State of the connection ---------------- *@
+<SectionCard Title="Connection">
+    <Actions>
+        <MudButton OnClick="RestartWebSocketClient" Variant="Variant.Outlined" Color="Color.Warning" StartIcon="@Icons.Material.Filled.Refresh">
+            Restart connection
+        </MudButton>
+    </Actions>
+    <ChildContent>
+        <MudAlert Severity="@StateSeverity" Variant="Variant.Outlined" Dense="false">
+            <b>@StateTitle</b><br />
+            @StateText
+        </MudAlert>
+    </ChildContent>
+</SectionCard>
 
-    @switch (WsClient.State)
-    {
-        case ConnectionState.Disconnected:
-            <div style="padding:14px;border-left:5px solid #f44336;background:#ffebee;border-radius:6px;color:#b71c1c;">
-                <b>⚠ Disconnected</b><br>
-                Not connected to OSL-Server
-            </div>
-            break;
+@* ---------------- Settings ---------------- *@
+<SectionCard Title="Settings" Caption="Saving applies the new settings and reconnects.">
+    <MudStack Row="true" Spacing="2" Wrap="Wrap.Wrap" AlignItems="AlignItems.Start">
+        <MudTextField T="string" Label="OSL-Server IP" Placeholder="127.0.0.1" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                      Value="@WebSocketConf.Ip" ValueChanged="v => WebSocketConf.Ip = v" />
+        <MudNumericField T="int" Label="Port" Placeholder="5005" Variant="Variant.Outlined" Margin="Margin.Dense" Min="1024" Max="65535" HideSpinButtons="true"
+                         Style="width:140px;"
+                         Value="@WebSocketConf.Port" ValueChanged="v => WebSocketConf.Port = v" />
+    </MudStack>
+    <MudTextField T="string" Label="Token accepted by OSL-Server" Placeholder="michel=" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                  Class="mt-2" Style="max-width:520px;"
+                  InputType="@(_showToken ? InputType.Text : InputType.Password)"
+                  Adornment="Adornment.End"
+                  AdornmentIcon="@(_showToken ? Icons.Material.Filled.VisibilityOff : Icons.Material.Filled.Visibility)"
+                  OnAdornmentClick="() => _showToken = !_showToken"
+                  AdornmentAriaLabel="Show or hide the token"
+                  Value="@SingleToken" ValueChanged="v => SingleToken = v" />
 
-        case ConnectionState.Connecting:
-            <div style="padding:14px;border-left:5px solid #ff9800;background:#fff3e0;border-radius:6px;color:#e65100;">
-                <b>⇄ Connecting</b><br>
-                Connecting to OSL-Server ...
-            </div>
-            break;
+    <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center" Class="mt-3">
+        <MudButton OnClick="SaveConfig" Variant="@(IsModified ? Variant.Filled : Variant.Outlined)" Color="Color.Primary" Disabled="@(!IsModified)"
+                   StartIcon="@Icons.Material.Filled.Save">
+            Save
+        </MudButton>
+        <MudButton OnClick="ResetConfig" Variant="Variant.Text" Color="Color.Error" Disabled="@(!IsModified)">
+            Discard changes
+        </MudButton>
+        @if (IsModified)
+        {
+            <MudChip T="string" Size="Size.Small" Color="Color.Warning">Unsaved changes</MudChip>
+        }
+    </MudStack>
+</SectionCard>
 
-        case ConnectionState.Connected:
-            <div style="padding:14px;border-left:5px solid #4caf50;background:#e8f5e9;border-radius:6px;color:#1b5e20;">
-                <b>🔗 Connected</b><br>
-                Connected to OSL-Server
-            </div>
-            break;
+<UnsavedChangesGuard Active="@IsModified" />
 
-        case ConnectionState.Authenticating:
-            <div style="padding:14px;border-left:5px solid #2196f3;background:#e3f2fd;border-radius:6px;color:#0d47a1;">
-                <b>🤜🤛 Authenticating</b><br>
-                Authenticating with OSL-Server ...
-            </div>
-            break;
-
-        case ConnectionState.Authenticated:
-            <div style="padding:14px;border-left:5px solid #4caf50;background:#e8f5e9;border-radius:6px;color:#1b5e20;">
-                <b>🤝 Authenticated</b><br>
-                Authenticated with OSL-Server
-            </div>
-            break;
-
-        case ConnectionState.Reconnecting:
-            <div style="padding:14px;border-left:5px solid #ff9800;background:#fff3e0;border-radius:6px;color:#e65100;">
-                <b>⭮ Reconnecting</b><br>
-                Reconnecting to OSL-Server ...
-            </div>
-            break;
-    }
-</MudStack>
-<br />
-
-<MudStack Row="true">
-    @* ---------------- Ip ---------------- *@
-    <StyleFieldEditor Label="OSL-Server IP"
-                      Type="text"
-                      Value="@WebSocketConf.Ip"
-                      ValueChanged="v => OnStyleChanged(val => WebSocketConf.Ip = val, v)"
-                      BorderColor="var(--mud-palette-primary)"
-                      Placeholder="127.0.0.1" />
-    @* ---------------- Port ---------------- *@
-    <StyleFieldEditor Label="OSL-Server Port"
-                      Type="intxtoy"
-                      Value="@WebSocketConf.Port.ToString()"
-                      ValueChanged="v => OnStyleChanged(val => WebSocketConf.Port = val, v)"
-                      NumericMin=1024
-                      NumericMax=65535
-                      BorderColor="var(--mud-palette-primary)"
-                      Placeholder="5005" />
-</MudStack>
-<MudStack Row="false">
-    @* ---------------- Token ---------------- *@
-    <StyleFieldEditor Label="Token accepted by OSL-Server"
-                      Type="text"
-                      Value="@SingleToken"
-                      ValueChanged="v => SingleToken = v"
-                      BorderColor="var(--mud-palette-primary)"
-                      Placeholder="michel=" />
-</MudStack>
-@* ---------------- Save config ---------------- *@
-<MudButton OnClick="SaveConfig" Variant="Variant.Outlined" Color="Color.Success">
-    Save
-</MudButton>
-@* ---------------- Reset to default ---------------- *@
-<MudButton OnClick="ResetConfig" Variant="Variant.Outlined" Color="Color.Error">
-    Reset
-</MudButton>
-@* ---------------- Restart web socket ---------------- *@
-<MudButton OnClick="RestartWebSocketClient" Variant="Variant.Outlined" Color="Color.Warning">
-    Restart Web Socket Client
-</MudButton>
-
-<br />
-<br />
-<input @bind="MessageToSend" placeholder="Message à envoyer" />
-<button @onclick="SendMessage">Envoyer</button>
-
-<ul>
-    @foreach (var msg in Messages)
-    {
-        <li>@msg</li>
-    }
-</ul>
+@* ---------------- Debug ---------------- *@
+<MudExpansionPanels Elevation="0">
+    <MudExpansionPanel Text="Debug : raw messages" Expanded="false">
+        <MudStack Row="true" Spacing="2" AlignItems="AlignItems.Center" Class="mb-2">
+            <MudTextField T="string" Label="Message to send" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="_messageToSend"
+                          Style="max-width:420px;" />
+            <MudButton OnClick="SendMessage" Variant="Variant.Outlined" Disabled="@string.IsNullOrWhiteSpace(_messageToSend)">Send</MudButton>
+            <MudButton OnClick="ClearMessages" Variant="Variant.Text">Clear</MudButton>
+        </MudStack>
+        <MudText Typo="Typo.caption">The last @MaxMessages messages received, newest first.</MudText>
+        <div style="max-height:320px; overflow:auto; font-family:monospace; font-size:.8rem;">
+            @foreach (string msg in _messages)
+            {
+                <div style="padding:2px 0; border-bottom:1px solid var(--mud-palette-lines-default); word-break:break-all;">@msg</div>
+            }
+        </div>
+    </MudExpansionPanel>
+</MudExpansionPanels>
 
 @code {
-    private List<string> Messages = new();
-    private string MessageToSend = "";
-    private OSL_Utils.WebSocket.WebSocketConfig WebSocketConf = null;
+    private const int MaxMessages = 100;
 
-    /// <summary>
-    /// Style changed string
-    /// </summary>
-    /// <param name="setter"></param>
-    /// <param name="newValue"></param>
-    private void OnStyleChanged(Action<string> setter, string newValue)
+    private readonly List<string> _messages = new();
+    private string _messageToSend = string.Empty;
+    private bool _showToken;
+    private OSL_Utils.WebSocket.WebSocketConfig WebSocketConf = new();
+
+    // Settings as they are saved, to know if something changed
+    private OSL_Utils.WebSocket.WebSocketConfig _saved = new();
+
+    private bool IsModified => !WebSocketConf.Equals(_saved);
+
+    private string? SingleToken
     {
-        setter(newValue);
+        get => WebSocketConf.Token?.FirstOrDefault();
+        set
+        {
+            WebSocketConf.Token ??= new List<string>();
+            WebSocketConf.Token.Clear();
+            if (!string.IsNullOrWhiteSpace(value))
+                WebSocketConf.Token.Add(value);
+        }
     }
 
-    /// <summary>
-    /// Style changed int
-    /// </summary>
-    /// <param name="setter"></param>
-    /// <param name="newValue"></param>
-    private void OnStyleChanged(Action<int> setter, string newValue)
+    private Severity StateSeverity => WsClient.State switch
     {
-        setter(Convert.ToInt32(newValue));
+        ConnectionState.Authenticated or ConnectionState.Connected => Severity.Success,
+        ConnectionState.Disconnected => Severity.Error,
+        ConnectionState.Authenticating => Severity.Info,
+        _ => Severity.Warning
+    };
+
+    private string StateTitle => WsClient.State switch
+    {
+        ConnectionState.Disconnected => "Disconnected",
+        ConnectionState.Connecting => "Connecting",
+        ConnectionState.Connected => "Connected",
+        ConnectionState.Authenticating => "Authenticating",
+        ConnectionState.Authenticated => "Authenticated",
+        ConnectionState.Reconnecting => "Reconnecting",
+        _ => WsClient.State.ToString()
+    };
+
+    private string StateText => WsClient.State switch
+    {
+        ConnectionState.Disconnected => "Not connected to OSL-Server.",
+        ConnectionState.Connecting => "Connecting to OSL-Server...",
+        ConnectionState.Connected => "Connected to OSL-Server.",
+        ConnectionState.Authenticating => "Authenticating with OSL-Server...",
+        ConnectionState.Authenticated => "Authenticated with OSL-Server.",
+        ConnectionState.Reconnecting => "Reconnecting to OSL-Server...",
+        _ => string.Empty
+    };
+
+    protected override void OnInitialized()
+    {
+        LoadSavedConfig();
+        WsClient.RawMessageReceived += OnRawMessage;
+        WsClient.OnChange += OnServiceChanged;
+    }
+
+    private void LoadSavedConfig()
+    {
+        _saved = WebSocketConfigService.Load(WsClient.ConfigFilePath);
+        WebSocketConf = _saved.Clone();
     }
 
     private async Task SaveConfig()
     {
-        if (!WebSocketConf.Equals(WebSocketConfigService.Load(WsClient.ConfigFilePath)))
+        if (!IsModified)
+            return;
+
+        // Reload the socket with the new settings
+        await WsClient.UpdateSocketConfig(WebSocketConf);
+        LoadSavedConfig();
+        Snackbar.Add("OSL-Server settings saved.", Severity.Success);
+    }
+
+    private void ResetConfig() => LoadSavedConfig();
+
+    private async Task RestartWebSocketClient()
+    {
+        await WsClient.RestartAsync();
+    }
+
+    private async Task SendMessage()
+    {
+        await WsClient.SendAsync("skynet", _messageToSend);
+    }
+
+    private void ClearMessages() => _messages.Clear();
+
+    // Raised from background threads. The handler is removed in Dispose: it used to pile up at each visit of the page.
+    private Task OnRawMessage(string message)
+    {
+        return InvokeAsync(() =>
         {
-            //Reload socket
-            await WsClient.UpdateSocketConfig(WebSocketConf);
+            _messages.Insert(0, message);
+            if (_messages.Count > MaxMessages)
+                _messages.RemoveRange(MaxMessages, _messages.Count - MaxMessages);
             StateHasChanged();
-        }
-    }
-
-    private string? SingleToken
-    {
-        get => WebSocketConf.Token.FirstOrDefault();
-        set
-        {
-            WebSocketConf.Token.Clear();
-
-            if (!string.IsNullOrWhiteSpace(value))
-            {
-                WebSocketConf.Token.Add(value);
-            }
-        }
-    }
-
-    private void ResetConfig()
-    {
-        WebSocketConf = WebSocketConfigService.Load(WsClient.ConfigFilePath);
-    }
-
-    protected override void OnInitialized()
-    {
-        WsClient.RawMessageReceived += async (msg) =>
-        {
-            await InvokeAsync(() =>
-            {
-                Messages.Add(msg);
-                StateHasChanged();
-            });
-        };
-
-        WebSocketConf = WebSocketConfigService.Load(WsClient.ConfigFilePath);
-
-        WsClient.OnChange += OnServiceChanged;
+        });
     }
 
     private void OnServiceChanged()
@@ -188,16 +190,7 @@
 
     public void Dispose()
     {
+        WsClient.RawMessageReceived -= OnRawMessage;
         WsClient.OnChange -= OnServiceChanged;
-    }
-
-    private async Task SendMessage()
-    {
-        await WsClient.SendAsync("skynet", MessageToSend);
-    }
-
-    private async Task RestartWebSocketClient()
-    {
-        await WsClient.RestartAsync();
     }
 }

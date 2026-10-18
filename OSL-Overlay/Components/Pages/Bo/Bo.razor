@@ -3,101 +3,63 @@
 @implements IDisposable
 
 @* ---------------- Best of managament ---------------- *@
+<SectionCard Title="Best Of" Caption="Score of the series. The overlays are updated when you click Apply.">
+    <Actions>
+        <SwitchButton Text="Swap Bo"
+                      Icon="@Icons.Material.Filled.SwapHoriz"
+                      BackgroundColor="@Colors.BlueGray.Darken4"
+                      HoverBackgroundColor="@Colors.Red.Darken2"
+                      TextColor="#ffffff"
+                      OnClick="@BoState.SwapBo" />
+    </Actions>
+    <ChildContent>
+        <MudGrid Spacing="3">
+            @* ---------------- Blue bo ---------------- *@
+            <MudItem xs="12" lg="6" id="blue-side" Class="section">
+                <MudPaper Outlined="true" Class="pa-3" Style="@($"border-left: 5px solid {TeamColors.Blue};")">
+                    <MudText Typo="Typo.subtitle1" Style="@($"color:{TeamColors.Blue};")"><b>Blue Team</b></MudText>
+                    <MudStack Row="true" Spacing="2" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center" Class="mt-2">
+                        <MudTextField T="string" Label="Text" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                                      Value="@BoState.BlueInfo.Text" ValueChanged="v => BoState.BlueInfo.Text = v" />
+                        <MudNumericField T="int" Label="Games" Variant="Variant.Outlined" Margin="Margin.Dense" Min="0" Max="5"
+                                         Style="width:100px;"
+                                         Value="@BoState.BlueInfo.NbGames" ValueChanged="v => BoState.BlueInfo.NbGames = v" />
+                        <MudNumericField T="int" Label="Won" Variant="Variant.Outlined" Margin="Margin.Dense" Min="0" Max="5"
+                                         Style="width:100px;"
+                                         Error="@(BoState.BlueInfo.Win > BoState.BlueInfo.NbGames)"
+                                         ErrorText="More than the games"
+                                         Value="@BoState.BlueInfo.Win" ValueChanged="v => BoState.BlueInfo.Win = v" />
+                        <MudButton OnClick="BoState.UpdateBlueBo" Variant="Variant.Filled" Color="Color.Success">Apply</MudButton>
+                        <MudButton OnClick="BoState.ResetBlueBo" Variant="Variant.Outlined" Color="Color.Error">Reset</MudButton>
+                    </MudStack>
+                </MudPaper>
+            </MudItem>
 
-<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Best Of management</b></MudText>
-@* ---------------- Button swap bo ---------------- *@
-<SwitchButton Text="Swap Bo"
-              Icon="@Icons.Material.Filled.SwapHoriz"
-              BackgroundColor="@Colors.BlueGray.Darken4"
-              HoverBackgroundColor="@Colors.Red.Darken2"
-              TextColor="#ffffff"
-              OnClick="@BoState.SwapBo" />
-<br />
-
-@* ---------------- Blue bo ---------------- *@
-<MudText id="blue-side" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Blue Team</MudText>
-<MudStack Row="true">
-    @* ---------------- Text ---------------- *@
-    <StyleFieldEditor Label="Text"
-                      Type="text"
-                      Value="@BoState.BlueInfo.Text"
-                      ValueChanged="v => OnStyleChanged(val => BoState.BlueInfo.Text = val, v)"
-                      BorderColor="#0B849E"/>
-    @* ---------------- Nb games ---------------- *@
-    <StyleFieldEditor Label="Number of games"
-                      Type="int0to5"
-                      Value="@BoState.BlueInfo.NbGames.ToString()"
-                      ValueChanged="v => OnStyleChanged(val => BoState.BlueInfo.NbGames = val, v)"
-                      BorderColor="#0B849E"/>
-    @* ---------------- Nb win  ---------------- *@
-    <StyleFieldEditor Label="Number of games win"
-                      Type="int0to5"
-                      Value="@BoState.BlueInfo.Win.ToString()"
-                      ValueChanged="v => OnStyleChanged(val => BoState.BlueInfo.Win = val, v)"
-                      BorderColor="#0B849E"/>
-    @* ---------------- Validate  ---------------- *@
-    <MudButton OnClick="BoState.UpdateBlueBo" Variant="Variant.Outlined" Color="Color.Success">
-        Validate
-    </MudButton>
-    @* ---------------- Reset to 0 ---------------- *@
-    <MudButton OnClick="BoState.ResetBlueBo" Variant="Variant.Outlined" Color="Color.Error">
-        Reset
-    </MudButton>
-</MudStack>
-<br />
-@* ---------------- Red bo ---------------- *@
-<MudText Id="red-side" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Red Team</MudText>
-<MudStack Row="true">
-    @* ---------------- Text ---------------- *@
-    <StyleFieldEditor Label="Text"
-                      Type="text"
-                      Value="@BoState.RedInfo.Text"
-                      ValueChanged="v => OnStyleChanged(val => BoState.RedInfo.Text = val, v)"
-                      BorderColor="#BE1E37"/>
-    @* ---------------- Nb games ---------------- *@
-    <StyleFieldEditor Label="Number of games"
-                      Type="int0to5"
-                      Value="@BoState.RedInfo.NbGames.ToString()"
-                      ValueChanged="v => OnStyleChanged(val => BoState.RedInfo.NbGames = val, v)"
-                      BorderColor="#BE1E37"/>
-    @* ---------------- Nb win ---------------- *@
-    <StyleFieldEditor Label="Number of games win"
-                      Type="int0to5"
-                      Value="@BoState.RedInfo.Win.ToString()"
-                      ValueChanged="v => OnStyleChanged(val => BoState.RedInfo.Win = val, v)"
-                      BorderColor="#BE1E37"/>
-    @* ---------------- Validate ---------------- *@
-    <MudButton OnClick="BoState.UpdateRedBo" Variant="Variant.Outlined" Color="Color.Success">
-        Validate
-    </MudButton>
-    @* ---------------- Reset to 0 ---------------- *@
-    <MudButton OnClick="BoState.ResetRedBo" Variant="Variant.Outlined" Color="Color.Error">
-        Reset
-    </MudButton>
-</MudStack>
+            @* ---------------- Red bo ---------------- *@
+            <MudItem xs="12" lg="6" id="red-side" Class="section">
+                <MudPaper Outlined="true" Class="pa-3" Style="@($"border-left: 5px solid {TeamColors.Red};")">
+                    <MudText Typo="Typo.subtitle1" Style="@($"color:{TeamColors.Red};")"><b>Red Team</b></MudText>
+                    <MudStack Row="true" Spacing="2" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center" Class="mt-2">
+                        <MudTextField T="string" Label="Text" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                                      Value="@BoState.RedInfo.Text" ValueChanged="v => BoState.RedInfo.Text = v" />
+                        <MudNumericField T="int" Label="Games" Variant="Variant.Outlined" Margin="Margin.Dense" Min="0" Max="5"
+                                         Style="width:100px;"
+                                         Value="@BoState.RedInfo.NbGames" ValueChanged="v => BoState.RedInfo.NbGames = v" />
+                        <MudNumericField T="int" Label="Won" Variant="Variant.Outlined" Margin="Margin.Dense" Min="0" Max="5"
+                                         Style="width:100px;"
+                                         Error="@(BoState.RedInfo.Win > BoState.RedInfo.NbGames)"
+                                         ErrorText="More than the games"
+                                         Value="@BoState.RedInfo.Win" ValueChanged="v => BoState.RedInfo.Win = v" />
+                        <MudButton OnClick="BoState.UpdateRedBo" Variant="Variant.Filled" Color="Color.Success">Apply</MudButton>
+                        <MudButton OnClick="BoState.ResetRedBo" Variant="Variant.Outlined" Color="Color.Error">Reset</MudButton>
+                    </MudStack>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </ChildContent>
+</SectionCard>
 
 @code {
-
-    /// <summary>
-    /// Style changed string
-    /// </summary>
-    /// <param name="setter"></param>
-    /// <param name="newValue"></param>
-    private void OnStyleChanged(Action<string> setter, string newValue)
-    {
-        setter(newValue);
-    }
-
-    /// <summary>
-    /// Style changed int
-    /// </summary>
-    /// <param name="setter"></param>
-    /// <param name="newValue"></param>
-    private void OnStyleChanged(Action<int> setter, string newValue)
-    {
-        setter(Convert.ToInt32(newValue));
-    }
-
     protected override void OnInitialized()
     {
         BoState.OnChange += RefreshUI;
@@ -105,7 +67,7 @@
 
     private void RefreshUI()
     {
-        InvokeAsync(StateHasChanged);
+        _ = InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
@@ -113,4 +75,3 @@
         BoState.OnChange -= RefreshUI;
     }
 }
-

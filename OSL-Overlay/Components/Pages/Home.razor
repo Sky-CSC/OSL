@@ -1,77 +1,143 @@
 @page "/"
+@using OSL_CDragon
+@using OSL_Overlay.GameFlow.Team
+@using OSL_UI.Icons
+@implements IDisposable
+@inject CDragon Cdragon
+@inject TeamState TeamState
 
-<PageTitle>OSL-Overlay - Home </PageTitle>
+<PageTitle>OSL-Overlay - Home</PageTitle>
 
-<MudText Typo="Typo.h3" GutterBottom="true">Welcome to OSL !</MudText>
+<PageHeader Title="Welcome to OSL"
+            Subtitle="Display more and more information for your League of Legends tournaments." />
 
+@* ---------------- Status ---------------- *@
+<MudGrid Spacing="3" Class="mb-2">
+    <MudItem xs="12" md="4">
+        <SectionCard Title="OSL-Server" Caption="Source of the game data">
+            <MudStack Spacing="2" AlignItems="AlignItems.Start">
+                <ServerStatusChip Size="Size.Medium" />
+                <MudButton Href="config/websocket" Size="Size.Small" Variant="Variant.Outlined">Server settings</MudButton>
+            </MudStack>
+        </SectionCard>
+    </MudItem>
 
-<MudText Class="mb-8">This application permite to display more and more information for yours League of Legends toornaments</MudText>
+    <MudItem xs="12" md="4">
+        <SectionCard Title="Assets" Caption="Images and names used by the overlays">
+            <MudStack Spacing="2" AlignItems="AlignItems.Start">
+                <MudText>
+                    @if (string.IsNullOrEmpty(Cdragon.ServedPatch))
+                    {
+                        <b>No assets yet</b>
+                    }
+                    else
+                    {
+                        <b>@Cdragon.ServedPatch · @CDragon.DisplayRegion(Cdragon.ServedRegion)</b>
+                        <MudChip T="string" Size="Size.Small" Color="@(Cdragon.IsPinned ? Color.Warning : Color.Success)" Class="ml-2">
+                            @(Cdragon.IsPinned ? "Chosen manually" : "Automatic")
+                        </MudChip>
+                    }
+                </MudText>
+                @if (Cdragon.Status.IsBusy)
+                {
+                    <MudText Typo="Typo.caption">@Cdragon.Status.Message</MudText>
+                }
+                <MudButton Href="config/assets" Size="Size.Small" Variant="Variant.Outlined">Manage assets</MudButton>
+            </MudStack>
+        </SectionCard>
+    </MudItem>
 
-<MudAlert Severity="Severity.Normal" ContentAlignment="HorizontalAlignment.Start">
-    You will find some information on this page, but the full documentation is available here:
-    <MudLink Href="https://doc.osl.sky-csc.fr" Target="_blank" Typo="Typo.body2" Color="Color.Primary">
-        <b>OSL web site documentation</b>
-    </MudLink>
-</MudAlert>
+    <MudItem xs="12" md="4">
+        <SectionCard Title="Teams" Caption="Teams shown in the overlays">
+            <MudStack Spacing="1" AlignItems="AlignItems.Start">
+                <MudText Style="@($"color:{TeamColors.Blue};")"><b>@TeamLabel(TeamState.BlueInfo.Name, TeamState.BlueInfo.Tag, "Blue team")</b></MudText>
+                <MudText Style="@($"color:{TeamColors.Red};")"><b>@TeamLabel(TeamState.RedInfo.Name, TeamState.RedInfo.Tag, "Red team")</b></MudText>
+                <MudButton Href="team" Size="Size.Small" Variant="Variant.Outlined" Class="mt-1">Edit teams</MudButton>
+            </MudStack>
+        </SectionCard>
+    </MudItem>
+</MudGrid>
 
+@* ---------------- Modules ---------------- *@
+<MudText Typo="Typo.h5" Class="mb-2 mt-4"><b>Modules</b></MudText>
+<MudGrid Spacing="3">
+    @foreach (ModuleInfo module in Modules)
+    {
+        <MudItem xs="12" sm="6" lg="4">
+            <MudPaper Elevation="2" Class="pa-3" Style="height:100%;">
+                <MudStack Spacing="1" Style="height:100%;">
+                    <MudStack Row="true" AlignItems="AlignItems.Center" Spacing="2">
+                        <MudIcon Icon="@module.Icon" Color="@(module.InDevelopment ? Color.Default : Color.Primary)" />
+                        <MudText Typo="Typo.subtitle1"><b>@module.Title</b></MudText>
+                        @if (module.InDevelopment)
+                        {
+                            <MudChip T="string" Size="Size.Small" Color="Color.Warning">In development</MudChip>
+                        }
+                    </MudStack>
+                    <MudText Typo="Typo.body2" Class="mud-text-secondary" Style="flex:1;">@module.Description</MudText>
+                    @if (!module.InDevelopment)
+                    {
+                        <div><MudButton Href="@module.Href" Size="Size.Small" Variant="Variant.Outlined">Open</MudButton></div>
+                    }
+                </MudStack>
+            </MudPaper>
+        </MudItem>
+    }
+</MudGrid>
 
-<br />
-<MudText Typo="Typo.h4" GutterBottom="true">Requirements</MudText>
-<MudText Typo="Typo.body2">
-    <div class="doc-box doc-requirement">
-        <b>💻 To use this application you need :</b><br>
-        - <MudLink Href="https://github.com/Sky-CSC/OSL" Target="_blank">OSL-Server 2.1.3 or above</MudLink>
-        <br />
-        - <MudLink Href="https://obsproject.com/fr" Target="_blank">OBS or equivalent (display links for cast)</MudLink>
-    </div>
-</MudText>
+@* ---------------- Requirements and documentation ---------------- *@
+<MudExpansionPanels Class="mt-6" Elevation="0">
+    <MudExpansionPanel Text="Requirements and documentation">
+        <MudStack Spacing="1">
+            <MudText>To use this application you need :</MudText>
+            <MudText>• <MudLink Href="https://github.com/Sky-CSC/OSL" Target="_blank">OSL-Server 2.1.3 or above</MudLink></MudText>
+            <MudText>• <MudLink Href="https://obsproject.com/fr" Target="_blank">OBS or equivalent</MudLink> (to display the overlays)</MudText>
+            <MudText>
+                Full documentation :
+                <MudLink Href="https://doc.osl.sky-csc.fr" Target="_blank"><b>OSL web site documentation</b></MudLink>
+            </MudText>
+        </MudStack>
+    </MudExpansionPanel>
+</MudExpansionPanels>
 
-<br />
-<MudText Typo="Typo.h4" GutterBottom="true">Pages</MudText>
+@code {
+    private sealed record ModuleInfo(string Title, string Description, string Icon, string Href, bool InDevelopment = false);
 
-<MudText Typo="Typo.h6" GutterBottom="true">OSL-Server config</MudText>
-<OSL_UI.Box.Tip Title="Configure OSL-Server"
-                Text="Enter correct IP, port and Token to connect OSL-Overlay to OSL-Server to share informations." />
-<br />
-<MudText Typo="Typo.h6" GutterBottom="true">OBS</MudText>
-<OSL_UI.Box.Tip Title="Display overlay in your cast app"
-                Text="List of all overlays urls." />
-<br />
-<MudText Typo="Typo.h6" GutterBottom="true">Teams</MudText>
-<OSL_UI.Box.Tip Title="Team information"
-                Text="Add, delete, modify teams informations.
-                    <br/> Choose 2 teams and logo, name and/or tags, pictures, ... displayed on differents overlays." />
-<br />
+    private static readonly ModuleInfo[] Modules =
+    [
+        new("OBS", "List of all the overlay links to add to your cast software.", Icons.Material.Filled.Link, "obs"),
+        new("Teams", "Choose the two teams: logo, name, tag, players and images shown on the overlays.", Icons.Material.Filled.Diversity3, "team"),
+        new("Texts", "Best of, patch, phase and VS texts shown on the overlays.", Icons.Material.Filled.TextFields, "text"),
+        new("Champ Select", "Current bans and picks.", Icons.Material.Filled.FactCheck, "champselect"),
+        new("Fearless", "Champions banned from the games already played (fearless mode).", Icons.Material.Filled.ImageNotSupported, "fearless"),
+        new("End Game", "Statistics of a finished game: enter the match id and choose a statistic.", Icons.Material.Filled.InsertChart, "endgame"),
+        new("Runes", "Runes of the players.", CustomIcons.Custom.Rune, "rune", true),
+        new("In Game", "Gold, towers, items, objectives...", Icons.Material.Filled.SportsEsports, "ingame", true),
+    ];
 
-<MudText Typo="Typo.h6" GutterBottom="true">Text</MudText>
-<OSL_UI.Box.Tip Title="Text information"
-                Text="Manage best of, patch, phase, vs text display in different overlays."/>
+    private static string TeamLabel(string? name, string? tag, string fallback)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return fallback;
+        return string.IsNullOrWhiteSpace(tag) ? name : $"{name} [{tag}]";
+    }
 
-<MudText Typo="Typo.h6" GutterBottom="true">Fearless</MudText>
-<OSL_UI.Box.Tip Title="Fearless mode"
-                Text="Display banned champs for game in fearless mode. Enter match id already played and set it."/>
+    protected override void OnInitialized()
+    {
+        Cdragon.Updated += Refresh;
+        Cdragon.StatusChanged += OnStatusChanged;
+        TeamState.OnChange += Refresh;
+    }
 
-<br />
-<MudText Typo="Typo.h6" GutterBottom="true">Runes</MudText>
-<MudText Typo="Typo.body2">
-    <OSL_UI.Box.Build Title="Module currently under development"
-                      Text="Display players runes." />
-</MudText>
-<br />
+    // Raised from background threads
+    private void Refresh() => _ = InvokeAsync(StateHasChanged);
 
-<MudText Typo="Typo.h6" GutterBottom="true">Champ Select</MudText>
-<OSL_UI.Box.Tip Title="Champ select information"
-                Text="Display curent ban pick information."/>
-<br />
+    private void OnStatusChanged(AssetSyncStatus status) => Refresh();
 
-<MudText Typo="Typo.h6" GutterBottom="true">In Game</MudText>
-<MudText Typo="Typo.body2">
-    <OSL_UI.Box.Build Title="Module currently under development"
-                      Text="In game enables to display in game informations (gold, towers, items, objectives, ...)" />
-</MudText>
-<br />
-
-<MudText Typo="Typo.h6" GutterBottom="true">End Game</MudText>
-<OSL_UI.Box.Tip Title="End game statistics"
-                Text="Display end game information of a game. Enter match id and set it.
-<br/> It is possible to choose diferent statistics (by default is Damage Dealt To Champions)"/>
+    public void Dispose()
+    {
+        Cdragon.Updated -= Refresh;
+        Cdragon.StatusChanged -= OnStatusChanged;
+        TeamState.OnChange -= Refresh;
+    }
+}

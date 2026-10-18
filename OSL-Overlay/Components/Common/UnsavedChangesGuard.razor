@@ -1,0 +1,33 @@
+@inject IDialogService DialogService
+@inject NavigationManager Navigation
+
+@* Warns before leaving a page that still has unsaved changes (link, back button, closing the tab). *@
+<NavigationLock OnBeforeInternalNavigation="OnBeforeNavigation" ConfirmExternalNavigation="@Active" />
+
+@code {
+    /// <summary>True when there are unsaved changes.</summary>
+    [Parameter] public bool Active { get; set; }
+
+    [Parameter] public string Message { get; set; } = "Some changes are not saved. Leave this page and lose them?";
+
+    private bool _leaving;
+
+    private async Task OnBeforeNavigation(LocationChangingContext context)
+    {
+        if (!Active || _leaving)
+            return;
+
+        // A link to another place of the same page (e.g. "#blue-side") is not leaving
+        string target = new Uri(context.TargetLocation).AbsolutePath;
+        if (target == new Uri(Navigation.Uri).AbsolutePath)
+            return;
+
+        context.PreventNavigation();
+        bool? leave = await DialogService.ShowMessageBoxAsync("Unsaved changes", Message, yesText: "Leave", cancelText: "Stay");
+        if (leave == true)
+        {
+            _leaving = true;
+            Navigation.NavigateTo(context.TargetLocation);
+        }
+    }
+}

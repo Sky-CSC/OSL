@@ -1,0 +1,37 @@
+@* ---------------- A block of a management page: title, short explanation, actions, content ---------------- *@
+<MudPaper Elevation="2" Class="@($"pa-4 mb-4 {Class}")" Style="@($"border-top: 5px solid {Accent};")">
+    @if (!string.IsNullOrEmpty(Title) || Actions is not null)
+    {
+        <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Wrap="Wrap.Wrap" Spacing="2" Class="mb-2">
+            <div>
+                @if (!string.IsNullOrEmpty(Title))
+                {
+                    <MudText Typo="Typo.h6" Style="@($"color:{Accent}; font-weight:bold;")">@Title</MudText>
+                }
+                @if (!string.IsNullOrEmpty(Caption))
+                {
+                    <MudText Typo="Typo.caption" Class="mud-text-secondary">@Caption</MudText>
+                }
+            </div>
+            @Actions
+        </MudStack>
+    }
+    @ChildContent
+</MudPaper>
+
+@code {
+    [Parameter] public string? Title { get; set; }
+
+    /// <summary>One line explaining what the block does.</summary>
+    [Parameter] public string? Caption { get; set; }
+
+    /// <summary>Color of the top border and of the title (use <see cref="TeamColors"/> for a side).</summary>
+    [Parameter] public string Accent { get; set; } = "var(--mud-palette-primary)";
+
+    [Parameter] public string Class { get; set; } = string.Empty;
+
+    /// <summary>Buttons shown on the right of the title.</summary>
+    [Parameter] public RenderFragment? Actions { get; set; }
+
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}

@@ -1,0 +1,63 @@
+@using OSL_Overlay.WebSocketClient
+@using OSL_Utils.WebSocket
+@implements IDisposable
+@inject WebSocketClient WsClient
+
+@* State of the connection to OSL-Server. Place it in the <MudAppBar> or in a page. *@
+<MudTooltip Text="@Tooltip" Placement="Placement.Bottom" Arrow="true" Delay="300">
+    <MudChip T="string"
+             Size="@Size"
+             Variant="Variant.Outlined"
+             Color="@StateColor"
+             Icon="@StateIcon"
+             Href="config/websocket"
+             Class="ml-2">
+        @Text
+    </MudChip>
+</MudTooltip>
+
+@code {
+    [Parameter] public Size Size { get; set; } = Size.Small;
+
+    private ConnectionState State => WsClient.State;
+
+    private string Text => State switch
+    {
+        ConnectionState.Authenticated => "Server connected",
+        ConnectionState.Connected => "Server connected",
+        ConnectionState.Authenticating => "Server : authenticating",
+        ConnectionState.Connecting => "Server : connecting",
+        ConnectionState.Reconnecting => "Server : reconnecting",
+        _ => "Server disconnected"
+    };
+
+    private string Tooltip => State switch
+    {
+        ConnectionState.Authenticated => "Connected and authenticated to OSL-Server (click for the settings)",
+        ConnectionState.Disconnected => "Not connected to OSL-Server (click for the settings)",
+        _ => "Connection to OSL-Server in progress (click for the settings)"
+    };
+
+    private Color StateColor => State switch
+    {
+        ConnectionState.Authenticated => Color.Success,
+        ConnectionState.Connected => Color.Success,
+        ConnectionState.Disconnected => Color.Error,
+        _ => Color.Warning
+    };
+
+    private string StateIcon => State switch
+    {
+        ConnectionState.Authenticated => Icons.Material.Filled.CheckCircle,
+        ConnectionState.Connected => Icons.Material.Filled.CheckCircle,
+        ConnectionState.Disconnected => Icons.Material.Filled.Error,
+        _ => Icons.Material.Filled.Sync
+    };
+
+    protected override void OnInitialized() => WsClient.OnChange += OnChanged;
+
+    // Raised from a background thread
+    private void OnChanged() => _ = InvokeAsync(StateHasChanged);
+
+    public void Dispose() => WsClient.OnChange -= OnChanged;
+}

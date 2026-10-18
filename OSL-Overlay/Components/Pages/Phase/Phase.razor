@@ -3,49 +3,18 @@
 @implements IDisposable
 
 @* ---------------- Phase managament ---------------- *@
-
-<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Phase management</b></MudText>
-<MudStack Row="true">
-    <MudStack Row="false">
-        <MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Phase text</MudText>
-        @* ---------------- Text ---------------- *@
-        <StyleFieldEditor Label=""
-                          Type="text"
-                          Value="@PhaseState.Info.Phase.Txt"
-                          ValueChanged="v => PhaseState.UpdatePhaseText(v)"
-                          BorderColor="#0B849E"
-                          Placeholder="Swiss Group - Round 1" />
+<SectionCard Title="Phase" Caption="Changes are shown on the overlays immediately.">
+    <MudStack Row="true" Spacing="2" Wrap="Wrap.Wrap">
+        <MudTextField T="string" Label="Phase text" Placeholder="Swiss Group - Round 1" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                      Value="@PhaseState.Info.Phase.Txt" ValueChanged="v => PhaseState.UpdatePhaseText(v)" />
+        <MudTextField T="string" Label="Event text" Placeholder="2025 OcciLan" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                      Value="@PhaseState.Info.Event.Txt" ValueChanged="v => PhaseState.UpdateEventText(v)" />
+        <MudTextField T="string" Label="Date text" Placeholder="24 Oct" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                      Value="@PhaseState.Info.Date.Txt" ValueChanged="v => PhaseState.UpdateDateText(v)" />
     </MudStack>
-    <br />
-    <MudStack Row="false">
-        <MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Event text</MudText>
-        @* ---------------- Text ---------------- *@
-        <StyleFieldEditor Label=""
-                          Type="text"
-                          Value="@PhaseState.Info.Event.Txt"
-                          ValueChanged="v => PhaseState.UpdateEventText(v)"
-                          BorderColor="#0B849E"
-                          Placeholder="2025 OcciLan" />
-    </MudStack>
-    <br />
-    <MudStack Row="false">
-        <MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Date text</MudText>
-        @* ---------------- Text ---------------- *@
-        <StyleFieldEditor Label=""
-                          Type="text"
-                          Value="@PhaseState.Info.Date.Txt"
-                          ValueChanged="v => PhaseState.UpdateDateText(v)"
-                          BorderColor="#0B849E"
-                          Placeholder="24 Oct" />
-    </MudStack>
-</MudStack>
+</SectionCard>
 
 @code {
-    private void OnStyleChanged(Action<string> setter, string newValue)
-    {
-        setter(newValue);
-    }
-
     protected override void OnInitialized()
     {
         PhaseState.OnChange += RefreshUI;

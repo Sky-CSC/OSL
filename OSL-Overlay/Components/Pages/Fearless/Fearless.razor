@@ -6,185 +6,139 @@
 @using OSL_UI.Box
 @inject FearlessState FearlessState
 @inject CDragon _cdragon
+@inject ISnackbar Snackbar
 @implements IDisposable
 
 <PageTitle>OSL-Overlay - Fearless</PageTitle>
 
-<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Fearless management</b></MudText>
-<MudStack Row="true" AlignItems="AlignItems.Center">
-    <StyleFieldEditor Label="Number of fearless match to display"
-                      Type="text"
-                      Value="@($"{(_nbFearlessMatch).ToString()}")"
-                      ValueChanged="v => OnStyleChanged(val => _nbFearlessMatch = val, v)" />
+<style>
+    .section {
+        scroll-margin-top: 10vh;
+    }
+</style>
 
-    <StyleFieldEditor Label="Match Id"
-                      Type="text"
-                      Value="@_idMatch"
-                      ValueChanged="v => OnStyleChanged(val => _idMatch = val, v)"
-                      HelperText="Just Id not region prefix" />
-</MudStack>
-<MudStack Row="true" AlignItems="AlignItems.Center">
+<PageHeader Title="Fearless" Subtitle="Champions banned from the games already played. Set the games in order." >
+    <Actions>
+        <MudButton OnClick="ResetFearlessList" Variant="Variant.Outlined" Color="Color.Error" StartIcon="@Icons.Material.Filled.SettingsBackupRestore">
+            Reset all games
+        </MudButton>
+    </Actions>
+</PageHeader>
+
+@* ---------------- Overlay links ---------------- *@
+<SectionCard Title="Overlay links" Caption="Add these addresses in your cast software.">
+    @if (FearlessState.FearlessList.Count == 0)
+    {
+        <MudText Typo="Typo.body2" Class="mud-text-secondary">Set a game to get the links of the view 1.</MudText>
+    }
+    @for (int i = 0; i < FearlessState.FearlessList.Count; i++)
+    {
+        <OverlayLink Title="@($"View 1 - Game {i + 1} - Blue")" Path="@($"fearless/view1/{i}/0")" Accent="@TeamColors.Blue" />
+        <OverlayLink Title="@($"View 1 - Game {i + 1} - Red")" Path="@($"fearless/view1/{i}/1")" Accent="@TeamColors.Red" />
+    }
+    <OverlayLink Title="View 2" Path="fearless/view2" />
+    <MudStack Row="true" Spacing="2" Class="mt-1">
+        <MudButton Href="fearless/view1/customize" Size="Size.Small" Variant="Variant.Outlined">Customize view 1</MudButton>
+        <MudButton Href="fearless/view2/customize" Size="Size.Small" Variant="Variant.Outlined">Customize view 2</MudButton>
+    </MudStack>
+</SectionCard>
+
+@* ---------------- Games ---------------- *@
+<SectionCard Title="Games" Caption="For each game, enter a match id or choose the champions manually.">
+    <MudStack Row="true" Spacing="2" Wrap="Wrap.Wrap" AlignItems="AlignItems.Start" Class="mb-3">
+        <MudNumericField T="int" Label="Number of games" Variant="Variant.Outlined" Margin="Margin.Dense" Min="1" Max="7"
+                         Style="width:170px;"
+                         Value="@_nbFearlessMatch" ValueChanged="v => _nbFearlessMatch = v" />
+        <MudTextField T="string" Label="Match id" Placeholder="7550999924" HelperText="Just the id, without the region prefix"
+                      Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                      Style="max-width:260px;"
+                      Error="@(_idMatch.Length > 0 && !long.TryParse(_idMatch, out _))"
+                      ErrorText="The id is only digits"
+                      @bind-Value="_idMatch" />
+    </MudStack>
+
     @for (int i = 1; i <= _nbFearlessMatch; i++)
     {
         int index = i;
-        bool disableAdd = false;
-        bool disableDelete = false;
-        @if (index - 1 > FearlessState.FearlessList.Count)
-        {
-            disableAdd = true;
-        }
-        @if (index != FearlessState.FearlessList.Count)
-        {
-            disableDelete = true;
-        }
-        <MudStack Row="false">
-            <SwitchButton Icon="@Icons.Material.Filled.AddBox"
-                          Text="@($"Set match {index} {_idMatch}")"
-                          OnClick="() => AddIdMatch(index -1)"
-                          BackgroundColor="@Colors.Teal.Darken4"
-                          HoverBackgroundColor="@Colors.Teal.Darken2"
-                          TextColor="#ffffff"
-                          MaxWidth="200px"
-                          MaxHeight="60px"
-                          BorderRadius="8px"
-                          FontSize="16px"
-                          Disabled="@disableAdd" />
-            <SwitchButton Icon="@Icons.Material.Filled.AddBox"
-                          Text="@($"Set match {index} manually")"
-                          OnClick="() => AddCustomMatch(index -1)"
-                          BackgroundColor="@Colors.Teal.Darken4"
-                          HoverBackgroundColor="@Colors.Teal.Darken2"
-                          TextColor="#ffffff"
-                          MaxWidth="200px"
-                          MaxHeight="60px"
-                          BorderRadius="8px"
-                          FontSize="16px"
-                          Disabled="@disableAdd" />
-            <SwitchButton Icon="@Icons.Material.Filled.Delete"
-                          Text="@($"Delete match {index}")"
-                          OnClick="() => DeleteFearlessIndex(index -1)"
-                          BackgroundColor="@Colors.Red.Darken4"
-                          HoverBackgroundColor="@Colors.Red.Darken2"
-                          TextColor="#ffffff"
-                          MaxWidth="230px"
-                          MaxHeight="40px"
-                          BorderRadius="8px"
-                          FontSize="16px"
-                          Disabled="@disableDelete" />
-        </MudStack>
-    }
-    <SwitchButton Icon="@Icons.Material.Filled.SettingsBackupRestore"
-                  Text="Reset"
-                  OnClick="ResetFearlessList"
-                  BackgroundColor="@Colors.Red.Darken4"
-                  HoverBackgroundColor="@Colors.Red.Darken2"
-                  TextColor="#ffffff"
-                  MaxWidth="150px"
-                  MaxHeight="40px"
-                  BorderRadius="8px"
-                  FontSize="16px" />
-</MudStack>
-<br />
+        // A game can only be set after the previous ones, and only the last one can be deleted
+        bool disableAdd = index - 1 > FearlessState.FearlessList.Count;
+        bool disableDelete = index != FearlessState.FearlessList.Count;
+        var match = index <= FearlessState.FearlessList.Count ? FearlessState.FearlessList[index - 1] : null;
 
-<MudText id="link" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Fearless links</MudText>
-<MudStack Row="false">
-    <MudStack Row="true">
-        @if (FearlessState.FearlessList.Count == 0)
-        {
-            <OSL_UI.Box.Info Title="Set a match to see links for view1"
-                              Text="" />
-        }
-        @for (int i = 0; i < FearlessState.FearlessList.Count; i++)
-        {
-            <SwitchButton Text="@($"View 1, match {i+1}")"
-                          Icon="@Icons.Material.Filled.InsertLink"
-                          BackgroundColor="@Colors.BlueGray.Darken4"
-                          HoverBackgroundColor="@Colors.BlueGray.Darken2"
-                          TextColor="@Colors.Blue.Default"
-                          Href="@($"/fearless/view1/{i}/0")"
-                          Target="_blank"
-                          MaxWidth="200px"
-                          MaxHeight="50px"
-                          FontSize="12px" />
-            <SwitchButton Text="@($"View 1, match {i+1}")"
-                          Icon="@Icons.Material.Filled.InsertLink"
-                          BackgroundColor="@Colors.BlueGray.Darken4"
-                          HoverBackgroundColor="@Colors.BlueGray.Darken2"
-                          TextColor="@Colors.Red.Default"
-                          Href="@($"/fearless/view1/{i}/1")"
-                          Target="_blank"
-                          MaxWidth="200px"
-                          MaxHeight="50px"
-                          FontSize="12px" />
-        }
-    </MudStack>
-    <SwitchButton Text="@($"View 2")"
-                  Icon="@Icons.Material.Filled.InsertLink"
-                  BackgroundColor="@Colors.BlueGray.Darken4"
-                  HoverBackgroundColor="@Colors.BlueGray.Darken2"
-                  TextColor="#FF0000"
-                  Href="@($"/fearless/view2")"
-                  Target="_blank"
-                  MaxWidth="200px"
-                  MaxHeight="50px"
-                  FontSize="15px" />
-</MudStack>
+        <MudPaper Outlined="true" Class="pa-3 mb-2">
+            <MudStack Row="true" Spacing="2" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center">
+                <MudText Typo="Typo.subtitle1" Style="min-width:70px;"><b>Game @index</b></MudText>
 
-<br />
-<MudText Typo="Typo.h6" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>List of fearless</b></MudText>
-@foreach (var match in FearlessState.FearlessList)
-{
-    <MudStack Row="true" AlignItems="AlignItems.Center">
-        @if (match[0].IdMatch != "0")
-        {
-            <div>
-                Id match : @match[0].IdMatch
-            </div>
-        }
-        else
-        {
-            <div>
-                Manually
-            </div>
-        }
-        @foreach (var team in match)
-        {
-            @foreach (var champion in team.Champions)
-            {
-                <div>
-                    <img src="@champion.Image.Path" width="36" height="36" />
+                <div style="flex:1 1 220px; min-width:200px;">
+                    @if (match is null)
+                    {
+                        <MudText Typo="Typo.body2" Class="mud-text-secondary">Not set</MudText>
+                    }
+                    else
+                    {
+                        <MudText Typo="Typo.caption">@(match[0].IdMatch != "0" ? $"Match id {match[0].IdMatch}" : "Set manually")</MudText>
+                        <MudStack Row="true" Spacing="1" Wrap="Wrap.Wrap">
+                            @foreach (var team in match)
+                            {
+                                @foreach (var champion in team.Champions)
+                                {
+                                    <img src="@champion.Image.Path" width="32" height="32" alt="champion" style="border-radius:4px;" />
+                                }
+                            }
+                        </MudStack>
+                    }
                 </div>
-            }
+
+                <MudButton Variant="Variant.Outlined" Size="Size.Small" Color="Color.Primary" StartIcon="@Icons.Material.Filled.AddBox"
+                           Disabled="@(disableAdd || !long.TryParse(_idMatch, out _))"
+                           OnClick="() => AddIdMatch(index - 1)">
+                    From match id
+                </MudButton>
+                <MudButton Variant="Variant.Outlined" Size="Size.Small" Color="Color.Primary" StartIcon="@Icons.Material.Filled.TouchApp"
+                           Disabled="@disableAdd"
+                           OnClick="() => AddCustomMatch(index - 1)">
+                    From the champions below
+                </MudButton>
+                <MudButton Variant="Variant.Text" Size="Size.Small" Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete"
+                           Disabled="@disableDelete"
+                           OnClick="() => DeleteFearlessIndex(index - 1)">
+                    Delete
+                </MudButton>
+            </MudStack>
+        </MudPaper>
+    }
+</SectionCard>
+
+@* ---------------- Champions chosen manually ---------------- *@
+<SectionCard Title="Champions set manually" Caption="Choose the champions, then click 'From the champions below' on the game.">
+    <MudText Typo="Typo.subtitle2" Style="@($"color:{TeamColors.Blue};")"><b>Blue Team</b></MudText>
+    <MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center" Class="mb-2">
+        @for (int i = 0; i < _nbPlayer - 5; i++)
+        {
+            int index = i;
+            <StyleFieldEditor Type="champion-square-portrait-image"
+                              Champions="@_cdragon.GetAllChampions()"
+                              OnChampionSelected="@(champ => GetChampionSquare(index, champ))"
+                              DefaultImage="@_cdragon.GetDefaultImage()"
+                              BorderColor="@TeamColors.Blue" />
         }
     </MudStack>
-}
-
-<br />
-<MudText Typo="Typo.h6" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>For set champ manually</b></MudText>
-
-<MudStack Row="true" AlignItems="AlignItems.Center">
-    @for (int i = 0; i < _nbPlayer - 5; i++)
-    {
-        int index = i;
-        <StyleFieldEditor Type="champion-square-portrait-image"
-                          Champions="@_cdragon.GetAllChampions()"
-                          OnChampionSelected="@(champ => GetChampionSquare(index, champ))"
-                          DefaultImage="@_cdragon.GetDefaultImage()" />
-    }
-</MudStack>
-<MudStack Row="true" AlignItems="AlignItems.Center">
-    @for (int i = 5; i < _nbPlayer; i++)
-    {
-        int index = i;
-        <StyleFieldEditor Type="champion-square-portrait-image"
-                          Champions="@_cdragon.GetAllChampions()"
-                          OnChampionSelected="@(champ => GetChampionSquare(index, champ))"
-                          DefaultImage="@_cdragon.GetDefaultImage()" />
-    }
-</MudStack>
+    <MudText Typo="Typo.subtitle2" Style="@($"color:{TeamColors.Red};")"><b>Red Team</b></MudText>
+    <MudStack Row="true" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center">
+        @for (int i = 5; i < _nbPlayer; i++)
+        {
+            int index = i;
+            <StyleFieldEditor Type="champion-square-portrait-image"
+                              Champions="@_cdragon.GetAllChampions()"
+                              OnChampionSelected="@(champ => GetChampionSquare(index, champ))"
+                              DefaultImage="@_cdragon.GetDefaultImage()"
+                              BorderColor="@TeamColors.Red" />
+        }
+    </MudStack>
+</SectionCard>
 
 @code {
-    private string _idMatch = "7550999924";
+    private string _idMatch = string.Empty;
     private int _index = 0;
     private int _nbFearlessMatch = 2;
     private int _nbPlayer = 10;
@@ -198,7 +152,17 @@
 
     public async Task AddIdMatch(int index)
     {
-        await FearlessState.MatchIdModeAsync(Convert.ToInt64(_idMatch), index);
+        if (!long.TryParse(_idMatch, out long idMatch))
+            return;
+
+        try
+        {
+            await FearlessState.MatchIdModeAsync(idMatch, index);
+        }
+        catch (Exception ex)
+        {
+            Snackbar.Add($"The match could not be loaded: {ex.Message}", Severity.Error);
+        }
     }
     public async Task AddCustomMatch(int index)
     {

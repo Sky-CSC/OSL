@@ -1,0 +1,131 @@
+@using OSL_Overlay.GameFlow.Team
+
+@* ---------------- Editor of one team (used for the blue and the red side) ---------------- *@
+<style>
+    .team-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .team-row .grow { flex: 1 1 200px; min-width: 180px; }
+    .team-row .lane-label { flex: 0 0 72px; font-weight: bold; }
+</style>
+
+<MudPaper Elevation="3" Class="pa-4" Style="@($"border-top: 6px solid {Accent};")">
+
+    @* ---------------- Title ---------------- *@
+    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Wrap="Wrap.Wrap" Class="mb-3">
+        <MudText Typo="Typo.h5" Style="@($"color:{Accent}; font-weight:bold;")">@Title</MudText>
+        @if (Modified)
+        {
+            <MudStack Row="true" Spacing="2">
+                <MudButton Size="Size.Small" Variant="Variant.Outlined" OnClick="OnApply">Apply to overlay</MudButton>
+                @if (CanRevert)
+                {
+                    <MudButton Size="Size.Small" Variant="Variant.Text" Color="Color.Error" OnClick="OnRevert">Discard changes</MudButton>
+                }
+            </MudStack>
+        }
+    </MudStack>
+
+    @* ---------------- Which team file, save... ---------------- *@
+    @Header
+
+    <MudDivider Class="my-3" />
+
+    @* ---------------- Identity ---------------- *@
+    <div class="team-row mb-2">
+        <ImagePicker Label="Logo" Value="@Info.Logo" ValueChanged="v => Edit(() => Info.Logo = v)" Size="72" Accent="@Accent" />
+        <MudTextField T="string" Label="Name" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true" Class="grow"
+                      Value="@Info.Name" ValueChanged="v => Edit(() => Info.Name = v)" />
+        <MudTextField T="string" Label="Tag" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                      Value="@Info.Tag" ValueChanged="v => Edit(() => Info.Tag = v)" />
+        <MudTextField T="string" Label="Coach" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true" Class="grow"
+                      Value="@Info.Coach" ValueChanged="v => Edit(() => Info.Coach = v)" />
+    </div>
+
+    @* ---------------- Players ---------------- *@
+    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Wrap="Wrap.Wrap" Class="mt-4">
+        <MudText Typo="Typo.h6">Players</MudText>
+        <MudSwitch T="bool"
+                   Color="Color.Primary"
+                   Label="Show all custom names"
+                   Value="@AllCustomNames"
+                   ValueChanged="OnAllCustomNamesChanged" />
+    </MudStack>
+    <MudText Typo="Typo.caption" Class="mb-2">
+        A custom name replaces the summoner name in the overlay. The image is shown next to the player.
+    </MudText>
+
+    @foreach ((string label, Lane lane) in Lanes())
+    {
+        <MudPaper Outlined="true" Class="pa-2 mb-2">
+            <div class="team-row">
+                <span class="lane-label" style="@($"color:{Accent};")">@label</span>
+                <div class="grow">
+                    <MudTextField T="string" Label="Custom name" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                                  Value="@lane.Name" ValueChanged="v => Edit(() => lane.Name = v)" />
+                    <MudSwitch T="bool" Color="Color.Primary" Size="Size.Small" Label="Show it"
+                               Value="@lane.ShowCustomName" ValueChanged="v => Edit(() => lane.ShowCustomName = v)" />
+                </div>
+                <ImagePicker Label="@($"{label} image")" Value="@lane.Image" ValueChanged="v => Edit(() => lane.Image = v)" Accent="@Accent" />
+                <MudTooltip Text="Clear this player">
+                    <MudIconButton Icon="@Icons.Material.Filled.DeleteSweep" Size="Size.Small"
+                                   Disabled="@(IsEmpty(lane))"
+                                   OnClick="() => Clear(lane)" />
+                </MudTooltip>
+            </div>
+        </MudPaper>
+    }
+</MudPaper>
+
+@code {
+    [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
+    [Parameter, EditorRequired] public string Accent { get; set; } = TeamColors.Blue;
+    [Parameter, EditorRequired] public TeamInfo Info { get; set; } = default!;
+
+    /// <summary>True when the team was edited since it was last loaded or saved.</summary>
+    [Parameter] public bool Modified { get; set; }
+
+    /// <summary>True when a team file is loaded: the changes can be discarded by loading it again.</summary>
+    [Parameter] public bool CanRevert { get; set; }
+
+    /// <summary>True when every player shows its custom name.</summary>
+    [Parameter] public bool AllCustomNames { get; set; }
+    [Parameter] public EventCallback<bool> AllCustomNamesChanged { get; set; }
+
+    /// <summary>Raised after each edit so that the page can refresh the "unsaved changes" state.</summary>
+    [Parameter] public EventCallback OnEdited { get; set; }
+
+    /// <summary>Send the team to the overlays without saving it.</summary>
+    [Parameter] public EventCallback OnApply { get; set; }
+
+    /// <summary>Load the team file again, without the changes.</summary>
+    [Parameter] public EventCallback OnRevert { get; set; }
+
+    /// <summary>File selection / save controls (StyleManager).</summary>
+    [Parameter] public RenderFragment? Header { get; set; }
+
+    private IEnumerable<(string Label, Lane Lane)> Lanes()
+    {
+        yield return ("Top", Info.Top);
+        yield return ("Jungle", Info.Jungle);
+        yield return ("Mid", Info.Mid);
+        yield return ("Adc", Info.Adc);
+        yield return ("Support", Info.Supp);
+    }
+
+    private static bool IsEmpty(Lane lane) =>
+        string.IsNullOrEmpty(lane.Name) && string.IsNullOrEmpty(lane.Image) && !lane.ShowCustomName;
+
+    private Task Edit(Action change)
+    {
+        change();
+        return OnEdited.InvokeAsync();
+    }
+
+    private Task Clear(Lane lane) => Edit(() =>
+    {
+        lane.Name = string.Empty;
+        lane.Image = string.Empty;
+        lane.ShowCustomName = false;
+    });
+
+    private Task OnAllCustomNamesChanged(bool value) => AllCustomNamesChanged.InvokeAsync(value);
+}

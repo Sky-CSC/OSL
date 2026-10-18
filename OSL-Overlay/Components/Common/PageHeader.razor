@@ -1,0 +1,24 @@
+@* ---------------- Title of a management page: same look everywhere ---------------- *@
+<div class="mb-4">
+    <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween" Wrap="Wrap.Wrap" Spacing="2">
+        <div>
+            <MudText Typo="Typo.h4"><b>@Title</b></MudText>
+            @if (!string.IsNullOrEmpty(Subtitle))
+            {
+                <MudText Typo="Typo.body2" Class="mud-text-secondary">@Subtitle</MudText>
+            }
+        </div>
+        @Actions
+    </MudStack>
+    <MudDivider Class="mt-2" />
+</div>
+
+@code {
+    [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
+
+    /// <summary>One line explaining what the page is for.</summary>
+    [Parameter] public string? Subtitle { get; set; }
+
+    /// <summary>Buttons shown on the right of the title.</summary>
+    [Parameter] public RenderFragment? Actions { get; set; }
+}

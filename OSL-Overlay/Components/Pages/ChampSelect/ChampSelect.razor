@@ -5,42 +5,33 @@
 
 <link rel="stylesheet" href="@Assets["css/champSelect/display.css"]" />
 
+<PageTitle>OSL-Overlay - ChampSelect</PageTitle>
 
-<PageTitle>OSL-Overlay - Champ Select</PageTitle>
-<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Champ Select links</b></MudText>
+<PageHeader Title="Champ Select" Subtitle="Current bans and picks." />
 
 @* ---------------- View1 link ---------------- *@
-<SwitchButton Text="Link to view1"
-              Icon="@Icons.Material.Filled.InsertLink"
-              BackgroundColor="@Colors.BlueGray.Darken4"
-              HoverBackgroundColor="@Colors.BlueGray.Darken2"
-              TextColor="#FF0000"
-              Href="champselect/view1"
-              Target="_blank" />
-<br />
-<MudText Typo="Typo.h6" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Champ Select Preview</b></MudText>
+<SectionCard Title="Overlay links" Caption="Add these addresses in your cast software.">
+    <OverlayLink Title="Champ Select view 1" Path="champselect/view1" />
+    <MudButton Href="champselect/view1/custom" Size="Size.Small" Variant="Variant.Outlined" Class="mt-1">Customize the view</MudButton>
+</SectionCard>
 
-<div class="champ-select">
-    <b>Blue Team Bans</b>
-    @* ---------------- Blue Ban ---------------- *@
-    <BanSlot Class="@Info.BlueTeam.Side"
-             Team="@Info.BlueTeam" />
-    <b>Red Team Bans</b>
-    @* ---------------- Red Ban ---------------- *@
-    <BanSlot Class="@Info.RedTeam.Side"
-             Team="@Info.RedTeam" />
+@* ---------------- Preview ---------------- *@
+<SectionCard Title="Preview" Caption="Current state of the champion select.">
+    <div class="champ-select">
+        <b style="@($"color:{TeamColors.Blue};")">Blue Team Bans</b>
+        <BanSlot Class="@Info.BlueTeam.Side" Team="@Info.BlueTeam" />
+        <b style="@($"color:{TeamColors.Red};")">Red Team Bans</b>
+        <BanSlot Class="@Info.RedTeam.Side" Team="@Info.RedTeam" />
 
-    <br />
-    @* ---------------- Picks ---------------- *@
-    <b>Blue Team Picks</b>
-    <div class="picks">
-        @* Blue Team *@
-        <PlayersSlot Team="@Info.BlueTeam" />
-        <b>Red Team Picks</b>
-        @* Red Team *@
-        <PlayersSlot Team="@Info.RedTeam" />
+        <br />
+        <b style="@($"color:{TeamColors.Blue};")">Blue Team Picks</b>
+        <div class="picks">
+            <PlayersSlot Team="@Info.BlueTeam" />
+            <b style="@($"color:{TeamColors.Red};")">Red Team Picks</b>
+            <PlayersSlot Team="@Info.RedTeam" />
+        </div>
     </div>
-</div>
+</SectionCard>
 
 @code {
     private ChampSelectInfo Info => ChampState.LocalInfo;

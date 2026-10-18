@@ -1,40 +1,28 @@
+@using OSL_CDragon
 @using OSL_Overlay.GameFlow.Patch
 @inject PatchState PatchState
+@inject CDragon Cdragon
 @implements IDisposable
 
 @* ---------------- Patch managament ---------------- *@
-
-<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>Patch management</b></MudText>
-
-<MudStack Row="true">
-    <MudStack Row="false">
-        <MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Patch text</MudText>
-        @* ---------------- Text ---------------- *@
-        <StyleFieldEditor Label=""
-                          Type="text"
-                          Value="@PatchState.Info.Text"
-                          ValueChanged="v => PatchState.UpdateText(v)"
-                          BorderColor="#0B849E"
-                          Placeholder="Patch" />
+<SectionCard Title="Patch" Caption="Changes are shown on the overlays immediately.">
+    <MudStack Row="true" Spacing="2" Wrap="Wrap.Wrap" AlignItems="AlignItems.Center">
+        <MudTextField T="string" Label="Patch text" Placeholder="Patch" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                      Value="@PatchState.Info.Text" ValueChanged="v => PatchState.UpdateText(v)" />
+        <MudTextField T="string" Label="Patch version" Placeholder="15.20" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                      Value="@PatchState.Info.Version" ValueChanged="v => PatchState.UpdatePatch(v)" />
+        @if (!string.IsNullOrEmpty(Cdragon.ServedPatch) && PatchState.Info.Version != Cdragon.ServedPatch)
+        {
+            <MudTooltip Text="Version of the assets in use">
+                <MudButton Variant="Variant.Outlined" Size="Size.Small" OnClick="() => PatchState.UpdatePatch(Cdragon.ServedPatch)">
+                    Use @Cdragon.ServedPatch
+                </MudButton>
+            </MudTooltip>
+        }
     </MudStack>
-    <MudStack Row="false">
-        <MudText id="version" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">Patch version</MudText>
-        @* ---------------- Version ---------------- *@
-        <StyleFieldEditor Label=""
-                          Type="text"
-                          Value="@PatchState.Info.Version"
-                          ValueChanged="v => PatchState.UpdatePatch(v)"
-                          BorderColor="#0B849E"
-                          Placeholder="15.20" />
-    </MudStack>
-</MudStack>
+</SectionCard>
 
 @code {
-    private void OnStyleChanged(Action<string> setter, string newValue)
-    {
-        setter(newValue);
-    }
-
     protected override void OnInitialized()
     {
         PatchState.OnChange += RefreshUI;

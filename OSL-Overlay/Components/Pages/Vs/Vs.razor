@@ -3,24 +3,13 @@
 @implements IDisposable
 
 @* ---------------- VS managament ---------------- *@
-<MudText Typo="Typo.h4" GutterBottom="true" Style="text-decoration-line: underline; font-weight:bold;"><b>VS management</b></MudText>
-<MudText id="text" Class="section" Typo="Typo.h6" Style="text-decoration-line: underline; font-weight:bold;">VS text</MudText>
-<MudStack Row="true">
-    @* ---------------- Text ---------------- *@
-    <StyleFieldEditor Label=""
-                      Type="text"
-                      Value="@VsState.Info.Text"
-                      ValueChanged="v => VsState.UpdateText(v)"
-                      BorderColor="#0B849E"
-                      Placeholder="VS"/>
-</MudStack>
+<SectionCard Title="VS" Caption="Changes are shown on the overlays immediately.">
+    <MudTextField T="string" Label="VS text" Placeholder="VS" Variant="Variant.Outlined" Margin="Margin.Dense" Immediate="true"
+                  Style="max-width:200px;"
+                  Value="@VsState.Info.Text" ValueChanged="v => VsState.UpdateText(v)" />
+</SectionCard>
 
 @code {
-    private void OnStyleChanged(Action<string> setter, string newValue)
-    {
-        setter(newValue);
-    }
-
     protected override void OnInitialized()
     {
         VsState.OnChange += RefreshUI;
