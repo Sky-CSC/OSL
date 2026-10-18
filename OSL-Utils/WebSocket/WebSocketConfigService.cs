@@ -18,7 +18,7 @@ namespace OSL_Utils.WebSocket
             {
                 var json = File.Read(configPath);
                 Config = JsonConvert.DeserializeObject<WebSocketConfig>(json) ?? new WebSocketConfig();
-                Config.Token = [.. Config.Token.Distinct()];
+                Config.Token = [.. (Config.Token ?? []).Distinct()];
                 _logger.Log(LoggingLevel.DEBUG, nameof(Load), $"Configuration loaded successfully: {configPath}");
             }
             catch (Exception ex)

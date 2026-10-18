@@ -16,7 +16,7 @@ namespace OSL_Utils.WebSocket
         /// <summary>
         /// Token for authenticate clients
         /// </summary>
-        public List<string> Token { get; set; }
+        public List<string> Token { get; set; } = [];
 
         public bool Equals(WebSocketConfig? other)
         {
