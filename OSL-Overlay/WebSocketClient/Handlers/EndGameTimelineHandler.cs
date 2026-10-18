@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using Newtonsoft.Json.Linq;
 using OSL_Overlay.GameFlow.EndGame;
 using OSL_RGDP.Schema.Riot;
@@ -20,7 +21,7 @@ namespace OSL_Overlay.WebSocketClient.Handlers
         }
 
         /// <inheritdoc />
-        public string Type => "endGameTimeline";
+        public string Type => MessageTypes.EndGameTimeline;
 
         /// <inheritdoc />
         public Task HandleAsync(JToken jsonData)

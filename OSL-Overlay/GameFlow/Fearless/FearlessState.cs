@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using OSL_CDragon;
 using OSL_RGDP.WebSocketResponse;
 using WebSocket = OSL_Overlay.WebSocketClient.WebSocketClient;
@@ -62,7 +63,7 @@ namespace OSL_Overlay.GameFlow.Fearless
         {
             // Send message to websocket to get match data
             FearlessMatchId fearlessMatchId = new(matchId, index);
-            await _client.SendAsync("fearlessGameMatch", fearlessMatchId);
+            await _client.SendAsync(MessageTypes.FearlessGameMatch, fearlessMatchId);
         }
 
         /// <summary>

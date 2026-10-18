@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using MudBlazor;
 using Newtonsoft.Json;
 using OSL_CDragon;
@@ -87,6 +88,7 @@ namespace OSL_Overlay.GameFlow.EndGame
         /// Property used for the "total" statistic, kept to compute the champion images again.
         /// </summary>
         private string _lastTotalProperty = "TotalDamageDealtToChampions";
+
         /// <summary>
         /// Computes the champion image paths again from the current match (called when the assets are updated).
         /// </summary>
@@ -94,6 +96,7 @@ namespace OSL_Overlay.GameFlow.EndGame
         {
             if (MatchDto?.Info?.Participants == null || !MatchDto.Info.Participants.Any())
                 return;
+
             UpdateBans();
             UpdateTotalInfo(_lastTotalProperty);
         }
@@ -473,11 +476,11 @@ namespace OSL_Overlay.GameFlow.EndGame
 
         public async Task CustomSetMatch(Int64 matchDtoId)
         {
-            await _client.SendAsync("endGameMatch", matchDtoId);
+            await _client.SendAsync(MessageTypes.EndGameMatch, matchDtoId);
         }
         public async Task CustomSetTimeline(Int64 timelineDtoId)
         {
-            await _client.SendAsync("endGameTimeline", timelineDtoId);
+            await _client.SendAsync(MessageTypes.EndGameTimeline, timelineDtoId);
         }
 
         public void UpdateInfoPhase(PhaseInfo phase)

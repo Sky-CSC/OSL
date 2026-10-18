@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using Newtonsoft.Json.Linq;
 using OSL_CDragon;
 using OSL_Lcu.Schema.Lcu;
@@ -12,17 +13,17 @@ namespace OSL_Overlay.WebSocketClient.Handlers
     {
         private static readonly Logger _logger = new("RegionLocaleHandler");
 
-        /// <inheritdoc />
-        public string Type => "regionLocale";
+        public string Type => MessageTypes.RegionLocale;
 
-        /// <inheritdoc />
         public Task HandleAsync(JToken jsonData)
         {
             var data = jsonData.ToObject<LolPublishingContentPubHubConfig>();
             string? locale = data?.AppContext?.AppLocale;
             if (string.IsNullOrWhiteSpace(locale))
                 locale = data?.AppContext?.PublishingLocale;
+
             _logger.Log(LoggingLevel.INFO, "HandleAsync()", $"🎯 Region locale received : '{locale}' (current assets region : {cdragon.Region})");
+
             // Returns immediately: the new catalogs are read in the background by AssetUpdateService.
             cdragon.SetRegion(locale);
             return Task.CompletedTask;

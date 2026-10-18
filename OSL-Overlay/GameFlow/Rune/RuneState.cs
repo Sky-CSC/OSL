@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using Newtonsoft.Json;
 using OSL_CDragon;
 using OSL_RGDP.Schema.Riot;
@@ -43,7 +44,7 @@ namespace OSL_Overlay.GameFlow.Rune
 
         public async Task CustomSetRunesWithCurrentGameInfo(string riotId)
         {
-            await _client.SendAsync("spectatorCurentGameInfoByRiotId", riotId);
+            await _client.SendAsync(MessageTypes.SpectatorCurentGameInfoByRiotId, riotId);
         }
 
         public void SetRunesSpectatorCurentGameInfo(CurrentGameInfo currentGameInfo)

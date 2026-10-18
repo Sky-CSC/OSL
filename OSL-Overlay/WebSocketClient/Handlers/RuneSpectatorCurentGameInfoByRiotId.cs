@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using Newtonsoft.Json.Linq;
 using OSL_Overlay.GameFlow.Rune;
 using OSL_RGDP.Schema.Riot;
@@ -20,7 +21,7 @@ namespace OSL_Overlay.WebSocketClient.Handlers
         }
 
         /// <inheritdoc />
-        public string Type => "spectatorCurentGameInfoByRiotId";
+        public string Type => MessageTypes.SpectatorCurentGameInfoByRiotId;
 
         /// <inheritdoc />
         public Task HandleAsync(JToken jsonData)

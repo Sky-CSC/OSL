@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using Newtonsoft.Json.Linq;
 using OSL_Lcu.Schema.Lcu;
 using OSL_Utils;
@@ -13,7 +14,7 @@ namespace OSL_Overlay.WebSocketClient.Handlers
         private static readonly Logger _logger = new("ChampSelectHandler");
 
         /// <inheritdoc />
-        public string Type => "champSelect";
+        public string Type => MessageTypes.ChampSelect;
 
         private readonly ChampSelectState _state;
 

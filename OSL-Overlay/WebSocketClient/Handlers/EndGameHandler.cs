@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using Newtonsoft.Json.Linq;
 using OSL_Lcu.Schema.Lcu;
 using OSL_Utils;
@@ -12,7 +13,7 @@ namespace OSL_Overlay.WebSocketClient.Handlers
         private static readonly Logger _logger = new("EndGameHandler");
 
         /// <inheritdoc />
-        public string Type => "endGame";
+        public string Type => MessageTypes.EndGame;
 
         /// <inheritdoc />
         public Task HandleAsync(JToken jsonData)

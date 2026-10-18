@@ -1,5 +1,4 @@
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using OSL_Overlay.WebSocketClient.Handlers;
 using OSL_Utils;
 using OSL_Utils.WebSocket;
@@ -23,20 +22,36 @@ namespace OSL_Overlay.WebSocketClient
     }
 
     /// <summary>
-    /// Represents a WebSocket client that connects to a WebSocket server, handles messages, and manages connection state. It supports sending and receiving messages, authentication, and automatic reconnection. The client uses a configuration file to determine the server address and authentication token.
+    /// WebSocket client of the overlay: it connects to OSL-Server, dispatches the received messages to the handlers and reconnects
+    /// by itself (waiting 2 s, then up to 30 s, again 2 s after a connection that worked).
+    /// <para>
+    /// One single background loop owns the connection. <see cref="RestartAsync"/> stops that loop, waits for it to be over, then starts a new one:
+    /// two loops never run at the same time.
+    /// </para>
     /// </summary>
-    public class WebSocketClient : IAsyncDisposable
+    public sealed class WebSocketClient : IAsyncDisposable
     {
         private static readonly Logger _logger = new("WebSocketClient");
 
-        private ClientWebSocket? _webSocket;
+        /// <summary>Largest message accepted from the server (the timeline of a match can weigh several MB).</summary>
+        private const int MaxMessageBytes = 64 * 1024 * 1024;
 
-        private CancellationTokenSource _shutdown = new();
+        private readonly Dictionary<string, IMessageHandler> _handlers = new(StringComparer.Ordinal);
+        private readonly SemaphoreSlim _lifecycleLock = new(1, 1);
+        private readonly SemaphoreSlim _sendLock = new(1, 1);
 
-        private readonly SemaphoreSlim _connectLock = new(1, 1);
+        private CancellationTokenSource? _runSource;
+        private Task? _runTask;
+        private volatile ClientWebSocket? _socket;
 
-        private readonly IEnumerable<IMessageHandler> _handlers;
-        private Uri ServerUri => new($"ws://{Config.Ip}:{Config.Port}/");
+        /// <summary>True once the current attempt has connected (even if it ended with an error afterwards). Only the loop touches it.</summary>
+        private bool _attemptConnected;
+
+        /// <summary>Wait before the first reconnection attempt, doubled after each failure.</summary>
+        internal TimeSpan ReconnectInitialDelay { get; set; } = TimeSpan.FromSeconds(2);
+
+        /// <summary>Longest wait between two reconnection attempts.</summary>
+        internal TimeSpan ReconnectMaxDelay { get; set; } = TimeSpan.FromSeconds(30);
 
         public ConnectionState State { get; private set; } = ConnectionState.Disconnected;
         public WebSocketConfig Config { get; private set; }
@@ -45,165 +60,322 @@ namespace OSL_Overlay.WebSocketClient
         public readonly string ConfigFilePath;
         public void NotifyStateChanged() => OnChange?.Invoke();
 
+        private Uri ServerUri => new($"ws://{Config.Ip}:{Config.Port}/");
+
         /// <summary>
-        /// Initializes a new instance of the WebSocketClient class with the specified message handlers. It loads the WebSocket configuration from a JSON file located in the "WebSocketClient" directory relative to the application's base directory. The configuration is used to establish a connection to the WebSocket server.
+        /// Initializes a new instance of the WebSocketClient class with the specified message handlers. It loads the WebSocket configuration
+        /// from the "WebSocketClient" directory. The configuration is used to establish a connection to the WebSocket server.
         /// </summary>
-        /// <param name="handlers"></param>
         public WebSocketClient(IEnumerable<IMessageHandler> handlers)
         {
             ConfigFilePath = OSL_Utils.Path.Combine(".", "WebSocketClient", "WebSocketServerConfig.json");
             Config = WebSocketConfigService.Load(ConfigFilePath);
-            _handlers = handlers;
-        }
 
-        /// <summary>
-        /// Initiates the connection to the WebSocket server in a background task. It calls EnsureConnectedAsync() to establish the connection and handle any exceptions that may occur during the process. This method returns immediately, allowing the connection process to run asynchronously without blocking the calling thread.
-        /// </summary>
-        /// <returns></returns>
-        public Task ConnectAsync()
-        {
-            _ = Task.Run(async () =>
+            foreach (IMessageHandler handler in handlers)
             {
-                try
-                {
-                    await ConnectLoopAsync(_shutdown.Token);
-                }
-                catch (Exception ex)
-                {
-                    _logger.Log(LoggingLevel.ERROR, nameof(ConnectAsync), $"❌ Background connection error: {ex.Message}");
-                }
-            });
-
-            return Task.CompletedTask;
-        }
-
-        /// <summary>
-        /// Continuously attempts to connect to the WebSocket server until a successful connection is established or a shutdown is requested. It uses a semaphore to ensure that only one connection attempt is active at a time. If the connection fails, it retries with exponential backoff, logging the status of each attempt. Once connected, it authenticates (if a token is provided) and starts receiving messages. If the connection is lost, it transitions to the reconnecting state and continues attempting to reconnect.
-        /// </summary>
-        /// <param name="shutdownToken"></param>
-        /// <returns></returns>
-        private async Task ConnectLoopAsync(CancellationToken shutdownToken)
-        {
-            if (!await _connectLock.WaitAsync(0, shutdownToken))
-            {
-                _logger.Log(LoggingLevel.DEBUG, nameof(ConnectLoopAsync), "Connection loop already running, skipping.");
-                return;
+                if (!_handlers.TryAdd(handler.Type, handler))
+                    _logger.Log(LoggingLevel.WARN, nameof(WebSocketClient), $"⚠️ Several handlers for '{handler.Type}', only the first one is used");
             }
+        }
 
+        // ---------------------------------------------------------------------------------------------------------
+        // Lifecycle
+        // ---------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Starts the connection loop in the background and returns immediately. Does nothing if it is already running.
+        /// </summary>
+        public async Task ConnectAsync()
+        {
+            await _lifecycleLock.WaitAsync().ConfigureAwait(false);
             try
             {
-                var delay = 2_000;
+                if (_runTask is { IsCompleted: false })
+                    return;
 
-                while (!shutdownToken.IsCancellationRequested)
-                {
-                    try
-                    {
-                        SetState(ConnectionState.Connecting);
-
-                        DisposeSocket();
-                        _webSocket = new ClientWebSocket();
-
-                        _logger.Log(LoggingLevel.INFO, nameof(ConnectLoopAsync), $"🔌 Connecting to {ServerUri} ...");
-                        await _webSocket.ConnectAsync(ServerUri, shutdownToken);
-
-                        SetState(ConnectionState.Connected);
-                        _logger.Log(LoggingLevel.INFO, nameof(ConnectLoopAsync), $"✅ Connected to {ServerUri}");
-
-                        await AuthenticateAsync(shutdownToken);
-
-                        await ReceiveLoopAsync(shutdownToken);
-
-                        if (!shutdownToken.IsCancellationRequested)
-                        {
-                            SetState(ConnectionState.Reconnecting);
-                            _logger.Log(LoggingLevel.INFO, nameof(ConnectLoopAsync), "🔁 Connection lost, reconnecting...");
-                        }
-                    }
-                    catch (OperationCanceledException) when (shutdownToken.IsCancellationRequested)
-                    {
-                        break;
-                    }
-                    catch (Exception ex)
-                    {
-                        SetState(ConnectionState.Reconnecting);
-                        _logger.Log(LoggingLevel.WARN, nameof(ConnectLoopAsync), $"⚠️ Connection failed: {ex.Message}. Retry in {delay / 1000}s...");
-                    }
-
-                    if (shutdownToken.IsCancellationRequested)
-                        break;
-
-                    var jitter = Random.Shared.Next(500, 2_000);
-                    try
-                    {
-                        await Task.Delay(delay + jitter, shutdownToken);
-                    }
-                    catch (OperationCanceledException)
-                    {
-                        break;
-                    }
-                    delay = Math.Min(delay * 2, 30_000);
-                }
+                StartLoop();
             }
             finally
             {
-                _connectLock.Release();
-                SetState(ConnectionState.Disconnected);
-                _logger.Log(LoggingLevel.INFO, nameof(ConnectLoopAsync), "🛑 Connect loop exited");
+                _lifecycleLock.Release();
             }
-        }
-
-        private async Task AuthenticateAsync(CancellationToken cancellationToken)
-        {
-            var token = Config.Token?.FirstOrDefault();
-            if (string.IsNullOrWhiteSpace(token))
-            {
-                _logger.Log(LoggingLevel.WARN, nameof(AuthenticateAsync), "⚠️ No authentication token configured");
-                return;
-            }
-
-            SetState(ConnectionState.Authenticating);
-            await SendAsync("auth", token, cancellationToken);
-            _logger.Log(LoggingLevel.INFO, nameof(AuthenticateAsync), "🔑 Auth message sent, waiting for server confirmation...");
         }
 
         /// <summary>
-        /// Continuously receives messages from the WebSocket connection. It reads messages in a loop until the connection is closed, an error occurs, or a cancellation is requested. For each received message, it logs the message, raises the RawMessageReceived event, and dispatches the message to the appropriate handler. If the server closes the connection or an error occurs, it exits the loop and allows for reconnection attempts.
+        /// Stops the connection, waits for the loop to be over, then connects again with the current configuration.
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        private async Task ReceiveLoopAsync(CancellationToken cancellationToken)
+        public async Task RestartAsync()
         {
-            var buffer = ArrayPool<byte>.Shared.Rent(64 * 1024);
+            await _lifecycleLock.WaitAsync().ConfigureAwait(false);
+            try
+            {
+                await StopLoopAsync().ConfigureAwait(false);
+                StartLoop();
+            }
+            finally
+            {
+                _lifecycleLock.Release();
+            }
+        }
+
+        /// <summary>
+        /// Updates the WebSocket configuration and restarts the connection with the new settings.
+        /// </summary>
+        public async Task UpdateSocketConfig(WebSocketConfig config)
+        {
+            Config = config.Clone();
+            WebSocketConfigService.SaveSocketConfig(Config, ConfigFilePath);
+            await RestartAsync().ConfigureAwait(false);
+        }
+
+        public async ValueTask DisposeAsync()
+        {
+            await _lifecycleLock.WaitAsync().ConfigureAwait(false);
+            try
+            {
+                await StopLoopAsync().ConfigureAwait(false);
+            }
+            finally
+            {
+                _lifecycleLock.Release();
+            }
+        }
+
+        private void StartLoop()
+        {
+            var source = new CancellationTokenSource();
+            _runSource = source;
+            _runTask = Task.Run(() => RunAsync(source.Token));
+        }
+
+        /// <summary>Cancels the loop and waits until it is really over (the socket is closed and the state is final).</summary>
+        private async Task StopLoopAsync()
+        {
+            CancellationTokenSource? source = _runSource;
+            Task? task = _runTask;
+            _runSource = null;
+            _runTask = null;
+
+            if (source is null || task is null)
+            {
+                SetState(ConnectionState.Disconnected);
+                return;
+            }
+
+            await source.CancelAsync().ConfigureAwait(false);
+            try
+            {
+                // Breaks a pending receive at once instead of waiting for the close handshake.
+                _socket?.Abort();
+            }
+            catch (ObjectDisposedException)
+            {
+            }
+
+            Task finished = await Task.WhenAny(task, Task.Delay(TimeSpan.FromSeconds(5))).ConfigureAwait(false);
+            if (finished != task)
+                _logger.Log(LoggingLevel.WARN, nameof(StopLoopAsync), "⚠️ The connection loop did not stop in time");
+
+            source.Dispose();
+            SetState(ConnectionState.Disconnected);
+        }
+
+        // ---------------------------------------------------------------------------------------------------------
+        // Connection loop
+        // ---------------------------------------------------------------------------------------------------------
+
+        private async Task RunAsync(CancellationToken cancellationToken)
+        {
+            TimeSpan delay = ReconnectInitialDelay;
+
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                _attemptConnected = false;
+                try
+                {
+                    await ConnectAndReceiveAsync(cancellationToken).ConfigureAwait(false);
+                }
+                catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+                {
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    _logger.Log(LoggingLevel.WARN, nameof(RunAsync), $"⚠️ Connection to {ServerUri} failed : {ex.GetBaseException().Message}");
+                }
+
+                if (cancellationToken.IsCancellationRequested)
+                    break;
+
+                // A connection that worked (even if it ended abruptly) gives the retry delay back its initial value.
+                if (_attemptConnected)
+                    delay = ReconnectInitialDelay;
+
+                SetState(ConnectionState.Reconnecting);
+                TimeSpan wait = delay + TimeSpan.FromMilliseconds(Random.Shared.NextDouble() * delay.TotalMilliseconds / 4);
+                _logger.Log(LoggingLevel.INFO, nameof(RunAsync), $"🔄 Reconnecting in {wait.TotalSeconds:0.#} s");
+
+                try
+                {
+                    await Task.Delay(wait, cancellationToken).ConfigureAwait(false);
+                }
+                catch (OperationCanceledException)
+                {
+                    break;
+                }
+
+                delay = TimeSpan.FromMilliseconds(Math.Min(delay.TotalMilliseconds * 2, ReconnectMaxDelay.TotalMilliseconds));
+            }
+
+            SetState(ConnectionState.Disconnected);
+        }
+
+        private async Task ConnectAndReceiveAsync(CancellationToken cancellationToken)
+        {
+            using var socket = new ClientWebSocket();
+            socket.Options.KeepAliveInterval = TimeSpan.FromSeconds(20);
+
+            // The token goes in the handshake: the server refuses a wrong token before accepting the connection.
+            string? token = Config.Token?.FirstOrDefault();
+            if (!string.IsNullOrEmpty(token))
+                socket.Options.SetRequestHeader("Authorization", $"Bearer {token}");
+
+            SetState(ConnectionState.Connecting);
+            _logger.Log(LoggingLevel.INFO, nameof(ConnectAndReceiveAsync), $"🔌 Connecting to {ServerUri}");
+
+            using (var connectTimeout = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken))
+            {
+                connectTimeout.CancelAfter(TimeSpan.FromSeconds(10));
+                await socket.ConnectAsync(ServerUri, connectTimeout.Token).ConfigureAwait(false);
+            }
+
+            _socket = socket;
+            _attemptConnected = true;
+            try
+            {
+                SetState(ConnectionState.Connected);
+                _logger.Log(LoggingLevel.INFO, nameof(ConnectAndReceiveAsync), "✅ Connected");
+
+                if (!string.IsNullOrEmpty(token))
+                {
+                    // The server already knows the token (handshake). This message is only for servers that wait for it, and is ignored by the others.
+                    SetState(ConnectionState.Authenticating);
+                    await SendAsync(MessageTypes.Auth, token, cancellationToken).ConfigureAwait(false);
+                }
+
+                await ReceiveLoopAsync(socket, cancellationToken).ConfigureAwait(false);
+            }
+            finally
+            {
+                _socket = null;
+                await CloseQuietlyAsync(socket).ConfigureAwait(false);
+            }
+        }
+
+        private async Task ReceiveLoopAsync(ClientWebSocket socket, CancellationToken cancellationToken)
+        {
+            while (socket.State == WebSocketState.Open && !cancellationToken.IsCancellationRequested)
+            {
+                string? text = await ReadTextMessageAsync(socket, cancellationToken).ConfigureAwait(false);
+                if (text is null)
+                {
+                    _logger.Log(LoggingLevel.INFO, nameof(ReceiveLoopAsync), "🔌 Connection closed by the server");
+                    return;
+                }
+
+                if (Logger.LogLevel >= LoggingLevel.DEBUG)
+                    _logger.Log(LoggingLevel.DEBUG, nameof(ReceiveLoopAsync), $"📩 Received: {text}");
+
+                await RaiseRawMessageReceivedAsync(text).ConfigureAwait(false);
+                await ProcessMessageAsync(text).ConfigureAwait(false);
+            }
+        }
+
+        private async Task ProcessMessageAsync(string text)
+        {
+            WebSocketMessage? message;
+            try
+            {
+                message = JsonConvert.DeserializeObject<WebSocketMessage>(text);
+            }
+            catch (JsonException ex)
+            {
+                _logger.Log(LoggingLevel.WARN, nameof(ProcessMessageAsync), $"⚠️ Invalid message : {ex.Message}");
+                return;
+            }
+
+            if (message?.Type is null)
+                return;
+
+            if (message.Type == MessageTypes.AuthOk)
+            {
+                SetState(ConnectionState.Authenticated);
+                _logger.Log(LoggingLevel.INFO, nameof(ProcessMessageAsync), "🔐 Authenticated");
+                return;
+            }
+
+            if (!_handlers.TryGetValue(message.Type, out IMessageHandler? handler))
+            {
+                _logger.Log(LoggingLevel.WARN, nameof(ProcessMessageAsync), $"⚠️ No handler for message type '{message.Type}'");
+                return;
+            }
 
             try
             {
-                while (!cancellationToken.IsCancellationRequested && _webSocket?.State == WebSocketState.Open)
+                if (message.Data is null)
                 {
-                    var messageJson = await ReceiveMessageAsync(buffer, cancellationToken);
-
-                    if (messageJson == null)
-                    {
-                        _logger.Log(LoggingLevel.INFO, nameof(ReceiveLoopAsync), "🔌 Server closed the connection");
-                        break;
-                    }
-
-                    _logger.Log(LoggingLevel.DEBUG, nameof(ReceiveLoopAsync), $"📩 Received: {messageJson}");
-
-                    await RaiseMessageReceivedAsync(messageJson);
-                    await DispatchMessageAsync(messageJson);
+                    _logger.Log(LoggingLevel.WARN, nameof(ProcessMessageAsync), $"⚠️ Message '{message.Type}' without data");
+                    return;
                 }
-            }
-            catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
-            {
-                _logger.Log(LoggingLevel.INFO, nameof(ReceiveLoopAsync), "🛑 Receive loop cancelled");
-            }
-            catch (WebSocketException ex)
-            {
-                _logger.Log(LoggingLevel.INFO, nameof(ReceiveLoopAsync), $"🔌 WebSocket error: {ex.WebSocketErrorCode} - {ex.Message}");
+
+                await handler.HandleAsync(message.Data).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
-                _logger.Log(LoggingLevel.ERROR, nameof(ReceiveLoopAsync), $"❌ Unexpected error: {ex}");
+                _logger.Log(LoggingLevel.ERROR, nameof(ProcessMessageAsync), $"❌ Handler '{message.Type}' failed : {ex}");
+            }
+        }
+
+        private async Task RaiseRawMessageReceivedAsync(string text)
+        {
+            Func<string, Task>? subscribers = RawMessageReceived;
+            if (subscribers is null)
+                return;
+
+            foreach (Func<string, Task> subscriber in subscribers.GetInvocationList().Cast<Func<string, Task>>())
+            {
+                try
+                {
+                    await subscriber(text).ConfigureAwait(false);
+                }
+                catch (Exception ex)
+                {
+                    _logger.Log(LoggingLevel.ERROR, nameof(RaiseRawMessageReceivedAsync), $"❌ A RawMessageReceived handler failed : {ex.Message}");
+                }
+            }
+        }
+
+        private static async Task<string?> ReadTextMessageAsync(ClientWebSocket socket, CancellationToken cancellationToken)
+        {
+            byte[] buffer = ArrayPool<byte>.Shared.Rent(16 * 1024);
+            try
+            {
+                var message = new ArrayBufferWriter<byte>(4096);
+                ValueWebSocketReceiveResult result;
+                do
+                {
+                    result = await socket.ReceiveAsync(buffer.AsMemory(), cancellationToken).ConfigureAwait(false);
+                    if (result.MessageType == WebSocketMessageType.Close)
+                        return null;
+
+                    if (message.WrittenCount + result.Count > MaxMessageBytes)
+                        throw new InvalidDataException($"Message larger than {MaxMessageBytes / (1024 * 1024)} MB");
+
+                    message.Write(buffer.AsSpan(0, result.Count));
+                }
+                while (!result.EndOfMessage);
+
+                return Encoding.UTF8.GetString(message.WrittenSpan);
             }
             finally
             {
@@ -211,211 +383,75 @@ namespace OSL_Overlay.WebSocketClient
             }
         }
 
-        /// <summary>
-        /// Receives a complete message from the WebSocket connection. It reads data into the provided buffer until the end of the message is reached. If the server closes the connection or an error occurs, it returns null. The received message is returned as a UTF-8 encoded string.
-        /// </summary>
-        /// <param name="buffer"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        private async Task<string?> ReceiveMessageAsync(byte[] buffer, CancellationToken cancellationToken)
+        private static async Task CloseQuietlyAsync(ClientWebSocket socket)
         {
-            var socket = _webSocket;
-            if (socket == null)
-                return null;
+            if (socket.State is not (WebSocketState.Open or WebSocketState.CloseReceived))
+                return;
 
-            using var stream = new MemoryStream();
-
-            while (true)
+            try
             {
-                WebSocketReceiveResult result;
-                try
-                {
-                    result = await socket.ReceiveAsync(new ArraySegment<byte>(buffer), cancellationToken);
-                }
-                catch (WebSocketException ex)
-                {
-                    _logger.Log(LoggingLevel.INFO, nameof(ReceiveMessageAsync), $"🔌 Receive error: {ex.WebSocketErrorCode}");
-                    return null;
-                }
-
-                if (result.MessageType == WebSocketMessageType.Close)
-                {
-                    try
-                    {
-                        await socket.CloseOutputAsync(WebSocketCloseStatus.NormalClosure, "Acknowledged", CancellationToken.None);
-                    }
-                    catch { /* ignore : socket possibely already close */ }
-                    return null;
-                }
-
-                await stream.WriteAsync(buffer.AsMemory(0, result.Count), cancellationToken);
-
-                if (result.EndOfMessage)
-                    break;
+                using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(2));
+                await socket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Client closing", timeout.Token).ConfigureAwait(false);
             }
+            catch (Exception ex) when (ex is WebSocketException or OperationCanceledException or ObjectDisposedException)
+            {
+                // The connection is already gone.
+            }
+        }
 
-            return Encoding.UTF8.GetString(stream.ToArray());
+        // ---------------------------------------------------------------------------------------------------------
+        // Sending
+        // ---------------------------------------------------------------------------------------------------------
+
+        private sealed class Envelope
+        {
+            [JsonProperty("type")]
+            public string Type { get; init; } = string.Empty;
+
+            [JsonProperty("data")]
+            public object? Data { get; init; }
         }
 
         /// <summary>
-        /// Sends a message to the WebSocket server with the specified type and data. The message is serialized to JSON before sending. If the WebSocket is not connected, it logs a warning and returns without sending. Any exceptions during the send operation are caught and logged.
+        /// Sends a message to the server. Does nothing (with a warning) when the client is not connected.
+        /// Calls are serialised: a socket does not accept two sends at the same time.
         /// </summary>
-        /// <param name="type"></param>
-        /// <param name="data"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         public async Task SendAsync(string type, object? data, CancellationToken? cancellationToken = null)
         {
-            var token = cancellationToken ?? _shutdown.Token;
-
-            if (_webSocket?.State != WebSocketState.Open)
+            ClientWebSocket? socket = _socket;
+            if (socket is not { State: WebSocketState.Open })
             {
                 _logger.Log(LoggingLevel.WARN, nameof(SendAsync), "⚠️ WebSocket is not connected.");
                 return;
             }
 
-            var payload = JsonConvert.SerializeObject(BuildPayload(type, data));
-            var bytes = Encoding.UTF8.GetBytes(payload);
+            CancellationToken token = cancellationToken ?? _runSource?.Token ?? CancellationToken.None;
+            byte[] bytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new Envelope { Type = type, Data = data }));
 
             try
             {
-                await _webSocket.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, token);
-                _logger.Log(LoggingLevel.INFO, nameof(SendAsync), $"📤 Sent: {payload}");
+                await _sendLock.WaitAsync(token).ConfigureAwait(false);
+                try
+                {
+                    await socket.SendAsync(bytes.AsMemory(), WebSocketMessageType.Text, true, token).ConfigureAwait(false);
+                }
+                finally
+                {
+                    _sendLock.Release();
+                }
+
+                _logger.Log(LoggingLevel.INFO, nameof(SendAsync), $"📤 Sent message '{type}'");
             }
             catch (OperationCanceledException)
             {
                 _logger.Log(LoggingLevel.WARN, nameof(SendAsync), "⚠️ Send cancelled");
             }
-            catch (WebSocketException ex)
+            catch (Exception ex) when (ex is WebSocketException or ObjectDisposedException or InvalidOperationException)
             {
                 _logger.Log(LoggingLevel.ERROR, nameof(SendAsync), $"❌ WebSocket send error: {ex.Message}");
             }
-            catch (Exception ex)
-            {
-                _logger.Log(LoggingLevel.ERROR, nameof(SendAsync), $"❌ Unexpected send error: {ex.Message}");
-            }
         }
 
-        /// <summary>
-        /// Dispatches the received message to the appropriate handler based on its type. If no handler is found for the message type, a warning is logged. If the handler throws an exception, it is caught and logged as an error.
-        /// </summary>
-        /// <param name="messageJson"></param>
-        /// <returns></returns>
-        private async Task DispatchMessageAsync(string messageJson)
-        {
-            WebSocketMessage? message;
-            try
-            {
-                message = JsonConvert.DeserializeObject<WebSocketMessage>(messageJson);
-            }
-            catch (JsonException ex)
-            {
-                _logger.Log(LoggingLevel.ERROR, nameof(DispatchMessageAsync), $"❌ JSON parse error: {ex.Message}");
-                return;
-            }
-
-            if (message == null || string.IsNullOrWhiteSpace(message.Type))
-            {
-                _logger.Log(LoggingLevel.ERROR, nameof(DispatchMessageAsync), "❌ Invalid message (null or no type)");
-                return;
-            }
-
-            if (message.Type == "auth_ok")
-            {
-                SetState(ConnectionState.Authenticated);
-                _logger.Log(LoggingLevel.INFO, nameof(DispatchMessageAsync), "🔓 Authenticated by server");
-                return;
-            }
-
-            var handler = _handlers.FirstOrDefault(h => h.Type == message.Type);
-            if (handler == null)
-            {
-                _logger.Log(LoggingLevel.WARN, nameof(DispatchMessageAsync), $"⚠️ No handler for type='{message.Type}'");
-                return;
-            }
-
-            try
-            {
-                if (message.Data is JToken data)
-                {
-                    await handler.HandleAsync(data);
-                }
-                else
-                {
-                    _logger.Log(LoggingLevel.WARN, nameof(DispatchMessageAsync), $"⚠️ Data is not a JToken for type='{message.Type}'");
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.Log(LoggingLevel.ERROR, nameof(DispatchMessageAsync), $"❌ Handler '{handler.GetType().Name}' failed: {ex}");
-            }
-        }
-
-        /// <summary>
-        /// Raises the RawMessageReceived event with the received message JSON. If there are no subscribers to the event, it simply returns. If an exception occurs while invoking the event, it is caught and logged as an error.
-        /// </summary>
-        /// <param name="messageJson"></param>
-        /// <returns></returns>
-        private async Task RaiseMessageReceivedAsync(string messageJson)
-        {
-            if (RawMessageReceived == null)
-                return;
-            try
-            {
-                await RawMessageReceived.Invoke(messageJson);
-            }
-            catch (Exception ex)
-            {
-                _logger.Log(LoggingLevel.ERROR, nameof(RaiseMessageReceivedAsync), $"❌ RawMessageReceived handler failed: {ex}");
-            }
-        }
-
-        /// <summary>
-        /// Gracefully restarts the WebSocket client by cancelling any ongoing operations, closing the current socket, and starting a new connection loop. This method is useful when the configuration has changed (e.g., IP, port, token) and a fresh connection is needed. It logs the restart process and handles any exceptions that may occur during the restart.
-        /// </summary>
-        /// <returns></returns>
-        public async Task RestartAsync()
-        {
-            _logger.Log(LoggingLevel.INFO, nameof(RestartAsync), "🔄 Restarting WebSocket client...");
-
-            await _shutdown.CancelAsync();
-            _shutdown.Dispose();
-
-            DisposeSocket();
-
-            SetState(ConnectionState.Disconnected);
-
-            _shutdown = new CancellationTokenSource();
-
-            _logger.Log(LoggingLevel.INFO, nameof(RestartAsync), $"🔌 Reconnecting to {ServerUri}...");
-            _ = Task.Run(async () =>
-            {
-                try
-                {
-                    await ConnectLoopAsync(_shutdown.Token);
-                }
-                catch (Exception ex)
-                {
-                    _logger.Log(LoggingLevel.ERROR, nameof(RestartAsync), $"❌ Restart error: {ex.Message}");
-                }
-            });
-        }
-
-        /// <summary>
-        /// Updates the WebSocket configuration and restarts the connection. This method is typically called when the configuration file changes, allowing the client to reconnect with the new settings.
-        /// </summary>
-        /// <returns></returns>
-        public async Task UpdateSocketConfig(WebSocketConfig config)
-        {
-            Config = config.Clone();
-            WebSocketConfigService.SaveSocketConfig(Config, ConfigFilePath);
-            await RestartAsync();
-        }
-
-        /// <summary>
-        /// Sets the connection state and notifies subscribers if it has changed.
-        /// </summary>
-        /// <param name="state"></param>
         private void SetState(ConnectionState state)
         {
             if (State == state)
@@ -423,67 +459,6 @@ namespace OSL_Overlay.WebSocketClient
 
             State = state;
             NotifyStateChanged();
-        }
-
-        /// <summary>
-        /// Disposes of the current WebSocket instance if it exists. This method is called before creating a new WebSocket connection to ensure that any existing connection is properly cleaned up. It logs any exceptions that occur during disposal and sets the WebSocket reference to null.
-        /// </summary>
-        private void DisposeSocket()
-        {
-            try
-            {
-                _webSocket?.Dispose();
-            }
-            catch (Exception ex)
-            {
-                _logger.Log(LoggingLevel.WARN, nameof(DisposeSocket), $"⚠️ Error disposing socket: {ex.Message}");
-            }
-            _webSocket = null;
-        }
-
-        /// <summary>
-        /// Builds a payload object with the specified type and data. The data is converted to a JToken for JSON serialization. If the data is null, it creates a JValue representing null. This method is used to prepare messages for sending over the WebSocket connection.
-        /// </summary>
-        /// <param name="type"></param>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        private static object BuildPayload(string type, object? data)
-        {
-            return new
-            {
-                type,
-                data = data == null ? JValue.CreateNull() : JToken.FromObject(data)
-            };
-        }
-
-        /// <summary>
-        /// Asynchronously disposes of the WebSocket client, closing the connection and releasing resources. It cancels any ongoing operations, closes the WebSocket if it is open, and disposes of the semaphore and cancellation token source. This method should be called when the client is no longer needed to ensure proper cleanup.
-        /// </summary>
-        /// <returns></returns>
-        public async ValueTask DisposeAsync()
-        {
-            SetState(ConnectionState.Disconnected);
-
-            await _shutdown.CancelAsync();
-
-            if (_webSocket?.State == WebSocketState.Open)
-            {
-                try
-                {
-                    await _webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Disposed", CancellationToken.None);
-                }
-                catch (Exception ex)
-                {
-                    _logger.Log(LoggingLevel.WARN, nameof(DisposeAsync), $"⚠️ Close on dispose failed: {ex.Message}");
-                }
-            }
-
-            _webSocket?.Dispose();
-            _connectLock.Dispose();
-            _shutdown.Dispose();
-
-            GC.SuppressFinalize(this);
-            _logger.Log(LoggingLevel.INFO, nameof(DisposeAsync), "🛑 WebSocketClient disposed");
         }
     }
 }

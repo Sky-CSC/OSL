@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using Newtonsoft.Json.Linq;
 using OSL_Overlay.GameFlow.Fearless;
 using OSL_RGDP.WebSocketResponse;
@@ -20,7 +21,7 @@ namespace OSL_Overlay.WebSocketClient.Handlers
         }
 
         /// <inheritdoc />
-        public string Type => "fearlessGameMatch";
+        public string Type => MessageTypes.FearlessGameMatch;
 
         /// <inheritdoc />
         public Task HandleAsync(JToken jsonData)
