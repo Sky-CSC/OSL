@@ -20,7 +20,10 @@ namespace OSL_Utils
         {
             try
             {
-                System.IO.File.WriteAllText(filePath, content);
+                // Temporary file then move: a crash during the write never leaves a truncated file
+                string temporaryPath = filePath + ".tmp";
+                System.IO.File.WriteAllText(temporaryPath, content);
+                System.IO.File.Move(temporaryPath, filePath, overwrite: true);
                 _logger.Log(LoggingLevel.DEBUG, nameof(Write), $"Data write in file {filePath} successfully");
                 return true;
             }
