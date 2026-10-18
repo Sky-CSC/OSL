@@ -30,6 +30,8 @@ builder.Services.AddHostedService(sp => sp.GetRequiredService<LeagueClient>());
 
 // Register the WebSocketServer as a singleton service
 builder.Services.AddSingleton<WebSocketServer>();
+// Starts and stops with the application (a failure to start is reported in WebSocketServer.State, it does not stop the application)
+builder.Services.AddHostedService(sp => sp.GetRequiredService<WebSocketServer>());
 
 // Handler
 builder.Services.AddSingleton<IMessageHandler, TerminatorHandler>();
@@ -64,10 +66,6 @@ app.UseAntiforgery();
 app.UseStaticFiles();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
-
-// Start the LeagueClient service
-var wsServer = app.Services.GetRequiredService<WebSocketServer>();
-_ = wsServer.StartAsync(CancellationToken.None);
 
 await app.StartAsync();
 

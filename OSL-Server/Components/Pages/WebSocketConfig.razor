@@ -265,6 +265,7 @@
         WebSocketServerState.Restarting => Icons.Material.Filled.Autorenew,
         WebSocketServerState.Stopping => Icons.Material.Filled.SyncDisabled,
         WebSocketServerState.Stopped => Icons.Material.Filled.CloudOff,
+        WebSocketServerState.Faulted => Icons.Material.Filled.ErrorOutline,
 
         _ => Icons.Material.Filled.Help
     };
@@ -276,6 +277,7 @@
         WebSocketServerState.Restarting => Color.Warning,
         WebSocketServerState.Stopping => Color.Warning,
         WebSocketServerState.Stopped => Color.Error,
+        WebSocketServerState.Faulted => Color.Error,
 
         _ => Color.Default
     };
@@ -287,6 +289,7 @@
         WebSocketServerState.Restarting => "Restarting",
         WebSocketServerState.Stopping => "Stopping",
         WebSocketServerState.Stopped => "Stopped",
+        WebSocketServerState.Faulted => $"Error: {WsServer.LastError}",
 
         _ => "Unknown"
     };

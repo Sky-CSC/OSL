@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using OSL_RGDP.Schema.Riot;
 using OSL_Server.Services;
 using OSL_Utils;
@@ -5,7 +6,7 @@ using OSL_Utils;
 namespace OSL_Server.WebSocketServer.Handlers
 {
     /// <summary>
-    /// Example handler for the "endGameMatch" message type.
+    /// Example handler for the MessageTypes.EndGameMatch message type.
     /// </summary>
     /// <remarks>
     /// When a client sends a message of type <c>skynet</c>, 
@@ -24,7 +25,7 @@ namespace OSL_Server.WebSocketServer.Handlers
         }
 
         /// <inheritdoc />
-        public string Type => "endGameMatch";
+        public string Type => MessageTypes.EndGameMatch;
 
         /// <inheritdoc />
         public async Task HandleAsync(WebSocketServer server, System.Net.WebSockets.WebSocket client, object? rawData)
@@ -50,7 +51,7 @@ namespace OSL_Server.WebSocketServer.Handlers
                     return;
                 }
                 MatchDto response = match;
-                await server.BroadcastAsync("endGameMatch", response);
+                await server.BroadcastAsync(MessageTypes.EndGameMatch, response);
             }
             catch (Exception ex)
             {

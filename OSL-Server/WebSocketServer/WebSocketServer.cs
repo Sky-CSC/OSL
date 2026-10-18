@@ -5,62 +5,94 @@ using OSL_RGDP.Schema.Riot;
 using OSL_Server.WebSocketServer.Handlers;
 using OSL_Utils;
 using OSL_Utils.WebSocket;
+using System.Buffers;
 using System.Collections.Concurrent;
 using System.Net;
 using System.Net.WebSockets;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace OSL_Server.WebSocketServer
 {
-
+    /// <summary>
+    /// State of the WebSocket server.
+    /// </summary>
     public enum WebSocketServerState
     {
         Stopped,
         Starting,
         Running,
         Restarting,
-        Stopping
+        Stopping,
+        /// <summary>The server could not start (port already used, invalid address...). See <see cref="WebSocketServer.LastError"/>.</summary>
+        Faulted
     }
 
     /// <summary>
-    /// A WebSocket server that handles client connections, authentication, and message broadcasting.
+    /// WebSocket server used by the OSL-Overlay applications.
+    /// <para>
+    /// It runs in its own Kestrel instance, on the Ip/Port of its configuration: the administration UI can stay on
+    /// loopback while the WebSocket port is open on the network. It is an <see cref="IHostedService"/>: it starts and stops with the
+    /// application, and a failure to start (port busy...) is reported in <see cref="State"/> instead of crashing the application.
+    /// </para>
+    /// <para>
+    /// Every message to a client goes through a bounded queue sent by a dedicated loop: a slow client never blocks the others
+    /// (nor the code that publishes the state of the League client).
+    /// </para>
     /// </summary>
-    /// <remarks>
-    /// Features:
-    /// <list type="bullet">
-    /// <item>Authentication with token.</item>
-    /// <item>Support for typed message handlers.</item>
-    /// <item>Stores last known game state and replays it on client reconnect.</item>
-    /// <item>Broadcast to all authenticated clients.</item>
-    /// </list>
-    /// </remarks>
-    public class WebSocketServer
+    public class WebSocketServer : IHostedService
     {
         private static readonly Logger _logger = new("WebSocketServer");
 
-        private static readonly TimeSpan AuthTimeout = TimeSpan.FromSeconds(10);
+        /// <summary>Largest message accepted from an authenticated client.</summary>
+        private const int MaxMessageBytes = 1024 * 1024;
 
-        private readonly ConcurrentDictionary<Guid, WebSocketClientInfo> _clients = new();
-        private readonly IEnumerable<IMessageHandler> _handlers;
+        /// <summary>Largest message accepted from a client that has not authenticated yet (only a token is expected).</summary>
+        private const int MaxUnauthenticatedMessageBytes = 4 * 1024;
 
-        private (HttpListener Listener, CancellationTokenSource Cts)? _currentServer;
-        private readonly SemaphoreSlim _serverLifecycleLock = new(1, 1);
+        /// <summary>State messages replayed, in this order, to a client when it authenticates.</summary>
+        private static readonly string[] ReplayOrder =
+        [
+            MessageTypes.RegionLocale,
+            MessageTypes.GameFlowPhase,
+            MessageTypes.ChampSelect,
+            MessageTypes.EndGame,
+            MessageTypes.EndGameMatch,
+            MessageTypes.EndGameTimeline,
+        ];
+
+        private readonly Dictionary<string, IMessageHandler> _handlers = new(StringComparer.Ordinal);
+        private readonly ConcurrentDictionary<Guid, ClientConnection> _connections = new();
+        private readonly SemaphoreSlim _lifecycleLock = new(1, 1);
+
+        /// <summary>
+        /// Guards the last known state and the broadcasts together: a client that connects gets the state and then the
+        /// following changes in order, never an old state after a newer one.
+        /// </summary>
+        private readonly object _stateLock = new();
+        private readonly Dictionary<string, byte[]> _lastMessages = new(StringComparer.Ordinal);
+        private string? _champSelectFingerprint;
+
+        private RunningHost? _host;
+
+        private sealed record RunningHost(WebApplication App, CancellationTokenSource Cts);
+
+        /// <summary>Wait for a client that does not authenticate before closing its connection.</summary>
+        internal TimeSpan AuthTimeout { get; set; } = TimeSpan.FromSeconds(10);
+
+        /// <summary>Interval of the WebSocket ping frames that detect dead connections.</summary>
+        internal TimeSpan KeepAliveInterval { get; set; } = TimeSpan.FromSeconds(20);
 
         public WebSocketConfig Config { get; private set; }
         public readonly string ConfigFilePath;
         public event Action? OnChange;
-        public IReadOnlyList<WebSocketClientInfo> Clients => [.. _clients.Values.OrderBy(x => x.ConnectedAt)];
+        public IReadOnlyList<WebSocketClientInfo> Clients => [.. _connections.Values.Select(c => c.Info).OrderBy(info => info.ConnectedAt)];
         public WebSocketServerState State { get; private set; } = WebSocketServerState.Stopped;
+
+        /// <summary>Why the server could not start (when <see cref="State"/> is <see cref="WebSocketServerState.Faulted"/>).</summary>
+        public string? LastError { get; private set; }
+
         public void NotifyStateChanged() => OnChange?.Invoke();
-
-
-        // Last known values to replay on reconnect
-        private LolPublishingContentPubHubConfig? _regionLocale;
-        private LolGameflowGameflowPhase? _gameFlowPhase;
-        private ChampSelectSession? _champSelect;
-        private LolEndOfGameEndOfGameStats? _endGame;
-        private MatchDto? _endGameMatch;
-        private TimelineDto? _endGameTimeline;
 
         /// <summary>
         /// Creates a new WebSocket server with configuration and handlers.
@@ -69,504 +101,593 @@ namespace OSL_Server.WebSocketServer
         {
             ConfigFilePath = OSL_Utils.Path.Combine(".", "WebSocketServer", "WebSocketServerConfig.json");
             Config = WebSocketConfigService.Load(ConfigFilePath);
-            _handlers = handlers;
+
+            foreach (IMessageHandler handler in handlers)
+            {
+                if (!_handlers.TryAdd(handler.Type, handler))
+                    _logger.Log(LoggingLevel.WARN, nameof(WebSocketServer), $"⚠️ Several handlers for '{handler.Type}', only the first one is used");
+            }
         }
 
+        // ---------------------------------------------------------------------------------------------------------
+        // Lifecycle
+        // ---------------------------------------------------------------------------------------------------------
+
         /// <summary>
-        /// Starts the WebSocket server and listens for incoming connections.
-        /// This method is intended to be called once (e.g. from a BackgroundService).
-        /// Use RestartAsync() to apply configuration changes at runtime.
+        /// Starts listening. Returns once the server is started (or failed to: see <see cref="State"/>); it never throws
+        /// for a startup problem so that the rest of the application keeps running.
         /// </summary>
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            SetState(WebSocketServerState.Starting);
-
-            var internalCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-
-            var listener = new HttpListener();
-            listener.Prefixes.Add($"http://{Config.Ip}:{Config.Port}/");
-
-            await _serverLifecycleLock.WaitAsync(cancellationToken);
-
+            await _lifecycleLock.WaitAsync(cancellationToken).ConfigureAwait(false);
             try
             {
-                // Arrête proprement l'instance précédente avant d'en démarrer une nouvelle.
-                await StopCurrentServerAsync();
-
-                listener.Start();
-                _currentServer = (listener, internalCts);
-
-                SetState(WebSocketServerState.Running);
+                if (_host is null)
+                    await StartHostAsync(cancellationToken).ConfigureAwait(false);
             }
             finally
             {
-                _serverLifecycleLock.Release();
+                _lifecycleLock.Release();
             }
+        }
 
-            _logger.Log(LoggingLevel.INFO, nameof(StartAsync), $"🚀 WebSocket Server started on ws://{Config.Ip}:{Config.Port}/");
-
+        public async Task StopAsync(CancellationToken cancellationToken)
+        {
+            await _lifecycleLock.WaitAsync(CancellationToken.None).ConfigureAwait(false);
             try
             {
-                while (!internalCts.Token.IsCancellationRequested)
-                {
-                    HttpListenerContext context;
-                    try
-                    {
-                        context = await listener.GetContextAsync().WaitAsync(internalCts.Token);
-                    }
-                    catch (OperationCanceledException)
-                    {
-                        break;
-                    }
-                    catch (HttpListenerException)
-                    {
-                        break;
-                    }
-
-                    if (!context.Request.IsWebSocketRequest)
-                    {
-                        context.Response.StatusCode = 400;
-                        context.Response.Close();
-                        continue;
-                    }
-
-                    WebSocketContext wsContext;
-                    try
-                    {
-                        wsContext = await context.AcceptWebSocketAsync(null);
-                    }
-                    catch (Exception ex)
-                    {
-                        _logger.Log(LoggingLevel.WARN, nameof(StartAsync), $"❌ Failed to accept websocket: {ex.Message}");
-                        continue;
-                    }
-
-                    var clientId = Guid.NewGuid();
-                    _clients[clientId] = new WebSocketClientInfo
-                    {
-                        Id = clientId,
-                        ConnectedAt = DateTime.UtcNow,
-                        LastActivity = DateTime.UtcNow,
-                        IpAddress = context.Request.RemoteEndPoint?.Address.ToString(),
-                        Authenticated = false,
-                        State = wsContext.WebSocket.State,
-                        Socket = wsContext.WebSocket
-                    };
-
-                    NotifyStateChanged();
-                    _logger.Log(LoggingLevel.INFO, nameof(StartAsync), $"✅ Client connected: {clientId}");
-
-                    _ = HandleClientAsync(clientId, wsContext.WebSocket, internalCts.Token);
-                }
+                await StopHostAsync(updateState: true).ConfigureAwait(false);
             }
             finally
             {
-                listener.Stop();
-                listener.Close();
-                internalCts.Dispose();
-                _logger.Log(LoggingLevel.INFO, nameof(StartAsync), "🛑 WebSocket Server stopped");
-                SetState(WebSocketServerState.Stopped);
+                _lifecycleLock.Release();
             }
         }
 
         /// <summary>
-        /// Stops the current WebSocket server instance and cleans up resources.
+        /// Stops the server (clients are disconnected, they reconnect by themselves) and starts it again with the current configuration.
         /// </summary>
-        /// <returns></returns>
-        private async Task StopCurrentServerAsync()
-        {
-            SetState(WebSocketServerState.Stopping);
-
-            if (_currentServer is not { } current)
-                return;
-
-            _logger.Log(LoggingLevel.INFO, nameof(StopCurrentServerAsync), "⏹ Stopping current server instance...");
-
-            await current.Cts.CancelAsync();
-
-            try
-            {
-                current.Listener.Stop();
-            }
-            catch (Exception ex)
-            {
-                _logger.Log(LoggingLevel.WARN, nameof(StopCurrentServerAsync), $"Listener.Stop() failed: {ex.Message}");
-            }
-
-            var deadline = DateTime.UtcNow.AddSeconds(5);
-            while (!_clients.IsEmpty && DateTime.UtcNow < deadline)
-                await Task.Delay(50);
-
-            current.Cts.Dispose();
-            _currentServer = null;
-            SetState(WebSocketServerState.Stopped);
-        }
-
-        /// <summary>
-        /// Handles lifecycle of a client connection (recv loop + auth).
-        /// </summary>
-        private async Task HandleClientAsync(Guid clientId, System.Net.WebSockets.WebSocket webSocket, CancellationToken cancellationToken)
-        {
-            var buffer = System.Buffers.ArrayPool<byte>.Shared.Rent(1024 * 64);
-
-            try
-            {
-                using var authCts = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
-                authCts.CancelAfter(AuthTimeout);
-
-                while (webSocket.State == WebSocketState.Open && !cancellationToken.IsCancellationRequested)
-                {
-                    using var ms = new MemoryStream();
-                    WebSocketReceiveResult result;
-
-                    var activeToken = _clients.TryGetValue(clientId, out var ci) && ci.Authenticated
-                        ? cancellationToken
-                        : authCts.Token;
-
-                    do
-                    {
-                        result = await webSocket.ReceiveAsync(new ArraySegment<byte>(buffer), activeToken);
-
-                        if (result.MessageType == WebSocketMessageType.Close)
-                        {
-                            await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Bye", CancellationToken.None);
-                            return;
-                        }
-
-                        await ms.WriteAsync(buffer.AsMemory(0, result.Count), activeToken);
-                    }
-                    while (!result.EndOfMessage);
-
-                    var message = Encoding.UTF8.GetString(ms.ToArray());
-
-                    if (_clients.TryGetValue(clientId, out var client))
-                    {
-                        client.LastActivity = DateTime.UtcNow;
-                        client.State = webSocket.State;
-                    }
-
-                    NotifyStateChanged();
-
-                    _logger.Log(LoggingLevel.DEBUG, nameof(HandleClientAsync), $"📩 Received from {clientId}: {message}");
-
-                    WebSocketMessage? payload;
-                    try
-                    {
-                        payload = JsonConvert.DeserializeObject<WebSocketMessage>(message);
-                    }
-                    catch (JsonException ex)
-                    {
-                        _logger.Log(LoggingLevel.WARN, nameof(HandleClientAsync), $"❌ Invalid JSON from {clientId}: {ex.Message}");
-                        continue;
-                    }
-
-                    if (payload == null)
-                    {
-                        _logger.Log(LoggingLevel.WARN, nameof(HandleClientAsync), $"❌ Null payload from {clientId}");
-                        continue;
-                    }
-
-                    if (!_clients.TryGetValue(clientId, out var clientInfo))
-                        break;
-
-                    if (!clientInfo.Authenticated)
-                    {
-                        await HandleAuthenticationAsync(clientId, webSocket, payload, cancellationToken);
-                    }
-                    else
-                    {
-                        var handler = _handlers.FirstOrDefault(h => h.Type == payload.Type);
-                        if (handler != null)
-                        {
-                            try
-                            {
-                                await handler.HandleAsync(this, webSocket, payload.Data);
-                            }
-                            catch (Exception ex)
-                            {
-                                _logger.Log(LoggingLevel.ERROR, nameof(HandleClientAsync), $"Handler '{handler.Type}' failed: {ex}");
-                            }
-                        }
-                        else
-                        {
-                            _logger.Log(LoggingLevel.WARN, nameof(HandleClientAsync), $"⚠️ No handler for type '{payload.Type}' from {clientId}");
-                        }
-                    }
-                }
-            }
-            catch (OperationCanceledException) when (!cancellationToken.IsCancellationRequested)
-            {
-                _logger.Log(LoggingLevel.WARN, nameof(HandleClientAsync), $"⏰ Auth timeout for client {clientId}");
-                try {
-                    await webSocket.CloseAsync(WebSocketCloseStatus.PolicyViolation, "Auth timeout", CancellationToken.None);
-                }
-                catch { /* ignore */ }
-            }
-            catch (OperationCanceledException)
-            {
-                _logger.Log(LoggingLevel.INFO, nameof(HandleClientAsync), $"🛑 Client {clientId} cancelled");
-            }
-            catch (WebSocketException ex) when (ex.WebSocketErrorCode == WebSocketError.ConnectionClosedPrematurely)
-            {
-                _logger.Log(LoggingLevel.INFO, nameof(HandleClientAsync), $"🔌 Client {clientId} disconnected abruptly");
-            }
-            catch (Exception ex)
-            {
-                _logger.Log(LoggingLevel.ERROR, nameof(HandleClientAsync), $"❌ Error for client {clientId}: {ex.Message}");
-            }
-            finally
-            {
-                System.Buffers.ArrayPool<byte>.Shared.Return(buffer);
-
-                try
-                {
-                    if (webSocket.State == WebSocketState.Open)
-                        await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Disconnected", CancellationToken.None);
-                }
-                catch (Exception ex)
-                {
-                    _logger.Log(LoggingLevel.WARN, nameof(HandleClientAsync), $"CloseAsync failed for {clientId}: {ex.Message}");
-                }
-
-                webSocket.Dispose();
-                _clients.TryRemove(clientId, out _);
-                NotifyStateChanged();
-                _logger.Log(LoggingLevel.INFO, nameof(HandleClientAsync), $"🧹 Client cleaned: {clientId}");
-            }
-        }
-
-        /// <summary>
-        /// Authenticates a client by verifying token in the first message.
-        /// </summary>
-        private async Task HandleAuthenticationAsync(Guid clientId, System.Net.WebSockets.WebSocket webSocket, WebSocketMessage payload, CancellationToken cancellationToken)
-        {
-            var token = payload.Data?.ToString();
-
-            if (payload.Type == "auth" && !string.IsNullOrWhiteSpace(token) && Config.Token.Contains(token))
-            {
-                if (_clients.TryGetValue(clientId, out var client))
-                {
-                    client.Authenticated = true;
-                    client.LastActivity = DateTime.UtcNow;
-                }
-
-                NotifyStateChanged();
-                await SendToClientAsync(webSocket, "auth_ok", "Welcome!");
-                _logger.Log(LoggingLevel.INFO, nameof(HandleAuthenticationAsync), $"🔓 Client {clientId} authenticated");
-
-                if (_regionLocale != null) await SendToClientAsync(webSocket, "regionLocale", _regionLocale);
-                if (_gameFlowPhase != null) await SendToClientAsync(webSocket, "gameFlowPhase", _gameFlowPhase);
-                if (_champSelect != null) await SendToClientAsync(webSocket, "champSelect", _champSelect);
-                if (_endGame != null) await SendToClientAsync(webSocket, "endGame", _endGame);
-                if (_endGameMatch != null) await SendToClientAsync(webSocket, "endGameMatch", _endGameMatch);
-                if (_endGameTimeline != null) await SendToClientAsync(webSocket, "endGameTimeline", _endGameTimeline);
-            }
-            else
-            {
-                _logger.Log(LoggingLevel.WARN, nameof(HandleAuthenticationAsync), $"❌ Client {clientId} refused (bad token or wrong message type)");
-                await webSocket.CloseAsync(WebSocketCloseStatus.PolicyViolation, "Auth failed", CancellationToken.None);
-                _clients.TryRemove(clientId, out _);
-                NotifyStateChanged();
-            }
-        }
-
-        /// <summary>
-        /// Sends a message to a single client.
-        /// </summary>
-        public async Task SendToClientAsync<T>(System.Net.WebSockets.WebSocket socket, string type, T data)
-        {
-            var clientEntry = _clients.Values.FirstOrDefault(c => c.Socket == socket);
-
-            if (socket.State != WebSocketState.Open)
-                return;
-
-            var bytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(BuildPayload(type, data)));
-
-            if (clientEntry != null)
-            {
-                await clientEntry.SendLock.WaitAsync();
-                try
-                {
-                    if (socket.State != WebSocketState.Open)
-                        return;
-
-                    await socket.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, CancellationToken.None);
-                }
-                catch (WebSocketException ex)
-                {
-                    _logger.Log(LoggingLevel.WARN, nameof(SendToClientAsync), $"⚠️ Send failed: {ex.Message}");
-                }
-                catch (ObjectDisposedException)
-                {
-                    _logger.Log(LoggingLevel.DEBUG, nameof(SendToClientAsync), "Socket already disposed");
-                }
-                finally
-                {
-                    clientEntry.SendLock.Release();
-                }
-            }
-            else
-            {
-                try
-                {
-                    await socket.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, CancellationToken.None);
-                }
-                catch (Exception ex)
-                {
-                    _logger.Log(LoggingLevel.WARN, nameof(SendToClientAsync), $"⚠️ Send (no lock) failed: {ex.Message}");
-                }
-            }
-        }
-
-        /// <summary>
-        /// Broadcasts a message to all authenticated clients.
-        /// </summary>
-        public async Task BroadcastAsync<T>(string type, T data)
-        {
-            var bytes = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(BuildPayload(type, data)));
-            var disconnectedClients = new ConcurrentBag<Guid>();
-
-            var tasks = _clients
-                .Where(x => x.Value.Authenticated && x.Value.Socket.State == WebSocketState.Open)
-                .Select(async kvp =>
-                {
-                    await kvp.Value.SendLock.WaitAsync();
-                    try
-                    {
-                        await kvp.Value.Socket.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, CancellationToken.None);
-                        kvp.Value.LastActivity = DateTime.UtcNow;
-                    }
-                    catch (WebSocketException ex)
-                    {
-                        _logger.Log(LoggingLevel.WARN, nameof(BroadcastAsync), $"Broadcast failed for {kvp.Key}: {ex.Message}");
-                        disconnectedClients.Add(kvp.Key);
-                    }
-                    catch (ObjectDisposedException)
-                    {
-                        disconnectedClients.Add(kvp.Key);
-                    }
-                    catch (Exception ex)
-                    {
-                        _logger.Log(LoggingLevel.ERROR, nameof(BroadcastAsync), $"Unexpected error for {kvp.Key}: {ex}");
-                        disconnectedClients.Add(kvp.Key);
-                    }
-                    finally
-                    {
-                        kvp.Value.SendLock.Release();
-                    }
-                });
-
-            await Task.WhenAll(tasks);
-
-            foreach (var clientId in disconnectedClients)
-                _clients.TryRemove(clientId, out _);
-
-            if (!disconnectedClients.IsEmpty)
-                NotifyStateChanged();
-        }
-
-        /// <summary>
-        /// Restarts the WebSocket server, closing all current connections and starting fresh.
-        /// Called after a configuration change.
-        /// </summary>
-        /// <returns></returns>
         public async Task RestartAsync()
         {
-            _logger.Log(LoggingLevel.INFO, nameof(RestartAsync), "🔄 Restarting WebSocket server...");
-            SetState(WebSocketServerState.Restarting);
-
-            await _serverLifecycleLock.WaitAsync();
+            await _lifecycleLock.WaitAsync().ConfigureAwait(false);
             try
             {
-                await StopCurrentServerAsync();
+                SetState(WebSocketServerState.Restarting);
+                await StopHostAsync(updateState: false).ConfigureAwait(false);
+                await StartHostAsync(CancellationToken.None).ConfigureAwait(false);
             }
             finally
             {
-                _serverLifecycleLock.Release();
+                _lifecycleLock.Release();
             }
-
-            _ = Task.Run(() => StartAsync(CancellationToken.None));
-        }
-
-        /// <summary>
-        /// Updates region/locale and broadcasts it.
-        /// </summary>
-        public async Task SetRegionLocaleAsync(LolPublishingContentPubHubConfig data)
-        {
-            _regionLocale = data;
-            await BroadcastAsync("regionLocale", data);
-        }
-
-        /// <summary>
-        /// Updates gameflow phase and broadcasts it.
-        /// </summary>
-        public async Task SetGameFlowPhaseAsync(LolGameflowGameflowPhase? data)
-        {
-            _gameFlowPhase = data;
-            await BroadcastAsync("gameFlowPhase", data);
-        }
-
-        /// <summary>
-        /// Updates champ select state and broadcasts it.
-        /// </summary>
-        public async Task SetChampSelectAsync(ChampSelectSession? data)
-        {
-            if (_champSelect != data)
-            {
-                _champSelect = data;
-                await BroadcastAsync("champSelect", data);
-            }
-        }
-
-        /// <summary>
-        /// Updates endgame stats and broadcasts them.
-        /// </summary>
-        public async Task SetEndGameAsync(LolEndOfGameEndOfGameStats? data)
-        {
-            _endGame = data;
-            await BroadcastAsync("endGame", data);
-        }
-
-        /// <summary>
-        /// Updates endgame match data and broadcasts it.
-        /// </summary>
-        public async Task SetEndGameMatchAsync(MatchDto? data)
-        {
-            _endGameMatch = data;
-            await BroadcastAsync("endGameMatch", data);
-        }
-
-        /// <summary>
-        /// Updates endgame timeline and broadcasts it.
-        /// </summary>
-        public async Task SetEndGameTimelineAsync(TimelineDto? data)
-        {
-            _endGameTimeline = data;
-            await BroadcastAsync("endGameTimeline", data);
         }
 
         /// <summary>
         /// Updates the WebSocket server configuration and restarts the server to apply changes.
         /// </summary>
-        /// <returns></returns>
         public async Task UpdateSocketConfig(WebSocketConfig config)
         {
             Config = config.Clone();
             WebSocketConfigService.SaveSocketConfig(Config, ConfigFilePath);
-            await RestartAsync();
+            await RestartAsync().ConfigureAwait(false);
+        }
+
+        private async Task StartHostAsync(CancellationToken cancellationToken)
+        {
+            SetState(WebSocketServerState.Starting);
+            LastError = null;
+
+            var stopSource = new CancellationTokenSource();
+            WebApplication? app = null;
+            try
+            {
+                WebSocketConfig config = Config;
+                app = BuildHost(config, stopSource.Token);
+                await app.StartAsync(cancellationToken).ConfigureAwait(false);
+
+                _host = new RunningHost(app, stopSource);
+                SetState(WebSocketServerState.Running);
+                _logger.Log(LoggingLevel.INFO, nameof(StartHostAsync), $"✅ WebSocket server listening on ws://{config.Ip}:{config.Port}/");
+            }
+            catch (Exception ex) when (!cancellationToken.IsCancellationRequested)
+            {
+                LastError = ex.GetBaseException().Message;
+                _logger.Log(LoggingLevel.ERROR, nameof(StartHostAsync), $"❌ WebSocket server could not start on {Config.Ip}:{Config.Port} : {LastError}");
+
+                stopSource.Dispose();
+                if (app is not null)
+                    await app.DisposeAsync().ConfigureAwait(false);
+
+                SetState(WebSocketServerState.Faulted);
+            }
+        }
+
+        private async Task StopHostAsync(bool updateState)
+        {
+            RunningHost? host = _host;
+            _host = null;
+            if (host is null)
+            {
+                if (updateState && State != WebSocketServerState.Faulted)
+                    SetState(WebSocketServerState.Stopped);
+                return;
+            }
+
+            if (updateState)
+                SetState(WebSocketServerState.Stopping);
+
+            // Ends every connection loop: sockets are closed properly by the loops themselves.
+            await host.Cts.CancelAsync().ConfigureAwait(false);
+
+            using (var waitConnections = new CancellationTokenSource(TimeSpan.FromSeconds(3)))
+            {
+                while (!_connections.IsEmpty && !waitConnections.IsCancellationRequested)
+                    await Task.Delay(25).ConfigureAwait(false);
+            }
+
+            using (var stopTimeout = new CancellationTokenSource(TimeSpan.FromSeconds(5)))
+            {
+                try
+                {
+                    await host.App.StopAsync(stopTimeout.Token).ConfigureAwait(false);
+                }
+                catch (OperationCanceledException)
+                {
+                    _logger.Log(LoggingLevel.WARN, nameof(StopHostAsync), "⚠️ WebSocket server took too long to stop");
+                }
+            }
+
+            await host.App.DisposeAsync().ConfigureAwait(false);
+            host.Cts.Dispose();
+
+            if (updateState)
+                SetState(WebSocketServerState.Stopped);
         }
 
         /// <summary>
-        /// Creates a standard WebSocket payload with type and data.
+        /// Builds a dedicated, minimal Kestrel host (it does not read the configuration of the main application, so it never
+        /// takes the ports of the administration UI).
         /// </summary>
-        private static object BuildPayload(string type, object? data)
+        private WebApplication BuildHost(WebSocketConfig config, CancellationToken stopToken)
         {
-            return new
+            WebApplicationBuilder builder = WebApplication.CreateEmptyBuilder(new WebApplicationOptions());
+            builder.Services.AddLogging();
+            builder.WebHost.UseKestrelCore();
+            builder.WebHost.ConfigureKestrel(options =>
             {
-                type,
-                data = data == null ? JValue.CreateNull() : JToken.FromObject(data)
-            };
+                string address = (config.Ip ?? string.Empty).Trim();
+                if (address.Equals("localhost", StringComparison.OrdinalIgnoreCase))
+                    options.ListenLocalhost(config.Port);
+                else if (address is "" or "*" or "+" or "0.0.0.0")
+                    options.ListenAnyIP(config.Port);
+                else if (IPAddress.TryParse(address, out IPAddress? ipAddress))
+                    options.Listen(ipAddress, config.Port);
+                else
+                    options.Listen(Dns.GetHostAddresses(address).First(), config.Port);
+            });
+
+            WebApplication app = builder.Build();
+            app.UseWebSockets(new WebSocketOptions { KeepAliveInterval = KeepAliveInterval });
+            app.Run(context => HandleRequestAsync(context, stopToken));
+            return app;
         }
+
+        // ---------------------------------------------------------------------------------------------------------
+        // Connections
+        // ---------------------------------------------------------------------------------------------------------
+
+        private async Task HandleRequestAsync(HttpContext context, CancellationToken stopToken)
+        {
+            if (!context.WebSockets.IsWebSocketRequest)
+            {
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                return;
+            }
+
+            // A token in the handshake (Authorization: Bearer ...) is checked BEFORE the connection is accepted:
+            // a wrong token never gets a WebSocket. Older clients authenticate with their first message instead.
+            bool authenticated = false;
+            string? presented = GetBearerToken(context.Request);
+            if (presented is not null)
+            {
+                if (!IsTokenValid(presented))
+                {
+                    _logger.Log(LoggingLevel.WARN, nameof(HandleRequestAsync), $"⛔ Connection from {context.Connection.RemoteIpAddress} refused: invalid token");
+                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                    return;
+                }
+                authenticated = true;
+            }
+
+            using WebSocket socket = await context.WebSockets.AcceptWebSocketAsync().ConfigureAwait(false);
+            await RunConnectionAsync(socket, context.Connection.RemoteIpAddress?.ToString(), authenticated, context.RequestAborted, stopToken).ConfigureAwait(false);
+        }
+
+        private async Task RunConnectionAsync(WebSocket socket, string? remoteAddress, bool authenticatedAtHandshake, CancellationToken requestAborted, CancellationToken stopToken)
+        {
+            var connection = new ClientConnection(socket, remoteAddress);
+            _connections[connection.Info.Id] = connection;
+            _logger.Log(LoggingLevel.INFO, nameof(RunConnectionAsync), $"🔌 Client connected: {connection.Info.Id} ({remoteAddress})");
+            NotifyStateChanged();
+
+            using var linked = CancellationTokenSource.CreateLinkedTokenSource(requestAborted, stopToken);
+            CancellationToken cancellationToken = linked.Token;
+
+            Task sendLoop = connection.RunSendLoopAsync(cancellationToken);
+            Task watchdog = authenticatedAtHandshake ? Task.CompletedTask : WatchAuthenticationAsync(connection, linked, cancellationToken);
+            // If writing fails, the whole connection ends.
+            _ = sendLoop.ContinueWith(_ => CancelQuietly(linked), TaskScheduler.Default);
+
+            try
+            {
+                if (authenticatedAtHandshake)
+                    Authenticate(connection);
+
+                await ReceiveLoopAsync(connection, cancellationToken).ConfigureAwait(false);
+            }
+            catch (OperationCanceledException)
+            {
+                // Server stopping or client gone.
+            }
+            catch (WebSocketException ex)
+            {
+                _logger.Log(LoggingLevel.DEBUG, nameof(RunConnectionAsync), $"Client {connection.Info.Id} connection lost : {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                _logger.Log(LoggingLevel.ERROR, nameof(RunConnectionAsync), $"❌ Client {connection.Info.Id} error : {ex}");
+            }
+            finally
+            {
+                // The send loop must be over before closing: only one send at a time is allowed on a socket.
+                connection.CompleteOutbound();
+                CancelQuietly(linked);
+                await sendLoop.ConfigureAwait(false);
+                await watchdog.ConfigureAwait(false);
+
+                await CloseSocketAsync(connection).ConfigureAwait(false);
+
+                _connections.TryRemove(connection.Info.Id, out _);
+                connection.RefreshState();
+                _logger.Log(LoggingLevel.INFO, nameof(RunConnectionAsync), $"🔌 Client disconnected: {connection.Info.Id}");
+                NotifyStateChanged();
+            }
+        }
+
+        private async Task ReceiveLoopAsync(ClientConnection connection, CancellationToken cancellationToken)
+        {
+            WebSocket socket = connection.Socket;
+
+            while (socket.State == WebSocketState.Open)
+            {
+                bool authenticated = connection.Info.Authenticated;
+
+                string? text;
+                try
+                {
+                    text = await ReadTextMessageAsync(socket, authenticated ? MaxMessageBytes : MaxUnauthenticatedMessageBytes, cancellationToken).ConfigureAwait(false);
+                }
+                catch (MessageTooBigException)
+                {
+                    _logger.Log(LoggingLevel.WARN, nameof(ReceiveLoopAsync), $"⛔ Client {connection.Info.Id} sent a message that is too big");
+                    Close(connection, WebSocketCloseStatus.MessageTooBig, "Message too big");
+                    return;
+                }
+
+                if (text is null)
+                    return; // The client closed the connection.
+
+                connection.Info.LastActivity = DateTime.UtcNow;
+                if (!await ProcessMessageAsync(connection, text).ConfigureAwait(false))
+                    return;
+            }
+        }
+
+        /// <summary>
+        /// Closes a connection that does not authenticate in time. The close frame is sent while the receive loop is waiting:
+        /// cancelling a pending receive would abort the socket without any close frame.
+        /// </summary>
+        private async Task WatchAuthenticationAsync(ClientConnection connection, CancellationTokenSource connectionSource, CancellationToken cancellationToken)
+        {
+            try
+            {
+                await Task.Delay(AuthTimeout, cancellationToken).ConfigureAwait(false);
+                if (connection.Socket.State != WebSocketState.Open || !connection.TryMarkTimedOut())
+                    return;
+
+                _logger.Log(LoggingLevel.WARN, nameof(WatchAuthenticationAsync), $"⏱️ Client {connection.Info.Id} did not authenticate in time");
+                await connection.Socket.CloseOutputAsync(WebSocketCloseStatus.PolicyViolation, "Authentication timeout", cancellationToken).ConfigureAwait(false);
+
+                // The client has 2 seconds to answer the close frame, then the connection is dropped.
+                await Task.Delay(TimeSpan.FromSeconds(2), cancellationToken).ConfigureAwait(false);
+                CancelQuietly(connectionSource);
+            }
+            catch (Exception ex) when (ex is OperationCanceledException or WebSocketException or ObjectDisposedException)
+            {
+                // Connection already over.
+            }
+        }
+
+        /// <returns>False when the connection must end.</returns>
+        private async Task<bool> ProcessMessageAsync(ClientConnection connection, string text)
+        {
+            if (Logger.LogLevel >= LoggingLevel.DEBUG)
+                _logger.Log(LoggingLevel.DEBUG, nameof(ProcessMessageAsync), $"📩 Received from {connection.Info.Id}: {text}");
+
+            WebSocketMessage? message;
+            try
+            {
+                message = JsonConvert.DeserializeObject<WebSocketMessage>(text);
+            }
+            catch (JsonException ex)
+            {
+                _logger.Log(LoggingLevel.WARN, nameof(ProcessMessageAsync), $"⚠️ Invalid message from {connection.Info.Id} : {ex.Message}");
+                if (connection.Info.Authenticated)
+                    return true;
+
+                Close(connection, WebSocketCloseStatus.PolicyViolation, "Invalid message");
+                return false;
+            }
+
+            if (!connection.Info.Authenticated)
+            {
+                string? token = message?.Type == MessageTypes.Auth ? message.Data?.ToString() : null;
+                if (IsTokenValid(token))
+                {
+                    Authenticate(connection);
+                    return true;
+                }
+
+                _logger.Log(LoggingLevel.WARN, nameof(ProcessMessageAsync), $"⛔ Client {connection.Info.Id} failed to authenticate");
+                Close(connection, WebSocketCloseStatus.PolicyViolation, "Authentication failed");
+                return false;
+            }
+
+            if (message?.Type is null)
+                return true;
+
+            // Clients that also send their token in a message (kept for servers that only read the message) are already authenticated here.
+            if (message.Type == MessageTypes.Auth)
+                return true;
+
+            if (!_handlers.TryGetValue(message.Type, out IMessageHandler? handler))
+            {
+                _logger.Log(LoggingLevel.WARN, nameof(ProcessMessageAsync), $"⚠️ No handler for message type '{message.Type}'");
+                return true;
+            }
+
+            try
+            {
+                await handler.HandleAsync(this, connection.Socket, message.Data).ConfigureAwait(false);
+            }
+            catch (Exception ex)
+            {
+                _logger.Log(LoggingLevel.ERROR, nameof(ProcessMessageAsync), $"❌ Handler '{message.Type}' failed : {ex}");
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Marks the client as authenticated, then sends it "auth_ok" and the last known state. Done while holding the state lock,
+        /// so no broadcast can slip between the replayed messages.
+        /// </summary>
+        private void Authenticate(ClientConnection connection)
+        {
+            lock (_stateLock)
+            {
+                if (!connection.TryMarkAuthenticated())
+                    return;
+
+                connection.RefreshState();
+
+                connection.TryEnqueue(Serialize(MessageTypes.AuthOk, "Welcome!"));
+                foreach (string type in ReplayOrder)
+                {
+                    if (_lastMessages.TryGetValue(type, out byte[]? payload))
+                        connection.TryEnqueue(payload);
+                }
+            }
+
+            _logger.Log(LoggingLevel.INFO, nameof(Authenticate), $"✅ Client authenticated: {connection.Info.Id}");
+            NotifyStateChanged();
+        }
+
+        private static void Close(ClientConnection connection, WebSocketCloseStatus status, string description)
+        {
+            connection.CloseStatus = status;
+            connection.CloseDescription = description;
+        }
+
+        private static async Task CloseSocketAsync(ClientConnection connection)
+        {
+            WebSocket socket = connection.Socket;
+            if (socket.State is not (WebSocketState.Open or WebSocketState.CloseReceived))
+                return;
+
+            try
+            {
+                using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(2));
+                await socket.CloseAsync(
+                    connection.CloseStatus ?? WebSocketCloseStatus.NormalClosure,
+                    connection.CloseDescription ?? "Closing",
+                    timeout.Token).ConfigureAwait(false);
+            }
+            catch (Exception ex) when (ex is WebSocketException or OperationCanceledException or ObjectDisposedException)
+            {
+                // The client is already gone.
+            }
+        }
+
+        private static async Task<string?> ReadTextMessageAsync(WebSocket socket, int maxBytes, CancellationToken cancellationToken)
+        {
+            byte[] buffer = ArrayPool<byte>.Shared.Rent(8192);
+            try
+            {
+                var message = new ArrayBufferWriter<byte>(1024);
+                ValueWebSocketReceiveResult result;
+                do
+                {
+                    result = await socket.ReceiveAsync(buffer.AsMemory(), cancellationToken).ConfigureAwait(false);
+                    if (result.MessageType == WebSocketMessageType.Close)
+                        return null;
+
+                    if (message.WrittenCount + result.Count > maxBytes)
+                        throw new MessageTooBigException();
+
+                    message.Write(buffer.AsSpan(0, result.Count));
+                }
+                while (!result.EndOfMessage);
+
+                return Encoding.UTF8.GetString(message.WrittenSpan);
+            }
+            finally
+            {
+                ArrayPool<byte>.Shared.Return(buffer);
+            }
+        }
+
+        private sealed class MessageTooBigException : Exception;
+
+        private static void CancelQuietly(CancellationTokenSource source)
+        {
+            try
+            {
+                source.Cancel();
+            }
+            catch (ObjectDisposedException)
+            {
+            }
+        }
+
+        // ---------------------------------------------------------------------------------------------------------
+        // Authentication
+        // ---------------------------------------------------------------------------------------------------------
+
+        private static string? GetBearerToken(HttpRequest request)
+        {
+            string? header = request.Headers.Authorization.FirstOrDefault();
+            const string prefix = "Bearer ";
+            if (header is null || !header.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
+                return null;
+
+            return header[prefix.Length..].Trim();
+        }
+
+        /// <summary>Compares the token with every configured one in constant time.</summary>
+        private bool IsTokenValid(string? presented)
+        {
+            if (string.IsNullOrEmpty(presented))
+                return false;
+
+            byte[] candidate = Encoding.UTF8.GetBytes(presented);
+            bool valid = false;
+            foreach (string token in Config.Token)
+                valid |= CryptographicOperations.FixedTimeEquals(candidate, Encoding.UTF8.GetBytes(token));
+
+            return valid;
+        }
+
+        // ---------------------------------------------------------------------------------------------------------
+        // Sending
+        // ---------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        /// Sends a message to one client (queued, returns immediately).
+        /// </summary>
+        public Task SendToClientAsync<T>(System.Net.WebSockets.WebSocket socket, string type, T data)
+        {
+            ClientConnection? connection = _connections.Values.FirstOrDefault(c => ReferenceEquals(c.Socket, socket));
+            if (connection is null || !connection.Info.Authenticated)
+            {
+                _logger.Log(LoggingLevel.WARN, nameof(SendToClientAsync), $"⚠️ Message '{type}' not sent: client unknown or not authenticated");
+                return Task.CompletedTask;
+            }
+
+            connection.TryEnqueue(Serialize(type, data));
+            return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Sends a message to every authenticated client (queued, returns immediately). The message is serialised once.
+        /// </summary>
+        public Task BroadcastAsync<T>(string type, T data)
+        {
+            byte[] payload = Serialize(type, data);
+            lock (_stateLock)
+            {
+                Publish(payload);
+            }
+            return Task.CompletedTask;
+        }
+
+        /// <summary>Must be called while holding the state lock.</summary>
+        private void Publish(byte[] payload)
+        {
+            foreach (ClientConnection connection in _connections.Values)
+            {
+                if (connection.Info.Authenticated)
+                    connection.TryEnqueue(payload);
+            }
+        }
+
+        /// <summary>
+        /// Stores the state (replayed to the clients that connect later) and sends it to the connected ones.
+        /// </summary>
+        private Task SetStateAsync(string type, object? data)
+        {
+            lock (_stateLock)
+            {
+                byte[] payload = Serialize(type, data);
+                if (data is null)
+                    _lastMessages.Remove(type);
+                else
+                    _lastMessages[type] = payload;
+
+                Publish(payload);
+            }
+            return Task.CompletedTask;
+        }
+
+        public Task SetRegionLocaleAsync(LolPublishingContentPubHubConfig data) => SetStateAsync(MessageTypes.RegionLocale, data);
+
+        public Task SetGameFlowPhaseAsync(LolGameflowGameflowPhase? data) => SetStateAsync(MessageTypes.GameFlowPhase, data);
+
+        /// <summary>
+        /// The session is only sent when it really changed (the timer values, different at each poll, are ignored).
+        /// </summary>
+        public Task SetChampSelectAsync(ChampSelectSession? data)
+        {
+            string? fingerprint = data is null ? null : ChampSelectFingerprint.Compute(data);
+
+            lock (_stateLock)
+            {
+                if (fingerprint == _champSelectFingerprint)
+                    return Task.CompletedTask;
+
+                _champSelectFingerprint = fingerprint;
+            }
+            return SetStateAsync(MessageTypes.ChampSelect, data);
+        }
+
+        public Task SetEndGameAsync(LolEndOfGameEndOfGameStats? data) => SetStateAsync(MessageTypes.EndGame, data);
+
+        public Task SetEndGameMatchAsync(MatchDto? data) => SetStateAsync(MessageTypes.EndGameMatch, data);
+
+        public Task SetEndGameTimelineAsync(TimelineDto? data) => SetStateAsync(MessageTypes.EndGameTimeline, data);
+
+        private sealed class Envelope<T>
+        {
+            [JsonProperty("type")]
+            public string Type { get; init; } = string.Empty;
+
+            [JsonProperty("data")]
+            public T? Data { get; init; }
+        }
+
+        /// <summary>Standard payload {"type": ..., "data": ...}, serialised once.</summary>
+        private static byte[] Serialize<T>(string type, T? data) =>
+            Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new Envelope<T> { Type = type, Data = data }));
 
         private void SetState(WebSocketServerState state)
         {

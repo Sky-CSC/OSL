@@ -1,3 +1,4 @@
+using OSL_Utils.WebSocket;
 using OSL_RGDP.Schema.Riot;
 using OSL_Server.Services;
 using OSL_Server.WebSocketServer;
@@ -18,7 +19,7 @@ namespace OSL_Server.WebSocketServer.Handlers
         }
 
         /// <inheritdoc />
-        public string Type => "spectatorCurentGameInfoByRiotId";
+        public string Type => MessageTypes.SpectatorCurentGameInfoByRiotId;
 
         /// <inheritdoc />
         public async Task HandleAsync(WebSocketServer server, System.Net.WebSockets.WebSocket client, object? rawData)
@@ -52,7 +53,7 @@ namespace OSL_Server.WebSocketServer.Handlers
                     return;
                 }
                 CurrentGameInfo response = curentGame;
-                await server.BroadcastAsync("spectatorCurentGameInfoByRiotId", response);
+                await server.BroadcastAsync(MessageTypes.SpectatorCurentGameInfoByRiotId, response);
             }
             catch (Exception ex)
             {
